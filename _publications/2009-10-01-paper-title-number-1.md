@@ -1,15 +1,15 @@
 ---
-title: "Paper Title Number 1"
+title: "MIDI Passage Retrieval Using Cell Phone Pictures of Sheet Music"
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+permalink: /publication/sheet-midi-retrieval
+excerpt: 'This paper investigates a cross-modal retrieval problem in which a user would like to retrieve a passage of music from a MIDI file by taking a cell phone picture of a physical page of sheet music.'
+date: 2019-06-07
+venue: '20th International Society for Music Information Retrieval Conference, Delft, The Netherlands, 2019.'
+paperurl: 'https://arxiv.org/pdf/2004.10347.pdf'
+citation: 'Daniel Yang, Thitaree Tanprasert, Teerapat Jenrungrot, Mengyi Shan, and TJ Tsai. Midi passage retrieval using cell phone pictures of sheet music. In Proc. of the International Society for Music Information Retrieval Conference (ISMIR), pages 916–923, 2019.'
 ---
-This paper is about the number 1. The number 2 is left for future work.
+#This paper is about the number 1. The number 2 is left for future work.
 
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
+[Download paper here](https://arxiv.org/pdf/2004.10347.pdf)
 
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
+Recommended citation: Daniel Yang, Thitaree Tanprasert, Teerapa tJenrungrot, Mengyi Shan, and TJ Tsai. Midi passage retrieval using cell phone pictures of sheet music. In Proc. of the International Society for Music Information Retrieval Conference (ISMIR), pages 916–923, 2019.
