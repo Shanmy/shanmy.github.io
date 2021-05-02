@@ -16,4 +16,4 @@ Before college, I grew up in Beijing China. I spent seven years in the High Scho
 
 When I am not coding, I enjoy solving math puzzles, reading/writing detective fictions, learning languages, and playing music.
 
-[CV ](https://github.com/Shanmy/shanmy.github.io/blob/master/files/Shan-CV.pdf)[/ LinkedIn ](https://www.linkedin.com/in/mengyi-shan-8581a6149/)[/ Google Scholar ](https://scholar.google.com/citations?user=ik5hvqAAAAAJ&hl=en)[/ Github](https://github.com/Shanmy)
+[CV](https://github.com/Shanmy/shanmy.github.io/blob/master/files/Shan-CV.pdf) / [LinkedIn](https://www.linkedin.com/in/mengyi-shan-8581a6149/) / [Google Scholar](https://scholar.google.com/citations?user=ik5hvqAAAAAJ&hl=en) / [Github](https://github.com/Shanmy)
