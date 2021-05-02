@@ -6,6 +6,7 @@ excerpt: 'This paper studies the problem of automatically generating piano score
 date: 2020-07-29
 venue: 'International Society for Music Information Retrieval Conference'
 paperurl: 'https://arxiv.org/pdf/2007.14580.pdf'
+codeurl: 'https://github.com/HMC-MIR/YoutubeScoreFollowing'
 citation: 'Mengyi Shan and TJ Tsai, “Improved handling of repeats and jumps in audio-sheet image synchronization,” 21st International Society for Music Information Retrieval Conference (ISMIR), 11-16 October 2020.'
 ---
 
