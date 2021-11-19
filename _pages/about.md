@@ -8,9 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-My name is Mengyi Shan (单梦伊) and I am currently a senior undergraduate student at [Harvey Mudd College](https://www.hmc.edu) in Claremont, California, CA. I am pursuing double major in computer science and mathematics with a humanity and social science concentration in linguistics. I am fortunate to be advised by [Professor TJ Tsai](http://pages.hmc.edu/ttsai/) in the Music Information Retrieval Lab and by [Professor Weiqing Gu](https://math.hmc.edu/gu/) for my mathematics senior thesis on 3D Object Classification. I will be joining University of Washington [GRAIL](https://grail.cs.washington.edu) and [Reality Lab](https://realitylab.uw.edu) for a PhD program in Computer Science. 
+My name is Mengyi Shan. I am currently a first year Ph.D. student at [University of Washington](https://www.washington.edu), where I am affiliated to [Graphics and Imaging Lab (GRAIL)](https://grail.cs.washington.edu) and [Reality Lab](https://realitylab.uw.edu). I am co-advised by [Ira Kemelmacher-Shlizerman](https://www.irakemelmacher.com), [Steve Seitz](https://www.smseitz.com) and [Brian Curless](https://homes.cs.washington.edu/~curless/). 
 
-Before college, I grew up in Beijing China. I spent seven years in the High School Affiliated to Renmin Univeristy of China where I was a member of the first class of Early Development Program (EDP). 
+I got my undergraduate degree at [Harvey Mudd College](https://www.hmc.edu) in Claremont, California. I earned double majors in Computer Science and Mathematics with an HSA concentration in linguistics. I was fortunate to be advised by [TJ Tsai](http://pages.hmc.edu/ttsai/) in the Music Information Retrieval Lab and by [Weiqing Gu](https://math.hmc.edu/gu/) for my thesis on Differential Geometry. 
+
+Before college, I grew up in Beijing China. I spent seven years at the High School Affiliated to Renmin Univeristy of China (RDFZ), in the first class of Early Development Program (EDP). 
 
 When I am not coding, I enjoy solving math puzzles, reading/writing detective fictions, learning languages, and playing music. 
 
