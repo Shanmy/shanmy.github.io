@@ -18,4 +18,4 @@ When I am not coding, I enjoy solving puzzles in [math competitions](https://www
 
 
 
-[CV](blob/master/files/CV_2021.pdf) / [LinkedIn](https://www.linkedin.com/in/mengyi-shan-8581a6149/) / [Google Scholar](https://scholar.google.com/citations?user=ik5hvqAAAAAJ&hl=en) / [Github](https://github.com/Shanmy)
+[CV](files/CV_2021.pdf) / [LinkedIn](https://www.linkedin.com/in/mengyi-shan-8581a6149/) / [Google Scholar](https://scholar.google.com/citations?user=ik5hvqAAAAAJ&hl=en) / [Github](https://github.com/Shanmy)
