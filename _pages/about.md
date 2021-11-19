@@ -14,6 +14,8 @@ I got my undergraduate degree at [Harvey Mudd College](https://www.hmc.edu) in C
 
 Before college, I grew up in Beijing China. I spent seven years at the High School Affiliated to Renmin Univeristy of China (RDFZ), in the first class of Early Development Program (EDP). 
 
-When I am not coding, I enjoy solving math puzzles, reading/writing detective fictions, learning languages, and playing music. 
+When I am not coding, I enjoy solving puzzles in [math competitions](https://www.maa.org/math-competitions/putnam-competition), reading/writing detective fictions, learning languages, and playing music/video games. 
 
-[CV](https://github.com/Shanmy/shanmy.github.io/blob/master/files/Shan-CV.pdf) / [LinkedIn](https://www.linkedin.com/in/mengyi-shan-8581a6149/) / [Google Scholar](https://scholar.google.com/citations?user=ik5hvqAAAAAJ&hl=en) / [Github](https://github.com/Shanmy)
+
+
+[CV](blob/master/files/CV_2021.pdf) / [LinkedIn](https://www.linkedin.com/in/mengyi-shan-8581a6149/) / [Google Scholar](https://scholar.google.com/citations?user=ik5hvqAAAAAJ&hl=en) / [Github](https://github.com/Shanmy)
