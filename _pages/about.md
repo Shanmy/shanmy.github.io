@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-My name is Mengyi Shan. I am currently a first year Ph.D. student at [University of Washington](https://www.washington.edu), where I am affiliated to [Graphics and Imaging Lab (GRAIL)](https://grail.cs.washington.edu) and [Reality Lab](https://realitylab.uw.edu). I am co-advised by [Ira Kemelmacher-Shlizerman](https://www.irakemelmacher.com), [Steve Seitz](https://www.smseitz.com) and [Brian Curless](https://homes.cs.washington.edu/~curless/). 
+I am currently a first year Ph.D. student at [University of Washington](https://www.washington.edu), where I am affiliated to the [Graphics and Imaging Lab (GRAIL)](https://grail.cs.washington.edu) and the [Reality Lab](https://realitylab.uw.edu). I am co-advised by [Ira Kemelmacher-Shlizerman](https://www.irakemelmacher.com), [Steve Seitz](https://www.smseitz.com) and [Brian Curless](https://homes.cs.washington.edu/~curless/). 
 
 I got my undergraduate degree at [Harvey Mudd College](https://www.hmc.edu) in Claremont, California. I earned double majors in Computer Science and Mathematics with an HSA concentration in linguistics. I was fortunate to be advised by [TJ Tsai](http://pages.hmc.edu/ttsai/) in the Music Information Retrieval Lab and by [Weiqing Gu](https://math.hmc.edu/gu/) for my thesis on Differential Geometry. 
 

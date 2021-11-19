@@ -80,14 +80,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Mengyi Shan"
+  name             : "Mengyi Shan 单梦伊"
   avatar           : "profile.jpg"
-  bio              : "Student Researcher at Harvey Mudd College"
-  location         : "Claremont, CA"
+  bio              : "Ph.D. Student at University of Washington"
+  location         : "Seattle, WA"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=ik5hvqAAAAAJ&hl=en&oi=ao"
-  email            : "mshan@hmc.edu"
+  email            : "shanmy@cs.washington.edu"
   uri              :
   bitbucket        :
   codepen          :
@@ -108,7 +108,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : 
+  twitter          : "https://twitter.com/shanmy1874"
   vine             :
   weibo            : 
   xing             :
