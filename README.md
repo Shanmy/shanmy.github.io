@@ -1,4 +1,4 @@
-Personal website for Mengyi Shan, under construction as of May 2021.
+Personal website for Mengyi Shan, under construction as of November 2021.
 
 
 
