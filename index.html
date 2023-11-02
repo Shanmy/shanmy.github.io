@@ -85,7 +85,7 @@
                 </script>
               </td>
               <td style="padding:10px;width:75%;vertical-align:middle">
-                <a href="https://shanmy.github.io/">
+                <a href="Animating-Street-View/index.html">
                   <span class="papertitle">Animating Street View</span>
                 </a>
                 <br>
@@ -147,6 +147,46 @@
                 <a href="https://github.com/royorel/StyleSDF">code</a>
                 <p></p>
                 <p>We introduce a high resolution, 3D-consistent image and shape generation technique trained on single-view RGB data only, and stands on the shoulders of StyleGAN2 for image generation.
+                </p>
+              </td>
+            </tr> 
+          
+            <tr onmouseout="score_following_stop()" onmouseover="score_following_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='score_following_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/score_following_after.mp4" type="image/png">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/score_following_before.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function score_following_start() {
+                    document.getElementById('score_following_image').style.opacity = "1";
+                  }
+                  function score_following_stop() {
+                    document.getElementById('score_following_image').style.opacity = "0";
+                  }
+                  score_following_stop()
+                </script>
+              </td>
+              <td style="padding:10px;width:75%;vertical-align:middle">
+                <a href="https://shanmy.github.io/">
+                  <span class="papertitle">Improved Handling of Repeats and Jumps in Audio-Sheet Image Synchronization</span>
+                </a>
+                <br>
+                
+                <strong>Mengyi Shan</strong>, 
+                <a href="https://sites.google.com/g.hmc.edu/hmc-mir/bio?authuser=0">TJ Tsai</a>
+
+                <br>
+                <em>ISMIR</em>, 2020
+                <br>
+                <a href="https://sites.google.com/g.hmc.edu/hmc-mir/research?authuser=0">project page</a> /
+                <a href="https://arxiv.org/pdf/2007.14580">arXiv</a> /
+                <a href="https://github.com/HMC-MIR/YoutubeScoreFollowing">code</a>
+                <p></p>
+                <p>We study the problem of automatically generating piano score following videos given an audio recording and raw sheet music images.
                 </p>
               </td>
             </tr> 
