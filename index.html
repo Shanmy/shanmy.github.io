@@ -65,6 +65,53 @@
           
 
 
+            <tr onmouseout="omgpt_stop()" onmouseover="omgpt_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='omgpt_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/omgpt-after.mov" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/omgpt-before.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function omgpt_start() {
+                    document.getElementById('omgpt_image').style.opacity = "1";
+                  }
+                  function omgpt_stop() {
+                    document.getElementById('omgpt_image').style.opacity = "0";
+                  }
+                  omgpt_stop()
+                </script>
+              </td>
+              <td style="padding:10px;width:75%;vertical-align:middle">
+                <a href="https://zshyang.github.io/omgpt-website/">
+                  <span class="papertitle">OmniMotionGPT: Animal Motion Generation with Limited Data</span>
+                </a>
+                <br>
+                
+                <a href="https://zhangsihao-yang.github.io/">Zhangsihao Yang</a>,
+                <a href="https://sites.google.com/view/mingyuan-zhou/home">Mingyuan Zhou</a>,
+                <strong>Mengyi Shan</strong>, 
+                <a href="https://bbwen.github.io/">Bingbing Wen</a>,
+                <a href="https://zshyang.github.io/omgpt-website/">Ziwei Xuan</a>,
+                <a href="https://scholar.google.com/citations?user=ycEHnWoAAAAJ&hl=en">Mitch Hill</a>,
+                <a href="https://scholar.google.com/citations?user=tG-WDLwAAAAJ&hl=en">Junjie Bai</a>,
+                <a href="http://maple-lab.net/gqi/">Guo-Jun Qi</a>,
+                <a href="https://gsl.lab.asu.edu/yalin-wang/">Yalin Wang</a>
+
+                <br>
+                <em>Arxiv preprint</em>, 2023
+                <br>
+                <a href="https://zhangsihao-yang.github.io/">project page</a> /
+                <a href="https://zhangsihao-yang.github.io/">arXiv</a> /
+                <a href="https://zhangsihao-yang.github.io/">code</a>
+                <p></p>
+                <p>We generate diverse and realistic animal motion sequences from textual descriptions, without a large-scale animal text-motion dataset.
+                </p>
+              </td>
+            </tr> 
+
             <tr onmouseout="animating_street_view_stop()" onmouseover="animating_street_view_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
