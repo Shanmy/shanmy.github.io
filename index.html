@@ -33,7 +33,7 @@
 
                 <p style="text-align:center">
                   <a href="shanmy@cs.washington.edu">Email</a> &nbsp;/&nbsp;
-                  <a href="data/CV_2023.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="data/CV_2024.pdf">CV</a> &nbsp;/&nbsp;
                   <a href="https://scholar.google.com/citations?user=ik5hvqAAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
                   <a href="https://twitter.com/shanmy1874">Twitter</a> &nbsp;/&nbsp;
                   <a href="https://github.com/shanmy/">Github</a>
@@ -55,6 +55,53 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr onmouseout="amg_stop()" onmouseover="amg_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='amg_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/amg_after.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/amg_before.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function amg_start() {
+                    document.getElementById('amg_image').style.opacity = "1";
+                  }
+                  function amg_stop() {
+                    document.getElementById('amg_image').style.opacity = "0";
+                  }
+                  amg_stop()
+                </script>
+              </td>
+              <td style="padding:10px;width:75%;vertical-align:middle">
+                <a href="https://shanmy.github.io/Multi-Motion/">
+                  <span class="papertitle">AMG: Avatar Motion Guided Video Generation</span>
+                </a>
+                <br>
+                
+                <a href="https://zhangsihao-yang.github.io/">Zhangsihao Yang</a>,
+                <strong>Mengyi Shan</strong>, 
+                <a href="https://search.asu.edu/profile/3277481">Mohammad Farazi</a>,
+                <a href="https://github.com/ChongQingNoSubway">Wenhui Zhu</a>,
+                <a href="https://www.linkedin.com/in/yanxi-chen-12992396">Yanxi Chen</a>,
+                <a href="https://search.asu.edu/profile/4786088">Xuanzhao Dong</a>,
+                <a href="https://gsl.lab.asu.edu/yalin-wang/">Yalin Wang</a>
+
+
+
+                <br>
+                <em>arXiv</em>, 2024
+                <br>
+                <a href="https://arxiv.org/html/2409.01502v1">arXiv</a> /
+                <a href="https://github.com/zshyang/amg">code</a> /
+                <a href="https://github.com/zshyang/amg">data</a>
+                <p></p>
+                <p>We combine the 2D photorealism and 3D controllability in human video generation by conditioning video diffusion models on controlled rendering of 3D avatars.
+                </p>
+              </td>
+            </tr> 
           
             <tr onmouseout="mm_stop()" onmouseover="mm_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
@@ -91,9 +138,13 @@
                 <a href="https://scholar.google.com/citations?user=ycEHnWoAAAAJ&hl=en">Mitch Hill</a>
 
                 <br>
-                <em>Arxiv Preprint</em>, 2024
+                <em>ECCV</em>, 2024
                 <br>
                 <a href="https://shanmy.github.io/Multi-Motion/index.html">project page</a> /
+                <a href="https://arxiv.org/abs/2405.18483">arXiv</a> /
+                <a href="http://download.innopeaktech.com/public3/eccv2024paper8171.zip">data</a> /
+                <a href="Multi-Motion/Supp_Camera_Ready.pdf">supp</a> /
+                <a>code coming soon</a>
                 <p></p>
                 <p>We build datasets with multi-person pose and motions, and jointly train to generate natural and diverse group motions of multiple humans from textual descriptions.
                 </p>
@@ -140,7 +191,7 @@
                 <br>
                 <a href="https://zshyang.github.io/omgpt-website/">project page</a> /
                 <a href="https://arxiv.org/abs/2311.18303">arXiv</a> /
-                <a href="https://zhangsihao-yang.github.io/">code</a>
+                <a href="https://github.com/USRC-SEA/OmniMotionGPT">code</a>
                 <p></p>
                 <p>We generate diverse and realistic animal motion sequences from textual descriptions, without a large-scale animal text-motion dataset.
                 </p>
