@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Populate-A-Scene: Affordance-Aware Human Video Generation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="css/carousel.css" type="text/css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+  </head>
+  <body>
+
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-3 publication-title">Populate-A-Scene: Affordance-Aware Human Video Generation</h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
+                <span class="author-block">
+                  <a href="shanmy.github.io" target="_blank">Mengyi Shan</a>,</span>
+                  <span class="author-block">
+                    <a href="https://zechenghe.github.io" target="_blank">Zecheng He</a>,</span>
+                    <span class="author-block">
+                      <a href="https://howiema.github.io" target="_blank">Haoyu Ma</a>,
+                    </span>
+                    <span class="author-block">
+                      <a href="https://xujuefei.com" target="_blank">Felix Juefei-Xu</a>,
+                    </span>
+                    <br>
+                    <span class="author-block">
+                      <a href="https://scholar.google.com/citations?user=eqQQkM4AAAAJ&hl=en" target="_blank">Peizhao Zhang</a>,
+                    </span>
+                    <span class="author-block">
+                      <a href="https://scholar.google.com/citations?user=u-UDZcsAAAAJ&hl=en" target="_blank">Tingbo Hou</a>,
+                    </span>
+                    <span class="author-block">
+                      <a href="https://sites.google.com/site/vajdap" target="_blank">Peter Vajda</a>,
+                    </span>
+                    <span class="author-block">
+                      <a href="https://chingyaoc.github.io" target="_blank">Ching-Yao Chuang</a>
+                    </span>
+                    </div>
+  
+                    <div class="is-size-5 publication-authors">
+                      <span class="author-block">Meta GenAI</span>
+                    </div>
+                    <div class="is-size-5 publication-authors">
+                      <span class="author-block">arXiv preprint 2025</span>
+                    </div>
+  
+                    <div class="column has-text-centered">
+                      <div class="publication-links">
+                           <!-- Arxiv PDF link -->
+                        <span class="link-block">
+                          <a href="static/pdfs/pas.pdf" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                          </span>
+                          <span>Paper</span>
+                        </a>
+                      </span>
+  
+                      <!-- Supplementary PDF link -->
+                      <span class="link-block">
+                        <a href="static/pdfs/supp.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Supplementary</span>
+                      </a>
+                    </span>
+
+  
+
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+      </div>
+      <!-- End of Container -->
+
+    </section>
+
+
+    <section class="section" id="Video-Table">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-three-quarters content">
+            <h2 class="title is-3">Main Human Video Results</h2>
+            <table border="0" style="table-layout: fixed;">
+              <tr>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <img controls="" loop="" src="videos/main/000015_0011_cond.png" style="width:600px"></img><br>
+                    <a href="videos/main/000015_0011_cond.png">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <video controls="" loop="" src="videos/main/000015_0011.mp4" style="width:500px"></img><br>
+                    <a href="videos/main/000015_0011.mp4">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/main/000102_0011_cond.png" style="width:500px"></video><br>
+                  <a href="videos/main/000102_0011_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/main/000102_0011.mp4" style="width:500px"></video><br>
+                  <a href="videos/main/000102_0011.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+
+            </tr>
+            <tr>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/main/000004_0001_cond.png" style="width:400px"></video><br>
+                  <a href="videos/main/000004_0001_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/main/000004_0001.mp4" style="width:500px"></video><br>
+                <a href="videos/main/000004_0001.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <img controls="" loop="" src="videos/main/000180_0004_cond.png" style="width:500px"></video><br>
+                <a href="videos/main/000180_0004_cond.png">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/main/000180_0004.mp4" style="width:500px"></video><br>
+                <a href="videos/main/000180_0004.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+          </tr>
+              <tr>
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <img controls="" loop="" src="videos/main/000212_0003_cond.png" style="width:500px"></video><br>
+                      <a href="videos/main/000212_0003_cond.png">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <video controls="" loop="" src="videos/main/000212_0003.mp4" style="width:500px"></video><br>
+                      <a href="videos/main/000212_0003.mp4">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <img controls="" loop="" src="videos/main/000266_0015_cond.png" style="width:500px"></video><br>
+                    <a href="videos/main/000266_0015_cond.png">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <video controls="" loop="" src="videos/main/000266_0015.mp4" style="width:500px"></video><br>
+                    <a href="videos/main/000266_0015.mp4">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+
+              </tr>
+              <tr>
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <img controls="" loop="" src="videos/main/000220_0002_cond.png" style="width:500px"></video><br>
+                    <a href="videos/main/000220_0002_cond.png">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <video controls="" loop="" src="videos/main/000220_0002.mp4" style="width:500px"></video><br>
+                      <a href="videos/main/000220_0002.mp4">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <img controls="" loop="" src="videos/main/000257_0001_cond.png" style="width:500px"></video><br>
+                    <a href="videos/main/000257_0001_cond.png">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <video controls="" loop="" src="videos/main/000257_0001.mp4" style="width:500px"></video><br>
+                    <a href="videos/main/000257_0001.mp4">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+              </tr>
+
+            </tr>
+            <tr>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <img controls="" loop="" src="videos/main/000042_0009_cond.png" style="width:500px"></video><br>
+                    <a href="videos/main/000042_0009_cond.png">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <video controls="" loop="" src="videos/main/000042_0009.mp4" style="width:500px"></video><br>
+                    <a href="videos/main/000042_0009.mp4">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/main/000187_0006_cond.png" style="width:500px"></video><br>
+                  <a href="videos/main/000187_0006_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/main/000187_0006.mp4" style="width:500px"></video><br>
+                  <a href="videos/main/000187_0006.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+
+            </tr>
+            <tr>
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <img controls="" loop="" src="videos/main/000050_0009_cond.png" style="width:500px"></video><br>
+                    <a href="videos/main/000050_0009_cond.png">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <video controls="" loop="" src="videos/main/000050_0009.mp4" style="width:500px"></video><br>
+                    <a href="videos/main/000050_0009.mp4">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/main/000233_0015_cond.png" style="width:500px"></video><br>
+                  <a href="videos/main/000233_0015_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/main/000233_0015.mp4" style="width:500px"></video><br>
+                  <a href="videos/main/000233_0015.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+            </tr>
+
+            <tr>
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/main/000111_0004_cond.png" style="width:500px"></video><br>
+                  <a href="videos/main/000111_0004_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/main/000111_0004.mp4" style="width:500px"></video><br>
+                  <a href="videos/main/000111_0004.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <img controls="" loop="" src="videos/main/000288_0012_cond.png" style="width:500px"></video><br>
+                <a href="videos/main/000288_0012_cond.png">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/main/000288_0012.mp4" style="width:500px"></video><br>
+                <a href="videos/main/000288_0012.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+
+          </tr>
+          <tr>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <img controls="" loop="" src="videos/main/000114_0004_cond.png" style="width:500px"></video><br>
+                <a href="videos/main/000114_0004_cond.png">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/main/000114_0004.mp4" style="width:500px"></video><br>
+                  <a href="videos/main/000114_0004.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <img controls="" loop="" src="videos/main/000252_0015_cond.png" style="width:500px"></video><br>
+                <a href="videos/main/000252_0015_cond.png">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/main/000252_0015.mp4" style="width:500px"></video><br>
+                <a href="videos/main/000252_0015.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+          </tr>
+
+            </table>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="Video-Table">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-three-quarters content">
+            <h2 class="title is-3">Two-Person Video Results</h2>
+          
+            <table border="0" style="table-layout: fixed;">
+              <tr>
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <img controls="" loop="" src="videos/2-person/000016_0000_cond.png" style="width:600px"></video><br>
+                    <a href="videos/2-person/000016_0000_cond.png">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/2-person/000016_0000.mp4" style="width:600px"></video><br>
+                  <a href="videos/2-person/000016_0000.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/2-person/000062_0000_cond.png" style="width:600px"></video><br>
+                  <a href="videos/2-person/000062_0000_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/2-person/000062_0000.mp4" style="width:600px"></video><br>
+                  <a href="videos/2-person/000062_0000.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+            </tr>          
+
+            <tr>
+
+              
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/2-person/000048_0001_cond.png" style="width:600px"></video><br>
+                  <a href="videos/2-person/000048_0001_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/2-person/000048_0001.mp4" style="width:600px"></video><br>
+                  <a href="videos/2-person/000048_0001.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <img controls="" loop="" src="videos/2-person/000077_0000_cond.png" style="width:600px"></video><br>
+                <a href="videos/2-person/000077_0000_cond.png">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/2-person/000077_0000.mp4" style="width:600px"></video><br>
+                <a href="videos/2-person/000077_0000.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+          </tr>   
+
+                <tr>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/2-person/000028_0001_cond.png" style="width:600px"></video><br>
+                  <a href="videos/2-person/000028_0001_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/2-person/000028_0001.mp4" style="width:600px"></video><br>
+                <a href="videos/2-person/000028_0001.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <img controls="" loop="" src="videos/2-person/000072_0001_cond.png" style="width:600px"></video><br>
+                <a href="videos/2-person/000072_0001_cond.png">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/2-person/000072_0001.mp4" style="width:600px"></video><br>
+                <a href="videos/2-person/000072_0001.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <img controls="" loop="" src="videos/2-person/000042_0001_cond.png" style="width:600px"></video><br>
+                <a href="videos/2-person/000042_0001_cond.png">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/2-person/000042_0001.mp4" style="width:600px"></video><br>
+              <a href="videos/2-person/000042_0001.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <img controls="" loop="" src="videos/2-person/000024_0001_cond.png" style="width:600px"></video><br>
+              <a href="videos/2-person/000024_0001_cond.png">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/2-person/000024_0001.mp4" style="width:600px"></video><br>
+              <a href="videos/2-person/000024_0001.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+        </tr>
+
+            </table>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="Video-Table">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-three-quarters content">
+            <h2 class="title is-3">Multi-Prompt Video Results</h2>
+
+            <table border="0" style="table-layout: fixed;">
+              <tr>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <img controls="" loop="" src="videos/multi-prompt/000003_0014_cond.png" style="width:500px"></video><br>
+                    <a href="videos/multi-prompt/000003_0014_cond.png">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/multi-prompt/000003_0014.mp4" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000003_0014.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/multi-prompt/000004_0005.mp4" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000004_0005.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+
+            </tr>
+            <tr>
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/multi-prompt/000093_0010_cond.png" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000093_0010_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/multi-prompt/000093_0010.mp4" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000093_0010.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/multi-prompt/000094_0010.mp4" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000094_0010.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+
+          </tr>
+              <tr>
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <img controls="" loop="" src="videos/multi-prompt/000021_0015_cond.png" style="width:500px"></video><br>
+                      <a href="videos/multi-prompt/000021_0015_cond.png">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <video controls="" loop="" src="videos/multi-prompt/000021_0015.mp4" style="width:500px"></video><br>
+                      <a href="videos/multi-prompt/000021_0015.mp4">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+    
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <video controls="" loop="" src="videos/multi-prompt/000022_0000.mp4" style="width:500px"></video><br>
+                      <a href="videos/multi-prompt/000022_0000.mp4">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+    
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <video controls="" loop="" src="videos/multi-prompt/000023_0009.mp4" style="width:500px"></video><br>
+                      <a href="videos/multi-prompt/000023_0009.mp4">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+
+              </tr>
+              <tr>
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <img controls="" loop="" src="videos/multi-prompt/000028_0008_cond.png" style="width:500px"></video><br>
+                      <a href="videos/multi-prompt/000028_0008_cond.png">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <video controls="" loop="" src="videos/multi-prompt/000028_0008.mp4" style="width:500px"></video><br>
+                      <a href="videos/multi-prompt/000028_0008.mp4">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+    
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <video controls="" loop="" src="videos/multi-prompt/000027_0003.mp4" style="width:500px"></video><br>
+                      <a href="videos/multi-prompt/000027_0003.mp4">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+    
+                  <td halign="center" style="word-wrap: break-word;" valign="top">
+                    <p>
+                      <video controls="" loop="" src="videos/multi-prompt/000029_0010.mp4" style="width:500px"></video><br>
+                      <a href="videos/multi-prompt/000029_0010.mp4">
+                        <p></p>
+                      </a>
+                    </p>
+                  </td>
+
+              </tr>
+
+            </table>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="Video-Table">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-three-quarters content">
+            <h2 class="title is-3">Baseline Comparisons (Input, CogVideoX, Gen-3, Ours)</h2>
+          
+            <table border="0" style="table-layout: fixed;">
+              <tr>
+
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <p>
+                    <img controls="" loop="" src="videos/baseline/ball.png" style="width:600px"></video><br>
+                    <a href="videos/baseline/ball.png">
+                      <p></p>
+                    </a>
+                  </p>
+                </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/baseline/cogvideox-ball.mp4" style="width:600px"></video><br>
+                  <a href="videos/baseline/cogvideox-ball.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/baseline/gen-3-ball.mp4" style="width:600px"></video><br>
+                  <a href="videos/baseline/gen-3-ball.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/baseline/ball.mp4" style="width:600px"></video><br>
+                  <a href="videos/baseline/ball.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+            </tr>          
+
+            <tr>
+
+              
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/baseline/bike.png" style="width:600px"></video><br>
+                  <a href="videos/baseline/bike.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/baseline/cogvideox-bike.mp4" style="width:600px"></video><br>
+                  <a href="videos/baseline/cogvideox-bike.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/baseline/gen-3-bike.mp4" style="width:600px"></video><br>
+                <a href="videos/baseline/gen-3-bike.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/baseline/bike.mp4" style="width:600px"></video><br>
+                <a href="videos/baseline/bike.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+          </tr>   
+
+                <tr>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/baseline/dog.png" style="width:600px"></video><br>
+                  <a href="videos/baseline/dog.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/baseline/cogvideox-dog.mp4" style="width:600px"></video><br>
+                <a href="videos/baseline/cogvideox-dog.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/baseline/gen-3-dog.mp4" style="width:600px"></video><br>
+                <a href="videos/baseline/gen-3-dog.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <video controls="" loop="" src="videos/baseline/dog.mp4" style="width:600px"></video><br>
+                <a href="videos/baseline/dog.mp4">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <img controls="" loop="" src="videos/baseline/horse.png" style="width:600px"></video><br>
+                <a href="videos/baseline/horse.png">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/baseline/cogvideox-horse.mp4" style="width:600px"></video><br>
+              <a href="videos/baseline/cogvideox-horse.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/baseline/gen-3-horse.mp4" style="width:600px"></video><br>
+              <a href="videos/baseline/gen-3-horse.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/baseline/horse.mp4" style="width:600px"></video><br>
+              <a href="videos/baseline/horse.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <img controls="" loop="" src="videos/baseline/swing.png" style="width:600px"></video><br>
+              <a href="videos/baseline/swing.png">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <video controls="" loop="" src="videos/baseline/cogvideox-swing.mp4" style="width:600px"></video><br>
+            <a href="videos/baseline/cogvideox-swing.mp4">
+              <p></p>
+            </a>
+          </p>
+        </td>
+
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <video controls="" loop="" src="videos/baseline/gen-3-swing.mp4" style="width:600px"></video><br>
+            <a href="videos/baseline/gen-3-swing.mp4">
+              <p></p>
+            </a>
+          </p>
+        </td>
+
+
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <video controls="" loop="" src="videos/baseline/swing.mp4" style="width:600px"></video><br>
+            <a href="videos/baseline/swing.mp4">
+              <p></p>
+            </a>
+          </p>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <img controls="" loop="" src="videos/baseline/makeup.png" style="width:600px"></video><br>
+            <a href="videos/baseline/makeup.png">
+              <p></p>
+            </a>
+          </p>
+        </td>
+
+      <td halign="center" style="word-wrap: break-word;" valign="top">
+        <p>
+          <video controls="" loop="" src="videos/baseline/cogvideox-makeup.mp4" style="width:600px"></video><br>
+          <a href="videos/baseline/cogvideox-makeup.mp4">
+            <p></p>
+          </a>
+        </p>
+      </td>
+
+      <td halign="center" style="word-wrap: break-word;" valign="top">
+        <p>
+          <video controls="" loop="" src="videos/baseline/gen-3-makeup.mp4" style="width:600px"></video><br>
+          <a href="videos/baseline/gen-3-makeup.mp4">
+            <p></p>
+          </a>
+        </p>
+      </td>
+
+
+      <td halign="center" style="word-wrap: break-word;" valign="top">
+        <p>
+          <video controls="" loop="" src="videos/baseline/makeup.mp4" style="width:600px"></video><br>
+          <a href="videos/baseline/makeup.mp4">
+            <p></p>
+          </a>
+        </p>
+      </td>
+
+    </tr>
+
+
+
+
+            </table>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script>
+    bulmaCarousel.attach('#carousel-results', {
+      slidesToScroll: 1,
+      slidesToShow: 3,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+    });
+    </script>
+
+  </body>
+</html>

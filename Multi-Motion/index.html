@@ -95,8 +95,23 @@
         </div>
       </div>
     </div>
+    
+  </section>
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-three-quarters">
+            <div class="content has-text-centered">
+              <img src="static/images/overview.png" alt="Teaser Image" style="max-width: 80%; height: auto;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  
   <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -112,6 +127,46 @@
     </div>
   </div>
 </section>
+
+<!-- Dataset -->
+<section class="section" id="Dataset">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-three-quarters content">
+        <h2 class="title is-3">Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            To address the data scarcity problem in multi-person domain, we introduce two datasets: LAION-Pose and WebVid-Motion, containing (image, pose, text) and (video, motion, text) tuples extracted from in-the-wild images and videos.
+          </p>
+          <div class="has-text-centered">
+            <img src="static/images/dataset.png" alt="Dataset Overview" style="max-width: 100%; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Model Architecture -->
+    <section class="section" id="Model">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-three-quarters content">
+            <h2 class="title is-3">Model Architecture</h2>
+            <div class="content has-text-justified">
+              <p>
+                Our model is a diffusion framework consisting of interleaving pose and motion layers. At each pose/motion layer, we reshape the temporal/subject dimension into the batch dimension so that the layer focuses on generating per frame subject interac- tion and per-subject temporal movements respectively. Each layer is implemented as a transformer encoder. Diffusion time steps and text or pose conditions are encoded and summed up as a condition token concatenated to the beginning of the sequence.
+
+              </p>
+              <div class="has-text-centered">
+                <img src="static/images/model.png" alt="Model Architecture" style="max-width: 100%; height: auto;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
 
     <section class="section" id="Video-Table">
