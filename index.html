@@ -40,7 +40,7 @@
                 </p>
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/IMG_3976.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/IMG_3976.jpg" class="hoverZoomLink"></a>
+                <a href="images/IMG_3976_circle.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/IMG_3976_circle.png" class="hoverZoomLink"></a>
               </td>
             </tr>
           </tbody></table>
@@ -74,7 +74,47 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-            <!--
+
+            <tr onmouseout="genescape_stop()" onmouseover="genescape_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='genescape_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/genescape_after.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/genescape_before.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function genescape_start() {
+                    document.getElementById('genescape_image').style.opacity = "1";
+                  }
+                  function genescape_stop() {
+                    document.getElementById('genescape_image').style.opacity = "0";
+                  }
+                  genescape_stop()
+                </script>
+              </td>
+              <td style="padding:10px;width:75%;vertical-align:middle">
+                <a href="Animating-Street-View/index.html">
+                  <span class="papertitle">GenEscape: Hierarchical Multi-Agent Generation of Escape Room Puzzles</span>
+                </a>
+                <br>
+                
+                <strong>Mengyi Shan</strong>, 
+                <a href="https://homes.cs.washington.edu/~curless/">Brian Curless</a>,
+                <a href="https://www.irakemelmacher.com">Ira Kemelmacher-Shlizerman</a>,
+                <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a>
+
+                <br>
+                <em>Preprint</em>, 2025
+                <br>
+                <a href="GenEscape/GenEscape.pdf">paper</a>
+                <p></p>
+                <p> We challenge text-to-image models with generating escape room puzzle images that are visually appealing, logically solid, and intellectually stimulating.
+                </p>
+              </td>
+            </tr> 
+
             <tr onmouseout="pas_stop()" onmouseover="pas_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
@@ -82,7 +122,7 @@
                   <source src="images/pas_after.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                   </video></div>
-                  <img src='images/pas_before.png' width="160">
+                  <img src='images/pas_before.jpg' width="160">
                 </div>
                 <script type="text/javascript">
                   function pas_start() {
@@ -106,20 +146,18 @@
                 <a href="https://xujuefei.com" target="_blank">Felix Juefei-Xu</a>,
                 <a href="https://scholar.google.com/citations?user=eqQQkM4AAAAJ&hl=en" target="_blank">Peizhao Zhang</a>,
                 <a href="https://scholar.google.com/citations?user=u-UDZcsAAAAJ&hl=en" target="_blank">Tingbo Hou</a>,
-                <a href="https://sites.google.com/site/vajdap" target="_blank">Peter Vajda</a>,
                 <a href="https://chingyaoc.github.io" target="_blank">Ching-Yao Chuang</a>
 
                 <br>
-                <em>arXiv</em>, 2025
+                <em>Preprint,</em> 2025. ICCV Review 4/5/6 out of 6
                 <br>
-                <a href="https://shanmy.github.io/Populate-A-Scene/">project page</a> / 
-                <a href="https://arxiv.org/html/2409.01502v1">arXiv</a>
+                <a href="https://shanmy.github.io/Populate-A-Scene/video_results">video</a> / 
+                <a href="https://shanmy.github.io/Populate-A-Scene/static/pdfs/pas.pdf">paper</a>
                 <p></p>
                 <p>We repurpose a text-to-video generation model as a human-world interaction simulator.
                 </p>
               </td>
             </tr> 
-            -->
             <tr onmouseout="amg_stop()" onmouseover="amg_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
@@ -156,7 +194,7 @@
 
 
                 <br>
-                <em>arXiv</em>, 2024
+                <em>Preprint</em>, 2024
                 <br>
                 <a href="https://arxiv.org/html/2409.01502v1">arXiv</a> /
                 <a href="https://github.com/zshyang/amg">code</a> /
@@ -348,23 +386,64 @@
               </td>
             </tr> 
           
-            <tr onmouseout="score_following_stop()" onmouseover="score_following_start()">
+            <tr onmouseout="score_follow_stop()" onmouseover="score_follow_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
-                  <div class="two" id='score_following_image'><video  width=100% height=100% muted autoplay loop>
-                  <source src="images/score_following_after.mp4" type="image/png">
+                  <div class="two" id='score_follow_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/score_follow_after.mp4" type="image/png">
                   Your browser does not support the video tag.
                   </video></div>
-                  <img src='images/score_following_before.png' width="160">
+                  <img src='images/score_follow_before.png' width="160">
                 </div>
                 <script type="text/javascript">
-                  function score_following_start() {
-                    document.getElementById('score_following_image').style.opacity = "1";
+                  function score_follow_start() {
+                    document.getElementById('score_follow_image').style.opacity = "1";
                   }
                   function score_following_stop() {
-                    document.getElementById('score_following_image').style.opacity = "0";
+                    document.getElementById('score_follow_image').style.opacity = "0";
                   }
                   score_following_stop()
+                </script>
+              </td>
+              <td style="padding:10px;width:75%;vertical-align:middle">
+                <a href="https://shanmy.github.io/">
+                  <span class="papertitle">Automatic Generation of Piano Score Following Videos</span>
+                </a>
+                <br>
+                
+                <strong>Mengyi Shan</strong>, 
+                <a href="https://sites.google.com/g.hmc.edu/hmc-mir/bio?authuser=0">TJ Tsai</a>
+
+                <br>
+                <em>TISMIR</em>, 2021
+                <br>
+                <a href="https://sites.google.com/g.hmc.edu/hmc-mir/research?authuser=0">project page</a> /
+                <a href="https://arxiv.org/pdf/2007.14580">arXiv</a> /
+                <a href="https://github.com/HMC-MIR/YoutubeScoreFollowing">code</a>
+                <p></p>
+                <p>We build a system that generates piano score following videos from an audio recording in a fully automated manner. 
+                </p>
+              </td>
+            </tr> 
+
+
+            <tr onmouseout="repeat_stop()" onmouseover="repeat_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='repeat_image'><video  width=100% height=100% muted autoplay loop>
+                  <source src="images/repeat_after.png" type="image/png">
+                  Your browser does not support the video tag.
+                  </video></div>
+                  <img src='images/repeat_before.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function repeat_start() {
+                    document.getElementById('repeat_image').style.opacity = "1";
+                  }
+                  function repeat_stop() {
+                    document.getElementById('repeat_image').style.opacity = "0";
+                  }
+                  repeat_stop()
                 </script>
               </td>
               <td style="padding:10px;width:75%;vertical-align:middle">
