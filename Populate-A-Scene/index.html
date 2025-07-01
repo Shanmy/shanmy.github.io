@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Populate-A-Scene: Affordance-Aware Human Video Generation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="css/carousel.css" type="text/css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+  </head>
+  <body>
+
+    <section class="hero is-light">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered" style="line-height: 1.8;">
+    
+              <!-- Title -->
+              <h1 class="title is-2 has-text-weight-bold">
+                <span style="color:#219ebc;">🎬 Populate</span>-<span style="color:#2a9d8f;">A</span>-<span style="color:#268653;">Scene</span>: <br>
+                <span style="color:#023047;">Affordance-Aware</span>
+                <span style="color:#023047;">Human Video Generation</span>
+              </h1>
+    
+              <!-- Authors -->
+              <p class="is-size-5 mb-2">
+                <span class="author-block"><a href="https://shanmy.github.io" target="_blank">Mengyi Shan</a>,</span>
+                <span class="author-block"><a href="https://zechenghe.github.io" target="_blank">Zecheng He</a>,</span>
+                <span class="author-block"><a href="https://howiema.github.io" target="_blank">Haoyu Ma</a>,</span>
+                <span class="author-block"><a href="https://xujuefei.com" target="_blank">Felix Juefei-Xu</a>,</span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?user=eqQQkM4AAAAJ&hl=en" target="_blank">Peizhao Zhang</a>,</span>
+                <span class="author-block"><a href="https://scholar.google.com/citations?user=u-UDZcsAAAAJ&hl=en" target="_blank">Tingbo Hou</a>,</span>
+                <span class="author-block"><a href="https://chingyaoc.github.io" target="_blank">Ching-Yao Chuang</a></span>
+              </p>
+    
+              <!-- Affiliation & Notes -->
+              <p class="is-size-5 has-text-grey mb-1">🏫 Univeristy of Washington,              🏢 Meta GenAI</p>
+              <p class="is-size-6 has-text-grey-light mb-4"><em>📄 Preprint 2025 · ICCV Reviews: 4/5/6</em></p>
+    
+              <br>
+              <!-- Buttons -->
+              <div class="buttons is-centered is-flex-wrap-wrap mt-4">
+                <a href="static/pdfs/pas-meta.pdf" target="_blank" class="button is-dark is-rounded is-medium">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+    
+                <a href="static/pdfs/supp.pdf" target="_blank" class="button is-link is-rounded is-medium">
+                  <span class="icon"><i class="fas fa-file-alt"></i></span>
+                  <span>Supplement</span>
+                </a>
+    
+                <a href="video_results.html" target="_blank" class="button is-info is-rounded is-medium">
+                  <span class="icon"><i class="fas fa-video"></i></span>
+                  <span>Video Gallery</span>
+                </a>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- End of Container -->
+
+    </section>
+
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-three-quarters content">
+            <h2 class="title is-5 has-text-centered">We add moving humans to scenes, without knowing their pose or position. 🕺💃 <br> Check out our video gallery for more results! 📷</h2>
+            <table border="0" style="table-layout: fixed;">
+              <tr>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <img src="videos/main/000015_0011_cond.png" style="width:600px" alt="Cond 1">
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <video controls loop src="videos/main/000015_0011.mp4" style="width:500px"></video>
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <img src="videos/main/000102_0011_cond.png" style="width:500px" alt="Cond 2">
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <video controls loop src="videos/main/000102_0011.mp4" style="width:500px"></video>
+                </td>
+              </tr>
+              <tr>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <img src="videos/main/000004_0001_cond.png" style="width:400px" alt="Cond 3">
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <video controls loop src="videos/main/000004_0001.mp4" style="width:500px"></video>
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <img src="videos/main/000180_0004_cond.png" style="width:500px" alt="Cond 4">
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <video controls loop src="videos/main/000180_0004.mp4" style="width:500px"></video>
+                </td>
+              </tr>
+              <tr>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <img src="videos/main/000212_0003_cond.png" style="width:500px" alt="Cond 5">
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <video controls loop src="videos/main/000212_0003.mp4" style="width:500px"></video>
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <img src="videos/main/000266_0015_cond.png" style="width:500px" alt="Cond 6">
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <video controls loop src="videos/main/000266_0015.mp4" style="width:500px"></video>
+                </td>
+              </tr>
+              <tr>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <img src="videos/main/000220_0002_cond.png" style="width:500px" alt="Cond 7">
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <video controls loop src="videos/main/000220_0002.mp4" style="width:500px"></video>
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <img src="videos/main/000257_0001_cond.png" style="width:500px" alt="Cond 8">
+                </td>
+                <td halign="center" style="word-wrap: break-word;" valign="top">
+                  <video controls loop src="videos/main/000257_0001.mp4" style="width:500px"></video>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Abstract Section (with gray background) -->
+    <section class="section hero is-light py-1">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3">Abstract</h2>
+              <div class="content has-text-justified">
+                <p>
+                  Can a video generation model be repurposed as an interactive world simulator? We explore the affordance perception potential of text-to-video models by teaching them to predict human-environment interaction. Given a scene image and a prompt describing human actions, we fine-tune the model to insert a person into the scene, while ensuring coherent behavior, appearance, harmonization, and scene affordance. Unlike prior work, we infer human affordance for video generation (i.e., where to insert a person and how they should behave) from a single scene image, without explicit conditions like bounding boxes or body poses. An in-depth study of cross-attention heatmaps demonstrates that we can uncover the inherent affordance perception of a pre-trained video model without labeled affordance datasets.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- System Description Section (no gray background, left-aligned) -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">System Description</h2>
+            <div class="content">
+              <img src="static/figures/pipeline.pdf" style="max-width: 100%; height: auto;" alt="Pipeline diagram">
+            </div>
+            <br>
+            <div class="content has-text-justified">
+              <p>
+                We start by removing humans from raw frames to create synthetic empty-scene and human-video data pairs. We employ a dual-conditioning mechanism, using channel concatenation and cross-attention, to condition the T2V model on an additional scene image. We design a fusion module to facilitate interactions between image and action-text features while locating the desired action position. The fine-tuning pipeline trains a Transformer architecture based on flow matching framework.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Model Pipeline -->
+
+<!-- System Description Section (no gray background, left-aligned) -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Data: Training and Evaluation Benchmark</h2>
+        <div class="columns is-mobile is-vcentered">
+          <div class="column">
+            <figure class="image">
+              <img src="static/figures/data.pdf" style="max-width: 100%; height: auto;" alt="Pipeline diagram 1">
+            </figure>
+          </div>
+          <div class="column">
+            <figure class="image">
+              <img src="static/figures/synthetic.pdf" style="max-width: 100%; height: auto;" alt="Pipeline diagram 2">
+            </figure>
+          </div>
+        </div>
+        <br>
+        <div class="content has-text-justified">
+          <p>
+            <b>Left:</b> Training dataset. Top row shows single-person data, while the bottom row shows double-person data. Within each row, the top figure presents the raw first frame of the video, while the bottom figure(s) show the result after detecting and removing humans from the scene. <br> 
+            <b>Right:</b> Synthetic action descriptions evaluation benchmark. We use a vision language AI agent to decide palusible actions in a scene, and rewrite the action into prompts. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="Video-Table">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-three-quarters content">
+        <h2 class="title is-3">Two-Person Video Results</h2>
+      
+        <table border="0" style="table-layout: fixed;">
+          <tr>
+
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <img controls="" loop="" src="videos/2-person/000016_0000_cond.png" style="width:600px"></video><br>
+                <a href="videos/2-person/000016_0000_cond.png">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/2-person/000016_0000.mp4" style="width:600px"></video><br>
+              <a href="videos/2-person/000016_0000.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <img controls="" loop="" src="videos/2-person/000062_0000_cond.png" style="width:600px"></video><br>
+              <a href="videos/2-person/000062_0000_cond.png">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+          
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/2-person/000062_0000.mp4" style="width:600px"></video><br>
+              <a href="videos/2-person/000062_0000.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+        </tr>          
+
+        <tr>
+
+          
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <img controls="" loop="" src="videos/2-person/000048_0001_cond.png" style="width:600px"></video><br>
+              <a href="videos/2-person/000048_0001_cond.png">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/2-person/000048_0001.mp4" style="width:600px"></video><br>
+              <a href="videos/2-person/000048_0001.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <img controls="" loop="" src="videos/2-person/000077_0000_cond.png" style="width:600px"></video><br>
+            <a href="videos/2-person/000077_0000_cond.png">
+              <p></p>
+            </a>
+          </p>
+        </td>
+
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <video controls="" loop="" src="videos/2-person/000077_0000.mp4" style="width:600px"></video><br>
+            <a href="videos/2-person/000077_0000.mp4">
+              <p></p>
+            </a>
+          </p>
+        </td>
+
+      </tr>   
+
+            <tr>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <img controls="" loop="" src="videos/2-person/000028_0001_cond.png" style="width:600px"></video><br>
+              <a href="videos/2-person/000028_0001_cond.png">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <video controls="" loop="" src="videos/2-person/000028_0001.mp4" style="width:600px"></video><br>
+            <a href="videos/2-person/000028_0001.mp4">
+              <p></p>
+            </a>
+          </p>
+        </td>
+
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <img controls="" loop="" src="videos/2-person/000072_0001_cond.png" style="width:600px"></video><br>
+            <a href="videos/2-person/000072_0001_cond.png">
+              <p></p>
+            </a>
+          </p>
+        </td>
+
+
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <video controls="" loop="" src="videos/2-person/000072_0001.mp4" style="width:600px"></video><br>
+            <a href="videos/2-person/000072_0001.mp4">
+              <p></p>
+            </a>
+          </p>
+        </td>
+
+      </tr>
+
+      <tr>
+
+        <td halign="center" style="word-wrap: break-word;" valign="top">
+          <p>
+            <img controls="" loop="" src="videos/2-person/000042_0001_cond.png" style="width:600px"></video><br>
+            <a href="videos/2-person/000042_0001_cond.png">
+              <p></p>
+            </a>
+          </p>
+        </td>
+
+      <td halign="center" style="word-wrap: break-word;" valign="top">
+        <p>
+          <video controls="" loop="" src="videos/2-person/000042_0001.mp4" style="width:600px"></video><br>
+          <a href="videos/2-person/000042_0001.mp4">
+            <p></p>
+          </a>
+        </p>
+      </td>
+
+      <td halign="center" style="word-wrap: break-word;" valign="top">
+        <p>
+          <img controls="" loop="" src="videos/2-person/000024_0001_cond.png" style="width:600px"></video><br>
+          <a href="videos/2-person/000024_0001_cond.png">
+            <p></p>
+          </a>
+        </p>
+      </td>
+
+
+      <td halign="center" style="word-wrap: break-word;" valign="top">
+        <p>
+          <video controls="" loop="" src="videos/2-person/000024_0001.mp4" style="width:600px"></video><br>
+          <a href="videos/2-person/000024_0001.mp4">
+            <p></p>
+          </a>
+        </p>
+      </td>
+
+    </tr>
+
+        </table>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="Video-Table">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-three-quarters content">
+        <h2 class="title is-3">Multi-Prompt Video Results</h2>
+
+        <table border="0" style="table-layout: fixed;">
+          <tr>
+            <td halign="center" style="word-wrap: break-word;" valign="top">
+              <p>
+                <img controls="" loop="" src="videos/multi-prompt/000003_0014_cond.png" style="width:500px"></video><br>
+                <a href="videos/multi-prompt/000003_0014_cond.png">
+                  <p></p>
+                </a>
+              </p>
+            </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/multi-prompt/000003_0014.mp4" style="width:500px"></video><br>
+              <a href="videos/multi-prompt/000003_0014.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/multi-prompt/000004_0005.mp4" style="width:500px"></video><br>
+              <a href="videos/multi-prompt/000004_0005.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+
+        </tr>
+        <tr>
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <img controls="" loop="" src="videos/multi-prompt/000093_0010_cond.png" style="width:500px"></video><br>
+              <a href="videos/multi-prompt/000093_0010_cond.png">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/multi-prompt/000093_0010.mp4" style="width:500px"></video><br>
+              <a href="videos/multi-prompt/000093_0010.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+          <td halign="center" style="word-wrap: break-word;" valign="top">
+            <p>
+              <video controls="" loop="" src="videos/multi-prompt/000094_0010.mp4" style="width:500px"></video><br>
+              <a href="videos/multi-prompt/000094_0010.mp4">
+                <p></p>
+              </a>
+            </p>
+          </td>
+
+
+      </tr>
+          <tr>
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/multi-prompt/000021_0015_cond.png" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000021_0015_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/multi-prompt/000021_0015.mp4" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000021_0015.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/multi-prompt/000022_0000.mp4" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000022_0000.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/multi-prompt/000023_0009.mp4" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000023_0009.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+          </tr>
+          <tr>
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <img controls="" loop="" src="videos/multi-prompt/000028_0008_cond.png" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000028_0008_cond.png">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/multi-prompt/000028_0008.mp4" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000028_0008.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/multi-prompt/000027_0003.mp4" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000027_0003.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+              <td halign="center" style="word-wrap: break-word;" valign="top">
+                <p>
+                  <video controls="" loop="" src="videos/multi-prompt/000029_0010.mp4" style="width:500px"></video><br>
+                  <a href="videos/multi-prompt/000029_0010.mp4">
+                    <p></p>
+                  </a>
+                </p>
+              </td>
+
+          </tr>
+
+        </table>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths content">
+        <h2 class="title">BibTeX</h2>
+        <pre style="overflow-x: auto; padding: 1rem;"><code>
+          @misc{shan2025populate,
+            title={Populate-A-Scene: Affordance-Aware Human Video Generation},
+            author={Mengyi Shan, Zecheng He, Haoyu Ma, Felix Juefei-Xu, Peizhao Zhang, Tingbo Hou, Ching-Yao Chuang},
+            year={2025},
+            archivePrefix={arXiv},
+            primaryClass={cs.CV}
+          }
+</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+
+        <p>
+          This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+          Commons Attribution-ShareAlike 4.0 International License</a>.
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+</html>
