@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talking Together: Synthesizing Co-Located 3D Conversations from Audio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+
+  <style>
+    /* venue badge */
+    .venue-tag {
+      display: inline-block;
+      background: #c53030;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.28rem 0.95rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    /* author superscripts */
+    .author-sup {
+      font-size: 0.6em;
+      font-weight: 600;
+      color: #888;
+      vertical-align: super;
+    }
+
+    /* link buttons */
+    .link-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      justify-content: center;
+    }
+    .link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.5rem 1.3rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid #4a5568;
+      color: #2d3748;
+      background: #fff;
+      transition: background 0.18s, color 0.18s;
+    }
+    .link-btn:hover { background: #2d3748; color: #fff; }
+
+    /* comparison table */
+    .comp-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    table.comp { width: 100%; border-collapse: collapse; min-width: 680px; }
+
+    table.comp thead th {
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #555;
+      padding: 0.7rem 0.4rem;
+      border-bottom: 2px solid #dbdbdb;
+      white-space: nowrap;
+    }
+    table.comp thead th.ours { color: #c05621; font-weight: 700; }
+
+    table.comp tbody td {
+      padding: 0.5rem 0.35rem;
+      vertical-align: top;
+      text-align: center;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    table.comp tbody video {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto;
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════  HERO  ═══════════════════════ -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered" style="line-height: 1.8;">
+
+            <div class="venue-tag">CVPR 2026</div>
+
+            <h1 class="title is-2 has-text-weight-bold mb-4">
+              Talking Together: Synthesizing Co-Located 3D Conversations from Audio
+            </h1>
+
+            <p class="is-size-5 mb-2">
+              <a href="https://shanmy.github.io">Mengyi Shan</a><span class="author-sup">1</span>&ensp;
+              Shouchieh Chang<span class="author-sup">2</span>&ensp;
+              <a href="https://zqbai-jeremy.github.io/">Ziqian Bai</a><span class="author-sup">2</span>&ensp;
+              <a href="https://shichenliu.github.io/">Shichen Liu</a><span class="author-sup">2</span>&ensp;
+              <a href="https://www.zhangyinda.com/">Yinda Zhang</a><span class="author-sup">2</span><br>
+              <a href="https://songluchuan.github.io/">Luchuan Song</a><span class="author-sup">3</span>&ensp;
+              <a href="https://research.google/people/106687/">Rohit Pandey</a><span class="author-sup">2</span>&ensp;
+              <a href="https://www.seanfanello.it/">Sean Fanello</a><span class="author-sup">2</span>&ensp;
+              <a href="https://research.google/people/zenghuang/">Zeng Huang</a><span class="author-sup">2</span>
+            </p>
+
+            <p class="is-size-6 has-text-grey mb-4">
+              <span class="author-sup" style="font-size:0.75em; vertical-align: super;">1</span>University of Washington
+              &emsp;
+              <span class="author-sup" style="font-size:0.75em; vertical-align: super;">2</span>Google
+              &emsp;
+              <span class="author-sup" style="font-size:0.75em; vertical-align: super;">3</span>University of Rochester
+            </p>
+
+            <div class="link-buttons mt-4">
+              <a href="static/36513.pdf" target="_blank" class="link-btn">
+                <i class="fas fa-file-pdf"></i>&nbsp;Paper
+              </a>
+              <a href="static/supp.pdf" target="_blank" class="link-btn">
+                <i class="fas fa-file-alt"></i>&nbsp;Supplementary
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════  TEASER  ═══════════════════════ -->
+  <section class="section pb-2">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <figure class="image">
+            <img src="static/teaser.png" alt="Teaser figure" style="max-width:70%; height:auto; border-radius:4px; display:block; margin:0 auto;">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════  ABSTRACT  ═══════════════════════ -->
+  <section class="section hero is-light py-1">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                We tackle the challenging task of generating complete 3D facial animations for two
+                interacting, co-located participants from a mixed audio stream. While existing methods
+                often produce disembodied &ldquo;talking heads&rdquo; akin to a video conference call,
+                our work is the first to explicitly model the dynamic 3D spatial relationship&mdash;including
+                relative position, orientation, and mutual gaze&mdash;that is crucial for realistic
+                in-person dialogues. Our system synthesizes the full performance of both individuals,
+                including precise lip-sync, and uniquely allows their relative head poses to be controlled
+                via textual descriptions. To achieve this, we propose a dual-stream architecture where each
+                stream is responsible for one participant&rsquo;s output. We employ speaker&rsquo;s role
+                embeddings and inter-speaker cross-attention mechanisms designed to disentangle the mixed
+                audio and model the interaction. Furthermore, we introduce a novel eye gaze loss to promote
+                natural, mutual eye contact. To power our data-hungry approach, we introduce a novel pipeline
+                to curate a large-scale conversational dataset consisting of over 2 million dyadic pairs from
+                in-the-wild videos. Our method generates fluid, controllable, and spatially aware dyadic
+                animations suitable for immersive applications in VR and telepresence, significantly
+                outperforming existing baselines in perceived realism and interaction coherence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════  CONTRIBUTIONS  ═══════════════════════ -->
+  <section class="section hero is-light py-1">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 has-text-centered">Key Contributions</h2>
+            <div class="content">
+              <figure class="image mb-5">
+                <img src="static/pipeline.pdf" alt="Method pipeline" style="max-width:100%; height:auto;">
+              </figure>
+              <ul>
+                <li>An automated pipeline to curate a large-scale dataset of dyadic conversations from
+                  in-the-wild videos, along with a high-fidelity single-speaker corpus for robust
+                  lip-sync training.</li>
+                <li>A dual-stream diffusion architecture with a shared U-Net backbone, cross-attention,
+                  and FiLM conditioning to effectively model speaker interaction and disentangle a
+                  single mixed audio track.</li>
+                <li>A mixed-data training strategy&mdash;pre-training on massive real conversational data
+                  then fine-tuning on high-quality synthetic data&mdash;ensuring precise lip articulation
+                  and natural interactive behaviors.</li>
+                <li>Intuitive scene control through a few-shot, LLM-based text-to-3D spatial translation
+                  mechanism, and a targeted auxiliary eye gaze loss applied on a curated subset to promote
+                  realistic mutual eye contact.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════  VIDEO COMPARISONS  ═══════════════════════ -->
+  <section class="section" id="Video-Table">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-three-quarters content">
+
+          <h2 class="title is-3 has-text-centered">Qualitative Comparisons</h2>
+          <p class="has-text-centered has-text-grey">
+            We compare against SelfTalk and DualTalk baselines. Our full model generates spatially
+            aware, co-located 3D conversations with natural mutual gaze and controllable spatial layout.
+          </p>
+          <br>
+
+          <div class="comp-scroll">
+            <table class="comp">
+              <thead>
+                <tr>
+                  <th>SelfTalk</th>
+                  <th>DualTalk</th>
+                  <th class="ours">Ours (Stage-1)</th>
+                  <th class="ours">Ours (Full)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><video controls loop src="video/1_v.mp4"></video></td>
+                  <td><video controls loop src="video/1_dt.mp4"></video></td>
+                  <td><video controls loop src="video/1_r.mp4"></video></td>
+                  <td><video controls loop src="video/1_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/2_v.mp4"></video></td>
+                  <td><video controls loop src="video/2_dt.mp4"></video></td>
+                  <td><video controls loop src="video/2_r.mp4"></video></td>
+                  <td><video controls loop src="video/2_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/3_v.mp4"></video></td>
+                  <td><video controls loop src="video/3_dt.mp4"></video></td>
+                  <td><video controls loop src="video/3_r.mp4"></video></td>
+                  <td><video controls loop src="video/3_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/4_v.mp4"></video></td>
+                  <td><video controls loop src="video/4_dt.mp4"></video></td>
+                  <td><video controls loop src="video/4_r.mp4"></video></td>
+                  <td><video controls loop src="video/4_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/5_v.mp4"></video></td>
+                  <td><video controls loop src="video/5_dt.mp4"></video></td>
+                  <td><video controls loop src="video/5_r.mp4"></video></td>
+                  <td><video controls loop src="video/5_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/6_v.mp4"></video></td>
+                  <td><video controls loop src="video/6_dt.mp4"></video></td>
+                  <td><video controls loop src="video/6_r.mp4"></video></td>
+                  <td><video controls loop src="video/6_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/7_v.mp4"></video></td>
+                  <td><video controls loop src="video/7_dt.mp4"></video></td>
+                  <td><video controls loop src="video/7_r.mp4"></video></td>
+                  <td><video controls loop src="video/7_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/8_v.mp4"></video></td>
+                  <td><video controls loop src="video/8_dt.mp4"></video></td>
+                  <td><video controls loop src="video/8_r.mp4"></video></td>
+                  <td><video controls loop src="video/8_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/9_v.mp4"></video></td>
+                  <td><video controls loop src="video/9_dt.mp4"></video></td>
+                  <td><video controls loop src="video/9_r.mp4"></video></td>
+                  <td><video controls loop src="video/9_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/10_v.mp4"></video></td>
+                  <td><video controls loop src="video/10_dt.mp4"></video></td>
+                  <td><video controls loop src="video/10_r.mp4"></video></td>
+                  <td><video controls loop src="video/10_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/11_v.mp4"></video></td>
+                  <td><video controls loop src="video/11_dt.mp4"></video></td>
+                  <td><video controls loop src="video/11_r.mp4"></video></td>
+                  <td><video controls loop src="video/11_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/12_v.mp4"></video></td>
+                  <td><video controls loop src="video/12_dt.mp4"></video></td>
+                  <td><video controls loop src="video/12_r.mp4"></video></td>
+                  <td><video controls loop src="video/12_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/13_v.mp4"></video></td>
+                  <td><video controls loop src="video/13_dt.mp4"></video></td>
+                  <td><video controls loop src="video/13_r.mp4"></video></td>
+                  <td><video controls loop src="video/13_ge.mp4"></video></td>
+                </tr>
+                <tr>
+                  <td><video controls loop src="video/14_v.mp4"></video></td>
+                  <td><video controls loop src="video/14_dt.mp4"></video></td>
+                  <td><video controls loop src="video/14_r.mp4"></video></td>
+                  <td><video controls loop src="video/14_ge.mp4"></video></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════  FOOTER  ═══════════════════════ -->
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p class="is-size-7 has-text-grey">
+        Website template adapted from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron&rsquo;s website</a>.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
