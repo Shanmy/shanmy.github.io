@@ -221,7 +221,53 @@ input[type=file]{display:none}
   min-height:100vh;padding:48px 24px;text-align:center}
 .go-icon{font-size:80px;margin-bottom:18px}
 .go-title{font-size:28px;font-weight:800;margin-bottom:10px}
-.go-msg{font-size:16px;color:var(--txt2);margin-bottom:40px;line-height:1.7;max-width:320px}
+.go-msg{font-size:16px;color:var(--txt2);margin-bottom:32px;line-height:1.7;max-width:320px}
+
+/* ══════════════════════════════════════
+   SCREEN: REVIEW
+══════════════════════════════════════ */
+#screen-review{padding:20px 16px 64px}
+.rv-hdr{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.rv-back{background:none;border:1px solid #333;border-radius:8px;color:var(--txt2);
+  font-size:13px;cursor:pointer;padding:6px 10px;flex-shrink:0}
+.rv-title{font-size:22px;font-weight:800}
+.rv-sub{font-size:13px;color:var(--txt2);margin-top:2px}
+.rv-sec-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--txt2);
+  padding:6px 0;border-bottom:1px solid var(--border);margin-bottom:10px;margin-top:6px}
+.rv-role-row{display:flex;align-items:center;gap:8px;padding:8px 10px;
+  background:var(--card);border-radius:10px;margin-bottom:6px;transition:opacity .2s}
+.rv-role-seat{font-size:12px;color:var(--txt2);min-width:22px;text-align:center}
+.rv-role-img{width:28px;height:28px;border-radius:7px;object-fit:cover;background:#252540;flex-shrink:0}
+.rv-role-info{flex:1;min-width:0}
+.rv-role-name{font-size:14px;font-weight:600}
+.rv-role-meta{font-size:11px;color:var(--txt2);margin-top:1px}
+.rv-block{background:var(--card);border-radius:14px;overflow:hidden;margin-bottom:10px}
+.rv-block-hdr{display:flex;align-items:center;gap:7px;padding:9px 13px;border-bottom:1px solid var(--border)}
+.rv-block-hdr.night{background:rgba(79,195,247,.07)}
+.rv-block-hdr.day{background:rgba(255,167,38,.07)}
+.rv-block-hdr-title{font-size:14px;font-weight:700}
+.rv-block-hdr.night .rv-block-hdr-title{color:var(--cyan)}
+.rv-block-hdr.day .rv-block-hdr-title{color:var(--amber)}
+.rv-action-row{display:flex;align-items:flex-start;gap:9px;padding:8px 13px;border-bottom:1px solid var(--border)}
+.rv-action-row:last-child{border-bottom:none}
+.rv-action-img{width:26px;height:26px;border-radius:6px;object-fit:cover;background:#252540;flex-shrink:0;margin-top:1px}
+.rv-action-body{flex:1;min-width:0}
+.rv-action-head{font-size:13px;font-weight:600}
+.rv-action-player{font-size:11px;color:var(--txt2);margin-bottom:2px}
+.rv-note{font-size:12px;line-height:1.5;margin-top:3px;white-space:pre-wrap;word-break:break-word}
+.rv-note.from{color:#a78bfa}
+.rv-note.to{color:var(--cyan)}
+.rv-kill-row{display:flex;align-items:center;gap:8px;padding:8px 13px;border-bottom:1px solid var(--border)}
+.rv-kill-row:last-child{border-bottom:none}
+.rv-kill-body{font-size:13px;flex:1}
+.rv-tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;margin-left:5px}
+.rv-tag.exec{background:rgba(255,167,38,.15);color:var(--amber)}
+.rv-tag.nk{background:rgba(79,195,247,.12);color:var(--cyan)}
+.rv-empty{font-size:12px;color:var(--txt2);padding:10px 13px;font-style:italic}
+.rv-result{background:var(--card);border-radius:14px;padding:20px;text-align:center;margin-top:4px}
+.rv-result-icon{font-size:36px;margin-bottom:8px}
+.rv-result-title{font-size:17px;font-weight:800}
+.rv-result-msg{font-size:13px;color:var(--txt2);margin-top:6px;white-space:pre-line;line-height:1.7}
 
 /* ══════════════════════════════════════
    MODAL: CHARACTER PICKER
@@ -353,7 +399,20 @@ input[type=file]{display:none}
   <div class="go-icon" id="go-icon">🎭</div>
   <div class="go-title" id="go-title">游戏结束</div>
   <div class="go-msg" id="go-msg"></div>
+  <button class="btn btn-primary" onclick="showReview()" style="max-width:280px;margin-bottom:12px">📋 查看复盘</button>
   <button class="btn btn-ghost" onclick="restartGame()" style="max-width:280px">重新开始</button>
+</div>
+
+<!-- ══════════ SCREEN: REVIEW ══════════ -->
+<div id="screen-review" class="hidden" style="padding:20px 16px 64px">
+  <div class="rv-hdr">
+    <button class="rv-back" onclick="showScreen('gameover')">← 返回</button>
+    <div>
+      <div class="rv-title">游戏复盘</div>
+      <div class="rv-sub" id="rv-sub"></div>
+    </div>
+  </div>
+  <div id="review-body"></div>
 </div>
 
 <!-- ══════════ MODAL: CHAR PICKER ══════════ -->
@@ -419,6 +478,11 @@ const G = {
   step: -1,          // -1 = intro, 0..N-1 = character steps
   phase: 'upload',
   pickerFor: null,   // player.id being assigned
+  // Review data
+  initialRoles: [],  // snapshot: [{id,seat,name,charId,charName,team}] taken at game start
+  dayLog: [],        // [{dayNum, executions:[{id,seat,playerName,charId,charName}]}]
+  nightKillLog: [],  // [{nightNum, kills:[{id,seat,playerName,charId,charName}]}]
+  gameResult: null,  // {winner,msg} stored when game ends
 };
 
 const TEAMS = {
@@ -489,7 +553,7 @@ function checkWin() {
 // SCREEN MANAGEMENT
 // ══════════════════════════════════════════════
 function showScreen(name) {
-  ['upload','count','roles','night','night-summary','day','gameover'].forEach(s => {
+  ['upload','count','roles','night','night-summary','day','gameover','review'].forEach(s => {
     document.getElementById(`screen-${s}`).classList.toggle('hidden', s !== name);
   });
   G.phase = name;
@@ -684,6 +748,14 @@ function startNight(num) {
   G.nightNum = num;
   G.nightSteps = computeNightOrder();
   G.step = -1;
+  // Snapshot initial roles at the very start of the game
+  if (num === 1) {
+    G.initialRoles = G.players.map(p => {
+      const char = p.charId ? G.charMap[p.charId] : null;
+      return { id: p.id, seat: p.seat, name: p.name,
+               charId: p.charId, charName: char?.name || '', team: char?.team || '' };
+    });
+  }
   showScreen('night');
   renderNight();
 }
@@ -896,6 +968,7 @@ function renderNightSummary() {
 }
 
 function proceedToDay() {
+  G.dayLog.push({ dayNum: G.nightNum, executions: [] });
   showScreen('day');
   renderDay();
 }
@@ -935,9 +1008,12 @@ function renderPlayerList(context) {
           <div class="prow-name">${esc(name)}</div>
           <div class="prow-char">${char ? esc(char.name) : '—'}</div>
         </div>
-        ${p.alive
-          ? `<button class="kill-btn ${context==='day'?'exec':''}" onclick="killPlayer('${p.id}')">${killLabel}</button>`
-          : `<span class="dead-mark">☠</span>`}
+        ${context === 'day'
+          ? `${!p.alive ? '<span class="dead-mark" style="margin-right:6px">☠</span>' : ''}
+             <button class="kill-btn exec" onclick="killPlayer('${p.id}')">处决</button>`
+          : (p.alive
+              ? `<button class="kill-btn" onclick="killPlayer('${p.id}')">死亡</button>`
+              : `<span class="dead-mark">☠</span>`)}
       </div>
     `;
   }).join('');
@@ -953,19 +1029,53 @@ function renderPlayerList(context) {
 // ══════════════════════════════════════════════
 function killPlayer(playerId) {
   const p = G.players.find(pl => pl.id === playerId);
-  if (!p || !p.alive) return;
+  if (!p) return;
+  // During night, skip already-dead players; during day, allow (records execution)
+  if (!p.alive && G.phase !== 'day') return;
 
   const name = playerDisplay(p);
   const charName = p.charId ? (G.charMap[p.charId]?.name || '') : '';
   const label = charName ? `${name}（${charName}）` : name;
+  const confirmMsg = p.alive
+    ? `确认让 ${label} 死亡？`
+    : `${label} 已死亡，仍要记录此次处决？`;
 
-  if (!confirm(`确认让 ${label} 死亡？`)) return;
+  if (!confirm(confirmMsg)) return;
+
+  const wasAlive = p.alive;
   p.alive = false;
 
-  const result = checkWin();
-  if (result.over) {
-    showGameOver(result);
-    return;
+  // Log the kill event
+  const rec = { id: p.id, seat: p.seat, playerName: name, charId: p.charId, charName };
+  if (G.phase === 'day') {
+    const dayEntry = G.dayLog[G.dayLog.length - 1];
+    if (dayEntry) dayEntry.executions.push(rec);
+  } else {
+    let nk = G.nightKillLog.find(e => e.nightNum === G.nightNum);
+    if (!nk) { nk = { nightNum: G.nightNum, kills: [] }; G.nightKillLog.push(nk); }
+    nk.kills.push(rec);
+  }
+
+  // Only check win condition if the player was alive before this action
+  if (wasAlive) {
+    const result = checkWin();
+    if (result.over) {
+      // Archive partial night if game ends mid-night
+      if (G.phase === 'night' && !G.nightLog.find(e => e.nightNum === G.nightNum)) {
+        saveCurrentNotes();
+        G.nightLog.push({
+          nightNum: G.nightNum,
+          steps: G.nightSteps.map(s => ({
+            charId: s.char.id, charName: s.char.name,
+            playerId: s.player.id, playerName: playerDisplay(s.player),
+            noteFrom: s.noteFrom, noteTo: s.noteTo,
+          })),
+        });
+      }
+      G.gameResult = result;
+      showGameOver(result);
+      return;
+    }
   }
 
   // Re-render current screen
@@ -977,6 +1087,7 @@ function killPlayer(playerId) {
 // GAME OVER
 // ══════════════════════════════════════════════
 function showGameOver(result) {
+  G.gameResult = result;
   showScreen('gameover');
   document.getElementById('go-icon').textContent  = result.winner === 'good' ? '✨' : '💀';
   document.getElementById('go-title').textContent = result.winner === 'good' ? '善良阵营获胜！' : '邪恶阵营获胜！';
@@ -1002,6 +1113,10 @@ function saveGame() {
       nightNum: G.nightNum,
       phase: G.phase,
       nightLog: G.nightLog,
+      initialRoles: G.initialRoles,
+      dayLog: G.dayLog,
+      nightKillLog: G.nightKillLog,
+      gameResult: G.gameResult,
     },
   };
 
@@ -1027,13 +1142,17 @@ function loadSaveFile(text) {
   G.charMap    = {};
   G.characters.forEach(c => { if (c.id) G.charMap[c.id] = c; });
 
-  G.playerCount = data.game.playerCount || 5;
-  G.players     = data.game.players || [];
-  G.nightNum    = data.game.nightNum || 1;
-  G.nightLog    = data.game.nightLog || [];
-  G.nightSteps  = [];
-  G.step        = -1;
-  G.pickerFor   = null;
+  G.playerCount  = data.game.playerCount || 5;
+  G.players      = data.game.players || [];
+  G.nightNum     = data.game.nightNum || 1;
+  G.nightLog     = data.game.nightLog || [];
+  G.initialRoles = data.game.initialRoles || [];
+  G.dayLog       = data.game.dayLog || [];
+  G.nightKillLog = data.game.nightKillLog || [];
+  G.gameResult   = data.game.gameResult || null;
+  G.nightSteps   = [];
+  G.step         = -1;
+  G.pickerFor    = null;
 
   const savedPhase = data.game.phase || 'day';
   if (['roles','count','upload'].includes(savedPhase)) {
@@ -1060,8 +1179,135 @@ document.getElementById('save-file-in').addEventListener('change', e => {
 function restartGame() {
   G.meta = {}; G.characters = []; G.charMap = {}; G.players = [];
   G.nightNum = 1; G.nightSteps = []; G.nightLog = []; G.step = -1; G.pickerFor = null;
+  G.initialRoles = []; G.dayLog = []; G.nightKillLog = []; G.gameResult = null;
   document.getElementById('file-in').value = '';
   showScreen('upload');
+}
+
+// ══════════════════════════════════════════════
+// REVIEW
+// ══════════════════════════════════════════════
+function showReview() {
+  showScreen('review');
+  document.getElementById('rv-sub').textContent =
+    (G.meta.name || '未知剧本') + ' · ' + G.players.length + ' 名玩家';
+
+  let html = '';
+
+  // ── Initial role assignments ──
+  html += `<div class="rv-sec-lbl">初始角色分配</div>`;
+  if (G.initialRoles.length === 0) {
+    html += `<div style="font-size:13px;color:var(--txt2);padding:8px 0 12px">
+      （从存档恢复的游戏可能缺少此信息）</div>`;
+  } else {
+    G.initialRoles.forEach(r => {
+      const char = r.charId ? G.charMap[r.charId] : null;
+      const team = char ? TEAMS[char.team] : null;
+      const isDead = !G.players.find(p => p.id === r.id)?.alive;
+      html += `<div class="rv-role-row" style="${isDead ? 'opacity:.4' : ''}">
+        <span class="rv-role-seat">${r.seat}</span>
+        ${char
+          ? `<img class="rv-role-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">`
+          : `<div class="rv-role-img"></div>`}
+        <div class="rv-role-info">
+          <div class="rv-role-name">${esc(r.name || `座位 ${r.seat}`)}${isDead ? ' ☠' : ''}</div>
+          <div class="rv-role-meta">${esc(r.charName || '—')}${team
+            ? ` &nbsp;<span class="tt ${team.cls}">${team.label}</span>` : ''}</div>
+        </div>
+      </div>`;
+    });
+  }
+
+  // ── Timeline ──
+  html += `<div class="rv-sec-lbl" style="margin-top:16px">游戏流程</div>`;
+
+  const allNs = [
+    ...G.nightLog.map(e => e.nightNum),
+    ...G.dayLog.map(e => e.dayNum),
+    ...G.nightKillLog.map(e => e.nightNum),
+    G.nightNum,
+  ];
+  const maxN = Math.max(...allNs, 1);
+
+  for (let n = 1; n <= maxN; n++) {
+    const nightEntry  = G.nightLog.find(e => e.nightNum === n);
+    const nightKills  = G.nightKillLog.find(e => e.nightNum === n)?.kills || [];
+    const dayEntry    = G.dayLog.find(e => e.dayNum === n);
+
+    // Night block
+    html += `<div class="rv-block">
+      <div class="rv-block-hdr night">
+        <span>🌙</span>
+        <span class="rv-block-hdr-title">第 ${n} 夜</span>
+      </div>`;
+
+    if (!nightEntry || nightEntry.steps.length === 0) {
+      if (nightKills.length === 0) {
+        html += `<div class="rv-empty">本夜无行动记录</div>`;
+      }
+    } else {
+      nightEntry.steps.forEach(s => {
+        const char   = s.charId ? G.charMap[s.charId] : null;
+        const hasFrom = s.noteFrom && s.noteFrom.trim();
+        const hasTo   = s.noteTo   && s.noteTo.trim();
+        html += `<div class="rv-action-row">
+          ${char
+            ? `<img class="rv-action-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">`
+            : `<div class="rv-action-img"></div>`}
+          <div class="rv-action-body">
+            <div class="rv-action-head">${esc(s.charName)}</div>
+            <div class="rv-action-player">👤 ${esc(s.playerName)}</div>
+            ${hasFrom ? `<div class="rv-note from">← ${esc(s.noteFrom)}</div>` : ''}
+            ${hasTo   ? `<div class="rv-note to">→ ${esc(s.noteTo)}</div>`   : ''}
+          </div>
+        </div>`;
+      });
+    }
+
+    nightKills.forEach(k => {
+      html += `<div class="rv-kill-row">
+        <span>💀</span>
+        <span class="rv-kill-body">${esc(k.playerName)}${k.charName
+          ? `（${esc(k.charName)}）` : ''}<span class="rv-tag nk">夜间</span></span>
+      </div>`;
+    });
+
+    html += `</div>`;
+
+    // Day block (only if this day actually happened)
+    if (dayEntry) {
+      html += `<div class="rv-block">
+        <div class="rv-block-hdr day">
+          <span>☀️</span>
+          <span class="rv-block-hdr-title">第 ${n} 天</span>
+        </div>`;
+      if (dayEntry.executions.length === 0) {
+        html += `<div class="rv-empty">本天无处决</div>`;
+      } else {
+        dayEntry.executions.forEach(k => {
+          html += `<div class="rv-kill-row">
+            <span>⚖️</span>
+            <span class="rv-kill-body">${esc(k.playerName)}${k.charName
+              ? `（${esc(k.charName)}）` : ''}<span class="rv-tag exec">处决</span></span>
+          </div>`;
+        });
+      }
+      html += `</div>`;
+    }
+  }
+
+  // Game result
+  if (G.gameResult) {
+    const r = G.gameResult;
+    html += `<div class="rv-result">
+      <div class="rv-result-icon">${r.winner === 'good' ? '✨' : '💀'}</div>
+      <div class="rv-result-title">${r.winner === 'good' ? '善良阵营获胜！' : '邪恶阵营获胜！'}</div>
+      <div class="rv-result-msg">${esc(r.msg)}</div>
+    </div>`;
+  }
+
+  document.getElementById('review-body').innerHTML = html;
+  window.scrollTo(0, 0);
 }
 
 // ══════════════════════════════════════════════
