@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>说书人助手</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0d0d1a;--card:#1a1a2e;--card2:#151528;--border:rgba(255,255,255,.06);
+  --accent:#7c4dff;--cyan:#4fc3f7;--amber:#ffa726;--green:#66bb6a;--red:#ef5350;
+  --txt:#e8e8f0;--txt2:#6878a0;
+  --towns:#42a5f5;--out:#26c6da;--minion:#ef5350;--demon:#ff1744;--traveler:#ce93d8;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',sans-serif;
+  background:var(--bg);color:var(--txt);min-height:100vh;-webkit-tap-highlight-color:transparent;}
+.hidden{display:none!important}
+
+/* ── BUTTONS ── */
+.btn{display:block;width:100%;padding:15px 20px;border:none;border-radius:14px;
+  font-size:16px;font-weight:700;cursor:pointer;transition:opacity .15s,transform .1s;
+  -webkit-appearance:none;}
+.btn:active{opacity:.82;transform:scale(.97)}
+.btn:disabled{opacity:.35;pointer-events:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{background:var(--card2);color:var(--txt)}
+.btn-night{background:rgba(124,77,255,.18);color:var(--cyan);border:1px solid rgba(124,77,255,.5)}
+.btn-day{background:rgba(255,167,38,.12);color:var(--amber);border:1px solid rgba(255,167,38,.4)}
+
+/* ── TEAM TAGS ── */
+.tt{display:inline-block;padding:2px 7px;border-radius:5px;font-size:10px;font-weight:700;letter-spacing:.4px}
+.tt-townsfolk{background:#1a3a5c;color:var(--towns)}
+.tt-outsider{background:#0a3040;color:var(--out)}
+.tt-minion{background:#3a1a1a;color:var(--minion)}
+.tt-demon{background:#2a0505;color:var(--demon)}
+.tt-traveler{background:#2a1540;color:var(--traveler)}
+
+/* ══════════════════════════════════════
+   SCREEN: UPLOAD
+══════════════════════════════════════ */
+#screen-upload{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:100vh;padding:48px 24px;text-align:center;gap:6px}
+.up-moon{font-size:72px;margin-bottom:8px}
+.up-title{font-size:26px;font-weight:800;color:var(--cyan)}
+.up-sub{font-size:14px;color:var(--txt2);margin-bottom:32px}
+.up-drop{width:100%;max-width:320px;border:2px dashed #333;border-radius:20px;
+  padding:40px 20px;cursor:pointer;transition:border-color .2s}
+.up-drop:active,.up-drop.drag{border-color:var(--accent)}
+.up-drop-icon{font-size:40px;margin-bottom:10px}
+.up-drop-lbl{font-size:14px;color:var(--txt2)}
+.up-hint{font-size:12px;color:var(--txt2);margin-top:16px;opacity:.6}
+.up-or{font-size:13px;color:var(--txt2);margin:14px 0 10px}
+.up-load-btn{display:inline-block;padding:11px 24px;border-radius:12px;border:1px solid #333;
+  color:var(--txt2);font-size:14px;cursor:pointer;transition:border-color .2s,color .2s}
+.up-load-btn:active{border-color:var(--accent);color:var(--txt)}
+.up-default{display:flex;align-items:center;gap:12px;width:100%;max-width:320px;
+  background:var(--card);border:1.5px solid var(--accent);border-radius:16px;
+  padding:14px 16px;cursor:pointer;text-align:left;transition:background .15s;
+  margin-bottom:4px;-webkit-appearance:none;color:var(--txt)}
+.up-default:active{background:rgba(124,77,255,.18)}
+.up-default-logo{width:44px;height:44px;border-radius:10px;object-fit:cover;background:#252540;flex-shrink:0}
+.up-default-info{flex:1;min-width:0}
+.up-default-name{font-size:17px;font-weight:700}
+.up-default-by{font-size:11px;color:var(--txt2);margin-top:2px}
+.up-default-arr{color:var(--accent);font-size:18px;flex-shrink:0}
+input[type=file]{display:none}
+
+/* ══════════════════════════════════════
+   SCREEN: COUNT
+══════════════════════════════════════ */
+#screen-count{padding:32px 20px 48px;display:flex;flex-direction:column;align-items:center}
+.scr-top{width:100%;max-width:400px;margin-bottom:28px}
+.scr-game{font-size:22px;font-weight:800;color:var(--cyan)}
+.scr-sub{font-size:14px;color:var(--txt2);margin-top:4px}
+.cnt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+  width:100%;max-width:400px;margin-bottom:28px}
+.cnt-btn{aspect-ratio:1;background:var(--card);border:2px solid transparent;
+  border-radius:12px;color:var(--txt);font-size:20px;font-weight:700;cursor:pointer;transition:all .15s}
+.cnt-btn.sel{border-color:var(--accent);color:var(--accent);background:rgba(124,77,255,.1)}
+
+/* ══════════════════════════════════════
+   SCREEN: ROLES
+══════════════════════════════════════ */
+#screen-roles{padding:20px 16px 64px}
+.roles-top{margin-bottom:20px;display:flex;align-items:center;justify-content:space-between}
+.roles-top-left .scr-game{font-size:20px}
+.roles-back{background:none;border:none;color:var(--txt2);font-size:13px;cursor:pointer;padding:6px 10px;
+  border-radius:8px;border:1px solid #333}
+
+.pslot{background:var(--card);border-radius:14px;padding:12px 12px;
+  margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.seat-dot{min-width:28px;height:28px;border-radius:50%;background:var(--card2);
+  display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--txt2)}
+.pname-in{flex:1;min-width:0;background:transparent;border:none;
+  border-bottom:1px solid #2a2a4a;color:var(--txt);font-size:14px;padding:3px 0;outline:none}
+.pname-in::placeholder{color:var(--txt2)}
+
+.pick-btn{display:flex;align-items:center;gap:5px;background:var(--card2);
+  border:none;border-radius:10px;padding:6px 8px;cursor:pointer;max-width:140px;flex-shrink:0}
+.pick-btn-img{width:24px;height:24px;border-radius:6px;object-fit:cover;background:#333;flex-shrink:0}
+.pick-btn-name{font-size:12px;color:var(--txt);white-space:nowrap;overflow:hidden;
+  text-overflow:ellipsis;max-width:60px}
+.pick-btn-name.ph{color:var(--txt2)}
+
+/* ══════════════════════════════════════
+   SCREEN: NIGHT
+══════════════════════════════════════ */
+#screen-night{display:flex;flex-direction:column;min-height:100vh}
+.night-hdr{position:sticky;top:0;z-index:10;background:rgba(13,13,26,.95);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--border);
+  padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+.night-hdr-l{display:flex;align-items:center;gap:8px}
+.night-num-badge{padding:3px 10px;border-radius:8px;font-size:12px;font-weight:700;
+  background:rgba(79,195,247,.1);color:var(--cyan)}
+.night-step-ct{font-size:13px;color:var(--txt2)}
+.night-body{flex:1;overflow-y:auto;padding:14px 14px 32px}
+
+/* intro card */
+.intro-card{background:var(--card);border-radius:20px;padding:24px 20px;margin-bottom:12px;text-align:center}
+.intro-icon{font-size:52px;margin-bottom:10px}
+.intro-title{font-size:20px;font-weight:800;margin-bottom:6px}
+.intro-text{font-size:13px;color:var(--txt2);line-height:1.7}
+.intro-count{font-size:15px;color:var(--cyan);font-weight:700;margin-top:8px}
+
+/* night order preview */
+.nop-card{background:var(--card);border-radius:16px;overflow:hidden;margin-bottom:12px}
+.nop-hdr{padding:10px 14px;font-size:10px;text-transform:uppercase;letter-spacing:1px;
+  color:var(--txt2);border-bottom:1px solid var(--border)}
+.nop-row{display:flex;align-items:center;padding:9px 14px;gap:8px;border-bottom:1px solid var(--border)}
+.nop-row:last-child{border-bottom:none}
+.nop-num{font-size:11px;color:var(--txt2);min-width:18px}
+.nop-img{width:26px;height:26px;border-radius:6px;object-fit:cover;background:#333;flex-shrink:0}
+.nop-name{font-size:13px;font-weight:600;flex:1}
+.nop-player{font-size:11px;color:var(--txt2)}
+
+/* character card */
+.char-card{background:var(--card);border-radius:20px;overflow:hidden;margin-bottom:12px}
+.char-card-hero{padding:20px;display:flex;gap:14px;align-items:flex-start}
+.char-hero-img{width:76px;height:76px;border-radius:16px;object-fit:cover;background:#252540;flex-shrink:0}
+.char-hero-right{flex:1;min-width:0}
+.char-hero-name{font-size:22px;font-weight:800;margin-bottom:5px}
+.char-hero-player{font-size:13px;color:var(--cyan);margin-top:6px;display:flex;align-items:center;gap:4px}
+
+.char-reminder{padding:14px 20px;border-top:1px solid var(--border)}
+.rem-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--txt2);margin-bottom:7px}
+.rem-txt{font-size:15px;line-height:1.8;color:var(--txt)}
+
+/* navigation */
+.night-nav{display:flex;gap:10px;margin-bottom:14px}
+.night-nav .btn{margin:0}
+
+/* player list */
+.plist{background:var(--card);border-radius:16px;overflow:hidden;margin-bottom:12px}
+.plist-hdr{padding:9px 14px;font-size:10px;text-transform:uppercase;letter-spacing:1px;
+  color:var(--txt2);border-bottom:1px solid var(--border)}
+.prow{display:flex;align-items:center;padding:10px 12px;gap:9px;
+  border-bottom:1px solid var(--border);transition:opacity .2s}
+.prow:last-child{border-bottom:none}
+.prow.dead{opacity:.3}
+.prow-img{width:32px;height:32px;border-radius:8px;object-fit:cover;background:#252540;flex-shrink:0}
+.prow-info{flex:1;min-width:0}
+.prow-name{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prow-char{font-size:11px;color:var(--txt2);margin-top:1px}
+.kill-btn{padding:5px 11px;border:1.5px solid var(--red);border-radius:8px;
+  background:transparent;color:var(--red);font-size:12px;font-weight:700;cursor:pointer;flex-shrink:0}
+.kill-btn.exec{border-color:var(--amber);color:var(--amber)}
+.dead-mark{font-size:20px;flex-shrink:0}
+
+/* ── NOTE INPUTS ── */
+.note-section{padding:4px 20px 18px;border-top:1px solid var(--border)}
+.note-item{margin-top:12px}
+.note-lbl{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.8px;
+  font-weight:700;margin-bottom:5px}
+.note-lbl.from{color:#a78bfa}
+.note-lbl.to{color:var(--cyan)}
+.note-ta{width:100%;background:var(--card2);border:1.5px solid #2a2a4a;border-radius:10px;
+  color:var(--txt);font-size:14px;padding:10px 12px;resize:none;outline:none;
+  font-family:inherit;min-height:60px;line-height:1.6;-webkit-appearance:none;display:block}
+.note-ta:focus{border-color:var(--accent)}
+.note-ta::placeholder{color:var(--txt2)}
+
+/* ── NIGHT SUMMARY ── */
+#screen-night-summary{padding:20px 16px 64px}
+.sum-hdr{margin-bottom:20px}
+.sum-badge{display:inline-block;padding:3px 10px;border-radius:8px;font-size:12px;
+  font-weight:700;background:rgba(124,77,255,.12);color:var(--accent);margin-bottom:6px}
+.sum-title{font-size:22px;font-weight:800}
+.sum-sub{font-size:13px;color:var(--txt2);margin-top:4px;line-height:1.5}
+.sum-card{background:var(--card);border-radius:16px;overflow:hidden;margin-bottom:10px}
+.sum-card-hdr{padding:12px 14px;display:flex;align-items:center;gap:10px;
+  border-bottom:1px solid var(--border)}
+.sum-card-img{width:36px;height:36px;border-radius:9px;object-fit:cover;background:#252540;flex-shrink:0}
+.sum-card-info{flex:1;min-width:0}
+.sum-card-name{font-size:14px;font-weight:700}
+.sum-card-player{font-size:11px;color:var(--txt2);margin-top:2px}
+.sum-notes{padding:10px 14px 14px}
+.sum-row{display:flex;gap:8px;margin-top:8px;align-items:flex-start}
+.sum-arrow{font-size:13px;flex-shrink:0;padding-top:1px;width:16px}
+.sum-row-body{flex:1;min-width:0}
+.sum-row-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.8px;font-weight:700;margin-bottom:2px}
+.sum-row-lbl.from{color:#a78bfa}
+.sum-row-lbl.to{color:var(--cyan)}
+.sum-row-val{font-size:14px;line-height:1.6;color:var(--txt);white-space:pre-wrap;word-break:break-word}
+.sum-empty{font-size:13px;color:var(--txt2);font-style:italic;text-align:center;padding:6px 0 2px}
+
+/* ══════════════════════════════════════
+   SCREEN: DAY
+══════════════════════════════════════ */
+#screen-day{padding:20px 16px 64px}
+.day-hdr{margin-bottom:22px}
+.day-badge{display:inline-block;padding:3px 10px;border-radius:8px;font-size:12px;
+  font-weight:700;background:rgba(255,167,38,.1);color:var(--amber);margin-bottom:6px}
+.day-title{font-size:22px;font-weight:800}
+.day-sub{font-size:13px;color:var(--txt2);margin-top:4px}
+
+/* ══════════════════════════════════════
+   SCREEN: GAMEOVER
+══════════════════════════════════════ */
+#screen-gameover{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:100vh;padding:48px 24px;text-align:center}
+.go-icon{font-size:80px;margin-bottom:18px}
+.go-title{font-size:28px;font-weight:800;margin-bottom:10px}
+.go-msg{font-size:16px;color:var(--txt2);margin-bottom:40px;line-height:1.7;max-width:320px}
+
+/* ══════════════════════════════════════
+   MODAL: CHARACTER PICKER
+══════════════════════════════════════ */
+#modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:200;
+  display:flex;align-items:flex-end}
+#modal-sheet{background:var(--card);border-radius:24px 24px 0 0;width:100%;
+  max-height:82vh;display:flex;flex-direction:column;
+  padding-bottom:env(safe-area-inset-bottom)}
+.modal-handle{width:36px;height:4px;background:#3a3a5a;border-radius:2px;margin:12px auto 8px}
+.picker-search{margin:0 14px 10px;padding:10px 14px;border-radius:10px;
+  border:1px solid #2a2a4a;background:var(--card2);color:var(--txt);font-size:15px;
+  outline:none;-webkit-appearance:none;width:calc(100% - 28px)}
+.picker-scroll{flex:1;overflow-y:auto;padding:0 14px 32px}
+.picker-team-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1px;
+  color:var(--txt2);padding:14px 0 6px}
+.picker-item{display:flex;align-items:center;gap:10px;padding:10px 0;
+  border-bottom:1px solid var(--border);cursor:pointer}
+.picker-item:active{opacity:.7}
+.picker-item.is-sel{background:rgba(124,77,255,.09);border-radius:12px;padding:10px;margin:0 -10px}
+.picker-item.is-used{opacity:.28;pointer-events:none}
+.picker-img{width:40px;height:40px;border-radius:10px;object-fit:cover;background:#252540;flex-shrink:0}
+.picker-info{flex:1;min-width:0}
+.picker-cname{font-size:15px;font-weight:600}
+.picker-cabil{font-size:11px;color:var(--txt2);margin-top:2px;line-height:1.4;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.picker-check{color:var(--accent);font-size:18px;flex-shrink:0}
+.picker-empty{text-align:center;padding:40px;color:var(--txt2);font-size:14px}
+</style>
+</head>
+<body>
+
+<!-- ══════════ SCREEN: UPLOAD ══════════ -->
+<div id="screen-upload">
+  <div class="up-moon">🌙</div>
+  <div class="up-title">说书人助手</div>
+  <div class="up-sub">选择剧本，开始主持游戏</div>
+
+  <button class="up-default" onclick="useDefaultScript()">
+    <img class="up-default-logo" src="https://www.helloimg.com/i/2024/12/27/676e6be93ce0c.png"
+         onerror="this.style.visibility='hidden'" alt="">
+    <div class="up-default-info">
+      <div class="up-default-name">岁岁年年</div>
+      <div class="up-default-by">作者：蓝铃兰 · 内置剧本</div>
+    </div>
+    <span class="up-default-arr">▶</span>
+  </button>
+
+  <div class="up-or">— 或上传自定义剧本 —</div>
+  <label for="file-in" class="up-drop" id="up-drop">
+    <div class="up-drop-icon">📜</div>
+    <div class="up-drop-lbl">点击上传 JSON 文件</div>
+  </label>
+  <input type="file" id="file-in" accept=".json">
+
+  <div class="up-or">— 或 —</div>
+  <label for="save-file-in" class="up-load-btn">💾 加载存档，继续游戏</label>
+  <input type="file" id="save-file-in" accept=".json">
+  <div class="up-hint">支持《钟楼谋杀案》自定义剧本格式</div>
+</div>
+
+<!-- ══════════ SCREEN: COUNT ══════════ -->
+<div id="screen-count" class="hidden">
+  <div class="scr-top">
+    <div class="scr-game" id="cnt-game-name"></div>
+    <div class="scr-sub">今天有多少玩家参与？</div>
+  </div>
+  <div class="cnt-grid" id="cnt-grid"></div>
+  <button class="btn btn-primary" id="cnt-confirm" style="max-width:400px">确认人数，分配角色 →</button>
+</div>
+
+<!-- ══════════ SCREEN: ROLES ══════════ -->
+<div id="screen-roles" class="hidden">
+  <div class="roles-top">
+    <div class="roles-top-left">
+      <div class="scr-game" id="roles-game-name"></div>
+      <div class="scr-sub">为每位玩家选择角色</div>
+    </div>
+    <button class="roles-back" onclick="showScreen('count')">← 返回</button>
+  </div>
+  <div id="roles-list"></div>
+  <div style="height:16px"></div>
+  <button class="btn btn-primary" id="roles-confirm" style="max-width:480px;display:block;margin:0 auto">
+    开始第一夜 🌙
+  </button>
+</div>
+
+<!-- ══════════ SCREEN: NIGHT ══════════ -->
+<div id="screen-night" class="hidden">
+  <div class="night-hdr">
+    <div class="night-hdr-l">
+      <div class="night-num-badge" id="night-num-badge">第 1 夜</div>
+    </div>
+    <div class="night-step-ct" id="night-step-ct"></div>
+  </div>
+  <div class="night-body" id="night-body"></div>
+</div>
+
+<!-- ══════════ SCREEN: NIGHT SUMMARY ══════════ -->
+<div id="screen-night-summary" class="hidden">
+  <div class="sum-hdr">
+    <div class="sum-badge" id="sum-badge">第 1 夜</div>
+    <div class="sum-title">行动记录回顾</div>
+    <div class="sum-sub" id="sum-sub"></div>
+  </div>
+  <div id="sum-body"></div>
+  <div style="height:14px"></div>
+  <button class="btn btn-ghost" onclick="saveGame()" style="max-width:480px;display:block;margin:0 auto 10px">
+    💾 保存本夜记录
+  </button>
+  <button class="btn btn-day" onclick="proceedToDay()" style="max-width:480px;display:block;margin:0 auto">
+    确认完毕，进入白天 ☀️
+  </button>
+  <div style="height:40px"></div>
+</div>
+
+<!-- ══════════ SCREEN: DAY ══════════ -->
+<div id="screen-day" class="hidden">
+  <div class="day-hdr">
+    <div class="day-badge" id="day-badge">白天</div>
+    <div class="day-title">白天行动</div>
+    <div class="day-sub" id="day-sub"></div>
+  </div>
+  <div id="day-body"></div>
+</div>
+
+<!-- ══════════ SCREEN: GAMEOVER ══════════ -->
+<div id="screen-gameover" class="hidden">
+  <div class="go-icon" id="go-icon">🎭</div>
+  <div class="go-title" id="go-title">游戏结束</div>
+  <div class="go-msg" id="go-msg"></div>
+  <button class="btn btn-ghost" onclick="restartGame()" style="max-width:280px">重新开始</button>
+</div>
+
+<!-- ══════════ MODAL: CHAR PICKER ══════════ -->
+<div id="modal-overlay" class="hidden" onclick="overlayClick(event)">
+  <div id="modal-sheet">
+    <div class="modal-handle"></div>
+    <input type="search" class="picker-search" id="picker-search" placeholder="搜索角色名或能力…">
+    <div class="picker-scroll" id="picker-scroll"></div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════
+// BUILT-IN SCRIPT DATA: 岁岁年年
+// ══════════════════════════════════════════════
+const DEFAULT_SCRIPT_DATA = [
+    {"id":"_meta","name":"岁岁年年","author":"蓝铃兰","logo":"https://www.helloimg.com/i/2024/12/27/676e6be93ce0c.png","townsfolkName":"镇民","outsidersName":"外来者","minionsName":"爪牙","demonsName":"恶魔","townsfolk":"镇民","outsider":"外来者","minion":"爪牙","demon":"恶魔","a jinxedName":"相克","a jinxed":"相克"},
+    {"id":"0460a7e22d-9e58-4ff1-87ww8f-64a6da529447","image":"https://www.helloimg.com/i/2024/12/27/676da8ca12493.png","edition":"custom","name":"舞龙（身）","ability":"你无法被流放。每个白天，舞龙（头）可以向一名非旅行者玩家发起流放，此次流放仅舞龙能参与且半数以上舞龙同意即可流放成功。[只能因舞龙（尾）能力出场]","team":"traveler","firstNight":0,"otherNight":0,"firstNightReminder":"","otherNightReminder":"","reminders":[],"remindersGlobal":[],"setup":0},
+    {"id":"0a40e15220-5611-4646-92ea72-3317d56c44c3","image":"https://www.helloimg.com/i/2024/12/27/676e70d7704ee.png","edition":"custom","name":"灶王爷","ability":"在你的首个夜晚，你会得知包括你在内的三名玩家和他们中的角色类型总数。","team":"townsfolk","sch_team":"镇民","firstNight":52.1,"otherNight":0,"firstNightReminder":"告诉灶王爷两名其他玩家和一个数字，该数字为灶王爷和他们的角色类型数量。","reminders":["灶火"]},
+    {"id":"hebusiniyade111","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/dianxiaoer.png","edition":"custom","name":"店小二","ability":"在你的首个夜晚，你会得知两名善良玩家。他们之中会有一人醉酒，即使你已死亡。","team":"townsfolk","sch_team":"镇民","firstNight":53,"otherNight":0,"firstNightReminder":"唤醒店小二，对他指向两名善良玩家。","otherNightReminder":"","reminders":["熟客","醉酒"],"setup":false},
+    {"id":"yinyangshiqidong111","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/yinyangshi.png","edition":"custom","name":"阴阳师","ability":"在你的首个夜晚，你会得知两个善良角色和两个邪恶角色。其中有且只有两个角色在场。","team":"townsfolk","sch_team":"镇民","firstNight":51,"otherNight":0,"firstNightReminder":"唤醒阴阳师，对他展示两个善良角色和两个邪恶角色。","reminders":["在场","不在场"],"setup":false},
+    {"id":"woshixiuxingzhe1111","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/qintianjian.png","edition":"custom","name":"钦天监","ability":"在你的首个夜晚，你会得知离你最近的邪恶玩家位于你的哪一侧（左/右/相同）。如果与你邻近的玩家中有邪恶阵营，你会得知错误信息。","team":"townsfolk","sch_team":"镇民","firstNight":54.5,"otherNight":0,"firstNightReminder":"唤醒钦天监，对他指向对应方向来告知他最近的邪恶玩家的方向。","otherNightReminder":"","reminders":[],"setup":false},
+    {"id":"wushiren_button1","image":"https://oss.gstonegames.com/data_file/clocktower/upload/202301/c_7613877694761_6041a632.jpg","edition":"custom","name":"舞狮人","ability":"每个夜晚，你会得知一个在场角色。每局游戏限一次，你得知的信息改为恶魔的伪装之一。","team":"townsfolk","sch_team":"镇民","firstNight":77,"otherNight":110,"firstNightReminder":"唤醒舞狮人，对他展示一个角色标记。如果展示了恶魔的伪装，在舞狮人角色标记旁放置\u201c限一次\u201d角色标记。如果舞狮人有\u201c限一次\u201d角色标记，则无法对他展示恶魔的伪装作为正确信息。","otherNightReminder":"唤醒舞狮人，对他展示一个角色标记。如果展示了恶魔的伪装，在舞狮人角色标记旁放置\u201c限一次\u201d角色标记。如果舞狮人有\u201c限一次\u201d角色标记，则无法对他展示恶魔的伪装作为正确信息。","reminders":["得知","限一次"],"remindersGlobal":[],"setup":false},
+    {"id":"wocaishiemo12233223231232323","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/snake_charmer.png","edition":"custom","name":"舞蛇人","ability":"每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。","team":"townsfolk","sch_team":"镇民","firstNight":19.7,"otherNight":12,"firstNightReminder":"唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。","otherNightReminder":"唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。","reminders":["中毒"],"setup":false},
+    {"id":"shiguanuwhaouhsoifhais","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/shiguan.png","edition":"custom","name":"史官","ability":"每个夜晚*，如果今天白天有玩家死于处决，你会得知存活镇民的数量。","team":"townsfolk","sch_team":"镇民","firstNight":0,"otherNight":193.5,"firstNightReminder":"","otherNightReminder":"如果今天白天有玩家死于处决，唤醒史官，告知其在场存活镇民数量。","reminders":["死于处决"],"remindersGlobal":[],"setup":false},
+    {"id":"linjsdfmeazhfdzgeatteagaeeggaeagae","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/limao.png","edition":"custom","name":"狸猫","ability":"每个夜晚*，你要选择一名除你及旅行者以外的玩家：如果恶魔在今晚杀死了他，你和他交换角色，然后你醉酒。","team":"townsfolk","sch_team":"镇民","firstNight":0,"otherNight":13,"firstNightReminder":"","otherNightReminder":"唤醒狸猫，让他选择一名玩家，将\u201c太子\u201d标记放在对应玩家角色标记旁。如果当晚恶魔杀死了\u201c太子\u201d，交换狸猫与\u201c太子\u201d的角色，并依次唤醒告知。在新的交换后的角色（原狸猫现太子）旁放置\u201c醉酒\u201d标记。","reminders":["太子","醉酒"],"remindersGlobal":[],"setup":false},
+    {"id":"xiangke_but2ton1","image":"https://www.helloimg.com/i/2024/12/27/676da75050d8d.png","edition":"custom","name":"香客","ability":"每个夜晚*，你要点一根香：你会得知香能否被点燃。如果当天你曾与恶魔一起投票，香无法被点燃。","team":"townsfolk","firstNightReminder":"","otherNightReminder":"唤醒香客，如果当天没有与恶魔一起投票，告知他香被点燃了。如果当天曾与恶魔一起投票，告知他香熄灭了","sch_team":"镇民","firstNight":0,"otherNight":120,"reminders":["点燃","熄灭"]},
+    {"id":"fengshuisfgsetgshf1sdf","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/fengshuishi.png","edition":"custom","name":"风水师","ability":"在你的首个夜晚，你会得知一名玩家的角色类型。每个夜晚*，你会从他的顺时针方向得知下一名非旅行者玩家的角色类型。","team":"townsfolk","sch_team":"镇民","firstNight":53.7,"otherNight":91.5,"firstNightReminder":"唤醒风水师，告知他\u201c得知\u201d标记旁的玩家角色类型，并将标记顺时针移动一名玩家。","otherNightReminder":"唤醒风水师，告知他\u201c得知\u201d标记旁的玩家角色类型，并将标记顺时针移动一名玩家。","reminders":["得知"],"remindersGlobal":[],"setup":false},
+    {"id":"yishisaarqwwwwwwwwwwwwwwwwwwwww","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/yishi.png","edition":"custom","name":"驿使","ability":"每个白天，你可以公开声明一个角色。在当晚，你会得知该角色是否在场。如果你因此得知了否，你失去此能力。","team":"townsfolk","sch_team":"镇民","firstNight":0,"otherNight":130,"firstNightReminder":"","otherNightReminder":"如果驿使白天公开声明了一个角色，唤醒驿使：1.如果该角色在场，得知是；2.如果该角色不在场，得知否，并且驿使失去能力。","reminders":["在场","失去能力"],"remindersGlobal":[],"setup":false},
+    {"id":"80de422786-22e7-4460-8d09-96222f40fb538e7","image":"https://www.helloimg.com/i/2024/12/27/676da7d540920.png","edition":"custom","name":"神婆","ability":"每个白天，你可以私下拜访说书人以得知一条信息，你得知的信息对错交替。","team":"townsfolk","sch_team":"镇民","firstNight":0,"otherNight":0,"firstNightReminder":"","otherNightReminder":"","reminders":["正确","错误"],"remindersGlobal":[],"setup":0},
+    {"id":"yiqun2shabi12321341241241412111","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/xizi.png","edition":"custom","name":"戏子","ability":"其他善良玩家醉酒（旅行者除外），你们互相认识且无法转变阵营，对调胜负结果，即使你失去能力。","team":"townsfolk","sch_team":"镇民","firstNight":17,"otherNight":0,"firstNightReminder":"唤醒所有善良角色并让他们互认。","otherNightReminder":"","reminders":["善良醉酒"],"setup":false},
+    {"id":"2137633980-b14a-4b30-818222d1bf53381","image":"https://www.helloimg.com/i/2024/12/27/676da8924ba19.png","edition":"custom","name":"舞龙（头）","ability":"每个夜晚，你会得知你和舞龙（尾）最近距离间存活的善良玩家数量（旅行者不计算在内）。[离你最远的一名镇民玩家是舞龙（尾）]","team":"townsfolk","sch_team":"镇民","firstNight":70,"otherNight":100,"firstNightReminder":"给距离舞龙（头）最远的一名镇民玩家放置舞龙（尾）标记。告诉他，他和舞龙（尾）最近距离间存活的善良玩家数量。","otherNightReminder":"告诉他，他和舞龙（尾）最近距离间存活的善良玩家数量。","reminders":[],"remindersGlobal":[],"setup":true},
+    {"id":"78ed93e27-b474-46d1-891a0-3a33e76d585d","image":"https://www.helloimg.com/i/2024/12/27/676da85e2f8ea.png","edition":"custom","name":"舞龙（尾）","ability":"你不知道你是舞龙（尾），你以为你是其他镇民角色，如果你和舞龙（头）之间的其他玩家都已死亡，这些玩家变成舞龙（身）并复活，在此之前你只会死于处决。[+舞龙（头）]","team":"townsfolk","sch_team":"镇民","firstNight":0,"otherNight":0,"remindersGlobal":["是舞龙（尾）"],"setup":true},
+    {"id":"kangtuiy11ige111","image":"https://clocktower-wiki.gstonegames.com/images/5/51/Nichen.png","edition":"custom","name":"逆臣","ability":"在你的首个夜晚，你要选择除你以外的一名玩家：如果他先死于处决，你会在当晚转变为邪恶；如果你先死于处决，他会在当晚转变为邪恶。","team":"outsider","sch_team":"外来者","firstNight":26,"otherNight":20,"firstNightReminder":"唤醒逆臣，让他选择一名除自己以外的玩家，那名玩家现在与他不共戴天。","otherNightReminder":"如果逆臣或他的目标玩家，这两人之一死于处决，唤醒另一名玩家并通知他阵营变化。","reminders":["不共戴天"],"setup":false},
+    {"id":"wocaishiemo111","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/lunatic.png","edition":"custom","name":"疯子","ability":"你以为你是一个恶魔，但其实你不是。恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。","team":"outsider","sch_team":"外来者","firstNight":5.3,"otherNight":25,"firstNightReminder":"唤醒疯子并向他提供恶魔信息。如可能，则让疯子进行相应的恶魔行动。随后在恶魔信息环节对恶魔提供疯子的相关信息。","otherNightReminder":"如果疯子以为的恶魔会在当晚行动，唤醒疯子，并让他以恶魔的方式行动。","reminders":["被选择"],"remindersGlobal":["是疯子"],"setup":true},
+    {"id":"jsioajidnaionsdjiubaooihc-9j","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/jiubao.png","edition":"custom","name":"酒保","ability":"与你邻近的善良玩家之一醉酒，即使你已死亡。","team":"outsider","sch_team":"外来者","firstNight":0,"otherNight":0,"firstNightReminder":"","otherNightReminder":"","reminders":["醉酒"],"remindersGlobal":[],"setup":false},
+    {"id":"abaab12a111","image":"https://www.helloimg.com/i/2024/12/27/676da963d6098.png","edition":"custom","name":"告密者","ability":"爪牙会在其首个夜晚得知三个不在场的善良角色。","team":"outsider","sch_team":"外来者","firstNight":5,"otherNight":0,"firstNightReminder":"如果告密者在场，对爪牙展示三个不在场的善良角色标记。","otherNightReminder":"","reminders":[],"setup":false},
+    {"id":"7c1f73f7-10d5-249ff-8c60-3828e2f3cbe9","image":"https://www.helloimg.com/i/2024/12/27/676da90e3422f.png","edition":"custom","name":"朱厌","ability":"每局游戏限一次，在夜晚时*，你可以选择当晚所有镇民玩家的能力都会产生错误信息。[+1 外来者]","team":"minion","sch_team":"爪牙","firstNight":0,"otherNight":11,"firstNightReminder":"","otherNightReminder":"唤醒朱厌，询问他是否发动能力，如果选择发动能力，将\u201c镇民错误\u201d提示标记放置在角色旁，当晚所有镇民玩家的能力都会产生错误信息。然后朱厌失去能力。","reminders":["镇民错误","失去能力"],"setup":true},
+    {"id":"zheyeshige1jiugui111","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/marionette.png","edition":"custom","name":"提线木偶","ability":"你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]","team":"minion","sch_team":"爪牙","firstNight":16,"otherNight":0,"firstNightReminder":"如果提线木偶在场，对恶魔展示提线木偶角色标记并指向提线木偶玩家。","remindersGlobal":["是提线木偶"],"setup":true},
+    {"id":"xixi11211111211111","image":"https://clocktower-wiki.gstonegames.com/images/4/4d/Cerenovus.png","edition":"custom","name":"洗脑师","ability":"每个夜晚，你要选择一名玩家和一个善良角色。他明天白天和夜晚需要\u201c疯狂\u201d地证明自己是这个角色，不然他可能被处决。","team":"minion","sch_team":"爪牙","firstNight":25,"otherNight":15,"firstNightReminder":"唤醒洗脑师，让他选择一名玩家和角色列表上的一个善良角色，那名玩家明天需要\u201c疯狂\u201d证明自己是那个角色。在洗脑师入睡后通知那名玩家被洗脑。","otherNightReminder":"唤醒洗脑师，让他选择一名玩家和角色列表上的一个善良角色，那名玩家明天需要\u201c疯狂\u201d证明自己是那个角色。在洗脑师入睡后通知那名玩家被洗脑。","reminders":["疯狂"],"setup":false},
+    {"id":"zniangiajisudaiohwiodhisoahdioashdk2h143on211","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/niangjiushi.png","edition":"custom","name":"酿酒师","ability":"每个夜晚，你要选择一个镇民角色：当他下一次通过自身能力获取信息时，改为得知你给出的信息。","team":"minion","sch_team":"爪牙","firstNight":19.6,"otherNight":10,"firstNightReminder":"唤醒酿酒师，让其选择一个镇民角色并给出一个符合该角色信息格式的信息，当他下一次通过自身能力获取信息时，改为得知酿酒师给出的信息。","otherNightReminder":"唤醒酿酒师，让其选择一个镇民角色并给出一个符合该角色信息格式的信息，当他下一次通过自身能力获取信息时，改为得知酿酒师给出的信息。","reminders":["微醺"],"setup":false},
+    {"id":"shiyide2e1m22o1111","image":"https://www.helloimg.com/i/2024/12/26/676d5a5288b1b.png","edition":"custom","name":"岁","ability":"每个夜晚*，你要选择一名玩家：他死亡。邪恶玩家互相不认识。死亡的爪牙有一次机会在白天提名阶段前拜访说书人并猜测你是恶魔（所有人会得知此事），猜对则当晚他的阵营获胜。","team":"demon","sch_team":"恶魔","remindersGlobal":["死亡","已猜测"],"firstNightReminder":"如果岁在场，跳过邪恶方互认。","otherNightReminder":"唤醒岁，让他攻击一名角色。","firstNight":2,"otherNight":26},
+    {"id":"567865124223_meta","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/xizi.png","name":"戏子&疯子","team":"a jinxed","setup":0,"ability":"疯子不会因为戏子能力参与互认，也不会因为戏子的能力醉酒。"},
+    {"id":"567865212142_meta","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/xizi.png","name":"戏子&舞龙尾","team":"a jinxed","setup":0,"ability":"舞龙尾不会因为戏子的能力醉酒。"},
+    {"id":"5672865121342_meta","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/xizi.png","name":"戏子&告密者","team":"a jinxed","setup":0,"ability":"告密者不会因为戏子的能力醉酒。"},
+    {"id":"28_meta","image":"https://clocktower-wiki.gstonegames.com/images/thumb/3/3d/Marionette.png/300px-Marionette.png","name":"提线木偶&告密者","team":"a jinxed","setup":0,"ability":"提线木偶不会得知三个不在场的角色，如果提线木偶与告密者均在场，改为由恶魔额外得知三个不在场角色。"},
+    {"id":"2000000_meta","image":"https://clocktower-wiki.gstonegames.com/images/thumb/3/3d/Marionette.png/300px-Marionette.png","name":"提线木偶&岁","team":"a jinxed","setup":0,"ability":"岁会知道提线木偶是谁，提线木偶无法猜测谁是岁，其他爪牙会知道提线木偶在场。"},
+    {"id":"qilin","image":"https://oss.gstonegames.com/data_file/clocktower/web/icons/qilin.png","edition":"custom","name":"麒麟","ability":"在游戏的最后一天，最幸运的玩家身上会发生一些好的事情。","team":"fabled","firstNight":0,"otherNight":0}
+];
+
+// ══════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════
+const G = {
+  meta: {},
+  characters: [],    // assignable (not _meta / fabled / a jinxed)
+  charMap: {},       // id → character
+  playerCount: 5,
+  players: [],       // [{id,seat,name,charId,alive}]
+  nightNum: 1,
+  nightSteps: [],    // [{player,char,noteFrom,noteTo}] ordered for current night
+  nightLog: [],      // [{nightNum, steps:[{charId,charName,playerId,playerName,noteFrom,noteTo}]}]
+  step: -1,          // -1 = intro, 0..N-1 = character steps
+  phase: 'upload',
+  pickerFor: null,   // player.id being assigned
+};
+
+const TEAMS = {
+  townsfolk: { label: '镇民',   cls: 'tt-townsfolk' },
+  outsider:  { label: '外来者', cls: 'tt-outsider' },
+  minion:    { label: '爪牙',   cls: 'tt-minion' },
+  demon:     { label: '恶魔',   cls: 'tt-demon' },
+  traveler:  { label: '旅行者', cls: 'tt-traveler' },
+};
+
+// ══════════════════════════════════════════════
+// JSON PARSING
+// ══════════════════════════════════════════════
+function parseScriptData(arr) {
+  G.meta = arr.find(e => e.id === '_meta') || {};
+  G.characters = arr.filter(e =>
+    e.id !== '_meta' &&
+    e.team !== 'fabled' &&
+    e.team !== 'a jinxed' &&
+    e.name
+  );
+  G.charMap = {};
+  arr.forEach(c => { if (c.id) G.charMap[c.id] = c; });
+}
+
+function parseScript(text) {
+  parseScriptData(JSON.parse(text));
+}
+
+function useDefaultScript() {
+  parseScriptData(DEFAULT_SCRIPT_DATA);
+  G.playerCount = 5;
+  showScreen('count');
+  renderCount();
+}
+
+// ══════════════════════════════════════════════
+// NIGHT ORDER
+// ══════════════════════════════════════════════
+function computeNightOrder() {
+  const key = G.nightNum === 1 ? 'firstNight' : 'otherNight';
+  return G.players
+    .filter(p => p.alive && p.charId)
+    .map(p => ({ player: p, char: G.charMap[p.charId] }))
+    .filter(({ char }) => char && (char[key] || 0) > 0)
+    .sort((a, b) => a.char[key] - b.char[key])
+    .map(s => ({ ...s, noteFrom: '', noteTo: '' }));
+}
+
+// ══════════════════════════════════════════════
+// WIN CONDITION
+// ══════════════════════════════════════════════
+function checkWin() {
+  const alive = G.players.filter(p => p.alive);
+  const hasDemonEver = G.players.some(p => p.charId && G.charMap[p.charId]?.team === 'demon');
+  const aliveDemons = alive.filter(p => p.charId && G.charMap[p.charId]?.team === 'demon');
+
+  if (hasDemonEver && aliveDemons.length === 0)
+    return { over: true, winner: 'good', msg: '恶魔已死亡。\n善良阵营获胜！' };
+
+  if (alive.length <= 2)
+    return { over: true, winner: 'evil', msg: '场上仅剩两名玩家。\n邪恶阵营获胜！' };
+
+  return { over: false };
+}
+
+// ══════════════════════════════════════════════
+// SCREEN MANAGEMENT
+// ══════════════════════════════════════════════
+function showScreen(name) {
+  ['upload','count','roles','night','night-summary','day','gameover'].forEach(s => {
+    document.getElementById(`screen-${s}`).classList.toggle('hidden', s !== name);
+  });
+  G.phase = name;
+}
+
+// ══════════════════════════════════════════════
+// UPLOAD SCREEN
+// ══════════════════════════════════════════════
+document.getElementById('file-in').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      parseScript(ev.target.result);
+      G.playerCount = 5;
+      showScreen('count');
+      renderCount();
+    } catch(err) {
+      alert('JSON 解析失败：' + err.message);
+    }
+  };
+  reader.readAsText(file);
+});
+
+// Drag-and-drop
+const upDrop = document.getElementById('up-drop');
+upDrop.addEventListener('dragover', e => { e.preventDefault(); upDrop.classList.add('drag'); });
+upDrop.addEventListener('dragleave', () => upDrop.classList.remove('drag'));
+upDrop.addEventListener('drop', e => {
+  e.preventDefault(); upDrop.classList.remove('drag');
+  const file = e.dataTransfer.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try { parseScript(ev.target.result); G.playerCount = 5; showScreen('count'); renderCount(); }
+    catch(err) { alert('JSON 解析失败：' + err.message); }
+  };
+  reader.readAsText(file);
+});
+
+// ══════════════════════════════════════════════
+// COUNT SCREEN
+// ══════════════════════════════════════════════
+function renderCount() {
+  document.getElementById('cnt-game-name').textContent = G.meta.name || '未知剧本';
+  const grid = document.getElementById('cnt-grid');
+  grid.innerHTML = '';
+  for (let n = 5; n <= 20; n++) {
+    const btn = document.createElement('button');
+    btn.className = 'cnt-btn' + (n === G.playerCount ? ' sel' : '');
+    btn.textContent = n;
+    btn.onclick = () => {
+      G.playerCount = n;
+      grid.querySelectorAll('.cnt-btn').forEach(b => b.classList.remove('sel'));
+      btn.classList.add('sel');
+    };
+    grid.appendChild(btn);
+  }
+}
+
+document.getElementById('cnt-confirm').onclick = () => {
+  G.players = Array.from({ length: G.playerCount }, (_, i) => ({
+    id: `p${i+1}`, seat: i+1, name: '', charId: null, alive: true,
+  }));
+  showScreen('roles');
+  renderRoles();
+};
+
+// ══════════════════════════════════════════════
+// ROLES SCREEN
+// ══════════════════════════════════════════════
+function renderRoles() {
+  document.getElementById('roles-game-name').textContent = G.meta.name || '未知剧本';
+  const list = document.getElementById('roles-list');
+  list.innerHTML = '';
+
+  G.players.forEach(player => {
+    const char = player.charId ? G.charMap[player.charId] : null;
+    const team = char ? TEAMS[char.team] : null;
+
+    const div = document.createElement('div');
+    div.className = 'pslot';
+    div.innerHTML = `
+      <div class="seat-dot">${player.seat}</div>
+      <input class="pname-in" placeholder="玩家名（可选）" value="${esc(player.name)}" data-seat="${player.seat}">
+      <button class="pick-btn" data-pid="${player.id}">
+        ${char
+          ? `<img class="pick-btn-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">`
+          : `<span class="pick-btn-img" style="display:flex;align-items:center;justify-content:center;font-size:14px">＋</span>`
+        }
+        <span class="pick-btn-name ${char?'':'ph'}">${char ? esc(char.name) : '选择角色'}</span>
+        ${team ? `<span class="tt ${team.cls}">${team.label}</span>` : ''}
+      </button>
+    `;
+    list.appendChild(div);
+
+    div.querySelector('.pname-in').addEventListener('input', e => {
+      G.players.find(p => p.seat === +e.target.dataset.seat).name = e.target.value;
+    });
+    div.querySelector('.pick-btn').addEventListener('click', () => {
+      G.pickerFor = player.id;
+      openPicker();
+    });
+  });
+}
+
+document.getElementById('roles-confirm').onclick = () => {
+  const hasDemon = G.players.some(p => p.charId && G.charMap[p.charId]?.team === 'demon');
+  if (!hasDemon) { alert('请至少分配一名恶魔角色！'); return; }
+  startNight(1);
+};
+
+// ══════════════════════════════════════════════
+// CHARACTER PICKER MODAL
+// ══════════════════════════════════════════════
+function openPicker() {
+  document.getElementById('picker-search').value = '';
+  renderPickerList('');
+  document.getElementById('modal-overlay').classList.remove('hidden');
+  setTimeout(() => document.getElementById('picker-search').focus(), 80);
+}
+
+function closePicker() {
+  document.getElementById('modal-overlay').classList.add('hidden');
+  G.pickerFor = null;
+}
+
+function overlayClick(e) {
+  if (e.target === document.getElementById('modal-overlay')) closePicker();
+}
+
+document.getElementById('picker-search').addEventListener('input', e =>
+  renderPickerList(e.target.value.toLowerCase().trim())
+);
+
+function renderPickerList(query) {
+  const usedIds = new Set(G.players.filter(p => p.charId).map(p => p.charId));
+  const currentId = G.pickerFor ? G.players.find(p => p.id === G.pickerFor)?.charId : null;
+  const scroll = document.getElementById('picker-scroll');
+  scroll.innerHTML = '';
+
+  const order = ['townsfolk','outsider','minion','demon','traveler'];
+  let anyShown = false;
+
+  order.forEach(teamId => {
+    const chars = G.characters.filter(c =>
+      c.team === teamId &&
+      (!query || c.name.includes(query) || (c.ability||'').includes(query))
+    );
+    if (!chars.length) return;
+    anyShown = true;
+
+    const lbl = document.createElement('div');
+    lbl.className = 'picker-team-lbl';
+    lbl.textContent = TEAMS[teamId]?.label || teamId;
+    scroll.appendChild(lbl);
+
+    chars.forEach(char => {
+      const isSel = char.id === currentId;
+      const isUsed = usedIds.has(char.id) && !isSel;
+
+      const item = document.createElement('div');
+      item.className = `picker-item${isSel?' is-sel':''}${isUsed?' is-used':''}`;
+      item.innerHTML = `
+        <img class="picker-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">
+        <div class="picker-info">
+          <div class="picker-cname">${esc(char.name)}</div>
+          <div class="picker-cabil">${esc(char.ability||'')}</div>
+        </div>
+        ${isSel ? '<span class="picker-check">✓</span>' : ''}
+      `;
+      item.onclick = () => {
+        const player = G.players.find(p => p.id === G.pickerFor);
+        if (player) player.charId = isSel ? null : char.id;
+        closePicker();
+        renderRoles();
+      };
+      scroll.appendChild(item);
+    });
+  });
+
+  if (!anyShown) {
+    scroll.innerHTML = '<div class="picker-empty">没有匹配的角色</div>';
+  }
+}
+
+// ══════════════════════════════════════════════
+// NIGHT PHASE
+// ══════════════════════════════════════════════
+function startNight(num) {
+  G.nightNum = num;
+  G.nightSteps = computeNightOrder();
+  G.step = -1;
+  showScreen('night');
+  renderNight();
+}
+
+function renderNight() {
+  document.getElementById('night-num-badge').textContent = `第 ${G.nightNum} 夜`;
+  const total = G.nightSteps.length;
+
+  // Step counter
+  const ct = document.getElementById('night-step-ct');
+  ct.textContent = G.step < 0 ? '准备阶段' : `${G.step + 1} / ${total}`;
+
+  const body = document.getElementById('night-body');
+  let html = '';
+
+  if (G.step < 0) {
+    // ── Intro ──
+    html += `
+      <div class="intro-card">
+        <div class="intro-icon">🌙</div>
+        <div class="intro-title">第 ${G.nightNum} 夜开始</div>
+        <div class="intro-text">请告知所有玩家闭上眼睛，夜幕降临。</div>
+        ${total > 0
+          ? `<div class="intro-count">本夜共 ${total} 位角色行动</div>`
+          : `<div class="intro-count" style="color:var(--txt2)">本夜无角色行动</div>`
+        }
+      </div>
+    `;
+
+    if (total > 0) {
+      html += `<div class="nop-card">
+        <div class="nop-hdr">行动顺序预览</div>
+        ${G.nightSteps.map((s, i) => `
+          <div class="nop-row">
+            <span class="nop-num">${i+1}</span>
+            <img class="nop-img" src="${esc(s.char.image||'')}" onerror="this.style.visibility='hidden'" alt="">
+            <span class="nop-name">${esc(s.char.name)}</span>
+            <span class="nop-player">${playerDisplay(s.player)}</span>
+          </div>
+        `).join('')}
+      </div>`;
+    }
+
+    html += `<div class="night-nav">
+      <button class="btn ${total>0?'btn-night':'btn-day'}" onclick="nightAction()">
+        ${total > 0 ? '开始行动 →' : '跳过，进入白天 →'}
+      </button>
+    </div>`;
+
+  } else {
+    // ── Character step ──
+    const s = G.nightSteps[G.step];
+    const char = s.char;
+    const player = s.player;
+    const reminder = G.nightNum === 1
+      ? (char.firstNightReminder || '')
+      : (char.otherNightReminder || '');
+    const team = TEAMS[char.team] || {};
+    const isLast = G.step >= total - 1;
+
+    html += `
+      <div class="char-card">
+        <div class="char-card-hero">
+          <img class="char-hero-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">
+          <div class="char-hero-right">
+            <div class="char-hero-name">${esc(char.name)}</div>
+            <span class="tt ${team.cls||''}">${team.label||char.team}</span>
+            <div class="char-hero-player">👤 ${esc(playerDisplay(player))}</div>
+          </div>
+        </div>
+        ${reminder
+          ? `<div class="char-reminder">
+               <div class="rem-lbl">主持人提示</div>
+               <div class="rem-txt">${esc(reminder)}</div>
+             </div>`
+          : `<div class="char-reminder" style="color:var(--txt2);font-size:13px;text-align:center">
+               （本步骤无特定提示）
+             </div>`
+        }
+        <div class="note-section">
+          <div class="note-item">
+            <label class="note-lbl from">← 玩家选择 / 告知我</label>
+            <textarea id="note-from" class="note-ta" placeholder="记录玩家的选择或给出的信息…">${esc(s.noteFrom)}</textarea>
+          </div>
+          <div class="note-item">
+            <label class="note-lbl to">→ 我告知玩家</label>
+            <textarea id="note-to" class="note-ta" placeholder="记录我给玩家的信息…">${esc(s.noteTo)}</textarea>
+          </div>
+        </div>
+      </div>
+      <div class="night-nav">
+        <button class="btn btn-ghost" onclick="nightPrev()">← 上一步</button>
+        <button class="btn ${isLast?'btn-day':'btn-night'}" onclick="nightAction()">
+          ${isLast ? '结束夜晚 ✓' : '下一步 →'}
+        </button>
+      </div>
+    `;
+  }
+
+  // ── Player list ──
+  html += renderPlayerList('night');
+  body.innerHTML = html;
+}
+
+// Save whatever is currently in the note textareas before navigating away
+function saveCurrentNotes() {
+  if (G.step >= 0 && G.step < G.nightSteps.length) {
+    const fromEl = document.getElementById('note-from');
+    const toEl   = document.getElementById('note-to');
+    if (fromEl) G.nightSteps[G.step].noteFrom = fromEl.value;
+    if (toEl)   G.nightSteps[G.step].noteTo   = toEl.value;
+  }
+}
+
+function nightAction() {
+  saveCurrentNotes();
+  const total = G.nightSteps.length;
+  if (G.step < 0 && total === 0) { endNight(); return; }
+  if (G.step >= total - 1) { endNight(); return; }
+  G.step++;
+  document.getElementById('night-body').scrollTop = 0;
+  renderNight();
+}
+
+function nightPrev() {
+  saveCurrentNotes();
+  G.step = Math.max(-1, G.step - 1);
+  document.getElementById('night-body').scrollTop = 0;
+  renderNight();
+}
+
+function endNight() {
+  saveCurrentNotes();
+  // Archive current night into the permanent log
+  G.nightLog.push({
+    nightNum: G.nightNum,
+    steps: G.nightSteps.map(s => ({
+      charId:     s.char.id,
+      charName:   s.char.name,
+      playerId:   s.player.id,
+      playerName: playerDisplay(s.player),
+      noteFrom:   s.noteFrom,
+      noteTo:     s.noteTo,
+    })),
+  });
+  renderNightSummary();
+}
+
+// ══════════════════════════════════════════════
+// NIGHT SUMMARY
+// ══════════════════════════════════════════════
+function renderNightSummary() {
+  showScreen('night-summary');
+  document.getElementById('sum-badge').textContent = `第 ${G.nightNum} 夜`;
+
+  const total = G.nightSteps.length;
+  const withNotes = G.nightSteps.filter(s => s.noteFrom.trim() || s.noteTo.trim()).length;
+  document.getElementById('sum-sub').textContent =
+    total === 0
+      ? '本夜无角色行动。'
+      : `共 ${total} 位角色行动，其中 ${withNotes} 条有记录。请核查后进入白天。`;
+
+  const body = document.getElementById('sum-body');
+
+  if (total === 0) {
+    body.innerHTML = `<div style="text-align:center;padding:40px 0;color:var(--txt2)">本夜无行动记录。</div>`;
+    return;
+  }
+
+  body.innerHTML = G.nightSteps.map((s, i) => {
+    const team = TEAMS[s.char.team] || {};
+    const hasFrom = s.noteFrom && s.noteFrom.trim();
+    const hasTo   = s.noteTo   && s.noteTo.trim();
+    const hasAny  = hasFrom || hasTo;
+    return `
+      <div class="sum-card">
+        <div class="sum-card-hdr">
+          <span style="font-size:11px;color:var(--txt2);min-width:18px;flex-shrink:0">${i+1}</span>
+          <img class="sum-card-img" src="${esc(s.char.image||'')}" onerror="this.style.visibility='hidden'" alt="">
+          <div class="sum-card-info">
+            <div class="sum-card-name">${esc(s.char.name)}</div>
+            <div class="sum-card-player">
+              ${esc(playerDisplay(s.player))}
+              <span class="tt ${team.cls||''}" style="margin-left:4px">${team.label||s.char.team}</span>
+            </div>
+          </div>
+          ${!hasAny ? '<span style="font-size:12px;color:var(--txt2);flex-shrink:0">无记录</span>' : ''}
+        </div>
+        ${hasAny ? `<div class="sum-notes">
+          ${hasFrom ? `<div class="sum-row">
+            <span class="sum-arrow" style="color:#a78bfa">←</span>
+            <div class="sum-row-body">
+              <div class="sum-row-lbl from">玩家告知</div>
+              <div class="sum-row-val">${esc(s.noteFrom)}</div>
+            </div>
+          </div>` : ''}
+          ${hasTo ? `<div class="sum-row">
+            <span class="sum-arrow" style="color:var(--cyan)">→</span>
+            <div class="sum-row-body">
+              <div class="sum-row-lbl to">我给出的信息</div>
+              <div class="sum-row-val">${esc(s.noteTo)}</div>
+            </div>
+          </div>` : ''}
+        </div>` : ''}
+      </div>
+    `;
+  }).join('');
+
+  window.scrollTo(0, 0);
+}
+
+function proceedToDay() {
+  showScreen('day');
+  renderDay();
+}
+
+// ══════════════════════════════════════════════
+// DAY PHASE
+// ══════════════════════════════════════════════
+function renderDay() {
+  document.getElementById('day-badge').textContent = `第 ${G.nightNum} 天`;
+  document.getElementById('day-sub').textContent = '在此阶段可进行处决。';
+
+  const body = document.getElementById('day-body');
+  const nextNight = G.nightNum + 1;
+  body.innerHTML = `
+    ${renderPlayerList('day')}
+    <div style="height:12px"></div>
+    <button class="btn btn-ghost" onclick="saveGame()" style="margin-bottom:10px">💾 保存游戏进度</button>
+    <button class="btn btn-night" onclick="startNight(${nextNight})">进入第 ${nextNight} 夜 🌙</button>
+    <div style="height:32px"></div>
+  `;
+}
+
+// ══════════════════════════════════════════════
+// SHARED: PLAYER LIST RENDER
+// ══════════════════════════════════════════════
+function renderPlayerList(context) {
+  const killLabel = context === 'day' ? '处决' : '死亡';
+  const rows = G.players.map(p => {
+    const char = p.charId ? G.charMap[p.charId] : null;
+    const name = playerDisplay(p);
+    return `
+      <div class="prow ${p.alive?'':'dead'}">
+        ${char
+          ? `<img class="prow-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">`
+          : `<div class="prow-img"></div>`}
+        <div class="prow-info">
+          <div class="prow-name">${esc(name)}</div>
+          <div class="prow-char">${char ? esc(char.name) : '—'}</div>
+        </div>
+        ${p.alive
+          ? `<button class="kill-btn ${context==='day'?'exec':''}" onclick="killPlayer('${p.id}')">${killLabel}</button>`
+          : `<span class="dead-mark">☠</span>`}
+      </div>
+    `;
+  }).join('');
+
+  return `<div class="plist">
+    <div class="plist-hdr">玩家状态</div>
+    ${rows}
+  </div>`;
+}
+
+// ══════════════════════════════════════════════
+// KILL PLAYER
+// ══════════════════════════════════════════════
+function killPlayer(playerId) {
+  const p = G.players.find(pl => pl.id === playerId);
+  if (!p || !p.alive) return;
+
+  const name = playerDisplay(p);
+  const charName = p.charId ? (G.charMap[p.charId]?.name || '') : '';
+  const label = charName ? `${name}（${charName}）` : name;
+
+  if (!confirm(`确认让 ${label} 死亡？`)) return;
+  p.alive = false;
+
+  const result = checkWin();
+  if (result.over) {
+    showGameOver(result);
+    return;
+  }
+
+  // Re-render current screen
+  if (G.phase === 'night') renderNight();
+  if (G.phase === 'day') renderDay();
+}
+
+// ══════════════════════════════════════════════
+// GAME OVER
+// ══════════════════════════════════════════════
+function showGameOver(result) {
+  showScreen('gameover');
+  document.getElementById('go-icon').textContent  = result.winner === 'good' ? '✨' : '💀';
+  document.getElementById('go-title').textContent = result.winner === 'good' ? '善良阵营获胜！' : '邪恶阵营获胜！';
+  document.getElementById('go-msg').textContent   = result.msg;
+}
+
+// ══════════════════════════════════════════════
+// SAVE / LOAD
+// ══════════════════════════════════════════════
+function saveGame() {
+  const phaseLabel = G.phase === 'day' ? `第${G.nightNum}天` : `第${G.nightNum}夜`;
+  const saveData = {
+    saveVersion: 1,
+    savedAt: new Date().toISOString(),
+    scriptName: G.meta.name || '未知剧本',
+    script: {
+      meta: G.meta,
+      characters: G.characters,
+    },
+    game: {
+      playerCount: G.playerCount,
+      players: G.players,
+      nightNum: G.nightNum,
+      phase: G.phase,
+      nightLog: G.nightLog,
+    },
+  };
+
+  const json = JSON.stringify(saveData, null, 2);
+  const blob = new Blob([json], { type: 'application/json;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${G.meta.name || '存档'}_${phaseLabel}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(url), 5000);
+}
+
+function loadSaveFile(text) {
+  const data = JSON.parse(text);
+  if (!data.saveVersion || !data.script || !data.game)
+    throw new Error('不是有效的存档文件');
+
+  G.meta       = data.script.meta || {};
+  G.characters = data.script.characters || [];
+  G.charMap    = {};
+  G.characters.forEach(c => { if (c.id) G.charMap[c.id] = c; });
+
+  G.playerCount = data.game.playerCount || 5;
+  G.players     = data.game.players || [];
+  G.nightNum    = data.game.nightNum || 1;
+  G.nightLog    = data.game.nightLog || [];
+  G.nightSteps  = [];
+  G.step        = -1;
+  G.pickerFor   = null;
+
+  const savedPhase = data.game.phase || 'day';
+  if (['roles','count','upload'].includes(savedPhase)) {
+    showScreen('roles');
+    renderRoles();
+  } else {
+    showScreen('day');
+    renderDay();
+  }
+}
+
+document.getElementById('save-file-in').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try { loadSaveFile(ev.target.result); }
+    catch(err) { alert('存档加载失败：' + err.message); }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+});
+
+function restartGame() {
+  G.meta = {}; G.characters = []; G.charMap = {}; G.players = [];
+  G.nightNum = 1; G.nightSteps = []; G.nightLog = []; G.step = -1; G.pickerFor = null;
+  document.getElementById('file-in').value = '';
+  showScreen('upload');
+}
+
+// ══════════════════════════════════════════════
+// UTILS
+// ══════════════════════════════════════════════
+function playerDisplay(p) {
+  return p.name || `座位 ${p.seat}`;
+}
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+</script>
+</body>
+</html>
