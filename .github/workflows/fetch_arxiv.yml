@@ -1,0 +1,39 @@
+name: Fetch ArXiv cs.CV Papers
+
+on:
+  schedule:
+    # Run at 09:00 UTC Mon–Fri (arxiv announces new papers ~02:00 EST / 07:00 UTC)
+    - cron: '0 9 * * 1-5'
+  workflow_dispatch:   # Allow manual trigger from GitHub UI
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Fetch and classify papers
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/fetch_arxiv.py
+
+      - name: Commit and push results
+        run: |
+          git config user.name  "arxiv-bot"
+          git config user.email "arxiv-bot@users.noreply.github.com"
+          git add personal/arxiv/
+          git diff --staged --quiet \
+            || git commit -m "ArXiv cs.CV digest $(date -u +%Y-%m-%d)"
+          git push

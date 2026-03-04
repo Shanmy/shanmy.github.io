@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArXiv cs.CV Daily Digest</title>
+
+  <!-- KaTeX for LaTeX rendering in Gemini analysis -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+          onload="renderLatex()"></script>
+
+  <!-- marked.js for Markdown rendering in analysis panels -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"></script>
+
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      background: #f5f5f5;
+      color: #2c2c2c;
+    }
+
+    a { color: #1a6fa8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    .page-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    /* ── Header ── */
+    .header {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 16px;
+    }
+    .header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .header .subtitle {
+      color: #666;
+      font-size: 13px;
+    }
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 12px;
+      color: #444;
+    }
+    .stat-badge .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot-interested  { background: #22a855; }
+    .dot-neutral     { background: #888; }
+    .dot-not         { background: #e04040; }
+
+    /* ── Date nav ── */
+    .date-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .date-nav label { font-size: 13px; color: #555; }
+    .date-nav input[type=date] {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .btn-load {
+      background: #1a6fa8;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .btn-load:hover { background: #145d8f; }
+
+    /* ── Filter tabs ── */
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .tab {
+      border: 1px solid #ccc;
+      background: #fff;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.15s;
+      color: #444;
+    }
+    .tab:hover { border-color: #888; }
+    .tab.active {
+      background: #2c2c2c;
+      color: #fff;
+      border-color: #2c2c2c;
+    }
+    .tab.tab-interested.active  { background: #22a855; border-color: #22a855; }
+    .tab.tab-neutral.active     { background: #777;    border-color: #777; }
+    .tab.tab-not.active         { background: #e04040; border-color: #e04040; }
+    .tab.tab-bookmarked.active  { background: #e88020; border-color: #e88020; }
+
+    .search-wrap {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+    .search-input {
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 13px;
+      width: 200px;
+      outline: none;
+    }
+    .search-input:focus { border-color: #888; }
+
+    /* ── Show cross-lists toggle ── */
+    .crosslist-toggle {
+      font-size: 12px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* ── Paper cards ── */
+    .papers-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .paper-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 14px 16px;
+      position: relative;
+      transition: box-shadow 0.15s;
+    }
+    .paper-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* Left accent bar */
+    .paper-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      border-radius: 8px 0 0 8px;
+      background: #ccc;
+    }
+    .paper-card.interested::before  { background: #22a855; }
+    .paper-card.not_interested::before { background: #e04040; }
+    .paper-card.neutral::before     { background: #aaa; }
+
+    /* User-tagged overrides */
+    .paper-card.user-interested::before  { background: #22a855; }
+    .paper-card.user-not::before         { background: #e04040; }
+    .paper-card.user-bookmarked::before  { background: #e88020; }
+
+    .paper-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .paper-title {
+      font-size: 14px;
+      font-weight: 600;
+      flex: 1;
+      line-height: 1.4;
+    }
+    .paper-title a { color: #1a1a1a; }
+    .paper-title a:hover { color: #1a6fa8; }
+
+    .paper-actions {
+      display: flex;
+      gap: 4px;
+      flex-shrink: 0;
+      align-items: center;
+    }
+
+    .action-btn {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 2px 4px;
+      border-radius: 4px;
+      opacity: 0.4;
+      transition: opacity 0.15s, background 0.15s;
+      line-height: 1;
+    }
+    .action-btn:hover { opacity: 0.8; background: #f0f0f0; }
+    .action-btn.active { opacity: 1; }
+
+    .paper-authors {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .paper-tags {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+    .tag-interested  { background: #d4f5e2; color: #1a7a40; }
+    .tag-not         { background: #fde8e8; color: #b83232; }
+    .tag-neutral     { background: #efefef; color: #555; }
+    .tag-gen         { background: #dce8fb; color: #2255a4; }
+    .tag-mllm        { background: #f0e4fb; color: #6a28a8; }
+    .tag-human       { background: #fdf0d8; color: #915c10; }
+    .tag-cross       { background: #f5f5f5; color: #999; border: 1px solid #ddd; }
+    .tag-user        { background: #e88020; color: #fff; }
+
+    /* Abstract */
+    .abstract-toggle {
+      font-size: 12px;
+      color: #888;
+      cursor: pointer;
+      margin-top: 6px;
+      display: inline-block;
+      user-select: none;
+    }
+    .abstract-toggle:hover { color: #444; }
+
+    .abstract-text {
+      font-size: 13px;
+      color: #444;
+      margin-top: 6px;
+      line-height: 1.6;
+      display: none;
+    }
+    .abstract-text.open { display: block; }
+
+    /* Analysis panel */
+    .analysis-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: #1a6fa8;
+      cursor: pointer;
+      margin-top: 6px;
+      margin-left: 12px;
+      user-select: none;
+    }
+    .analysis-toggle:hover { text-decoration: underline; }
+
+    .analysis-panel {
+      display: none;
+      margin-top: 10px;
+      padding: 14px;
+      background: #f8faff;
+      border: 1px solid #c8ddf5;
+      border-radius: 6px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #2c2c2c;
+    }
+    .analysis-panel.open { display: block; }
+
+    /* Markdown in analysis */
+    .analysis-panel h1, .analysis-panel h2, .analysis-panel h3 {
+      margin: 12px 0 6px;
+      font-size: 14px;
+      color: #1a1a1a;
+    }
+    .analysis-panel p { margin: 6px 0; }
+    .analysis-panel ul, .analysis-panel ol {
+      margin: 6px 0 6px 20px;
+    }
+    .analysis-panel li { margin: 2px 0; }
+    .analysis-panel strong { color: #111; }
+    .analysis-panel .katex { font-size: 1em; }
+    .analysis-panel .katex-display { overflow-x: auto; padding: 4px 0; }
+
+    /* ── Empty / error states ── */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #888;
+    }
+    .empty-state h2 { font-size: 18px; margin-bottom: 8px; color: #555; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .search-wrap { margin-left: 0; width: 100%; }
+      .search-input { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+<div class="page-wrap">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>ArXiv cs.CV Daily Digest</h1>
+    <div class="subtitle">
+      Auto-fetched from <a href="https://arxiv.org/list/cs.CV/recent" target="_blank">arxiv.org/list/cs.CV/recent</a>
+      · classified by interest · Gemini-powered analysis for relevant papers
+    </div>
+    <div class="header-meta" id="header-meta">
+      <span class="stat-badge"><span class="dot dot-interested"></span><span id="cnt-interested">–</span> interested</span>
+      <span class="stat-badge"><span class="dot dot-neutral"></span><span id="cnt-neutral">–</span> neutral</span>
+      <span class="stat-badge"><span class="dot dot-not"></span><span id="cnt-not">–</span> not interested</span>
+      <span style="font-size:12px; color:#888;" id="arxiv-date-label"></span>
+    </div>
+  </div>
+
+  <!-- Date navigation -->
+  <div class="date-nav">
+    <label for="date-picker">Date:</label>
+    <input type="date" id="date-picker">
+    <button class="btn-load" id="btn-load-date">Load</button>
+    <button class="btn-load" id="btn-load-latest" style="background:#555;">Latest</button>
+  </div>
+
+  <!-- Filter bar -->
+  <div class="filter-bar">
+    <button class="tab active" data-filter="all">All</button>
+    <button class="tab tab-interested" data-filter="interested">⭐ Interested</button>
+    <button class="tab tab-neutral" data-filter="neutral">Neutral</button>
+    <button class="tab tab-not" data-filter="not_interested">✗ Not for me</button>
+    <button class="tab tab-bookmarked" data-filter="user-bookmarked">🔖 Saved</button>
+    <div class="search-wrap">
+      <input class="search-input" id="search-input" type="text" placeholder="Search title / author…">
+    </div>
+  </div>
+
+  <!-- Cross-list toggle -->
+  <label class="crosslist-toggle">
+    <input type="checkbox" id="show-crosslists"> Show cross-listed papers
+  </label>
+
+  <!-- Papers -->
+  <div class="papers-list" id="papers-list">
+    <div class="empty-state">
+      <h2>Loading…</h2>
+      <p>Fetching today's papers.</p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ── Helpers ──────────────────────────────────────────────────────────────────
+
+const $ = id => document.getElementById(id);
+
+const TAG_LABELS = {
+  image_video_generation: { text: 'Generation', cls: 'tag-gen' },
+  multimodal_llm:         { text: 'Multimodal LLM', cls: 'tag-mllm' },
+  human_generation:       { text: 'Human Gen', cls: 'tag-human' },
+  medical:                { text: 'Medical', cls: 'tag-not' },
+  '3d':                   { text: '3D', cls: 'tag-not' },
+  downstream_tasks:       { text: 'Downstream', cls: 'tag-not' },
+  pure_visual_understanding: { text: 'Visual UND', cls: 'tag-not' },
+};
+
+// ── LocalStorage tags ─────────────────────────────────────────────────────────
+
+function getTags() {
+  return JSON.parse(localStorage.getItem('arxiv_tags') || '{}');
+}
+function setTag(paperId, tag) {
+  const tags = getTags();
+  if (tags[paperId] === tag) {
+    delete tags[paperId]; // toggle off
+  } else {
+    tags[paperId] = tag;
+  }
+  localStorage.setItem('arxiv_tags', JSON.stringify(tags));
+  return tags[paperId] || null;
+}
+function getTag(paperId) {
+  return getTags()[paperId] || null;
+}
+
+// ── State ─────────────────────────────────────────────────────────────────────
+
+let allPapers = [];
+let activeFilter = 'all';
+let showCrossLists = false;
+let searchQuery = '';
+
+// ── Render ────────────────────────────────────────────────────────────────────
+
+function authorStr(authors) {
+  if (!authors || !authors.length) return 'Unknown';
+  if (authors.length <= 3) return authors.join(', ');
+  return authors.slice(0, 3).join(', ') + ` et al. (${authors.length})`;
+}
+
+function buildTagsHtml(classification) {
+  const parts = [];
+  const { label, auto_tags = [], caution_tags = [] } = classification;
+
+  const labelMap = {
+    interested: '<span class="tag tag-interested">⭐ Interested</span>',
+    not_interested: '<span class="tag tag-not">✗ Not interested</span>',
+    neutral: '<span class="tag tag-neutral">Neutral</span>',
+  };
+  parts.push(labelMap[label] || '');
+
+  auto_tags.forEach(t => {
+    const info = TAG_LABELS[t];
+    if (info) parts.push(`<span class="tag ${info.cls}">${info.text}</span>`);
+  });
+
+  return parts.join('');
+}
+
+function buildCard(paper) {
+  const userTag = getTag(paper.id);
+  const cls = paper.classification;
+  const effectiveLabel = userTag
+    ? (userTag === 'interested' ? 'user-interested'
+       : userTag === 'not' ? 'user-not'
+       : 'user-bookmarked')
+    : cls.label;
+
+  const hasAnalysis = !!paper.analysis;
+  const crossBadge = paper.cross_listed
+    ? '<span class="tag tag-cross">cross-list</span>' : '';
+
+  const analysisBtn = hasAnalysis
+    ? `<span class="analysis-toggle" data-id="${paper.id}">✦ Gemini analysis ▾</span>`
+    : '';
+  const analysisHtml = hasAnalysis
+    ? `<div class="analysis-panel" id="analysis-${paper.id}"></div>` : '';
+
+  const bookmarkActive = userTag === 'bookmarked' ? 'active' : '';
+  const intActive      = userTag === 'interested'  ? 'active' : '';
+  const notActive      = userTag === 'not'         ? 'active' : '';
+
+  return `
+<div class="paper-card ${cls.label} ${effectiveLabel !== cls.label ? effectiveLabel : ''}"
+     id="card-${paper.id}"
+     data-id="${paper.id}"
+     data-auto="${cls.label}"
+     data-cross="${paper.cross_listed}">
+
+  <div class="paper-top">
+    <div class="paper-title">
+      <a href="${paper.link}" target="_blank" rel="noopener">${escHtml(paper.title)}</a>
+    </div>
+    <div class="paper-actions">
+      <button class="action-btn ${intActive}" title="Mark interested"
+              onclick="handleTag(event,'${paper.id}','interested')">⭐</button>
+      <button class="action-btn ${bookmarkActive}" title="Bookmark"
+              onclick="handleTag(event,'${paper.id}','bookmarked')">🔖</button>
+      <button class="action-btn ${notActive}" title="Not for me"
+              onclick="handleTag(event,'${paper.id}','not')">✗</button>
+    </div>
+  </div>
+
+  <div class="paper-authors">${escHtml(authorStr(paper.authors))}</div>
+
+  <div class="paper-tags">
+    ${buildTagsHtml(cls)}
+    ${crossBadge}
+    ${userTag ? `<span class="tag" style="background:#e88020;color:#fff;font-size:11px">you: ${userTag}</span>` : ''}
+  </div>
+
+  <span class="abstract-toggle" onclick="toggleAbstract(this)">▸ Abstract</span>
+  ${analysisBtn}
+  <div class="abstract-text">${escHtml(paper.abstract)}</div>
+  ${analysisHtml}
+</div>`;
+}
+
+function escHtml(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;')
+                  .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function toggleAbstract(el) {
+  const txt = el.nextElementSibling;  // might be analysis-toggle or abstract-text
+  // find abstract-text sibling
+  const card = el.closest('.paper-card');
+  const abs = card.querySelector('.abstract-text');
+  const open = abs.classList.toggle('open');
+  el.textContent = open ? '▾ Abstract' : '▸ Abstract';
+}
+
+function handleTag(e, paperId, tag) {
+  e.stopPropagation();
+  const newTag = setTag(paperId, tag);
+  // re-render just this card
+  const paper = allPapers.find(p => p.id === paperId);
+  if (!paper) return;
+  const card = $(`card-${paperId}`);
+  if (!card) return;
+  const oldOpen = card.querySelector('.abstract-text')?.classList.contains('open');
+  const analysisOpen = card.querySelector('.analysis-panel')?.classList.contains('open');
+  const tmp = document.createElement('div');
+  tmp.innerHTML = buildCard(paper);
+  const newCard = tmp.firstElementChild;
+  card.replaceWith(newCard);
+  if (oldOpen) {
+    newCard.querySelector('.abstract-text')?.classList.add('open');
+    const tog = newCard.querySelector('.abstract-toggle');
+    if (tog) tog.textContent = '▾ Abstract';
+  }
+  if (analysisOpen && paper.analysis) {
+    const panel = newCard.querySelector('.analysis-panel');
+    if (panel) {
+      panel.innerHTML = renderMarkdown(paper.analysis);
+      panel.classList.add('open');
+      renderLatexIn(panel);
+      const btn = newCard.querySelector('.analysis-toggle');
+      if (btn) btn.textContent = '✦ Gemini analysis ▴';
+    }
+  }
+  applyFilter();
+}
+
+// ── Analysis panel ────────────────────────────────────────────────────────────
+
+function renderMarkdown(md) {
+  return marked.parse(md || '');
+}
+
+function renderLatexIn(el) {
+  if (window.renderMathInElement) {
+    renderMathInElement(el, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      throwOnError: false,
+    });
+  }
+}
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.analysis-toggle');
+  if (!btn) return;
+  const paperId = btn.dataset.id;
+  const paper = allPapers.find(p => p.id === paperId);
+  if (!paper || !paper.analysis) return;
+  const panel = document.getElementById(`analysis-${paperId}`);
+  if (!panel) return;
+  if (panel.classList.toggle('open')) {
+    if (!panel.innerHTML) {
+      panel.innerHTML = renderMarkdown(paper.analysis);
+      renderLatexIn(panel);
+    }
+    btn.textContent = '✦ Gemini analysis ▴';
+  } else {
+    btn.textContent = '✦ Gemini analysis ▾';
+  }
+});
+
+// ── Filtering ─────────────────────────────────────────────────────────────────
+
+function applyFilter() {
+  const tags = getTags();
+  const q = searchQuery.toLowerCase();
+
+  document.querySelectorAll('.paper-card').forEach(card => {
+    const id = card.dataset.id;
+    const autoLabel = card.dataset.auto;
+    const userTag = tags[id] || null;
+    const isCross = card.dataset.cross === 'true';
+
+    // Cross-list visibility
+    if (isCross && !showCrossLists) { card.style.display = 'none'; return; }
+
+    // Search
+    const paper = allPapers.find(p => p.id === id);
+    if (q && paper) {
+      const haystack = (paper.title + ' ' + (paper.authors || []).join(' ')).toLowerCase();
+      if (!haystack.includes(q)) { card.style.display = 'none'; return; }
+    }
+
+    // Tab filter
+    let show = false;
+    if (activeFilter === 'all') {
+      show = true;
+    } else if (activeFilter === 'user-bookmarked') {
+      show = userTag === 'bookmarked';
+    } else if (activeFilter === 'interested') {
+      show = userTag === 'interested' || (!userTag && autoLabel === 'interested');
+    } else if (activeFilter === 'not_interested') {
+      show = userTag === 'not' || (!userTag && autoLabel === 'not_interested');
+    } else if (activeFilter === 'neutral') {
+      show = !userTag && autoLabel === 'neutral';
+    }
+
+    card.style.display = show ? '' : 'none';
+  });
+}
+
+// ── Data loading ──────────────────────────────────────────────────────────────
+
+async function loadData(url) {
+  const list = $('papers-list');
+  list.innerHTML = '<div class="empty-state"><h2>Loading…</h2></div>';
+  $('cnt-interested').textContent = '–';
+  $('cnt-neutral').textContent = '–';
+  $('cnt-not').textContent = '–';
+  $('arxiv-date-label').textContent = '';
+
+  try {
+    const resp = await fetch(url + '?t=' + Date.now()); // bust cache
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+
+    allPapers = data.papers || [];
+
+    $('cnt-interested').textContent = data.counts?.interested ?? 0;
+    $('cnt-neutral').textContent    = data.counts?.neutral    ?? 0;
+    $('cnt-not').textContent        = data.counts?.not_interested ?? 0;
+    $('arxiv-date-label').textContent = data.arxiv_date
+      ? `arxiv listing: ${data.arxiv_date}` : '';
+
+    if (!allPapers.length) {
+      list.innerHTML = '<div class="empty-state"><h2>No papers</h2><p>No papers found for this date.</p></div>';
+      return;
+    }
+
+    list.innerHTML = allPapers.map(buildCard).join('');
+    applyFilter();
+
+  } catch (err) {
+    list.innerHTML = `<div class="empty-state">
+      <h2>Could not load papers</h2>
+      <p>${escHtml(err.message)}</p>
+      <p style="margin-top:8px;font-size:12px;color:#aaa">
+        GitHub Actions runs Mon–Fri around 09:00 UTC.<br>
+        You can trigger it manually from the Actions tab.
+      </p>
+    </div>`;
+  }
+}
+
+function urlForDate(dateStr) {
+  return `../personal/arxiv/${dateStr}.json`;
+}
+
+function urlForLatest() {
+  return `../personal/arxiv/latest.json`;
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+
+function renderLatex() {
+  // called by KaTeX auto-render once loaded
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Default date = today
+  const today = new Date().toISOString().slice(0, 10);
+  $('date-picker').value = today;
+
+  // Load latest on start
+  loadData(urlForLatest());
+
+  $('btn-load-date').addEventListener('click', () => {
+    const d = $('date-picker').value;
+    if (d) loadData(urlForDate(d));
+  });
+
+  $('btn-load-latest').addEventListener('click', () => {
+    loadData(urlForLatest());
+  });
+
+  // Filter tabs
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeFilter = tab.dataset.filter;
+      applyFilter();
+    });
+  });
+
+  // Search
+  $('search-input').addEventListener('input', e => {
+    searchQuery = e.target.value.trim();
+    applyFilter();
+  });
+
+  // Cross-list toggle
+  $('show-crosslists').addEventListener('change', e => {
+    showCrossLists = e.target.checked;
+    applyFilter();
+  });
+});
+</script>
+</body>
+</html>
