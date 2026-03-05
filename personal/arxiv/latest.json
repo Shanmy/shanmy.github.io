@@ -1,0 +1,1068 @@
+{
+  "fetched_date": "2026-03-05",
+  "arxiv_date": "",
+  "total": 50,
+  "counts": {
+    "interested": 5,
+    "not_interested": 17,
+    "neutral": 28
+  },
+  "papers": [
+    {
+      "id": "arXiv:2603.04399",
+      "title": "SimpliHuMoN: Simplifying Human Motion Prediction",
+      "authors": [
+        "Aadya Agrawal",
+        "Alexander Schwing"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04399",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04385",
+      "title": "ZipMap: Linear-Time Stateful 3D Reconstruction with Test-Time Training",
+      "authors": [
+        "Haian Jin",
+        "Rundi Wu",
+        "Tianyuan Zhang",
+        "Ruiqi Gao",
+        "Jonathan T. Barron",
+        "Noah Snavely",
+        "Aleksander Holynski"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04385",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "3d"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04380",
+      "title": "TaxonRL: Reinforcement Learning with Intermediate Rewards for Interpretable Fine-Grained Visual Reasoning",
+      "authors": [
+        "Maximilian von Klinski",
+        "Maximilian Schall"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04380",
+      "cross_listed": false,
+      "classification": {
+        "label": "interested",
+        "auto_tags": [
+          "multimodal_llm"
+        ],
+        "caution_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04379",
+      "title": "Helios: Real Real-Time Long Video Generation Model",
+      "authors": [
+        "Shenghai Yuan",
+        "Yuanyang Yin",
+        "Zongjian Li",
+        "Xinwei Huang",
+        "Xiao Yang",
+        "Li Yuan"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04379",
+      "cross_listed": false,
+      "classification": {
+        "label": "interested",
+        "auto_tags": [
+          "image_video_generation"
+        ],
+        "caution_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04349",
+      "title": "FocusGraph: Graph-Structured Frame Selection for Embodied Long Video Question Answering",
+      "authors": [
+        "Tatiana Zemskova",
+        "Solomon Andryushenko",
+        "Ilya Obrubov",
+        "Viktoriia Khoruzhaia",
+        "Ekaterina Eroshenko",
+        "Ekaterina Derevyanka",
+        "Dmitry Yudin"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04349",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04348",
+      "title": "RANGER: Sparsely-Gated Mixture-of-Experts with Adaptive Retrieval Re-ranking for Pathology Report Generation",
+      "authors": [
+        "Yixin Chen",
+        "Ziyu Su",
+        "Hikmat Khan",
+        "Muhammad Khalid Khan Niazi"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04348",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "medical"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04346",
+      "title": "Underrepresented in Foundation Model Pretraining Data? A One-Shot Probe",
+      "authors": [
+        "Chris Vorster",
+        "Mayug Maniparambil",
+        "Noel E. O'Connor",
+        "Noel Murphy",
+        "Derek Molloy"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04346",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04343",
+      "title": "Enhancing Authorship Attribution with Synthetic Paintings",
+      "authors": [
+        "Clarissa Loures",
+        "Caio Hosken",
+        "Luan Oliveira",
+        "Gianlucca Zuin",
+        "Adriano Veloso"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04343",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04341",
+      "title": "Hold-One-Shot-Out (HOSO) for Validation-Free Few-Shot CLIP Adapters",
+      "authors": [
+        "Chris Vorster",
+        "Mayug Maniparambil",
+        "Noel E. O'Connor",
+        "Noel Murphy",
+        "Derek Molloy"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04341",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04340",
+      "title": "Balancing Fidelity, Utility, and Privacy in Synthetic Cardiac MRI Generation: A Comparative Study",
+      "authors": [
+        "Madhura Edirisooriya",
+        "Dasuni Kawya",
+        "Ishan Kumarasinghe",
+        "Isuri Devindi",
+        "Mary M. Maleckar",
+        "Roshan Ragel",
+        "Isuru Nawinne",
+        "Vajira Thambawita"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04340",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "medical"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04338",
+      "title": "ArtHOI: Articulated Human-Object Interaction Synthesis by 4D Reconstruction from Video Priors",
+      "authors": [
+        "Zihao Huang",
+        "Tianqi Liu",
+        "Zhaoxi Chen",
+        "Shaocong Xu",
+        "Saining Zhang",
+        "Lixing Xiao",
+        "Zhiguo Cao",
+        "Wei Li",
+        "Hao Zhao",
+        "Ziwei Liu"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04338",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04337",
+      "title": "Pointer-CAD: Unifying B-Rep and Command Sequences via Pointer-based Edges & Faces Selection",
+      "authors": [
+        "Dacheng Qi",
+        "Chenyu Wang",
+        "Jingwei Xu",
+        "Tianzhe Chu",
+        "Zibo Zhao",
+        "Wen Liu",
+        "Wenrui Ding",
+        "Yi Ma",
+        "Shenghua Gao"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04337",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04325",
+      "title": "Scalable Evaluation of the Realism of Synthetic Environmental Augmentations in Images",
+      "authors": [
+        "Damian J. Ruck",
+        "Paul Vautravers",
+        "Oliver Chalkley",
+        "Jake Thomas"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04325",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04321",
+      "title": "SPRINT: Semi-supervised Prototypical Representation for Few-Shot Class-Incremental Tabular Learning",
+      "authors": [
+        "Umid Suleymanov",
+        "Murat Kantarcioglu",
+        "Kevin S Chan",
+        "Michael De Lucia",
+        "Kevin Hamlen",
+        "Latifur Khan",
+        "Sharad Mehrotra",
+        "Ananthram Swami",
+        "Bhavani Thuraisingham"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04321",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04314",
+      "title": "MOO: A Multi-view Oriented Observations Dataset for Viewpoint Analysis in Cattle Re-Identification",
+      "authors": [
+        "William Grolleau",
+        "Achraf Chaouch",
+        "Astrid Sabourin",
+        "Guillaume Lapouge",
+        "Catherine Achard"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04314",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "pure_visual_understanding"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04307",
+      "title": "Dual Diffusion Models for Multi-modal Guided 3D Avatar Generation",
+      "authors": [
+        "Hong Li",
+        "Yutang Feng",
+        "Minqi Meng",
+        "Yichen Yang",
+        "Xuhui Liu",
+        "Baochang Zhang"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04307",
+      "cross_listed": false,
+      "classification": {
+        "label": "interested",
+        "auto_tags": [
+          "image_video_generation"
+        ],
+        "caution_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04302",
+      "title": "Motion Manipulation via Unsupervised Keypoint Positioning in Face Animation",
+      "authors": [
+        "Hong Li",
+        "Boyu Liu",
+        "Xuhui Liu",
+        "Baochang Zhang"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04302",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04291",
+      "title": "CubeComposer: Spatio-Temporal Autoregressive 4K 360° Video Generation from Perspective Video",
+      "authors": [
+        "Lingen Li",
+        "Guangzhi Wang",
+        "Xiaoyu Li",
+        "Zhaoyang Zhang",
+        "Qi Dou",
+        "Jinwei Gu",
+        "Tianfan Xue",
+        "Ying Shan"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04291",
+      "cross_listed": false,
+      "classification": {
+        "label": "interested",
+        "auto_tags": [
+          "image_video_generation"
+        ],
+        "caution_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04290",
+      "title": "Gaussian Wardrobe: Compositional 3D Gaussian Avatars for Free-Form Virtual Try-On",
+      "authors": [
+        "Zhiyi Chen",
+        "Hsuan-I Ho",
+        "Tianjian Jiang",
+        "Jie Song",
+        "Manuel Kaufmann",
+        "Chen Guo"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04290",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "3d"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04288",
+      "title": "A multi-center analysis of deep learning methods for video polyp detection and segmentation",
+      "authors": [
+        "Noha Ghatwary",
+        "Pedro Chavarias Solano",
+        "Mohamed Ramzy Ibrahim",
+        "Adrian Krenzer",
+        "Frank Puppe",
+        "Stefano Realdon",
+        "Renato Cannizzaro",
+        "Jiacheng Wang",
+        "Liansheng Wang",
+        "Thuy Nuong Tran",
+        "Lena Maier-Hein",
+        "Amine Yamlahi",
+        "Patrick Godau",
+        "Quan He",
+        "Qiming Wan",
+        "Mariia Kokshaikyna",
+        "Mariia Dobko",
+        "Haili Ye",
+        "Heng Li",
+        "Ragu B",
+        "Antony Raj",
+        "Hanaa Nagdy",
+        "Osama E Salem",
+        "James E. East",
+        "Dominique Lamarque",
+        "Thomas de Lange",
+        "Sharib Ali"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04288",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04272",
+      "title": "SSR: A Generic Framework for Text-Aided Map Compression for Localization",
+      "authors": [
+        "Mohammad Omama",
+        "Po-han Li",
+        "Harsh Goel",
+        "Minkyu Choi",
+        "Behdad Chalaki",
+        "Vaishnav Tadiparthi",
+        "Hossein Nourkhiz Mahjoub",
+        "Ehsan Moradi Pari",
+        "Sandeep P. Chinchali"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04272",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04265",
+      "title": "ViterbiPlanNet: Injecting Procedural Knowledge via Differentiable Viterbi for Planning in Instructional Videos",
+      "authors": [
+        "Luigi Seminara",
+        "Davide Moltisanti",
+        "Antonino Furnari"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04265",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04256",
+      "title": "A Hypertoroidal Covering for Perfect Color Equivariance",
+      "authors": [
+        "Yulong Yang",
+        "Zhikun Xu",
+        "Yaojun Li",
+        "Christine Allen-Blanchette"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04256",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04254",
+      "title": "EmbodiedSplat: Online Feed-Forward Semantic 3DGS for Open-Vocabulary 3D Scene Understanding",
+      "authors": [
+        "Seungjun Lee",
+        "Zihan Wang",
+        "Yunsong Wang",
+        "Gim Hee Lee"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04254",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "3d"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04243",
+      "title": "A Unified Framework for Joint Detection of Lacunes and Enlarged Perivascular Spaces",
+      "authors": [
+        "Lucas He",
+        "Krinos Li",
+        "Hanyuan Zhang",
+        "Runlong He",
+        "Silvia Ingala",
+        "Luigi Lorenzini",
+        "Marleen de Bruijne",
+        "Frederik Barkhof",
+        "Rhodri Davies",
+        "Carole Sudre"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04243",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04240",
+      "title": "DeNuC: Decoupling Nuclei Detection and Classification in Histopathology",
+      "authors": [
+        "Zijiang Yang",
+        "Chen Kuang",
+        "Dongmei Fu"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04240",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "medical"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04239",
+      "title": "DiverseDiT: Towards Diverse Representation Learning in Diffusion Transformers",
+      "authors": [
+        "Mengping Yang",
+        "Zhiyu Tan",
+        "Binglei Li",
+        "Xiaomeng Yang",
+        "Hesen Chen",
+        "Hao Li"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04239",
+      "cross_listed": false,
+      "classification": {
+        "label": "interested",
+        "auto_tags": [
+          "image_video_generation"
+        ],
+        "caution_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04205",
+      "title": "Real5-OmniDocBench: A Full-Scale Physical Reconstruction Benchmark for Robust Document Parsing in the Wild",
+      "authors": [
+        "Changda Zhou",
+        "Ziyue Gao",
+        "Xueqing Wang",
+        "Tingquan Gao",
+        "Cheng Cui",
+        "Jing Tang",
+        "Yi Liu"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04205",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04179",
+      "title": "NOVA3R: Non-pixel-aligned Visual Transformer for Amodal 3D Reconstruction",
+      "authors": [
+        "Weirong Chen",
+        "Chuanxia Zheng",
+        "Ganlin Zhang",
+        "Andrea Vedaldi",
+        "Daniel Cremers"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04179",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "3d"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04165",
+      "title": "PlaneCycle: Training-Free 2D-to-3D Lifting of Foundation Models Without Adapters",
+      "authors": [
+        "Yinghong Yu",
+        "Guangyuan Li",
+        "Jiancheng Yang"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04165",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04163",
+      "title": "Degradation-based augmented training for robust individual animal re-identification",
+      "authors": [
+        "Thanos Polychronou",
+        "Lukáš Adam",
+        "Viktor Penchev",
+        "Kostas Papafitsoros"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04163",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "pure_visual_understanding"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04146",
+      "title": "LISTA-Transformer Model Based on Sparse Coding and Attention Mechanism and Its Application in Fault Diagnosis",
+      "authors": [
+        "Shuang Liu",
+        "Lina Zhao",
+        "Tian Wang",
+        "Huaqing Wang"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04146",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "medical"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04130",
+      "title": "Mask-Guided Attention Regulation for Anatomically Consistent Counterfactual CXR Synthesis",
+      "authors": [
+        "Zichun Zhang",
+        "Weizhi Nie",
+        "Honglin Guo",
+        "Yuting Su"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04130",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04128",
+      "title": "Crab$^{+}$: A Scalable and Unified Audio-Visual Scene Understanding Model with Explicit Cooperation",
+      "authors": [
+        "Dongnuan Cai",
+        "Henghui Du",
+        "Chang Zhou",
+        "Xi Chen",
+        "Dan Guo",
+        "Hongyuan Zhang",
+        "Xuelong Li",
+        "Di Hu"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04128",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04125",
+      "title": "A Baseline Study and Benchmark for Few-Shot Open-Set Action Recognition with Feature Residual Discrimination",
+      "authors": [
+        "Stefano Berti",
+        "Giulia Pasquale",
+        "Lorenzo Natale"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04125",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "pure_visual_understanding"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04115",
+      "title": "TextBoost: Boosting Scene Text Fidelity in Ultra-low Bitrate Image Compression",
+      "authors": [
+        "Bingxin Wang",
+        "Yuan Lan",
+        "Zhaoyi Sun",
+        "Yang Xiang",
+        "Jie Sun"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04115",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04114",
+      "title": "Any2Any: Unified Arbitrary Modality Translation for Remote Sensing",
+      "authors": [
+        "Haoyang Chen",
+        "Jing Zhang",
+        "Hebaixu Wang",
+        "Shiqin Wang",
+        "Pohsun Huang",
+        "Jiayuan Li",
+        "Haonan Guo",
+        "Di Wang",
+        "Zheng Wang",
+        "Bo Du"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04114",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "downstream_tasks"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04113",
+      "title": "Understanding Sources of Demographic Predictability in Brain MRI via Disentangling Anatomy and Contrast",
+      "authors": [
+        "Mehmet Yigit Avci",
+        "Akshit Achara",
+        "Andrew King",
+        "Jorge Cardoso"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04113",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "medical"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04099",
+      "title": "Efficient Point Cloud Processing with High-Dimensional Positional Encoding and Non-Local MLPs",
+      "authors": [
+        "Yanmei Zou",
+        "Hongshan Yu",
+        "Yaonan Wang",
+        "Zhengeng Yang",
+        "Xieyuanli Chen",
+        "Kailun Yang",
+        "Naveed Akhtar"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04099",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "3d"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04098",
+      "title": "Real Eyes Realize Faster: Gaze Stability and Pupil Novelty for Efficient Egocentric Learning",
+      "authors": [
+        "Ajan Subramanian",
+        "Sumukh Bettadapura",
+        "Rohan Sathish"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04098",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04091",
+      "title": "CLIP-Guided Multi-Task Regression for Multi-View Plant Phenotyping",
+      "authors": [
+        "Simon Warmers",
+        "Muhammad Zawish",
+        "Fayaz Ali Dharejo",
+        "Steven Davy",
+        "Radu Timofte"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04091",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04090",
+      "title": "EgoPoseFormer v2: Accurate Egocentric Human Motion Estimation for AR/VR",
+      "authors": [
+        "Zhenyu Li",
+        "Sai Kumar Dwivedi",
+        "Filip Maric",
+        "Carlos Chacon",
+        "Nadine Bertsch",
+        "Filippo Arcadu",
+        "Tomas Hodan",
+        "Michael Ramamonjisoa",
+        "Peter Wonka",
+        "Amy Zhao",
+        "Robin Kips",
+        "Cem Keskin",
+        "Anastasia Tkach",
+        "Chenhongyi Yang"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04090",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04081",
+      "title": "Revisiting the Role of Foundation Models in Cell-Level Histopathological Image Analysis under Small-Patch Constraints -- Effects of Training Data Scale and Blur Perturbations on CNNs and Vision Transformers",
+      "authors": [
+        "Hiroki Kagiyama",
+        "Toru Nagasaka",
+        "Yukari Adachi",
+        "Takaaki Tachibana",
+        "Ryota Ito",
+        "Mitsugu Fujita",
+        "Kimihiro Yamashita",
+        "Yoshihiro Kakeji"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04081",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04058",
+      "title": "TumorFlow: Physics-Guided Longitudinal MRI Synthesis of Glioblastoma Growth",
+      "authors": [
+        "Valentin Biller",
+        "Niklas Bubeck",
+        "Lucas Zimmer",
+        "Ayhan Can Erdur",
+        "Sandeep Nagar",
+        "Anke Meyer-Baese",
+        "Daniel Rückert",
+        "Benedikt Wiestler",
+        "Jonas Weidner"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04058",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "medical"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04056",
+      "title": "Long-Term Visual Localization in Dynamic Benthic Environments: A Dataset, Footprint-Based Ground Truth, and Visual Place Recognition Benchmark",
+      "authors": [
+        "Martin Kvisvik Larsen",
+        "Oscar Pizarro"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04056",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04037",
+      "title": "DQE-CIR: Distinctive Query Embeddings through Learnable Attribute Weights and Target Relative Negative Sampling in Composed Image Retrieval",
+      "authors": [
+        "Geon Park",
+        "Ji-Hoon Park",
+        "Seong-Whan Lee"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04037",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04024",
+      "title": "Volumetric Directional Diffusion: Anchoring Uncertainty Quantification in Anatomical Consensus for Ambiguous Medical Image Segmentation",
+      "authors": [
+        "Chao Wu",
+        "Kangxian Xie",
+        "Mingchen Gao"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04024",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "medical"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04022",
+      "title": "Rethinking the Efficiency and Effectiveness of Reinforcement Learning for Radiology Report Generation",
+      "authors": [
+        "Zilin Lu",
+        "Ruifeng Yuan",
+        "Weiwei Cao",
+        "Wanxing Chang",
+        "Zhongyu Wei",
+        "Sinuo Wang",
+        "Yong Xia",
+        "Ling Zhang",
+        "Jianpeng Zhang"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04022",
+      "cross_listed": false,
+      "classification": {
+        "label": "not_interested",
+        "auto_tags": [
+          "medical"
+        ]
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.04002",
+      "title": "Discriminative Perception via Anchored Description for Reasoning Segmentation",
+      "authors": [
+        "Tao Yang",
+        "Qing Zhou",
+        "Yanliang Li",
+        "Qi Wang"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.04002",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    },
+    {
+      "id": "arXiv:2603.03991",
+      "title": "Weakly Supervised Patch Annotation for Improved Screening of Diabetic Retinopathy",
+      "authors": [
+        "Shramana Dey",
+        "Abhirup Banerjee",
+        "B. Uma Shankar",
+        "Ramachandran Rajalakshmi",
+        "Sushmita Mitra"
+      ],
+      "abstract": "",
+      "link": "https://arxiv.org/abs/2603.03991",
+      "cross_listed": false,
+      "classification": {
+        "label": "neutral",
+        "auto_tags": []
+      },
+      "analysis": null
+    }
+  ]
+}
