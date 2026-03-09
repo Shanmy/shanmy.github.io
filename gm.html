@@ -351,22 +351,7 @@ input[type=file]{display:none}
 .picker-check{color:var(--accent);font-size:18px;flex-shrink:0}
 .picker-empty{text-align:center;padding:40px;color:var(--txt2);font-size:14px}
 
-@media print {
-  :root{
-    --bg:#fff;--card:#f5f7fa;--card2:#eaecf0;--border:rgba(0,0,0,.12);
-    --txt:#111;--txt2:#555;--accent:#5533cc;--cyan:#0066aa;--amber:#b85c00;
-    --green:#2d7a34;--red:#b83232;
-  }
-  body{background:#fff}
-  /* Show only the review screen */
-  #screen-review{display:block!important;padding:16px!important}
-  /* Hide all other screens and UI chrome */
-  .rv-back,.rv-print-btn,#modal-overlay{display:none!important}
-  /* Avoid splitting cards across pages */
-  .rv-block,.rv-role-row,.rv-action-row,.rv-kill-row{page-break-inside:avoid}
-  /* Ensure images render */
-  img{print-color-adjust:exact;-webkit-print-color-adjust:exact}
-}
+
 </style>
 </head>
 <body>
@@ -390,6 +375,10 @@ input[type=file]{display:none}
   <label for="save-file-in" class="up-load-btn">💾 加载存档，继续游戏</label>
   <input type="file" id="save-file-in" accept=".json">
   <div class="up-hint">支持《血染钟楼》自定义剧本格式</div>
+  <div style="margin-top:32px;font-size:12px;color:var(--txt2);text-align:center;line-height:1.8">
+    Created by <a href="https://shanmy.github.io" style="color:var(--txt2);text-decoration:underline">shanmy</a>,
+    RP-584, with the help of Claude 🤖
+  </div>
 </div>
 
 <!-- ══════════ SCREEN: COUNT ══════════ -->
@@ -479,7 +468,7 @@ input[type=file]{display:none}
       <div class="rv-title">游戏复盘</div>
       <div class="rv-sub" id="rv-sub"></div>
     </div>
-    <button class="rv-print-btn" onclick="window.print()"
+    <button class="rv-print-btn" id="rv-export-btn" onclick="exportPDF()"
       style="background:none;border:1px solid #333;border-radius:8px;color:var(--txt2);
              font-size:13px;cursor:pointer;padding:6px 10px;flex-shrink:0;white-space:nowrap">
       导出 PDF
@@ -1672,6 +1661,59 @@ function restartGame() {
   G.daySubPhase = 'discussion'; G.currentNom = null;
   document.getElementById('file-in').value = '';
   showScreen('upload');
+}
+
+// ══════════════════════════════════════════════
+// PDF EXPORT
+// ══════════════════════════════════════════════
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    if (document.querySelector(`script[src="${src}"]`)) { resolve(); return; }
+    const s = document.createElement('script');
+    s.src = src; s.onload = resolve; s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
+async function exportPDF() {
+  const btn = document.getElementById('rv-export-btn');
+  btn.textContent = '生成中…'; btn.disabled = true;
+  try {
+    await loadScript('https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js');
+    await loadScript('https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js');
+
+    const el = document.getElementById('screen-review');
+    // Temporarily hide the export button so it doesn't appear in the PDF
+    btn.style.visibility = 'hidden';
+
+    const canvas = await html2canvas(el, {
+      backgroundColor: '#0d0d1a',
+      scale: 2,
+      useCORS: true,
+      width:  el.offsetWidth,
+      height: el.scrollHeight,
+      windowWidth:  el.offsetWidth,
+      windowHeight: el.scrollHeight,
+      scrollX: 0,
+      scrollY: 0,
+    });
+
+    btn.style.visibility = '';
+
+    const imgData = canvas.toDataURL('image/jpeg', 0.95);
+    const { jsPDF } = window.jspdf;
+    const ptPerPx = 72 / 96;
+    const w = (canvas.width  / 2) * ptPerPx;
+    const h = (canvas.height / 2) * ptPerPx;
+    const pdf = new jsPDF({ unit: 'pt', format: [w, h] });
+    pdf.addImage(imgData, 'JPEG', 0, 0, w, h);
+    pdf.save('botc-复盘.pdf');
+  } catch(e) {
+    alert('导出失败：' + e.message);
+  } finally {
+    btn.textContent = '导出 PDF'; btn.disabled = false;
+    btn.style.visibility = '';
+  }
 }
 
 // ══════════════════════════════════════════════
