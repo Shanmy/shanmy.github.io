@@ -1371,7 +1371,7 @@ function renderNominationPhase() {
       </select>
       <select class="nom-sel" id="nom-nominee">
         <option value="">选择被提名人…</option>
-        ${G.players.filter(p => p.id !== nomId).map(p =>
+        ${G.players.map(p =>
           `<option value="${p.id}" ${p.id === nomeeId ? 'selected' : ''}>${esc(playerDisplay(p))}${!p.alive ? '（死）' : ''}</option>`
         ).join('')}
       </select>
@@ -1421,7 +1421,7 @@ function nomSetNominator(id) {
   const sel = document.getElementById('nom-nominee');
   if (sel) {
     sel.innerHTML = `<option value="">选择被提名人…</option>` +
-      G.players.filter(p => p.id !== id).map(p =>
+      G.players.map(p =>
         `<option value="${p.id}">${esc(playerDisplay(p))}${!p.alive ? '（死）' : ''}</option>`
       ).join('');
     sel.value = '';
