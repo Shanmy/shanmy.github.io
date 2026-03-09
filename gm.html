@@ -208,6 +208,11 @@ input[type=file]{display:none}
 .no-choice-lbl input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer;flex-shrink:0}
 .no-choice-ph{font-size:13px;color:var(--txt2);font-style:italic;padding:8px 12px;
   background:var(--card2);border-radius:10px;border:1.5px dashed #2a2a4a}
+.lie-lbl{display:flex;align-items:center;gap:5px;font-size:12px;color:#f59e0b;
+  cursor:pointer;user-select:none;flex-shrink:0}
+.lie-lbl input{width:15px;height:15px;accent-color:#f59e0b;cursor:pointer;flex-shrink:0}
+.lie-tag{display:inline-block;padding:1px 7px;border-radius:6px;font-size:11px;font-weight:700;
+  background:rgba(245,158,11,.15);color:#f59e0b;margin-left:6px;vertical-align:middle}
 
 /* ── NIGHT SUMMARY ── */
 #screen-night-summary{padding:20px 16px 64px}
@@ -242,6 +247,26 @@ input[type=file]{display:none}
   font-weight:700;background:rgba(255,167,38,.1);color:var(--amber);margin-bottom:6px}
 .day-title{font-size:22px;font-weight:800}
 .day-sub{font-size:13px;color:var(--txt2);margin-top:4px}
+/* ── NOMINATION ── */
+.nom-sect-ttl{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--txt2);
+  padding:12px 0 8px;border-bottom:1px solid var(--border);margin-bottom:10px}
+.nom-hist-item{background:var(--card);border-radius:12px;padding:12px 14px;margin-bottom:8px}
+.nom-hist-hdr{font-size:13px;font-weight:700;display:flex;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:5px}
+.nom-hist-votes{font-size:12px;color:var(--txt2);line-height:1.6}
+.nom-form{background:var(--card);border-radius:14px;padding:14px;margin-bottom:16px;
+  border:1.5px solid rgba(255,167,38,.2)}
+.nom-form-ttl{font-size:13px;font-weight:700;margin-bottom:12px;color:var(--amber)}
+.nom-sel{width:100%;padding:9px 12px;border-radius:10px;background:var(--card2);
+  border:1.5px solid var(--border);color:var(--txt);font-size:14px;margin-bottom:10px;
+  outline:none;-webkit-appearance:none;appearance:none}
+.nom-sel:focus{border-color:var(--amber)}
+.nom-voter-lbl{font-size:11px;text-transform:uppercase;letter-spacing:.6px;
+  color:var(--txt2);margin-bottom:8px}
+.nom-voter-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-bottom:12px}
+.nom-voter-item{display:flex;align-items:center;gap:6px;font-size:13px;padding:6px 8px;
+  background:var(--card2);border-radius:8px;cursor:pointer;user-select:none}
+.nom-voter-item input{accent-color:var(--accent);width:15px;height:15px;flex-shrink:0;cursor:pointer}
 
 /* ══════════════════════════════════════
    SCREEN: GAMEOVER
@@ -325,6 +350,23 @@ input[type=file]{display:none}
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .picker-check{color:var(--accent);font-size:18px;flex-shrink:0}
 .picker-empty{text-align:center;padding:40px;color:var(--txt2);font-size:14px}
+
+@media print {
+  :root{
+    --bg:#fff;--card:#f5f7fa;--card2:#eaecf0;--border:rgba(0,0,0,.12);
+    --txt:#111;--txt2:#555;--accent:#5533cc;--cyan:#0066aa;--amber:#b85c00;
+    --green:#2d7a34;--red:#b83232;
+  }
+  body{background:#fff}
+  /* Show only the review screen */
+  #screen-review{display:block!important;padding:16px!important}
+  /* Hide all other screens and UI chrome */
+  .rv-back,.rv-print-btn,#modal-overlay{display:none!important}
+  /* Avoid splitting cards across pages */
+  .rv-block,.rv-role-row,.rv-action-row,.rv-kill-row{page-break-inside:avoid}
+  /* Ensure images render */
+  img{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}
 </style>
 </head>
 <body>
@@ -433,10 +475,15 @@ input[type=file]{display:none}
 <div id="screen-review" class="hidden" style="padding:20px 16px 64px">
   <div class="rv-hdr">
     <button class="rv-back" onclick="showScreen('gameover')">← 返回</button>
-    <div>
+    <div style="flex:1;min-width:0">
       <div class="rv-title">游戏复盘</div>
       <div class="rv-sub" id="rv-sub"></div>
     </div>
+    <button class="rv-print-btn" onclick="window.print()"
+      style="background:none;border:1px solid #333;border-radius:8px;color:var(--txt2);
+             font-size:13px;cursor:pointer;padding:6px 10px;flex-shrink:0;white-space:nowrap">
+      导出 PDF
+    </button>
   </div>
   <div id="review-body"></div>
 </div>
@@ -475,6 +522,11 @@ const G = {
   gameResult: null,  // {winner,msg} stored when game ends
   demonBluffs: [],   // charIds selected as demon bluffs (up to 3)
 };
+
+// Characters that can take day actions (matched by name)
+const DAY_ACTION_NAMES = new Set(['博学者','渔夫','呆瓜','猎手','艺术家','解谜大师','魔像','月之子']);
+// These two can act even when dead
+const DAY_ACTION_DEAD_OK = new Set(['呆瓜','月之子']);
 
 const TEAMS = {
   townsfolk: { label: '镇民',   cls: 'tt-townsfolk' },
@@ -566,7 +618,7 @@ function computeNightOrder() {
     .map(p => ({ player: p, char: G.charMap[p.charId] }))
     .filter(({ char }) => char && (char[key] || 0) > 0)
     .sort((a, b) => a.char[key] - b.char[key])
-    .map(s => ({ ...s, noteFrom: '', noteTo: '', noChoice: false }));
+    .map(s => ({ ...s, noteFrom: '', noteTo: '', noChoice: false, noteLie: false }));
 }
 
 // ══════════════════════════════════════════════
@@ -868,7 +920,7 @@ function renderNight() {
 
       // Demon bluffs picker
       const usedIds = new Set(G.players.map(p => p.charId).filter(Boolean));
-      const unused = G.characters.filter(c => !usedIds.has(c.id));
+      const unused = G.characters.filter(c => !usedIds.has(c.id) && (c.team === 'townsfolk' || c.team === 'outsider'));
       if (unused.length > 0) {
         const bCount = G.demonBluffs.length;
         html += `<div class="nop-card">
@@ -959,7 +1011,13 @@ function renderNight() {
             ${s.noChoice ? '<div class="no-choice-ph">玩家本轮不选择</div>' : ''}
           </div>
           <div class="note-item">
-            <label class="note-lbl to">→ 我告知玩家</label>
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px">
+              <label class="note-lbl to">→ 我告知玩家</label>
+              <label class="lie-lbl">
+                <input type="checkbox" id="lie-cb" ${s.noteLie ? 'checked' : ''}>
+                错误信息
+              </label>
+            </div>
             <textarea id="note-to" class="note-ta" placeholder="记录我给玩家的信息…">${esc(s.noteTo)}</textarea>
           </div>
         </div>
@@ -987,9 +1045,11 @@ function saveCurrentNotes() {
     const fromEl = document.getElementById('note-from');
     const toEl   = document.getElementById('note-to');
     const cbEl   = document.getElementById('no-choice-cb');
-    if (cbEl)   G.nightSteps[G.step].noChoice  = cbEl.checked;
-    if (fromEl) G.nightSteps[G.step].noteFrom  = fromEl.value;
-    if (toEl)   G.nightSteps[G.step].noteTo    = toEl.value;
+    const lieCbEl = document.getElementById('lie-cb');
+    if (cbEl)     G.nightSteps[G.step].noChoice  = cbEl.checked;
+    if (fromEl)   G.nightSteps[G.step].noteFrom  = fromEl.value;
+    if (toEl)     G.nightSteps[G.step].noteTo    = toEl.value;
+    if (lieCbEl)  G.nightSteps[G.step].noteLie   = lieCbEl.checked;
   }
 }
 
@@ -1076,6 +1136,7 @@ function endNight() {
       playerName: playerDisplay(s.player),
       noteFrom:   s.noteFrom,
       noteTo:     s.noteTo,
+      noteLie:    s.noteLie,
     })),
   });
   renderNightSummary();
@@ -1138,7 +1199,7 @@ function renderNightSummary() {
           ${hasTo ? `<div class="sum-row">
             <span class="sum-arrow" style="color:var(--cyan)">→</span>
             <div class="sum-row-body">
-              <div class="sum-row-lbl to">我给出的信息</div>
+              <div class="sum-row-lbl to">我给出的信息${s.noteLie ? '<span class="lie-tag">错误信息</span>' : ''}</div>
               <div class="sum-row-val">${esc(s.noteTo)}</div>
             </div>
           </div>` : ''}
@@ -1151,7 +1212,9 @@ function renderNightSummary() {
 }
 
 function proceedToDay() {
-  G.dayLog.push({ dayNum: G.nightNum, executions: [] });
+  G.daySubPhase = 'discussion';
+  G.currentNom  = null;
+  G.dayLog.push({ dayNum: G.nightNum, executions: [], dayDeaths: [], dayActions: [], nominations: [] });
   showScreen('day');
   renderDay();
 }
@@ -1159,19 +1222,245 @@ function proceedToDay() {
 // ══════════════════════════════════════════════
 // DAY PHASE
 // ══════════════════════════════════════════════
+function saveDayNote(playerId, field, value) {
+  const dayEntry = G.dayLog[G.dayLog.length - 1];
+  if (!dayEntry) return;
+  if (!dayEntry.dayActions) dayEntry.dayActions = [];
+  let action = dayEntry.dayActions.find(a => a.playerId === playerId);
+  if (!action) {
+    const p = G.players.find(pl => pl.id === playerId);
+    const char = p && p.charId ? G.charMap[p.charId] : null;
+    action = { charId: p?.charId, charName: char?.name || '', playerId, playerName: playerDisplay(p), noteFrom: '', noteTo: '', noteLie: false };
+    dayEntry.dayActions.push(action);
+  }
+  action[field] = value;
+}
+
+function renderDayActions() {
+  const dayEntry = G.dayLog[G.dayLog.length - 1];
+  const saved = dayEntry?.dayActions || [];
+
+  const actors = G.players.filter(p => {
+    const char = p.charId ? G.charMap[p.charId] : null;
+    if (!char || !DAY_ACTION_NAMES.has(char.name)) return false;
+    if (!p.alive && !DAY_ACTION_DEAD_OK.has(char.name)) return false;
+    return true;
+  });
+
+  if (actors.length === 0) return '';
+
+  const cards = actors.map(p => {
+    const char = G.charMap[p.charId];
+    const team = TEAMS[char.team] || {};
+    const sv = saved.find(a => a.playerId === p.id) || {};
+    const noteFrom = sv.noteFrom || '';
+    const noteTo   = sv.noteTo   || '';
+    const noteLie  = sv.noteLie  || false;
+    return `
+      <div class="sum-card" style="margin-bottom:10px">
+        <div class="sum-card-hdr">
+          <img class="sum-card-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">
+          <div class="sum-card-info">
+            <div class="sum-card-name">${esc(char.name)}</div>
+            <div class="sum-card-player">
+              ${esc(playerDisplay(p))}
+              <span class="tt ${team.cls||''}" style="margin-left:4px">${team.label||char.team}</span>
+              ${!p.alive ? '<span class="rv-tag nk" style="margin-left:4px">已死亡</span>' : ''}
+            </div>
+          </div>
+        </div>
+        <div style="padding:0 12px 12px;display:flex;flex-direction:column;gap:8px">
+          <div class="note-item">
+            <label class="note-lbl from">← 玩家告知</label>
+            <textarea class="note-ta" placeholder="记录玩家的选择或给出的信息…"
+              oninput="saveDayNote('${p.id}','noteFrom',this.value)">${esc(noteFrom)}</textarea>
+          </div>
+          <div class="note-item">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px">
+              <label class="note-lbl to">→ 我告知玩家</label>
+              <label class="lie-lbl">
+                <input type="checkbox" onchange="saveDayNote('${p.id}','noteLie',this.checked)" ${noteLie ? 'checked' : ''}>
+                错误信息
+              </label>
+            </div>
+            <textarea class="note-ta" placeholder="记录我给玩家的信息…"
+              oninput="saveDayNote('${p.id}','noteTo',this.value)">${esc(noteTo)}</textarea>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <div class="nop-card" style="margin-bottom:16px">
+      <div class="nop-hdr" style="color:var(--cyan);letter-spacing:.6px">白天行动角色</div>
+    </div>
+    ${cards}
+  `;
+}
+
 function renderDay() {
   document.getElementById('day-badge').textContent = `第 ${G.nightNum} 天`;
-  document.getElementById('day-sub').textContent = '在此阶段可进行处决。';
+  document.getElementById('day-sub').textContent =
+    G.daySubPhase === 'nomination' ? '提名阶段' : '讨论阶段';
 
   const body = document.getElementById('day-body');
-  const nextNight = G.nightNum + 1;
-  body.innerHTML = `
+  body.innerHTML = G.daySubPhase === 'nomination'
+    ? renderNominationPhase()
+    : renderDiscussionPhase();
+
+  // Attach nomination form listeners (only present in nomination phase)
+  body.querySelectorAll('.voter-cb').forEach(cb => {
+    cb.addEventListener('change', () => nomToggleVoter(cb.dataset.pid, cb.checked));
+  });
+  const nomSel = body.querySelector('#nom-nominator');
+  if (nomSel) nomSel.addEventListener('change', () => nomSetNominator(nomSel.value));
+  const neeSel = body.querySelector('#nom-nominee');
+  if (neeSel) neeSel.addEventListener('change', () => { if (G.currentNom) G.currentNom.nomineeId = neeSel.value; });
+}
+
+function renderDiscussionPhase() {
+  return `
     ${renderPlayerList('day')}
     <div style="height:12px"></div>
+    ${renderDayActions()}
+    <button class="btn" style="background:rgba(255,167,38,.12);color:var(--amber);width:100%;margin-bottom:10px"
+      onclick="enterNominationPhase()">进入提名阶段 →</button>
+    <button class="btn btn-ghost" onclick="saveGame()" style="margin-bottom:10px">💾 保存游戏进度</button>
+    <div style="height:32px"></div>
+  `;
+}
+
+function renderNominationPhase() {
+  const dayEntry = G.dayLog[G.dayLog.length - 1];
+  const noms = dayEntry?.nominations || [];
+  const nextNight = G.nightNum + 1;
+
+  let html = renderPlayerList('day');
+  html += `<div style="height:12px"></div>`;
+  html += `<div class="nom-sect-ttl">提名记录</div>`;
+
+  if (noms.length === 0 && !G.currentNom) {
+    html += `<div style="font-size:13px;color:var(--txt2);font-style:italic;padding:4px 0 12px">尚无提名</div>`;
+  }
+
+  noms.forEach(nom => {
+    const nominee = G.players.find(p => p.id === nom.nomineeId);
+    html += `<div class="nom-hist-item">
+      <div class="nom-hist-hdr">
+        <span>${esc(nom.nominatorName)} 提名 ${esc(nom.nomineeName)}</span>
+        <span style="color:var(--amber);font-size:12px;font-weight:700">${nom.voters.length} 票 / ${nom.totalAlive} 人</span>
+        <button class="kill-btn exec" onclick="killPlayer('${nom.nomineeId}','execution')" style="font-size:11px;padding:3px 8px">处决</button>
+      </div>
+      ${nom.voters.length > 0
+        ? `<div class="nom-hist-votes">投票：${nom.voters.map(v => esc(v.name)).join('、')}</div>`
+        : `<div class="nom-hist-votes" style="font-style:italic">无人投票</div>`}
+    </div>`;
+  });
+
+  if (G.currentNom) {
+    const nomId  = G.currentNom.nominatorId;
+    const nomeeId = G.currentNom.nomineeId;
+    html += `<div class="nom-form">
+      <div class="nom-form-ttl">发起提名</div>
+      <select class="nom-sel" id="nom-nominator">
+        <option value="">选择提名人（存活玩家）…</option>
+        ${G.players.filter(p => p.alive).map(p =>
+          `<option value="${p.id}" ${p.id === nomId ? 'selected' : ''}>${esc(playerDisplay(p))}</option>`
+        ).join('')}
+      </select>
+      <select class="nom-sel" id="nom-nominee">
+        <option value="">选择被提名人…</option>
+        ${G.players.filter(p => p.id !== nomId).map(p =>
+          `<option value="${p.id}" ${p.id === nomeeId ? 'selected' : ''}>${esc(playerDisplay(p))}${!p.alive ? '（死）' : ''}</option>`
+        ).join('')}
+      </select>
+      <div class="nom-voter-lbl">投票情况（勾选投了赞成票的玩家）</div>
+      <div class="nom-voter-grid">
+        ${G.players.map(p => `
+          <label class="nom-voter-item">
+            <input type="checkbox" class="voter-cb" data-pid="${p.id}"
+              ${G.currentNom.voterIds.includes(p.id) ? 'checked' : ''}>
+            <span>${esc(playerDisplay(p))}${!p.alive
+              ? `<span style="color:var(--txt2);font-size:11px"> 死</span>` : ''}</span>
+          </label>
+        `).join('')}
+      </div>
+      <button class="btn btn-primary" onclick="confirmNomination()" style="width:100%;margin-bottom:8px">确认提名</button>
+      <button class="btn btn-ghost" onclick="G.currentNom=null;renderDay()" style="width:100%;font-size:13px">取消</button>
+    </div>`;
+  } else {
+    html += `<button class="btn" style="background:rgba(124,77,255,.1);color:var(--accent);width:100%;margin-bottom:16px"
+      onclick="startNewNomination()">＋ 发起新提名</button>`;
+  }
+
+  html += `
     <button class="btn btn-ghost" onclick="saveGame()" style="margin-bottom:10px">💾 保存游戏进度</button>
     <button class="btn btn-night" onclick="startNight(${nextNight})">进入第 ${nextNight} 夜 🌙</button>
     <div style="height:32px"></div>
   `;
+  return html;
+}
+
+function enterNominationPhase() {
+  G.daySubPhase = 'nomination';
+  G.currentNom  = null;
+  renderDay();
+}
+
+function startNewNomination() {
+  G.currentNom = { nominatorId: '', nomineeId: '', voterIds: [] };
+  renderDay();
+}
+
+function nomSetNominator(id) {
+  if (!G.currentNom) return;
+  G.currentNom.nominatorId = id;
+  G.currentNom.nomineeId   = '';
+  // Update nominee options in-place without full re-render
+  const sel = document.getElementById('nom-nominee');
+  if (sel) {
+    sel.innerHTML = `<option value="">选择被提名人…</option>` +
+      G.players.filter(p => p.id !== id).map(p =>
+        `<option value="${p.id}">${esc(playerDisplay(p))}${!p.alive ? '（死）' : ''}</option>`
+      ).join('');
+    sel.value = '';
+  }
+}
+
+function nomToggleVoter(id, checked) {
+  if (!G.currentNom) return;
+  if (checked && !G.currentNom.voterIds.includes(id)) {
+    G.currentNom.voterIds.push(id);
+  } else {
+    G.currentNom.voterIds = G.currentNom.voterIds.filter(v => v !== id);
+  }
+}
+
+function confirmNomination() {
+  if (!G.currentNom) return;
+  const { nominatorId, nomineeId, voterIds } = G.currentNom;
+  if (!nominatorId || !nomineeId) { alert('请先选择提名人和被提名人'); return; }
+
+  const dayEntry = G.dayLog[G.dayLog.length - 1];
+  if (!dayEntry) return;
+  if (!dayEntry.nominations) dayEntry.nominations = [];
+
+  const nominator = G.players.find(p => p.id === nominatorId);
+  const nominee   = G.players.find(p => p.id === nomineeId);
+  const voters    = voterIds.map(vid => {
+    const vp = G.players.find(p => p.id === vid);
+    return { id: vid, name: playerDisplay(vp) };
+  });
+
+  dayEntry.nominations.push({
+    nominatorId, nominatorName: playerDisplay(nominator),
+    nomineeId,   nomineeName:   playerDisplay(nominee),
+    voters,      totalAlive: G.players.filter(p => p.alive).length,
+  });
+
+  G.currentNom = null;
+  renderDay();
 }
 
 // ══════════════════════════════════════════════
@@ -1192,10 +1481,14 @@ function renderPlayerList(context) {
           <div class="prow-char">${char ? esc(char.name) : '—'}</div>
         </div>
         ${context === 'day'
-          ? `${!p.alive ? '<span class="dead-mark" style="margin-right:6px">☠</span>' : ''}
-             <button class="kill-btn exec" onclick="killPlayer('${p.id}')">处决</button>`
+          ? `<div style="display:flex;align-items:center;gap:4px;flex-shrink:0">
+               ${p.alive
+                 ? `<button class="kill-btn" onclick="killPlayer('${p.id}','death')">死亡</button>`
+                 : `<span class="dead-mark" style="margin-right:2px">☠</span>`}
+               <button class="kill-btn exec" onclick="killPlayer('${p.id}','execution')">处决</button>
+             </div>`
           : (p.alive
-              ? `<button class="kill-btn" onclick="killPlayer('${p.id}')">死亡</button>`
+              ? `<button class="kill-btn" onclick="killPlayer('${p.id}','death')">死亡</button>`
               : `<span class="dead-mark">☠</span>`)}
       </div>
     `;
@@ -1210,29 +1503,40 @@ function renderPlayerList(context) {
 // ══════════════════════════════════════════════
 // KILL PLAYER
 // ══════════════════════════════════════════════
-function killPlayer(playerId) {
+function killPlayer(playerId, type = 'death') {
   const p = G.players.find(pl => pl.id === playerId);
   if (!p) return;
-  // During night, skip already-dead players; during day, allow (records execution)
+  // Night: skip already-dead. Day death: must be alive. Day execution: always allowed.
   if (!p.alive && G.phase !== 'day') return;
+  if (!p.alive && G.phase === 'day' && type === 'death') return;
 
   const name = playerDisplay(p);
   const charName = p.charId ? (G.charMap[p.charId]?.name || '') : '';
   const label = charName ? `${name}（${charName}）` : name;
-  const confirmMsg = p.alive
-    ? `确认让 ${label} 死亡？`
-    : `${label} 已死亡，仍要记录此次处决？`;
+  const confirmMsg = type === 'execution'
+    ? (p.alive ? `处决 ${label}？` : `${label} 已死亡，仍要记录此次处决？`)
+    : `确认让 ${label} 死亡？`;
 
   if (!confirm(confirmMsg)) return;
 
   const wasAlive = p.alive;
-  p.alive = false;
+  // Execution of dead player: don't change alive status
+  if (type === 'death' || (type === 'execution' && p.alive)) {
+    p.alive = false;
+  }
 
   // Log the kill event
   const rec = { id: p.id, seat: p.seat, playerName: name, charId: p.charId, charName };
   if (G.phase === 'day') {
     const dayEntry = G.dayLog[G.dayLog.length - 1];
-    if (dayEntry) dayEntry.executions.push(rec);
+    if (dayEntry) {
+      if (type === 'execution') {
+        dayEntry.executions.push(rec);
+      } else {
+        if (!dayEntry.dayDeaths) dayEntry.dayDeaths = [];
+        dayEntry.dayDeaths.push(rec);
+      }
+    }
   } else {
     let nk = G.nightKillLog.find(e => e.nightNum === G.nightNum);
     if (!nk) { nk = { nightNum: G.nightNum, kills: [] }; G.nightKillLog.push(nk); }
@@ -1336,6 +1640,8 @@ function loadSaveFile(text) {
   G.nightSteps   = [];
   G.step         = -1;
   G.pickerFor    = null;
+  G.daySubPhase  = 'discussion';
+  G.currentNom   = null;
 
   const savedPhase = data.game.phase || 'day';
   if (['roles','count','upload'].includes(savedPhase)) {
@@ -1363,6 +1669,7 @@ function restartGame() {
   G.meta = {}; G.characters = []; G.charMap = {}; G.players = [];
   G.nightNum = 1; G.nightSteps = []; G.nightLog = []; G.step = -1; G.pickerFor = null;
   G.initialRoles = []; G.dayLog = []; G.nightKillLog = []; G.gameResult = null; G.demonBluffs = [];
+  G.daySubPhase = 'discussion'; G.currentNom = null;
   document.getElementById('file-in').value = '';
   showScreen('upload');
 }
@@ -1441,7 +1748,7 @@ function showReview() {
             <div class="rv-action-head">${esc(s.charName)}</div>
             <div class="rv-action-player">👤 ${esc(s.playerName)}</div>
             ${hasFrom ? `<div class="rv-note from">← ${esc(s.noteFrom)}</div>` : ''}
-            ${hasTo   ? `<div class="rv-note to">→ ${esc(s.noteTo)}</div>`   : ''}
+            ${hasTo   ? `<div class="rv-note to">→ ${esc(s.noteTo)}${s.noteLie ? '<span class="lie-tag">错误信息</span>' : ''}</div>` : ''}
           </div>
         </div>`;
       });
@@ -1464,9 +1771,50 @@ function showReview() {
           <span>☀️</span>
           <span class="rv-block-hdr-title">第 ${n} 天</span>
         </div>`;
-      if (dayEntry.executions.length === 0) {
-        html += `<div class="rv-empty">本天无处决</div>`;
+      // Day actions
+      const dayActs = (dayEntry.dayActions || []).filter(a => a.noteFrom?.trim() || a.noteTo?.trim());
+      dayActs.forEach(s => {
+        const char = s.charId ? G.charMap[s.charId] : null;
+        const hasFrom = s.noteFrom && s.noteFrom.trim();
+        const hasTo   = s.noteTo   && s.noteTo.trim();
+        html += `<div class="rv-action-row">
+          ${char
+            ? `<img class="rv-action-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">`
+            : `<div class="rv-action-img"></div>`}
+          <div class="rv-action-body">
+            <div class="rv-action-head">${esc(s.charName)}</div>
+            <div class="rv-action-player">👤 ${esc(s.playerName)}</div>
+            ${hasFrom ? `<div class="rv-note from">← ${esc(s.noteFrom)}</div>` : ''}
+            ${hasTo   ? `<div class="rv-note to">→ ${esc(s.noteTo)}${s.noteLie ? '<span class="lie-tag">错误信息</span>' : ''}</div>` : ''}
+          </div>
+        </div>`;
+      });
+      // Nominations
+      const noms = dayEntry.nominations || [];
+      noms.forEach(nom => {
+        html += `<div class="rv-kill-row" style="align-items:flex-start;padding:9px 13px">
+          <span>🗳️</span>
+          <span class="rv-kill-body" style="line-height:1.6">
+            ${esc(nom.nominatorName)} 提名 ${esc(nom.nomineeName)}
+            <span class="rv-tag" style="background:rgba(255,167,38,.12);color:var(--amber)">${nom.voters.length}票</span>
+            ${nom.voters.length > 0
+              ? `<br><span style="font-size:11px;color:var(--txt2)">投票：${nom.voters.map(v => esc(v.name)).join('、')}</span>`
+              : ''}
+          </span>
+        </div>`;
+      });
+
+      const dayDeaths = dayEntry.dayDeaths || [];
+      if (dayEntry.executions.length === 0 && dayActs.length === 0 && noms.length === 0 && dayDeaths.length === 0) {
+        html += `<div class="rv-empty">本天无记录</div>`;
       } else {
+        dayDeaths.forEach(k => {
+          html += `<div class="rv-kill-row">
+            <span>💀</span>
+            <span class="rv-kill-body">${esc(k.playerName)}${k.charName
+              ? `（${esc(k.charName)}）` : ''}<span class="rv-tag nk">白天死亡</span></span>
+          </div>`;
+        });
         dayEntry.executions.forEach(k => {
           html += `<div class="rv-kill-row">
             <span>⚖️</span>

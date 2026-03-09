@@ -4,7 +4,8 @@
       "Bash(pip install requests beautifulsoup4 -q)",
       "Bash(python scripts/fetch_arxiv.py)",
       "Bash(python3 -c \":*)",
-      "Bash(python -c \":*)"
+      "Bash(python -c \":*)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); chars=[c for c in data if isinstance\\(c,dict\\) and c.get\\(''name''\\) in [''博学者'',''渔夫'',''呆瓜'',''猎手'',''艺术家'',''解谜大师'',''魔像'',''月之子'']]; [print\\(c.get\\(''id'',''?''\\), c.get\\(''name'',''?''\\), c.get\\(''team'',''?''\\)\\) for c in chars]\")"
     ],
     "additionalDirectories": [
       "/Users/shanmy/Desktop/shanmy.github.io"
