@@ -1,27 +1,49 @@
 #!/usr/bin/env python3
+from __future__ import annotations
 """
 Fetch and classify cs.CV papers from arxiv recent listings.
 For 'interested' papers, optionally call Gemini API for structured analysis.
-
-Env vars:
-  GEMINI_API_KEY  – enables paper analysis (optional)
 
 Output:
   personal/arxiv/YYYY-MM-DD.json
   personal/arxiv/latest.json
 """
 
+import argparse
 import json
 import os
 import re
 import sys
 import time
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
 import requests
 from bs4 import BeautifulSoup
 
-ARXIV_URL = "https://arxiv.org/list/cs.CV/recent"
+ARXIV_BASE = "https://arxiv.org/list/cs.CV"
+ARXIV_URL  = f"{ARXIV_BASE}/recent"
+
+# ════════════════════════════════════════════════════════════════════════════════
+# TITLE BLACKLIST
+# If any of these strings appear in a paper's TITLE (case-insensitive),
+# it is immediately labelled "not_for_me" before any other rule runs.
+# Edit this list freely — one string per line is easiest to maintain.
+# ════════════════════════════════════════════════════════════════════════════════
+TITLE_BLACKLIST: list[str] = [
+    # 3-D / geometry
+    "3d gaussian", "gaussian splatting", "nerf", "neural radiance",
+    "point cloud", "3d reconstruction", "depth estimation",
+    "mesh generation", "surface reconstruction",
+    # Medical / biology
+    "medical", "clinical", "pathology", "radiology",
+    "ct scan", "mri", "ultrasound", "histology",
+    # Autonomous systems / remote sensing
+    "autonomous driving", "self-driving", "lidar",
+    "satellite", "remote sensing",
+    # Other downstream
+    "weather", "document", "scene text",
+]
 
 # ── Classification rules ──────────────────────────────────────────────────────
 
@@ -86,6 +108,13 @@ NOT_INTERESTED = {
 
 
 def classify(title: str, abstract: str) -> dict:
+    # ── Title blacklist takes priority over everything ────────────────────────
+    title_lower = title.lower()
+    for kw in TITLE_BLACKLIST:
+        if kw.lower() in title_lower:
+            return {"label": "not_for_me", "auto_tags": ["title_blacklist"],
+                    "blacklist_match": kw}
+
     text = (title + " " + abstract).lower()
 
     not_tags = []
@@ -100,7 +129,7 @@ def classify(title: str, abstract: str) -> dict:
 
     if int_tags:
         if "medical" in not_tags:
-            return {"label": "not_interested", "auto_tags": not_tags}
+            return {"label": "not_for_me", "auto_tags": not_tags}
         return {
             "label": "interested",
             "auto_tags": int_tags,
@@ -108,42 +137,48 @@ def classify(title: str, abstract: str) -> dict:
         }
 
     if not_tags:
-        return {"label": "not_interested", "auto_tags": not_tags}
+        return {"label": "not_for_me", "auto_tags": not_tags}
 
     return {"label": "neutral", "auto_tags": []}
 
 
 # ── Scraper ───────────────────────────────────────────────────────────────────
 
-def fetch_papers() -> tuple[list[dict], str]:
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-            "AppleWebKit/537.36 (academic research reader)"
-        )
-    }
-    resp = requests.get(ARXIV_URL, headers=headers, timeout=30)
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (academic research reader)"
+    )
+}
+
+
+def _get_soup(url: str) -> BeautifulSoup:
+    resp = requests.get(url, headers=HEADERS, timeout=30)
     resp.raise_for_status()
+    return BeautifulSoup(resp.text, "html.parser")
 
-    soup = BeautifulSoup(resp.text, "html.parser")
 
-    arxiv_date = ""
+def _detect_total_and_date(soup: BeautifulSoup) -> tuple[int, str]:
+    """
+    Parse the h3 header that arxiv renders as e.g.:
+      "Wed, 4 Mar 2026 (showing first 50 of 136 entries )"
+    Returns (total_count, date_string).
+    """
     for h3 in soup.find_all("h3"):
-        text = h3.get_text(strip=True)
-        if "submissions" in text.lower() or re.search(r"\w+ \d+,? \d{4}", text):
-            arxiv_date = text
-            break
+        text = h3.get_text(" ", strip=True)
+        m = re.search(r"of\s+(\d+)\s+entr", text)
+        if m:
+            total = int(m.group(1))
+            date_str = re.sub(r"\(.*\)", "", text).strip()
+            return total, date_str
+    # Fallback: no pagination info found (all entries fit on one page)
+    return 0, ""
 
+
+def _parse_dl(dl) -> list[dict]:
+    """Parse all papers from a <dl> element."""
     papers = []
-    dl = soup.find("dl", id="articles")
-    if not dl:
-        print("Warning: could not find #articles dl", file=sys.stderr)
-        return papers, arxiv_date
-
-    dts = dl.find_all("dt")
-    dds = dl.find_all("dd")
-
-    for dt, dd in zip(dts, dds):
+    for dt, dd in zip(dl.find_all("dt"), dl.find_all("dd")):
         link_tag = dt.find("a", href=re.compile(r"^/abs/"))
         if not link_tag:
             continue
@@ -158,14 +193,11 @@ def fetch_papers() -> tuple[list[dict], str]:
         title = re.sub(r"^Title:\s*", "", title_div.get_text(strip=True)).strip()
 
         authors_div = dd.find("div", class_="list-authors")
-        authors = []
-        if authors_div:
-            authors = [a.get_text(strip=True) for a in authors_div.find_all("a")]
+        authors = ([a.get_text(strip=True) for a in authors_div.find_all("a")]
+                   if authors_div else [])
 
-        abstract = ""
         abstract_p = dd.find("p", class_="mathjax")
-        if abstract_p:
-            abstract = abstract_p.get_text(" ", strip=True)
+        abstract = abstract_p.get_text(" ", strip=True) if abstract_p else ""
 
         papers.append({
             "id": arxiv_id,
@@ -175,8 +207,195 @@ def fetch_papers() -> tuple[list[dict], str]:
             "link": link,
             "cross_listed": is_cross,
             "classification": classify(title, abstract),
-            "analysis": None,  # filled in later for interested papers
+            "analysis": None,
         })
+
+    return papers
+
+
+def _parse_papers(soup: BeautifulSoup) -> list[dict]:
+    """Extract all papers from a single page (uses the first <dl id='articles'>)."""
+    dl = soup.find("dl", id="articles")
+    return _parse_dl(dl) if dl else []
+
+
+def _collect_papers_for_date(date_str: str) -> tuple[list[dict], str]:
+    """
+    Scrape the arxiv monthly listing (YYMM URL) and return only papers
+    announced on date_str (YYYY-MM-DD).
+
+    arxiv monthly listings are reverse-chronological and paginate at 50 entries
+    across the whole month, so we scan pages until we've passed the target date.
+    """
+    dt = datetime.strptime(date_str, "%Y-%m-%d")
+    monthly_url = f"{ARXIV_BASE}/{dt.strftime('%y%m')}"
+
+    # h3 text example: "Mon, 3 Mar 2026  (showing first 50 of 136 entries )"
+    day_pat = re.compile(
+        rf"\b{dt.day}\b\s+{dt.strftime('%b')}\s+{dt.year}\b", re.I
+    )
+
+    seen: dict[str, dict] = {}   # id → paper (dedup)
+    arxiv_date = ""
+    expected_total: int | None = None
+    found_target = False
+    skip = 0
+    page = 1
+
+    print(f"  Monthly listing: {monthly_url}", file=sys.stderr)
+
+    while True:
+        url = f"{monthly_url}?skip={skip}&show=50" if skip else monthly_url
+        print(f"  Fetching page {page} (skip={skip}) …", file=sys.stderr)
+        soup = _get_soup(url)
+
+        h3s = soup.find_all("h3")
+        target_h3 = next((h for h in h3s if day_pat.search(h.get_text())), None)
+
+        if target_h3:
+            found_target = True
+            if not arxiv_date:
+                h3_text = target_h3.get_text(" ", strip=True)
+                m = re.search(r"of\s+(\d+)\s+entr", h3_text)
+                expected_total = int(m.group(1)) if m else None
+                arxiv_date = re.sub(r"\(.*?\)", "", h3_text).strip()
+
+            # Collect papers between this h3 and the next h3 (next date's section)
+            for sibling in target_h3.find_next_siblings():
+                if sibling.name == "h3":
+                    break
+                if sibling.name == "dl":
+                    for p in _parse_dl(sibling):
+                        seen.setdefault(p["id"], p)
+
+        elif found_target:
+            # We've already seen the target date's h3 on a previous page;
+            # this page has a different h3 (earlier date) — we're done.
+            if h3s:
+                break
+            # No h3 at all → continuation of target date across page boundary
+            dl = soup.find("dl", id="articles")
+            if dl:
+                for p in _parse_dl(dl):
+                    seen.setdefault(p["id"], p)
+            else:
+                break
+
+        # Stop early if we have all expected papers
+        if expected_total and len(seen) >= expected_total:
+            break
+
+        # Stop if the page has no articles at all (end of listing)
+        if not soup.find("dl", id="articles") and not target_h3:
+            break
+
+        # Safety: don't scan more than 200 pages (~10 000 papers into the month)
+        if page >= 200:
+            print("  Safety page limit reached.", file=sys.stderr)
+            break
+
+        skip += 50
+        page += 1
+        time.sleep(1)
+
+    if not seen:
+        print(f"  No papers found for {date_str} in {monthly_url}.", file=sys.stderr)
+        return [], ""
+
+    print(f"  Collected {len(seen)} papers for {arxiv_date}", file=sys.stderr)
+    return list(seen.values()), arxiv_date
+
+
+_ATOM_NS = {"atom": "http://www.w3.org/2005/Atom"}
+
+
+def _fetch_abstracts(raw_ids: list[str]) -> dict[str, str]:
+    """
+    Batch-fetch abstracts from the arxiv API.
+    raw_ids: list of IDs as they appear on the listing page,
+             e.g. "arXiv:2503.01234" or "arXiv:2503.01234 [cs.CV]"
+    Returns {clean_id: abstract_text}.
+    """
+    # Strip prefix and version suffix: "arXiv:2503.01234v2 [cs.CV]" → "2503.01234"
+    clean = [re.sub(r"v\d+$", "", re.sub(r"^arXiv:", "", i.split()[0]))
+             for i in raw_ids]
+
+    abstracts: dict[str, str] = {}
+    BATCH = 80          # arxiv API is comfortable with ~100 IDs at once
+    API   = "http://export.arxiv.org/api/query"
+
+    for start in range(0, len(clean), BATCH):
+        batch = clean[start:start + BATCH]
+        print(f"  API: fetching abstracts {start+1}–{start+len(batch)} …",
+              file=sys.stderr)
+        resp = requests.get(
+            API,
+            params={"id_list": ",".join(batch), "max_results": len(batch)},
+            headers=HEADERS,
+            timeout=60,
+        )
+        resp.raise_for_status()
+
+        root = ET.fromstring(resp.content)
+        for entry in root.findall("atom:entry", _ATOM_NS):
+            id_el  = entry.find("atom:id",      _ATOM_NS)
+            sum_el = entry.find("atom:summary", _ATOM_NS)
+            if id_el is None or sum_el is None:
+                continue
+            # id URL → clean ID, e.g. http://arxiv.org/abs/2503.01234v1
+            m = re.search(r"/abs/(.+?)v?\d*$", id_el.text.strip())
+            if m:
+                abstracts[m.group(1)] = " ".join(sum_el.text.split())
+
+        if start + BATCH < len(clean):
+            time.sleep(3)   # polite delay between API batches
+
+    return abstracts
+
+
+def fetch_papers(base_url: str = ARXIV_URL, date_str: str | None = None) -> tuple[list[dict], str]:
+    if date_str:
+        # ── Historical date: scrape monthly listing ───────────────────────────
+        papers, arxiv_date = _collect_papers_for_date(date_str)
+    else:
+        # ── Step 1: scrape recent listing for IDs / titles / authors ─────────
+        print("  Fetching page 1 …", file=sys.stderr)
+        soup = _get_soup(base_url)
+
+        total, arxiv_date = _detect_total_and_date(soup)
+        papers = _parse_papers(soup)
+        print(f"  Page 1: {len(papers)} papers  (total announced: {total or '?'})",
+              file=sys.stderr)
+
+        # ── Step 2: paginate remaining pages ──────────────────────────────────
+        if total > len(papers):
+            seen_ids = {p["id"] for p in papers}
+            skip = len(papers)
+            page = 2
+            while skip < total:
+                print(f"  Fetching page {page} (skip={skip}) …", file=sys.stderr)
+                page_soup = _get_soup(f"{base_url}?skip={skip}&show=50")
+                new = [p for p in _parse_papers(page_soup) if p["id"] not in seen_ids]
+                if not new:
+                    break
+                papers.extend(new)
+                seen_ids.update(p["id"] for p in new)
+                skip += 50
+                page += 1
+            print(f"  Total collected: {len(papers)}", file=sys.stderr)
+
+    if not papers:
+        return [], arxiv_date
+
+    # ── Fetch abstracts from arxiv API ────────────────────────────────────────
+    abstracts = _fetch_abstracts([p["id"] for p in papers])
+    for p in papers:
+        clean_id = re.sub(r"v\d+$", "", re.sub(r"^arXiv:", "", p["id"].split()[0]))
+        p["abstract"] = abstracts.get(clean_id, "")
+
+    # ── Re-classify now that we have full abstracts ───────────────────────────
+    for p in papers:
+        p["classification"] = classify(p["title"], p["abstract"])
 
     return papers, arxiv_date
 
@@ -278,8 +497,24 @@ def analyze_interested_papers(papers: list[dict], api_key: str) -> None:
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    print("Fetching papers from arxiv cs.CV/recent …", file=sys.stderr)
-    papers, arxiv_date = fetch_papers()
+    parser = argparse.ArgumentParser(description="Fetch cs.CV papers from arxiv.")
+    parser.add_argument(
+        "--date", metavar="YYYY-MM-DD",
+        help="Fetch papers for a specific date instead of today's recent listing.",
+    )
+    args = parser.parse_args()
+
+    if args.date:
+        try:
+            datetime.strptime(args.date, "%Y-%m-%d")
+        except ValueError:
+            print(f"Invalid date '{args.date}'. Use YYYY-MM-DD format.", file=sys.stderr)
+            sys.exit(1)
+        print(f"Fetching papers for {args.date} …", file=sys.stderr)
+        papers, arxiv_date = fetch_papers(date_str=args.date)
+    else:
+        print("Fetching papers from arxiv cs.CV/recent …", file=sys.stderr)
+        papers, arxiv_date = fetch_papers()
 
     if not papers:
         print("No papers found – aborting.", file=sys.stderr)
@@ -287,19 +522,32 @@ def main():
 
     print(f"Found {len(papers)} papers  (header: {arxiv_date!r})", file=sys.stderr)
 
-    gemini_key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if gemini_key:
-        analyze_interested_papers(papers, gemini_key)
-    else:
-        print("GEMINI_API_KEY not set – skipping analysis.", file=sys.stderr)
-
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    today = args.date or datetime.now(timezone.utc).strftime("%Y-%m-%d")
     out_dir = "personal/arxiv"
     os.makedirs(out_dir, exist_ok=True)
 
+    # ── Bake user annotations into paper JSON ─────────────────────────────────
+    # Reads user_annotations.json (exported from the browser and committed to repo).
+    # For each paper whose ID appears in the user's overrides, adds a
+    # "user_override" field so fresh browsers display the correct label
+    # before the user interacts with the page.
+    annotations_path = f"{out_dir}/user_annotations.json"
+    if os.path.exists(annotations_path):
+        with open(annotations_path, encoding="utf-8") as f:
+            user_ann = json.load(f)
+        overrides = user_ann.get("overrides", {})
+        applied = 0
+        for p in papers:
+            if p["id"] in overrides:
+                p["classification"]["user_override"] = overrides[p["id"]]
+                applied += 1
+        if applied:
+            print(f"  Applied {applied} user overrides from {annotations_path}",
+                  file=sys.stderr)
+
     counts = {
         "interested": sum(1 for p in papers if p["classification"]["label"] == "interested"),
-        "not_interested": sum(1 for p in papers if p["classification"]["label"] == "not_interested"),
+        "not_for_me": sum(1 for p in papers if p["classification"]["label"] == "not_for_me"),
         "neutral": sum(1 for p in papers if p["classification"]["label"] == "neutral"),
     }
 
@@ -321,7 +569,7 @@ def main():
     print(f"Saved → {dated_path}", file=sys.stderr)
     print(
         f"Interested: {counts['interested']}  "
-        f"Not interested: {counts['not_interested']}  "
+        f"Not for me: {counts['not_for_me']}  "
         f"Neutral: {counts['neutral']}",
         file=sys.stderr,
     )

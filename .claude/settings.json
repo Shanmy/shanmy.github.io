@@ -1,5 +1,11 @@
 {
   "permissions": {
+    "allow": [
+      "Bash(pip install requests beautifulsoup4 -q)",
+      "Bash(python scripts/fetch_arxiv.py)",
+      "Bash(python3 -c \":*)",
+      "Bash(python -c \":*)"
+    ],
     "additionalDirectories": [
       "/Users/shanmy/Desktop/shanmy.github.io"
     ]

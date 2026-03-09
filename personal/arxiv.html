@@ -5,732 +5,993 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ArXiv cs.CV Daily Digest</title>
 
-  <!-- KaTeX for LaTeX rendering in Gemini analysis -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
-          onload="renderLatex()"></script>
-
-  <!-- marked.js for Markdown rendering in analysis panels -->
+          onload="latexReady=true; maybeRenderLatex()"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"></script>
 
   <style>
-    /* ── Reset & base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:  #22a855;
+      --red:    #d93535;
+      --amber:  #e07b20;
+      --blue:   #1a6fa8;
+      --grey:   #777;
+      --border: #e0e0e0;
+      --bg:     #f5f5f5;
+      --card:   #fff;
+      --sidebar-w: 320px;
+    }
 
     body {
       font-family: 'Helvetica Neue', Arial, sans-serif;
       font-size: 14px;
       line-height: 1.6;
-      background: #f5f5f5;
+      background: var(--bg);
       color: #2c2c2c;
     }
-
-    a { color: #1a6fa8; text-decoration: none; }
+    a { color: var(--blue); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ── Layout ── */
-    .page-wrap {
+    /* ── Main layout ── */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+    .main-col {
+      flex: 1;
+      min-width: 0;
+      padding: 24px 20px 60px;
       max-width: 900px;
       margin: 0 auto;
-      padding: 24px 16px 60px;
+      transition: padding-right 0.3s;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: var(--sidebar-w);
+      min-width: var(--sidebar-w);
+      background: #fff;
+      border-left: 1px solid var(--border);
+      position: fixed;
+      right: 0; top: 0; bottom: 0;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar.open {
+      transform: translateX(0);
+    }
+    .sidebar-header {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 1;
+    }
+    .sidebar-header h2 { font-size: 15px; font-weight: 600; }
+    .sidebar-close {
+      background: none; border: none; font-size: 18px;
+      cursor: pointer; color: #666; line-height: 1;
+      padding: 2px 6px; border-radius: 4px;
+    }
+    .sidebar-close:hover { background: #f0f0f0; }
+    .sidebar-body { padding: 12px; flex: 1; }
+    .sidebar-empty { color: #aaa; font-size: 13px; text-align: center; padding: 32px 0; }
+
+    .saved-group { margin-bottom: 16px; }
+    .saved-date {
+      font-size: 11px;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+    .saved-item {
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 6px;
+      background: #fafafa;
+    }
+    .saved-item a {
+      font-size: 13px;
+      font-weight: 500;
+      color: #1a1a1a;
+      display: block;
+      line-height: 1.4;
+    }
+    .saved-item a:hover { color: var(--blue); }
+    .saved-item-authors { font-size: 11px; color: #888; margin-top: 2px; }
+    .saved-item-remove {
+      font-size: 11px; color: #bbb; cursor: pointer;
+      float: right; margin-left: 6px;
+    }
+    .saved-item-remove:hover { color: var(--red); }
+
+    /* ── Sidebar toggle button ── */
+    .sidebar-toggle {
+      position: fixed;
+      right: 16px;
+      bottom: 24px;
+      background: var(--amber);
+      color: #fff;
+      border: none;
+      border-radius: 28px;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: background 0.15s;
+    }
+    .sidebar-toggle:hover { background: #c56a18; }
+    .sidebar-toggle .badge {
+      background: rgba(255,255,255,0.3);
+      border-radius: 10px;
+      padding: 1px 7px;
+      font-size: 12px;
     }
 
     /* ── Header ── */
     .header {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       border-bottom: 2px solid #ddd;
-      padding-bottom: 16px;
+      padding-bottom: 14px;
     }
-    .header h1 {
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-    .header .subtitle {
-      color: #666;
-      font-size: 13px;
-    }
+    .header h1 { font-size: 21px; font-weight: 600; margin-bottom: 3px; }
+    .header .subtitle { color: #666; font-size: 13px; }
     .header-meta {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-top: 10px;
-      flex-wrap: wrap;
+      display: flex; align-items: center; gap: 14px;
+      margin-top: 10px; flex-wrap: wrap;
     }
     .stat-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 20px;
-      padding: 3px 10px;
-      font-size: 12px;
-      color: #444;
+      display: inline-flex; align-items: center; gap: 5px;
+      background: #fff; border: 1px solid #ddd; border-radius: 20px;
+      padding: 3px 10px; font-size: 12px; color: #444;
     }
-    .stat-badge .dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      display: inline-block;
-    }
-    .dot-interested  { background: #22a855; }
-    .dot-neutral     { background: #888; }
-    .dot-not         { background: #e04040; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .dot-int  { background: var(--green); }
+    .dot-neu  { background: var(--grey); }
+    .dot-not  { background: var(--red); }
 
     /* ── Date nav ── */
     .date-nav {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 14px; flex-wrap: wrap;
     }
     .date-nav label { font-size: 13px; color: #555; }
     .date-nav input[type=date] {
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      padding: 4px 8px;
-      font-size: 13px;
-      cursor: pointer;
+      border: 1px solid #ccc; border-radius: 6px;
+      padding: 4px 8px; font-size: 13px; cursor: pointer;
     }
-    .btn-load {
-      background: #1a6fa8;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 5px 14px;
-      font-size: 13px;
-      cursor: pointer;
+    .btn {
+      border: none; border-radius: 6px;
+      padding: 5px 14px; font-size: 13px; cursor: pointer;
+      font-weight: 500;
     }
-    .btn-load:hover { background: #145d8f; }
+    .btn-blue   { background: var(--blue); color: #fff; }
+    .btn-grey   { background: #555; color: #fff; }
+    .btn:hover  { opacity: 0.85; }
 
-    /* ── Filter tabs ── */
+    /* ── Filter bar ── */
     .filter-bar {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-      align-items: center;
+      display: flex; gap: 7px; margin-bottom: 14px;
+      flex-wrap: wrap; align-items: center;
     }
     .tab {
-      border: 1px solid #ccc;
-      background: #fff;
-      border-radius: 20px;
-      padding: 4px 14px;
-      font-size: 13px;
-      cursor: pointer;
-      transition: all 0.15s;
-      color: #444;
+      border: 1px solid #ccc; background: #fff; border-radius: 20px;
+      padding: 4px 14px; font-size: 13px; cursor: pointer;
+      transition: all 0.15s; color: #444; white-space: nowrap;
     }
     .tab:hover { border-color: #888; }
-    .tab.active {
-      background: #2c2c2c;
-      color: #fff;
-      border-color: #2c2c2c;
-    }
-    .tab.tab-interested.active  { background: #22a855; border-color: #22a855; }
-    .tab.tab-neutral.active     { background: #777;    border-color: #777; }
-    .tab.tab-not.active         { background: #e04040; border-color: #e04040; }
-    .tab.tab-bookmarked.active  { background: #e88020; border-color: #e88020; }
-
-    .search-wrap {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-    }
+    .tab.active                 { background: #2c2c2c; color: #fff; border-color: #2c2c2c; }
+    .tab.tab-int.active         { background: var(--green); border-color: var(--green); }
+    .tab.tab-neu.active         { background: var(--grey);  border-color: var(--grey); }
+    .tab.tab-not.active         { background: var(--red);   border-color: var(--red); }
+    .tab.tab-saved.active       { background: var(--amber); border-color: var(--amber); }
+    .search-wrap { margin-left: auto; }
     .search-input {
-      border: 1px solid #ccc;
-      border-radius: 20px;
-      padding: 4px 12px;
-      font-size: 13px;
-      width: 200px;
-      outline: none;
+      border: 1px solid #ccc; border-radius: 20px;
+      padding: 4px 14px; font-size: 13px; width: 200px; outline: none;
     }
     .search-input:focus { border-color: #888; }
 
-    /* ── Show cross-lists toggle ── */
-    .crosslist-toggle {
-      font-size: 12px;
-      color: #666;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      margin-bottom: 12px;
-      cursor: pointer;
-      user-select: none;
+    .crosslist-label {
+      font-size: 12px; color: #666;
+      display: inline-flex; align-items: center; gap: 5px;
+      margin-bottom: 12px; cursor: pointer; user-select: none;
     }
 
     /* ── Paper cards ── */
-    .papers-list { display: flex; flex-direction: column; gap: 10px; }
+    .papers-list { display: flex; flex-direction: column; gap: 8px; }
 
     .paper-card {
-      background: #fff;
-      border: 1px solid #e0e0e0;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid #ccc;
       border-radius: 8px;
-      padding: 14px 16px;
-      position: relative;
+      padding: 12px 14px;
       transition: box-shadow 0.15s;
     }
-    .paper-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-
-    /* Left accent bar */
-    .paper-card::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 4px;
-      border-radius: 8px 0 0 8px;
-      background: #ccc;
-    }
-    .paper-card.interested::before  { background: #22a855; }
-    .paper-card.not_interested::before { background: #e04040; }
-    .paper-card.neutral::before     { background: #aaa; }
-
-    /* User-tagged overrides */
-    .paper-card.user-interested::before  { background: #22a855; }
-    .paper-card.user-not::before         { background: #e04040; }
-    .paper-card.user-bookmarked::before  { background: #e88020; }
+    .paper-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .paper-card.auto-interested    { border-left-color: var(--green); }
+    .paper-card.auto-not_for_me   { border-left-color: var(--red);   opacity: 0.7; }
+    .paper-card.auto-neutral       { border-left-color: #ccc; }
+    /* User overrides */
+    .paper-card.user-interested    { border-left-color: var(--green); opacity: 1; }
+    .paper-card.user-not_for_me   { border-left-color: var(--red);   opacity: 0.7; }
+    .paper-card.saved              { outline: 2px solid var(--amber); outline-offset: 1px; }
 
     .paper-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 10px;
     }
-
     .paper-title {
-      font-size: 14px;
-      font-weight: 600;
-      flex: 1;
-      line-height: 1.4;
+      font-size: 14px; font-weight: 600; flex: 1; line-height: 1.4;
     }
     .paper-title a { color: #1a1a1a; }
-    .paper-title a:hover { color: #1a6fa8; }
+    .paper-title a:hover { color: var(--blue); }
 
-    .paper-actions {
-      display: flex;
-      gap: 4px;
-      flex-shrink: 0;
-      align-items: center;
+    /* Action buttons — shown contextually */
+    .paper-actions { display: flex; gap: 3px; flex-shrink: 0; }
+    .act {
+      border: 1px solid #ddd; background: #fafafa; border-radius: 5px;
+      padding: 3px 9px; font-size: 12px; cursor: pointer;
+      white-space: nowrap; color: #555; transition: all 0.12s;
     }
+    .act:hover                  { border-color: #aaa; background: #f0f0f0; }
+    .act.act-int:hover          { border-color: var(--green); color: var(--green); background: #f0fdf4; }
+    .act.act-not:hover          { border-color: var(--red);   color: var(--red);   background: #fff0f0; }
+    .act.act-save               { color: var(--amber); border-color: var(--amber); background: #fff8f0; }
+    .act.act-save:hover         { background: #fff0dc; }
+    .act.act-save.saved         { background: var(--amber); color: #fff; border-color: var(--amber); }
+    .act.act-undo               { font-size: 11px; color: #aaa; }
 
-    .action-btn {
-      border: none;
-      background: none;
-      cursor: pointer;
-      font-size: 16px;
-      padding: 2px 4px;
-      border-radius: 4px;
-      opacity: 0.4;
-      transition: opacity 0.15s, background 0.15s;
-      line-height: 1;
-    }
-    .action-btn:hover { opacity: 0.8; background: #f0f0f0; }
-    .action-btn.active { opacity: 1; }
-
-    .paper-authors {
-      font-size: 12px;
-      color: #666;
-      margin-top: 4px;
-    }
-
-    .paper-tags {
-      display: flex;
-      gap: 5px;
-      flex-wrap: wrap;
-      margin-top: 6px;
-    }
+    .paper-authors { font-size: 12px; color: #666; margin-top: 3px; }
+    .paper-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
     .tag {
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 10px;
-      font-weight: 500;
+      font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 500;
     }
-    .tag-interested  { background: #d4f5e2; color: #1a7a40; }
-    .tag-not         { background: #fde8e8; color: #b83232; }
-    .tag-neutral     { background: #efefef; color: #555; }
-    .tag-gen         { background: #dce8fb; color: #2255a4; }
-    .tag-mllm        { background: #f0e4fb; color: #6a28a8; }
-    .tag-human       { background: #fdf0d8; color: #915c10; }
-    .tag-cross       { background: #f5f5f5; color: #999; border: 1px solid #ddd; }
-    .tag-user        { background: #e88020; color: #fff; }
+    .tag-int    { background: #d4f5e2; color: #1a7a40; }
+    .tag-not    { background: #fde8e8; color: #b83232; }
+    .tag-neu    { background: #efefef; color: #555; }
+    .tag-gen    { background: #dce8fb; color: #2255a4; }
+    .tag-mllm   { background: #f0e4fb; color: #6a28a8; }
+    .tag-human  { background: #fdf0d8; color: #915c10; }
+    .tag-cross  { background: #f5f5f5; color: #999; border: 1px solid #ddd; }
+    .tag-saved  { background: var(--amber); color: #fff; }
 
     /* Abstract */
-    .abstract-toggle {
-      font-size: 12px;
-      color: #888;
-      cursor: pointer;
-      margin-top: 6px;
-      display: inline-block;
-      user-select: none;
+    .expand-row { display: flex; align-items: center; gap: 2px; margin-top: 6px; }
+    .toggle-btn {
+      font-size: 12px; color: #999; cursor: pointer; user-select: none;
+      background: none; border: none; padding: 0;
     }
-    .abstract-toggle:hover { color: #444; }
+    .toggle-btn:hover { color: #444; }
+    .sep { color: #ddd; margin: 0 4px; }
 
     .abstract-text {
-      font-size: 13px;
-      color: #444;
-      margin-top: 6px;
-      line-height: 1.6;
+      font-size: 13px; color: #444; margin-top: 8px; line-height: 1.7;
       display: none;
     }
     .abstract-text.open { display: block; }
 
-    /* Analysis panel */
-    .analysis-toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 12px;
-      color: #1a6fa8;
-      cursor: pointer;
-      margin-top: 6px;
-      margin-left: 12px;
-      user-select: none;
-    }
-    .analysis-toggle:hover { text-decoration: underline; }
-
+    /* Analysis */
     .analysis-panel {
-      display: none;
-      margin-top: 10px;
-      padding: 14px;
-      background: #f8faff;
-      border: 1px solid #c8ddf5;
-      border-radius: 6px;
-      font-size: 13px;
-      line-height: 1.7;
-      color: #2c2c2c;
+      display: none; margin-top: 10px; padding: 14px;
+      background: #f8faff; border: 1px solid #c8ddf5;
+      border-radius: 6px; font-size: 13px; line-height: 1.75;
     }
     .analysis-panel.open { display: block; }
-
-    /* Markdown in analysis */
     .analysis-panel h1, .analysis-panel h2, .analysis-panel h3 {
-      margin: 12px 0 6px;
-      font-size: 14px;
-      color: #1a1a1a;
+      font-size: 13px; margin: 12px 0 4px; color: #111;
     }
-    .analysis-panel p { margin: 6px 0; }
-    .analysis-panel ul, .analysis-panel ol {
-      margin: 6px 0 6px 20px;
-    }
+    .analysis-panel p  { margin: 5px 0; }
+    .analysis-panel ul, .analysis-panel ol { margin: 4px 0 4px 18px; }
     .analysis-panel li { margin: 2px 0; }
-    .analysis-panel strong { color: #111; }
-    .analysis-panel .katex { font-size: 1em; }
     .analysis-panel .katex-display { overflow-x: auto; padding: 4px 0; }
 
-    /* ── Empty / error states ── */
-    .empty-state {
-      text-align: center;
-      padding: 60px 20px;
-      color: #888;
-    }
-    .empty-state h2 { font-size: 18px; margin-bottom: 8px; color: #555; }
+    /* Empty state */
+    .empty-state { text-align: center; padding: 60px 20px; color: #888; }
+    .empty-state h2 { font-size: 18px; color: #555; margin-bottom: 8px; }
 
-    /* ── Responsive ── */
     @media (max-width: 600px) {
       .search-wrap { margin-left: 0; width: 100%; }
       .search-input { width: 100%; }
+      .sidebar { width: 100%; min-width: 0; }
     }
   </style>
 </head>
 
 <body>
-<div class="page-wrap">
+<div class="layout">
+  <div class="main-col">
 
-  <!-- Header -->
-  <div class="header">
-    <h1>ArXiv cs.CV Daily Digest</h1>
-    <div class="subtitle">
-      Auto-fetched from <a href="https://arxiv.org/list/cs.CV/recent" target="_blank">arxiv.org/list/cs.CV/recent</a>
-      · classified by interest · Gemini-powered analysis for relevant papers
+    <!-- Header -->
+    <div class="header">
+      <h1>ArXiv cs.CV Daily Digest</h1>
+      <div class="subtitle">
+        Auto-fetched from <a href="https://arxiv.org/list/cs.CV/recent" target="_blank">arxiv.org/list/cs.CV/recent</a>
+        · keyword classification · Gemini analysis for interested papers
+      </div>
+      <div class="header-meta">
+        <span class="stat-badge"><span class="dot dot-int"></span><span id="cnt-int">–</span> interested</span>
+        <span class="stat-badge"><span class="dot dot-neu"></span><span id="cnt-neu">–</span> neutral</span>
+        <span class="stat-badge"><span class="dot dot-not"></span><span id="cnt-not">–</span> not for me</span>
+        <span style="font-size:12px;color:#999;" id="date-label"></span>
+        <span style="font-size:12px;color:#aaa;">
+          Gemini: <span id="key-status">not set</span>
+          · <button onclick="promptForApiKey()"
+              style="font-size:11px;background:none;border:none;cursor:pointer;
+                     color:var(--blue);padding:0;text-decoration:underline;">set key</button>
+        </span>
+      </div>
     </div>
-    <div class="header-meta" id="header-meta">
-      <span class="stat-badge"><span class="dot dot-interested"></span><span id="cnt-interested">–</span> interested</span>
-      <span class="stat-badge"><span class="dot dot-neutral"></span><span id="cnt-neutral">–</span> neutral</span>
-      <span class="stat-badge"><span class="dot dot-not"></span><span id="cnt-not">–</span> not interested</span>
-      <span style="font-size:12px; color:#888;" id="arxiv-date-label"></span>
+
+    <!-- Date nav -->
+    <div class="date-nav">
+      <label for="date-pick">Date:</label>
+      <input type="date" id="date-pick">
+      <button class="btn btn-blue" id="btn-date">Load</button>
+      <button class="btn btn-grey" id="btn-latest">Latest</button>
     </div>
-  </div>
 
-  <!-- Date navigation -->
-  <div class="date-nav">
-    <label for="date-picker">Date:</label>
-    <input type="date" id="date-picker">
-    <button class="btn-load" id="btn-load-date">Load</button>
-    <button class="btn-load" id="btn-load-latest" style="background:#555;">Latest</button>
-  </div>
-
-  <!-- Filter bar -->
-  <div class="filter-bar">
-    <button class="tab active" data-filter="all">All</button>
-    <button class="tab tab-interested" data-filter="interested">⭐ Interested</button>
-    <button class="tab tab-neutral" data-filter="neutral">Neutral</button>
-    <button class="tab tab-not" data-filter="not_interested">✗ Not for me</button>
-    <button class="tab tab-bookmarked" data-filter="user-bookmarked">🔖 Saved</button>
-    <div class="search-wrap">
-      <input class="search-input" id="search-input" type="text" placeholder="Search title / author…">
+    <!-- Filters -->
+    <div class="filter-bar">
+      <button class="tab active"     data-f="all">All</button>
+      <button class="tab tab-int"    data-f="interested">⭐ Interested</button>
+      <button class="tab tab-neu"    data-f="neutral">Neutral</button>
+      <button class="tab tab-not"    data-f="not_for_me">✗ Not for me</button>
+      <button class="tab tab-saved"  data-f="saved">🔖 Saved</button>
+      <div class="search-wrap">
+        <input class="search-input" id="search" type="text" placeholder="Search title / author…">
+      </div>
     </div>
-  </div>
 
-  <!-- Cross-list toggle -->
-  <label class="crosslist-toggle">
-    <input type="checkbox" id="show-crosslists"> Show cross-listed papers
-  </label>
+    <label class="crosslist-label">
+      <input type="checkbox" id="show-cross"> Show cross-listed papers
+    </label>
 
-  <!-- Papers -->
-  <div class="papers-list" id="papers-list">
-    <div class="empty-state">
-      <h2>Loading…</h2>
-      <p>Fetching today's papers.</p>
+    <div class="papers-list" id="papers-list">
+      <div class="empty-state"><h2>Loading…</h2></div>
     </div>
-  </div>
+  </div><!-- .main-col -->
 
-</div>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h2>🔖 Saved papers</h2>
+      <div style="display:flex;gap:6px;align-items:center;">
+        <button onclick="exportAnnotations()" title="Export all annotations to user_annotations.json"
+          style="font-size:11px;padding:3px 9px;border:1px solid #ccc;border-radius:5px;
+                 background:#fafafa;cursor:pointer;color:#555;">
+          ↓ Export
+        </button>
+        <button class="sidebar-close" id="sidebar-close" title="Close">✕</button>
+      </div>
+    </div>
+    <div class="sidebar-body" id="sidebar-body">
+      <div class="sidebar-empty">No saved papers yet.</div>
+    </div>
+  </aside>
+</div><!-- .layout -->
+
+<!-- Saved-locally toast -->
+<div id="saved-toast" style="
+  position:fixed; bottom:76px; right:20px;
+  background:#333; color:#fff; font-size:12px;
+  padding:6px 14px; border-radius:20px;
+  opacity:0; transition:opacity 0.2s; pointer-events:none; z-index:200;
+">✓ Saved locally</div>
+
+<!-- Sidebar toggle button -->
+<button class="sidebar-toggle" id="sidebar-toggle">
+  🔖 Saved <span class="badge" id="saved-count">0</span>
+</button>
 
 <script>
-// ── Helpers ──────────────────────────────────────────────────────────────────
+// ── Utilities ─────────────────────────────────────────────────────────────────
+const $  = id => document.getElementById(id);
+const esc = s  => (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;')
+                          .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 
-const $ = id => document.getElementById(id);
-
-const TAG_LABELS = {
-  image_video_generation: { text: 'Generation', cls: 'tag-gen' },
-  multimodal_llm:         { text: 'Multimodal LLM', cls: 'tag-mllm' },
-  human_generation:       { text: 'Human Gen', cls: 'tag-human' },
-  medical:                { text: 'Medical', cls: 'tag-not' },
-  '3d':                   { text: '3D', cls: 'tag-not' },
-  downstream_tasks:       { text: 'Downstream', cls: 'tag-not' },
-  pure_visual_understanding: { text: 'Visual UND', cls: 'tag-not' },
+// ── Tag label map ─────────────────────────────────────────────────────────────
+const AUTO_TAG_INFO = {
+  image_video_generation: { text:'Generation',    cls:'tag-gen'   },
+  multimodal_llm:         { text:'Multimodal LLM',cls:'tag-mllm'  },
+  human_generation:       { text:'Human Gen',     cls:'tag-human' },
+  medical:                { text:'Medical',       cls:'tag-not'   },
+  '3d':                   { text:'3D',            cls:'tag-not'   },
+  downstream_tasks:       { text:'Downstream',    cls:'tag-not'   },
+  pure_visual_understanding:{ text:'Visual UND',  cls:'tag-not'   },
 };
 
-// ── LocalStorage tags ─────────────────────────────────────────────────────────
+// ── LocalStorage helpers ──────────────────────────────────────────────────────
+// Structure:
+//   arxiv_overrides  : { paperId: 'interested' | 'not_for_me' }   ← manual label override
+//   arxiv_saved      : { paperId: { id, title, link, authors, date } }
 
-function getTags() {
-  return JSON.parse(localStorage.getItem('arxiv_tags') || '{}');
+function getOverrides() { return JSON.parse(localStorage.getItem('arxiv_overrides')||'{}'); }
+function getSaved()     { return JSON.parse(localStorage.getItem('arxiv_saved')    ||'{}'); }
+
+function setOverride(id, val) {
+  const o = getOverrides();
+  if (o[id] === val) delete o[id]; else o[id] = val;  // toggle
+  localStorage.setItem('arxiv_overrides', JSON.stringify(o));
+  return getOverrides()[id] || null;
 }
-function setTag(paperId, tag) {
-  const tags = getTags();
-  if (tags[paperId] === tag) {
-    delete tags[paperId]; // toggle off
+
+function toggleSaved(paper, currentDate) {
+  const s = getSaved();
+  if (s[paper.id]) {
+    delete s[paper.id];
   } else {
-    tags[paperId] = tag;
+    s[paper.id] = {
+      id:      paper.id,
+      title:   paper.title,
+      link:    paper.link,
+      authors: paper.authors,
+      date:    currentDate,
+    };
   }
-  localStorage.setItem('arxiv_tags', JSON.stringify(tags));
-  return tags[paperId] || null;
+  localStorage.setItem('arxiv_saved', JSON.stringify(s));
+  return !!getSaved()[paper.id];
 }
-function getTag(paperId) {
-  return getTags()[paperId] || null;
+
+// ── Analysis cache & Gemini key (localStorage) ────────────────────────────────
+function getAnalyses()       { return JSON.parse(localStorage.getItem('arxiv_analyses') || '{}'); }
+function setAnalysis(id, txt){ const a = getAnalyses(); a[id] = txt; localStorage.setItem('arxiv_analyses', JSON.stringify(a)); }
+function getGeminiKey()      { return localStorage.getItem('arxiv_gemini_key') || ''; }
+function setGeminiKey(k)     { localStorage.setItem('arxiv_gemini_key', k); }
+
+const PAPER_SYSTEM_PROMPT = `为了更好地理解学术论文，并从中提取有价值的信息，一个结构化的阅读和整理框架至关重要。你需要构建一个体系，帮助你系统地拆解论文，抓住核心要点，并建立知识关联。
+
+* **整体概括:**
+* **研究背景与动机 (Background & Motivation - Why):** 论文研究的问题是什么？为什么这个问题重要？该领域之前的研究状况如何？论文的创新点或研究空白是什么？
+* **核心贡献/主要发现 (Main Contribution/Findings - What):** 论文的主要贡献是什么？得出了哪些重要的结论或发现？解决了什么问题？
+
+* **方法 (Methods - 核心技术与实现细节):**
+核心要点：对于论文中的方法解释的同时应结合原文内容如数学公式或专业词汇，以帮助读者更好地理解原论文的方法。
+* **方法原理 (Methodology Principles):** 所用方法的基本原理是什么？核心思想是什么？
+* **方法步骤与流程 (Steps & Procedures):** 方法的具体步骤和流程是什么？
+
+* **实验结果 (Results):** 解读实验结果时不应该只是阐述数据，而是应该基于数据集的特点去分析内容，思考能给到我们什么启发
+
+**补充：**
+1. 数学公式使用 LaTeX 定界符：行内公式用 \`$...$\`，块级公式用 \`$$...$$\`。
+2. 注意：本次分析仅基于论文标题和摘要。`;
+
+async function generateAnalysis(paperId) {
+  // Ensure we have a Gemini API key
+  let key = getGeminiKey();
+  if (!key) {
+    const input = prompt('Enter your Gemini API key (stored locally, never sent to this server):');
+    if (!input) return;
+    key = input.trim();
+    setGeminiKey(key);
+    updateKeyStatus();
+  }
+
+  const paper = allPapers.find(p => p.id === paperId);
+  if (!paper) return;
+
+  // Show loading on button
+  const card = $(`card-${paperId}`);
+  const analyzeBtn = card?.querySelector('.btn-analyze');
+  if (analyzeBtn) { analyzeBtn.textContent = '⏳ Analyzing…'; analyzeBtn.disabled = true; }
+
+  const authors = (paper.authors || []).join(', ');
+
+  const userMsg = `请分析以下论文（仅提供标题和摘要）：\n\n**标题:** ${paper.title}\n**作者:** ${authors}\n**arxiv ID:** ${paper.id}\n\n**摘要:**\n${paper.abstract}`;
+
+  const payload = {
+    system_instruction: { parts: [{ text: PAPER_SYSTEM_PROMPT }] },
+    contents: [{ parts: [{ text: userMsg }], role: 'user' }],
+    generationConfig: { temperature: 0.3, maxOutputTokens: 2048 },
+  };
+
+  try {
+    const resp = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`,
+      { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }
+    );
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `HTTP ${resp.status}`);
+    }
+    const data = await resp.json();
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!text) throw new Error('Empty response from Gemini');
+
+    setAnalysis(paperId, text);
+
+    // Re-render card, then open the analysis panel
+    rerenderCard(paperId);
+    const panel = $(`analysis-${paperId}`);
+    const toggleBtn = card?.querySelector('.btn-analysis-toggle');
+    if (panel) {
+      panel.innerHTML = marked.parse(text);
+      panel.classList.add('open');
+      maybeRenderLatex(panel);
+    }
+    if (toggleBtn) toggleBtn.textContent = '✦ Analysis ▴';
+
+  } catch (err) {
+    if (analyzeBtn) { analyzeBtn.textContent = '✦ Analyze'; analyzeBtn.disabled = false; }
+    alert(`Analysis failed: ${err.message}`);
+  }
 }
 
 // ── State ─────────────────────────────────────────────────────────────────────
-
-let allPapers = [];
+let allPapers   = [];
+let currentDate = '';
 let activeFilter = 'all';
-let showCrossLists = false;
-let searchQuery = '';
+let showCross    = false;
+let searchQ      = '';
+let latexReady   = false;
 
-// ── Render ────────────────────────────────────────────────────────────────────
-
-function authorStr(authors) {
-  if (!authors || !authors.length) return 'Unknown';
-  if (authors.length <= 3) return authors.join(', ');
-  return authors.slice(0, 3).join(', ') + ` et al. (${authors.length})`;
+// ── Effective label per paper ─────────────────────────────────────────────────
+function effectiveLabel(paperId, autoLabel) {
+  const ov = getOverrides()[paperId];
+  return ov || autoLabel;
 }
 
-function buildTagsHtml(classification) {
-  const parts = [];
-  const { label, auto_tags = [], caution_tags = [] } = classification;
+// ── Build one paper card ──────────────────────────────────────────────────────
+function buildCard(p) {
+  const auto   = p.classification.label;   // interested | neutral | not_for_me
+  const ov     = getOverrides()[p.id];     // manual override or null
+  const label  = ov || auto;
+  const isSaved = !!getSaved()[p.id];
 
-  const labelMap = {
-    interested: '<span class="tag tag-interested">⭐ Interested</span>',
-    not_interested: '<span class="tag tag-not">✗ Not interested</span>',
-    neutral: '<span class="tag tag-neutral">Neutral</span>',
-  };
-  parts.push(labelMap[label] || '');
+  const autoTags  = p.classification.auto_tags  || [];
+  const cautionTags = p.classification.caution_tags || [];
 
-  auto_tags.forEach(t => {
-    const info = TAG_LABELS[t];
-    if (info) parts.push(`<span class="tag ${info.cls}">${info.text}</span>`);
-  });
+  // ── Action buttons depending on effective label ───────────────────────────
+  let actionHtml = '';
+  if (label === 'neutral') {
+    actionHtml = `<button class="act act-int" onclick="handleOverride(event,'${p.id}','interested')">⭐ Interested</button>`;
+  } else if (label === 'interested') {
+    actionHtml = `<button class="act act-not" onclick="handleOverride(event,'${p.id}','not_for_me')">✗ Not for me</button>`;
+    if (ov === 'interested') {
+      // was manually set → also offer undo
+      actionHtml += ` <button class="act act-undo" onclick="handleOverride(event,'${p.id}','interested')" title="Undo">↩ Undo</button>`;
+    }
+  } else if (label === 'not_for_me' && ov === 'not_for_me') {
+    actionHtml = `<button class="act act-undo" onclick="handleOverride(event,'${p.id}','not_for_me')" title="Undo override">↩ Undo</button>`;
+  }
+  // Save button always shown
+  const saveClass = isSaved ? 'act-save saved' : 'act-save';
+  const saveLabel = isSaved ? '🔖 Saved' : '🔖 Save';
+  actionHtml += ` <button class="${'act ' + saveClass}" onclick="handleSave(event,'${p.id}')">${saveLabel}</button>`;
 
-  return parts.join('');
-}
+  // ── Tags row ──────────────────────────────────────────────────────────────
+  const labelTag = {
+    interested: `<span class="tag tag-int">⭐ Interested</span>`,
+    not_for_me: `<span class="tag tag-not">✗ Not for me</span>`,
+    neutral:    `<span class="tag tag-neu">Neutral</span>`,
+  }[label] || '';
 
-function buildCard(paper) {
-  const userTag = getTag(paper.id);
-  const cls = paper.classification;
-  const effectiveLabel = userTag
-    ? (userTag === 'interested' ? 'user-interested'
-       : userTag === 'not' ? 'user-not'
-       : 'user-bookmarked')
-    : cls.label;
+  const autoTagsHtml = [...autoTags, ...cautionTags].map(t => {
+    const info = AUTO_TAG_INFO[t];
+    return info ? `<span class="tag ${info.cls}">${info.text}</span>` : '';
+  }).join('');
 
-  const hasAnalysis = !!paper.analysis;
-  const crossBadge = paper.cross_listed
-    ? '<span class="tag tag-cross">cross-list</span>' : '';
+  const crossTag  = p.cross_listed ? '<span class="tag tag-cross">cross-list</span>' : '';
+  const savedTag  = isSaved        ? '<span class="tag tag-saved">🔖</span>' : '';
+  const ovTag     = ov ? `<span class="tag" style="background:#e0d0fa;color:#5a1eaa;font-size:10px">manually set</span>` : '';
 
-  const analysisBtn = hasAnalysis
-    ? `<span class="analysis-toggle" data-id="${paper.id}">✦ Gemini analysis ▾</span>`
-    : '';
-  const analysisHtml = hasAnalysis
-    ? `<div class="analysis-panel" id="analysis-${paper.id}"></div>` : '';
+  // ── Analysis: check JSON field (legacy) and localStorage cache ───────────────
+  const cachedAnalysis = p.analysis || getAnalyses()[p.id] || null;
+  const analysisBtn = cachedAnalysis
+    ? `<button class="toggle-btn btn-analysis-toggle" style="color:var(--blue)"
+             onclick="toggleAnalysis(this,'${p.id}')">✦ Analysis ▾</button>`
+    : `<button class="toggle-btn btn-analyze" style="color:var(--blue);opacity:0.55"
+             onclick="generateAnalysis('${p.id}')">✦ Analyze</button>`;
 
-  const bookmarkActive = userTag === 'bookmarked' ? 'active' : '';
-  const intActive      = userTag === 'interested'  ? 'active' : '';
-  const notActive      = userTag === 'not'         ? 'active' : '';
+  const expandRow = `
+    <div class="expand-row">
+      <button class="toggle-btn" onclick="toggleAbstract(this)">▸ Abstract</button>
+      <span class="sep">|</span>${analysisBtn}
+    </div>`;
+
+  const cardClasses = [
+    'paper-card',
+    `auto-${auto}`,
+    ov ? `user-${ov}` : '',
+    isSaved ? 'saved' : '',
+  ].filter(Boolean).join(' ');
 
   return `
-<div class="paper-card ${cls.label} ${effectiveLabel !== cls.label ? effectiveLabel : ''}"
-     id="card-${paper.id}"
-     data-id="${paper.id}"
-     data-auto="${cls.label}"
-     data-cross="${paper.cross_listed}">
-
+<div class="${cardClasses}" id="card-${p.id}"
+     data-id="${p.id}" data-auto="${auto}" data-cross="${p.cross_listed}">
   <div class="paper-top">
     <div class="paper-title">
-      <a href="${paper.link}" target="_blank" rel="noopener">${escHtml(paper.title)}</a>
+      <a href="${p.link}" target="_blank" rel="noopener">${esc(p.title)}</a>
     </div>
-    <div class="paper-actions">
-      <button class="action-btn ${intActive}" title="Mark interested"
-              onclick="handleTag(event,'${paper.id}','interested')">⭐</button>
-      <button class="action-btn ${bookmarkActive}" title="Bookmark"
-              onclick="handleTag(event,'${paper.id}','bookmarked')">🔖</button>
-      <button class="action-btn ${notActive}" title="Not for me"
-              onclick="handleTag(event,'${paper.id}','not')">✗</button>
-    </div>
+    <div class="paper-actions">${actionHtml}</div>
   </div>
-
-  <div class="paper-authors">${escHtml(authorStr(paper.authors))}</div>
-
-  <div class="paper-tags">
-    ${buildTagsHtml(cls)}
-    ${crossBadge}
-    ${userTag ? `<span class="tag" style="background:#e88020;color:#fff;font-size:11px">you: ${userTag}</span>` : ''}
-  </div>
-
-  <span class="abstract-toggle" onclick="toggleAbstract(this)">▸ Abstract</span>
-  ${analysisBtn}
-  <div class="abstract-text">${escHtml(paper.abstract)}</div>
-  ${analysisHtml}
+  <div class="paper-authors">${esc(authorStr(p.authors))}</div>
+  <div class="paper-tags">${labelTag}${autoTagsHtml}${crossTag}${ovTag}${savedTag}</div>
+  ${expandRow}
+  <div class="abstract-text">${esc(p.abstract)}</div>
+  <div class="analysis-panel" id="analysis-${p.id}"></div>
 </div>`;
 }
 
-function escHtml(s) {
-  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;')
-                  .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+function authorStr(authors) {
+  if (!authors || !authors.length) return 'Unknown';
+  return authors.join(', ');
 }
 
-function toggleAbstract(el) {
-  const txt = el.nextElementSibling;  // might be analysis-toggle or abstract-text
-  // find abstract-text sibling
-  const card = el.closest('.paper-card');
-  const abs = card.querySelector('.abstract-text');
+// ── Toggle handlers ───────────────────────────────────────────────────────────
+function toggleAbstract(btn) {
+  const card = btn.closest('.paper-card');
+  const abs  = card.querySelector('.abstract-text');
   const open = abs.classList.toggle('open');
-  el.textContent = open ? '▾ Abstract' : '▸ Abstract';
+  btn.textContent = open ? '▾ Abstract' : '▸ Abstract';
 }
 
-function handleTag(e, paperId, tag) {
-  e.stopPropagation();
-  const newTag = setTag(paperId, tag);
-  // re-render just this card
-  const paper = allPapers.find(p => p.id === paperId);
-  if (!paper) return;
-  const card = $(`card-${paperId}`);
-  if (!card) return;
-  const oldOpen = card.querySelector('.abstract-text')?.classList.contains('open');
-  const analysisOpen = card.querySelector('.analysis-panel')?.classList.contains('open');
-  const tmp = document.createElement('div');
-  tmp.innerHTML = buildCard(paper);
-  const newCard = tmp.firstElementChild;
-  card.replaceWith(newCard);
-  if (oldOpen) {
-    newCard.querySelector('.abstract-text')?.classList.add('open');
-    const tog = newCard.querySelector('.abstract-toggle');
-    if (tog) tog.textContent = '▾ Abstract';
-  }
-  if (analysisOpen && paper.analysis) {
-    const panel = newCard.querySelector('.analysis-panel');
-    if (panel) {
-      panel.innerHTML = renderMarkdown(paper.analysis);
-      panel.classList.add('open');
-      renderLatexIn(panel);
-      const btn = newCard.querySelector('.analysis-toggle');
-      if (btn) btn.textContent = '✦ Gemini analysis ▴';
-    }
-  }
-  applyFilter();
-}
-
-// ── Analysis panel ────────────────────────────────────────────────────────────
-
-function renderMarkdown(md) {
-  return marked.parse(md || '');
-}
-
-function renderLatexIn(el) {
-  if (window.renderMathInElement) {
-    renderMathInElement(el, {
-      delimiters: [
-        { left: '$$', right: '$$', display: true },
-        { left: '$', right: '$', display: false },
-      ],
-      throwOnError: false,
-    });
-  }
-}
-
-document.addEventListener('click', e => {
-  const btn = e.target.closest('.analysis-toggle');
-  if (!btn) return;
-  const paperId = btn.dataset.id;
-  const paper = allPapers.find(p => p.id === paperId);
-  if (!paper || !paper.analysis) return;
-  const panel = document.getElementById(`analysis-${paperId}`);
+function toggleAnalysis(btn, paperId) {
+  const panel = $(`analysis-${paperId}`);
   if (!panel) return;
   if (panel.classList.toggle('open')) {
     if (!panel.innerHTML) {
-      panel.innerHTML = renderMarkdown(paper.analysis);
-      renderLatexIn(panel);
+      const paper = allPapers.find(p => p.id === paperId);
+      const text = (paper && paper.analysis) || getAnalyses()[paperId];
+      if (text) {
+        panel.innerHTML = marked.parse(text);
+        maybeRenderLatex(panel);
+      }
     }
-    btn.textContent = '✦ Gemini analysis ▴';
+    btn.textContent = '✦ Analysis ▴';
   } else {
-    btn.textContent = '✦ Gemini analysis ▾';
+    btn.textContent = '✦ Analysis ▾';
   }
-});
+}
 
-// ── Filtering ─────────────────────────────────────────────────────────────────
+function maybeRenderLatex(el) {
+  if (!latexReady || !window.renderMathInElement) return;
+  renderMathInElement(el || document.body, {
+    delimiters: [
+      { left:'$$', right:'$$', display:true  },
+      { left:'$',  right:'$',  display:false },
+    ],
+    throwOnError: false,
+  });
+}
 
+// ── Live counts ───────────────────────────────────────────────────────────────
+function refreshCounts() {
+  const overrides = getOverrides();
+  let int_n = 0, neu_n = 0, not_n = 0;
+  allPapers.forEach(p => {
+    const label = overrides[p.id] || p.classification.label;
+    if      (label === 'interested') int_n++;
+    else if (label === 'neutral')    neu_n++;
+    else if (label === 'not_for_me') not_n++;
+  });
+  $('cnt-int').textContent = int_n;
+  $('cnt-neu').textContent = neu_n;
+  $('cnt-not').textContent = not_n;
+}
+
+// ── Saved-locally toast ───────────────────────────────────────────────────────
+let _toastTimer = null;
+function showSavedToast() {
+  const t = $('saved-toast');
+  t.style.opacity = '1';
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => { t.style.opacity = '0'; }, 1800);
+}
+
+// ── Tag actions ───────────────────────────────────────────────────────────────
+function handleOverride(e, paperId, tag) {
+  e.stopPropagation();
+  setOverride(paperId, tag);
+  rerenderCard(paperId);
+  refreshCounts();
+  applyFilter();
+  showSavedToast();
+}
+
+function handleSave(e, paperId) {
+  e.stopPropagation();
+  const paper = allPapers.find(p => p.id === paperId);
+  if (!paper) return;
+  toggleSaved(paper, currentDate);
+  rerenderCard(paperId);
+  updateSavedBadge();
+  renderSidebar();
+  refreshCounts();
+  applyFilter();
+  showSavedToast();
+}
+
+function rerenderCard(paperId) {
+  const paper = allPapers.find(p => p.id === paperId);
+  if (!paper) return;
+  const old = $(`card-${paperId}`);
+  if (!old) return;
+
+  // Remember open state
+  const absOpen  = old.querySelector('.abstract-text')?.classList.contains('open');
+  const anaOpen  = old.querySelector('.analysis-panel')?.classList.contains('open');
+
+  const tmp = document.createElement('div');
+  tmp.innerHTML = buildCard(paper);
+  const newCard = tmp.firstElementChild;
+  old.replaceWith(newCard);
+
+  if (absOpen) {
+    newCard.querySelector('.abstract-text')?.classList.add('open');
+    const btn = newCard.querySelector('.toggle-btn');
+    if (btn) btn.textContent = '▾ Abstract';
+  }
+  if (anaOpen && paper.analysis) {
+    const panel = newCard.querySelector('.analysis-panel');
+    if (panel) {
+      panel.innerHTML = marked.parse(paper.analysis);
+      panel.classList.add('open');
+      maybeRenderLatex(panel);
+      const aBtn = newCard.querySelectorAll('.toggle-btn')[1];
+      if (aBtn) aBtn.textContent = '✦ Analysis ▴';
+    }
+  }
+}
+
+// ── Filter ────────────────────────────────────────────────────────────────────
 function applyFilter() {
-  const tags = getTags();
-  const q = searchQuery.toLowerCase();
+  const saved = getSaved();
+  const overrides = getOverrides();
+  const q = searchQ.toLowerCase();
 
   document.querySelectorAll('.paper-card').forEach(card => {
-    const id = card.dataset.id;
-    const autoLabel = card.dataset.auto;
-    const userTag = tags[id] || null;
-    const isCross = card.dataset.cross === 'true';
+    const id    = card.dataset.id;
+    const auto  = card.dataset.auto;
+    const cross = card.dataset.cross === 'true';
+    const label = overrides[id] || auto;
+    const isSaved = !!saved[id];
 
-    // Cross-list visibility
-    if (isCross && !showCrossLists) { card.style.display = 'none'; return; }
+    if (cross && !showCross) { card.style.display = 'none'; return; }
 
-    // Search
-    const paper = allPapers.find(p => p.id === id);
-    if (q && paper) {
-      const haystack = (paper.title + ' ' + (paper.authors || []).join(' ')).toLowerCase();
-      if (!haystack.includes(q)) { card.style.display = 'none'; return; }
+    if (q) {
+      const paper = allPapers.find(p => p.id === id);
+      const hay   = paper ? (paper.title + ' ' + (paper.authors||[]).join(' ')).toLowerCase() : '';
+      if (!hay.includes(q)) { card.style.display = 'none'; return; }
     }
 
-    // Tab filter
     let show = false;
-    if (activeFilter === 'all') {
-      show = true;
-    } else if (activeFilter === 'user-bookmarked') {
-      show = userTag === 'bookmarked';
-    } else if (activeFilter === 'interested') {
-      show = userTag === 'interested' || (!userTag && autoLabel === 'interested');
-    } else if (activeFilter === 'not_interested') {
-      show = userTag === 'not' || (!userTag && autoLabel === 'not_interested');
-    } else if (activeFilter === 'neutral') {
-      show = !userTag && autoLabel === 'neutral';
+    switch (activeFilter) {
+      case 'all':        show = true; break;
+      case 'interested': show = label === 'interested'; break;
+      case 'neutral':    show = label === 'neutral'; break;
+      case 'not_for_me': show = label === 'not_for_me'; break;
+      case 'saved':      show = isSaved; break;
     }
-
     card.style.display = show ? '' : 'none';
   });
 }
 
-// ── Data loading ──────────────────────────────────────────────────────────────
+// ── Sidebar ───────────────────────────────────────────────────────────────────
+function renderSidebar() {
+  const saved = getSaved();
+  const body  = $('sidebar-body');
+  const entries = Object.values(saved);
 
+  if (!entries.length) {
+    body.innerHTML = '<div class="sidebar-empty">No saved papers yet.<br>Click 🔖 Save on any paper.</div>';
+    return;
+  }
+
+  // Group by date
+  const byDate = {};
+  entries.forEach(p => {
+    const d = p.date || 'Unknown date';
+    if (!byDate[d]) byDate[d] = [];
+    byDate[d].push(p);
+  });
+
+  const dates = Object.keys(byDate).sort().reverse();
+  body.innerHTML = dates.map(d => `
+    <div class="saved-group">
+      <div class="saved-date">${d}</div>
+      ${byDate[d].map(p => `
+        <div class="saved-item">
+          <span class="saved-item-remove" onclick="removeSaved('${p.id}')" title="Remove">✕</span>
+          <a href="${p.link}" target="_blank" rel="noopener">${esc(p.title)}</a>
+          <div class="saved-item-authors">${esc(authorStr(p.authors))}</div>
+        </div>
+      `).join('')}
+    </div>
+  `).join('');
+}
+
+function removeSaved(paperId) {
+  const s = getSaved();
+  delete s[paperId];
+  localStorage.setItem('arxiv_saved', JSON.stringify(s));
+  renderSidebar();
+  updateSavedBadge();
+  // re-render card if visible
+  if ($(`card-${paperId}`)) rerenderCard(paperId);
+  applyFilter();
+}
+
+function updateSavedBadge() {
+  const n = Object.keys(getSaved()).length;
+  $('saved-count').textContent = n;
+}
+
+// ── Data loading ──────────────────────────────────────────────────────────────
 async function loadData(url) {
-  const list = $('papers-list');
-  list.innerHTML = '<div class="empty-state"><h2>Loading…</h2></div>';
-  $('cnt-interested').textContent = '–';
-  $('cnt-neutral').textContent = '–';
-  $('cnt-not').textContent = '–';
-  $('arxiv-date-label').textContent = '';
+  $('papers-list').innerHTML = '<div class="empty-state"><h2>Loading…</h2></div>';
+  ['cnt-int','cnt-neu','cnt-not'].forEach(id => $(id).textContent = '–');
+  $('date-label').textContent = '';
 
   try {
-    const resp = await fetch(url + '?t=' + Date.now()); // bust cache
+    const resp = await fetch(url + '?t=' + Date.now());
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const data = await resp.json();
 
-    allPapers = data.papers || [];
+    allPapers   = data.papers || [];
+    currentDate = data.fetched_date || '';
 
-    $('cnt-interested').textContent = data.counts?.interested ?? 0;
-    $('cnt-neutral').textContent    = data.counts?.neutral    ?? 0;
-    $('cnt-not').textContent        = data.counts?.not_interested ?? 0;
-    $('arxiv-date-label').textContent = data.arxiv_date
-      ? `arxiv listing: ${data.arxiv_date}` : '';
+    // Seed localStorage from user_override baked into paper JSON by Python
+    // (only fills gaps — local changes take priority)
+    const localOv = getOverrides();
+    let needsSave = false;
+    allPapers.forEach(p => {
+      const ov = p.classification?.user_override;
+      if (ov && !(p.id in localOv)) { localOv[p.id] = ov; needsSave = true; }
+    });
+    if (needsSave) localStorage.setItem('arxiv_overrides', JSON.stringify(localOv));
+
+    $('cnt-int').textContent = data.counts?.interested   ?? 0;
+    $('cnt-neu').textContent = data.counts?.neutral       ?? 0;
+    $('cnt-not').textContent = data.counts?.not_interested ?? data.counts?.not_for_me ?? 0;
+    $('date-label').textContent = data.arxiv_date || '';
 
     if (!allPapers.length) {
-      list.innerHTML = '<div class="empty-state"><h2>No papers</h2><p>No papers found for this date.</p></div>';
+      $('papers-list').innerHTML = '<div class="empty-state"><h2>No papers found</h2></div>';
       return;
     }
 
-    list.innerHTML = allPapers.map(buildCard).join('');
+    $('papers-list').innerHTML = allPapers.map(buildCard).join('');
+    refreshCounts();   // apply stored overrides to badge counts
     applyFilter();
 
   } catch (err) {
-    list.innerHTML = `<div class="empty-state">
+    $('papers-list').innerHTML = `<div class="empty-state">
       <h2>Could not load papers</h2>
-      <p>${escHtml(err.message)}</p>
-      <p style="margin-top:8px;font-size:12px;color:#aaa">
-        GitHub Actions runs Mon–Fri around 09:00 UTC.<br>
-        You can trigger it manually from the Actions tab.
+      <p>${esc(err.message)}</p>
+      <p style="margin-top:8px;font-size:12px;color:#bbb">
+        GitHub Actions runs Mon–Fri ~09:00 UTC.<br>
+        Trigger manually from the Actions tab, or run locally:<br>
+        <code>python scripts/fetch_arxiv.py</code>
       </p>
     </div>`;
   }
 }
 
-function urlForDate(dateStr) {
-  return `../personal/arxiv/${dateStr}.json`;
+function dateUrl(d)  { return `../personal/arxiv/${d}.json`; }
+function latestUrl() { return `../personal/arxiv/latest.json`; }
+
+// ── Annotations: export & server sync ────────────────────────────────────────
+
+function exportAnnotations() {
+  const data = {
+    exported_at: new Date().toISOString(),
+    overrides:   getOverrides(),
+    saved:       getSaved(),
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'user_annotations.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
 }
 
-function urlForLatest() {
-  return `../personal/arxiv/latest.json`;
+// Fetch user_annotations.json committed to the repo and merge into localStorage.
+// Server entries only fill in gaps — local changes always win.
+async function loadServerAnnotations() {
+  try {
+    const resp = await fetch('../personal/arxiv/user_annotations.json?t=' + Date.now());
+    if (!resp.ok) return;
+    const data = await resp.json();
+
+    const localOv = getOverrides();
+    let ovChanged = false;
+    Object.entries(data.overrides || {}).forEach(([id, val]) => {
+      if (!(id in localOv)) { localOv[id] = val; ovChanged = true; }
+    });
+    if (ovChanged) localStorage.setItem('arxiv_overrides', JSON.stringify(localOv));
+
+    const localSv = getSaved();
+    let svChanged = false;
+    Object.entries(data.saved || {}).forEach(([id, val]) => {
+      if (!(id in localSv)) { localSv[id] = val; svChanged = true; }
+    });
+    if (svChanged) localStorage.setItem('arxiv_saved', JSON.stringify(localSv));
+  } catch (_) {
+    // File not yet committed — fine on first use
+  }
+}
+
+function promptForApiKey() {
+  const cur = getGeminiKey();
+  const k = prompt('Gemini API key (stored only in your browser):', cur);
+  if (k === null) return;
+  setGeminiKey(k.trim());
+  updateKeyStatus();
+}
+
+function updateKeyStatus() {
+  const el = $('key-status');
+  if (!el) return;
+  el.textContent    = getGeminiKey() ? '✓ set' : 'not set';
+  el.style.color    = getGeminiKey() ? '#22a855' : '#aaa';
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', async () => {
+  $('date-pick').value = new Date().toISOString().slice(0,10);
 
-function renderLatex() {
-  // called by KaTeX auto-render once loaded
-}
+  await loadServerAnnotations();   // seed localStorage from repo file first
+  updateKeyStatus();
+  loadData(latestUrl());
+  renderSidebar();
+  updateSavedBadge();
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Default date = today
-  const today = new Date().toISOString().slice(0, 10);
-  $('date-picker').value = today;
-
-  // Load latest on start
-  loadData(urlForLatest());
-
-  $('btn-load-date').addEventListener('click', () => {
-    const d = $('date-picker').value;
-    if (d) loadData(urlForDate(d));
+  $('btn-date').addEventListener('click', () => {
+    const d = $('date-pick').value;
+    if (d) loadData(dateUrl(d));
   });
+  $('btn-latest').addEventListener('click', () => loadData(latestUrl()));
 
-  $('btn-load-latest').addEventListener('click', () => {
-    loadData(urlForLatest());
-  });
-
-  // Filter tabs
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      activeFilter = tab.dataset.filter;
+      activeFilter = tab.dataset.f;
       applyFilter();
     });
   });
 
-  // Search
-  $('search-input').addEventListener('input', e => {
-    searchQuery = e.target.value.trim();
+  $('search').addEventListener('input', e => {
+    searchQ = e.target.value.trim();
     applyFilter();
   });
 
-  // Cross-list toggle
-  $('show-crosslists').addEventListener('change', e => {
-    showCrossLists = e.target.checked;
+  $('show-cross').addEventListener('change', e => {
+    showCross = e.target.checked;
     applyFilter();
+  });
+
+  // Sidebar
+  $('sidebar-toggle').addEventListener('click', () => {
+    $('sidebar').classList.toggle('open');
+  });
+  $('sidebar-close').addEventListener('click', () => {
+    $('sidebar').classList.remove('open');
   });
 });
 </script>
