@@ -37,7 +37,7 @@ TITLE_BLACKLIST: list[str] = [
     "mesh generation", "surface reconstruction",
     # Medical / biology
     "medical", "clinical", "pathology", "radiology",
-    "ct scan", "mri", "ultrasound", "histology",
+    "ct scan", "mri", "ultrasound", "histology", "surgical"
     # Autonomous systems / remote sensing
     "autonomous driving", "self-driving", "lidar",
     "satellite", "remote sensing",
