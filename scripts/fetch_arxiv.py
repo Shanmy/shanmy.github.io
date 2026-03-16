@@ -306,21 +306,24 @@ def _collect_papers_for_date(date_str: str) -> tuple[list[dict], str]:
     return list(seen.values()), arxiv_date
 
 
-_ATOM_NS = {"atom": "http://www.w3.org/2005/Atom"}
+_ATOM_NS   = {"atom": "http://www.w3.org/2005/Atom"}
+_ARXIV_AFF = "{http://arxiv.org/schemas/atom}affiliation"
 
 
-def _fetch_abstracts(raw_ids: list[str]) -> dict[str, str]:
+def _fetch_abstracts(raw_ids: list[str]) -> tuple[dict[str, str], dict[str, list[str]]]:
     """
-    Batch-fetch abstracts from the arxiv API.
+    Batch-fetch abstracts and per-author affiliations from the arxiv API.
     raw_ids: list of IDs as they appear on the listing page,
              e.g. "arXiv:2503.01234" or "arXiv:2503.01234 [cs.CV]"
-    Returns {clean_id: abstract_text}.
+    Returns ({clean_id: abstract_text}, {clean_id: [affiliation_per_author]}).
+    Affiliations are empty strings where the author didn't submit one.
     """
     # Strip prefix and version suffix: "arXiv:2503.01234v2 [cs.CV]" → "2503.01234"
     clean = [re.sub(r"v\d+$", "", re.sub(r"^arXiv:", "", i.split()[0]))
              for i in raw_ids]
 
-    abstracts: dict[str, str] = {}
+    abstracts:    dict[str, str]       = {}
+    affiliations: dict[str, list[str]] = {}
     BATCH = 80          # arxiv API is comfortable with ~100 IDs at once
     API   = "http://export.arxiv.org/api/query"
 
@@ -344,13 +347,107 @@ def _fetch_abstracts(raw_ids: list[str]) -> dict[str, str]:
                 continue
             # id URL → clean ID, e.g. http://arxiv.org/abs/2503.01234v1
             m = re.search(r"/abs/(.+?)v?\d*$", id_el.text.strip())
-            if m:
-                abstracts[m.group(1)] = " ".join(sum_el.text.split())
+            if not m:
+                continue
+            cid = m.group(1)
+            abstracts[cid] = " ".join(sum_el.text.split())
+
+            # Extract per-author affiliations (optional submission field)
+            entry_affs = []
+            for author_el in entry.findall("atom:author", _ATOM_NS):
+                aff_el = author_el.find(_ARXIV_AFF)
+                entry_affs.append(aff_el.text.strip() if aff_el is not None else "")
+            affiliations[cid] = entry_affs
 
         if start + BATCH < len(clean):
             time.sleep(3)   # polite delay between API batches
 
-    return abstracts
+    return abstracts, affiliations
+
+
+def _fetch_affiliations_openalex(
+    papers: list[dict],
+    email: str = "arxiv-reader@example.com",
+) -> dict[str, list[str]]:
+    """
+    Supplement affiliations via the OpenAlex API for papers that still have
+    all-empty affiliation lists after the arxiv XML pass.
+    Returns {clean_id: [affiliation_per_author]} for papers that OpenAlex knows about.
+    Requires no API key; polite-use email is sent in the mailto param.
+    """
+    # Only query papers with no affiliations yet
+    missing = [
+        p for p in papers
+        if not any(p.get("author_affiliations", []))
+    ]
+    if not missing:
+        return {}
+
+    clean_ids = [
+        re.sub(r"v\d+$", "", re.sub(r"^arXiv:", "", p["id"].split()[0]))
+        for p in missing
+    ]
+    id_to_paper = {
+        re.sub(r"v\d+$", "", re.sub(r"^arXiv:", "", p["id"].split()[0])): p
+        for p in missing
+    }
+
+    result: dict[str, list[str]] = {}
+    BATCH = 50
+    API   = "https://api.openalex.org/works"
+
+    for start in range(0, len(clean_ids), BATCH):
+        batch = clean_ids[start:start + BATCH]
+        filter_str = "|".join(f"arxiv:{cid}" for cid in batch)
+        print(f"  OpenAlex: fetching affiliations {start+1}–{start+len(batch)} …",
+              file=sys.stderr)
+        try:
+            resp = requests.get(
+                API,
+                params={
+                    "filter":  f"ids.arxiv:{filter_str}",
+                    "select":  "ids,authorships",
+                    "per-page": BATCH,
+                    "mailto":  email,
+                },
+                headers=HEADERS,
+                timeout=30,
+            )
+            resp.raise_for_status()
+            works = resp.json().get("results", [])
+        except Exception as e:
+            print(f"  OpenAlex error: {e}", file=sys.stderr)
+            continue
+
+        for work in works:
+            arxiv_id = (work.get("ids") or {}).get("arxiv", "")
+            m = re.search(r"arxiv\.org/abs/(.+?)v?\d*$", arxiv_id)
+            if not m:
+                continue
+            cid = m.group(1)
+            paper = id_to_paper.get(cid)
+            if not paper:
+                continue
+
+            authorships = work.get("authorships", [])
+            # Build affiliation list aligned to author order in our paper data
+            # OpenAlex author order may differ; match by name where possible
+            name_to_aff: dict[str, str] = {}
+            for aship in authorships:
+                raw_affs = aship.get("raw_affiliation_strings") or []
+                author_name = (aship.get("author") or {}).get("display_name", "")
+                if author_name and raw_affs:
+                    name_to_aff[author_name.lower()] = raw_affs[0]
+
+            affs = []
+            for name in paper.get("authors", []):
+                affs.append(name_to_aff.get(name.lower(), ""))
+            result[cid] = affs
+
+        if start + BATCH < len(clean_ids):
+            time.sleep(1)
+
+    return result
 
 
 def fetch_papers(base_url: str = ARXIV_URL, date_str: str | None = None) -> tuple[list[dict], str]:
@@ -387,11 +484,12 @@ def fetch_papers(base_url: str = ARXIV_URL, date_str: str | None = None) -> tupl
     if not papers:
         return [], arxiv_date
 
-    # ── Fetch abstracts from arxiv API ────────────────────────────────────────
-    abstracts = _fetch_abstracts([p["id"] for p in papers])
+    # ── Fetch abstracts + affiliations from arxiv API ────────────────────────
+    abstracts, affiliations = _fetch_abstracts([p["id"] for p in papers])
     for p in papers:
         clean_id = re.sub(r"v\d+$", "", re.sub(r"^arXiv:", "", p["id"].split()[0]))
         p["abstract"] = abstracts.get(clean_id, "")
+        p["author_affiliations"] = affiliations.get(clean_id, [])
 
     # ── Re-classify now that we have full abstracts ───────────────────────────
     for p in papers:
@@ -502,6 +600,10 @@ def main():
         "--date", metavar="YYYY-MM-DD",
         help="Fetch papers for a specific date instead of today's recent listing.",
     )
+    parser.add_argument(
+        "--affiliations", action="store_true",
+        help="Supplement missing affiliations via the OpenAlex API (free, no key needed).",
+    )
     args = parser.parse_args()
 
     if args.date:
@@ -521,6 +623,17 @@ def main():
         sys.exit(1)
 
     print(f"Found {len(papers)} papers  (header: {arxiv_date!r})", file=sys.stderr)
+
+    # ── Optionally supplement affiliations via OpenAlex ───────────────────────
+    if args.affiliations:
+        openalex_affs = _fetch_affiliations_openalex(papers)
+        applied = 0
+        for p in papers:
+            clean_id = re.sub(r"v\d+$", "", re.sub(r"^arXiv:", "", p["id"].split()[0]))
+            if clean_id in openalex_affs:
+                p["author_affiliations"] = openalex_affs[clean_id]
+                applied += 1
+        print(f"  OpenAlex: filled affiliations for {applied} papers", file=sys.stderr)
 
     today = args.date or datetime.now(timezone.utc).strftime("%Y-%m-%d")
     out_dir = "personal/arxiv"

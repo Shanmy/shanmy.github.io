@@ -407,6 +407,9 @@ input[type=file]{display:none}
     <span id="roles-count-lbl" style="font-size:15px;color:var(--txt2);min-width:60px;text-align:center"></span>
     <button class="roles-adj-btn" id="roles-inc" onclick="adjustPlayers(1)">＋</button>
   </div>
+  <button class="btn btn-ghost" onclick="randomizeRoles()" style="max-width:480px;display:block;margin:0 auto 10px">
+    🎲 随机分配角色
+  </button>
   <button class="btn btn-primary" id="roles-confirm" style="max-width:480px;display:block;margin:0 auto">
     开始第一夜 🌙
   </button>
@@ -702,6 +705,23 @@ document.getElementById('cnt-confirm').onclick = () => {
 };
 
 // ══════════════════════════════════════════════
+// ROLE DISTRIBUTION TABLE (村民, 外来者, 爪牙, 恶魔)
+// ══════════════════════════════════════════════
+const ROLE_DIST = {
+   5: {townsfolk:3, outsider:0, minion:1, demon:1},
+   6: {townsfolk:3, outsider:1, minion:1, demon:1},
+   7: {townsfolk:5, outsider:0, minion:1, demon:1},
+   8: {townsfolk:5, outsider:1, minion:1, demon:1},
+   9: {townsfolk:5, outsider:2, minion:1, demon:1},
+  10: {townsfolk:7, outsider:0, minion:2, demon:1},
+  11: {townsfolk:7, outsider:1, minion:2, demon:1},
+  12: {townsfolk:7, outsider:2, minion:2, demon:1},
+  13: {townsfolk:9, outsider:0, minion:3, demon:1},
+  14: {townsfolk:9, outsider:1, minion:3, demon:1},
+  15: {townsfolk:9, outsider:2, minion:3, demon:1},
+};
+
+// ══════════════════════════════════════════════
 // ROLES SCREEN
 // ══════════════════════════════════════════════
 function adjustPlayers(delta) {
@@ -755,6 +775,43 @@ function renderRoles() {
       openPicker();
     });
   });
+}
+
+function randomizeRoles() {
+  const dist = ROLE_DIST[G.playerCount];
+  if (!dist) return;
+
+  function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  const TEAM_LABELS = {townsfolk:'村民', outsider:'外来者', minion:'爪牙', demon:'恶魔'};
+  const byTeam = {};
+  ['townsfolk','outsider','minion','demon'].forEach(team => {
+    byTeam[team] = G.characters.filter(c => c.team === team);
+  });
+
+  const errors = [];
+  ['townsfolk','outsider','minion','demon'].forEach(team => {
+    const need = dist[team];
+    if (byTeam[team].length < need)
+      errors.push(`${TEAM_LABELS[team]}不足：需要 ${need} 个，剧本中只有 ${byTeam[team].length} 个`);
+  });
+  if (errors.length) { alert('角色数量不足，无法随机分配：\n' + errors.join('\n')); return; }
+
+  const selected = shuffle([
+    ...shuffle([...byTeam.townsfolk]).slice(0, dist.townsfolk),
+    ...shuffle([...byTeam.outsider]).slice(0, dist.outsider),
+    ...shuffle([...byTeam.minion]).slice(0, dist.minion),
+    ...shuffle([...byTeam.demon]).slice(0, dist.demon),
+  ]);
+
+  G.players.forEach((p, i) => { p.charId = selected[i]?.id || null; });
+  renderRoles();
 }
 
 document.getElementById('roles-confirm').onclick = () => {

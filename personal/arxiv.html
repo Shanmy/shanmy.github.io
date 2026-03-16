@@ -264,6 +264,7 @@
     .act.act-undo               { font-size: 11px; color: #aaa; }
 
     .paper-authors { font-size: 12px; color: #666; margin-top: 3px; }
+    .author-aff    { font-style: italic; color: #999; font-size: 11px; }
     .paper-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
     .tag {
       font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 500;
@@ -626,7 +627,7 @@ function buildCard(p) {
     </div>
     <div class="paper-actions">${actionHtml}</div>
   </div>
-  <div class="paper-authors">${esc(authorStr(p.authors))}</div>
+  <div class="paper-authors">${authorDisplayHtml(p.authors, p.author_affiliations)}</div>
   <div class="paper-tags">${labelTag}${autoTagsHtml}${crossTag}${ovTag}${savedTag}</div>
   ${expandRow}
   <div class="abstract-text">${esc(p.abstract)}</div>
@@ -637,6 +638,16 @@ function buildCard(p) {
 function authorStr(authors) {
   if (!authors || !authors.length) return 'Unknown';
   return authors.join(', ');
+}
+
+function authorDisplayHtml(authors, affiliations) {
+  if (!authors || !authors.length) return 'Unknown';
+  return authors.map((name, i) => {
+    const aff = affiliations?.[i];
+    return aff
+      ? `${esc(name)} <span class="author-aff">(${esc(aff)})</span>`
+      : esc(name);
+  }).join(', ');
 }
 
 // ── Toggle handlers ───────────────────────────────────────────────────────────
