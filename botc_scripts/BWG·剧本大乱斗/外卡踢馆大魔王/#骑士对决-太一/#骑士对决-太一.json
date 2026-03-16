@@ -1,0 +1,234 @@
+[{
+	"id": "_meta",
+	"name": "骑士对决",
+	"author": "太一",
+	"almanac": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/almanac.html"
+}, {
+	"id": "_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/_juedou.png",
+	"reminders": ["失去能力"],
+	"name": "真心人",
+	"team": "townsfolk",
+	"ability": "在你的首个白天，你可以邀请玩家共同拜访说书人并说出各自的角色(不限次)，你可以私下询问说书人在上次拜访中是否有人说谎(限一次)。"
+}, {
+	"id": "1_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/1_juedou.png",
+	"firstNightReminder": "以任意顺序指向三名玩家，其中一名邪恶。",
+	"reminders": ["得知"],
+	"name": "贵族",
+	"team": "townsfolk",
+	"ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。",
+	"firstNight": 13
+}, {
+	"id": "2_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/2_juedou.png",
+	"firstNightReminder": "女裁缝可以选择除自己以外的两名玩家。如果她这么做了，对她点头或摇头示意这两名玩家是否为同一阵营，随后标记女裁缝失去能力。之后的夜晚无需再唤醒女裁缝。",
+	"otherNightReminder": "女裁缝可以选择除自己以外的两名玩家。如果她这么做了，对她点头或摇头示意这两名玩家是否为同一阵营，随后标记女裁缝失去能力。之后的夜晚无需再唤醒女裁缝。",
+	"reminders": ["失去能力"],
+	"name": "女裁缝",
+	"team": "townsfolk",
+	"ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的两名玩家：你会得知他们是否为同一阵营。",
+	"firstNight": 14,
+	"otherNight": 14
+}, {
+	"id": "3_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/3_juedou.png",
+	"firstNightReminder": "让占卜师选择两名玩家。如果其中有恶魔或“干扰项”，点头示意，否则摇头。",
+	"otherNightReminder": "让占卜师选择两名玩家。如果其中有恶魔或“干扰项”，点头示意，否则摇头。",
+	"reminders": ["干扰项"],
+	"name": "占卜师",
+	"team": "townsfolk",
+	"ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+	"firstNight": 15,
+	"otherNight": 17
+}, {
+	"id": "4_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/4_juedou.png",
+	"firstNightReminder": "唤醒他并让他选择2名玩家，告知他选择的玩家皆不属于哪种角色类型。",
+	"otherNightReminder": "唤醒他并让他选择2名玩家，告知他选择的玩家皆不属于哪种角色类型。",
+	"name": "牧师",
+	"team": "townsfolk",
+	"ability": "每个夜晚，你要选择两名玩家:你会得知他们皆不属于哪种角色类型。",
+	"firstNight": 16,
+	"otherNight": 16
+}, {
+	"id": "6_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/6_juedou.png",
+	"reminders": ["错误信息"],
+	"setup": true,
+	"name": "神秘学家",
+	"team": "townsfolk",
+	"ability": "每个白天，你可以私下询问说书人并得知一条正确信息。如果因你的能力导致减少了一名外来者，你获得的信息会是错误的。[-1或-0外来者]"
+}, {
+	"id": "5_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/5_juedou.png",
+	"otherNightReminder": "如果白天有玩家死于处决或有玩家被处决但没有死亡，唤醒骑士扈从，告知他是或否。",
+	"reminders": ["得知"],
+	"name": "骑士扈从",
+	"team": "townsfolk",
+	"ability": "每个夜晚*，如果白天有玩家死于处决，你会得知他是否为镇民，如果白天有玩家被处决但依然存活，你会得知他的相邻玩家是否皆为镇民。",
+	"otherNight": 15
+}, {
+	"id": "7_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/7_juedou.png",
+	"otherNightReminder": "如果白天的声明为真，会有一名玩家死亡，并由说书人来选择一名玩家，标记该玩家死亡。",
+	"reminders": ["死亡"],
+	"name": "造谣者",
+	"team": "townsfolk",
+	"ability": "每个白天，你可以公开发表一个声明。如果该声明正确，在当晚会有一名玩家死亡。",
+	"otherNight": 12
+}, {
+	"id": "8_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/8_juedou.png",
+	"reminders": ["不会死亡"],
+	"name": "茶艺师",
+	"team": "townsfolk",
+	"ability": "如果与你邻近的两名存活的玩家是善良的，他们不会死亡。"
+}, {
+	"id": "9_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/9_juedou.png",
+	"otherNightReminder": "无人死于处决，唤醒月光骑士并让他选择一名玩家。",
+	"reminders": ["死亡"],
+	"name": "月光骑士",
+	"team": "townsfolk",
+	"ability": "每个夜晚*，如果今天无人死于处决，你会被唤醒并要选择一名玩家：如果他是爪牙，他死亡。",
+	"otherNight": 6
+}, {
+	"id": "10_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/10_juedou.png",
+	"otherNightReminder": "唤醒",
+	"reminders": ["失去能力", "偏斜格挡"],
+	"name": "浪人",
+	"team": "townsfolk",
+	"ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：如果当晚他被恶魔杀死，改为一名邪恶玩家代替他死亡，然后你重获能力。",
+	"otherNight": 7
+}, {
+	"id": "11_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/11_juedou.png",
+	"reminders": ["失去能力"],
+	"name": "弄臣",
+	"team": "townsfolk",
+	"ability": "当你首次将要死亡时，你不会死亡。"
+}, {
+	"id": "12_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/12_juedou.png",
+	"otherNightReminder": "如果死亡唤醒他，并告知他所有类型的玩家（除旅行者）各一名。",
+	"reminders": ["被得知", "错误信息"],
+	"name": "空中飞人",
+	"team": "townsfolk",
+	"ability": "你死亡的当晚会被唤醒并得知除旅行者外所有类型的玩家各一名。如果你死于善良玩家的提名或能力你会获得错误的信息。",
+	"otherNight": 18
+}, {
+	"id": "13_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/13_juedou.png",
+	"reminders": ["失去能力"],
+	"name": "白骑士",
+	"team": "outsider",
+	"ability": "如果有玩家“疯狂”地想要存活，那么当天他即将死于处决时可能不会死亡（每局游戏限一次）。"
+}, {
+	"id": "31_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/31_juedou.png",
+	"otherNightReminder": "如果今天有恶魔遗子死亡，且场上还有一名存活的恶魔遗子，唤醒他告知他他变成了一个不在场的恶魔，然后由你来决定今晚谁死亡。",
+	"reminders": ["蜕变", "死亡"],
+	"name": "恶魔遗子",
+	"team": "outsider",
+	"ability": "如果你死亡，一名存活的恶魔遗子会变成邪恶的不在场恶魔，当晚的死亡由说书人决定。[可能会有2名外来者是恶魔遗子]",
+	"otherNight": 2
+}, {
+	"id": "15_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/15_juedou.png",
+	"reminders": ["醉酒", "已猜测"],
+	"name": "解谜大师",
+	"team": "outsider",
+	"ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。"
+}, {
+	"id": "16_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/16_juedou.png",
+	"otherNightReminder": "当你宣布月之子玩家死亡时，月之子需要选择任意一名存活玩家。如果所选玩家是善良的，将“死亡”提示标记放置到该玩家的角色标记旁。当晚，标有月之子的“死亡”提示标记的玩家死亡。",
+	"reminders": ["被选择"],
+	"name": "月之子",
+	"team": "outsider",
+	"ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。",
+	"otherNight": 5
+}, {
+	"id": "17_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/17_juedou.png",
+	"otherNightReminder": "如果今天在唤醒亡灵骑士之前有外来者死亡，唤醒亡灵骑士，告知他死亡的外来者玩家是谁，并让他猜测具体角色，如果他猜中至少一名，标记一名玩家死亡，然后去除所有的“离魂抽离”标记。",
+	"reminders": ["死亡", "灵魂抽离"],
+	"setup": true,
+	"name": "亡灵骑士",
+	"team": "minion",
+	"ability": "每个夜晚*，你会得知当天死亡的外来者是谁，且你要猜测他的角色，如果你猜对，会有一名玩家死亡。[+1外来者]",
+	"otherNight": 13
+}, {
+	"id": "18_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/18_juedou.png",
+	"firstNightReminder": "选择一名玩家。标记那名玩家中毒。如果麻醉师选择了一名新的玩家，且原玩家还存活，告知原玩家麻醉师在场。",
+	"otherNightReminder": "选择一名玩家。标记那名玩家中毒。如果麻醉师选择了一名新的玩家，且原玩家还存活，告知原玩家麻醉师在场。",
+	"reminders": ["中毒", "得知"],
+	"name": "麻醉师",
+	"team": "minion",
+	"ability": "每个夜晚，你要选择一名玩家：他中毒直到你更换选择目标，当你更换选择目标时，如果他还存活他会得知麻醉师在场。",
+	"firstNight": 11,
+	"otherNight": 3
+}, {
+	"id": "19_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/19_juedou.png",
+	"firstNightReminder": "让魔鬼代言人选择一名存活玩家。标记那名玩家处决不死。",
+	"otherNightReminder": "让魔鬼代言人选择一名存活玩家，不能是上一夜他选择过的玩家。标记那名玩家处决不死。",
+	"reminders": ["处决不死"],
+	"name": "魔鬼代言人",
+	"team": "minion",
+	"ability": "每个夜晚，你要选择一名存活的玩家（与上个夜晚不同）：如果明天白天他被处决，他不会死亡。",
+	"firstNight": 12,
+	"otherNight": 4
+}, {
+	"id": "20_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/20_juedou.png",
+	"name": "精神病患者",
+	"team": "minion",
+	"ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。"
+}, {
+	"id": "21_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/21_juedou.png",
+	"otherNightReminder": "让亚瑟王选择一名玩家。标记那名玩家死亡。如果他是爪牙且可以被亚瑟王杀死，为他放置“王车易位”标记然后为亚瑟王和爪牙交换角色且会有2名玩家代替他死亡。",
+	"reminders": ["死亡", "王车易位"],
+	"name": "亚瑟王",
+	"team": "demon",
+	"ability": "每个夜晚*，你要选择一名玩家:他死亡。被该能力杀死的爪牙改为与你交换角色且会有2名玩家代替他死亡，但每局游戏仅能成功转化一次。",
+	"otherNight": 9
+}, {
+	"id": "22_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/22_juedou.png",
+	"otherNightReminder": "唤醒刻耳柏洛斯选择一名玩家，如果是邪恶的爪牙，杀死他并保留他的能力，再让刻耳柏洛斯选择一名玩家。",
+	"reminders": ["死亡", "保留能力"],
+	"name": "刻耳柏洛斯",
+	"team": "demon",
+	"ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你杀死了邪恶的爪牙，他保留能力，你可以再次行动。",
+	"otherNight": 10
+}, {
+	"id": "23_juedou",
+	"otherNightReminder": "唤醒塞壬并让他选择一名玩家，为该玩家标记死亡，然后让塞壬选择是否失去下一条能力，如果他点头，为他放置“休止符”标记。",
+	"reminders": ["死亡", "休止符"],
+	"name": "塞壬",
+	"team": "demon",
+	"ability": "每个夜晚*，你要选择一名玩家：他死亡，且你要选择是否永久失去你的下一条能力。镇民玩家的能力都会产生错误信息。",
+	"otherNight": 11
+}, {
+	"id": "24_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/24_juedou.png",
+	"otherNightReminder": "让恶堕选择一名玩家。标记那名玩家死亡。",
+	"reminders": ["死亡", "对调胜负结果"],
+	"setup": true,
+	"name": "恶堕",
+	"team": "demon",
+	"ability": "每个夜晚*，你要选择一名玩家：他死亡，即使因为任何原因让他不会死亡。死亡的外来者对调胜负结果，即使你已死亡。[固定2名外来者]",
+	"otherNight": 8
+}, {
+	"id": "26_juedou",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/humlet\/JUEDOU\/26_juedou.png",
+	"reminders": ["发起决斗", "被决斗"],
+	"name": "决斗",
+	"team": "fabled",
+	"ability": "即将被处决者可以向说书人申请与提名者展开“决斗”。如果说书人同意，提名者与被处决者要轮流公开宣称一个邪恶角色，宣称不在场角色的玩家可能被立即处决。"
+}]

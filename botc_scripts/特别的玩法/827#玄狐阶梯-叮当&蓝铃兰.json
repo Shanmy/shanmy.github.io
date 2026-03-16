@@ -1,0 +1,324 @@
+[
+  {
+    "id": "_meta",
+    "name": "玄狐阶梯",
+    "author": "叮当&蓝铃兰",
+    "logo": "https://free.picui.cn/free/2025/12/10/69390ce9b1333.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/xuanhujieti/almanac.html"
+  },
+  {
+    "id": "laizhebushan",
+    "name": "来者不善",
+    "team": "fabled",
+    "image": "https://free.picui.cn/free/2025/12/01/692d980b16fc7.png",
+    "ability": "游戏默认使用局外人规则，加入游戏的局外人会替换一名外来者。在游戏类型的判定上，局外人被当作善良阵营，外来者类型。不会出现重复的局外人角色，通常情况下初始局外人最多只会有1个在场。局外人无法被改变成其他角色，其他角色也无法变成局外人或者获得局外人的能力。如果某个阵营的玩家因自身能力导致游戏结束，另外两个阵营共同获胜/落败。"
+  },
+  {
+    "id": "laizhebushan_1",
+    "name": "可选规则",
+    "team": "fabled",
+    "image": "https://free.picui.cn/free/2025/12/01/692d980b16fc7.png",
+    "ability": "在首个夜晚，告知局外人一个不在场角色。"
+  },
+  {
+    "id": "laizhebushan_2",
+    "name": "可选死亡任务",
+    "team": "fabled",
+    "image": "https://free.picui.cn/free/2025/12/01/692d980b16fc7.png",
+    "reminders": [
+      "随之获胜"
+    ],
+    "ability": "如果第三方阵营玩家都死亡，说书人可以给每个第三方阵营玩家单独发布一条任务，完成任务后的玩家随获胜阵营一同获胜。1）所有得知咒狐的玩家死亡。2）将投票标记投给恶魔。"
+  },
+  {
+    "id": "_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/chambermaid.png",
+    "firstNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "otherNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 4300,
+    "otherNight": 14
+  },
+  {
+    "id": "1_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/gambler.png",
+    "otherNightReminder": "唤醒赌徒，让他进行猜测。如果猜测错误，他死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "赌徒",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测该玩家的角色：如果你猜错了，你会死亡。",
+    "otherNight": 2
+  },
+  {
+    "id": "2_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fool.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "弄臣",
+    "team": "townsfolk",
+    "ability": "当你首次将要死亡时，你不会死亡。"
+  },
+  {
+    "id": "3_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/snake_charmer.png",
+    "firstNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "otherNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "舞蛇人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。",
+    "firstNight": 3400,
+    "otherNight": 3
+  },
+  {
+    "id": "4_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/savant.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "5_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/seamstress.png",
+    "firstNightReminder": "唤醒女裁缝，她可以摇头不使用能力，或选择除自己以外的两名玩家。以点头或摇头告知她选择的玩家是否为同一阵营。",
+    "otherNightReminder": "如果女裁缝未曾使用能力，唤醒女裁缝，她可以摇头不使用能力，或选择除自己以外的两名玩家。以点头或摇头告知她选择的玩家是否为同一阵营。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "女裁缝",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的两名玩家：你会得知他们是否为同一阵营。",
+    "firstNight": 3700,
+    "otherNight": 9
+  },
+  {
+    "id": "6_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/balloonist.png",
+    "firstNightReminder": "唤醒气球驾驶员，对他指向一名玩家。",
+    "otherNightReminder": "唤醒气球驾驶员，对他指向一名玩家，这名玩家与之前气球驾驶员上一个夜晚得知过的玩家属于不同的角色类型。",
+    "reminders": [
+      "得知"
+    ],
+    "setup": true,
+    "name": "气球驾驶员",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名与上个夜晚得知的玩家角色类型不同的玩家。[+0~1外来者]",
+    "firstNight": 3800,
+    "otherNight": 10
+  },
+  {
+    "id": "7_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/nightwatchman.png",
+    "firstNightReminder": "唤醒守夜人，他可以摇头不使用能力，或选择一名玩家。如果守夜人选择了玩家，则在守夜人入睡后通知那名玩家谁是守夜人。",
+    "otherNightReminder": "如果守夜人未曾使用能力，唤醒守夜人，他可以摇头不使用能力，或选择一名玩家。如果守夜人选择了玩家，则在守夜人入睡后通知那名玩家谁是守夜人。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "守夜人",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一名玩家：他会得知你是守夜人。",
+    "firstNight": 4100,
+    "otherNight": 13
+  },
+  {
+    "id": "8_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/magician.png",
+    "firstNightReminder": "如果魔术师在场，则需要对爪牙信息环节和恶魔信息环节的相关内容进行调整。",
+    "name": "魔术师",
+    "team": "townsfolk",
+    "ability": "恶魔会以为你是爪牙。爪牙会以为你是恶魔。",
+    "firstNight": 12
+  },
+  {
+    "id": "9_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/cannibal.png",
+    "reminders": [
+      "饱餐",
+      "中毒"
+    ],
+    "name": "食人族",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "10_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/shugenja.png",
+    "firstNightReminder": "唤醒修行者，对他指向对应方向来告知他最近的邪恶玩家的方向。",
+    "name": "修行者",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知距离最近的邪恶玩家位于你的顺时针还是逆时针方向。如果两侧的邪恶玩家与你距离相等，你得知的信息由说书人决定。",
+    "firstNight": 4200
+  },
+  {
+    "id": "11_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/village_idiot.png",
+    "firstNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "otherNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": true,
+    "name": "村夫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的阵营。[+0~2村夫，复数村夫中有一人醉酒]",
+    "firstNight": 4000,
+    "otherNight": 12
+  },
+  {
+    "id": "12_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/langzhong.png",
+    "firstNightReminder": "唤醒郎中，让他指向除他以外的一名玩家。对郎中展示一个与该玩家能力相关的词语。",
+    "otherNightReminder": "唤醒郎中，让他指向除他以外的一名玩家。对郎中展示一个与该玩家能力相关的词语。",
+    "name": "郎中",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的一名玩家：你会得知一个与他能力相关的词语。",
+    "firstNight": 3900,
+    "otherNight": 11
+  },
+  {
+    "id": "13_xuanhujieti",
+    "image": "https://free.picui.cn/free/2025/12/10/69390ce876e30.png",
+    "name": "咒狐",
+    "team": "outsider",
+    "ability": "邪恶角色的负面能力对你无效。 当善良或者邪恶阵营获胜时，改为你独自获胜。 每个夜晚*，一名未得知过的玩家得知咒狐在场；如果你累计被镇民玩家选择过两次，你死亡。",
+    "firstNight": 0,
+    "otherNight": 1
+  },
+  {
+    "id": "14_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/saint.png",
+    "name": "圣徒",
+    "team": "outsider",
+    "ability": "如果你死于处决，你的阵营落败。"
+  },
+  {
+    "id": "15_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/lunatic.png",
+    "firstNightReminder": "唤醒疯子并向他提供恶魔信息。如可能，则让疯子进行相应的恶魔行动。随后在恶魔信息环节对恶魔提供疯子的相关信息。",
+    "otherNightReminder": "如果疯子以为的恶魔会在当晚行动，唤醒疯子，并让他以恶魔的方式行动。",
+    "reminders": [
+      "被选择"
+    ],
+    "remindersGlobal": [
+      "是疯子"
+    ],
+    "setup": true,
+    "name": "疯子",
+    "team": "outsider",
+    "ability": "你以为你是一个恶魔，但其实你不是。恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。",
+    "firstNight": 2300,
+    "otherNight": 6
+  },
+  {
+    "id": "16_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/puzzlemaster.png",
+    "reminders": [
+      "醉酒",
+      "已猜测"
+    ],
+    "name": "解谜大师",
+    "team": "outsider",
+    "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。"
+  },
+  {
+    "id": "17_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/politician.png",
+    "name": "政客",
+    "team": "outsider",
+    "ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。"
+  },
+  {
+    "id": "18_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/assassin.png",
+    "otherNightReminder": "如果刺客未曾使用能力，唤醒刺客，他可以摇头不使用能力，或选择攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "name": "刺客",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。",
+    "otherNight": 8
+  },
+  {
+    "id": "19_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/witch.png",
+    "firstNightReminder": "唤醒女巫，让她选择一名玩家，那名玩家被诅咒。",
+    "otherNightReminder": "唤醒女巫，让她选择一名玩家，那名玩家被诅咒。",
+    "reminders": [
+      "被诅咒"
+    ],
+    "name": "女巫",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：如果他明天白天发起提名，他死亡。如果只有三名存活的玩家，你失去此能力。",
+    "firstNight": 3500,
+    "otherNight": 4
+  },
+  {
+    "id": "20_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/psychopath.png",
+    "name": "精神病患者",
+    "team": "minion",
+    "ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。"
+  },
+  {
+    "id": "21_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/harpy.png",
+    "firstNightReminder": "唤醒鹰身女妖，让她选择两名玩家，第一名玩家明天需要“疯狂”证明第二名玩家邪恶。在鹰身女妖入睡后通知第一名玩家被鹰身女妖选中。",
+    "otherNightReminder": "唤醒鹰身女妖，让她选择两名玩家，第一名玩家明天需要“疯狂”证明第二名玩家邪恶。在鹰身女妖入睡后通知第一名玩家被鹰身女妖选中。",
+    "reminders": [
+      "疯狂",
+      "第二名"
+    ],
+    "name": "鹰身女妖",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择两名玩家：明天第一名玩家需要“疯狂”地证明第二名玩家是邪恶的，否则他们之中可能会有人死亡。",
+    "firstNight": 3600,
+    "otherNight": 5
+  },
+  {
+    "id": "22_xuanhujieti",
+    "image": "https://clocktower-wiki.gstonegames.com/images/f/f1/Boffin.png",
+    "firstNightReminder": "（分别或同时）唤醒科学怪人和恶魔，通知他们恶魔因为科学怪人而获得的善良角色的能力。",
+    "setup": true,
+    "name": "科学怪人",
+    "team": "minion",
+    "ability": "恶魔拥有一个不在场的善良角色的能力，即使他醉酒或中毒。你和他都知道他获得了什么能力。",
+    "firstNight": 11
+  },
+  {
+    "id": "23_xuanhujieti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/al-hadikhia.png",
+    "otherNightReminder": "唤醒哈迪寂亚，让他选择三名玩家。执行哈迪寂亚的能力流程（参考哈迪寂亚的百科页面）。",
+    "reminders": [
+      "1",
+      "2",
+      "3",
+      "选择生",
+      "选择死"
+    ],
+    "name": "哈迪寂亚",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择三名玩家（所有玩家会得知你选了谁）：他们分别秘密决定自己的生死，然后如果他们都存活则都死亡。",
+    "otherNight": 7
+  },
+  {
+    "id": "24_xuanhujieti",
+    "name": "科学怪人&政客",
+    "team": "jinxes",
+    "ability": "科学怪人无法拥有政客的能力。"
+  },
+  {
+    "id": "25_xuanhujieti",
+    "name": "科学怪人&村夫",
+    "team": "jinxes",
+    "ability": "如果村夫在场数量不足3人，科学怪人可以让恶魔拥有村夫的能力。"
+  }
+]

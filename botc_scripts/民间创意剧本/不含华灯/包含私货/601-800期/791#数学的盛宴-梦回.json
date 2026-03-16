@@ -1,0 +1,343 @@
+[
+  {
+    "id": "_meta",
+    "name": "数学的盛宴",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/almanac.html"
+  },
+  {
+    "id": "_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/_shuxuedeshengyan.png",
+    "otherNightReminder": "唤醒杂技演员，让他选择一名玩家。如果当晚这名玩家醉酒或中毒，杂技演员死亡。",
+    "reminders": [
+      "被选择",
+      "死亡"
+    ],
+    "name": "杂技演员",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：如果当晚他醉酒或中毒，你死亡。",
+    "otherNight": 6
+  },
+  {
+    "id": "1_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/1_shuxuedeshengyan.png",
+    "firstNightReminder": "展示那个爪牙角色标记。指向被你标记“爪牙”和“错误”的两名玩家。",
+    "reminders": [
+      "爪牙",
+      "错误"
+    ],
+    "name": "调查员",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个爪牙角色：这两名玩家之一是该角色（或者你会得知没有爪牙在场）。",
+    "firstNight": 5900
+  },
+  {
+    "id": "2_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/2_shuxuedeshengyan.png",
+    "firstNightReminder": "让占卜师选择两名玩家。如果其中有恶魔或“干扰项”，点头示意，否则摇头。",
+    "otherNightReminder": "让占卜师选择两名玩家。如果其中有恶魔或“干扰项”，点头示意，否则摇头。",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 6000,
+    "otherNight": 13
+  },
+  {
+    "id": "3_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/3_shuxuedeshengyan.png",
+    "otherNightReminder": "如果有玩家今天白天死于处决，唤醒送葬者并对他展示那名玩家的角色标记。",
+    "reminders": [
+      "死于今日"
+    ],
+    "name": "送葬者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知今天白天死于处决的玩家的角色。",
+    "otherNight": 14
+  },
+  {
+    "id": "4_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/4_shuxuedeshengyan.png",
+    "firstNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
+    "otherNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 6200,
+    "otherNight": 15
+  },
+  {
+    "id": "5_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/5_shuxuedeshengyan.png",
+    "otherNightReminder": "让旅店老板选择两名玩家。标记这两名玩家不会死亡，并标记其中一人醉酒。",
+    "reminders": [
+      "不会死亡",
+      "醉酒"
+    ],
+    "name": "旅店老板",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择两名玩家：他们当晚不会死亡，但其中一人会醉酒到下个黄昏。",
+    "otherNight": 4
+  },
+  {
+    "id": "6_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/6_shuxuedeshengyan.png",
+    "reminders": [
+      "全员醉酒"
+    ],
+    "name": "吟游诗人",
+    "team": "townsfolk",
+    "ability": "当一名爪牙死于处决时，除了你和旅行者以外的所有其他玩家醉酒直到明天黄昏。"
+  },
+  {
+    "id": "7_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/7_shuxuedeshengyan.png",
+    "firstNightReminder": "给他展示数字手势来告诉他在首个夜晚里有多少玩家的角色能力受他人影响而未正常生效。",
+    "otherNightReminder": "给他展示数字手势来告诉他从上个黎明到数学家醒来前有多少玩家的角色能力受他人影响而未正常生效。",
+    "reminders": [
+      "未正常生效"
+    ],
+    "name": "数学家",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知有多少名玩家的能力因为其他角色的能力而未正常生效。(从上个黎明到你被唤醒时）",
+    "firstNight": 6300,
+    "otherNight": 16
+  },
+  {
+    "id": "8_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/8_shuxuedeshengyan.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "9_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/9_shuxuedeshengyan.png",
+    "firstNightReminder": "哲学家可以选择一个角色。如果选择的角色不在场，将哲学家的角色标题替换成对应角色，并标记“是哲学家”，否则标记该角色对应的玩家醉酒。从现在开始，你需要以哲学家获得能力的那种角色的行动方式来唤醒哲学家。",
+    "otherNightReminder": "哲学家可以选择一个角色。如果选择的角色不在场，将哲学家的角色标题替换成对应角色，并标记“是哲学家”，否则标记该角色对应的玩家醉酒。从现在开始，你需要以哲学家获得能力的那种角色的行动方式来唤醒哲学家。",
+    "reminders": [
+      "醉酒"
+    ],
+    "remindersGlobal": [
+      "是哲学家"
+    ],
+    "name": "哲学家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个善良角色：你获得该角色的能力。如果这个角色在场，他醉酒。",
+    "firstNight": 12,
+    "otherNight": 2
+  },
+  {
+    "id": "10_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/10_shuxuedeshengyan.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "艺术家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以私下询问说书人一个是非问题，你会得知该问题的答案。"
+  },
+  {
+    "id": "11_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/11_shuxuedeshengyan.png",
+    "reminders": [
+      "中毒",
+      "死于今日"
+    ],
+    "name": "食人族",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "12_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/12_shuxuedeshengyan.png",
+    "firstNightReminder": "在首个夜晚，唤醒修行者。用手指水平指向修行者的某一侧，告诉他与他距离最近的邪恶玩家位于这一侧。如果修行者两侧最近的邪恶玩家与他的距离相等，由你来决定告诉他什么样的信息，并用手指指向对应的一侧。让修行者重新入睡。",
+    "name": "修行者",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知距离最近的邪恶玩家位于你的顺时针还是逆时针方向。如果两侧的邪恶玩家与你距离相等，你得知的信息由说书人决定。",
+    "firstNight": 6100
+  },
+  {
+    "id": "13_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/13_shuxuedeshengyan.png",
+    "name": "陌客",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。"
+  },
+  {
+    "id": "14_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/14_shuxuedeshengyan.png",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "莽夫",
+    "team": "outsider",
+    "ability": "每个夜晚，首个使用其自身能力选择了你的玩家会醉酒直到下个黄昏。你会转变为他的阵营。"
+  },
+  {
+    "id": "15_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/15_shuxuedeshengyan.png",
+    "firstNightReminder": "如果有七名或更多玩家，唤醒疯子：展示“他们是你的爪牙”信息标记。指向任意对应数量的玩家。展示“这些角色不在场”信息标记。展示三个善良角色。让疯子重新入睡。唤醒恶魔。展示“你是”信息标记和恶魔角色标记。展示“这名玩家是”信息标记和疯子角色标记，然后指向疯子玩家。",
+    "otherNightReminder": "做任何需要做的事情来模拟一位恶魔的行动。让疯子重新入睡。唤醒恶魔。对恶魔展示疯子角色标记，并指向疯子玩家，随后是疯子的攻击目标。",
+    "remindersGlobal": [
+      "被选择",
+      "是疯子"
+    ],
+    "name": "疯子",
+    "team": "outsider",
+    "ability": "你以为你是一个恶魔，但其实你不是。恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。",
+    "firstNight": 4200,
+    "otherNight": 8
+  },
+  {
+    "id": "16_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/16_shuxuedeshengyan.png",
+    "reminders": [
+      "醉酒",
+      "已猜测"
+    ],
+    "name": "解谜大师",
+    "team": "outsider",
+    "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。"
+  },
+  {
+    "id": "17_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/17_shuxuedeshengyan.png",
+    "firstNightReminder": "让投毒者选择一名玩家。标记那名玩家中毒。",
+    "otherNightReminder": "让投毒者选择一名玩家。标记那名玩家中毒。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "投毒者",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：他在当晚和明天白天中毒。",
+    "firstNight": 5500,
+    "otherNight": 3
+  },
+  {
+    "id": "18_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/18_shuxuedeshengyan.png",
+    "firstNightReminder": "（分别或同时）唤醒科学怪人和恶魔，通知他们恶魔因为科学怪人而获得的善良角色的能力。",
+    "name": "科学怪人",
+    "team": "minion",
+    "ability": "恶魔拥有一个不在场的善良角色的能力，即使他醉酒或中毒。你和他都知道他获得了什么能力。",
+    "firstNight": 11
+  },
+  {
+    "id": "19_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/19_shuxuedeshengyan.png",
+    "firstNightReminder": "如果有必要，让巫师的能力生效。",
+    "otherNightReminder": "如果有必要，让巫师的能力生效。",
+    "reminders": [
+      "？"
+    ],
+    "name": "巫师",
+    "team": "minion",
+    "ability": "每局游戏限一次，你可以向说书人许愿。如果愿望被实现，可能会伴随着代价和线索。",
+    "firstNight": 5600,
+    "otherNight": 5
+  },
+  {
+    "id": "20_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/20_shuxuedeshengyan.png",
+    "firstNightReminder": "在等同初始外来者数量的夜晚，所有镇民中毒。",
+    "otherNightReminder": "在等同初始外来者数量的夜晚，所有镇民中毒。",
+    "reminders": [
+      "第一夜",
+      "第二夜",
+      "第三夜",
+      "大限将至"
+    ],
+    "setup": true,
+    "name": "限",
+    "team": "minion",
+    "ability": "在等同于初始外来者数量的夜晚，所有镇民玩家中毒直到下个黄昏。[外来者数量任意]",
+    "firstNight": 5700,
+    "otherNight": 7
+  },
+  {
+    "id": "21_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/21_shuxuedeshengyan.png",
+    "firstNightReminder": "让普卡选择一名玩家。标记那名玩家中毒。",
+    "otherNightReminder": "让普卡选择一名玩家。标记那名玩家中毒。上一个因普卡中毒的玩家死亡，随后恢复健康。",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "name": "普卡",
+    "team": "demon",
+    "ability": "每个夜晚，你要选择一名玩家：他中毒。上个因你的能力中毒的玩家会死亡并恢复健康。",
+    "firstNight": 5800,
+    "otherNight": 9
+  },
+  {
+    "id": "22_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/22_shuxuedeshengyan.png",
+    "otherNightReminder": "让亡骨魔选择一名玩家。标记那名玩家死亡。如果该玩家是爪牙，标记该玩家保留能力，并标记与该玩家邻近的镇民玩家之一中毒。",
+    "reminders": [
+      "死亡",
+      "保留能力",
+      "中毒"
+    ],
+    "setup": 1,
+    "name": "亡骨魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+    "otherNight": 11
+  },
+  {
+    "id": "23_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/23_shuxuedeshengyan.png",
+    "otherNightReminder": "让诺-达鲺选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "name": "诺-达鲺",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+    "otherNight": 10
+  },
+  {
+    "id": "24_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/24_shuxuedeshengyan.png",
+    "firstNightReminder": "寄生蛭指向一名玩家。放置寄生标记，那名玩家中毒。",
+    "otherNightReminder": "寄生蛭指向一名玩家。那名玩家死亡。",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "name": "痢蛭",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名存活的玩家：他中毒，只有当他处于死亡状态时你才会立即死亡。",
+    "firstNight": 5400,
+    "otherNight": 12
+  },
+  {
+    "id": "25_shuxuedeshengyan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/shuxuedeshengyan/25_shuxuedeshengyan.png",
+    "name": "数学谜题",
+    "team": "fabled",
+    "ability": "通过数学家产生的信息必然正确。若场上存在存活的具有数学家能力的玩家，所有玩家都会得知当晚数学家的信息。"
+  },
+  {
+    "id": "26_shuxuedeshengyan",
+    "name": "侍女&数学家",
+    "team": "jinxes",
+    "ability": "侍女会得知数学家是否醒来，即使她是在数学家之前醒来。"
+  },
+  {
+    "id": "27_shuxuedeshengyan",
+    "name": "疯子&数学家",
+    "team": "jinxes",
+    "ability": "数学家会得知疯子是否攻击了与真正的恶魔不同的目标。"
+  },
+  {
+    "id": "28_shuxuedeshengyan",
+    "name": "科学怪人&莽夫",
+    "team": "jinxes",
+    "ability": "如果恶魔拥有莽夫的能力，他无法因为该能力转变为善良阵营。"
+  }
+]

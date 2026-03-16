@@ -1,0 +1,371 @@
+[
+  {
+    "id": "_meta",
+    "name": "达摩计划",
+    "author": "Ben & Jams",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/jvk27mtymke8wf2lgff54d6ft051aqr.png",
+    "almanac": "Json有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ef/kqlms0w8wp372gvh76lov0c08e6z8m3.png",
+    "reminders": [
+      "转世重生"
+    ],
+    "name": "印度教教徒",
+    "team": "fabled",
+    "ability": "最先死亡的四名玩家会立即以相同阵营的旅行者转世重生。"
+  },
+  {
+    "id": "1_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ec/6en6bzm04m05fb0kiuyiirgg8f1i271.png",
+    "name": "替罪羊",
+    "team": "traveller",
+    "ability": "如果你的阵营的一名玩家被处决，你可能会代替他被处决。"
+  },
+  {
+    "id": "2_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/be/4b0fggp8cuhuwfgg3u69dlhybbnyak7.png",
+    "name": "女舍监",
+    "team": "traveller",
+    "ability": "每个白天，你可以选择至多三对玩家交换座位。玩家不能离开座位私聊。"
+  },
+  {
+    "id": "3_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4a/f08y0q6b78s5wvs24idzpy83ood9mm6.png",
+    "reminders": [
+      "提名善良方",
+      "提名邪恶方"
+    ],
+    "name": "主教",
+    "team": "traveller",
+    "ability": "只有说书人可以发起提名。每个白天说书人至少要提名一名你对立阵营的玩家。"
+  },
+  {
+    "id": "4_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/77/nwq7s8n137aa2rtd9b8x08o2yp50kkj.png",
+    "name": "怪咖",
+    "team": "traveller",
+    "ability": "如果你表现得很有趣，当天你不能被流放。"
+  },
+  {
+    "id": "5_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0e/ls16bqgzjcp1re6kreuuwwrjrg3p6bd.png",
+    "otherNightReminder": "每个夜晚，唤醒集骨者。集骨者要么摇头表示不使用能力，或者是指向任何一名已死亡的玩家。让集骨者重新入睡。",
+    "reminders": [
+      "重获能力",
+      "失去能力"
+    ],
+    "name": "集骨者",
+    "team": "traveller",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名死亡的玩家：他重新获得能力直到下个黄昏。",
+    "otherNight": 2
+  },
+  {
+    "id": "6_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/36/4yqdhq0kap6l5a4q8og8kxmg8y2cjcg.png",
+    "firstNightReminder": "唤醒洗衣妇，对她指向两名玩家，并展示一个镇民角色标记。这两名玩家其中之一是这个镇民。",
+    "reminders": [
+      "镇民",
+      "错误"
+    ],
+    "name": "洗衣妇",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个镇民角色：这两名玩家之一是该角色。",
+    "firstNight": 3500
+  },
+  {
+    "id": "7_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/7d/8ns1pftlkxjbrau1b6v3o7vyq0zpnyt.png",
+    "firstNightReminder": "唤醒厨师，对他用手势比划数字来告知他邻座邪恶玩家有几对。",
+    "name": "厨师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "firstNight": 3600
+  },
+  {
+    "id": "8_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/dc/49ardir6f1osygmvs27t9kbgcmyfgsa.png",
+    "otherNightReminder": "如果守鸦人死于夜晚，唤醒守鸦人，让他选择一名玩家。对他展示这名玩家的角色标记。",
+    "name": "守鸦人",
+    "team": "townsfolk",
+    "ability": "如果你在夜晚死亡，你会被唤醒，然后你要选择一名玩家：你会得知他的角色。",
+    "otherNight": 13
+  },
+  {
+    "id": "9_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/14/gk3bmjwzy80yzezuvzca5b1vb51g0wk.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "贞洁者",
+    "team": "townsfolk",
+    "ability": "当你首次被提名时，如果提名你的玩家是镇民，他立刻被处决。"
+  },
+  {
+    "id": "10_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c9/kfa7czupvk2jnejrqexerz4vdx8njwr.png",
+    "name": "士兵",
+    "team": "townsfolk",
+    "ability": "恶魔的负面能力对你无效。"
+  },
+  {
+    "id": "11_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b1/f5bpgic2ja7fbuvxh1vigjkxdsu78j7.png",
+    "otherNightReminder": "如果造谣者今天白天的声明正确，一名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。在当晚，如果该声明是正确的，会有一名玩家死亡。",
+    "otherNight": 10
+  },
+  {
+    "id": "12_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ed/5u0zlyh58gvbif2oan8qv9yhsta5lnh.png",
+    "firstNightReminder": "唤醒哲学家，他可以摇头不使用能力，或选择获得角色列表上的一个善良角色的能力。",
+    "otherNightReminder": "如果哲学家未曾使用能力，唤醒哲学家，他可以摇头不使用能力，或选择获得角色列表上的一个善良角色的能力。",
+    "reminders": [
+      "醉酒"
+    ],
+    "remindersGlobal": [
+      "是哲学家"
+    ],
+    "name": "哲学家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个善良角色：你获得该角色的能力。如果这个角色在场，他醉酒。",
+    "firstNight": 11,
+    "otherNight": 3
+  },
+  {
+    "id": "13_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/4cvv6gx6js190zpjqm110ps4j6bl587.png",
+    "firstNightReminder": "唤醒贵族，对他指向三名玩家。这三名玩家中有且仅有一名是邪恶玩家。",
+    "reminders": [
+      "被得知"
+    ],
+    "name": "贵族",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。",
+    "firstNight": 3700
+  },
+  {
+    "id": "14_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/0gv4l35ovskh83z84qce8mikbmnpkfw.png",
+    "firstNightReminder": "唤醒将军，对他用手势比划当前的优势阵营。",
+    "otherNightReminder": "唤醒将军，对他用手势比划当前的优势阵营。",
+    "name": "将军",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知说书人认为哪个阵营当前更有优势（善良/邪恶/均势）。",
+    "firstNight": 4000,
+    "otherNight": 17
+  },
+  {
+    "id": "15_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/84/7a2ofp66u0ovh8x1lcvsd63qixll6oo.png",
+    "firstNightReminder": "唤醒气球驾驶员，对他指向一名玩家。",
+    "otherNightReminder": "唤醒气球驾驶员，对他指向一名玩家，这名玩家与之前气球驾驶员上一个夜晚得知过的玩家属于不同的角色类型。",
+    "reminders": [
+      "得知"
+    ],
+    "setup": true,
+    "name": "气球驾驶员",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名与上个夜晚得知的玩家角色类型不同的玩家。[+0~1外来者]",
+    "firstNight": 3800,
+    "otherNight": 15
+  },
+  {
+    "id": "16_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b6/1x6scjlmb7i1o7javesgbdnzed10rtk.png",
+    "firstNightReminder": "如果异教领袖的阵营发生了变化，将他唤醒并通知他最新阵营。",
+    "otherNightReminder": "如果异教领袖的阵营发生了变化，将他唤醒并通知他最新阵营。",
+    "name": "异教领袖",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会转变为与你邻近的一名存活的玩家的阵营。每个白天，你可以提议所有玩家加入你的教派，如果所有善良玩家同意加入，你的阵营获胜。",
+    "firstNight": 3900,
+    "otherNight": 16
+  },
+  {
+    "id": "17_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c1/ga80xr3gx817rh5wiqq18d9hv8b6xje.png",
+    "reminders": [
+      "饱餐",
+      "中毒"
+    ],
+    "name": "食人族",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "18_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/74/mg6f3rixn7i32hirqdtmwqahzmqoy0n.png",
+    "otherNightReminder": "：唤醒杂技演员，让他选择一名玩家。如果当晚这名玩家醉酒或中毒，杂技演员死亡。",
+    "reminders": [
+      "被选择",
+      "死亡"
+    ],
+    "name": "杂技演员",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：如果当晚他醉酒或中毒，你死亡。",
+    "otherNight": 5
+  },
+  {
+    "id": "19_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/5e/dw5z7fnz58ia54bw160d1numjsjay8f.png",
+    "name": "陌客",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。"
+  },
+  {
+    "id": "20_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/3c/hulwpl4c71z09ixgyg3dlkeega2a3an.png",
+    "otherNightReminder": "如果月之子在今天白天的时候使用自己的能力选择了一名善良玩家，那名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "月之子",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。",
+    "otherNight": 11
+  },
+  {
+    "id": "21_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/22/0inqbergvawmpfzmeno0mj3ieuk74gm.png",
+    "otherNightReminder": "如果理发师死于白天，唤醒恶魔让他决定是否使用理发师的能力。如果理发师死于夜晚，（如果让除攻击理发师以外的恶魔进行选择则需要等当前恶魔入睡后）让一名恶魔决定是否使用理发师的能力。",
+    "reminders": [
+      "今晚理发"
+    ],
+    "name": "理发师",
+    "team": "outsider",
+    "ability": "如果你死亡，在当晚恶魔可以选择两名玩家（不能选择其他恶魔）交换角色。",
+    "otherNight": 12
+  },
+  {
+    "id": "22_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/12/ivgcxsn6c4ytbj9q35ekdpqszwiptb6.png",
+    "otherNightReminder": "如果瘟疫医生死亡，说书人获得一项爪牙能力。",
+    "reminders": [
+      "说书人能力"
+    ],
+    "name": "瘟疫医生",
+    "team": "outsider",
+    "ability": "当你死亡时，说书人会获得一个爪牙能力。",
+    "otherNight": 14
+  },
+  {
+    "id": "23_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/33/6wspdicyxe9hh221v9aodnk8umbdtsq.png",
+    "firstNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "otherNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "投毒者",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：他在当晚和明天白天中毒。",
+    "firstNight": 3300,
+    "otherNight": 4
+  },
+  {
+    "id": "24_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d9/jg7k6wd0cy1bk89o3uzhdti6oxund8n.png",
+    "setup": true,
+    "name": "男爵",
+    "team": "minion",
+    "ability": "会有额外的外来者在场。[+2 外来者]"
+  },
+  {
+    "id": "25_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d7/msb759ew0f2hudkvxhsz15jnxsqqpy9.png",
+    "name": "精神病患者",
+    "team": "minion",
+    "ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。"
+  },
+  {
+    "id": "26_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e5/el29kr1dznrpaa089tayj3chd444s6k.png",
+    "firstNightReminder": "如果提线木偶在场，对恶魔展示提线木偶角色标记并指向提线木偶玩家。",
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "setup": true,
+    "name": "提线木偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]",
+    "firstNight": 3200
+  },
+  {
+    "id": "27_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b9/t7v2h6t5bwxmjp8qkkhlf1mm32v51pw.png",
+    "otherNightReminder": "决定上一夜被沙巴洛斯选择的玩家是否被反刍。然后唤醒沙巴洛斯，让他攻击两名玩家。",
+    "reminders": [
+      "死亡",
+      "复活"
+    ],
+    "name": "沙巴洛斯",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择两名玩家：他们死亡。你上个夜晚选择过且当前死亡的玩家之一可能会被你反刍。",
+    "otherNight": 7
+  },
+  {
+    "id": "28_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/67/rvx8mxa2s5jb9qiqzoubch8vfjr87hz.png",
+    "otherNightReminder": "唤醒珀，他可以攻击一名玩家或不进行攻击，如果他上一次选择了不进行攻击，则此次必须攻击三名玩家。",
+    "reminders": [
+      "攻击三次",
+      "死亡"
+    ],
+    "name": "珀",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择一名玩家：他死亡。如果你上次选择时没有选择任何玩家，当晚你要选择三名玩家：他们死亡。",
+    "otherNight": 8
+  },
+  {
+    "id": "29_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2d/szavurnelmxq6158tzoowtw5oteonll.png",
+    "otherNightReminder": "决定今晚谁会因为军团能力死亡。",
+    "reminders": [
+      "即将被处决",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "军团",
+    "team": "demon",
+    "ability": "每个夜晚*，可能有一名玩家死亡。如果一项提名只有邪恶玩家投票，投票无效。你也会被当作是爪牙。[多数玩家为军团]",
+    "otherNight": 6
+  },
+  {
+    "id": "30_damojihua",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/49/863ousn3gady70ilssmdzvzl2kbn1ee.png",
+    "firstNightReminder": "唤醒牙噶巴卜，对他展示他的秘密短语。",
+    "otherNightReminder": "根据已放置的提示标记数量，选择最多等同于该数量的玩家死亡。该夜晚行动只是一个提示，死亡的造成时机可以是白天，也可以是夜晚的任何时候。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "牙噶巴卜",
+    "team": "demon",
+    "ability": "在你的首个夜晚，你会得知一段秘密短语。每次你在白天公开说出这段短语，当天便可能会有一名玩家在这之后死亡。",
+    "firstNight": 3400,
+    "otherNight": 9
+  },
+  {
+    "id": "jinx01",
+    "name": "气球驾驶员&提线木偶",
+    "team": "a jinxed",
+    "ability": "如果提线木偶抽到了气球驾驶员，也可能会+1外来者。"
+  },
+  {
+    "id": "jinx02",
+    "name": "男爵&瘟疫医生",
+    "team": "a jinxed",
+    "ability": "如果说书人获得了男爵的能力，至多两名玩家会变成不在场的外来者。"
+  },
+  {
+    "id": "jinx03",
+    "name": "提线木偶&瘟疫医生",
+    "team": "a jinxed",
+    "ability": "如果在瘟疫医生死亡时说书人获得了提线木偶的能力，且与恶魔邻座的存活玩家中有镇民或外来者，其中一名玩家会变成邪恶的提线木偶。如果此时场上的邪恶玩家数量比初始设置时的数量超出一名或更多，改为无事发生。"
+  }
+]

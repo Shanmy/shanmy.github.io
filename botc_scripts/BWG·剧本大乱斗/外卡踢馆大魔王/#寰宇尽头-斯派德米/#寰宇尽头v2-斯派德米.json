@@ -1,0 +1,276 @@
+[{
+	"id": "_meta",
+	"name": "寰宇尽头",
+	"author": "斯派德米",
+	"logo": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/_meta.png",
+	"almanac": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/almanac.html"
+}, {
+	"id": "29_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/29_spacebound.png",
+	"firstNightReminder": "在首个夜晚，唤醒铁匠。向铁匠展示所有在场的外来者的总数。让铁匠重新入睡。",
+	"reminders": ["醉酒"],
+	"setup": true,
+	"name": "铁匠",
+	"team": "townsfolk",
+	"ability": "在你的首个夜晚，你会得知有几名外来者在场。所有外来者醉酒。[+1外来者]",
+	"firstNight": 18
+}, {
+	"id": "1_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/1_spacebound.png",
+	"firstNightReminder": "唤醒钦天监，对其用拇指指向其左侧或右侧示意。如果两侧邪恶玩家与他距离相同，拇指朝下示意。",
+	"name": "钦天监",
+	"team": "townsfolk",
+	"ability": "在你的首个夜晚，你会得知离你最近的邪恶玩家位于你的哪一侧（左\/右\/相同）。如果与你邻近的玩家中有邪恶阵营，你会得知错误信息作为替代。",
+	"firstNight": 24
+}, {
+	"id": "2_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/2_spacebound.png",
+	"firstNightReminder": "在你的首个夜晚，你会得知最多的相邻镇民数量。",
+	"name": "暮光精灵",
+	"team": "townsfolk",
+	"ability": "在你的首个夜晚，你会得知最多的相邻镇民数量。",
+	"firstNight": 19
+}, {
+	"id": "13_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/13_spacebound.png",
+	"firstNightReminder": "给他展示数字手势来告诉他在首个夜晚里有多少玩家的角色能力受他人影响而未正常生效。",
+	"otherNightReminder": "给他展示数字手势来告诉他从上个黎明到数学家醒来前有多少玩家的角色能力受他人影响而未正常生效。",
+	"reminders": ["未正常生效"],
+	"name": "数学家",
+	"team": "townsfolk",
+	"ability": "每个夜晚，你会得知有多少名玩家的能力因为其他角色的能力而未正常生效。(从上个黎明到你被唤醒时）",
+	"firstNight": 26,
+	"otherNight": 20
+}, {
+	"id": "28_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/28_spacebound.png",
+	"reminders": ["错误信息"],
+	"name": "车夫",
+	"team": "townsfolk",
+	"ability": "每个白天，你可以拜访说书人并选择一个话题，说书人会告诉你一个与他有关的事实。如果你的邻近存活玩家阵营不同，你得知错误信息。"
+}, {
+	"id": "3_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/3_spacebound.png",
+	"firstNightReminder": "每个夜晚，你会得知你与恶魔最近距离之间的存活玩家中一共有多少种角色类型。如果你即将得知0，你得知错误信息。",
+	"otherNightReminder": "每个夜晚，你会得知你与恶魔最近距离之间的存活玩家中一共有多少种角色类型。如果你即将得知0，你得知错误信息。",
+	"reminders": ["相撞"],
+	"name": "航天员",
+	"team": "townsfolk",
+	"ability": "每个夜晚，你会得知你与恶魔最近距离之间的存活玩家中一共有多少种角色类型。如果你即将得知0，你得知错误信息。",
+	"flavor": "You are a supernova，and I'm a......",
+	"firstNight": 22,
+	"otherNight": 16
+}, {
+	"id": "7_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/7_spacebound.png",
+	"otherNightReminder": "每个夜晚*，你会得知与你今天提名的玩家最近的邪恶玩家位于他的顺时针还是逆时针方向。如果距离相等，你得知的信息由说书人决定。",
+	"reminders": ["被提名"],
+	"name": "勘探者",
+	"team": "townsfolk",
+	"ability": "每个夜晚*，你会得知与你今天提名的玩家最近的邪恶玩家位于他的顺时针还是逆时针方向。如果距离相等，你得知的信息由说书人决定。",
+	"otherNight": 17
+}, {
+	"id": "5_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/5_spacebound.png",
+	"firstNightReminder": "在首个夜晚，唤醒风水师，告知他“标记”提示标记旁的玩家角色类型，并将标记顺时针移动一名玩家。",
+	"otherNightReminder": "唤醒风水师，告知他“标记”提示标记旁的玩家角色类型，并将标记顺时针移动一名玩家。",
+	"reminders": ["标记"],
+	"name": "风水师",
+	"team": "townsfolk",
+	"ability": "在你的首个夜晚，你会得知一名玩家的角色类型。每个夜晚*，你会从他的顺时针方向得知下一名非旅行者玩家的角色类型。",
+	"firstNight": 20,
+	"otherNight": 15
+}, {
+	"id": "11_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/11_spacebound.png",
+	"firstNightReminder": "唤醒猎犬饲养员，展示被邪恶玩家的能力选择的存活玩家与他的最近距离。",
+	"otherNightReminder": "唤醒猎犬饲养员，展示被邪恶玩家的能力选择的存活玩家与他的最近距离。",
+	"reminders": ["浊气"],
+	"name": "猎犬饲养员",
+	"team": "townsfolk",
+	"ability": "每个夜晚，你得知当晚被邪恶玩家能力选择的存活玩家与你的最近距离。",
+	"firstNight": 25,
+	"otherNight": 19
+}, {
+	"id": "6_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/6_spacebound.png",
+	"firstNightReminder": "选择一种角色类型，并告知其一个符合该类型的玩家。在该玩家旁边标记已被知晓。",
+	"otherNightReminder": "选择一种与气球驾驶员上个夜晚知晓的角色类型不同的，并告知其一个符合该类型的玩家。",
+	"reminders": ["得知"],
+	"setup": 1,
+	"name": "气球驾驶员",
+	"team": "townsfolk",
+	"ability": "每个夜晚，你会得知一名与上个夜晚得知的玩家角色类型不同的玩家。[+0~1外来者]",
+	"firstNight": 23,
+	"otherNight": 18
+}, {
+	"id": "4_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/4_spacebound.png",
+	"name": "宇航员",
+	"team": "townsfolk",
+	"ability": "每个白天，你可以私下询问说书人以得知一条有关游戏的神秘暗示。"
+}, {
+	"id": "8_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/8_spacebound.png",
+	"firstNightReminder": "每个夜晚，一名玩家的信息会变得毫无意义。",
+	"otherNightReminder": "每个夜晚，一名玩家的信息会变得毫无意义。",
+	"reminders": ["拜访"],
+	"name": "天外来客",
+	"team": "townsfolk",
+	"ability": "每个夜晚，一名玩家的信息会变得毫无意义。",
+	"firstNight": 15,
+	"otherNight": 5
+}, {
+	"id": "10_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/10_spacebound.png",
+	"otherNightReminder": "唤醒打更人，并让其猜测距离，以数字手势给出。在这两名玩家的角色标记旁放置“警惕”提示标记。在当晚首次有角色死亡时，如果是标记有“警惕”的玩家，那么当晚不会有除打更人外的任何人死亡。同时，如果说书人决定让打更人死亡，则在其角色标记旁放置“死亡”提示标记。在黎明时，移除所有“警惕”标记。",
+	"reminders": ["警惕", "死亡"],
+	"name": "打更人",
+	"team": "townsfolk",
+	"ability": "每个夜晚*，你要猜测今晚第一个死亡的玩家与你的距离。如果你猜测正确，改为除你以外的所有玩家今晚不会死亡，但你可能会死亡。",
+	"otherNight": 8
+}, {
+	"id": "12_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/12_spacebound.png",
+	"otherNightReminder": "如果恶魔杀死了贤者，唤醒贤者并指向两名玩家，其中一名玩家是杀死他的恶魔。",
+	"name": "贤者",
+	"team": "townsfolk",
+	"ability": "如果恶魔杀死了你，在当晚你会被唤醒并得知两名玩家，其中一名是杀死你的那个恶魔。",
+	"otherNight": 14
+}, {
+	"id": "15_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/15_spacebound.png",
+	"firstNightReminder": "唤醒逆臣，让其选择一名玩家。在该玩家的角色标记旁放置“不共戴天”提示标记。",
+	"otherNightReminder": "如果逆臣或标记了“不共戴天”的玩家死于处决，唤醒两者之中的另一名玩家，告诉他变为邪恶阵营。",
+	"reminders": ["不共戴天"],
+	"name": "逆臣",
+	"team": "outsider",
+	"ability": "在你的首个夜晚，你要选择除你以外的一名玩家：如果他先死于处决，你转变为邪恶；如果你先死于处决，他转变为邪恶。",
+	"firstNight": 21,
+	"otherNight": 7
+}, {
+	"id": "14_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/14_spacebound.png",
+	"name": "邪教徒",
+	"team": "outsider",
+	"ability": "当你在夜晚首次将要被恶魔杀死时，你转变为邪恶阵营并与恶魔相识，然后你可以与恶魔交换角色并让他代替你死亡"
+}, {
+	"id": "_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/_spacebound.png",
+	"otherNightReminder": "如果该镇民死亡，你转变为对立阵营。",
+	"remindersGlobal": ["是石像鬼"],
+	"setup": true,
+	"name": "石像鬼",
+	"team": "outsider",
+	"ability": "你以为你是一个在场的镇民角色，但其实你不是。如果该镇民死亡，你转变为对立阵营。",
+	"otherNight": 13
+}, {
+	"id": "9_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/9_spacebound.png",
+	"name": "风之旅人",
+	"team": "outsider",
+	"ability": "当你死亡时，你会以一个旅行者角色复活并选择阵营。"
+}, {
+	"id": "18_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/18_spacebound.png",
+	"firstNightReminder": "你拥有其他所有爪牙的能力",
+	"otherNightReminder": "你拥有其他所有爪牙的能力",
+	"reminders": ["被诅咒", "控制"],
+	"setup": true,
+	"name": "航线",
+	"team": "minion",
+	"ability": "你拥有其他所有爪牙的能力。【无其他爪牙角色在场，仅可通过航天员转化入场，+任意数量外来者】",
+	"flavor": "I'm a space bound rocket ship.",
+	"firstNight": 11,
+	"otherNight": 2
+}, {
+	"id": "16_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/16_spacebound.png",
+	"firstNightReminder": "每个夜晚，选择两名玩家：他们的信息直到那个黄昏变得毫无意义。",
+	"otherNightReminder": "每个夜晚，选择两名玩家：他们的信息直到那个黄昏变得毫无意义。",
+	"reminders": ["干扰"],
+	"name": "江湖骗子",
+	"team": "minion",
+	"ability": "每个夜晚，选择两名玩家：他们的信息直到那个黄昏变得毫无意义。",
+	"firstNight": 14,
+	"otherNight": 4
+}, {
+	"id": "19_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/19_spacebound.png",
+	"firstNightReminder": "你可以选择在夜晚睁眼。其他邪恶玩家被唤醒时，你也会被一同唤醒。",
+	"otherNightReminder": "你可以选择在夜晚睁眼。其他邪恶玩家被唤醒时，你也会被一同唤醒。",
+	"name": "幽灵",
+	"team": "minion",
+	"ability": "你可以选择在夜晚睁眼。其他邪恶玩家被唤醒时，你也会被一同唤醒。",
+	"firstNight": 12,
+	"otherNight": 3
+}, {
+	"id": "20_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/20_spacebound.png",
+	"name": "主谋",
+	"team": "minion",
+	"ability": "如果恶魔因为死于处决而因此导致游戏结束时，再额外进行一个夜晚和一个白天。在那个白天如果有玩家被处决，他的阵营落败。"
+}, {
+	"id": "21_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/21_spacebound.png",
+	"firstNightReminder": "让女巫选择一名玩家。标记那名玩家被诅咒。",
+	"otherNightReminder": "让女巫选择一名玩家。标记那名玩家被诅咒。",
+	"reminders": ["被诅咒"],
+	"name": "女巫",
+	"team": "minion",
+	"ability": "每个夜晚，你要选择一名玩家：如果他明天白天发起提名，他死亡。如果只有三名存活的玩家，你失去此能力。",
+	"firstNight": 16,
+	"otherNight": 6
+}, {
+	"id": "23_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/23_spacebound.png",
+	"firstNightReminder": "让普卡选择一名玩家。标记那名玩家中毒。",
+	"otherNightReminder": "让普卡选择一名玩家。标记那名玩家中毒。上一个因普卡中毒的玩家死亡，随后恢复健康。",
+	"reminders": ["死亡", "中毒"],
+	"name": "普卡",
+	"team": "demon",
+	"ability": "每个夜晚，你要选择一名玩家：他中毒。上个因你的能力中毒的玩家会死亡并恢复健康。",
+	"firstNight": 17,
+	"otherNight": 10
+}, {
+	"id": "24_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/24_spacebound.png",
+	"otherNightReminder": "让诺-达鲺选择一名玩家。标记那名玩家死亡。",
+	"reminders": ["死亡", "中毒"],
+	"name": "诺-达鲺",
+	"team": "demon",
+	"ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+	"otherNight": 11
+}, {
+	"id": "25_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/25_spacebound.png",
+	"otherNightReminder": "唤醒奥赫，让他选择角色列表上的一个角色。该角色对应的玩家死亡，如果该角色不在场，替奥赫决定今晚谁会因为奥赫能力死亡。",
+	"reminders": ["死亡"],
+	"name": "奥赫",
+	"team": "demon",
+	"ability": "每个夜晚*，你要选择一个角色：他死亡。如果该角色不在场，则由说书人来决定谁会被你杀死。",
+	"otherNight": 12
+}, {
+	"id": "26_spacebound",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/spdm\/SpaceBound\/26_spacebound.png",
+	"firstNightReminder": "爪牙认识你且代替你得知三个不在场的善良角色。",
+	"otherNightReminder": "每晚的死亡由说书人决定。",
+	"remindersGlobal": ["是超新星", "死亡"],
+	"setup": true,
+	"name": "超新星",
+	"team": "demon",
+	"ability": "你以为你是个善良角色，其实你不是。爪牙认识你且代替你得知三个不在场的善良角色。每晚的死亡由说书人决定。【±1外来者，如果初始航天员在场，替换为邪恶的航线】",
+	"flavor": "六月晴朗夜空中的25万英里，你的目标在哪里？",
+	"firstNight": 13,
+	"otherNight": 9
+}, {
+	"id": "27_spacebound",
+	"name": "超新星与幽灵",
+	"team": "jinxes",
+	"ability": "幽灵不会和超新星同时被唤醒"
+}, {
+	"id": "30_spacebound",
+	"reminders": ["禁止邪恶"],
+	"name": "圣洁之魂",
+	"team": "fabled"
+}]

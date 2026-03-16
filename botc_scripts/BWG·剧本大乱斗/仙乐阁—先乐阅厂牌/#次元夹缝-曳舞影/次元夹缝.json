@@ -1,0 +1,234 @@
+[{"id":"slit_of_dimension",
+"name":"次元夹缝",
+"logo":"https:\/\/www.bloodstar.xyz\/p\/Shadowdancer\/double_dimension\/_meta.png",
+"almanac":"https:\/\/www.bloodstar.xyz\/p\/Shadowdancer\/double_dimension\/almanac.html",
+"state":[
+    {
+      "stateName": "双重次元1",
+      "stateDescription": "对局由两局汀西维尔局组成（无不在场身份，恶魔爪牙不互认），由说书人随机分配玩家所在的次元。"
+    },
+    {
+        "stateName": "双重次元2",
+        "stateDescription": "相邻距离判定会跳过另一次元，对另一次元的目标会使对应信息逆转。功能类能力无法影响另一次元的玩家。恶魔仅在所在次元内所有其他玩家死亡后解锁击杀另一次元的能力。邪恶胜利条件为两个次元总共存活两人且恶魔存活，善良胜利条件为两个恶魔均死亡。"
+    }
+],
+"status": [
+    {
+      "name": "双重次元1",
+      "skill": "对局由两局汀西维尔局组成（无不在场身份，恶魔爪牙不互认），由说书人随机分配玩家所在的次元。"
+    },
+    {
+        "name": "双重次元2",
+        "skill": "相邻距离判定会跳过另一次元，对另一次元的目标会使对应信息逆转。功能类能力无法影响另一次元的玩家。恶魔仅在所在次元内所有其他玩家死亡后解锁击杀另一次元的能力。邪恶胜利条件为两个次元总共存活两人且恶魔存活，善良胜利条件为两个恶魔均死亡。"
+    }
+]
+
+},
+ {
+        "id": "qingtianjianbei111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/shugenja.png",
+        "edition": "custom",
+        "name": "修行者",
+        "ability": "在你的首个夜晚，你会得知距离最近的邪恶玩家位于你的顺时针还是逆时针方向。如果两侧的邪恶玩家与你距离相等，你得知的信息由说书人决定。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 61,
+        "otherNight": 0,
+        "firstNightReminder": "唤醒修行者，对他指向对应方向来告知他最近的邪恶玩家的方向。",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    }, {
+        "id": "ainiii11111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/empath.png",
+        "edition": "custom",
+        "name": "共情者",
+        "ability": "每个夜晚，你会得知与你邻近的两名存活的玩家中邪恶玩家的数量。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 39,
+        "otherNight": 80,
+        "firstNightReminder": "唤醒共情者，对他用手势比划数字来告知他与他邻近的存活玩家中有几人是邪恶玩家。",
+        "otherNightReminder": "唤醒共情者，对他用手势比划数字来告知他与他邻近的存活玩家中有几人是邪恶玩家。",
+        "reminders": [],
+        "setup": false
+    }, {
+        "id": "ainiii11111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/empath.png",
+        "edition": "custom",
+        "name": "共情者",
+        "ability": "每个夜晚，你会得知与你邻近的两名存活的玩家中邪恶玩家的数量。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 39,
+        "otherNight": 80,
+        "firstNightReminder": "唤醒共情者，对他用手势比划数字来告知他与他邻近的存活玩家中有几人是邪恶玩家。",
+        "otherNightReminder": "唤醒共情者，对他用手势比划数字来告知他与他邻近的存活玩家中有几人是邪恶玩家。",
+        "reminders": [],
+        "setup": false
+    },
+  {
+        "id": "lingluowawa111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/seamstress.png",
+        "edition": "custom",
+        "name": "女裁缝",
+        "ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的两名玩家：你会得知他们是否为同一阵营。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 46,
+        "otherNight": 88,
+        "firstNightReminder": "唤醒女裁缝，她可以摇头不使用能力，或选择除自己以外的两名玩家。以点头或摇头告知她选择的玩家是否为同一阵营。",
+        "otherNightReminder": "如果女裁缝未曾使用能力，唤醒女裁缝，她可以摇头不使用能力，或选择除自己以外的两名玩家。以点头或摇头告知她选择的玩家是否为同一阵营。",
+        "reminders": [
+            "失去能力"
+        ],
+        "setup": false
+    },
+   {
+        "id": "mofasaozhou111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/chambermaid.png",
+        "edition": "custom",
+        "name": "侍女",
+        "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 64,
+        "otherNight": 100,
+        "firstNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+        "otherNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+        "reminders": [],
+        "setup": false
+    },
+ {
+        "id": "mofashuijingqiu111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fortune_teller.png",
+        "edition": "custom",
+        "name": "占卜师",
+        "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 40,
+        "otherNight": 81,
+        "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+        "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+        "reminders": [
+            "干扰项"
+        ],
+        "setup": false
+    },
+   {
+        "id": "zhengdanideyanjing111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/oracle.png",
+        "edition": "custom",
+        "name": "神谕者",
+        "ability": "每个夜晚*，你会得知有多少名死亡的玩家是邪恶的。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 87,
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒神谕者，对他用手势比划数字来告知他当前死亡玩家中邪恶玩家的数量。",
+        "reminders": [],
+        "setup": false
+    },
+  {
+        "id": "wocaishiemo111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/lunatic.png",
+        "edition": "custom",
+        "name": "疯子",
+        "ability": "你以为你是一个恶魔，但其实你不是。恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 5.3,
+        "otherNight": 28,
+        "firstNightReminder": "唤醒疯子并向他提供恶魔信息。如可能，则让疯子进行相应的恶魔行动。随后在恶魔信息环节对恶魔提供疯子的相关信息。",
+        "otherNightReminder": "如果疯子以为的恶魔会在当晚行动，唤醒疯子，并让他以恶魔的方式行动。",
+        "reminders": [
+            "被选择"
+        ],
+        "remindersGlobal": [
+            "是疯子"
+        ],
+        "setup": true
+    },
+   {
+        "id": "zabusini111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/golem.png",
+        "edition": "custom",
+        "name": "魔像",
+        "ability": "每局游戏你只能发起提名一次。当你发起提名时，如果被你提名的玩家不是恶魔，他死亡。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "无法提名"
+        ],
+        "setup": false
+    },
+   {
+        "id": "nanjueeeee111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/baron.png",
+        "edition": "custom",
+        "name": "男爵",
+        "ability": "会有额外的外来者在场。[+2 外来者]",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": true
+    },
+     {
+        "id": "zheyeshigejiugui111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/marionette.png",
+        "edition": "custom",
+        "name": "提线木偶",
+        "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 10,
+        "otherNight": 0,
+        "firstNightReminder": "如果提线木偶在场，对恶魔展示提线木偶角色标记并指向提线木偶玩家。",
+        "remindersGlobal": [
+            "是提线木偶"
+        ],
+        "setup": true
+    },
+{
+        "id": "wangguuuuuuuu111111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/vigormortis.png",
+        "edition": "custom",
+        "name": "亡骨魔",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": 0,
+        "otherNight": 40,
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒亡骨魔，让他攻击一名玩家。",
+        "reminders": [
+            "死亡",
+            "保留能力",
+            "中毒"
+        ],
+        "setup": true
+    },
+    {"id":"teleporter",
+        "image":"https:\/\/www.bloodstar.xyz\/p\/Shadowdancer\/double_dimension\/13_double_dimension.png",
+        "otherNightReminder":"可以选择，并传送，之后告知",
+        "reminders":["失去能力"],
+        "name":"传送师",
+        "team":"traveller",
+        "ability":"每局游戏限一次，夜晚时*，你可以选择一名玩家，无论他在哪个次元，他被传送至另一次元，之后他顺时针最近的相邻善良玩家会得知有人被传送了。",
+        "otherNight":2},
+    {"id":"double_dimension",
+        "image":"https:\/\/www.bloodstar.xyz\/p\/Shadowdancer\/double_dimension\/11_double_dimension.png",
+        "reminders":["另一次元"],
+        "name":"双重次元",
+        "team":"fabled",
+        "ability":"对局由两局汀西维尔局组成（无不在场身份，恶魔爪牙不互认），由说书人随机分配玩家所在的次元。相邻距离判定会跳过另一次元，对另一次元的目标会使对应信息逆转。功能类能力无法影响另一次元的玩家。恶魔仅在所在次元内所有其他玩家死亡后解锁击杀另一次元的能力。邪恶胜利条件为两个次元总共存活两人且恶魔存活，善良胜利条件为两个恶魔均死亡。"}]

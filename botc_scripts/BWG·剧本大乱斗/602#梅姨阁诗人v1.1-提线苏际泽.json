@@ -1,0 +1,425 @@
+[{
+		"id": "_meta",
+		"name": "梅伊阁诗人",
+		"author": "提线苏际泽",
+		"logo": "https://s2.loli.net/2025/06/10/UOjyoMLlV1RYBws.png",
+		"description": "",
+		"townsfolkName": "镇民",
+		"outsidersName": "外来者",
+		"minionsName": "爪牙",
+		"demonsName": "恶魔",
+		"townsfolk": "镇民",
+		"outsider": "外来者",
+		"minion": "爪牙",
+		"demon": "恶魔",
+		"a jinxedName": "相克",
+		"a jinxed": "相克",
+		"state": [],
+		"status": []
+	},
+
+	{
+		"id": "meiyigegegui",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//_noone.png",
+		"edition": "custom",
+		"name": "严肃の说书人",
+		"ability": "说书人会用不同的语气告诉你信息，语气越严肃，信息越重要。",
+		"team": "fabled",
+		"firstNight": 0,
+		"otherNight": 0,
+		"reminders": []
+	},
+	{
+		"id": "haidao",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//1_noone.png",
+		"edition": "custom",
+		"name": "海盗",
+		"ability": "在你的首个夜晚，你会得知几名海盗在场。如果所有存活善良角色均为海盗，善良阵营获胜。[+0或+1海盗]",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 3600,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": [
+
+		],
+		"setup": 1
+	},
+	{
+		"id": "qingren",
+		"image": "https://free.picui.cn/free/2025/09/23/68d2085396457.png",
+		"edition": "custom",
+		"name": "情人",
+		"ability": "每个夜晚*，你会得知说书人认为恶魔现在是什么情绪状态。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 0,
+		"otherNight": 7,
+		"firstNightReminder": "",
+		"reminders": [
+
+		]
+
+	},
+	{
+		"id": "youxiwanjia",
+		"image": "https://free.picui.cn/free/2025/09/23/68d2086dda9a2.png",
+		"edition": "custom",
+		"name": "游戏玩家",
+		"ability": "在你的首个夜晚，你会得知一个俄罗斯方块类型：它在剧本列表中能够存在一种框选情况使得框选的角色都在场。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 3700,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": [
+
+		]
+
+	},
+	{
+		"id": "xiangqidashi",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//3_noone.png",
+		"edition": "custom",
+		"name": "象棋大师",
+		"ability": "每局游戏限一次，在白天时，你可以私下询问说书人以得知你最重要的队友是谁，但不知道为什么",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": [
+			"得知", "失去能力"
+		]
+
+	},
+	{
+		"id": "youke",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//16_noone.png",
+		"edition": "custom",
+		"name": "天外来客",
+		"ability": "每个夜晚，一名玩家的信息会变得毫无意义。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 3400,
+		"otherNight": 4,
+		"firstNightReminder": "",
+		"reminders": ["虚无"]
+	},
+	{
+		"id": "tianwenxuejia",
+		"image": "https:\/\/www.bloodstar.xyz\/p\/jc3635\/self-righteous\/13_selfrighteous.png",
+		"edition": "custom",
+		"name": "天文学家",
+		"ability": "每局游戏限一次，在白天时，你可以私下询问说书人并得知他做出一个决定的原因，但你不知道是哪个决定。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": [
+
+		]
+	},
+	{
+		"firstNightReminder": "唤醒女祭司，指向一名玩家。",
+		"otherNightReminder": "唤醒女祭司，指向一名玩家",
+		"name": "女祭司",
+		"otherNight": 8,
+		"setup": false,
+		"reminders": [
+			"交流"
+		],
+		"id": "highpriestessbutton",
+		"edition": "custom",
+		"team": "townsfolk",
+		"name_eng": "High Priestess",
+		"firstNight": 3800,
+		"ability": "每个夜晚，你会得知一名说书人认为你最应该与其交流的玩家。",
+		"image": "https://i.postimg.cc/j5qcQ5Fn/400px-Highpriestess.png"
+	},
+	{
+		"id": "lishixuejia",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//5_noone.png",
+		"edition": "custom",
+		"name": "历史学家",
+		"ability": "每局游戏限一次，在白天时，你可以私下询问说书人以得知说书人将某名玩家评选为最具影响力的玩家的原因。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": [
+			"得知", "失去能力"
+		]
+
+	},
+	{
+		"id": "e302208e-82b0-4344-95c3-4330fdc529e8",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/general.png",
+		"edition": "custom",
+		"name": "将军",
+		"ability": "每个夜晚，你会得知说书人认为哪个阵营当前更有优势（善良/邪恶/均势）。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 3900,
+		"otherNight": 9,
+		"firstNightReminder": "告诉将军你认为的答案。",
+		"otherNightReminder": "告诉将军你认为的答案。",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "jianduisiling",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//7_noone.png",
+		"edition": "custom",
+		"name": "舰队司令",
+		"ability": "每局游戏限一次，在白天时，你可以私下询问说书人以得知两名玩家：其中一名是对你们帮助最大的对立阵营玩家，另一名是对你们损害最大的我方阵营玩家。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": [
+			"得知", "失去能力"
+		]
+
+	},
+	{
+		"id": "136e9d68-3595-4c46-8bf1-76ef69d1c42a",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/mathematician.png",
+		"edition": "custom",
+		"name": "数学家",
+		"ability": "每个夜晚，你会得知有多少名玩家的能力因为其他角色的能力而未正常生效。（从上个黎明到你被唤醒时）",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 4000,
+		"otherNight": 10,
+		"firstNightReminder": "给他展示数字手势来告诉他在首个夜晚里有多少玩家的角色能力受他人影响而未正常生效。",
+		"otherNightReminder": "给他展示数字手势来告诉他在首个夜晚里有多少玩家的角色能力受他人影响而未正常生效。",
+		"reminders": [
+			"未正常生效"
+		],
+		"setup": false
+	},
+	{
+		"id": "jiangshi",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//6_noone.png",
+		"edition": "custom",
+		"name": "讲师",
+		"ability": "每个白天，你可以拜访说书人并得知一名玩家做错的事。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": [
+
+		]
+
+	},
+	{
+		"id": "quezi",
+		"image": "https://free.picui.cn/free/2025/09/23/68d2088b8da20.png",
+		"edition": "custom",
+		"name": "瘸子",
+		"ability": "每个夜晚，你选一名玩家。你会得知他在角色表的左边还是右边。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 3600,
+		"otherNight": 5,
+		"firstNightReminder": "",
+		"reminders": [
+
+		]
+	},
+	{
+		"id": "zanzhuren",
+		"image": "https://free.picui.cn/free/2025/09/23/68d20899cb7f8.png",
+		"edition": "custom",
+		"name": "赞助人",
+		"ability": "每个白天，你可以私下拜访说书人以得知谁是目前最没有价值的存活玩家。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": [
+			"得知"
+		]
+	},
+	{
+		"id": "meixuejia",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//11_noone.png",
+		"edition": "custom",
+		"name": "美学家",
+		"ability": "每个夜晚*，你会得知一个说书人认为你当前最应该认真思考的角色。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 0,
+		"otherNight": 6,
+		"firstNightReminder": "",
+		"reminders": [
+			"得知"
+		]
+	},
+	{
+		"id": "yinmoujia",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//14_noone.png",
+		"edition": "custom",
+		"name": "阴谋家",
+		"ability": "每个白天，你可以私下访问说书人以得知一条能够妨害占据优势的阵营获胜的建议。",
+		"team": "townsfolk",
+		"sch_team": "村民",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": [
+		]
+	},
+	{
+		"id": "a7d285c3-6653-4a38-8f25-ce77a38106b1",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/politician.png",
+		"edition": "custom",
+		"name": "政客",
+		"ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。",
+		"team": "outsider",
+		"sch_team": "外来者",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "5ee81472-ab25-4cd2-8144-2098291fdef3",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/heretic.png",
+		"edition": "custom",
+		"name": "异端分子",
+		"ability": "对调胜负结果，即使你已死亡。",
+		"team": "outsider",
+		"sch_team": "外来者",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"setup": false
+	},
+	{
+		"id": "shenmijiabing",
+		"image": "https://clocktower-wiki.gstonegames.com/images/thumb/1/1e/Hermit.png/300px-Hermit.png",
+		"edition": "custom",
+		"name": "隐士",
+		"ability": "你拥有所有外来者能力[-0-1外来者]",
+		"team": "outsider",
+		"sch_team": "外来者",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": [],
+		"setup": true
+	},
+	{
+		"id": "d0fc421d-6f44-4eec-99fc-90505973763e1",
+		"image": "https://img.cdn1.vip/i/68d20c3b37638_1758596155.png",
+		"edition": "custom",
+		"name": "义务警员",
+		"ability": "“疯狂”证明你是邪恶的玩家可能会在夜晚死亡。",
+		"team": "outsider",
+		"sch_team": "外来者",
+		"firstNight": 3300,
+		"otherNight": 3,
+		"reminders": [],
+		"remindersGlobal": ["私刑"],
+		"setup": 0
+	},
+	{
+		"id": "yanpin",
+		"image": "https:\/\/www.bloodstar.xyz\/p\/jc3635\/self-righteous\/15_selfrighteous.png",
+		"edition": "custom",
+		"name": "赝品",
+		"ability": "你拥有一个在场爪牙的能力。如果没有其他爪牙在场，在你的首个夜晚，你选择一名爪牙：你获得他的能力。",
+		"team": "minion",
+		"firstNight": 3100,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"remindersGlobal": [
+			"是赝品"
+		],
+		"setup": false
+	},
+	{
+		"id": "61c6246a-55a5-433c-87c3-3107014f41e9",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/marionette.png",
+		"edition": "custom",
+		"name": "提线木偶",
+		"ability": "你以为你是一个善良角色，但其实你不是。恶魔会得知你是提线木偶。[提线木偶会与恶魔邻座]",
+		"team": "minion",
+		"sch_team": "爪牙",
+		"firstNight": 3200,
+		"otherNight": 0,
+		"firstNightReminder": "选择一名邻近恶魔的善良玩家放置提线木偶标记。唤醒恶魔并告知他谁是提线木偶。",
+		"remindersGlobal": [
+			"是提线木偶"
+		],
+		"setup": true
+	},
+	{
+		"id": "dujinke",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//23_noone.png",
+		"edition": "custom",
+		"name": "蠹金客",
+		"ability": "如果超过半数死亡玩家在最后一个白天仍然拥有投票标记，你的阵营获胜。",
+		"team": "minion",
+		"sch_team": "爪牙",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": []
+	},
+	{
+		"id": "muyangren",
+		"image": "https://www.bloodstar.xyz//p//Deodar2//noone//24_noone.png",
+		"edition": "custom",
+		"name": "牧羊人",
+		"ability": "玩家可以在夜晚举手以加入邪恶阵营，直到你死亡。如果邪恶玩家超过半数，所有因此加入邪恶阵营的玩家回归善良阵营，你的阵营获胜。",
+		"team": "minion",
+		"sch_team": "爪牙",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"reminders": ["邪恶", "举手"]
+	},
+	{
+		"id": "sun",
+		"image": "https://img.cdn1.vip/i/68d20ac7f015e_1758595783.webp",
+		"edition": "custom",
+		"name": "骇愕兽",
+		"ability": "每个夜晚*，选择一名玩家：他死亡。与你意见不同的玩家可能会死亡。",
+		"team": "demon",
+		"sch_team": "恶魔",
+		"firstNight": 0,
+		"otherNight": 1,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": ["死亡", "反对者"],
+		"setup": 0
+	},
+	{
+		"id": "duoluomaite",
+		"image": "https://img.cdn1.vip/i/68d20b20d35a5_1758595872.png",
+		"edition": "custom",
+		"name": "铠甲骑士",
+		"ability": "每个夜晚*，你要选择两名玩家：第一名玩家死亡，如果与第二名玩家相邻玩家中有一名存活爪牙，他死亡。",
+		"team": "demon",
+		"sch_team": "恶魔",
+                "firstNight": 0,
+		"otherNight": 2,
+		"reminders": ["死亡"],
+		"setup": 0
+	}
+]

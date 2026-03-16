@@ -1,0 +1,336 @@
+[
+  {
+    "id": "_meta",
+    "name": "〚逆天〛～Inverted Paradise",
+    "author": "叮当",
+    "logo":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4d/mcyod981cj9sc4m6rr8vz2tdebd3qir.png",
+    "almanac": "https://www.bloodstar.xyz/p/bluebell/fan/almanac.html"
+  },
+  {
+    "id": "_fan",
+    "firstNightReminder": "1",
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/godfather_b.png"
+    ],
+    "name": "教父",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知有哪些爪牙角色在场。",
+    "firstNight": 17000
+  },
+  {
+    "id": "1_fan",
+    "firstNightReminder": "1",
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/Icon_mezepheles_b.png"
+    ],
+    "name": "灵言师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个关键词和两名与该关键词有联系的玩家。",
+    "firstNight": 20000
+  },
+  {
+    "id": "2_fan",
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/Icon_vizier_b.png"
+    ],
+    "name": "维齐尔",
+    "team": "townsfolk",
+    "ability": "如果你死于处决，所有玩家知道你是维奇尔。"
+  },
+  {
+    "id": "3_fan",
+    "otherNightReminder": "1",
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/Icon_alhadikhia_b.png"
+    ],
+    "name": "哈迪寂亚",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择三名玩家：你会得知其中两名阵营彼此相同的玩家。",
+    "firstNight": 22000,
+    "otherNight": 12
+  },
+  {
+    "id": "5_fan",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "image": [
+      "https://i.postimg.cc/691sR26W/Icon-ojo-b.png"
+    ],
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "奥赫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一个角色：你会得知有多少个你选择过的角色死亡。",
+    "firstNight": 16000,
+    "otherNight": 9
+  },
+  {
+    "id": "6_fan",
+    "otherNightReminder": "1",
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/Icon_legion_b.png"
+    ],
+    "reminders": [
+      "投票"
+    ],
+    "name": "军团",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知今天白天有多少邪恶玩家与你一同投票。",
+    "otherNight": 13
+  },
+  {
+    "id": "7_fan",
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/vortox_b.png"
+    ],
+    "name": "涡流",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以拜访说书人得知一条错误信息。"
+  },
+  {
+    "id": "8_fan",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "被诅咒",
+      "被提名"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/witch_b.png"
+    ],
+    "name": "女巫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名除你以外的玩家：如果他明天白天提名了除你以外的玩家，当晚你得知他们的阵营是否相同。",
+    "firstNight": 18000,
+    "otherNight": 14
+  },
+  {
+    "id": "9_fan",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "name": "亡魂",
+    "image": [
+      "https://i.postimg.cc/5xWXZc28/Wraith-b.png"
+    ],
+    "team": "townsfolk",
+    "ability": "每个夜晚，你得知一个行动顺位和一名当晚在该行动顺位前因自身能力被唤醒的玩家。",
+    "firstNight": 22500,
+    "otherNight": 16
+  },
+  {
+    "id": "10_fan",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/Icon_fearmonger_b.png"
+    ],
+    "reminders": [
+      "恐惧"
+    ],
+    "name": "恐惧之灵",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知一条对他的阵营落败有帮助的建议。",
+    "firstNight": 23000,
+    "otherNight": 23
+  },
+  {
+    "id": "11_fan",
+     "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/scarlet_woman_b.png"
+    ],
+    "reminders": [
+      "是红唇"
+    ],
+    "name": "红唇女郎",
+    "team": "townsfolk",
+    "ability": "当一名玩家死亡时，你变成他的角色。"
+  },
+  {
+    "id": "12_fan",
+    "reminders": [
+      "假死"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/zombuul_b.png"
+    ],
+    "name": "僵怖",
+    "team": "townsfolk",
+    "ability": "当你首次死亡后，你仍存活，但会被当作死亡。"
+  },
+  {
+    "id": "13_fan",
+    "firstNightReminder": "1",
+    "reminders": [
+      "对立双子"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/evil_twin_b.png"
+    ],
+    "name": "镜像双子",
+    "team": "outsider",
+    "ability": "你知道一个爪牙角色，如果他在场且你被处决，你的阵营落败。",
+    "firstNight": 15000
+  },
+  {
+    "id": "14_fan",
+    "reminders": [
+      "幕后黑手"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/mastermind_b.png"
+    ],
+    "name": "主谋",
+    "team": "outsider",
+    "ability": "如果在你死亡后的下个白天有善良玩家被处决，他的阵营落败。"
+  },
+  {
+    "id": "16_faan",
+    "firstNightReminder": "1",
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/Icon_marionette_b.png"
+    ],
+    "setup": true,
+    "name": "提线木偶",
+    "team": "outsider",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。",
+    "firstNight": 11000
+  },
+  {
+    "id": "16_fan",
+    "firstNightReminder": "1",
+    "remindersGlobal": [
+      "实现愿望","付出代价"
+    ],
+    "image": [
+      "https://i.postimg.cc/XYXmZnZs/processed-icon.png"
+    ],
+    "name": "巫师",
+    "team": "outsider",
+    "ability": "说书人会向你许一个愿望并留下一个代价。如果愿望没有被实现，需要付出这个代价。即使你已死亡。",
+    "firstNight": 11001
+  },
+  {
+    "id": "17_fan",
+    "otherNightReminder": "1",
+    "name": "洗脑师",
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/cerenovus_b.png"
+    ],
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家，你会得知他是否在今天白天“疯狂”地证明自己是自身角色。",
+    "otherNight": 15
+  },
+  {
+    "id": "18_fan",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "醉酒1",
+      "醉酒2",
+      "醉酒3",
+      "失去能力"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/courtier_r.png"
+    ],
+    "name": "侍臣",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个角色：如果该角色在场，该角色之一从当晚开始醉酒三天三夜。",
+    "firstNight": 14000,
+    "otherNight": 3
+  },
+  {
+    "id": "15_fan",
+    "otherNightReminder": "1",
+    "reminders": [
+      "邪恶",
+      "善良"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/Icon_bountyhunter_r.png"
+    ],
+    "name": "赏金猎人",
+    "team": "minion",
+    "setup": 1,
+    "ability": "[会有一名镇民转变为邪恶阵营]如果你在他之前死亡，他当晚转变为善良阵营。",
+    "otherNight": 7
+  },
+  {
+    "id": "20_fan",
+    "remindersGlobal": [
+      "是炼金术士"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/Icon_alchemist_r.png"
+    ],
+    "name": "炼金术士",
+    "team": "minion",
+    "setup": 1,
+    "ability": "你拥有一个不在场的恶魔角色的能力，但你不能杀死玩家。"
+  },
+  {
+    "id": "19_fan",
+    "otherNightReminder": "1",
+    "reminders": [
+      "醉酒"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/sweetheart_r.png"
+    ],
+    "name": "心上人",
+    "team": "minion",
+    "ability": "当你死亡时，会有一名玩家开始醉酒。",
+    "otherNight": 8
+  },
+  {
+    "id": "21_fan",
+    "otherNightReminder": "1",
+    "reminders": [
+      "理发",
+      "死亡"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/barber_r.png"
+    ],
+    "name": "理发师",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。在夜晚时*，你可以选择交换两名玩家的角色，但每局游戏仅能交换一次。",
+    "otherNight": 4
+  },
+  {
+    "id": "22_fan",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡",
+      "醉酒"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/minstrel_r.png"
+    ],
+    "name": "吟游诗人",
+    "team": "demon",
+    "ability": "当首次有爪牙死于处决时，除了你和旅行者以外的所有其他玩家醉酒直到明天黄昏。每个夜晚*，你要选择一名玩家：他死亡。",
+    "otherNight": 5
+  },
+  {
+    "id": "23_fan",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "失足",
+      "死亡"
+    ],
+    "image": [
+      "https://picbed-1362790562.cos.ap-shanghai.myqcloud.com/Icon_lycanthrope_r.png"
+    ],
+    "name": "半兽人",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。会有一名善良玩家被镇民当作邪恶的半兽人，你知道他是谁。",
+    "firstNight": 13000,
+    "otherNight": 6
+  }
+]

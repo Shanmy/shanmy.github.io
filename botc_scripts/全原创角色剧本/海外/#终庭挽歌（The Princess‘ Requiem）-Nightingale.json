@@ -1,0 +1,535 @@
+[
+    {
+        "id": "_meta",
+        "name": "终庭挽歌 The Princess' Requiem",
+        "almanac": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/almanac.html",
+        "author": "Nightingale",
+        "logo": "https://youke1.picui.cn/s1/2025/09/10/68c054043eeb9.png",
+        "state": []
+    },
+    {
+        "id": "diyRole1",
+        "name": "侯爵",
+        "ability": "在你的首个夜晚，你会得知一个在场的对立阵营角色。如果邪恶玩家杀死了你，他也会死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "2",
+        "otherNight": "13",
+        "firstNightReminder": "唤醒侯爵，向他展示一个在场的邪恶角色",
+        "otherNightReminder": "如果邪恶玩家杀死了侯爵，侯爵首夜得知的邪恶角色也会死亡。",
+        "reminders": [
+            "死亡",
+            "看见"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/margrave_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole2",
+        "name": "档案官",
+        "ability": "每个夜晚，你要选择一个未选择过的角色：他会醉酒直到下个黄昏。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "3",
+        "otherNight": "14",
+        "firstNightReminder": "唤醒档案官，让他选择一个角色，他选择的角色醉酒直到下个黄昏。",
+        "otherNightReminder": "唤醒档案官，让他选择一个与之前不同角色，他选择的角色醉酒直到下个黄昏。",
+        "reminders": [
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/recordkeeper_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole3",
+        "name": "锻造师",
+        "ability": "每个夜晚，你要选择一名玩家：如果你选中了恶魔，他和一名存活的爪牙交换角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "4",
+        "otherNight": "15",
+        "firstNightReminder": "唤醒锻造师询问他要选择的玩家，如果选中了恶魔，恶魔与一名存活爪牙交换角色。",
+        "otherNightReminder": "唤醒锻造师询问他要选择的玩家，如果选中了恶魔，恶魔与一名存活爪牙交换角色。",
+        "reminders": [
+            "交换"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/forger_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole4",
+        "name": "催眠师",
+        "ability": "每个夜晚，你要选择一名玩家：如果你选中了邪恶玩家，他会得知你是催眠师；如果他“疯狂”地证明你是邪恶的，他可能会在当晚死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "5",
+        "otherNight": "16",
+        "firstNightReminder": "唤醒催眠师并让他选择一名玩家：如果选中了邪恶玩家，唤醒那名邪恶玩家告知催眠师是谁。",
+        "otherNightReminder": "唤醒催眠师并让他选择一名玩家：如果选中了邪恶玩家，唤醒那名邪恶玩家告知催眠师是谁。",
+        "reminders": [
+            "催眠",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/hypnotist_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole5",
+        "name": "王储",
+        "ability": "每个夜晚，你要选择除你以外的两名玩家：如果明天白天他们“疯狂”地证明你是善良的，当晚他们不会死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "6",
+        "otherNight": "17",
+        "firstNightReminder": "唤醒王储，选择两名玩家，标记疯狂",
+        "otherNightReminder": "如在白天时王储上个夜晚选择的玩家(标记疯狂)疯狂证明王储是善良的，标记不会死亡，他们当晚不会死亡。唤醒王储，选择两名玩家，标记疯狂。",
+        "reminders": [
+            "疯狂",
+            "不会死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/dauphin_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole6",
+        "name": "神射手",
+        "ability": "每个夜晚*，你要选择一名玩家：如果你选中了爪牙，与他邻近的一名存活善良玩家会死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "18",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒神射手，询问他选择一名玩家，如果选中了爪牙，与选中的爪牙邻近的一名存活的善良玩家会死亡。",
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/marksman_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole7",
+        "name": "中尉",
+        "ability": "每个夜晚*，在与恶魔对立阵营中，(除你以外的)对你的阵营最有价值的玩家不会死亡，直到下个黎明。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "19",
+        "firstNightReminder": "",
+        "otherNightReminder": "如果中尉存活，标记对你的阵营最有价值的玩家为“中坚力量”",
+        "reminders": [
+            "不会死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/lieutenant_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole8",
+        "name": "夜莺",
+        "ability": "每个夜晚*，如果从上个黎明到你被唤醒时有邪恶玩家死亡且你曾在白天“疯狂”地证明你是一个在场的角色，你所证明的那个在场角色会死亡(你不会因此死亡)。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "20",
+        "firstNightReminder": "",
+        "otherNightReminder": "如技能条件触发，且夜莺曾在白天“疯狂”地证明角色在场，那么对应在场角色死亡。",
+        "reminders": [
+            "死亡",
+            "疯狂",
+            "伤害",
+            "今晚伤害"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/nighthawk_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole9",
+        "name": "女侯爵",
+        "ability": "每个白天，你可以公开选择至少两名玩家：如果他们都不是恶魔，当晚其中一名玩家会死亡。（如果你白天处于中毒或醉酒状态，当晚清醒且健康技能会正常发动。）",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "21",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "死亡",
+            "选择"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/marchioness_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole10",
+        "name": "织梦者",
+        "ability": "每个白天*，你可以私下拜访说书人并选择一名玩家：你会得知哪个角色类型杀死了他（或者你会得知没有）。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/dreamweaver_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole11",
+        "name": "女猎手",
+        "ability": "每局游戏限一次，在夜晚时，你会得知除你以外离你最近的带有提示标记的一名存活的玩家（或者你会得知没有）。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "5",
+        "otherNight": "22",
+        "firstNightReminder": "唤醒女猎手并询问她是否发动能力，如发动，她会得知除她以外离你最近的带有提示标记的一名存活的玩家（或者她会得知没有）。",
+        "otherNightReminder": "唤醒女猎手并询问她是否发动能力，如发动，她会得知除她以外离你最近的带有提示标记的一名存活的玩家（或者她会得知没有）。",
+        "reminders": [
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/huntress_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole12",
+        "name": "变形者",
+        "ability": "爪牙不会被唤醒得知爪牙信息。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/shapeshifter_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole13",
+        "name": "闺女",
+        "ability": "当你首次在夜晚将要死亡时，你不会死亡且会得知谁杀死了你。如果他是邪恶的，他可以选择两名玩家交换角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "23",
+        "firstNightReminder": "",
+        "otherNightReminder": "当闺女首次在夜晚即将死亡时，她不会死亡且会得知谁杀死了你。如果他是邪恶的，他可以选择两名玩家交换角色。",
+        "reminders": [
+            "得知",
+            "交换",
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/demoiselle_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole14",
+        "name": "拷问者",
+        "ability": "如果与你邻近的两名存活玩家都是善良的，他们醉酒，即使你已死亡。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/torturer_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole15",
+        "name": "阴谋家",
+        "ability": "你始终会得知一名存活的善良玩家。如果你没有“疯狂”地证明他是邪恶的，他可能会死亡。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "8",
+        "otherNight": "1",
+        "firstNightReminder": "唤醒阴谋家，告知他一名存活的善良玩家。",
+        "otherNightReminder": "如果阴谋家没有在白天“疯狂”地证明你得知的玩家是邪恶的，他可能会死亡。",
+        "reminders": [
+            "嫉妒",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/conspirator_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole16",
+        "name": "炎血",
+        "ability": "当你或一名爪牙玩家死亡时，一名邪恶玩家会在当晚变成一个不在场的角色。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "24",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "今晚分裂"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/fireblood_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole17",
+        "name": "伯爵",
+        "ability": "每局游戏限一次，在夜晚时*，如果与你邻近的两名存活善良玩家“疯狂”地证明他们是他们对应的角色，其中一名玩家可能会死亡。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "2",
+        "firstNightReminder": "",
+        "otherNightReminder": "每局游戏限一次，如果与伯爵邻近的两名存活善良玩家“疯狂”地证明他们是他们对应的角色，其中一名玩家可能会死亡。",
+        "reminders": [
+            "疯狂",
+            "死亡",
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/palsgrave_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole18",
+        "name": "公主殿下",
+        "ability": "邪恶玩家的负面能力对你无效。选择你或你的角色的邪恶玩家和你交换角色。[+1外来者]",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "9",
+        "firstNightReminder": "",
+        "otherNightReminder": "如果邪恶玩家选择了公主殿下，他们立即交换角色。",
+        "reminders": [
+            "交换"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/theprincess_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole19",
+        "name": "炽天使",
+        "ability": "你始终会得知一名与你邻近的存活镇民玩家：他中毒。每个夜晚*，你要猜测该玩家的角色：如果你猜测正确，他死亡。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "9",
+        "otherNight": "3",
+        "firstNightReminder": "唤醒炽天使，告知他一名与他邻近的存活中毒镇民玩家。",
+        "otherNightReminder": "如果炽天使之前得知的中毒镇民死亡，会有另一名与你邻近的存活镇民玩家中毒，且炽天使会得知他是谁。炽天使要猜测他的角色，如果正确，他死亡。",
+        "reminders": [
+            "中毒",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/theseraph_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole20",
+        "name": "传令使",
+        "ability": "每个夜晚，你要选择一个与之前不同的善良角色：如果该角色不在场或在场但已死亡，你获得该角色的能力直到下个黄昏。如果大于两名玩家存活，善良阵营无法获胜。[-1外来者]",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "10",
+        "otherNight": "4",
+        "firstNightReminder": "唤醒传令使，选择一个善良角色：如果该角色不在场，获得该角色的能力直到下个黄昏。",
+        "otherNightReminder": "唤醒传令使，选择一个与之前不同的善良角色：如果该角色不在场或在场但已死亡，获得该角色的能力直到下个黄昏。",
+        "reminders": [
+            "是传令使",
+            "传令使能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/theherald_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole21",
+        "name": "小提琴手",
+        "ability": "每个夜晚*，如果上个白天你“疯狂”地证明一名(与之前不同的)邪恶玩家是邪恶的，你要选择一名玩家：他死亡。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "5",
+        "firstNightReminder": "",
+        "otherNightReminder": "如果当天白天小提琴手“疯狂”地证明一名与之前不同的邪恶玩家是邪恶的，小提琴手会被唤醒并选择一名玩家：他死亡。",
+        "reminders": [
+            "奏鸣曲已写",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/theviolinist_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole22",
+        "name": "画家",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。你和外来者会被镇民当作在场的爪牙角色，爪牙会被镇民当作画家。[+1外来者]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "6",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒画家：让他选择一名玩家：他死亡。",
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/thepainter_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole23",
+        "name": "霸主",
+        "ability": "每个夜晚*，会有一名玩家死亡。你拥有一个不在场的爪牙角色的能力。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "11",
+        "otherNight": "7",
+        "firstNightReminder": "唤醒霸主，告诉他获得了哪个不在场爪牙的能力。",
+        "otherNightReminder": "会有一名玩家死亡。",
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/thehegemon_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole24",
+        "name": "深渊",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你每晚首次击杀的玩家不是镇民，当晚你可以再次行动。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "8",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒深渊，让他选择一名玩家：他死亡。如果深渊选择的玩家不是镇民，他可以再次行动",
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/themaelstrom_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole25",
+        "name": "王子",
+        "ability": "爪牙不知道你是恶魔。每个夜晚*，一名爪牙要选择一名玩家：他死亡。如果你“疯狂”地证明你是善良的，当你在夜晚死亡后，你仍存活，但会被当作死亡，随后会有一名其他玩家死亡。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "9",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒一名爪牙，让其选择一名玩家：他死亡。",
+        "reminders": [
+            "死亡",
+            "唤醒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/theprince_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole26",
+        "name": "荷兰人",
+        "ability": "在你的首个夜晚，你会得知与你阵营相同的一名玩家。如果他死亡，你会代替他死亡。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "得知",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/dutchman_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole27",
+        "name": "工贼",
+        "ability": "每个夜晚，你会得知一名玩家。如果他在明天提名了善良玩家，被提名的玩家会在当晚死亡。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "12",
+        "otherNight": "10",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "提名",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/strikebreaker_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole28",
+        "name": "金匠",
+        "ability": "每个白天，你可以更改一名玩家对自己的投票。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "更改投票"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/goldsmith_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole29",
+        "name": "审判官",
+        "ability": "每局游戏限一次，在夜晚时*，你要选择一名玩家：他变成他正在“疯狂”地证明自己是的那个角色。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "11",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒审判官，询问审判官是否使用能力，如使用，审判官要选择一名玩家：那名玩家变成他正在“疯狂”地证明自己是的那个角色。",
+        "reminders": [
+            "疯狂"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/inquisitor_princesses_requiem.png"
+    },
+    {
+        "id": "diyRole30",
+        "name": "权臣",
+        "ability": "如果白天提名阶段将以平票结束时，一名在票数最高的平票玩家中与你阵营不同玩家会被处决。如果获得票数最高的平票玩家中没有与你阵营不同玩家，一名在票数最高的平票玩家中与你阵营相同的玩家会被处决。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "平票",
+            "处决"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Nightingale/Princesses_Requiem/minister_princesses_requiem.png"
+    }
+]

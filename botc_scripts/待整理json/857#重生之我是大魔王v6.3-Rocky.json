@@ -1,0 +1,331 @@
+[
+    {
+        "id": "_meta",
+        "author": "Rocky",
+        "name": "重生之我是大魔王v6.3",
+        "logo":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/e/ee/tf8jshyzvcunniefsi7627dbqc7fapn.png/1600px-%E9%87%8D%E7%94%9F%E4%B9%8B%E6%88%91%E6%98%AF%E5%A4%A7%E9%AD%94%E7%8E%8Blogo.png",
+        "playerCount": "7-15人"
+    },
+    {
+        "id": "24manbaout",
+        "name": "魔王降临",
+        "team": "fabled",
+        "ability": "一名善良玩家初始持有魔王印记，印记持有者可能会被视为邪恶阵营、爪牙角色或恶魔角色。杀死或提名并处决该玩家会夺取魔王印记。当恶魔持有魔王印记时，他会额外获得一个爪牙能力。",
+        "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/6/64/crfgdfhtg3y6ao8vcbbg9q4t87857pe.png/1200px-%E4%BC%A0%E5%A5%87%E8%A7%92%E8%89%B2_%E9%AD%94%E7%8E%8B%E9%99%8D%E4%B8%B4_Rocky.png",
+        "reminders": ["魔王印记"]
+    },
+    {
+        "id": "spirit_of_ivory",
+        "name": "圣洁之魂",
+        "team": "fabled",
+        "ability": "游戏过程中邪恶玩家的总数最多能比初始设置多一名。",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/spirit_of_ivory.png",
+        "edition": "custom"
+    },{
+    "id": "7_yitai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/8q30hp9tktftku0bb32yxuxeec5713y.png",
+    "firstNightReminder": "唤醒一名爪牙，告知他牛仔在场。",
+    "otherNightReminder": "如果“发起提名”被放置在场上，唤醒牛仔",
+    "reminders": [
+      "宿敌",
+      "发起提名",
+      "了断"
+    ],
+    "name": "牛仔",
+    "team": "townsfolk",
+    "ability": "一名爪牙知道牛仔在场。每当他发起提名，你会在当晚被唤醒。你们中首次被对方提名的玩家立即被处决。",
+    "firstNight": 7200,
+    "otherNight": 10900
+  },
+    {
+        "id": "langzhong_button",
+        "name": "郎中",
+        "team": "townsfolk",
+        "ability": "每个夜晚，你要选择一名玩家：你会得知一个与他能力相关的词语。",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202301/c_9255777694761_7594675d.jpg",
+        "edition": "custom",
+        "firstNight": 9300,
+        "otherNight": 12200,
+        "firstNightReminder": "唤醒郎中，让其指向一名玩家。以不会被其他玩家察觉的形式对其提供与该玩家角色能力相关的一个词语。",
+        "otherNightReminder": "唤醒郎中，让其指向一名玩家。以不会被其他玩家察觉的形式对其提供与该玩家角色能力相关的一个词语。",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0
+    },
+    {
+        "id": "1_18",
+        "name": "共情者",
+        "team": "townsfolk",
+        "ability": "每个夜晚，你会得知与你邻近的两名存活的玩家中邪恶玩家的数量。",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/empath.png",
+        "edition": "custom",
+        "firstNight": 7900,
+        "otherNight": 11000,
+        "firstNightReminder": "给他展示数字手势来告诉他与他邻近的存活玩家有几人是邪恶的。",
+        "otherNightReminder": "给他展示数字手势来告诉他与他邻近的存活玩家有几人是邪恶的。",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0
+    },
+    {
+        "id": "2_43",
+        "name": "侍女",
+        "team": "townsfolk",
+        "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/chambermaid.png",
+        "edition": "custom",
+        "firstNight": 12800,
+        "otherNight": 14800,
+        "firstNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
+        "otherNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0
+    },
+    {
+        "id": "admire",
+        "name": "舰队司令",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在白天时，你可以私下询问说书人以得知两名玩家：其中一名是对你们帮助最大的对立阵营玩家，另一名是对你们损害最大的我方阵营玩家。",
+        "image": "https://www.bloodstar.xyz/p/fake/TheOne/admiral_theone.png",
+        "edition": "custom",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": ["蓝猪", "红猪"],
+        "remindersGlobal": [],
+        "setup": true
+    },
+    {
+        "id": "pixie_button",
+        "name": "小精灵",
+        "team": "townsfolk",
+        "ability": "在你的首个夜晚，你会得知一个在场的镇民角色。如果你\"疯狂\"地证明你是该角色，当他死亡时你获得该角色的能力。",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/pixie.png",
+        "edition": "custom",
+        "firstNight": 7300,
+        "otherNight": 0,
+        "firstNightReminder": "对小精灵展示一个在场的镇民角色。",
+        "otherNightReminder": "",
+        "reminders": ["疯狂", "获得能力"],
+        "remindersGlobal": [],
+        "setup": 0
+    },
+    {
+        "id": "51_dafenqi",
+        "name": "空中飞人",
+        "team": "townsfolk",
+        "ability": "你死亡的当晚会被唤醒并得知所有角色类型的玩家各一名。你死于善良玩家发起的提名处决或能力时你醉酒。",
+        "image": "https://www.bloodstar.xyz/p/humlet/Dafenqi/51_dafenqi.png",
+        "otherNight": 9800,
+        "otherNightReminder": "如果死亡唤醒他，并告知他所有类型的玩家（除旅行者）各一名。",
+        "reminders": ["醉酒"]
+    },
+    {
+        "id": "furryhaoye111",
+        "name": "半兽人",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你要选择一名存活玩家：如果他是善良的，他死亡，并且当晚恶魔不会造成死亡。会有一名善良玩家始终被当作邪恶阵营。",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/lycanthrope.png",
+        "edition": "custom",
+        "firstNight": 0,
+        "otherNight": 4400,
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒半兽人，让他选择一名玩家。如果该玩家是善良玩家，该玩家死亡，且当晚恶魔不会造成死亡。",
+        "reminders": ["失足", "死亡"],
+        "setup": false
+    },
+    {
+        "id": "TheBrave",
+        "name": "勇者",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家，他死亡。如果你选择了恶魔或魔王印记持有者，你会立即变成一个邪恶的不在场恶魔，当晚的死亡由说书人决定。",
+        "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fb/91idhtdwo6fuq7mlcl1jqp5psknk59f.png",
+        "edition": "custom",
+        "otherNight": 4500,
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒勇者，说书人询问其是否发动，如果选择的玩家是恶魔或魔王印记持有者则勇者变成一个邪恶的不在场恶魔角色。",
+        "reminders": ["失去能力", "黑化", "死亡"]
+    },
+    {
+        "id": "xuncha_button",
+        "name": "巡察",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你要选择两个善良角色（与上个夜晚不同）：如果他们都存活，他们当晚不会死亡。",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202404/c_7108682943171_ed7a0042.jpg",
+        "edition": "custom",
+        "firstNight": 0,
+        "otherNight": 4300,
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒巡查，让其选择两个善良角色，如果这两个角色都在场，在对应玩家角色标记旁放置\"不会死亡\"标记。",
+        "reminders": ["不会死亡"],
+        "remindersGlobal": [],
+        "setup": 0
+    },
+    {
+        "id": "cannibal_button",
+        "name": "食人族",
+        "team": "townsfolk",
+        "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/cannibal.png",
+        "edition": "custom",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": ["中毒", "死于今日"],
+        "remindersGlobal": [],
+        "setup": 0
+    },
+    {
+        "id": "tanmoshi",
+        "name": "探魔师",
+        "team": "townsfolk",
+        "ability": "每个夜晚，你要选择三名玩家，你会得知其中是否有邪恶玩家。拥有魔王印记的玩家始终会被你视为邪恶。",
+        "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/7/72/a9p2ncl4s1euphgk8lvu3hqdrje7vbu.png/1200px-%E9%95%87%E6%B0%91_%E6%8E%A2%E9%AD%94%E5%B8%88_Rocky.png",
+        "edition": "custom",
+        "firstNight": 9400,
+        "otherNight": 12300,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": ["探查"],
+        "remindersGlobal": [],
+        "setup": 0
+    },
+    {
+        "id": "72a9b85e-6f8a-40ab-9dc2-7fa440b1fa0c11",
+        "name": "祈愿妖精",
+        "team": "townsfolk",
+        "ability": "在你的首个白天，拜访说书人并选择\"那么……\"，说书人会告诉你\"如果……\"，他们组成你的完整能力。",
+        "image": "https://i.postimg.cc/q7zx4sVt/1-dnd.png",
+        "edition": "custom"
+    },
+    {
+        "id": "45_rose",
+        "name": "地狱弃子",
+        "team": "outsider",
+        "ability": "每个白天提名开始前，爪牙可以公开拥立地狱弃子：你立即转变为邪恶且与恶魔交换角色，然后他醉酒。",
+        "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/b/b1/9bht7wid3ws47sozvj7k53ujg1ybukx.png/1200px-%E5%A4%96%E6%9D%A5%E8%80%85_%E5%9C%B0%E7%8B%B1%E5%BC%83%E5%AD%90_%E5%A4%AA%E4%B8%80.png",
+        "attribution": "太一",
+        "flavor": "他们剪去我的双翼，掷我于蛮荒。每寸腐土都在倒数，等地狱拥立他们的新王。",
+        "reminders": ["罢黜"]
+    },
+    {
+        "id": "8_sheshecup1",
+        "name": "迷沙陷阱",
+        "team": "outsider",
+        "ability": "一名镇民踏入迷沙陷阱。每个夜晚*，他顺时针的下一名存活玩家代替他踏入迷沙陷阱。在迷沙陷阱中的镇民醉酒，会产生错误信息并且被其他角色能力当做外来者。[+1镇民]",
+        "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c3/46619m9u30ro0u84s8s92zswan47vkf.png",
+        "firstNight": 0,
+        "otherNight": 100,
+        "firstNightReminder": "",
+        "otherNightReminder": "将迷沙陷阱的标记移动到顺时针的下一名存活玩家上。",
+        "reminders": [],
+        "remindersGlobal": ["迷沙陷阱"],
+        "setup": 1
+    },
+    {
+        "id": "moerhaosi",
+        "name": "摩尔豪斯",
+        "team": "outsider",
+        "ability": "如果你持有魔王印记，你会得知此事。被你提名的玩家如果持有魔王印记，则你获得魔王印记。如果你持有魔王印记并存活两个夜晚，下个黄昏你单独获胜。你初始不会持有魔王印记。[距离你最远或最近的善良玩家持有初始魔王印记]",
+        "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/4/4d/3xcn9wj5mbvil5xnslvujqnmxk98lll.png/1200px-%E5%A4%96%E6%9D%A5%E8%80%85_%E6%91%A9%E5%B0%94%E8%B1%AA%E6%96%AF_Rocky.png",
+        "firstNight": 0,
+        "otherNight": 12100,
+        "firstNightReminder": "",
+        "otherNightReminder": "如果摩尔豪斯持有魔王印记，唤醒其得知此事。",
+        "reminders": ["法力水晶"],
+        "remindersGlobal": [],
+        "setup": 1
+    },
+    {
+        "id": "cerenovus_button",
+        "name": "洗脑师",
+        "team": "minion",
+        "ability": "每个夜晚，你要选择一名玩家和一个善良角色。他明天白天和夜晚需要\"疯狂\"地证明自己是这个角色，不然他可能被处决。",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/cerenovus.png",
+        "edition": "custom",
+        "firstNight": 5800,
+        "otherNight": 2800,
+        "firstNightReminder": "让洗脑师选择一名玩家和一个善良角色。标记那名玩家疯狂。让洗脑师重新入睡。唤醒洗脑师的目标。对这名玩家展示\"该角色的能力对你生效\"信息标记，洗脑师角色标记，该玩家需要疯狂证明的角色标记。",
+        "otherNightReminder": "让洗脑师选择一名玩家和一个善良角色。标记那名玩家疯狂。让洗脑师重新入睡。唤醒洗脑师的目标。对这名玩家展示\"该角色的能力对你生效\"信息标记，洗脑师角色标记，该玩家需要疯狂证明的角色标记。",
+        "reminders": ["疯狂"],
+        "remindersGlobal": [],
+        "setup": 0
+    },
+    {
+        "id": "Imposter",
+        "name": "冒名客",
+        "team": "minion",
+        "ability": "每个白天，在你首次\"疯狂\"地证明自己是一个在场角色时，你在那天让他中毒并获得该角色的能力。",
+        "image": "https://www.bloodstar.xyz/p/Airell_clocktower/Assets_of_Lei_Gallery/imposter_assets_of_lei_gallery.png",
+        "firstNight": 0,
+        "otherNight": 600,
+        "firstNightReminder": "",
+        "otherNightReminder": "如果冒名客的能力会让他在今晚醒来：唤醒他并执行其能力。",
+        "reminders": ["冒名"],
+        "remindersGlobal": ["是冒名客"]
+    },
+    {
+        "id": "yaoseng_button",
+        "name": "妖僧",
+        "team": "minion",
+        "ability": "在你的首个夜晚，你会得知一个关键词：当有邪恶玩家首次说出该关键词时，所有善良玩家中毒直至下个黎明，即使你已死亡。[-1外来者]",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/upload/1697467864_197011_515.png",
+        "edition": "snv",
+        "firstNight": 7000,
+        "otherNight": 200,
+        "firstNightReminder": "告诉妖僧他的关键词。",
+        "otherNightReminder": "",
+        "reminders": ["妖言惑众", "失去能力"],
+        "remindersGlobal": [],
+        "setup": 1
+    },
+    {
+        "id": "ReversalDemon",
+        "name": "逆命魔王",
+        "team": "demon",
+        "ability": "每个夜晚*,你要选择一名玩家，他死亡。在你的首个夜晚，你得知三个在场角色，其中一名角色拥有魔王印记。当你继承魔王印记后，夜晚你额外行动一次",
+        "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/9/9e/o8lm4jwc6gu1mvc9tty8b11xntxtm8l.png/1200px-%E6%81%B6%E9%AD%94_%E9%80%86%E5%91%BD%E9%AD%94%E7%8E%8B_Rocky.png",
+        "edition": "custom",
+        "firstNight": 6700,
+        "otherNight": 6000,
+        "firstNightReminder": "唤醒逆命魔王，告知他三名的玩家角色，其中一名拥有魔王印记。",
+        "otherNightReminder": "唤醒逆命魔王，让他击杀一名玩家。如果魔王印记在逆命魔王处，再次唤醒逆命魔王，并标记魔王觉醒。",
+        "reminders": ["死亡", "魔王觉醒"],
+        "remindersGlobal": []
+    },
+    {
+        "id": "22_juedou",
+        "name": "刻耳柏洛斯",
+        "team": "demon",
+        "ability": "每个夜晚*，你要选择一名玩家，每当你选中爪牙时你要再选一名玩家：他们死亡。被你杀死的爪牙保留他的能力。",
+        "image": "https://www.bloodstar.xyz/p/humlet/JUEDOU/22_juedou.png",
+        "otherNight": 7100,
+        "otherNightReminder": "唤醒刻耳柏洛斯选择一名玩家，如果是邪恶的爪牙，杀死他并保留他的能力，再让刻耳柏洛斯选择一名玩家。",
+        "reminders": ["死亡", "保留能力"],
+        "flavor": "啃食你的肉体，超度你的灵魂，然后与我一起徘徊在这地狱之门。"
+    },
+   {
+        "id": "savant"
+    },
+    {
+        "id": "golem"
+    },
+    {
+        "id": "mutant"
+    },
+    {
+        "id": "psychopath"
+    },
+    {
+        "id": "godfather"
+    },
+    {
+        "id": "taotie"
+    },
+    {
+        "id": "yaggababble"
+    }
+]

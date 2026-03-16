@@ -1,0 +1,334 @@
+[
+  {
+    "id": "_meta",
+    "name": "徇私枉法 Obstrvction of Justice",
+    "author": "Schnauzer",
+    "logo": "https://free.picui.cn/free/2025/12/07/69346acf2592b.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/ObstrvctionofJustice/almanac.html"
+  },
+  {
+    "id": "_obstrvctionofjustice",
+    "image": "https://free.picui.cn/free/2025/12/07/69346acd51f5d.png",
+    "name": "首席律师",
+    "team": "fabled",
+    "ability": "每个被提名者要选择一名玩家：在投票前，只有他可以发言，并且他要“疯狂”地证明被提名者是善良的，否则他可能死亡。"
+  },
+  {
+    "id": "1_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/mayor.png",
+    "name": "镇长",
+    "team": "townsfolk",
+    "ability": "如果只有三名玩家存活且白天没有人被处决，你的阵营获胜。如果你在夜晚死亡，可能会有一名其他玩家代替你死亡。"
+  },
+  {
+    "id": "2_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/mathematician.png",
+    "firstNightReminder": "唤醒数学家，用手势比划数字来告诉他今天有多少玩家的能力未正常生效。",
+    "otherNightReminder": "唤醒数学家，用手势比划数字来告诉他今天有多少玩家的能力未正常生效。",
+    "reminders": [
+      "未正常生效"
+    ],
+    "name": "数学家",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知有多少名玩家的能力因为其他角色的能力而未正常生效。（从上个黎明到你被唤醒时）",
+    "firstNight": 4300,
+    "otherNight": 18
+  },
+  {
+    "id": "3_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/town_crier.png",
+    "otherNightReminder": "唤醒城镇公告员，以点头或摇头告知他今天白天是否有爪牙发起提名。",
+    "reminders": [
+      "爪牙未提名",
+      "爪牙已提名"
+    ],
+    "name": "城镇公告员",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天时是否有爪牙发起过提名。",
+    "otherNight": 13
+  },
+  {
+    "id": "4_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/savant.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "5_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/amnesiac.png",
+    "firstNightReminder": "决定失忆者的能力，并根据具体能力决定是否需要唤醒失忆者、何时唤醒、唤醒后让他做出什么操作或得知什么信息。",
+    "otherNightReminder": "根据失忆者的具体能力决定是否需要唤醒失忆者、何时唤醒、唤醒后让他做出什么操作或得知什么信息。",
+    "reminders": [
+      "？"
+    ],
+    "name": "失忆者",
+    "team": "townsfolk",
+    "ability": "你不知道你的能力是什么。每个白天你可以找说书人猜测一次，你会得知你的猜测有多准确。",
+    "firstNight": 11,
+    "otherNight": 2
+  },
+  {
+    "id": "6_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/balloonist.png",
+    "firstNightReminder": "唤醒气球驾驶员，对他指向一名玩家。",
+    "otherNightReminder": "唤醒气球驾驶员，对他指向一名玩家，这名玩家与之前气球驾驶员上一个夜晚得知过的玩家属于不同的角色类型。",
+    "reminders": [
+      "得知"
+    ],
+    "setup": true,
+    "name": "气球驾驶员",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名与上个夜晚得知的玩家角色类型不同的玩家。[+0~1外来者]",
+    "firstNight": 4000,
+    "otherNight": 14
+  },
+  {
+    "id": "7_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fisherman.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "渔夫",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以让说书人给你一些能帮助你的阵营获胜的建议。"
+  },
+  {
+    "id": "8_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/alchemist.png",
+    "firstNightReminder": "唤醒炼金术士，对他展示他获得的能力所对应的爪牙角色标记。",
+    "remindersGlobal": [
+      "是炼金术士"
+    ],
+    "setup": true,
+    "name": "炼金术士",
+    "team": "townsfolk",
+    "ability": "你拥有一个爪牙角色的能力。当你使用能力时，说书人可能会要求你更换选择。",
+    "firstNight": 12
+  },
+  {
+    "id": "9_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/king.png",
+    "firstNightReminder": "如果国王在场，对恶魔展示国王角色标记并指向国王玩家。",
+    "otherNightReminder": "如果满足国王的唤醒条件，唤醒国王，对他展示一个存活的角色标记。",
+    "name": "国王",
+    "team": "townsfolk",
+    "ability": "每个夜晚，如果死亡的玩家数量大于或等于存活的玩家数量，你会得知一个存活的角色。恶魔知道你是国王。",
+    "firstNight": 3400,
+    "otherNight": 16
+  },
+  {
+    "id": "10_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/choirboy.png",
+    "otherNightReminder": "如果恶魔杀死了国王，唤醒唱诗男孩，对他指向恶魔。",
+    "setup": true,
+    "name": "唱诗男孩",
+    "team": "townsfolk",
+    "ability": "如果恶魔杀死了国王，你会得知哪名玩家是恶魔。[+国王]",
+    "otherNight": 12
+  },
+  {
+    "id": "11_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/steward.png",
+    "firstNightReminder": "唤醒事务官，对他指向一名善良玩家。",
+    "reminders": [
+      "得知"
+    ],
+    "name": "事务官",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名善良玩家。",
+    "firstNight": 3900
+  },
+  {
+    "id": "12_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/high_priestess.png",
+    "firstNightReminder": "唤醒女祭司，对她指向一名玩家。",
+    "otherNightReminder": "唤醒女祭司，对她指向一名玩家。",
+    "name": "女祭司",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名说书人认为你最应该与其交流的玩家。",
+    "firstNight": 4200,
+    "otherNight": 17
+  },
+  {
+    "id": "13_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/village_idiot.png",
+    "firstNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "otherNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": true,
+    "name": "村夫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的阵营。[+0~2村夫，复数村夫中有一人醉酒]",
+    "firstNight": 4100,
+    "otherNight": 15
+  },
+  {
+    "id": "14_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/mutant.png",
+    "name": "畸形秀演员",
+    "team": "outsider",
+    "ability": "如果你“疯狂”地证明自己是外来者，你可能被处决。"
+  },
+  {
+    "id": "15_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/sweetheart.png",
+    "otherNightReminder": "如果心上人死亡，一名玩家醉酒。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "心上人",
+    "team": "outsider",
+    "ability": "当你死亡时，会有一名玩家开始醉酒。",
+    "otherNight": 10
+  },
+  {
+    "id": "16_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/puzzlemaster.png",
+    "reminders": [
+      "醉酒",
+      "已猜测"
+    ],
+    "name": "解谜大师",
+    "team": "outsider",
+    "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。"
+  },
+  {
+    "id": "17_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/plague_doctor.png",
+    "otherNightReminder": "如果瘟疫医生死亡，说书人获得一项爪牙能力。",
+    "reminders": [
+      "说书人能力"
+    ],
+    "name": "瘟疫医生",
+    "team": "outsider",
+    "ability": "当你死亡时，说书人会获得一个爪牙能力。",
+    "otherNight": 11
+  },
+  {
+    "id": "18_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/custom/d_5567085766861_90ba278e.jpg",
+    "firstNightReminder": "让妖猫选择一名玩家，给被选中的玩家放置喵标记，告知被选中的玩家发言只能是“喵喵喵”直至下个黄昏。",
+    "otherNightReminder": "让妖猫选择一名玩家，给被选中的玩家放置喵标记，告知被选中的玩家发言只能是“喵喵喵”直至下个黄昏。",
+    "reminders": [
+      "喵"
+    ],
+    "name": "妖猫",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家（可选说书人1次）：他中毒（恶魔除外）且发言只能是“喵喵喵”直至下个黄昏，不然可能被处决。",
+    "firstNight": 3800,
+    "otherNight": 5
+  },
+  {
+    "id": "19_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/evil_twin.png",
+    "firstNightReminder": "分别独自唤醒镜像双子和对立双子，告知他们由于镜像双子能力而得知的信息。",
+    "reminders": [
+      "对立双子"
+    ],
+    "name": "镜像双子",
+    "team": "minion",
+    "ability": "你与一名对立阵营的玩家互相知道对方是什么角色。如果其中善良玩家被处决，邪恶阵营获胜。如果你们都存活，善良阵营无法获胜。",
+    "firstNight": 3600
+  },
+  {
+    "id": "20_obstrvctionofjustice",
+    "image": "https://clocktower-wiki.gstonegames.com/images/f/ff/Organgrinder.png",
+    "firstNightReminder": "让街头风琴手选择自己是否醉酒。如果他点头，标记街头风琴手醉酒。",
+    "otherNightReminder": "让街头风琴手选择自己是否醉酒。如果他点头，标记街头风琴手醉酒。如果他摇头，移除街头风琴手的醉酒标记。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "街头风琴手",
+    "team": "minion",
+    "ability": "所有玩家在投票时闭眼，且票数会秘密统计。每个夜晚，你要选择自己是否醉酒直到下个黄昏。",
+    "firstNight": 3500,
+    "otherNight": 3
+  },
+  {
+    "id": "21_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/harpy.png",
+    "firstNightReminder": "唤醒鹰身女妖，让她选择两名玩家，第一名玩家明天需要“疯狂”证明第二名玩家邪恶。在鹰身女妖入睡后通知第一名玩家被鹰身女妖选中。",
+    "otherNightReminder": "唤醒鹰身女妖，让她选择两名玩家，第一名玩家明天需要“疯狂”证明第二名玩家邪恶。在鹰身女妖入睡后通知第一名玩家被鹰身女妖选中。",
+    "reminders": [
+      "疯狂",
+      "第二名"
+    ],
+    "name": "鹰身女妖",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择两名玩家：明天第一名玩家需要“疯狂”地证明第二名玩家是邪恶的，否则他们之中可能会有人死亡。",
+    "firstNight": 3700,
+    "otherNight": 4
+  },
+  {
+    "id": "22_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fang_gu.png",
+    "otherNightReminder": "唤醒方古，让他攻击一名玩家。如果该玩家是外来者并成功转化，则方古死亡，在他入睡后通知那名外来者角色变化。",
+    "reminders": [
+      "死亡",
+      "限一次"
+    ],
+    "setup": true,
+    "name": "方古",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被该能力杀死的外来者变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者]",
+    "otherNight": 6
+  },
+  {
+    "id": "23_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/vigormortis.png",
+    "otherNightReminder": "唤醒亡骨魔，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "保留能力",
+      "中毒"
+    ],
+    "setup": true,
+    "name": "亡骨魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+    "otherNight": 8
+  },
+  {
+    "id": "24_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/no_dashii.png",
+    "otherNightReminder": "唤醒诺-达鲺，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "name": "诺-达鲺",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+    "otherNight": 7
+  },
+  {
+    "id": "25_obstrvctionofjustice",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/kazali.png",
+    "firstNightReminder": "唤醒卡扎力，让他选择玩家变成邪恶爪牙。",
+    "otherNightReminder": "唤醒卡扎力，让他攻击一名玩家。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "卡扎力",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。[由你决定谁是什么爪牙，-或+任意数量外来者]",
+    "firstNight": 13,
+    "otherNight": 9
+  },
+  {
+    "id": "26_obstrvctionofjustice",
+    "name": "炼金术士&街头风琴手",
+    "team": "jinxes",
+    "ability": "如果炼金术士获得街头风琴手的能力，街头风琴手一定在场。如果炼金术士和街头风琴手都是清醒的，改为他们都醉酒。"
+  },
+  {
+    "id": "27_obstrvctionofjustice",
+    "name": "瘟疫医生&镜像双子",
+    "team": "jinxes",
+    "ability": "如果说书人本应获得镜像双子的能力，改为一名玩家会变成镜像双子。"
+  }
+]

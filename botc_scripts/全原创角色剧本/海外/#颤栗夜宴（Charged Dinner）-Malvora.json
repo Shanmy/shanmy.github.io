@@ -1,0 +1,497 @@
+[
+  {
+    "id": "_meta",
+    "name": "颤栗夜宴 Charged Dinner",
+    "author": "Malvora.",
+    "logo": "https://i.postimg.cc/yN5RSRZY/LOGO.png"
+  },
+  {
+    "id": "flirt_charged_dinner",
+    "name": "情场高手",
+    "image": [
+      "https://i.postimg.cc/bYnVc2Xj/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "在你的首个夜晚，你得知一名在场的外来者：他醉酒(或者你会得知没有外来者在场)。",
+    "flavor": "Oh, why, aren'tcha a charming little thing? Don'tcha wanna join us at the feast instead of sittin' here all by yourself? C'mon, it'll be fun, I promise!",
+    "firstNight": 32,
+    "firstNightReminder": "展示一名在场的外来者角色标记",
+    "otherNight": 0,
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": false
+  },
+  {
+    "id": "inquisitor_charged_dinner",
+    "name": "审判官",
+    "image": [
+      "https://i.postimg.cc/B6zxXpdn/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "在你的首个夜晚，你得知一个爪牙角色和一个恶魔角色，其中有且只有一个角色在场。",
+    "flavor": "Rest easy, my wayward little lamb. Your sins may weigh heavy upon your conscience, but in His eyes, they are but flies to be purged in the eternal flames of hell.",
+    "firstNight": 33,
+    "firstNightReminder": "展示一个爪牙角色标记和一个恶魔角色标记, 其中有且只有一个角色在场。",
+    "otherNight": 0,
+    "setup": false
+  },
+  {
+    "id": "postman_charged_dinner",
+    "name": "邮差",
+    "image": [
+      "https://i.postimg.cc/y6yTmM2w/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "在你的首个夜晚，你得知最多有多少名镇民玩家连坐在一起。",
+    "flavor": "Yeah, pretty good neighborhood, that. About damn time the cat people took over.",
+    "firstNight": 34,
+    "firstNightReminder": "给出最多有多少名镇民玩家连坐在一起的信息",
+    "otherNight": 0,
+    "setup": false
+  },
+  {
+    "id": "occultist_charged_dinner",
+    "name": "神秘学者",
+    "image": [
+      "https://i.postimg.cc/02HDZPnH/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "每个夜晚，你要选择一名玩家：当你死亡时，你会得知你选择过的玩家中是否有恶魔。",
+    "flavor": "Oh yes, I can see it... I can see it... the number 7... a cyclone... a doll with no head... you will soar to great heights...",
+    "firstNight": 35,
+    "firstNightReminder": "神秘学者指向一名玩家。如果他选中了恶魔，给神秘学者标上“恶魔被选中”标记。",
+    "otherNight": 18,
+    "otherNightReminder": "如果神秘学者死亡且神秘学者被标上了“恶魔被选中”标记, 点头示意有恶魔.如果神秘学者没有死亡, 则他需要指向一名玩家。如果他选中了恶魔，给神秘学者标上“恶魔被选中”标记。",
+    "reminders": [
+      "恶魔被选中"
+    ],
+    "setup": false
+  },
+  {
+    "id": "merrymaker_charged_dinner",
+    "name": "狂欢者",
+    "image": [
+      "https://i.postimg.cc/NGD191Ht/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "每个白天，你可以公开选择除你以外的最多三名玩家：如果他们都是善良的，他们当晚不会死亡。",
+    "flavor": "Ohh, Jerry... Hm? Nooo, I'm not having a party, who told you that? Allison? Yeah, no, she must have meant some other party, one that isn't happening... here.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "不会死亡",
+      "不会死亡",
+      "不会死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "doctor_charged_dinner",
+    "name": "医生",
+    "image": [
+      "https://i.postimg.cc/cJf3sYSV/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "每局游戏限一次，在夜晚时*，你会得知将要在当晚死亡的善良玩家，并选择他们之中其中一名玩家：当晚他不会死亡(你无法选择你自己)。",
+    "flavor": "Show me where it hurts. Mhm. Mhm. Yes, considering all your symptoms, my professional medical diagnosis is that something bit off half your face.",
+    "firstNight": 0,
+    "otherNight": 6,
+    "otherNightReminder": "如果医生在此之前没有使用他的能力, 医生可以选中使用他的能力。",
+    "reminders": [
+      "得知将死亡善良玩家",
+      "拯救",
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "sleuth_charged_dinner",
+    "name": "侦探",
+    "image": [
+      "https://i.postimg.cc/V6Rbt85g/j.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个非恶魔角色：你会得知两名玩家，他们之中其中一名玩家是该角色。如果这个角色不在场，你会得知任意两名玩家。",
+    "flavor": "Hmm... This dirt tells me a lot about our killer. Seems like I've finally got some... dirt on him! HA! I'm a genius!",
+    "firstNight": 36,
+    "firstNightReminder": "侦探可以选择一个非恶魔角色。如果他这么做, 指向两名玩家, 其中一名是他选择的角色。如果侦探选择的角色不在场, 任意指向两名玩家。",
+    "otherNight": 19,
+    "otherNightReminder": "如果侦探在此之前没有使用他的能力, 侦探可以选择一个非恶魔角色。如果他这么做, 指向两名玩家, 其中一名是他选择的角色。如果侦探选择的角色不在场, 任意指向两名玩家。",
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "countess_charged_dinner",
+    "name": "伯爵夫人",
+    "image": [
+      "https://i.postimg.cc/zDxgX8sX/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择杀死你在今天白天提名过的玩家。如果他是恶魔，改为他醉酒直到下个黄昏。",
+    "flavor": "My husband? Oh, a lovely fellow he was, I miss him every day. It is most unfortunate that he wound up dead so suddenly!",
+    "firstNight": 0,
+    "otherNight": 8,
+    "otherNightReminder": "如果伯爵夫人在今天白天发起过提名, 她可以选择使用她的能力。",
+    "reminders": [
+      "提名",
+      "死亡",
+      "醉酒",
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "prosecutor1_charged_dinner",
+    "name": "检察官",
+    "image": [
+      "https://i.postimg.cc/fTFSm5WG/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "如果你在白天发起过提名，当晚，你会得知一名与被提名者相同阵营的玩家。",
+    "flavor": "Your Honor! It is a gross indignity to have this witness brought before my stand! Look at them - they're dead!",
+    "firstNight": 0,
+    "otherNight": 20,
+    "otherNightReminder": "如果检察官在白天发起过提名,向他展示一名与被他提名的玩家相同阵营的玩家。",
+    "reminders": [
+      "提名"
+    ],
+    "setup": false
+  },
+  {
+    "id": "chaperone_charged_dinner",
+    "name": "监护人",
+    "image": [
+      "https://i.postimg.cc/7L1Cvk14/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "除你以外的发起提名的镇民会保持清醒且健康，并获得正确信息直到下个黄昏。",
+    "flavor": "Miss, it is imperative you stay close to me at all times. Do not stray, do not stare, and most importantly, do not speak unless spoken to.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "守护",
+      "守护",
+      "守护",
+      "守护",
+      "守护",
+      "守护",
+      "守护",
+      "守护",
+      "守护",
+      "守护"
+    ],
+    "setup": false
+  },
+  {
+    "id": "socialite_charged_dinner",
+    "name": "社会名流",
+    "image": [
+      "https://i.postimg.cc/SRRjzYBQ/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "如果你在白天发起过提名，当晚，你会得知一名(除你以外)与被提名者邻座的玩家的角色。",
+    "flavor": "Oh, you simply must tell me about Agatha! No! She did what?! Oh my, wait 'till Evelyn hears of this. Evelyn! Evelyn, darling, wait!",
+    "firstNight": 0,
+    "otherNight": 21,
+    "otherNightReminder": "如果社会名流在白天发起过提名, 向他展示一名与被他提名的玩家邻近的玩家的角色。",
+    "reminders": [
+      "提名"
+    ],
+    "setup": false
+  },
+  {
+    "id": "paranoiac_charged_dinner",
+    "name": "偏执狂",
+    "image": [
+      "https://i.postimg.cc/nrCNmn0f/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "当恶魔首次将要杀死你时，一名爪牙可能会代替你死亡。",
+    "flavor": "What was that? I swear I heard the door shut! Who's there?! Show yourself!",
+    "firstNight": 0,
+    "otherNight": 13,
+    "otherNightReminder": "如果恶魔首次选择了偏执狂 (且至少一名爪牙存活), 可能会有一名爪牙代替你死亡.",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "anomaly_charged_dinner",
+    "name": "异类",
+    "image": [
+      "https://i.postimg.cc/mgQJCXNk/image.png"
+    ],
+    "team": "townsfolk",
+    "edition": "Charged Dinner",
+    "ability": "你以为你是恶魔得知的伪装角色之一，但其实你不是。会有一名善良玩家得知你在两名玩家之中。",
+    "flavor": "#ERROR#: DATA NOT FOUND. ASSIGNING BACKUP VALUE.",
+    "firstNight": 31,
+    "firstNightReminder": "唤醒一名善良玩家且展示给他这名角色在场&异类标记. 指向两名玩家, 其中一名玩家是异类。",
+    "otherNight": 0,
+    "remindersGlobal": [
+      "是异类",
+      "得知",
+      "错误"
+    ],
+    "setup": true,
+    "special": [
+      {
+        "type": "selection",
+        "name": "bag-disabled",
+        "time": "pregame"
+      },
+      {
+        "type": "reveal",
+        "name": "replace-character"
+      }
+    ]
+  },
+  {
+    "id": "maiden_charged_dinner",
+    "name": "少女",
+    "image": [
+      "https://i.postimg.cc/DZ2PH5XC/image.png"
+    ],
+    "team": "outsider",
+    "edition": "Charged Dinner",
+    "ability": "如果你死亡，所有镇民醉酒直到下个黄昏。",
+    "flavor": "These flowers are right pretty, wouldn'tcha say so too? My papa always says I'm a right pretty flower myself. Though, I ain't too sure about that.",
+    "firstNight": 0,
+    "otherNight": 16,
+    "otherNightReminder": "如果少女死亡, 所有镇民醉酒直到下个黄昏",
+    "reminders": [
+      "宴会"
+    ],
+    "setup": false
+  },
+  {
+    "id": "spinster_charged_dinner",
+    "name": "剩女",
+    "image": [
+      "https://i.postimg.cc/9QdT2ZVs/image.png"
+    ],
+    "team": "outsider",
+    "edition": "Charged Dinner",
+    "ability": "每个夜晚*，你要选择一名除你以外的存活玩家：如果恶魔杀死了他，你也会一起死亡。",
+    "flavor": "Lost is my quiet for ever, lost is life’s happiest part; lost all my tender endeavour to touch an insensible heart.",
+    "firstNight": 0,
+    "otherNight": 7,
+    "otherNightReminder": "剩女选择一名玩家.如果那名玩家在任何时候因恶魔能力死亡, 剩女也会死亡。",
+    "reminders": [
+      "选择",
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "spirit_charged_dinner",
+    "name": "魂灵",
+    "image": [
+      "https://i.postimg.cc/7hSPz1Bk/image.png"
+    ],
+    "team": "outsider",
+    "edition": "Charged Dinner",
+    "ability": "如果你死亡，你可能会被当作存活。",
+    "flavor": "I don't *feel* dead, you know? Like, I know I technically am, but aside from some light floating and some moderate invisibility, I feel fine.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "活尸"
+    ],
+    "setup": false
+  },
+  {
+    "id": "veteran_charged_dinner",
+    "name": "退伍军人",
+    "image": [
+      "https://i.postimg.cc/rpgr0TDJ/image.png"
+    ],
+    "team": "outsider",
+    "edition": "Charged Dinner",
+    "ability": "在你的首个夜晚，你要选择一名除你以外的玩家，如果他在白天发起过提名，当晚，会有一名玩家死亡，即使你已死亡。",
+    "flavor": "August 12, 1874. Thirteen hundred hours. We were surrounded on both sides by the Spanish and the French. My men had already given up hope. We would have died then and there, were it not for my ingenious plan!",
+    "firstNight": 37,
+    "firstNightReminder": "退伍军人选择一名玩家",
+    "otherNight": 15,
+    "otherNightReminder": "如果退伍军人选择过的玩家在白天发起过提名, 当晚，会有一名玩家死亡。",
+    "reminders": [
+      "观察",
+      "提名",
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "slanderer_charged_dinner",
+    "name": "破坏者",
+    "image": [
+      "https://i.postimg.cc/HLjyyKb1/image.png"
+    ],
+    "team": "minion",
+    "ability": "每个白天，如果你首次在提名中投票，此次投票无效。如果小于等于4名玩家存活，你失去此能力。",
+    "flavor": "Cheap rope. Low thread-count, easily tampered with. It's a surprise anyone dies by hanging around here.",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "将要处决",
+      "阻止处决",
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "nightmare_charged_dinner",
+    "name": "梦魇",
+    "image": [
+      "https://i.postimg.cc/mDCNPJG2/image.png"
+    ],
+    "team": "minion",
+    "edition": "Charged Dinner",
+    "ability": "每个夜晚*，你可以选择一名玩家：他死亡。你每杀死一名玩家，就会有一名善良玩家得知一名非恶魔玩家。",
+    "flavor": "Shh, shh, shh. Hush now, my darling. Don't worry, come sunrise, everything will be over.",
+    "firstNight": 0,
+    "otherNight": 14,
+    "otherNightReminder": "梦魇可以选择一名玩家. 如果被选择的玩家死亡, 唤醒一名善良玩家并向他展示一名肥非恶魔玩家。",
+    "reminders": [
+      "死亡",
+      "得知"
+    ],
+    "setup": false
+  },
+  {
+    "id": "curfew1_charged_dinner",
+    "name": "晚钟",
+    "image": [
+      "https://i.postimg.cc/W4D7vtWZ/image.png"
+    ],
+    "team": "minion",
+    "edition": "Charged Dinner",
+    "ability": "每个白天，第4次提名的提名者与被提名者会立即被处决。每个夜晚，你要选择自己是否醉酒直到下个黄昏。",
+    "flavor": "That's it, no more Xes for you, big fella! Now, get out of my establishment or I'll give you what for!",
+    "firstNight": 30,
+    "firstNightReminder": "晚钟可以选择自己是否醉酒直到下个黄昏。",
+    "otherNight": 5,
+    "otherNightReminder": "晚钟可以选择自己是否醉酒直到下个黄昏。",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": false
+  },
+  {
+    "id": "snob_charged_dinner",
+    "name": "势利鬼",
+    "image": [
+      "https://i.postimg.cc/Xv0vVzxg/image.png"
+    ],
+    "team": "minion",
+    "edition": "Charged Dinner",
+    "ability": "如果有一名外来者死亡，一名爪牙可以选择变成一名他选择的不在场的爪牙角色。[+1外来者]",
+    "flavor": "Ohhhhhmygod, did you *see* what Janet was wearing??? Where did she get dressed, the dumpster?",
+    "firstNight": 0,
+    "otherNight": 17,
+    "otherNightReminder": "如果有一名外来者死亡, 一名爪牙可以选择变成一名他选择的不在场的爪牙角色。",
+    "reminders": [
+      "改头换帽"
+    ],
+    "setup": true
+  },
+  {
+    "id": "thelady_charged_dinner",
+    "name": "女士",
+    "image": [
+      "https://i.postimg.cc/639K17fr/image.png"
+    ],
+    "team": "demon",
+    "edition": "Charged Dinner",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你提名的镇民中毒。",
+    "flavor": "I always get what I want... and if I don't, well... there's ways around that, darling.",
+    "firstNight": 0,
+    "otherNight": 9,
+    "otherNightReminder": "女士选择一名玩家。",
+    "reminders": [
+      "死亡",
+      "中毒",
+      "中毒",
+      "中毒",
+      "中毒",
+      "中毒",
+      "中毒"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mansel_charged_dinner",
+    "name": "曼塞尔",
+    "image": [
+      "https://i.postimg.cc/PqHNT5Mx/image.png"
+    ],
+    "team": "demon",
+    "edition": "Charged Dinner",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。首个提名你的玩家会在黄昏时转变为邪恶阵营，当晚他死亡且除他以外不会有其他玩家死亡。",
+    "flavor": "I am truly sorry that I have made you feel this way. Truly. However, I have an offer for you that I believe you cannot refuse.",
+    "firstNight": 0,
+    "otherNight": 10,
+    "otherNightReminder": "曼塞尔选择一名玩家。如果曼塞尔将一名善良玩家转变为邪恶玩家,那名玩家立即死亡且当晚不会有其他玩家死亡。",
+    "reminders": [
+      "死亡",
+      "转变邪恶",
+      "已使用能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "noster_charged_dinner",
+    "name": "诺斯特",
+    "image": [
+      "https://i.postimg.cc/D04719cH/image.png"
+    ],
+    "team": "demon",
+    "edition": "Charged Dinner",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。每个夜晚限一次，如果你选择了一名爪牙或一名外来者，当晚你可以再次行动。[-1或+1外来者]",
+    "flavor": "All it needs is a piece of its own flesh... The scorned shall know no rest.",
+    "firstNight": 0,
+    "otherNight": 11,
+    "otherNightReminder": "诺斯特选择一名玩家.如果他选择的玩家是爪牙或外来者,他可以选择另一名玩家。",
+    "reminders": [
+      "死亡",
+      "死亡"
+    ],
+    "setup": true
+  },
+  {
+    "id": "guvna_charged_dinner",
+    "name": "古夫纳",
+    "image": [
+      "https://i.postimg.cc/tgGnJ599/image.png"
+    ],
+    "team": "demon",
+    "edition": "Charged Dinner",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。一名与爪牙玩家邻近的镇民玩家中毒且可能被当作邪恶玩家或爪牙角色。",
+    "flavor": "The streets are bursting with the poor, sick and homeless! Others might say this calls for swift action to end poverty! But I suggest: Why not simply end the poor?",
+    "firstNight": 0,
+    "otherNight": 12,
+    "otherNightReminder": "古夫纳选择一名玩家。",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "setup": false
+  }
+]

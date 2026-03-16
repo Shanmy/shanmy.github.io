@@ -1,0 +1,460 @@
+[
+  {
+    "id": "_meta",
+    "name": "血肉磨坊",
+    "author": "钟楼剧本博物馆",
+    "logo": "https://free.picui.cn/free/2025/12/21/6947d6ddacf31.png",
+    "townsfolkName": "镇民",
+    "outsidersName": "外来者",
+    "minionsName": "爪牙",
+    "demonsName": "恶魔",
+    "townsfolk": "镇民",
+    "outsider": "外来者",
+    "minion": "爪牙",
+    "demon": "恶魔",
+    "a jinxedName": "相克",
+    "a jinxed": "相克"
+  },
+  {
+    "id": "meishayongdeshabi111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/pixie.png",
+    "edition": "custom",
+    "name": "小精灵",
+    "ability": "在你的首个夜晚，你会得知一个在场的镇民角色。如果你“疯狂”地证明你是该角色，当他死亡时你获得该角色的能力。",
+    "team": "townsfolk",
+    "firstNight": 3300,
+    "otherNight": 0,
+    "firstNightReminder": "唤醒小精灵，对他展示一个在场镇民角色标记。",
+    "otherNightReminder": "",
+    "reminders": [
+      "疯狂",
+      "获得能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "biubiubiu111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/slayer.png",
+    "edition": "custom",
+    "name": "猎手",
+    "ability": "每局游戏限一次，你可以在白天时公开选择一名玩家：如果他是恶魔，他死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "chichichichichichichi111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/cannibal.png",
+    "edition": "custom",
+    "name": "食人族",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "饱餐",
+      "中毒"
+    ],
+    "setup": false
+  },
+  {
+    "id": "makesi111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/philosopher.png",
+    "edition": "custom",
+    "name": "哲学家",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个善良角色：你获得该角色的能力。如果这个角色在场，他醉酒。",
+    "team": "townsfolk",
+    "firstNight": 3,
+    "otherNight": 2,
+    "firstNightReminder": "唤醒哲学家，他可以摇头不使用能力，或选择获得角色列表上的一个善良角色的能力。",
+    "otherNightReminder": "如果哲学家未曾使用能力，唤醒哲学家，他可以摇头不使用能力，或选择获得角色列表上的一个善良角色的能力。",
+    "remindersGlobal": [
+      "是哲学家",
+      "醉酒"
+    ],
+    "setup": false
+  },
+  {
+    "ability": "在你的首个白天，如果你提名并处决了一名玩家，当晚恶魔不会造成死亡。",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/f/f2/Princess.png/300px-Princess.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "gongzhu",
+    "name": "公主",
+    "reminders": [
+      "没有死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk"
+  },
+  {
+    "id": "huojin111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/savant.png",
+    "edition": "custom",
+    "name": "博学者",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false
+  },
+  {
+    "id": "wofuhuolawoshijiangbu111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/banshee.png",
+    "edition": "custom",
+    "name": "报丧女妖",
+    "ability": "如果恶魔杀死了你，所有玩家都会得知此事。从现在开始，你每天可以发起两次提名，每次投票时可以投两票。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 75,
+    "firstNightReminder": "如果恶魔杀死了报丧女妖，宣布“报丧女妖觉醒了”，并使用“具有能力”标记报丧女妖。",
+    "reminders": [
+      "具有能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "wuxingshangjiang111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/general.png",
+    "edition": "custom",
+    "name": "将军",
+    "ability": "每个夜晚，你会得知说书人认为哪个阵营当前更有优势（善良/邪恶/均势）。",
+    "team": "townsfolk",
+    "firstNight": 6300,
+    "otherNight": 99,
+    "firstNightReminder": "唤醒将军，对他用手势比划当前的优势阵营。",
+    "otherNightReminder": "唤醒将军，对他用手势比划当前的优势阵营。",
+    "reminders": [],
+    "setup": false
+  },
+  {
+    "id": "diaoshangyizhengtiandeyu111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fisherman.png",
+    "edition": "custom",
+    "name": "渔夫",
+    "ability": "每局游戏限一次，在白天时，你可以让说书人给你一些能帮助你的阵营获胜的建议。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "zhuijidelaoda111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/balloonist.png",
+    "edition": "custom",
+    "name": "气球驾驶员",
+    "ability": "每个夜晚，你会得知一名与上个夜晚得知的玩家角色类型不同的玩家。[+0~1外来者]",
+    "team": "townsfolk",
+    "firstNight": 5000,
+    "otherNight": 90,
+    "firstNightReminder": "唤醒气球驾驶员，对他指向一名玩家。",
+    "otherNightReminder": "唤醒气球驾驶员，对他指向一名玩家，这名玩家与之前气球驾驶员上一个夜晚得知过的玩家属于不同的角色类型。",
+    "reminders": [
+      "得知",
+      "得知",
+      "得知",
+      "得知",
+      "得知",
+      "得知",
+      "得知"
+    ],
+    "setup": true
+  },
+  {
+    "id": "wolaishouhunidemama111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/nightwatchman.png",
+    "edition": "custom",
+    "name": "守夜人",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一名玩家：他会得知你是守夜人。",
+    "team": "townsfolk",
+    "firstNight": 5600,
+    "otherNight": 95,
+    "firstNightReminder": "唤醒守夜人，他可以摇头不使用能力，或选择一名玩家。如果守夜人选择了玩家，则在守夜人入睡后通知那名玩家谁是守夜人。",
+    "otherNightReminder": "如果守夜人未曾使用能力，唤醒守夜人，他可以摇头不使用能力，或选择一名玩家。如果守夜人选择了玩家，则在守夜人入睡后通知那名玩家谁是守夜人。",
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "zhongdayande111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/poppy_grower.png",
+    "edition": "custom",
+    "name": "罂粟种植者",
+    "ability": "爪牙和恶魔互相不认识。如果你死亡，当晚他们会互相认识。",
+    "team": "townsfolk",
+    "firstNight": 3.4,
+    "otherNight": 4,
+    "firstNightReminder": "如果罂粟种植者在场，跳过今晚的爪牙信息和恶魔信息环节。",
+    "otherNightReminder": "如果罂粟种植者死于白天，插入执行爪牙信息和恶魔信息（不包含恶魔伪装）流程。如果罂粟种植者死于夜晚，则在当前玩家行动结束后立即执行相关流程。",
+    "reminders": [
+      "唤醒邪恶"
+    ],
+    "setup": false
+  },
+  {
+    "id": "buhaohe111",
+    "image": "https://www.bloodstar.xyz/p/fake/mill/shaman_mill.png",
+    "edition": "custom",
+    "name": "萨满",
+    "ability": "邪恶玩家会以为自己是其它邪恶角色",
+    "team": "townsfolk",
+    "firstNight": 1,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "并非"
+    ],
+    "setup": false
+  },
+  {
+    "id": "bushiwo111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/damsel.png",
+    "edition": "custom",
+    "name": "落难少女",
+    "ability": "所有爪牙都知道落难少女在场。每局游戏限一次，任意爪牙可以公开猜测你是落难少女，如果猜对，你的阵营落败。",
+    "team": "outsider",
+    "firstNight": 2100,
+    "otherNight": 0,
+    "firstNightReminder": "如果落难少女在场，对爪牙展示落难少女角色标记。",
+    "otherNightReminder": "0",
+    "reminders": [
+      "已被猜测"
+    ],
+    "setup": false
+  },
+  {
+    "id": "biezaizhelifadian111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/barber.png",
+    "edition": "custom",
+    "name": "理发师",
+    "ability": "如果你死亡，在当晚恶魔可以选择两名玩家（不能选择其他恶魔）交换角色。",
+    "team": "outsider",
+    "firstNight": 0,
+    "otherNight": 67,
+    "firstNightReminder": "",
+    "otherNightReminder": "如果理发师死于白天，唤醒恶魔让他决定是否使用理发师的能力。如果理发师死于夜晚，（如果让除攻击理发师以外的恶魔进行选择则需要等当前恶魔入睡后）让一名恶魔决定是否使用理发师的能力。",
+    "reminders": [
+      "今晚理发"
+    ],
+    "setup": false
+  },
+  {
+    "id": "zhegeshimonk111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/recluse.png",
+    "edition": "custom",
+    "name": "陌客",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。",
+    "team": "outsider",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false
+  },
+  {
+    "id": "4_babieta",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/1/1e/Hermit.png/300px-Hermit.png",
+    "name": "隐士",
+    "team": "outsider",
+    "ability": "你拥有所有外来者能力。[-0~1外来者]"
+  },
+  {
+    "id": "xunzhaonidezhuren111",
+    "image": "https://www.bloodstar.xyz/p/fake/mill/inquisitor_mill.png",
+    "edition": "custom",
+    "name": "异端审判者",
+    "ability": "每个夜晚，你要选择除你以外的两名玩家：如果明天除他们以外的玩家被处决，邪恶阵营获胜。邪恶玩家不能“疯狂”地证明自己是异端审判者。",
+    "team": "outsider",
+    "firstNight": 4100,
+    "otherNight": 82,
+    "firstNightReminder": "唤醒异端审判者，让他选择两个审判对象。",
+    "otherNightReminder": "唤醒异端审判者，让他选择两个审判对象。",
+    "reminders": [
+      "审判"
+    ],
+    "setup": false
+  },
+  {
+    "id": "dafutoufeiguolaila111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/psychopath.png",
+    "edition": "custom",
+    "name": "精神病患者",
+    "ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。",
+    "team": "minion",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false
+  },
+  {
+    "id": "wushihsihsihsihsihsihsish",
+    "image": "https://clocktower-wiki.gstonegames.com/images/archive/c/c7/20250103031516%21Wizard.png",
+    "edition": "custom",
+    "name": "巫师",
+    "ability": "每局游戏限一次，你可以向说书人许愿。如果愿望被实现，可能会伴随着代价和线索。",
+    "special": [
+      {
+        "name": "grimoire",
+        "type": "signal",
+        "time": "night"
+      }
+    ],
+    "team": "minion",
+    "reminders": [
+      "失去能力",
+      "兑现",
+      "代价",
+      "线索"
+    ],
+    "setup": false
+  },
+  {
+    "id": "Smuggler",
+    "image": "https://www.bloodstar.xyz/p/fake/mill/smuggler_mill.png",
+    "edition": "custom",
+    "name": "走私者",
+    "ability": "在你的首个夜晚，你要选择一名善良玩家：他会得知三名玩家，你是其中之一。[+1爪牙，所有爪牙都是走私者]",
+    "special": [
+      {
+        "type": "ability",
+        "name": "pointing"
+      }
+    ],
+    "team": "minion",
+    "firstNight": 3200,
+    "otherNight": 0,
+    "firstNightReminder": "唤醒一名善良玩家，对他展示走私者角色标记和三名玩家（包含一个走私者）。",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": true
+  },
+  {
+    "id": "Smzhapianuggler",
+    "image": "https://www.bloodstar.xyz/p/fake/mill/racketeer_mill.png",
+    "edition": "custom",
+    "name": "诈骗者",
+    "ability": "如果一次提名中统计的票数与当前即将被处决的玩家相同，其中一名不为恶魔的被提名者将立即被处决。",
+    "special": [
+      {
+        "type": "ability",
+        "name": "pointing"
+      }
+    ],
+    "team": "minion",
+    "reminders": [],
+    "setup": false
+  },
+  {
+    "id": "widow22",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/7/7c/Wraith.png/300px-Wraith.png",
+    "edition": "custom",
+    "name": "亡魂",
+    "ability": "你可以在夜晚睁眼。当其他邪恶玩家被唤醒时，你也会被唤醒。",
+    "special": [
+      {
+        "name": "grimoire",
+        "type": "signal",
+        "time": "night"
+      }
+    ],
+    "team": "minion",
+    "firstNight": 2,
+    "otherNight": 1,
+        "setup": false
+  },
+  {
+    "id": "nanjueeeee111",
+    "image": "https://www.bloodstar.xyz/p/fake/mill/damned_mill.png",
+    "edition": "custom",
+    "name": "诅咒之人",
+    "ability": "如果所有善良玩家死亡，善良阵营获胜。恶魔不能杀死最后存活的诅咒之人。[+1 诅咒之人]",
+    "team": "minion",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": true
+  },
+  {
+    "id": "haliluya111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/al-hadikhia.png",
+    "edition": "custom",
+    "name": "哈迪寂亚",
+    "ability": "每个夜晚*，你可以选择三名玩家（所有玩家会得知你选了谁）：他们分别秘密决定自己的生死，然后如果他们都存活则都死亡。",
+    "team": "demon",
+    "firstNight": 0,
+    "otherNight": 42,
+    "firstNightReminder": "",
+    "otherNightReminder": "唤醒哈迪寂亚，让他选择三名玩家。执行哈迪寂亚的能力流程（参考哈迪寂亚的百科页面）。",
+    "reminders": [
+      "1",
+      "2",
+      "3",
+      "选择生",
+      "选择死"
+    ],
+    "setup": false
+  },
+  {
+    "ability": "使用灯神的相克规则，所有玩家都会知道其内容。",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/djinn.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "20003_107",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "灯神",
+    "otherNight": 0,
+    "setup": 0,
+    "reminders": [],
+    "remindersGlobal": [],
+    "team": "fabled",
+    "firstNight": 0
+  },
+  {
+    "id": "56786542_meta",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/e/ed/Cannibal.png/300px-Cannibal.png",
+    "name": "食人族&罂粟种植者",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "如果食人族获得了罂粟种植者的能力，当他获得下一个能力时，爪牙和恶魔也会互相认识。"
+  },
+  {
+    "id": "24_meta",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/1/1e/Hermit.png/300px-Hermit.png",
+    "name": "异端审判者&隐士",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "只要被隐士或审判者选择的玩家，都视为同时被二者选择。如果审判者在剧本中，邪恶的玩家不能疯狂地证明自己是隐士。"
+  },
+  {
+    "id": "56786542_meta",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/7/7c/Wraith.png/300px-Wraith.png",
+    "name": "亡魂&萨满",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "如果亡魂误以为自己是其他角色，他不能在夜晚主动睁眼或与其他邪恶玩家被共同唤醒；其它爪牙不会误以为自己是亡魂。"
+  }
+]

@@ -1,0 +1,317 @@
+[
+  {
+    "id": "_meta",
+    "name": "爱丽丝幻境迷踪",
+    "author": "Tom Routh",
+    "logo":"https://s2.loli.net/2025/07/03/rCO2WhjRafkEAU3.png",
+    "firstNight": ["dusk","minioninfo","demoninfo","bandersnatch_wonderland","caterpillar_wonderland","cheshirecat_wonderland","mockturtle_wonderland","tweedles_wonderland","dawn"],
+    "otherNight": ["dusk","wandering","caterpillar_wonderland","jubjubbird_wonderland","whiterabbit_wonderland","dormouse_wonderland","madhatter_wonderland","gryphon_wonderland","knaveofhearts_wonderland","queenofhearts_wonderland","jabberwocky_wonderland","time_wonderland","rose_wonderland","whitequeen_wonderland","frogfootman_wonderland","cheshirecat_wonderland","mockturtle_wonderland","duchess_wonderland","dawn"]
+  },
+  {
+    "id":"_113","image":"https:\/\/www.bloodstar.xyz\/p\/Kingle\/113\/_113.png",
+    "name":"仙境漫游",
+    "team":"fabled",
+    "ability":"有[Wandering]的角色会在仙境中“漫游”。这些角色会将他们的“漫游”标记置于魔典中。"
+  },
+  {
+    "id": "wandering_wonderland",
+    "image": ["https://i.postimg.cc/fbgmBM3V/5461.png"],
+    "otherNightReminder": "Move all *WANDERING* tokens. :reminder:",
+    "firstNight": 1.5,
+    "otherNight": 100,
+    "name": "闲情漫步",
+    "team": "fabled",
+    "ability": "在游戏开始时，说书人要决定每个“漫游”标记的移动方向（顺/逆时针，每名角色一个)。善良角色的“漫游”标记初始不会在对应角色上，而邪恶角色的“漫游”标记初始在自己身上。每个夜晚*，“漫游”标记会沿设置好的方向移动1格（除非另有说明)。镇民角色和邪恶角色的“漫游”标记会在移动时跳过死亡玩家与邪恶玩家。外来者角色和旅行者的“漫游”标记在移动时只会跳过死亡玩家。", 
+    "flavor": "Would you tell me please which way I ought to walk from here?” said Alice “That depends a good deal on where you want to go,” said the Cat."
+  },
+  {
+    "id": "tweedles_wonderland",
+    "image": ["https://i.postimg.cc/B6HbH329/33333-16.png"],
+    "firstNightReminder": "Point at the other Tweedle.",
+    "firstNight": 30000,
+    "setup": true,
+    "name": "特维尔德兄弟",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知另一个特维尔德兄弟是谁。当他死亡时，你会一同死亡。[+1 特维尔德兄弟]",
+    "special": [{"type": "selection","name": "bag-duplicate"}],
+    "flavor": "Tweedledum and Tweedledee Agreed to have a battle; For Tweedledum said Tweedledee Had spoiled his nice new rattle."
+  },
+  {
+    "id": "cheshirecat_wonderland",
+    "image": ["https://i.postimg.cc/br0GcPvH/33333-8.png"],
+    "firstNightReminder": "Learns the roll of the player their *WANDERING* token is on. :reminder:",
+    "otherNightReminder": "Learns the roll of the player their *WANDERING* token is on. :reminder:",
+    "reminders": ["顺时针漫游","逆时针漫游"],
+    "firstNight": 40000,
+    "otherNight": 1500,
+    "name": "柴郡猫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知你的“漫游”标记所在玩家的角色。 [Wandering]",
+    "special": [{"type": "selection","name": "bag-duplicate"}],
+    "flavor": "but a grin without a cat! It’s the most curious thing I ever saw in all my life!"
+  },
+  {
+    "id": "dormouse_wonderland",
+    "image": ["https://i.postimg.cc/8PDJd7yy/33333-11.png"],
+    "otherNightReminder": "If the Dormouse did not nominate or vote today they choose a player they are drunk. :reminder:",
+    "reminders": ["拥有能力","醉酒"],
+    "name": "睡鼠",
+    "otherNight": 700,
+    "team": "townsfolk",
+    "ability": "每个夜晚*，如果你在今天白天没有发起提名和投票，你可以选择一名玩家：他醉酒直到下个黄昏。",
+    "flavor": "You might just as well say, ” added the Dormouse, who seemed to be talking in his sleep, “that ‘I breathe when I sleep’ is the same thing as ‘I sleep when I breathe’!"
+  },
+  {
+    "id": "gryphon_wonderland",
+    "image": ["https://i.postimg.cc/PfbNqtt1/33333-20.png"],
+    "otherNightReminder": "The Gryphon chooses a player. :reminder:",
+    "reminders": ["被保护"],
+    "name": "鹰头狮",
+    "otherNight": 500,
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名除你以外的玩家(与上次选择不同)：他免疫爪牙与恶魔的能力直到下个黄昏。",
+    "flavor": "That’s the reason they’re called lessons,” the Gryphon remarked: “because they lessen from day to day."
+  },
+  {
+    "id": "madhatter_wonderland",
+    "image": ["https://i.postimg.cc/3NZwfZLt/33333-19.png"],
+    "otherNightReminder": "The Mad Hatter chooses a player. :reminder:",
+    "reminders": ["醉酒","获得能力"],
+    "name": "疯帽子",
+    "otherNight": 600,
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名存活玩家: 你会获得他的能力直到下个黄昏，但你们之中会有一人醉酒直到下个黄昏。",
+    "flavor": "One to be a murderer. One to be a Martyr. One to be a Monarch. One to go Mad"
+  },
+  {
+    "id": "rose_wonderland",
+    "image": ["https://i.postimg.cc/jdV6pqMN/3.png"],
+    "name": "白玫瑰",
+    "otherNight": 1200,
+    "team": "townsfolk",
+    "ability": "每个夜晚*, 你会得知你身上是否有“漫游”标记。",
+    "otherNightReminder": "Is there a wandering token on them?",
+    "flavor": "Why the fact is, you see, Miss, this here ought to have been a red rose-tree, and we put a white one in by mistake"
+  },
+  {
+    "id": "whiterabbit_wonderland",
+    "image": ["https://i.postimg.cc/kXcVT7z7/33333-12.png"],
+    "otherNightReminder": "Ask if they want to use their ability, if the ability is used place the *NO ABILIY* reminder next to them, skip the rest of the night phase. :reminder:",
+    "reminders": ["失去能力"],
+    "name": "白兔先生",
+    "otherNight": 400,
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择跳过当晚剩余的夜晚行动。（当晚之后的行动不会被唤醒/进行，直接进入白天）",
+    "flavor": "I'm late, I'm late, for a very important date! No time to say “Hello, Good Bye” I'm late, I'm late, I'm late!"
+  },
+  {
+    "id": "whitequeen_wonderland",
+    "image": ["https://i.postimg.cc/prvTBSB9/33333-18.png"],
+    "otherNightReminder": "Give a finger signal.",
+    "reminders": ["不在场","不在场","不在场","不在场","不在场","不在场"],
+    "name": "白皇后",
+    "otherNight": 1300,
+    "team": "townsfolk",
+    "ability": "在你的首个白天，你可以公开猜测至多六名角色。在当晚，你会知道其中有多少名角色不在场。",
+    "flavor": "Why, sometimes I’ve believed as many as six impossible things before breakfast."
+  },
+  {
+    "id": "dodo_wonderland",
+    "image": ["https://i.postimg.cc/VkkJT3Pn/33333-14.png"],
+    "reminders": ["失去能力"],
+    "name": "渡渡鸟",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时你可以拜访说书人以得知一名与你邻近的存活玩家的角色。",
+    "flavor": "What I was going to say,” said the Dodo in an offended tone, “was, that the best thing to get us dry would be a Caucus-race."
+  },
+  {
+    "id": "alice_wonderland",
+    "image": ["https://i.postimg.cc/rFLWhnpN/33333-4.png"],
+    "reminders": ["失去能力"],
+    "name": "爱丽丝",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，你可以在白天公开猜测所有存活玩家的角色：如果猜测正确，你的阵营获胜。如果只有三名存活玩家，你失去此能力。",
+    "flavor": "I—I hardly know, Sir, just at present—at least I know who I was when I got up this morning, but I think I must have been changed several times since then."
+  },
+  {
+    "id": "bayard_wonderland",
+    "image": ["https://i.postimg.cc/CLF5BW1X/33333-21.png"],
+    "name": "拜亚德",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以拜访说书人并选择一名存活玩家：你会得知他身上的“漫游”标记数量。",
+    "flavor": "Bayard: [sits] Would your name be...Alice? By any chance?"
+  },
+  {
+    "id": "frogfootman_wonderland",
+    "image": ["https://i.postimg.cc/VsX0bqFr/33333-10.png"],
+    "otherNightReminder": "If nominated learns the character of the player with the *NOMINATOR* token next to them. :reminder:",
+    "reminders": ["提名者","失去能力"],
+    "name": "蛙仆",
+    "otherNight": 1400,
+    "team": "townsfolk",
+    "ability": "在你首次被提名后，你会在当晚得知提名你的玩家的角色。",
+    "flavor": "[sings] “From the Queen an invitation for the Duchess to play croquette."
+  },
+  {
+    "id": "kingofhearts_wonderland",
+    "image": ["https://i.postimg.cc/rpvzDs0N/33333-17.png"],
+    "reminders": ["顺时针漫游","逆时针漫游"],
+    "name": "红心国王",
+    "team": "townsfolk",
+    "ability": "你的“漫游”标记所在的玩家不会死于处决，即使你已死亡。如果只有三名存活玩家，你失去此能力。 [Wandering]",
+    "flavor": "I don’t like the look of it at all,” said the King: “however, it may kiss my hand, if it likes."
+  },
+  {
+    "id": "mockturtle_wonderland",
+    "image": ["https://i.postimg.cc/vZbrmqFZ/1.png"],
+    "firstNightReminder": "Learns a roll of the player their *WANDERING* token is on. :reminder:",
+    "otherNightReminder": "Learns a roll of the player their *WANDERING* token is on. :reminder:",
+    "reminders": ["顺时针漫游","逆时针漫游"],
+    "remindersGlobal": ["是假海龟"],
+    "name": "假海龟",
+    "firstNight": 50000,
+    "otherNight": 1600,
+    "team": "outsider",
+    "ability": "你以为你是柴郡猫，但你可能获取错误信息。 [Wandering]",
+    "special": [{"name": "bag-disabled","type": "selection"},{"type": "reveal","name": "replace-character"}],
+    "flavor": "We called him Tortoise because he taught us,” said the Mock Turtle angrily: “really you are very dull!"
+  },
+  {
+    "id": "caterpillar_wonderland",
+    "image": ["https://i.postimg.cc/rFSGM6HH/2.png"],
+    "firstNightReminder": "Place the *DRUNK* token on a living neighbour. :reminder:",
+    "otherNightReminder": "Place the *DRUNK* token on a living neighbour different from the previous night. :reminder:",
+    "reminders": ["醉酒"],
+    "name": "毛毛虫",
+    "firstNight": 29000,
+    "otherNight": 200,
+    "team": "outsider",
+    "ability": "每个夜晚, 与你邻近的存活玩家之一醉酒 (与上个夜晚不同)。",
+    "flavor": "You'll get used to it in time” said the Caterpillar; and it put the hookah into its mouth and began smoking again."
+  },
+  {
+    "id": "marchhare_wonderland",
+    "image": ["https://i.postimg.cc/FzXfBzhH/33333-9.png"],
+    "reminders": ["死于处决"],
+    "name": "三月兔",
+    "team": "outsider",
+    "ability": "如果你死于处决，当晚恶魔可以选择一名玩家：他死亡。",
+    "flavor": "Have some wine,” the March Hare said in an encouraging tone. Alice looked all round the table, but there was nothing on it but tea."
+  },
+  {
+    "id": "duchess_wonderland",
+    "image": ["https://i.postimg.cc/sXQSLbSw/33333-1.png"],
+    "otherNightReminder": "Check for alignment. :reminder: :reminder:",
+    "reminders": ["顺时针漫游","逆时针漫游","善良","邪恶"],
+    "name": "公爵夫人",
+    "otherNight": 1700,
+    "team": "outsider",
+    "ability": "每个夜晚*，你会得知你的“漫游”标记所在玩家的阵营，然后你会转变为他的阵营。[Wandering]",
+    "flavor": "Be what you would seem to be, or, if you'd like it put more simply never imagine yourself not to be otherwise"
+  },
+  {
+    "id": "cook_wonderland",
+    "image": ["https://i.postimg.cc/Mp3n8dz4/33333-13.png"],
+    "reminders": ["Wandering Clock","Wandering Anti"],
+    "name": "厨娘",
+    "team": "minion",
+    "ability": "每个夜晚*，你的“漫游”标记所在的玩家会中毒直到下个黄昏，即使他已死亡。 [Wandering]",
+    "flavor": "Who Stole the Tarts?"
+  },
+  {
+    "id": "bandersnatch_wonderland",
+    "image": ["https://i.postimg.cc/dV5yVJj5/33333-6.png"],
+    "firstNightReminder": "Learns the roll where their *KNOWN* token is. :reminder:",
+    "reminders": ["失去能力","得知角色"],
+    "name": "班德斯尼奇",
+    "firstNight": 10000,
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知一名在场角色。每局游戏限一次，你可以在白天公开猜测谁是那名角色：如果猜测正确，那么他和他邻近的一名存活玩家会一同死亡。",
+    "flavor": "Part of the Queen of Hearts hunting party and will kill others who stand between them and their prey."
+  },
+  {
+    "id": "jubjubbird_wonderland",
+    "image": ["https://i.postimg.cc/qvw86s4X/4.png"],
+    "setup": true,
+    "otherNightReminder": "If they voted today, wake them to select a player and place the *DOES NOT WAKE* reminder next to them. :reminder:",
+    "reminders": ["已投票","不会被唤醒"],
+    "name": "朱布朱布鸟",
+    "otherNight": 300,
+    "team": "minion",
+    "ability": "每个夜晚*，如果你今天白天投票过，你可以选择一名玩家：他今晚不会被唤醒。[+1外来者]",
+    "flavor": "OFF WITH THEIR HEADS!!! RELEASE THE JUBJUB BIRD! You're right, Stayne, it is far better to be feared than loved."
+  },
+  {
+    "id": "cardguard_wonderland",
+    "image": ["https://i.postimg.cc/y6Rcy47N/33333-3.png"],
+    "setup": true,
+    "reminders": ["失去能力"],
+    "name": "扑克卫兵",
+    "team": "minion",
+    "ability": "每局游戏限一次，被处决的邪恶玩家可能不会死亡。 [-1外来者]",
+    "flavor": "Guarding the Queens of Hearts court they put themselves on the line to protect the Queen."
+  },
+  {
+    "id": "time_wonderland",
+    "image": ["https://i.postimg.cc/Gp9sB6Md/33333-7.png"],
+    "otherNightReminder": "Time chooses a player to die. :reminder: :reminder:",
+    "reminders": ["死亡","顺时针漫游","逆时针漫游"],
+    "name": "侩子手",
+    "otherNight": 1100,
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。每当一名死亡玩家被选择时，你的“漫游”标记会移动一次。当“漫游”标记重新回到你身上时，你的阵营获胜。 [Wandering]",
+    "flavor": "I think you might do something better with the time"
+  },
+  {
+    "id": "queenofhearts_wonderland",
+    "image": ["https://i.postimg.cc/cJKr1wHJ/33333-15.png"],
+    "otherNightReminder": "The Queen of Hearts chooses a player to die. :reminder: :reminder: :reminder:",
+    "reminders": ["死亡","死亡","被提名"],
+    "name": "红皇后",
+    "otherNight": 900,
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你今天白天被提名，今晚你可以行动两次。",
+    "flavor": "Off with their heads!"
+  },
+  {
+    "id": "knaveofhearts_wonderland",
+    "image": ["https://i.postimg.cc/gkqh1VXF/33333-5.png"],
+    "setup": true,
+    "otherNightReminder": "The Knave of Hearts chooses a player to die.:reminder: :reminder: :reminder:",
+    "reminders": ["白天被处决","死亡","死亡"],
+    "name": "红心骑士",
+    "otherNight": 800,
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果有外来者在今天白天被处决，今晚你可以行动两次。 [+1外来者]",
+    "flavor": "We're looking for the girl called Alice...If you're hiding her you'll lose your heads."
+  },
+  {
+    "id": "jabberwocky_wonderland",
+    "image": ["https://i.postimg.cc/T1nbdmtb/33333-2.png"],
+    "otherNightReminder": "The Jabberwocky chooses a player to die. :reminder: :reminder: :reminder:",
+    "reminders": ["首位提名者","死亡","死亡"],
+    "name": "贾巴沃克",
+    "otherNight": 1000,
+    "team": "demon",
+    "ability": "每个夜晚*，你要选中一名玩家：他死亡。第一个提名你的善良玩家随时可能死亡",
+    "flavor": "Beware the Jabberwock, my son! The jaws that bite, the claws that catch! Twas brillig, and the slithy toves Did gyre and gimble in the wabe."
+  },
+  {
+    "id": "humptydumpty_wonderland",
+    "image": ["https://i.postimg.cc/nLLq4XL8/413.png"],
+    "reminders": ["顺时针漫游","逆时针漫游"],
+    "name": "木匠",
+    "team": "traveler",
+    "ability": "当你被流放时，如果你的“漫游”标记所在玩家阵营与你不同，他死亡。[Wandering].",
+    "flavor": "When I use a word,” Humpty Dumpty said in rather a scornful tone, “it means what I choose it to mean – neither more nor less."
+  },
+  {
+    "id": "walrus_wonderland",
+    "image": ["https://i.postimg.cc/Wpq6YqwT/3-2.png"],
+    "reminders": ["选择"],
+    "name": "海象",
+    "team": "traveler",
+    "ability": "在提名开始前，你可以公开选择一名玩家：他只能在你投票时投票。",
+    "flavor": "The time has come,” the Walrus said, “To talk of many things: Of shoes—and ships—and sealing-wax— Of cabbages—and kings— And why the sea is boiling hot— And whether pigs have wings."
+  }
+]

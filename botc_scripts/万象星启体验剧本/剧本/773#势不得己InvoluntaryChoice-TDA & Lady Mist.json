@@ -1,0 +1,321 @@
+[
+    {
+      "id": "_meta",
+      "name": "势不得已 Involuntary Choice",
+      "author": "TDA & Lady Mist",
+      "logo": "https://free.picui.cn/free/2025/12/21/6947d12eabb7d.png"
+    },
+    {
+      "id": "noble_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/noble_h302_involuntarychoice.png",
+      "firstNightReminder": "Point to 3 players including one evil player, in no particular order.",
+      "reminders": [
+        "得知"
+      ],
+      "name": "贵族",
+      "team": "townsfolk",
+      "ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。 ",
+      "firstNight": 3900
+    },
+    {
+      "id": "yinyangshi_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/yinyangshi_h302_involuntarychoice.png",
+      "firstNightReminder": "Show the Yinyangshi the 4 character tokens.",
+      "reminders": [
+        "得知"
+      ],
+      "name": "阴阳师",
+      "team": "townsfolk",
+      "ability": "在你的首个夜晚，你会得知两个善良角色和两个邪恶角色，其中有且只有两个角色在场。",
+      "firstNight": 4100
+    },
+    {
+      "id": "shugenja_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/shugenja_h302_involuntarychoice.png",
+      "firstNightReminder": "Point horizontally in the direction of the closest evil player to the Shugenja. Point to either direction of your choice if the evil players on both sides are equidistant.",
+      "name": "修行者",
+      "team": "townsfolk",
+      "ability": "在你的首个夜晚，你会得知距离最近的邪恶玩家位于你的顺时针还是逆时针方向。如果两侧的邪恶玩家与你距离相等，你得知的信息由说书人决定。 ",
+      "firstNight": 4200
+    },
+    {
+      "id": "herbdoctor_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/herbdoctor_h302_involuntarychoice.png",
+      "firstNightReminder": "The Herb Doctor points to any player. Write a word referring to that player’s ability on a piece of paper or a phone or other device and show it to the Herb Doctor.",
+      "otherNightReminder": "The Herb Doctor points to any player. Write a word referring to that player’s ability on a piece of paper or a phone or other device and show it to the Herb Doctor.",
+      "name": "郎中",
+      "team": "townsfolk",
+      "ability": "每个夜晚，你要选择除你以外的一名玩家：你会得知一个与他能力相关的词语。 ",
+      "firstNight": 3800,
+      "otherNight": 15
+    },
+    {
+      "id": "balloonist_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/balloonist_h302_involuntarychoice.png",
+      "firstNightReminder": "Point to a player. Place the Balloonist's Seen reminder next to that character.",
+      "otherNightReminder": "Choose a player with a character type that is different to the player that has a Seen reminder. Point to that player. Place the Balloonist's Seen reminder next to that character.",
+      "reminders": [
+        "得知"
+      ],
+      "setup": true,
+      "name": "气球驾驶员",
+      "team": "townsfolk",
+      "ability": "每个夜晚，你会得知一名与上个夜晚得知的玩家角色类型不同的玩家。[+0~1外来者] ",
+      "firstNight": 4000,
+      "otherNight": 18
+    },
+    {
+      "id": "dreamer_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/dreamer_h302_involuntarychoice.png",
+      "firstNightReminder": "The Dreamer points to a player. Show 1 good and 1 evil character token; one of these is correct.",
+      "otherNightReminder": "The Dreamer points to a player. Show 1 good and 1 evil character token; one of these is correct.",
+      "name": "筑梦师",
+      "team": "townsfolk",
+      "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。 ",
+      "firstNight": 3700,
+      "otherNight": 17
+    },
+    {
+      "id": "snakecharmer_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/snakecharmer_h302_involuntarychoice.png",
+      "firstNightReminder": "The Snake Charmer points to a player. If that player is the Demon: swap the Demon and Snake Charmer character and alignments. Wake each player to inform them of their new role and alignment. The new Snake Charmer is poisoned.",
+      "otherNightReminder": "The Snake Charmer points to a player. If that player is the Demon: swap the Demon and Snake Charmer character and alignments. Wake each player to inform them of their new role and alignment. The new Snake Charmer is poisoned.",
+      "reminders": [
+        "中毒"
+      ],
+      "name": "舞蛇人",
+      "team": "townsfolk",
+      "ability": "每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。",
+      "firstNight": 3200,
+      "otherNight": 5
+    },
+    {
+      "id": "wigsnatcher_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/wigsnatcher_h302_involuntarychoice.png",
+      "otherNightReminder": "The Wig Snatcher chooses a player.",
+      "reminders": [
+        "改造"
+      ],
+      "name": "妒妇",
+      "team": "townsfolk",
+      "ability": "每个夜晚*，你要选择一名玩家：如果他当晚死亡，你变为他的角色。",
+      "otherNight": 6
+    },
+    {
+      "id": "innkeeper_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/innkeeper_h302_involuntarychoice.png",
+      "otherNightReminder": "The previously protected and drunk players lose those markers. The Innkeeper points to two players. Those players are protected. One is drunk.",
+      "reminders": [
+        "保护",
+        "醉酒"
+      ],
+      "name": "旅店老板",
+      "team": "townsfolk",
+      "ability": "每个夜晚*，你要选择两名玩家：他们当晚不会死亡，但其中一人会醉酒到下个黄昏。",
+      "otherNight": 3
+    },
+    {
+      "id": "firewatcher_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/firewatcher_h302_involuntarychoice.png",
+      "otherNightReminder": "The Firewatcher holds up a number of fingers (0, 1, 2 etc.). Place the PROTECTED reminders by the two players that many steps away on both sides. If either would die tonight, they survive, and the Firewatcher might die instead, but nobody else.",
+      "reminders": [
+        "保护",
+        "死亡"
+      ],
+      "name": "打更人",
+      "team": "townsfolk",
+      "ability": "每个夜晚*，你要猜测今晚首个死亡的玩家与你的距离。如果你猜测正确，则除你以外的所有玩家今晚不会死亡，但你可能会死亡。 ",
+      "otherNight": 4
+    },
+    {
+      "id": "courier_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/courier_h302_involuntarychoice.png",
+      "reminders": [
+        "Complete",
+        "1",
+        "2",
+        "3"
+      ],
+      "name": "信使",
+      "team": "townsfolk",
+      "ability": "每个白天，你可以私下询问说书人以得知一个任务和它的奖励。"
+    },
+    {
+      "id": "savant_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/savant_h302_involuntarychoice.png",
+      "name": "博学者",
+      "team": "townsfolk",
+      "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+    },
+    {
+      "id": "steeplejack_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/steeplejack_h302_involuntarychoice.png",
+      "otherNightReminder": "If the Steeplejack died tonight: the Steeplejack points to two characters with \"You start knowing\" in their ability's text: show the Steeplejack information those characters could learn.",
+      "name": "高空工人",
+      "team": "townsfolk",
+      "ability": "如果你在夜晚死亡，在当晚你会被唤醒并要选择两个能力具有“在你的首个夜晚，你会得知…”的角色，你得知这些角色会得知的信息。",
+      "otherNight": 16
+    },
+    {
+      "id": "moonflower_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/moonflower_h302_involuntarychoice.png",
+      "reminders": [
+        "枯萎"
+      ],
+      "name": "月光花",
+      "team": "outsider",
+      "ability": "如果你死亡且下一名被处决的是善良玩家，你的阵营落败。"
+    },
+    {
+      "id": "penitent_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/penitent_h302_involuntarychoice.png",
+      "otherNightReminder": "If the Pentient died today or tonight, wake the Demon. Show them the \"This character affected you\" token, and then the Penitent token. They shake their head or nod. If they nod, place the \"Doubled End\" reminder: they kill two players every night from now on.",
+      "reminders": [
+        "Judgement Tonight"
+      ],
+      "remindersGlobal": [
+        "双倍终结",
+        "死亡"
+      ],
+      "name": "忏悔者",
+      "team": "outsider",
+      "ability": "如果你死亡，当晚恶魔可以把他的能力变为“每个夜晚*，你要选择两名玩家：他们死亡。”",
+      "otherNight": 14
+    },
+    {
+      "id": "recluse_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/recluse_h302_involuntarychoice.png",
+      "name": "陌客",
+      "team": "outsider",
+      "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。 "
+    },
+    {
+      "id": "occultist_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/occultist_h302_involuntarychoice.png",
+      "reminders": [
+        "失去兴趣",
+        "告知"
+      ],
+      "name": "神秘学家",
+      "team": "outsider",
+      "ability": "每个白天，如果你没有“疯狂”证明你得知了新信息，你可能被处决。每局游戏限一次，说书人会告知你一条信息。"
+    },
+    {
+      "id": "crawler_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/crawler_h302_involuntarychoice.png",
+      "firstNightReminder": "The Crawler learns a player.",
+      "otherNightReminder": "If the Crawler's target has died, the Crawler learns another player. Then if a player is marked **EXECUTED**, show the target the Crawler's character token. ",
+      "reminders": [
+        "得知",
+        "被处决"
+      ],
+      "name": "爬虫",
+      "team": "minion",
+      "ability": "你始终得知一名存活的善良玩家，如果第一名被处决：他得知你在场。如果第二名被处决，你的阵营获胜。",
+      "firstNight": 3500,
+      "otherNight": 7
+    },
+    {
+      "id": "hulijing_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/hulijing_h302_involuntarychoice.png",
+      "firstNightReminder": "Show the Huli Jing 5 out-of-play characters: note which ones using a notes app. Then, the Huli Jing chooses one of them: mark that as their \"Current Form\". Until dusk, run the Huli Jing as though they were that character, and you may have them register as though they were that character & alignment.",
+      "otherNightReminder": "The Huli Jing chooses one of the 5 characters they were shown at the start of the game: mark that as their \"Current Form\". Until dusk, run the Huli Jing as though they were that character, and you may have them register as though they were that character & alignment.",
+      "reminders": [
+        "现形态",
+        "得知"
+      ],
+      "name": "狐狸精",
+      "team": "minion",
+      "ability": "在你的首个夜晚，你得知五个不在场的角色。每个夜晚，你要选择其中一个角色：你获得其能力且可能被当做该角色与其对应的类型和阵营，直到下个黄昏。",
+      "firstNight": 3300,
+      "otherNight": 2
+    },
+    {
+      "id": "esper_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/esper_h302_involuntarychoice.png",
+      "firstNightReminder": "Show the Esper the Grimoire. They select a character, a reminder, and a player by placing their Character, Reminder, and Player reminders by them. Wake the Demon; show them the marked character, reminder token, and point to the marked player.",
+      "otherNightReminder": "Show the Esper the Grimoire. They select a character, a reminder, and a player by placing their Character, Reminder, and Player reminders by them. Wake the Demon; show them the marked character, reminder token, and point to the marked player.",
+      "reminders": [
+        "角色",
+        "提示标记",
+        "玩家",
+        "是"
+      ],
+      "name": "异能者",
+      "team": "minion",
+      "ability": "每个夜晚（即使你死亡的当晚），你查看魔典并选择一个角色，一个提示标记，一名玩家：恶魔得知你的三个选择。 ",
+      "firstNight": 3600,
+      "otherNight": 8
+    },
+    {
+      "id": "bugkeeper_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/bugkeeper_h302_involuntarychoice.png",
+      "otherNightReminder": "Any player who nominated the alive Bug Keeper dies.",
+      "reminders": [
+        "Nominated",
+        "Dead"
+      ],
+      "name": "养蛊人",
+      "team": "minion",
+      "ability": "在你存活时提名你的玩家会在当晚死亡，即使你已死亡。 ",
+      "otherNight": 13.5
+    },
+    {
+      "id": "pukka_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/pukka_h302_involuntarychoice.png",
+      "firstNightReminder": "The Pukka points to a player. That player is poisoned.",
+      "otherNightReminder": "The Pukka points to a player. That player is poisoned. The previously poisoned player dies. ",
+      "reminders": [
+        "中毒",
+        "死亡"
+      ],
+      "name": "普卡",
+      "team": "demon",
+      "ability": "每个夜晚，你要选择一名玩家：他中毒。 上个因你的能力中毒的玩家会死亡并恢复健康。 ",
+      "firstNight": 3400,
+      "otherNight": 10
+    },
+    {
+      "id": "cawthane_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/cawthane_h302_involuntarychoice.png",
+      "firstNightReminder": "During the Minion info step, inform the Minions the Cawthane is in play. They point to players: move the \"Coronation\" reminder besides the player who got the most votes.  Replace their token with the Cawthane's, and inform them they are now the evil Cawthane.",
+      "otherNightReminder": "The Cawthane points to a player. That player dies.",
+      "reminders": [
+        "加冕",
+        "死亡"
+      ],
+      "setup": true,
+      "name": "锈刃领袖",
+      "team": "demon",
+      "ability": "每个夜晚*，你要选择一名玩家，他死亡。[+0/1外来者，爪牙们决定你是谁]",
+      "firstNight": 11,
+      "otherNight": 11
+    },
+    {
+      "id": "fanggu_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/fanggu_h302_involuntarychoice.png",
+      "otherNightReminder": "The Fang Gu points to a player. That player dies. Or, if that player was an Outsider and there are no other Fang Gu in play: The Fang Gu dies instead of the chosen player. The chosen player is now an evil Fang Gu. Wake the new Fang Gu. Show the 'You are' card, then the Fang Gu token. Show the 'You are' card, then the thumb-down 'evil' hand sign.",
+      "reminders": [
+        "死亡",
+        "限一次"
+      ],
+      "setup": true,
+      "name": "方古",
+      "team": "demon",
+      "ability": "每个夜晚*，你要选择一名玩家：他死亡。 被该能力杀死的外来者改为变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者] ",
+      "otherNight": 12
+    },
+    {
+      "id": "hundun_h302_involuntarychoice",
+      "image": "https://www.bloodstar.xyz/p/DoubleA911/H3-02_InvoluntaryChoice/hundun_h302_involuntarychoice.png",
+      "otherNightReminder": "The Hun Dun points to a player. That player dies.",
+      "reminders": [
+        "死亡",
+        "善良中毒"
+      ],
+      "name": "混沌",
+      "team": "demon",
+      "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式杀死了一名与你邻近的镇民玩家，除旅行者外的所有善良玩家会中毒直到下个黄昏。 ",
+      "otherNight": 13
+    }
+  ]

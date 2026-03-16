@@ -1,0 +1,583 @@
+[
+    {
+        "id": "_meta",
+        "name": "不可名状REDACTED",
+        "author": "Raphael",
+         "logo": "https://i.postimg.cc/Xqgcnt15/Re.png",
+"almanac": "https://www.bloodstar.xyz/p/Dela/REDACTED/almanac.html"
+},
+    {
+        "id": "actor_redacted",
+        "name": "演员",
+        "ability": "每个夜晚，你会得知一个存活的在场角色。如果你“疯狂”地证明自己是演员，你失去能力。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "16",
+        "otherNight": "17",
+        "firstNightReminder": "向演员展示一个在场角色标记。",
+        "otherNightReminder": "向演员展示一个在场角色标记。若他们因担任演员而“疯狂”，则不要唤醒他们。",
+        "reminders": [
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/actor_redacted.png"
+    },
+    {
+        "id": "highpriestess_redacted",
+        "name": "女祭司",
+        "ability": "每个夜晚，你会得知一名说书人认为你最应该与其交流的玩家。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "17",
+        "otherNight": "19",
+        "firstNightReminder": "唤醒女祭司，对她指向一名玩家。",
+        "otherNightReminder": "唤醒女祭司，对她指向一名玩家。",
+        "reminders": [
+            "得知"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/highpriestess_redacted.png"
+    },
+    {
+        "id": "anthropologist_redacted",
+        "name": "人类学家",
+        "ability": "每个夜晚*，你会得知在今天白天时你是否提名了一名外来者。[+1外来者]",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "16",
+        "firstNightReminder": "",
+        "otherNightReminder": "若人类学家昨日提名了外来者，请点头表示是；若未提名，请摇头表示否。",
+        "reminders": [
+            "提名"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/anthropologist_redacted.png"
+    },
+    {
+        "id": "cellist_redacted",
+        "name": "大提琴手",
+        "ability": "每个夜晚*，你要选择除你及与你邻近的两名玩家以外的一名存活的玩家：当晚恶魔的负面能力对与他邻近的两名玩家无效。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "4",
+        "firstNightReminder": "",
+        "otherNightReminder": "大提琴手指向一名存活的玩家（该玩家既非其本人也非其邻居）：其两名邻居今夜免受恶魔侵害。",
+        "reminders": [
+            "保护"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/cellist_redacted.png"
+    },
+    {
+        "id": "exorcist_redacted",
+        "name": "驱魔人",
+        "ability": "每个夜晚*，你要选择一名玩家（与上个夜晚不同）：如果你选中了恶魔，他会得知你的角色，但他当晚不会因其自身能力而被唤醒。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "5",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒驱魔人，让他选择一名与上一晚不同的玩家。如果他选中了恶魔，则在驱魔人入睡后通知该恶魔谁是驱魔人。",
+        "reminders": [
+            "被选择"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/exorcist_redacted.png"
+    },
+    {
+        "id": "dreamwalker_redacted",
+        "name": "梦行者",
+        "ability": "每个夜晚*，你可以选择得知并使用上个死于处决的玩家的能力：如果你这么做了，一名或更多玩家会死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "3",
+        "firstNightReminder": "",
+        "otherNightReminder": "在先前被处决者本应苏醒时唤醒梦行者。梦行者可选择使用其能力：若选择使用，则向其展示最后一名因处决而死亡的玩家的标记，随后让其使用该标记对应的能力。",
+        "reminders": [
+            "处决",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/dreamwalker_redacted.png"
+    },
+    {
+        "id": "courtesan_redacted",
+        "name": "交际花",
+        "ability": "在你的首个白天，你可以私下询问说书人并得知一条信息：你始终会知道它是否正确，即使你在夜晚死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "正确",
+            "拥有能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/courtesan_redacted.png"
+    },
+    {
+        "id": "policeofficer_redacted",
+        "name": "警官",
+        "ability": "每个白天*，你可以私下询问说书人并得知两场灾变：其中至少有一场灾变在昨天白天或夜晚发生。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "一次"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/policeofficer_redacted.png"
+    },
+    {
+        "id": "aristocrat_redacted",
+        "name": "权贵",
+        "ability": "每局游戏限一次，在夜晚时*，你可以得知有多少名玩家醉酒。“疯狂”地证明你不是你当前阵营的玩家可能会醉酒直到下个黎明。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "18",
+        "firstNightReminder": "",
+        "otherNightReminder": "权贵通过点头表示同意或摇头表示拒绝来使用他们的能力。若他们点头同意，则向他们展示当前醉酒玩家的数量。",
+        "reminders": [
+            "醉酒",
+            "使用能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/aristocrat_redacted.png"
+    },
+    {
+        "id": "biographer_redacted",
+        "name": "传记作者",
+        "ability": "如果你在夜晚死亡，你会得知死灵之书的第一条信息是否是正确的。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "15",
+        "firstNightReminder": "",
+        "otherNightReminder": "若传记作者当晚死亡：并非通过点头（是）或摇头（否）来表明死灵之书变异始于何时。",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/biographer_redacted.png"
+    },
+    {
+        "id": "debtcollector_redacted",
+        "name": "讨债人",
+        "ability": "两名互为对立阵营的玩家以为自己是盲目，但其实他们不是。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "盲目"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/debtcollector_redacted.png"
+    },
+    {
+        "id": "alchemist_redacted",
+        "name": "炼金术士",
+        "ability": "你拥有一个爪牙角色的能力。当你使用能力时，说书人可能会要求你更换选择。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "11",
+        "otherNight": "",
+        "firstNightReminder": "唤醒炼金术士，对他展示他获得的能力所对应的爪牙角色标记。",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [
+            "是炼金术士"
+        ],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/alchemist_redacted.png"
+    },
+    {
+        "id": "translator_redacted",
+        "name": "译员",
+        "ability": "当你拜访说书人以得知死灵之书的信息时，你会被当作与你的阵营对立阵营。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/translator_redacted.png"
+    },
+    {
+        "id": "cultistr_edacted",
+        "name": "异教徒",
+        "ability": "你拥有一个镇民角色的能力，如果这个镇民在场，他醉酒。如果你'疯狂'地证明你是异教徒，部分异教徒可能会死亡。［+0~2异教徒］",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [
+            "是异教徒",
+            "醉酒"
+        ],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/cultist_redacted.png"
+    },
+    {
+        "id": "yellowsign_redacted",
+        "name": "黄印",
+        "ability": "每个夜晚*，会有一场灾变发生，即使你已死亡。每个白天，你可以私下询问说书人以得知下一场你造成的灾变。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "2",
+        "firstNightReminder": "",
+        "otherNightReminder": "一场灾变发生",
+        "reminders": [
+            "?"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/yellowsign_redacted.png"
+    },
+    {
+        "id": "theentranced1_redacted",
+        "name": "着魔者",
+        "ability": "每个白天，你要拜访说书人以得知死灵之书的信息。如果你“疯狂”地证明你是着魔者，你可能被处决。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "疯狂"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/theentranced1_redacted.png"
+    },
+    {
+        "id": "bodysnatcher_redacted",
+        "name": "盗尸者",
+        "ability": "你可能是邪恶阵营。你以为你是一个善良的镇民角色，但其实你不是。如果你死亡，当晚你会得知你的阵营和角色，然后会有一名玩家变成与你阵营相同的盗尸者。恶魔知道你是盗尸者。［如果你是邪恶阵营，-1爪牙］",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "14",
+        "firstNightReminder": "",
+        "otherNightReminder": "如果盗尸者死亡: 展示阵营标记善良或邪恶. 将“是盗尸者\"放置于一名新玩家上。",
+        "reminders": [],
+        "remindersGlobal": [
+            "是盗尸者"
+        ],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/bodysnatcher_redacted.png"
+    },
+    {
+        "id": "cthulhu_redacted",
+        "name": "克苏鲁",
+        "ability": "每个夜晚，你要选择一名玩家：如果他是异教徒，你和他会得知此事；如果他下个白天被处决，他的阵营落败。［+2异教徒］",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "12",
+        "otherNight": "6",
+        "firstNightReminder": "克苏鲁选择一名玩家：若该玩家是邪教徒，则向其展示邪教徒标记。随后唤醒该玩家，并向其展示克苏鲁标记及“已选中你”字样。",
+        "otherNightReminder": "克苏鲁选择一名玩家：若该玩家是邪教徒，则向其展示邪教徒标记。随后唤醒该玩家，并向其展示克苏鲁标记+“已选中你”。",
+        "reminders": [
+            "恐惧"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/cthulhu_redacted.png"
+    },
+    {
+        "id": "harpy_redacted",
+        "name": "鹰身女妖",
+        "ability": "每个夜晚，你要选择两名玩家：明天第一名玩家需要“疯狂”地证明第二名玩家是邪恶的，否则他们之中可能会有人死亡。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "13",
+        "otherNight": "7",
+        "firstNightReminder": "唤醒鹰身女妖，让她选择两名玩家，第一名玩家明天需要“疯狂”证明第二名玩家邪恶。在鹰身女妖入睡后通知第一名玩家被鹰身女妖选中。",
+        "otherNightReminder": "唤醒鹰身女妖，让她选择两名玩家，第一名玩家明天需要“疯狂”证明第二名玩家邪恶。在鹰身女妖入睡后通知第一名玩家被鹰身女妖选中。",
+        "reminders": [
+            "疯狂",
+            "第二名"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/harpy_redacted.png"
+    },
+    {
+        "id": "bast_redacted",
+        "name": "巴斯特",
+        "ability": "你知道所有死亡玩家的角色。每个夜晚，你可以选择一名死亡玩家：你获得他的能力直到你下次选择。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "13",
+        "firstNightReminder": "",
+        "otherNightReminder": "指向所有已死亡玩家及其对应的角色标记。巴斯特可指向一名玩家并使用其能力。",
+        "reminders": [
+            "使用中"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/bast_redacted.png"
+    },
+    {
+        "id": "migo_redacted",
+        "name": "米-戈",
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：你和他交换角色，但每局游戏仅能交换一次。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "14",
+        "otherNight": "8",
+        "firstNightReminder": "米-戈要么做出摇头的信号，要么指向一名玩家。若米-戈选定某名玩家，则将其角色与另一人互换。告知双方角色互换的事实。",
+        "otherNightReminder": "若米-戈尚未使用此能力：米-戈会做出摇头示意，或指向一名玩家。若米-戈选择某名玩家，则将其角色与另一人互换。告知双方角色互换的事实。",
+        "reminders": [
+            "不可交换",
+            "中毒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/migo_redacted.png"
+    },
+    {
+        "id": "yogsothoth_redacted",
+        "name": "犹格-索托斯",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。你以此方式杀死的外来者需要“疯狂”地证明自己是一个镇民角色，不然他可能被处决。［+1外来者］",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "12",
+        "firstNightReminder": "",
+        "otherNightReminder": "尤格·索托斯指向一名玩家：该玩家死亡。若该玩家是外来者，则添加一枚“疯狂”标。",
+        "reminders": [
+            "死亡",
+            "疯狂"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/yogsothoth_redacted.png"
+    },
+    {
+        "id": "azathoth_redacted",
+        "name": "阿撒托斯",
+        "ability": "每个夜晚*，可能会有一名玩家死亡。你可能会被当作爪牙角色。当且仅当所有的阿撒托斯死亡，邪恶阵营获胜。灾变会对善良阵营有利。［多数玩家为阿撒托斯］",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "9",
+        "firstNightReminder": "",
+        "otherNightReminder": "说书人选择谁会死亡。",
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/azathoth_redacted.png"
+    },
+    {
+        "id": "nyarlathotep_redacted",
+        "name": "奈亚拉托提普",
+        "ability": "你拥有所有不在场和死亡爪牙角色的能力。每个夜晚*，由说书人决定当晚的死亡。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "15",
+        "otherNight": "11",
+        "firstNightReminder": "将不在场爪牙的能力放置在奈亚拉托提普上",
+        "otherNightReminder": "说书人决定谁会死亡. 将死亡和不在场爪牙的能力放置在奈亚拉托提普上",
+        "reminders": [
+            "死亡",
+            "限一次",
+            "当日死亡",
+            "疯狂"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/nyarlathotep_redacted.png"
+    },
+    {
+        "id": "hastur_redacted",
+        "name": "哈斯塔",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果一名善良玩家“疯狂”地证明你或黄印在场，你的阵营可能会获胜。［+黄印］",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "10",
+        "firstNightReminder": "",
+        "otherNightReminder": "哈斯塔指向一名玩家：他死亡。",
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/hastur_redacted.png"
+    },
+    {
+        "id": "necronomicon_redacted",
+        "name": "死灵之书",
+        "ability": "每个白天，存活的玩家可以私下询问说书人并得知一条信息，每天得知的信息对错交替。\n如果过多的善良玩家拜访说书人，会有一场灾变发生。",
+        "team": "fabled",
+        "sch_team": "传奇角色",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "拜访",
+            "灾变"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/necronomicon_redacted.png"
+    },
+    {
+        "id": "alchemist1_redacted",
+        "name": "炼金术士&盲目",
+        "ability": "认为自己是盲目的炼金术士不会得知自己的获得的能力。",
+        "team": "fabled",
+        "sch_team": "传奇角色",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": ""
+    },
+    {
+        "id": "migo1_redacted",
+        "name": "米-戈",
+        "ability": "如果米-戈是善良的并且与恶魔交换角色，他们同时交换阵营。",
+        "team": "fabled",
+        "sch_team": "传奇角色",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": ""
+    },
+    {
+        "id": "nyarlathotep1_redacted",
+        "name": "奈亚拉托提普&驱魔人",
+        "ability": "如果驱魔人选择了奈亚拉托提普，说书人不能使用奈亚拉托提普的能力造成死亡。",
+        "team": "fabled",
+        "sch_team": "传奇角色",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": ""
+    },
+    {
+        "id": "reality_redacted",
+        "name": "现实",
+        "ability": "每个白天，你可以拜访说书人并选择一个角色和两个关键词。说书人会改变该角色能力以包含两个关键词，然后他会得知此事（如果该角色为恶魔的伪装，改为恶魔得知此事）。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/reality_redacted.png"
+    },
+    {
+        "id": "prophet_redacted",
+        "name": "先知",
+        "ability": "每个白天，在黎明时，你要公开发表一个与之前不同的声明：当天的死灵之书的信息会在某些方面与之有关。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/prophet_redacted.png"
+    },
+    {
+        "id": "moonbeast_redacted",
+        "name": "月兽",
+        "ability": "每个白天，你可以促成一名玩家与说书人之间的交易。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/moonbeast_redacted.png"
+    },
+    {
+        "id": "blinded1_redacted",
+        "name": "盲目",
+        "ability": "你不知道你的角色、阵营和队友。如果你是邪恶的，你的队友不会得知你（即使你是盗尸者）。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [
+            "盲目"
+        ],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/Dela/REDACTED/blinded1_redacted.png"
+    },
+    {
+        "id": "alchemist1_redacted",
+        "name": "炼金术士&盲目",
+        "ability": "认为自己是盲目的炼金术士不会得知自己的获得的能力。",
+        "team": "a jinxed"
+    },
+    {
+        "id": "migo1_redacted",
+        "name": "米-戈",
+        "ability": "如果米-戈是善良的并且与恶魔交换角色，他们同时交换阵营。",
+        "team": "a jinxed"
+    },
+    {
+        "id": "nyarlathotep1_redacted",
+        "name": "奈亚拉托提普&驱魔人",
+        "ability": "如果驱魔人选择了奈亚拉托提普，说书人不能使用奈亚拉托提普的能力造成死亡。",
+        "team": "a jinxed"
+    }
+]

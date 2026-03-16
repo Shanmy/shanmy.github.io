@@ -362,6 +362,13 @@ input[type=file]{display:none}
   <div class="up-title">说书人助手</div>
   <div class="up-sub">选择剧本，开始主持游戏</div>
 
+  <div id="lib-search-wrap" style="width:100%;max-width:320px;margin-bottom:8px" class="hidden">
+    <input id="lib-search" type="search" placeholder="搜索剧本名或角色名…"
+      style="width:100%;padding:10px 14px;border-radius:12px;border:1px solid #333;
+             background:var(--card);color:var(--txt);font-size:14px;outline:none;
+             -webkit-appearance:none;box-sizing:border-box">
+    <div id="lib-count" style="font-size:12px;color:var(--txt2);margin-top:6px;text-align:center"></div>
+  </div>
   <div id="script-library" style="width:100%;max-width:320px"></div>
 
   <div class="up-or">— 或上传自定义剧本 —</div>
@@ -567,19 +574,50 @@ async function loadScriptLibrary() {
 
 function renderLibrary(manifest) {
   const lib = document.getElementById('script-library');
-  if (!manifest.length) { lib.innerHTML = ''; return; }
-  lib.innerHTML = manifest.map((item, i) => `
-    <button class="up-default" onclick="loadScriptByIndex(${i})" style="margin-bottom:6px">
-      <img class="up-default-logo" src="${esc(item.logo||'')}" onerror="this.style.visibility='hidden'" alt="">
-      <div class="up-default-info">
-        <div class="up-default-name">${esc(item.name)}</div>
-        <div class="up-default-by">作者：${esc(item.author||'未知')} · 内置剧本</div>
-      </div>
-      <span class="up-default-arr">▶</span>
-    </button>
-  `).join('');
-  // store manifest on window for index access
+  const wrap = document.getElementById('lib-search-wrap');
+  const searchEl = document.getElementById('lib-search');
+  const countEl = document.getElementById('lib-count');
   window._scriptManifest = manifest;
+
+  if (!manifest.length) { lib.innerHTML = ''; return; }
+
+  wrap.classList.remove('hidden');
+
+  function doFilter(q) {
+    const query = q.trim().toLowerCase();
+    const filtered = query
+      ? manifest.filter(item =>
+          item.name.toLowerCase().includes(query) ||
+          (item.author||'').toLowerCase().includes(query) ||
+          (item.charNames||[]).some(n => n.toLowerCase().includes(query))
+        )
+      : manifest;
+
+    countEl.textContent = query
+      ? `找到 ${filtered.length} / ${manifest.length} 个剧本`
+      : `共 ${manifest.length} 个剧本`;
+
+    if (!filtered.length) {
+      lib.innerHTML = '<div style="font-size:13px;color:var(--txt2);text-align:center;padding:16px 0">没有匹配的剧本</div>';
+      return;
+    }
+
+    lib.innerHTML = filtered.map(item => {
+      const i = manifest.indexOf(item);
+      return `
+        <button class="up-default" onclick="loadScriptByIndex(${i})" style="margin-bottom:6px">
+          <img class="up-default-logo" src="${esc(item.logo||'')}" onerror="this.style.visibility='hidden'" alt="">
+          <div class="up-default-info">
+            <div class="up-default-name">${esc(item.name)}</div>
+            <div class="up-default-by">作者：${esc(item.author||'未知')} · ${(item.charNames||[]).length} 个角色</div>
+          </div>
+          <span class="up-default-arr">▶</span>
+        </button>`;
+    }).join('');
+  }
+
+  searchEl.addEventListener('input', e => doFilter(e.target.value));
+  doFilter('');
 }
 
 async function loadScriptByIndex(i) {

@@ -1,0 +1,656 @@
+[
+  {
+    "id": "_meta",
+    "name": "钟楼怪诞(圣诞快乐) V1.2.1",
+    "author": "Nashable",
+    "logo": "https://i.postimg.cc/zXmS7PGy/1.png",
+    "almanac": "https://chillclocktower.com/merry/",
+    "background": "https://chillclocktower.com/homebrew/merrryclocktower/bg/merrry-background.jpg",
+    "firstNight": [
+      "dusk",
+      "minioninfo",
+      "demoninfo",
+      "jackfrost_averymerryclocktower",
+      "christmasangel_averymerryclocktower",
+      "miser_averymerryclocktower",
+      "krampus_averymerryclocktower",
+      "grinch_averymerryclocktower",
+      "santaclaus_averymerryclocktower",
+      "holidayelf_averymerryclocktower",
+      "gingerbreadman_averymerryclocktower",
+      "frosty_averymerryclocktower",
+      "scrooge_averymerryclocktower",
+      "mrsclaus_averymerryclocktower",
+      "belsnickel_averymerryclocktower",
+      "carolsinger_averymerryclocktower",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "johnmcclane_averymerryclocktower",
+      "christmasangel_averymerryclocktower",
+      "mistletoe_averymerryclocktower",
+      "jackfrost_averymerryclocktower",
+      "miser_averymerryclocktower",
+      "krampus_averymerryclocktower",
+      "grinch_averymerryclocktower",
+      "yeti_averymerryclocktower",
+      "belsnickel_averymerryclocktower",
+      "frostbite_averymerryclocktower",
+      "hollywreath_averymerryclocktower",
+      "gingerbreadman_averymerryclocktower",
+      "ghostpast_averymerryclocktower",
+      "santaclaus_averymerryclocktower",
+      "holidayelf_averymerryclocktower",
+      "rudolph_averymerryclocktower",
+      "frosty_averymerryclocktower",
+      "ghostpresent_averymerryclocktower",
+      "ghostfuture_averymerryclocktower",
+      "scrooge_averymerryclocktower",
+      "carolsinger_averymerryclocktower",
+      "dawn"
+    ]
+  },
+  {
+    "id": "mrsclaus_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/mrs-claus.png"
+    ],
+    "firstNightReminder": "Wake Mrs. Claus, point to the closest player(s) yet to wake due to their ability, excluding travelers.",
+    "reminders": [
+      "得知",
+      "得知"
+    ],
+    "name": "圣诞奶奶",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知除旅行者外离你最近的一名或两名没有因其自身能力而被唤醒的玩家。",
+    "flavor": "Be safe, my love. Your wisdom lights our way like the brightest star on this frosty night. I'll keep the hearth warm and the spirits high until your return, ensuring our Christmas magic stays aglow.",
+    "firstNight": 52
+  },
+  {
+    "id": "frosty_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/frosty.png"
+    ],
+    "firstNightReminder": "If Frosty died tonight, wake them and show them the token of the first evil character that selected them",
+    "otherNightReminder": "If Frosty died tonight, wake them and show them the token of the first evil character that selected them",
+    "reminders": [
+      "死亡",
+      "得知",
+      "醉酒"
+    ],
+    "name": "弗洛斯蒂",
+    "team": "townsfolk",
+    "ability": "每个夜晚，首个使用自身能力选择了你的邪恶玩家会醉酒直到下个黄昏，即使你已死亡，然后你会得知该玩家的角色并死亡。",
+    "flavor": "In a whirl of glistening snow, Frosty dances with joy aglow, bringing laughter wherever he goes, as his magic hat bestows",
+    "firstNight": 50,
+    "otherNight": 50
+  },
+  {
+    "id": "santaclaus_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/santa.png"
+    ],
+    "firstNightReminder": "Choose a player, Yes to signal Nice, No to signal Naughty",
+    "otherNightReminder": "Choose a player, Yes to signal Nice, No to signal Naughty",
+    "reminders": [
+      "淘气",
+      "乖巧"
+    ],
+    "name": "圣诞老人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家:你决定他是淘气还是乖巧，淘气可能会让他或你遭遇一些不好的事情，乖巧可能会让他或你遭遇一些好的事情。",
+    "firstNight": 40,
+    "otherNight": 44,
+    "flavor": "My dear, as night descends on our snowy realm, I set out to uncover secrets and protect our Christmas joy from lurking shadows."
+  },
+  {
+    "id": "holidayelf_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/elf.png"
+    ],
+    "firstNightReminder": "选择一名玩家他收到一个礼物. 在那名玩家上标注礼物标记",
+    "otherNightReminder": "选择一名玩家他收到一个礼物. 或选择你自己(限一次)以打开所有礼物.",
+    "reminders": [
+      "打开礼物",
+      "礼物",
+      "礼物",
+      "礼物",
+      "礼物",
+      "礼物",
+      "礼物",
+      "礼物",
+      "礼物",
+      "礼物",
+      "礼物"
+    ],
+    "name": "圣诞精灵",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家:每局游戏限一次，如果你选择自己，你会以不定顺序得知所有你曾选择的玩家当前的角色，以及一个不在场角色。在此之后，你不再因自身能力被唤醒。",
+    "firstNight": 41,
+    "otherNight": 45,
+    "flavor": "We elves try to stick to the four main food groups: candy, candy canes, candy corns and syrup."
+  },
+  {
+    "id": "rudolph_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/rudolph.png"
+    ],
+    "otherNightReminder": "鲁道夫选择等同于爪牙初始设置数量的玩家(最多3名)，标记驯鹿，告诉鲁道夫里面有多少名爪牙然后使其入睡. Any minions chosen, wake and show them YOU WERE CHOSEN BY and the Rudolph token. Point to Rudolph.",
+    "reminders": [
+      "驯鹿",
+      "驯鹿",
+      "驯鹿",
+      "唤醒"
+    ],
+    "name": "鲁道夫",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你之外的等于爪牙初始设置数量的玩家:你会得知他们之中有多少名爪牙。如果你选中爪牙，他会得知你是鲁道夫。",
+    "otherNight": 46,
+    "flavor": "Amidst the snowy eve's quiet hush, young Rudolph, with his nose so bright, guides our sleigh through the wintry night, a beacon of hope in the frosty air."
+  },
+  {
+    "id": "ghostpresent_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/ghost-present.png"
+    ],
+    "otherNightReminder": "Wake and choose a player. Storyteller shows/reads you the contents of reminder tokens for the chosen player.",
+    "reminders": [
+      "斯克鲁奇",
+      "现在"
+    ],
+    "name": "现在之灵 ",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：你会得知放置在他的角色标记旁所有提示标记的文字描述，以及得知他是否是斯克鲁奇。",
+    "special": [
+      {
+        "name": "grimoire",
+        "type": "signal",
+        "time": "night"
+      }
+    ],
+    "otherNight": 54,
+    "flavor": "Robed in the richness of the present, this spirit unveils the joys and woes of today, revealing truths hidden beneath the festive cheer."
+  },
+  {
+    "id": "ghostfuture_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/ghost-future.png"
+    ],
+    "otherNightReminder": "Choose two players and a Rock, Paper, Scissors shape.",
+    "reminders": [
+      "石头",
+      "布",
+      "剪刀",
+      "死亡",
+      "死亡",
+      "死亡"
+    ],
+    "name": "未来之灵",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你之外的两名玩家进行秘密猜拳。你要猜测分出胜负的那次猜拳中他们可能会用的一个手型，如果你猜对，你得知输家的角色。否则你和他们都可能会死亡。（猜拳分出胜负后就结束，如果当晚猜拳连续三个平局，猜拳立即结束，然后你得知任意信息或视为你猜测错误。）",
+    "otherNight": 55,
+    "flavor": "Roads? Where Were Going, We Dont Need Roads."
+  },
+  {
+    "id": "sugarplumfairy_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/fairy.png"
+    ],
+    "reminders": [
+      "对 1",
+      "对 1",
+      "对 2",
+      "对 2",
+      "对 3",
+      "对 3",
+      "对 4",
+      "对 4",
+      "对 5",
+      "对 5"
+    ],
+    "name": "糖梅仙子",
+    "team": "townsfolk",
+    "setup": true,
+    "ability": "每个白天，你可以私下拜访说书人并选择除你之外的两名玩家，然后你可以询问一个只与他们两人有关且两人都存在可能的是非问题。相似问题只能询问一次。相同一对玩家只能询问一次。〔+1外来者〕",
+    "flavor": "Hm-hm-hmm-hmm, hmm-hmm hm-hm-hmm, hm-hm-hmm hm-hm-hmm, hm-hm-hm-hm hmm..."
+  },
+  {
+    "id": "wassailer_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/wassailer.png"
+    ],
+    "reminders": [
+      "问候!",
+      "问候!",
+      "问候!",
+      "问候!",
+      "问候!",
+      "问候!",
+      "问候!",
+      "问候!",
+      "问候!",
+      "问候!",
+      "醉酒"
+    ],
+    "name": "欢饮者",
+    "team": "townsfolk",
+    "ability": "每个黎明，超过半数存活玩家（向上取整）可问候你，任何未问候你的人都可能醉酒直到下个黎明。每个白天，你可以拜访说书人得知关于今天黎明问候你的人的情报。",
+    "flavor": "It's pronounced Was-sail-er"
+  },
+  {
+    "id": "christmasangel_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/christmasangel.png"
+    ],
+    "firstNightReminder": "Once per game, at night, choose an alive player (not yourself).",
+    "otherNightReminder": "Once per game, at night, choose an alive player (not yourself).",
+    "reminders": [
+      "保护",
+      "死亡"
+    ],
+    "name": "圣诞天使",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择除你之外的一名存活玩家:从此邪恶玩家的负面能力对他无效。如果你或他死亡，你们都会死亡。",
+    "firstNight": 20,
+    "otherNight": 16,
+    "jinxes": [
+      {
+        "id": "assassin",
+        "reason": "Assassin's ability still works on a protected player"
+      }
+    ],
+    "flavor": "Glimmering softly in the winter's night, the Christmas Angel descends with a serene grace, bestowing protection and peace upon those who walk in the spirit of the season."
+  },
+  {
+    "id": "ghostpast_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/ghost-past.png"
+    ],
+    "otherNightReminder": "Wake and check if Ghost Past wants to use their ability. If Scrooge is dead, tell them who that is now.",
+    "reminders": [
+      "恢复",
+      "失去能力",
+      "斯克鲁奇死亡"
+    ],
+    "name": "过去之灵",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择除你以外的一名玩家：他变回他在上个夜晚开始时的角色、状态和阵营。如果斯克鲁奇死亡，你会知道他是谁。",
+    "otherNight": 43,
+    "flavor": "In the silent echoes of yesteryears, this spectral guide whispers of old joys and sorrows, illuminating forgotten memories in the candle's glow."
+  },
+  {
+    "id": "gingerbreadman_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/gingerbread.png"
+    ],
+    "firstNightReminder": "每局游戏限一次，夜晚时，若被邪恶玩家选中，将其唤醒并要求其选择一名存活玩家（可选择自己）。",
+    "otherNightReminder": "每局游戏限一次，夜晚时，若被邪恶玩家选中，将其唤醒并要求其选择一名存活玩家（可选择自己）。",
+    "reminders": [
+      "失去能力",
+      "重定向"
+    ],
+    "name": "姜饼人",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，当你首次被邪恶玩家使用其自身能力选择时，你会被唤醒，然后你要选择一名存活玩家:改为他被选择。",
+    "firstNight": 49,
+    "otherNight": 40,
+    "flavor": "Do you know the muffin man?"
+  },
+  {
+    "id": "thenutcracker_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/nutcracker.png"
+    ],
+    "reminders": [
+      "红绯鱼",
+      "失去能力"
+    ],
+    "name": "胡桃夹子",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，当你得知一名玩家死亡时，你可以立即公开声明你是胡桃夹子。如果那名玩家是善良的，你死亡且该玩家复活。会有一名善良玩家始终被你的能力当作邪恶玩家。",
+    "flavor": "Ehrlich gesagt, wer wirft einen Pantoffel?"
+  },
+  {
+    "id": "brokentoy_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/broken-toy.png"
+    ],
+    "remindersGlobal": [
+      "是破碎玩家"
+    ],
+    "setup": true,
+    "name": "破碎玩具",
+    "team": "outsider",
+    "ability": "你以为你是一个其他外来者角色，你随时可能死亡。你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。",
+    "special": [
+      {
+        "name": "bag-disabled",
+        "type": "selection",
+        "time": "pregame"
+      },
+      {
+        "name": "replace-character",
+        "type": "reveal"
+      }
+    ],
+    "flavor": "Beep-Booooooooop *bang*"
+  },
+  {
+    "id": "johnmcclane_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/john.png"
+    ],
+    "otherNightReminder": "Wake the player marked Welcome to the Party and inform them they are now the John McClane. Replace their character with John McClane",
+    "reminders": [
+      "白&夜死",
+      "欢迎进入派对"
+    ],
+    "name": "约翰 麦克莱恩",
+    "team": "outsider",
+    "ability": "每个白天或夜晚要有玩家死亡，否则你的阵营落败。如果你死于处决，会有一名存活善良玩家在当晚变成约翰 麦克莱恩。",
+    "otherNight": 2,
+    "flavor": "Happy trails, Hans!"
+  },
+  {
+    "id": "scrooge_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/scrooge.png"
+    ],
+    "firstNightReminder": "Wake and inform a good player they are now evil at the start of the night. Wake Scrooge and tell them their Visitors now.",
+    "otherNightReminder": "Check if Scrooge turns 1 evil player good.",
+    "reminders": [
+      "邪恶",
+      "过去访客",
+      "现在访客",
+      "未来访客",
+      "过去拜访",
+      "现在拜访",
+      "未来拜访"
+    ],
+    "setup": true,
+    "name": "斯克鲁奇",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，你会得知至多三名在场的拥有选择能力的善良角色。如果这些角色都以自身能力选择过你，会有一名邪恶玩家转变为善良阵营。[会有一名善良玩家转变为邪恶阵营]",
+    "firstNight": 51,
+    "otherNight": 57,
+    "flavor": "You may be an undigested bit of beef, a blot of mustard, a crumb of cheese, a fragment of an underdone potato. Theres more of gravy than of grave about you, whatever you are!"
+  },
+  {
+    "id": "secretsanta_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/secret-santa.png"
+    ],
+    "reminders": [
+      "已猜测",
+      "黄昏落败"
+    ],
+    "name": "秘密圣诞老人",
+    "team": "outsider",
+    "ability": "提名开始后立即开始投票（无发言）。每局游戏限一次，任意爪牙可以公开猜测你是秘密圣诞老人，如果猜对，你的阵营在下个黄昏落败。",
+    "jinxes": [
+      {
+        "id": "spy",
+        "reason": "Only 1 jinxed character can be in play."
+      },
+      {
+        "id": "widow",
+        "reason": "Only 1 jinxed character can be in play."
+      }
+    ],
+    "flavor": "Is it secret? Is it safe?"
+  },
+  {
+    "id": "hollywreath_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/holly.png"
+    ],
+    "otherNightReminder": "If it is possible to kill the player marked with the About to Die reminder token, do so and replace with the Dead reminder token.",
+    "reminders": [
+      "失去能力",
+      "提名",
+      "将要死亡",
+      "死亡"
+    ],
+    "name": "冬青花环",
+    "team": "outsider",
+    "ability": "首个提名你的善良玩家会在当晚死亡（复活不会刷新该能力）。如果你因冬青花环的能力死亡，你的阵营落败。〔+0~2冬青花环〕",
+    "special": [
+      {
+        "name": "bag-duplicate",
+        "type": "selection",
+        "time": "pregame"
+      }
+    ],
+    "otherNight": 39,
+    "flavor": "Its supposed to be jolly, with mistletoe and holly and other things ending in olly."
+  },
+  {
+    "id": "miser_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/miser.png"
+    ],
+    "firstNightReminder": "Wake Miser, thumbs up for Heat, thumbs down for Snow. Add the chosen reminder token to the grimoire",
+    "otherNightReminder": "Remove the Heat/Snow reminder token and replace with the other, unless they have the executed version already on the grimoire.",
+    "reminders": [
+      "热火",
+      "冰雪",
+      "热火时被处决",
+      "冰雪时被处决"
+    ],
+    "name": "守财奴兄弟",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择你是热火或冰雪，此后每个夜晚你冷热交替。（当你首次是热火时被处决，与你邻近的一名或两名存活玩家可能会代替你被处决；当你首次是冰雪被处决，与你阵营不同的一名玩家可能会代替你被处决）",
+    "firstNight": 20,
+    "otherNight": 20,
+    "flavor": "I'm Mister Green Christmas, I'm Mister Sun. I'm Mister Heat Blister, I'm Mister Hundred and One.\n\n\n\nI'm Mr. White Christmas, I'm Mr. Snow. I'm Mr. Icicle, I'm Mr. Ten Below."
+  },
+  {
+    "id": "jackfrost_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/jack-frost.png"
+    ],
+    "firstNightReminder": "Choose an alive good player.",
+    "otherNightReminder": "Choose an alive good player.",
+    "reminders": [
+      "霜冻",
+      "选择",
+      "选择",
+      "选择",
+      "选择"
+    ],
+    "name": "冰霜杰克",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名存活的善良玩家:如果他能以自身能力选择玩家，改为你决定他当晚选择的目标。",
+    "firstNight": 19,
+    "otherNight": 19,
+    "flavor": "Snow day!"
+  },
+  {
+    "id": "mistletoe_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/mistletoe.png"
+    ],
+    "otherNightReminder": "Choose two alive players. They swap characters.",
+    "reminders": [
+      "交换",
+      "交换",
+      "失去能力",
+      "全员醉酒"
+    ],
+    "setup": true,
+    "name": "槲寄生",
+    "team": "minion",
+    "ability": "每个夜晚*，你可以选择两名存活玩家:他们交换角色。如你将任意一名玩家经交换换回游戏初始设置时的角色，你失去你的能力。每局游戏限一次，如你不进行交换，除你与旅行者外其他玩家醉酒直到下个黄昏（-1外来者）",
+    "otherNight": 18,
+    "flavor": "Mistletoe. I surmount all obstacles."
+  },
+  {
+    "id": "krampus_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/krampus.png"
+    ],
+    "firstNightReminder": "Choose a player and an approved word",
+    "otherNightReminder": "Choose a player and an approved word",
+    "reminders": [
+      "妖法"
+    ],
+    "name": "坎卜斯",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家并提交一个关键词：如果他在下个白天说出这个关键词，他死亡。如果只有三名存活玩家，你失去此能力。（关键词不能是人名或游戏用语)",
+    "firstNight": 21,
+    "otherNight": 21,
+    "flavor": "Fear not Santa, fear me!"
+  },
+  {
+    "id": "belsnickel_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/belsnickel.png"
+    ],
+    "firstNightReminder": "向贝尔森克展示魔典.选择一名玩家为顽皮的或尊敬的",
+    "otherNightReminder": "选择一名玩家为顽皮的或尊敬的",
+    "reminders": [
+      "顽皮的",
+      "尊敬的",
+      "邪恶",
+      "邪恶",
+      "邪恶"
+    ],
+    "setup": true,
+    "name": "贝尔森克",
+    "team": "demon",
+    "ability": "在你的首个夜晚，你要查看魔典。每个夜晚，你要选择一名玩家:你决定他要么加入你的阵营并得知你是谁，要么死亡。你能转变阵营的玩家数量最多等于爪牙的初始设置数量。[初始无爪牙，+1外来者]",
+    "special": [
+      {
+        "name": "grimoire",
+        "type": "signal",
+        "time": "night"
+      }
+    ],
+    "firstNight": 53,
+    "otherNight": 34,
+    "jinxes": [
+      {
+        "id": "poppygrower",
+        "reason": "If the Poppy Grower is in play. Belsnickel does not see the Grimoire until the Poppy Grower dies."
+      },
+      {
+        "id": "damsel",
+        "reason": "Only 1 jinxed character can be in play."
+      },
+      {
+        "id": "heretic",
+        "reason": "Only 1 jinxed character can be in play."
+      }
+    ],
+    "flavor": "Cheer or Fear, Belsnickel is here."
+  },
+  {
+    "id": "grinch_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/grinch.png"
+    ],
+    "firstNightReminder": "Choose a player",
+    "otherNightReminder": "Kill the chosen player from the previous night. Choose a new player",
+    "reminders": [
+      "咬牙切齿",
+      "咬牙切齿",
+      "死亡"
+    ],
+    "name": "圣诞怪杰 ",
+    "team": "demon",
+    "ability": "每个夜晚，你要选择两名玩家:由你决定他们之中的哪一个会在下个夜晚死亡。他们会被当作邪恶阵营或圣诞怪杰，使用其自身能力选择了他们的玩家会改为选中你，直到下个黎明。你在夜晚不会死亡、中毒或醉酒。",
+    "firstNight": 31,
+    "otherNight": 31,
+    "flavor": "Saving you, is that what you think I was doing? Wrong-o. I merely noticed that youre improperly packaged, my dear."
+  },
+  {
+    "id": "yeti_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/yeti.png"
+    ],
+    "otherNightReminder": "Choose a player to die. If they nominated the previous day both of their townsfolk neighbors are poisoned tonight and tomorrow day.",
+    "reminders": [
+      "中毒",
+      "中毒",
+      "死亡",
+      "曾提名",
+      "曾提名",
+      "曾提名",
+      "曾提名",
+      "曾提名",
+      "曾提名",
+      "曾提名",
+      "曾提名",
+      "曾提名",
+      "曾提名"
+    ],
+    "name": "雪人",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家:他死亡。如果被你杀死的玩家当天白天曾发起过提名，会有一名与他邻近的镇民中毒直到下个黄昏。",
+    "otherNight": 32,
+    "flavor": "The footprints I leave are not just in the snow, but in the dreams of those who dare to believe"
+  },
+  {
+    "id": "frostbite_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/frostbite.png"
+    ],
+    "otherNightReminder": "Choose two players to die. At dawn hold a vote to save 1 player. If Frostbite dies to their own ability, a Minion becomes Frostbite and they become an out of play Minion",
+    "reminders": [
+      "死亡",
+      "死亡"
+    ],
+    "name": "霜害",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择两名存活玩家:他们死亡。如你以此法自杀，一名存活爪牙会变成霜害，然后你会变成一个不在场爪牙角色。黎明时公布死亡玩家后，所有玩家得知你昨晚选择了谁，然后在他们中投票选择一名:他复活。",
+    "otherNight": 33,
+    "special": [
+      {
+        "name": "pointing",
+        "type": "ability",
+        "time": "day"
+      }
+    ],
+    "flavor": "You'll understand the thin line between survival and surrender soon enough"
+  },
+  {
+    "id": "carolsinger_averymerryclocktower",
+    "image": [
+      "https://chillclocktower.com/homebrew/merrryclocktower/carol-singer.png"
+    ],
+    "reminders": [
+      "唱",
+      "唱",
+      "唱",
+      "唱",
+      "唱",
+      "得知"
+    ],
+    "name": "圣歌合唱团",
+    "team": "traveler",
+    "ability": "在夜晚时，如果有大于等于两名玩家公开与你合唱歌曲，在黎明时，你可能会得知与这些玩家邻近的一名存活玩家的角色。",
+    "firstNightReminder": "If players sang tonight, wake and show an alive neighbors character token.",
+    "otherNightReminder": "If players sang tonight, wake and show an alive neighbors character token.",
+    "firstNight": 61,
+    "otherNight": 60,
+    "flavor": "Her singing always cheered him up. Life seemed so much brighter when she stopped."
+  },
+  {
+    "id": "jaccuse_averymerryclocktower",
+    "image": "https://chillclocktower.com/homebrew/merrryclocktower/jaccuse2.png",
+    "remindersGlobal": [
+      "Callback"
+    ],
+    "name": "我控诉[圣诞版]...!",
+    "team": "fabled",
+    "ability": "提名开始时，只有被提名者能够发言为自己辩解。发言结束马上开始投票。除提名者和被提名者以外的玩家可以对此举手发言。"
+  },
+  {
+    "id": "yippeekiyay_averymerryclocktower",
+    "image": "https://chillclocktower.com/homebrew/merrryclocktower/yippeekiyay.png",
+    "name": "万岁！",
+    "team": "fabled",
+    "ability": "如果约翰 麦克莱恩存活且他疯狂地证明《虎胆龙威》不是圣诞电影，他可能立即被处决。"
+  }
+]

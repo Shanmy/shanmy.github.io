@@ -1,0 +1,398 @@
+[
+  {
+    "id": "_meta",
+    "name": "炼金术士的执着",
+    "author": "厚颜·自卑",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/33/hzgl9btsi6y5w77ycor2mprpputkhjo.png",
+    "almanac": "有问题联系SE谢谢喵~",
+    "status":[
+      {
+        "name":"瘴疠",
+        "skill": "该玩家会在首个夜晚得知自己转变为邪恶阵营（无论邻座玩家的阵营如何），并在之后的每个夜晚*转变为邻近的一名存活的玩家的阵营。该效果会随角色死亡而失效。"
+      },
+      {
+        "name":"腐化",
+        "skill":"被腐化之源选择“是恶魔”的玩家将在能力互动（获取信息、互动干扰）和游戏胜负结算两方面被视作恶魔，被选择的玩家会立即得知自己被腐化。被选择的角色会同时被检测为原有类型和恶魔。间谍仍可以通过自身能力被视为善良角色而逃脱其他角色的检测。"
+      }
+    ]
+  },
+  {
+    "id": "_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/36/4yqdhq0kap6l5a4q8og8kxmg8y2cjcg.png",
+    "firstNightReminder": "唤醒洗衣妇，对她指向两名玩家，并展示一个镇民角色标记。这两名玩家其中之一是这个镇民。",
+    "reminders": [
+      "镇民",
+      "错误"
+    ],
+    "name": "洗衣妇",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个镇民角色：这两名玩家之一是该角色。",
+    "firstNight": 4000
+  },
+  {
+    "id": "1_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/05/a5613uupc0bffr0sg9egfotdaofup1e.png",
+    "firstNightReminder": "唤醒调查员，对他指向两名玩家，并展示一个爪牙角色标记。这两名玩家其中之一是这个爪牙。",
+    "reminders": [
+      "爪牙",
+      "错误"
+    ],
+    "name": "调查员",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个爪牙角色：这两名玩家之一是该角色（或者你会得知没有爪牙在场）。",
+    "firstNight": 4100
+  },
+  {
+    "id": "2_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/91/04je4dg5ituw4nymx4f0x0b80p6gntg.png",
+    "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 4200,
+    "otherNight": 12
+  },
+  {
+    "id": "3_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b5/hsyches6mycnt4uyofz8uwqw1y06r0o.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "猎手",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，你可以在白天时公开选择一名玩家：如果他是恶魔，他死亡。"
+  },
+  {
+    "id": "4_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fc/7tdu04mlq40i6anczgtar7dbtdk6w37.png",
+    "otherNightReminder": "唤醒驱魔人，让他选择一名与上一晚不同的玩家。如果他选中了恶魔，则在驱魔人入睡后通知该恶魔谁是驱魔人。",
+    "reminders": [
+      "被选择"
+    ],
+    "name": "驱魔人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家（与上个夜晚不同）：如果你选中了恶魔，他会得知你的角色，但他当晚不会因其自身能力而被唤醒。",
+    "otherNight": 8
+  },
+  {
+    "id": "5_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9b/lw696aar95irnuwh7dze4ysam48awm8.png",
+    "firstNightReminder": "唤醒钟表匠，对他用手势比划数字来告知他恶魔与爪牙之间的最近距离。",
+    "name": "钟表匠",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知恶魔与爪牙之间最近的距离。（邻座的玩家距离为1）",
+    "firstNight": 4300
+  },
+  {
+    "id": "6_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ed/8gb1ezkhqkc865jead15pevypmc72g9.png",
+    "otherNightReminder": "唤醒城镇公告员，以点头或摇头告知他今天白天是否有爪牙发起提名。",
+    "reminders": [
+      "爪牙未提名",
+      "爪牙已提名"
+    ],
+    "name": "城镇公告员",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天时是否有爪牙发起过提名。",
+    "otherNight": 13
+  },
+  {
+    "id": "7_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/chh8x7dptz128a42p7f0g5c0qn8o063.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "8_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/aa/0khyidxxipwitzqjs9iryheur62zkrj.png",
+    "firstNightReminder": "唤醒女裁缝，她可以摇头不使用能力，或选择除自己以外的两名玩家。以点头或摇头告知她选择的玩家是否为同一阵营。",
+    "otherNightReminder": "如果女裁缝未曾使用能力，唤醒女裁缝，她可以摇头不使用能力，或选择除自己以外的两名玩家。以点头或摇头告知她选择的玩家是否为同一阵营。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "女裁缝",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的两名玩家：你会得知他们是否为同一阵营。",
+    "firstNight": 4400,
+    "otherNight": 14
+  },
+  {
+    "id": "9_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ed/5u0zlyh58gvbif2oan8qv9yhsta5lnh.png",
+    "firstNightReminder": "唤醒哲学家，他可以摇头不使用能力，或选择获得角色列表上的一个善良角色的能力。",
+    "otherNightReminder": "如果哲学家未曾使用能力，唤醒哲学家，他可以摇头不使用能力，或选择获得角色列表上的一个善良角色的能力。",
+    "reminders": [
+      "醉酒"
+    ],
+    "remindersGlobal": [
+      "是哲学家"
+    ],
+    "name": "哲学家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个善良角色：你获得该角色的能力。如果这个角色在场，他醉酒。",
+    "firstNight": 11,
+    "otherNight": 2
+  },
+  {
+    "id": "10_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9c/5u4qpg1fv4x7nfx0b632914v9hoq6vf.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "艺术家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以私下询问说书人一个是非问题，你会得知该问题的答案。"
+  },
+  {
+    "id": "11_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6f/oi460mqpnxwd7zgyboe78patdo8amc5.png",
+    "firstNightReminder": "唤醒传教士，让他选择一名玩家。如果他选中了爪牙，该爪牙失去能力。在传教士入睡后通知该爪牙被传教士选中。",
+    "otherNightReminder": "唤醒传教士，让他选择一名玩家。如果他选中了爪牙，该爪牙失去能力。在传教士入睡后通知该爪牙被传教士选中。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "传教士",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：如果你选中了爪牙，他会得知被传教士选中。所有被你选中的爪牙失去能力。",
+    "firstNight": 3400,
+    "otherNight": 3
+  },
+  {
+    "id": "12_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/00/aw2v4g3sluzne7vz7flvlbkqon1cgmk.png",
+    "firstNightReminder": "唤醒炼金术士，对他展示他获得的能力所对应的爪牙角色标记。",
+    "remindersGlobal": [
+      "是炼金术士"
+    ],
+    "setup": true,
+    "name": "炼金术士",
+    "team": "townsfolk",
+    "ability": "你拥有一个不在场的爪牙角色的能力。",
+    "firstNight": 12
+  },
+  {
+    "id": "13_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b6/rzkro6tqijzxxtbegmc7vovxwtzpk06.png",
+    "setup": true,
+    "name": "无神论者",
+    "team": "townsfolk",
+    "ability": "说书人可以打破游戏规则。如果说书人被处决，善良阵营获胜，即使你已死亡。[无邪恶角色在场]"
+  },
+  {
+    "id": "14_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/db/c3eh7h72datpfz6mu6o3c3p334y7g26.png",
+    "otherNightReminder": "如果恶魔杀死了报丧女妖，宣布“报丧女妖觉醒了”，并使用“具有能力”标记报丧女妖。",
+    "reminders": [
+      "具有能力"
+    ],
+    "name": "报丧女妖",
+    "team": "townsfolk",
+    "ability": "如果恶魔杀死了你，所有玩家都会得知此事。从现在开始，你每天可以发起两次提名，每次投票时可以投两票。",
+    "otherNight": 11
+  },
+  {
+    "id": "15_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/91/pxy0b2oikzwvg1ncpxr22dd1xfuqd9e.png",
+    "otherNightReminder": "唤醒道士，让其选择一名玩家。如果他选中了恶魔，在道士角色标记旁放置“死亡”提示标记，并且在恶魔角色标记旁放置“醉酒”提示标记。",
+    "reminders": [
+      "醉酒",
+      "死亡"
+    ],
+    "name": "道士",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：如果你选中了恶魔，你死亡，然后他醉酒直到下个黎明。",
+    "otherNight": 9
+  },
+  {
+    "id": "16_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/e/e2/6iipsw0juxk2fm5rtllgbjdcvpladnc.png/240px-%E9%A9%BF%E4%BD%BF.png",
+    "otherNightReminder": "如果驿使白天公开声明了一个角色，唤醒驿使：1.如果该角色在场，得知是；2.如果该角色不在场，得知否，并且驿使失去能力。",
+    "reminders": [
+      "在场",
+      "失去能力"
+    ],
+    "name": "驿使",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开声明一个角色。在当晚，你会得知该角色是否在场。如果你因此得知了否，你失去此能力。",
+    "otherNight": 15
+  },
+  {
+    "id": "17_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/33/6wspdicyxe9hh221v9aodnk8umbdtsq.png",
+    "firstNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "otherNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "投毒者",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：他在当晚和明天白天中毒。",
+    "firstNight": 3600,
+    "otherNight": 5
+  },
+  {
+    "id": "18_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c4/qmcx4rs9w0skrk2gc9zr896al0c0cdo.png",
+    "firstNightReminder": "唤醒间谍，让他查看魔典。",
+    "otherNightReminder": "唤醒间谍，让他查看魔典。",
+    "name": "间谍",
+    "team": "minion",
+    "ability": "每个夜晚，你能查看魔典。你可能会被当作善良阵营、镇民角色或外来者角色，即使你已死亡。",
+    "firstNight": 4500,
+    "otherNight": 16
+  },
+  {
+    "id": "19_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ed/8qaa5aewt5cibvvxqyzr8ny7ohqyktz.png",
+    "firstNightReminder": "分别独自唤醒镜像双子和对立双子，告知他们由于镜像双子能力而得知的信息。",
+    "reminders": [
+      "对立双子"
+    ],
+    "name": "镜像双子",
+    "team": "minion",
+    "ability": "你与一名对立阵营的玩家互相知道对方是什么角色。如果其中善良玩家被处决，邪恶阵营获胜。如果你们都存活，善良阵营无法获胜。",
+    "firstNight": 3700
+  },
+  {
+    "id": "20_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/73/p0movwsio10pgvn1irzgu47nsbiql3k.png",
+    "firstNightReminder": "唤醒女巫，让她选择一名玩家，那名玩家被诅咒。",
+    "otherNightReminder": "唤醒女巫，让她选择一名玩家，那名玩家被诅咒。",
+    "reminders": [
+      "被诅咒"
+    ],
+    "name": "女巫",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：如果他明天白天发起提名，他死亡。如果只有三名存活的玩家，你失去此能力。",
+    "firstNight": 3800,
+    "otherNight": 6
+  },
+  {
+    "id": "21_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/5e/mli7gcqjj99764xroey5tjb9n29h7e5.png",
+    "firstNightReminder": "唤醒恐惧之灵，让他选择一名玩家，随后通知所有玩家恐惧之灵选择了一名玩家。",
+    "otherNightReminder": "唤醒恐惧之灵，让他选择一名玩家，随后如果恐惧之灵的目标发生了变更，通知所有玩家恐惧之灵选择了一名玩家。",
+    "reminders": [
+      "恐惧"
+    ],
+    "name": "恐惧之灵",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：如果你提名他且他被处决，他的阵营落败。当你首次选择或更换目标时，所有玩家都会得知你选择了新的玩家。",
+    "firstNight": 3900,
+    "otherNight": 7
+  },
+  {
+    "id": "22_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e5/el29kr1dznrpaa089tayj3chd444s6k.png",
+    "firstNightReminder": "如果提线木偶在场，对恶魔展示提线木偶角色标记并指向提线木偶玩家。",
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "setup": true,
+    "name": "提线木偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]",
+    "firstNight": 3300
+  },
+  {
+    "id": "23_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4e/4keecp81p204vr5q6q6jcb44hid04qq.png",
+    "reminders": [
+      "嘘"
+    ],
+    "name": "噤",
+    "team": "minion",
+    "ability": "所有玩家在投票时闭眼，且票数会秘密统计，即使你已死亡。你死亡后，每次投票时可以投两票。"
+  },
+  {
+    "id": "24_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f8/o3szym7gr4th6ddovfdwveo1nhzehi9.png",
+    "firstNightReminder": "每局游戏限一次，在夜晚时，选择一名存活的玩家，你与他交换角色，然后他中毒。",
+    "otherNightReminder": "每局游戏限一次，在夜晚时，选择一名存活的玩家，你与他交换角色，然后他中毒。",
+    "reminders": [
+      "陷入渊沼（中毒）",
+      "限一次"
+    ],
+    "name": "渊沼",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时，选择一名存活的玩家，你与他交换角色，然后他中毒。",
+    "firstNight": 3500,
+    "otherNight": 4
+  },
+  {
+    "id": "25_lianjinshushidezhizhuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/af/6inr9r3ee14edgeme9f5teojyhly8vz.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家：他死亡，即使你已死亡。",
+    "reminders": [
+      "腐化",
+      "死亡"
+    ],
+    "name": "腐化之源",
+    "team": "demon",
+    "ability": "在你的首个白天，你可以私下向说书人选择一名玩家，他也“是恶魔”。每个夜晚*，你要选择一名玩家：他死亡，即使你已死亡。",
+    "otherNight": 10
+  },
+  {
+    "id": "26_lianjinshushidezhizhuo",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/82/t18q1v2gz3h7uyyi09kwjjvj1nlr70e.png",
+    "name": "暴风捕手",
+    "team": "fabled",
+    "ability": "游戏开始时，如果炼金术士在场，他只能死于处决，但所有邪恶玩家会在首个夜晚得知他是哪一名玩家。"
+  },
+  {
+    "id": "27_lianjinshushidezhizhuo",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/37/gj5fh8glu86gu00tr82kjlrywpne7vp.png",
+    "name": "骗人精",
+    "team": "fabled",
+    "ability": "每局游戏限一次，一名善良玩家可能会得知“有问题”的信息。"
+  },
+  {
+    "id": "gudong",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ea/0d12t78j636hqsj6gwmqpgub63vjrcs.png",
+    "edition": "custom",
+    "name": "古董收藏家",
+    "setup": false,
+    "reminders": [],
+    "team": "fabled",
+    "ability": "剧本中部分角色的能力来源于过去。"
+  },
+  {
+    "id": "28_lianjinshushidezhizhuo",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png",
+    "otherNightReminder": "瘴疠",
+    "name": "被感动的神明",
+    "team": "fabled",
+    "reminders": ["瘴疠"],
+    "otherNight": 10.1,
+    "ability": "暴风捕手默认在场，且只会对炼金术士生效，提线木偶不会因暴风捕手的能力得知炼金术士是谁。游戏初始时不会有外来者角色，在8/11/14人局时加入骗人精，9/12/15人局时，会有一名镇民感染“瘴疠”。若说书人宣布恐惧之灵在场，本局游戏玩家不允许发起对自己的提名。"
+  },
+  {
+    "id": "29_lianjinshushidezhizhuo",
+    "name": "渊沼&腐化之源",
+    "team": "a jinxed",
+    "ability": "渊沼导致的交换角色不会刷新腐化之源的能力，原被腐化的玩家仍然被腐化。"
+  },
+  {
+    "id": "30_lianjinshushidezhizhuo",
+    "name": "提线木偶&炼金术士",
+    "team": "a jinxed",
+    "ability": "若存在获得了提线木偶能力的炼金术士，说书人会公开宣布此事。"
+  },
+  {
+    "id": "31_lianjinshushidezhizhuo",
+    "name": "间谍&炼金术士",
+    "team": "a jinxed",
+    "ability": "如果炼金术士获得了间谍的能力，则每个白天限一次，如果他复原了完整的魔典（只限身份即可），善良阵营获胜。"
+  },
+  {
+    "id": "32_lianjinshushidezhizhuo",
+    "name": "镜像双子&腐化之源",
+    "team": "a jinxed",
+    "ability": "镜像双子以及对立双子不可被腐化。"
+  }
+]

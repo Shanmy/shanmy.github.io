@@ -1,0 +1,483 @@
+[
+  {
+    "id": "_meta",
+    "name": "模仿者游戏",
+    "author": "李泓權",
+    "logo": "https://s2.loli.net/2025/09/07/PO5LGiTDyNgX9hW.png",
+    "townsfolkName": "镇民",
+    "outsidersName": "外来者",
+    "minionsName": "爪牙",
+    "demonsName": "恶魔",
+    "townsfolk": "镇民",
+    "outsider": "外来者",
+    "minion": "爪牙",
+    "demon": "恶魔",
+    "a jinxedName": "相克",
+    "a jinxed": "相克",
+    "status": [
+      {
+        "name": "第三方势力",
+        "skill": "·说书人改为公开统计投票的玩家是哪几名，而不是公开唱票。·善良阵营获胜条件改为：爪牙和恶魔玩家均死亡。·恶魔不会失去能力，即使他醉酒、中毒或死亡。·在初始设置时，可能会额外增加一名外来者。如果存活的外来者玩家“疯狂”地证明自己是外来者，之后一名镇民玩家可能中毒或随时死亡。"
+      }
+    ]
+  },
+  {
+    "id": "mofangzheyouxi_1",
+    "image": "https://s2.loli.net/2025/09/07/dEmrtHoxWJa5cTg.png",
+    "edition": "custom",
+    "name": "修士",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一名玩家：你与他会得知对方的角色。",
+    "team": "townsfolk",
+    "firstNight": 14000,
+    "otherNight": 19000,
+    "firstNightReminder": "每局游戏限一次，在夜晚时，你可以选择一名玩家：你与他会得知对方的角色。",
+    "otherNightReminder": "每局游戏限一次，在夜晚时，你可以选择一名玩家：你与他会得知对方的角色。",
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_2",
+    "image": "https://s2.loli.net/2025/09/07/ey1MN7Rs59Urfwh.png",
+    "edition": "custom",
+    "name": "学徒",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个角色。在该角色死亡的当晚你可以选择一名玩家：他死亡，然后你重获能力。",
+    "team": "townsfolk",
+    "firstNight": 6000,
+    "otherNight": 15000,
+    "firstNightReminder": "每局游戏限一次，在夜晚时，你可以选择一个角色。在该角色死亡的当晚你可以选择一名玩家：他死亡，然后你重获能力。",
+    "otherNightReminder": "每局游戏限一次，在夜晚时，你可以选择一个角色。在该角色死亡的当晚你可以选择一名玩家：他死亡，然后你重获能力。",
+    "reminders": [
+      "被选择",
+      "死亡",
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_3",
+    "image": "https://s2.loli.net/2025/09/07/bL7yhdvVcsY1BG3.png",
+    "edition": "custom",
+    "name": "猎人",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 14000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡。",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_4",
+    "image": "https://s2.loli.net/2025/09/07/cfyj4wmE61svXBW.png",
+    "edition": "custom",
+    "name": "巡林员",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：当晚下个选择他的玩家死亡，然后你会得知那名玩家是谁。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 7000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：当晚下个选择他的玩家死亡，然后你会得知那名玩家是谁。",
+    "reminders": [
+      "被选择",
+      "死亡",
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_5",
+    "image": "https://s2.loli.net/2025/09/07/CNqVA9zXGUFYKla.png",
+    "edition": "custom",
+    "name": "掮客",
+    "ability": "每局游戏限一次，在夜晚时*，你可以得知今晚即将死亡的玩家并选择其中一名：你会得知是哪名玩家导致他即将死亡，随后他在今晚不会死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 20000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每局游戏限一次，在夜晚时*，你可以得知今晚即将死亡的玩家并选择其中一名：你会得知是哪名玩家导致他即将死亡，随后他在今晚不会死亡。",
+    "reminders": [
+      "不会死亡",
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_6",
+    "image": "https://s2.loli.net/2025/09/07/Dc9CWNwizeJKhdO.png",
+    "edition": "custom",
+    "name": "银行家",
+    "ability": "每个夜晚，你可以选择除你以外的一名玩家：如果他是镇民，明天白天他的投票会被算作两票。",
+    "team": "townsfolk",
+    "firstNight": 13000,
+    "otherNight": 17000,
+    "firstNightReminder": "每个夜晚，你可以选择除你以外的一名玩家：如果他是镇民，明天白天他的投票会被算作两票。",
+    "otherNightReminder": "每个夜晚，你可以选择除你以外的一名玩家：如果他是镇民，明天白天他的投票会被算作两票。",
+    "reminders": [
+      "算作两票"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_7",
+    "image": "https://s2.loli.net/2025/09/07/iFScRzsMvkdCgEB.png",
+    "edition": "custom",
+    "name": "拳击手",
+    "ability": "每个夜晚，你可以发动能力：当晚令你死亡的玩家会一同死亡。当你第二次发动能力时，你会在下个黎明时死亡。",
+    "team": "townsfolk",
+    "firstNight": 8000,
+    "otherNight": 3000,
+    "firstNightReminder": "每个夜晚，你可以发动能力：当晚令你死亡的玩家会一同死亡。当你第二次发动能力时，你会在下个黎明时死亡。",
+    "otherNightReminder": "每个夜晚，你可以发动能力：当晚令你死亡的玩家会一同死亡。当你第二次发动能力时，你会在下个黎明时死亡。",
+    "reminders": [
+      "发动能力",
+      "第二次发动",
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_8",
+    "image": "https://s2.loli.net/2025/09/07/SDJQ28ve6EsqGAy.png",
+    "edition": "custom",
+    "name": "灵媒",
+    "ability": "每个夜晚*，你要选择一名玩家：如果他在今晚造成了死亡，你会得知他的角色。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 18000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家：如果他在今晚造成了死亡，你会得知他的角色。",
+    "reminders": [],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_9",
+    "image": "https://s2.loli.net/2025/09/07/AZljT56JqQhzbf9.png",
+    "edition": "custom",
+    "name": "侦探",
+    "ability": "每个夜晚*，你可以选择一名玩家：下个夜晚你得知他的阵营。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 16000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每个夜晚*，你可以选择一名玩家：下个夜晚你得知他的阵营。",
+    "reminders": [
+      "被选择"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_10",
+    "image": "https://s2.loli.net/2025/09/07/Ef7TFU81xdDvQqV.png",
+    "edition": "custom",
+    "name": "药剂师",
+    "ability": "每个夜晚*，你可以选择一名玩家：他今晚不会死亡。当你下次选择他时：他死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 8000,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "不会死亡",
+      "被选择过",
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_11",
+    "image": "https://s2.loli.net/2025/09/07/2CynsTpiMoWuPAR.png",
+    "edition": "custom",
+    "name": "治安官",
+    "ability": "每局游戏限一次，你可以在黄昏时公开选择一名玩家：如果他是外来者或邪恶玩家，他死亡，否则你死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_12",
+    "image": "https://s2.loli.net/2025/09/07/wuGkRDzxVoPjUiI.png",
+    "edition": "custom",
+    "name": "密探",
+    "ability": "恶魔只获得一个伪装身份且邪恶方不再互相认识，而改为各自得知其他邪恶玩家和你。",
+    "team": "townsfolk",
+    "firstNight": 3,
+    "otherNight": 0,
+    "firstNightReminder": "恶魔只获得一个伪装身份且邪恶方不再互相认识，而改为各自得知其他邪恶玩家和你。",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_13",
+    "image": "https://s2.loli.net/2025/09/07/jnkR6C2Bo9VUdIg.png",
+    "edition": "custom",
+    "name": "演说家",
+    "ability": "当你死亡时，所有镇民会在当晚分别得知演说家死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 21000,
+    "firstNightReminder": "",
+    "otherNightReminder": "当你死亡时，所有镇民会在当晚分别得知演说家死亡。",
+    "reminders": [
+      "今晚演说"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mofangzheyouxi_14",
+    "image": "https://s2.loli.net/2025/09/07/Uk8ZtsBNurWfozw.png",
+    "edition": "custom",
+    "name": "哨兵",
+    "ability": "当你首次在夜晚即将死亡时，你不会死亡，直到下个黄昏。在下个提名阶段开始时，说书人会发起一次由你提名导致你即将死亡的玩家的提名，然后你死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "当你首次在夜晚即将死亡时，你不会死亡，直到下个黄昏。在下个提名阶段开始时，说书人会发起一次由你提名导致你即将死亡的玩家的提名，然后你死亡。",
+    "reminders": [
+      "不会死亡",
+      "是他！"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_1",
+    "image": "https://s2.loli.net/2025/09/07/SYWvy8DtCMsFm7e.png",
+    "edition": "custom",
+    "name": "送货员",
+    "ability": "每个夜晚*，你可以选择一名玩家：他死亡。若你杀死的玩家数不小于存活玩家数，你独自获胜。当你死亡时，所有被你杀死的玩家复活。",
+    "team": "outsider",
+    "firstNight": 0,
+    "otherNight": 6000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每个夜晚*，你可以选择一名玩家：他死亡。当你死亡时，所有被你杀死的玩家复活。",
+    "reminders": [
+      "死亡",
+      "复活"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_2",
+    "image": "https://s2.loli.net/2025/09/07/l8kKPSpe4G5tr1O.png",
+    "edition": "custom",
+    "name": "棋手",
+    "ability": "每个夜晚，你可以猜测一名玩家的角色然后得知是否正确。若场上存活玩家的角色都已被你猜对，你独自获胜，否则你必定落败，即使你已死亡。你不会在夜晚死亡。",
+    "team": "outsider",
+    "firstNight": 9000,
+    "otherNight": 4000,
+    "firstNightReminder": "每个夜晚，你可以猜测一名玩家的角色然后得知是否正确。你不会在夜晚死亡。",
+    "otherNightReminder": "每个夜晚，你可以猜测一名玩家的角色然后得知是否正确。你不会在夜晚死亡。",
+    "reminders": [
+      "已被猜对",
+      "必定落败"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_3",
+    "image": "https://s2.loli.net/2025/09/07/C1GUiq4YDbZxdcy.png",
+    "edition": "custom",
+    "name": "清洁工",
+    "ability": "每个夜晚，你要选择一名玩家：如果他在下个黄昏前即将死亡，他被当作仍然存活。若本局游戏因你能力被当作存活的玩家大于或等于当前场上存活玩家数量的一半，你独自获胜，即使你醉酒或中毒。",
+    "team": "outsider",
+    "firstNight": 7000,
+    "otherNight": 2000,
+    "firstNightReminder": "每个夜晚，你要选择一名玩家：如果他在下个黄昏前即将死亡，他被当作仍然存活。",
+    "otherNightReminder": "每个夜晚，你要选择一名玩家：如果他在下个黄昏前即将死亡，他被当作仍然存活。",
+    "reminders": [
+      "被选择",
+      "当作存活"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_4",
+    "image": "https://s2.loli.net/2025/09/07/7PHhmvWS1zcbgy6.png",
+    "edition": "custom",
+    "name": "愚人",
+    "ability": "每个夜晚，你要选择两名玩家，他们视为为你投票（不计入票数）。当你被处决时，若场上所有玩家均为你投票，你独自获胜。",
+    "team": "outsider",
+    "firstNight": 10000,
+    "otherNight": 5000,
+    "firstNightReminder": "每个夜晚，你要选择两名玩家，他们视为为你投票（不计入票数）。",
+    "otherNightReminder": "每个夜晚，你要选择两名玩家，他们视为为你投票（不计入票数）。",
+    "reminders": [
+      "为你投票"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_5",
+    "image": "https://s2.loli.net/2025/09/07/DJLagYVRpA4hSKW.png",
+    "edition": "custom",
+    "name": "千面人",
+    "ability": "每局游戏限一次，在夜晚时，你会得知与你临近存活善良玩家的角色，然后你要选择其中之一：你变成该角色且被当作是爪牙。",
+    "team": "minion",
+    "firstNight": 11000,
+    "otherNight": 0,
+    "firstNightReminder": "每局游戏限一次，在夜晚时，你会得知与你临近存活善良玩家的角色，然后你要选择其中之一：你变成该角色且被当作是爪牙。",
+    "otherNightReminder": "每局游戏限一次，在夜晚时，你会得知与你临近存活善良玩家的角色，然后你要选择其中之一：你变成该角色且被当作是爪牙。",
+    "remindersGlobal":  [
+      "是千面人"
+    ],
+    "reminders": [],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_6",
+    "image": "https://s2.loli.net/2025/09/07/Q1D735uRUaAmprS.png",
+    "edition": "custom",
+    "name": "阴谋家",
+    "ability": "每局游戏限两次，在夜晚时*，你可以猜测一名玩家的身份：若正确，则他死亡，否则你死亡。",
+    "team": "minion",
+    "firstNight": 0,
+    "otherNight": 9000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每局游戏限两次，在夜晚时*，你可以猜测一名玩家的身份：若正确，则他死亡，否则你死亡。",
+    "reminders": [
+      "限两次",
+      "限一次",
+      "失去能力",
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_7",
+    "image": "https://s2.loli.net/2025/09/07/vsXZRTcruz4dONe.png",
+    "edition": "custom",
+    "name": "怪盗",
+    "ability": "每个夜晚，你要选择两名玩家：任何玩家使用自身能力选择他们之一作为目标时，改为选中另一名玩家，直到下个黄昏。",
+    "team": "minion",
+    "firstNight": 5000,
+    "otherNight": 1000,
+    "firstNightReminder": "每个夜晚，你要选择两名玩家：任何玩家使用自身能力选择他们之一作为目标时，改为选中另一名玩家，直到下个黄昏。",
+    "otherNightReminder": "每个夜晚，你要选择两名玩家：任何玩家使用自身能力选择他们之一作为目标时，改为选中另一名玩家，直到下个黄昏。",
+    "reminders": [
+      "交换"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_8",
+    "image": "https://s2.loli.net/2025/09/07/EfGDm5ulHegV6Ob.png",
+    "edition": "custom",
+    "name": "处刑人",
+    "ability": "每个夜晚*，你可以选择一名玩家，他死亡，然后一名与你阵营相同的玩家（除你之外）死亡。",
+    "team": "minion",
+    "firstNight": 0,
+    "otherNight": 10000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每个夜晚*，你可以选择一名玩家，他死亡，然后一名与你阵营相同的玩家（除你之外）死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_9",
+    "image": "https://s2.loli.net/2025/09/07/Oq3PcJ5LgvmHSid.png",
+    "edition": "custom",
+    "name": "烟火师",
+    "ability": "每个夜晚*，你可以选择一名玩家：他获得一个烟火，拥有烟火的玩家在被提名时会死亡。拥有烟火的玩家会在拥有烟火的下一晚得知并可以传递烟火，若一名玩家拥有超过一个烟火，他和他一名邻近的玩家立即死亡。",
+    "team": "demon",
+    "firstNight": 0,
+    "otherNight": 11000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每个夜晚*，你可以选择一名玩家：他获得一个烟火，拥有烟火的玩家在被提名时会死亡。拥有烟火的玩家会在拥有烟火的下一晚得知并可以传递烟火，若一名玩家拥有超过一个烟火，他和他一名邻近的玩家立即死亡。",
+    "reminders": [
+      "烟火",
+      "得知",
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_10",
+    "image": "https://s2.loli.net/2025/09/07/OPjGhu34ZXIewEn.png",
+    "edition": "custom",
+    "name": "连环杀手",
+    "ability": "每个夜晚*，你要选择一或两名玩家：他们死亡。如果你在上个夜晚选择了两名玩家，今晚你无法因自身能力被唤醒。",
+    "team": "demon",
+    "firstNight": 0,
+    "otherNight": 13000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每个夜晚*，你要选择一或两名玩家：他们死亡。如果你在上个夜晚选择了两名玩家，今晚你无法因自身能力被唤醒。",
+    "reminders": [
+      "死亡",
+      "不被唤醒"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_11",
+    "image": "https://s2.loli.net/2025/09/07/iOokQmA7FKHbvaB.png",
+    "edition": "custom",
+    "name": "地下医生",
+    "ability": "每个夜晚*，你要选择一名玩家：他中毒并不计入邪恶胜利条件。外来者会得知你每天选择了谁。",
+    "team": "demon",
+    "firstNight": 0,
+    "otherNight": 12000,
+    "firstNightReminder": "",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家：他中毒并不计入邪恶胜利条件。外来者会得知你每天选择了谁。",
+    "reminders": [
+      "中毒"
+    ],
+    "setup": false
+  },
+  {
+    "id": "mfzyx_12",
+    "image": "https://s2.loli.net/2025/09/07/mOBPpLgSyI6qVHb.png",
+    "edition": "custom",
+    "name": "催眠师",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的角色，然后他中毒并会在下一晚死亡。被你杀死的玩家会在其死亡的下一晚得知三名玩家：你是其中之一。",
+    "team": "demon",
+    "firstNight": 12000,
+    "otherNight": 0,
+    "firstNightReminder": "每个夜晚，你要选择一名玩家：你会得知他的角色，然后他中毒并会在下一晚死亡。被你杀死的玩家会在其死亡的下一晚得知三名玩家：你是其中之一。",
+    "otherNightReminder": "每个夜晚，你要选择一名玩家：你会得知他的角色，然后他中毒并会在下一晚死亡。被你杀死的玩家会在其死亡的下一晚得知三名玩家：你是其中之一。",
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "yinhangjiayuren_meta",
+    "image": "https://s2.loli.net/2025/09/07/7PHhmvWS1zcbgy6.png",
+    "name": "银行家&愚人",
+    "team": "a jinxed",
+    "setup": false,
+    "ability": "如果被银行家选择的玩家在明天白天给愚人投票，则当天如果仅有一名玩家未给愚人投票，愚人也会获胜。"
+  },
+  {
+    "id": "dixiayishengqingjiegong_meta",
+    "image": "https://s2.loli.net/2025/09/07/iOokQmA7FKHbvaB.png",
+    "name": "地下医生&清洁工",
+    "team": "a jinxed",
+    "setup": false,
+    "ability": "被地下医生选择的玩家被清洁工视为死亡，但清洁工不会知道那名玩家是谁。"
+  },
+  {
+    "id": "uv6d0fft22",
+    "name": "第三方势力",
+    "team": "fabled",
+    "ability": "·说书人改为公开统计投票的玩家是哪几名，而不是公开唱票。·善良阵营获胜条件改为：爪牙和恶魔玩家均死亡。·恶魔不会失去能力，即使他醉酒、中毒或死亡。·在初始设置时，可能会额外增加一名外来者。如果存活的外来者玩家“疯狂”地证明自己是外来者，之后一名镇民玩家可能中毒或随时死亡。",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/97/Bootlegger.png/200px-Bootlegger.png",
+    "setup": false,
+    "reminders": []
+  }
+]

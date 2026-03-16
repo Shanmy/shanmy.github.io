@@ -1,0 +1,350 @@
+[
+  {
+    "id": "_meta",
+    "author": "Rocky",
+    "name": "不正经交易V1",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/almanac.html",
+    "firstNight": [
+      "dusk",
+      "amnesiac",
+      "minioninfo",
+      "lunatic",
+      "demoninfo",
+      "marionette",
+      "lilmonsta",
+      "5_buzhengjingjioayi",
+      "6_buzhengjingjioayi",
+      "cerenovus",
+      "investigator",
+      "chef",
+      "empath",
+      "fortuneteller",
+      "2_buzhengjingjioayi",
+      "chambermaid",
+      "dawn"
+    ],
+    "otherNight": [
+      "7_buzhengjingjioayi",
+      "8_buzhengjingjioayi",
+      "dusk",
+      "amnesiac",
+      "6_buzhengjingjioayi",
+      "5_buzhengjingjioayi",
+      "cerenovus",
+      "scarletwoman",
+      "lunatic",
+      "imp",
+      "fanggu",
+      "lilmonsta",
+      "moonchild",
+      "barber",
+      "ravenkeeper",
+      "empath",
+      "fortuneteller",
+      "2_buzhengjingjioayi",
+      "4_buzhengjingjioayi",
+      "1_buzhengjingjioayi",
+      "chambermaid",
+      "dawn"
+    ]
+  },
+  "chef",
+  "investigator",
+  {
+    "id": "4_buzhengjingjioayi",
+    "name": "提刑官",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/4_buzhengjingjioayi.png",
+    "team": "townsfolk",
+    "ability": "在你首次提名玩家后，你会在当晚得知他的角色。恶魔会被你的能力当作善良角色。",
+    "firstNight": 0,
+    "otherNight": 13000,
+    "otherNightReminder": "如果今天白天提刑官发起过提名，唤醒提刑官，对他展示那名玩家的角色标记。",
+    "reminders": [
+      "已提名",
+      "失去能力"
+    ]
+  },
+  "empath",
+  "fortuneteller",
+  "chambermaid",
+  {
+    "id": "2_buzhengjingjioayi",
+    "name": "气球驾驶员",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/2_buzhengjingjioayi.png",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名不同角色类型的玩家，直到场上所有的角色类型你都得知过一次。[+1 外来者]",
+    "firstNight": 9000,
+    "otherNight": 12100,
+    "firstNightReminder": "选择一种角色类型，并告知其一个符合该类型的玩家。在该玩家旁边标记已被知晓。",
+    "otherNightReminder": "选择一种尚未被气球驾驶员知晓的角色类型，并告知其一个符合该类型的玩家。在该玩家旁边标记已被知晓。如果所有类型均已被知晓或无该种类型，气球驾驶员不会醒来。",
+    "reminders": [
+      "得知镇民",
+      "得知外来者",
+      "得知爪牙",
+      "得知恶魔",
+      "得知旅行者"
+    ],
+    "setup": 1
+  },
+  "amnesiac",
+  {
+    "id": "3_buzhengjingjioayi",
+    "name": "变脸师",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/3_buzhengjingjioayi.png",
+    "team": "townsfolk",
+    "ability": "每个白天，如果你“疯狂”地证明自己是一个善良角色（与之前不同），你可能会在当晚获得那个角色的能力，直到下个黄昏。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "是变脸师"
+    ]
+  },
+  {
+    "id": "1_buzhengjingjioayi",
+    "name": "淘金商人",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/1_buzhengjingjioayi.png",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开投掷一个骰子决定下个任务奖励的点数。每个夜晚*，你会得知当天获得任务奖励玩家的数量。",
+    "firstNight": 0,
+    "otherNight": 13500,
+    "otherNightReminder": "每个夜晚*，你会得知当天获得任务奖励玩家的数量。",
+    "reminders": [
+      "被得知"
+    ]
+  },
+  {
+    "id": "_buzhengjingjioayi",
+    "name": "神秘学家",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/_buzhengjingjioayi.png",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人并得知一条正确信息。如果因你的能力导致减少了一名外来者，你获得的信息会是错误的。[-1或-0外来者]",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "错误信息"
+    ],
+    "setup": 1
+  },
+  "cannibal",
+  "ravenkeeper",
+  {
+    "id": "20_buzhengjingjioayi",
+    "name": "悟道者",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/20_buzhengjingjioayi.png",
+    "team": "townsfolk",
+    "ability": "你以为你是一个外来者，但你实际上不是。如果有邪恶玩家的能力选择或影响了你，你会立即变成一个不在场的镇民角色。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "是悟道者"
+    ],
+    "setup": true
+  },
+  "drunk",
+  "lunatic",
+  "mutant",
+  "barber",
+  "moonchild",
+  "scarletwoman",
+  "cerenovus",
+  {
+    "id": "5_buzhengjingjioayi",
+    "name": "酿酒师",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/5_buzhengjingjioayi.png",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一个镇民角色：当他下一次通过自身能力获取信息时，改为得知你给出的信息。",
+    "firstNight": 4402,
+    "otherNight": 2750,
+    "firstNightReminder": "每个夜晚，你要选择一个镇民角色：当他下一次通过自身能力获取信息时，改为得知你给出的信息。",
+    "otherNightReminder": "每个夜晚，你要选择一个镇民角色：当他下一次通过自身能力获取信息时，改为得知你给出的信息。",
+    "reminders": [
+      "被修改信息"
+    ]
+  },
+  {
+    "id": "6_buzhengjingjioayi",
+    "name": "蛊雕",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/6_buzhengjingjioayi.png",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择左或右：你得知该方向上的下一名存活善良玩家的角色，他中毒且其他善良玩家以为他是邪恶的蛊雕，直到下个黄昏。",
+    "firstNight": 4401,
+    "otherNight": 2700,
+    "firstNightReminder": "每个夜晚，你要选择左或右：你得知该方向上的下一名存活善良玩家的角色，他中毒且其他善良玩家以为他是邪恶的蛊雕，直到下个黄昏。",
+    "otherNightReminder": "每个夜晚，你要选择左或右：你得知该方向上的下一名存活善良玩家的角色，他中毒且其他善良玩家以为他是邪恶的蛊雕，直到下个黄昏。",
+    "reminders": [
+      "中毒"
+    ]
+  },
+  "marionette",
+  "imp",
+  "lilmonsta",
+  "fanggu",
+  {
+    "id": "13_buzhengjingjioayi",
+    "name": "丹炉",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/13_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "夜晚你会得知当晚对应天数的在场角色。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "丹炉"
+    ]
+  },
+  {
+    "id": "14_buzhengjingjioayi",
+    "name": "旌旗",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/14_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "夜晚你要选择两个善良角色：如果他们都存活，他们今晚不会死亡。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "旌旗"
+    ]
+  },
+  {
+    "id": "11_buzhengjingjioayi",
+    "name": "玉剪",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/11_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "夜晚你要选择出你以外的两名玩家：你会得知他们是否为同一阵营。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "玉剪"
+    ]
+  },
+  {
+    "id": "10_buzhengjingjioayi",
+    "name": "红酒",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/10_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "夜晚你要选择一个角色，如果该角色在场，则该角色醉酒直到下个黄昏",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "红酒"
+    ]
+  },
+  {
+    "id": "17_buzhengjingjioayi",
+    "name": "灵猴",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/17_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "白天拜访说书人使用，当天白天所有玩家在投票时闭眼，且票数会被秘密统计。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "灵猴"
+    ]
+  },
+  {
+    "id": "18_buzhengjingjioayi",
+    "name": "诡辩",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/18_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "魔鬼代言人的天平，夜晚限一次，你要选择一名存活玩家，如果明天他被处决，他不会死亡。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "诡辩"
+    ]
+  },
+  {
+    "id": "x_buzhengjingjioayi",
+    "name": "X指令",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/x_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "在第X个夜晚，恶魔可选择人以玩家共X次：他们中毒直至下个黄昏。被重复选择的玩家改为死亡。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "X指令"
+    ]
+  },
+  {
+    "id": "15_buzhengjingjioayi",
+    "name": "孟婆汤",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/15_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "夜晚你要选择一名玩家，如果他存活，那么他要选择让自己失去能力或死亡并保留能力直到下个黄昏。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "孟婆汤"
+    ]
+  },
+  {
+    "id": "12_buzhengjingjioayi",
+    "name": "烟斗",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/12_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "夜晚你要选择一个善良角色，你额外获得该角色的能力直至下个黄昏，如果该角色在场，他醉酒直至下个黄昏。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "烟斗"
+    ]
+  },
+  {
+    "id": "9_buzhengjingjioayi",
+    "name": "入梦",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/9_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "你要选择除你及旅行者以外的两名玩家：你会得知两个个善良角色和两个邪恶角色，其包含两名玩家的当前角色。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "入梦"
+    ]
+  },
+  {
+    "id": "16_buzhengjingjioayi",
+    "name": "暴食",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/16_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "夜晚恶魔的能力改为：你要选择任意数量的非旅行者或一名旅行者玩家，如果他们的角色类型均不同，他们死亡。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "暴食"
+    ]
+  },
+  {
+    "id": "19_buzhengjingjioayi",
+    "name": "坩埚",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/19_buzhengjingjioayi.png",
+    "team": "traveller",
+    "ability": "夜晚你要选择一名玩家和一个角色，如果该角色不在场，他变成该角色。如果因此创造了一个恶魔，当晚的死亡由说书人决定",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "坩埚"
+    ]
+  },
+  "bootlegger",
+  {
+    "id": "8_buzhengjingjioayi",
+    "name": "地下黑市",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/8_buzhengjingjioayi.png",
+    "team": "fabled",
+    "ability": "达成任务条件当晚则在恶魔行动时根据投排点数获得任务奖励，重复获取，投掷所得奖励若已获取则重新投掷，于当晚限次使用",
+    "firstNight": 0,
+    "otherNight": 150,
+    "firstNightReminder": "达成任务条件当晚则在恶魔行动时根据投排点数获得任务奖励，重复获取，投掷所得奖励若已获取则重新投掷，于当晚限次使用",
+    "otherNightReminder": "达成任务条件当晚则在恶魔行动时根据投排点数获得任务奖励，重复获取，投掷所得奖励若已获取则重新投掷，于当晚限次使用"
+  },
+  {
+    "id": "7_buzhengjingjioayi",
+    "name": "赏金集市",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/buzhengjingjioayi/7_buzhengjingjioayi.png",
+    "team": "fabled",
+    "ability": "集市每天只会完成并产生一个任务奖励且每个任务只能被完成一次，不可重复获取，投掷所得奖励若已获取则重新投掷，当晚限次使用",
+    "firstNight": 0,
+    "otherNight": 100,
+    "firstNightReminder": "集市每天只会完成并产生一个任务奖励且每个任务只能被完成一次，不可重复获取，投掷所得奖励若已获取则重新投掷，当晚限次使用",
+    "otherNightReminder": "集市每天只会完成并产生一个任务奖励且每个任务只能被完成一次，不可重复获取，投掷所得奖励若已获取则重新投掷，当晚限次使用"
+  }
+]

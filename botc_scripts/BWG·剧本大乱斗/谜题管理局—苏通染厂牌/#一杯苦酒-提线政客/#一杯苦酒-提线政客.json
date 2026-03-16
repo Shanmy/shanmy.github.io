@@ -1,0 +1,583 @@
+[
+  {
+    "id": "_meta",
+    "name": "一杯苦酒：禁酒令",
+    "author": "提线政客",
+    "logo": "https://free.picui.cn/free/2025/09/23/68d2158abe8a0.png",
+    "townsfolkName": "镇民",
+    "outsidersName": "外来者",
+    "minionsName": "爪牙",
+    "demonsName": "恶魔",
+    "townsfolk": "镇民",
+    "outsider": "外来者",
+    "minion": "爪牙",
+    "demon": "恶魔",
+    "a jinxedName": "相克",
+    "a jinxed": "相克"
+  },
+  {
+    "id": "hebusiniyade111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/dianxiaoer.png",
+    "edition": "custom",
+    "name": "店小二",
+    "ability": "在你的首个夜晚，你会得知两名善良玩家。他们之中会有一人醉酒，即使你已死亡。",
+    "team": "townsfolk",
+    "firstNight": 53,
+    "otherNight": 0,
+    "firstNightReminder": "唤醒店小二，对他指向两名善良玩家。",
+    "otherNightReminder": "",
+    "reminders": [
+      "熟客",
+      "醉酒"
+    ],
+    "setup": false
+  },
+   {
+    "id": "wojiushitukuai111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/gambler.png",
+    "edition": "custom",
+    "name": "赌徒",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测该玩家的角色：如果你猜错了，你会死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 14,
+    "firstNightReminder": "",
+    "otherNightReminder": "唤醒赌徒，让他进行猜测。如果猜测错误，他死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "zhenaosheajwiejp214ui90-japtu90q23j5t",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/26_acup.png",
+    "edition": "custom",
+    "name": "追猎者",
+    "ability": "每个夜晚*，你可以选择一名玩家：如果与他邻近的两名玩家阵营不同，且他不是恶魔，他死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 15,
+    "reminders": [
+         "死亡"
+    ],
+    "remindersGlobal": [],
+    "setup": false
+  },
+  {
+    "id": "gongwenbaozaren111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/exorcist.png",
+    "edition": "custom",
+    "name": "驱魔人",
+    "ability": "每个夜晚*，你要选择一名玩家（与上个夜晚不同）：如果你选中了恶魔，他会得知你的角色，但他当晚不会因其自身能力而被唤醒。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 29,
+    "firstNightReminder": "",
+    "otherNightReminder": "唤醒驱魔人，让他选择一名与上一晚不同的玩家。如果他选中了恶魔，则在驱魔人入睡后通知该恶魔谁是驱魔人。",
+    "reminders": [
+      "被选择"
+    ],
+    "setup": false
+  },
+  {
+    "id": "xunchashaoihwronaklsndfkasnd",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/3_acup.png",
+    "edition": "custom",
+    "name": "游歌者",
+    "ability": "每个白天，你可以公开选择任意名存活玩家：当晚其中的镇民玩家会醉酒直到下个黄昏，你会被唤醒得知当晚因你醉酒的人数。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 91,
+    "firstNightReminder": "",
+    "otherNightReminder": "唤醒游歌者，告知他因为他醉酒的人数",
+    "reminders": [
+      "醉酒"
+    ],
+    "remindersGlobal": [],
+    "setup": false
+  },
+  {
+    "id": "yinlureanrlfasrfiaojwrn2k31j95u09uasj",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/23_acup.png",
+    "edition": "custom",
+    "name": "巫师学徒",
+    "ability": "每个夜晚*，你要选择一名玩家：你会得知除你以外的通过自身能力影响或在夜晚选择过他的角色中有哪些角色类型。",
+    "team": "townsfolk",
+    "otherNight": 98.5,
+    "reminders": [
+      "镇民",
+      "外来者",
+      "爪牙",
+      "恶魔",
+      "旅行者",
+      "传奇角色"
+    ],
+    "remindersGlobal": [],
+    "setup": false
+  },
+ {
+    "id": "huaguanjiang",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/1_acup.png",
+    "edition": "custom",
+    "name": "盖棺人",
+    "ability": "每个夜晚*，你会得知一名邪恶玩家。你醉酒，除非有邪恶玩家死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 90,
+    "firstNightReminder": "",
+    "otherNightReminder": "唤醒盖棺人，告知他一个邪恶玩家",
+    "reminders": [
+      "醉酒"
+    ],
+    "remindersGlobal": [],
+    "setup": false
+  },
+  {
+    "id": "liaoyangshi111",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/2_acup.png",
+    "edition": "custom",
+    "name": "疗养师",
+    "ability": "一名玩家醉酒。中毒或醉酒的玩家不会死亡，每个夜晚*，你会得知是否有玩家因为你避免了死亡（从上个黎明到你被唤醒时）。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 92,
+    "firstNightReminder": "",
+    "otherNightReminder": "如果有玩家因为疗养师的能力避免了死亡（即：他避免了本应发生的死亡，且没有受到其他角色的保护）：在他的旁边放置护理标志，如果有玩家有护理标志，告知疗养师是，否则告知否",
+    "reminders": [
+      "醉酒",
+      "护理"
+    ],
+    "setup": false
+  },
+  {
+    "id": "shiqiedexin111",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/18_acup.png",
+    "edition": "custom",
+    "name": "马车邮差",
+    "ability": "你不会因除自身能力以外的原因而死亡。每个夜晚*，如果没有玩家死亡，你会死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 999,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "wohehehehehehehezuidiaoniladao111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/courtier.png",
+    "edition": "custom",
+    "name": "侍臣",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个角色：如果该角色在场，一个该角色从当晚开始醉酒三天三夜。",
+    "team": "townsfolk",
+    "firstNight": 20,
+    "otherNight": 11,
+    "firstNightReminder": "唤醒侍臣，他可以摇头不使用能力，或选择角色列表上的一个任意角色，该角色对应的玩家之一醉酒。",
+    "otherNightReminder": "如果侍臣未曾使用能力，唤醒侍臣，他可以摇头不使用能力，或选择角色列表上的一个任意角色，该角色对应的玩家之一醉酒。",
+    "reminders": [
+      "醉酒1",
+      "醉酒2",
+      "醉酒3",
+      "失去能力"
+    ],
+    "setup": false
+  },
+   {
+    "id": "buhaohe111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/tea_lady.png",
+    "edition": "custom",
+    "name": "茶艺师",
+    "ability": "如果与你邻近的两名存活的玩家是善良的，他们不会死亡。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "不会死亡"
+    ],
+    "setup": false
+  },
+    {
+    "id": "chunzaoyaoa",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/6_acup.png",
+    "edition": "custom",
+    "name": "享乐主义者",
+    "ability": "与你相邻的存活玩家（不计算旅行者）醉酒。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": false
+  },
+  {
+    "id": "babatuosi111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/minstrel.png",
+    "edition": "custom",
+    "name": "吟游诗人",
+    "ability": "当一名爪牙死于处决时，除了你和旅行者以外的所有其他玩家醉酒直到明天黄昏。",
+    "team": "townsfolk",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "全员醉酒"
+    ],
+    "setup": false
+  },
+   {
+		"id": "d0fc421d-6f44-4eec-99fc-90505973763e1",
+		"image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/27_acup.png",
+		"edition": "custom",
+		"name": "史莱姆",
+		"ability": "你以为你是一个史莱姆以外的外来者，但其实你不是。当你死亡时，与你邻近的两名善良镇民之一醉酒。",
+		"team": "outsider",
+		"sch_team": "外来者",
+		"firstNight": 0,
+		"otherNight": 80,
+		"reminders": [],
+		"remindersGlobal": ["是史莱姆", "醉酒"],
+		"setup": true
+	},
+  {
+        "id": "fengdu_2",
+        "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/30_acup.png",
+        "edition": "custom",
+        "name": "忏悔者",
+        "ability": "如果你死亡，当晚恶魔可以永久将能力变为：“每个夜晚*，你要选择两名玩家：他们死亡。”",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 31,
+        "firstNightReminder": "",
+        "otherNightReminder": "如果忏悔者在今日死亡，唤醒恶魔询问是否更改自己的能力",
+        "remindersGlobal": [
+            "能力改变",
+            "忏悔",
+            "死亡"
+        ],
+        "setup": false
+    },
+   {
+        "id": "22_acup",
+        "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/22_acup.png",
+        "name": "调香师",
+        "team": "outsider",
+        "ability": "当第一次有邪恶玩家因被邪恶玩家提名而被处决后，提名者邻近的镇民中毒，即使你已经死亡。",
+        "remindersGlobal": [
+        "首次处决",
+        "中毒"
+    ],
+    "setup": false
+    },
+  {
+    "id": "daban1231233shou111",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/8/8f/Acrobat.png/300px-Acrobat.png",
+    "edition": "custom",
+    "name": "杂技演员",
+    "ability": "每个夜晚*，如果与你邻近的存活善良玩家之一醉酒或中毒，你死亡。",
+    "team": "outsider",
+    "firstNight": 0,
+    "otherNight": 54,
+    "firstNightReminder": "",
+    "remindersGlobal": [
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "dabanshou111",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup_8/19_acup_8.png",
+    "edition": "custom",
+    "name": "云栖客",
+    "ability": "你拥有其他所有外来者的能力。其他对外来者的设置调整不会生效。[无其他外来者在场]",
+    "team": "outsider",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "remindersGlobal": ["是云栖客"],
+    "setup": true
+  },
+  {
+    "id": "jiushigelvshi111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/devils_advocate.png",
+    "edition": "custom",
+    "name": "魔鬼代言人",
+    "ability": "每个夜晚，你要选择一名存活的玩家（与上个夜晚不同）：如果明天白天他被处决，他不会死亡。",
+    "team": "minion",
+    "firstNight": 22,
+    "otherNight": 18,
+    "firstNightReminder": "唤醒魔鬼代言人，让他选择一名玩家，那名玩家处决不死。",
+    "otherNightReminder": "唤醒魔鬼代言人，让他选择一名与上一晚不同的玩家，那名玩家处决不死。",
+    "reminders": [
+      "处决不死"
+    ],
+    "setup": false
+  },
+  {
+    "id": "baonijuhua111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/assassin.png",
+    "edition": "custom",
+    "name": "刺客",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。",
+    "team": "minion",
+    "firstNight": 0,
+    "otherNight": 52,
+    "firstNightReminder": "",
+    "otherNightReminder": "如果刺客未曾使用能力，唤醒刺客，他可以摇头不使用能力，或选择攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+        "id": "charoit",
+        "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/24_acup.png",
+        "edition": "custom",
+        "name": "尸妖",
+        "ability": "你提名的第一名玩家和你死亡后投票给的第一名玩家中毒，即使你已经死亡。",
+        "team": "minion",
+        "reminders": [
+            "中毒",
+            "首次提名",
+            "遗言票"
+        ]
+    },
+ {
+    "firstNightReminder": "",
+    "otherNightReminder": "如果魔女已死亡，且没有失去能力，唤醒魔女，让他选择一名玩家，那名玩家死亡。如果此时已经有两名玩家因为魔女死亡，放置“失去能力”标记，为恶魔放置“不会唤醒”标记。",
+    "name": "魔女",
+    "otherNight": 30,
+    "setup": false,
+    "reminders": [
+      "死亡",
+      "失去能力",
+      "不会唤醒"
+    ],
+    "id": "witchbutton",
+    "edition": "custom",
+    "team": "minion",
+    "name_eng": "Witch",
+    "firstNight": 0,
+    "ability": "你死亡后，每个夜晚，你会被唤醒并可以选择一名玩家：他死亡；第二名玩家因此能力死亡的夜晚，阻止恶魔因自身能力被唤醒，然后你失去能力。",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/TakeTheCupFromMe/21_takethecupfromme.png"
+  },
+  {
+    "id": "zhiwudazhanjiangshi111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/zombuul.png",
+    "edition": "custom",
+    "name": "僵怖",
+    "ability": "每个夜晚*，如果今天白天没有人死亡，你会被唤醒并要选择一名玩家：他死亡。当你首次死亡后，你仍存活，但会被当作死亡。",
+    "team": "demon",
+    "firstNight": 0,
+    "otherNight": 32,
+    "firstNightReminder": "",
+    "otherNightReminder": "如果白天无人死亡，唤醒僵怖，让他攻击一名玩家。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+	"id": "24_EquinoxFlower",
+	"image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup_8/25_acup_8.png",
+	"name": "蚀疫魔",
+	"team": "demon",
+	"ability": "每个夜晚*，你要选择一名玩家：他死亡，如果他死于你的能力，与他顺时针邻近的一名镇民玩家中毒。",
+	"team": "demon",
+	"sch_team": "恶魔",
+	"firstNight": 0,
+	"otherNight": 33,
+	"firstNightReminder": "",
+	"otherNightReminder": "让蚀疫魔选择一名玩家。给那名玩家标记死亡和中毒。",
+	"reminders": [
+		"死亡",
+		"中毒"
+	],
+	"setup": false
+  },
+  {
+    "id": "nzltjm1111111111j",
+    "name": "狄奥尼索斯：酒神",
+    "team": "fabled",
+    "ability": "每个白天，所有存活玩家都可以在提名环节前向说书人讨要一种酒品于当天饮用，说书人可以拒绝。整局游戏，每名玩家只能成功讨要一次酒，且只有玩家存活才会生效。",
+    "reminders": [
+      "赐福"
+    ],
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup_8/10_acup_8.png",
+    "setup": false
+  },
+  {
+    "id": "nzltjm111111j",
+    "name": "蛋酒：庆典",
+    "team": "fabled",
+    "ability": "中毒或醉酒不会影响你和存活邪恶玩家的能力使用，直到下个黎明。邪恶玩家不能主动饮用蛋酒。",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup_8/11_acup_8.png",
+    "otherNight": 0,
+    "reminders": [
+      "蛋酒",
+      "庆典"
+    ],
+    "setup": false
+  },
+  {
+    "id": "nzltjm1111112111j",
+    "name": "公牛子弹：决斗",
+    "team": "fabled",
+    "ability": "从这个黄昏开始，直到下个黎明，让你中毒或醉酒的玩家会在当晚死亡，如果他是恶魔，则你代替他死亡。",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup_8/12_acup_8.png",
+    "otherNight": 68,
+    "reminders": [
+      "决斗",
+      "死亡",
+      "公牛子弹"
+    ],
+    "setup": false
+  },
+  {
+    "id": "nzltjm1111113111j",
+    "name": "月光蜜酿：烈！",
+    "team": "fabled",
+    "ability": "你立刻醉酒。如果你因为其它原因醉酒或中毒，你清醒健康。",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup_8/14_acup_8.png",
+    "reminders": [
+      "私酒"
+    ],
+    "setup": false
+  },
+  {
+    "id": "nzltjm11111411511j",
+    "name": "苦艾酒：调制",
+    "team": "fabled",
+    "ability": "你会在当晚得知今天有多少名除你以外的玩家喝到了酒，如果今天没有其它玩家喝到酒：改为你死亡。",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup_8/13_acup_8.png",
+    "otherNight": 67,
+    "reminders": [
+      "死亡",
+      "苦艾酒",
+      "共饮"
+    ],
+    "setup": false
+  },
+  {
+    "id": "nzltjm1111141111j",
+    "name": "盘尼西林：解脱",
+    "team": "fabled",
+    "ability": "下个黎明前：你不会死亡或因自身能力唤醒，但如果你醉酒，你会死亡，即使任何原因让你不会死亡。在此之后，你不再能避免死亡。",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup_8/15_acup_8.png",
+    "otherNight": 71,
+    "reminders": [
+      "死亡",
+      "双硫仑",
+      "头孢",
+      "耐药"
+    ],
+    "setup": false
+  },
+  {
+    "id": "opppppppppp1111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/po.png",
+    "edition": "custom",
+    "name": "珀",
+    "ability": "每个夜晚*，你可以选择一名玩家：他死亡。如果你上次选择时没有选择任何玩家，当晚你要选择三名玩家：他们死亡。",
+    "team": "demon",
+    "firstNight": 0,
+    "otherNight": 35,
+    "firstNightReminder": "",
+    "otherNightReminder": "唤醒珀，他可以攻击一名玩家或不进行攻击，如果他上一次选择了不进行攻击，则此次必须攻击三名玩家。",
+    "reminders": [
+      "攻击三次",
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "opppppklppppp1111",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup_8/21_acup_8.png",
+    "edition": "custom",
+    "name": "别西卜",
+    "ability": "每个夜晚*，你选择两名玩家，如果他们都是或都不是镇民：他们死亡。[+1外来者]",
+    "team": "demon",
+    "firstNight": 0,
+    "otherNight": 35,
+    "firstNightReminder": "",
+    "otherNightReminder": "唤醒亢龙，他要攻击两名玩家，如果他选择了的玩家不是镇民，他中毒，直到所有爪牙已经失去能力。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true
+  },
+    {
+    "id": "dacheke111",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/32_acup.png",
+    "edition": "custom",
+    "name": "搭车客",
+    "ability": "每个白天，公开选择一个未选择过的位置落座。与你相邻的存活玩家如果阵营相同，则他们不会死亡；如果他们阵营不同，则他们中毒。",
+    "team": "traveler",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "不会死亡",
+      "中毒",
+      "途经"
+    ],
+    "setup": false
+  },
+ {
+    "id": "jidian2111111",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/33_acup.png",
+    "edition": "custom",
+    "name": "光明祭典",
+    "ability": "每个夜晚*，你要选择一名玩家（与上个夜晚不同）：他当晚不会中毒或醉酒。",
+    "team": "traveler",
+    "firstNight": 0,
+    "otherNight": 2,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "清醒健康"
+    ],
+    "setup": false
+  },
+  {
+    "id": "yikalu1osi2111111",
+    "image": "https://www.bloodstar.xyz/p/qazwsxedc/aCup/34_acup.png",
+    "edition": "custom",
+    "name": "伊卡洛斯",
+    "ability": "如果被提名者收到的票数不足存活玩家的一半，立刻杀死提名者。",
+    "team": "traveler",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+    ],
+    "setup": false
+  },
+  {
+    "id": "tufuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu111",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/butcher.png",
+    "edition": "custom",
+    "name": "屠夫",
+    "ability": "每个白天，首次处决后，你可以再次发起提名。",
+    "team": "traveler",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "setup": false
+  }
+    ]

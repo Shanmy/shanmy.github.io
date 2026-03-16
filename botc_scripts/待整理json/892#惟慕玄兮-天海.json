@@ -1,0 +1,380 @@
+[
+  {
+    "id": "_meta",
+    "name": "惟慕玄兮",
+    "author": "天海",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/85/rz5c60fksk12xos1sn8jo8m1eck2iee.png",
+    "almanac": "有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/09/246tisxmlshatqbcb2k8bml9xhj57j2.png",
+    "firstNightReminder": "在你的首个夜晚，你得知五个不在场角色。",
+    "name": "出马仙",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你得知五个不在场角色。",
+    "firstNight": 17000
+  },
+  {
+    "id": "1_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c1/myureytcngyr07nr56wbkmko56dbaqq.png",
+    "firstNightReminder": "在你的首个夜晚，你得知一个在场的恶魔角色。",
+    "name": "念空和尚",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你得知一个在场的恶魔角色。",
+    "firstNight": 18000
+  },
+  {
+    "id": "2_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4e/q6pqoq18c7p0umxuzfucxgquxhjjvp8.png",
+    "firstNightReminder": "在你的首个夜晚，你得知两名玩家，其中一名玩家与邪恶玩家的距离最远。",
+    "name": "风水学徒",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你得知两名玩家，其中一名玩家与邪恶玩家的距离最远。",
+    "firstNight": 19000
+  },
+  {
+    "id": "3_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/92/jsqll33hb5sjl972b0p7y9z88a7dlop.png",
+    "firstNightReminder": "每个夜晚，你可以选择一名玩家。你得知他角色的字数。（不包括标点符号）",
+    "otherNightReminder": "每个夜晚，你可以选择一名玩家。你得知他角色的字数。（不包括标点符号）",
+    "name": "“鲁班”",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你可以选择一名玩家。你得知他角色的字数。（不包括标点符号）",
+    "firstNight": 21000,
+    "otherNight": 13
+  },
+  {
+    "id": "4_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/cd/p61613z8d0nkqxsq2thc0si5wgno7yr.png",
+    "firstNightReminder": "每个夜晚，你要选择一名玩家，你得知他对本局游戏的影响程度。（微小/普通/重大）",
+    "otherNightReminder": "每个夜晚，你要选择一名玩家，你得知他对本局游戏的影响程度。（微小/普通/重大）",
+    "name": "奇门遁甲",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家，你得知他对本局游戏的影响程度。（微小/普通/重大）",
+    "firstNight": 22000,
+    "otherNight": 14
+  },
+  {
+    "id": "5_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c5/omil776h1ki8919ru80ytinadrb6pu9.png",
+    "firstNightReminder": "每个夜晚，你可以选择一名玩家。 下个白天提名开始时，所有玩家得知断命师提名他，本次提名没有辩解环节直接投票（断命师提名并投票了xx）。 每局游戏限一次，在白天时，恶魔可以私下拜访说书人猜测谁是断命师，如果猜对，你当晚死亡。",
+    "otherNightReminder": "每个夜晚，你可以选择一名玩家。 下个白天提名开始时，所有玩家得知断命师提名他，本次提名没有辩解环节直接投票（断命师提名并投票了xx）。 每局游戏限一次，在白天时，恶魔可以私下拜访说书人猜测谁是断命师，如果猜对，你当晚死亡。",
+    "reminders": [
+      "断命提名",
+      "限一次",
+      "死亡"
+    ],
+    "name": "断命师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你可以选择一名玩家。 下个白天提名开始时，所有玩家得知断命师提名他，本次提名没有辩解环节直接投票（断命师提名并投票了xx）。 每局游戏限一次，在白天时，恶魔可以私下拜访说书人猜测谁是断命师，如果猜对，你当晚死亡。",
+    "firstNight": 23000,
+    "otherNight": 15
+  },
+  {
+    "id": "6_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/51/l0oxa7jn7mizb7z8vuxalrjz1jlhgcj.png",
+    "firstNightReminder": "每个夜晚，你要选择一名存活玩家。被你选择过的邪恶玩家本局游戏无法使用投票标记，即使你已死亡。",
+    "otherNightReminder": "每个夜晚，你要选择一名存活玩家。被你选择过的邪恶玩家本局游戏无法使用投票标记，即使你已死亡。",
+    "reminders": [
+      "失去标记"
+    ],
+    "name": "符士",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活玩家。被你选择过的邪恶玩家本局游戏无法使用投票标记，即使你已死亡。",
+    "firstNight": 24000,
+    "otherNight": 16
+  },
+  {
+    "id": "7_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/aa/0cxbnw2j1aw8uom54ja1qg357d98kqu.png",
+    "otherNightReminder": " 每个夜晚*，你可以选择一名拥有投票标记的死亡玩家：你获得他的能力直到下个黄昏且他失去投票标记。",
+    "reminders": [
+      "炼尸"
+    ],
+    "name": "赶尸匠",
+    "team": "townsfolk",
+    "ability": "你无法使用投票标记。 每个夜晚*，你可以选择一名拥有投票标记的死亡玩家：你获得他的能力直到下个黄昏且他失去投票标记。",
+    "otherNight": 18
+  },
+  {
+    "id": "8_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/10/alcbqucs35gi4my4hmu6pryf06w9kie.png",
+    "otherNightReminder": "每个夜晚*，你可以选择一名玩家，你得知当晚有多少名除你以外的玩家发动自身能力选中他。",
+    "name": "扶乩",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你可以选择一名玩家，你得知当晚有多少名除你以外的玩家发动自身能力选中他。",
+    "otherNight": 19
+  },
+  {
+    "id": "9_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/12/8ahnavhvm0jqzfrer703tcy3djl88ky.png",
+    "otherNightReminder": "每个夜晚*，你可以得知距离新的死亡玩家最远的邪恶玩家的角色类型。",
+    "name": "天师",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你可以得知距离新的死亡玩家最远的邪恶玩家的角色类型。",
+    "otherNight": 20
+  },
+  {
+    "id": "10_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/1e/jouzwc1ottveu7j2whywf15h0kach8i.png",
+    "otherNightReminder": "当你死在夜晚时，一名与你距离最近的邪恶玩家之一投票计数减一。",
+    "reminders": [
+      "魔法退散"
+    ],
+    "name": "唯物主义",
+    "team": "townsfolk",
+    "ability": "当你死在夜晚时，一名与你距离最近的邪恶玩家之一投票计数减一。",
+    "otherNight": 21
+  },
+  {
+    "id": "11_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b2/643dq86k7a8lgk5uzlkzc6hukbb31sf.png",
+    "reminders": [
+      "限一次"
+    ],
+    "name": "巫傩",
+    "team": "townsfolk",
+    "ability": "你知晓本局游戏的传奇角色。 每局游戏限一次，在白天时，你可以私下拜访说书人选择一个不在场的传奇角色，传奇角色变为该角色。"
+  },
+  {
+    "id": "12_weimuxuanxi",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/99/l0ni14v8hhutascdsnbz31udi870fbg.png",
+    "firstNightReminder": "决定失忆者的能力，并根据具体能力决定是否需要唤醒失忆者、何时唤醒、唤醒后让他做出什么操作或得知什么信息。",
+    "otherNightReminder": "根据失忆者的具体能力决定是否需要唤醒失忆者、何时唤醒、唤醒后让他做出什么操作或得知什么信息。",
+    "reminders": [
+      "？"
+    ],
+    "name": "失忆者",
+    "team": "townsfolk",
+    "ability": "你不知道你的能力是什么。每个白天你可以找说书人猜测一次，你会得知你的猜测有多准确。",
+    "firstNight": 13000,
+    "otherNight": 5
+  },
+  {
+    "id": "13_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e3/kx4r4v1ijjd93gy2l1wds2oqrhppl29.png",
+    "otherNightReminder": "当首次有玩家死于处决时，当晚你要选择一名除你以外的存活玩家。如果他是善良的，他开始醉酒。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "冥婚媒",
+    "team": "outsider",
+    "ability": "当首次有玩家死于处决时，当晚你要选择一名除你以外的存活玩家。如果他是善良的，他开始醉酒。",
+    "otherNight": 4
+  },
+  {
+    "id": "14_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2a/rebrp5vz4s95jx43xkum5hrrpu36wzw.png",
+    "otherNightReminder": "当你死于处决时，如果提名你的玩家是善良的，对你的提名没有投票的善良玩家会开始醉酒。 如果你“疯狂”的证明你是外来者，恶魔当晚选择一位善良玩家中毒。",
+    "reminders": [
+      "醉酒",
+      "中毒"
+    ],
+    "name": "阴童子",
+    "team": "outsider",
+    "ability": "当你死于处决时，如果提名你的玩家是善良的，对你的提名没有投票的善良玩家会开始醉酒。 如果你“疯狂”的证明你是外来者，恶魔当晚选择一位善良玩家中毒。",
+    "otherNight": 2
+  },
+  {
+    "id": "15_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fd/fa7j0a0o0b83eyvwumaahxlnvorpl1f.png",
+    "firstNightReminder": "每个夜晚，说书人会给你一条错误的信息，你要“疯狂”地证明该信息是正确的，否则你可能会被处决。 你可能会被当作邪恶阵营或爪牙角色。",
+    "otherNightReminder": "每个夜晚，说书人会给你一条错误的信息，你要“疯狂”地证明该信息是正确的，否则你可能会被处决。 你可能会被当作邪恶阵营或爪牙角色。",
+    "name": "江湖骗子",
+    "team": "outsider",
+    "ability": "每个夜晚，说书人会给你一条错误的信息，你要“疯狂”地证明该信息是正确的，否则你可能会被处决。 你可能会被当作邪恶阵营或爪牙角色。",
+    "firstNight": 25000,
+    "otherNight": 17
+  },
+  {
+    "id": "16_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/13/6led4sgufzrx37n00c7vcmgic8kyjvg.png",
+    "otherNightReminder": "如果一名邪恶玩家死于处决，从现在开始，你随时有可能死亡。",
+    "reminders": [
+      "静候天命"
+    ],
+    "name": "祭品",
+    "team": "outsider",
+    "ability": "如果一名邪恶玩家死于处决，从现在开始，你随时有可能死亡。",
+    "otherNight": 3
+  },
+  {
+    "id": "17_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/81/1jsdlottpjfh0qt76ovduq7me8spr91.png",
+    "firstNightReminder": "每个夜晚，你要选择一个玩家，明天白天他不可以发出声音，否则他可能会被处决。",
+    "otherNightReminder": "每个夜晚，你要选择一个玩家，明天白天他不可以发出声音，否则他可能会被处决。",
+    "reminders": [
+      "噤声"
+    ],
+    "name": "八不郎",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一个玩家，明天白天他不可以发出声音，否则他可能会被处决。",
+    "firstNight": 16000,
+    "otherNight": 9
+  },
+  {
+    "id": "18_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/43/3j6fvhiuinr481tako05kx4n2n5mpqg.png",
+    "firstNightReminder": "在你的首个夜晚，你要选择一个善良玩家，他醉酒并且你获得他的能力。 如果你死亡，他恢复健康并加入邪恶阵营。",
+    "reminders": [
+      "醉酒",
+      "加入邪恶"
+    ],
+    "name": "婴氏狐女",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择一个善良玩家，他醉酒并且你获得他的能力。 如果你死亡，他恢复健康并加入邪恶阵营。",
+    "firstNight": 15000
+  },
+  {
+    "id": "19_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/50/5t1snbz9eh6ukkzf2ny3nx385iyalrg.png",
+    "firstNightReminder": "每个夜晚，你要选择一名玩家，当晚他不可以发动能力选择除他以外的玩家。",
+    "otherNightReminder": "每个夜晚，你要选择一名玩家，当晚他不可以发动能力选择除他以外的玩家。",
+    "reminders": [
+      "自省"
+    ],
+    "name": "冥府钦差",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家，当晚他不可以发动能力选择除他以外的玩家。",
+    "firstNight": 20000,
+    "otherNight": 10
+  },
+  {
+    "id": "20_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/99/q258tl2raehz1cik7kwogywnnbkbeyg.png",
+    "firstNightReminder": "首夜，x名善良角色的技能必定获得错误信息，你死亡。 每个白天，你可以提名并将投票标记调整为一。 （x为游戏初始设置时镇民数量的一半，向上取整）",
+    "reminders": [
+      "错误信息",
+      "调整"
+    ],
+    "name": "紫僵",
+    "team": "minion",
+    "ability": "首夜，x名善良角色的技能必定获得错误信息，你死亡。 每个白天，你可以提名并将投票标记调整为一。 （x为游戏初始设置时镇民数量的一半，向上取整）",
+    "firstNight": 12
+  },
+  {
+    "id": "21_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/53/8qht24iy23kxre2p2i7mt88srdfrclq.png",
+    "firstNightReminder": "每个夜晚*，你要选择一名玩家，他死亡。 首夜，你得知谁是失忆者，每局游戏限一次，你可以知晓当天失忆者提出的问题，并代替说书人给出答案。【+2失忆者】",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家，他死亡。 首夜，你得知谁是失忆者，每局游戏限一次，你可以知晓当天失忆者提出的问题，并代替说书人给出答案。【+2失忆者】",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "奈何",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家，他死亡。 首夜，你得知谁是失忆者，每局游戏限一次，你可以知晓当天失忆者提出的问题，并代替说书人给出答案。【+2失忆者】",
+    "firstNight": 14000,
+    "otherNight": 6
+  },
+  {
+    "id": "22_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4a/otai9wmx9t0i5n8b26xf2xsolcyzehw.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家，他死亡。 如果你被处决，你的能力改为：“每个夜晚*，可能会有一名玩家死亡。当你首次死亡后，你存活，但会被视作死亡。”",
+    "reminders": [
+      "死亡",
+      "斩首"
+    ],
+    "name": "刑天",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家，他死亡。 如果你被处决，你的能力改为：“每个夜晚*，可能会有一名玩家死亡。当你首次死亡后，你存活，但会被视作死亡。”",
+    "otherNight": 8
+  },
+  {
+    "id": "23_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/62/qwyai40cqdorig3w49tn2z38pkl7px5.png",
+    "firstNightReminder": "每个夜晚*，你要选择一名玩家，他死亡。 在你的首个夜晚，你查看残缺的魔典并选择初始爪牙数的善良玩家，他们将知晓自己加入邪恶方阵营并得知你是恶魔，除你以外的邪恶玩家会被当作善良阵营。【无爪牙在场】",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家，他死亡。 在你的首个夜晚，你查看残缺的魔典并选择初始爪牙数的善良玩家，他们将知晓自己加入邪恶方阵营并得知你是恶魔，除你以外的邪恶玩家会被当作善良阵营。【无爪牙在场】",
+    "reminders": [
+      "死亡",
+      "视为善良"
+    ],
+    "setup": true,
+    "name": "百鬼夜行",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家，他死亡。 在你的首个夜晚，你查看残缺的魔典并选择初始爪牙数的善良玩家，他们将知晓自己加入邪恶方阵营并得知你是恶魔，除你以外的邪恶玩家会被当作善良阵营。【无爪牙在场】",
+    "firstNight": 11,
+    "otherNight": 7
+  },
+  {
+    "id": "24_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/13/ckwe4ss817r41q1qrckmk6b2xrulvpp.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家（与之前不同）。 从现在开始，他被告知不能提名或投票，即使你已死亡。 在你的第五个白天结束时，邪恶阵营获胜。 【+白无常，无爪牙在场，-或+任意数量的外来者】",
+    "reminders": [
+      "第一天",
+      "第二天",
+      "第三天",
+      "第四天",
+      "第五天",
+      "不能提名和投票"
+    ],
+    "setup": true,
+    "name": "黑无常",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家（与之前不同）。 从现在开始，他被告知不能提名或投票，即使你已死亡。 在你的第五个白天结束时，邪恶阵营获胜。 【+白无常，无爪牙在场，-或+任意数量的外来者】",
+    "otherNight": 12
+  },
+  {
+    "id": "25_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/55/7f2bmqh2dw7a7brszn6k7dlwo6jbuqa.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家（与之前不同）。 从现在开始，他被告知不能发动自身能力，即使你已死亡。 在你的第五个白天结束时，邪恶阵营获胜。 【+黑无常，无爪牙在场，-或+任意数量的外来者】",
+    "reminders": [
+      "第一天",
+      "第二天",
+      "第三天",
+      "第四天",
+      "第五天",
+      "不能发动能力"
+    ],
+    "setup": true,
+    "name": "白无常",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家（与之前不同）。 从现在开始，他被告知不能发动自身能力，即使你已死亡。 在你的第五个白天结束时，邪恶阵营获胜。 【+黑无常，无爪牙在场，-或+任意数量的外来者】",
+    "otherNight": 11
+  },
+  {
+    "id": "26_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/77/fez3rkcjvhhu9sk0n3ml63se6utrm7i.png",
+    "reminders": [
+      "招魂"
+    ],
+    "name": "招魂幡",
+    "team": "fabled",
+    "ability": "当一名邪恶玩家即将死亡时，他可能不会死亡并变成一个不在场的善良角色。"
+  },
+  {
+    "id": "27_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/71/655gqxknmm9mzgtophak4ycgg3xlnza.png",
+    "name": "六耳猕猴",
+    "team": "fabled",
+    "ability": "每个白天，恶魔可以私下拜访说书人得知一条正确信息。"
+  },
+  {
+    "id": "28_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e6/d7hf0ryjqso19tz1k96iwfhrek5rjmq.png",
+    "reminders": [
+      "地藏之怒"
+    ],
+    "name": "谛听",
+    "team": "fabled",
+    "ability": "说谎最多的玩家身上可能会发生一些不好的事情。"
+  },
+  {
+    "id": "29_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/61/mn3zt4c2ffa79bbcc320mfubltugsmw.png",
+    "reminders": [
+      "噬梦"
+    ],
+    "name": "食梦貘",
+    "team": "fabled",
+    "ability": "每个夜晚，可能会有一名玩家醉酒。 下个白天，他的投票视作1.5票。"
+  },
+  {
+    "id": "30_weimuxuanxi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png",
+    "name": "唯尽人事，不知天命",
+    "team": "fabled",
+    "ability": "本局游戏全程采用闭眼仅统计票数而不公布投票人数的方式。从第二天开始，游戏每有一天平安夜，处决的票数要求便会减少1。除此之外，每局游戏都会加入一个传奇角色，但并不会公布具体的传奇角色。"
+  }
+]

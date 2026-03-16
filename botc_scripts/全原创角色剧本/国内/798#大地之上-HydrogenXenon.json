@@ -1,0 +1,504 @@
+[
+  {
+    "name": "大地之上",
+    "author": "HydrogenXenon",
+    "id": "_meta",
+    "logo": "https://i.postimg.cc/3NgkKRvJ/1.png",
+    "almanac": "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/almanac.html"
+  },
+  {
+    "id": "_ontheland",
+    "name": "“庞贝”",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你要选择除你以外的三名玩家：你会得知他们当中有几种角色类型。",
+    "firstNightReminder": "在你的首个夜晚，你要选择除你以外的三名玩家：你会得知他们当中有几种角色类型。",
+    "firstNight": 3800,
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/_ontheland.png"
+    ]
+  },
+  {
+    "id": "1_ontheland",
+    "name": "“鼠王”",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他与其邻近的存活玩家是否均为同一角色类型。",
+    "firstNightReminder": "选择一名玩家：得知他与其邻近的存活玩家是否均为同一角色类型。",
+    "firstNight": 3900,
+    "otherNightReminder": "选择一名玩家：得知他与其邻近的存活玩家是否均为同一角色类型。",
+    "otherNight": 12,
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/1_ontheland.png"
+    ]
+  },
+  {
+    "id": "2_ontheland",
+    "name": "泥岩",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择两名玩家：你会分别得知与他们邻近的玩家是否为同一角色类型。",
+    "otherNightReminder": "每个夜晚*，你要选择两名玩家：你会分别得知与他们邻近的玩家是否为同一角色类型。",
+    "otherNight": 13,
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/2_ontheland.png"
+    ]
+  },
+  {
+    "id": "3_ontheland",
+    "name": "腐败骑士",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知与你邻近的两名存活玩家中不存在哪两种角色类型。如果凋零骑士已经死亡，你的能力变为“每个夜晚，你会得知两种角色类型，其中包含与你邻近的两名存活玩家的角色类型。”",
+    "firstNightReminder": "每个夜晚，你会得知两种角色类型。",
+    "firstNight": 4000,
+    "otherNightReminder": "每个夜晚，你会得知两种角色类型。",
+    "otherNight": 14,
+    "reminders": [
+      "凋零未死亡",
+      "凋零已死亡"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/3_ontheland.png"
+    ]
+  },
+  {
+    "id": "4_ontheland",
+    "name": "凋零骑士",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名不与你相邻的存活玩家：如果他们角色类型相同，他们当晚不会死亡。如果腐败骑士已经死亡，你的能力变为“每个夜晚，你要选择两名不与你相邻的存活玩家：他们当晚不会死亡。”",
+    "firstNightReminder": "每个夜晚，你要选择两名不与你相邻的存活玩家",
+    "firstNight": 3600,
+    "otherNightReminder": "每个夜晚，你要选择两名不与你相邻的存活玩家",
+    "otherNight": 6,
+    "reminders": [
+      "腐败未死亡",
+      "腐败已死亡",
+      "无效保护",
+      "不会死亡"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/4_ontheland.png"
+    ]
+  },
+  {
+    "id": "5_ontheland",
+    "name": "“自在”",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择两名除你以外的玩家：如果他们角色类型不同，你会得知两个与他们角色类型均不相同的角色，其中仅一个角色在场。如果他们角色类型相同，你得知错误信息。",
+    "otherNightReminder": "每个夜晚*，你要选择两名除你以外的玩家",
+    "otherNight": 15,
+    "reminders": [
+      "被得知"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/5_ontheland.png"
+    ]
+  },
+  {
+    "id": "6_ontheland",
+    "name": "“进化的本质”",
+    "team": "townsfolk",
+    "ability": "在你的第二个夜晚与白天，你不会死于你左侧一半玩家的能力或提名；在你的第三个夜晚与白天，你不会死于你右侧一半玩家的能力或提名；从你的第四个夜晚开始，你不会死亡。（所有的一半均向下取整）[+1外来者]",
+    "reminders": [
+      "正在蜕变",
+      "免于左侧",
+      "免于右侧",
+      "不会死亡"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/6_ontheland.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "7_ontheland",
+    "name": "盐风主教昆图斯",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知昨天在提名时投票的存活玩家之中有几种角色类型。",
+    "otherNightReminder": "每个夜晚*，你会得知昨天在提名时投票的存活玩家之中有几种角色类型。",
+    "otherNight": 17,
+    "reminders": [
+      "镇民投票",
+      "外来者投票",
+      "爪牙投票",
+      "恶魔投票"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/7_ontheland.png"
+    ]
+  },
+  {
+    "id": "8_ontheland",
+    "name": "潘桥•萨拉斯",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你可以选择任意名存活玩家：你会得知他们之中有几人在今晚被选择。如果你选中了邪恶玩家，你醉酒直至下个黄昏。",
+    "otherNightReminder": "每个夜晚*，你可以选择任意名存活玩家：你会得知他们之中有几人在今晚被选择。如果你选中了邪恶玩家，你醉酒直至下个黄昏。",
+    "otherNight": 18,
+    "reminders": [
+      "醉酒",
+      "被选择"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/8_ontheland.png"
+    ]
+  },
+  {
+    "id": "9_ontheland",
+    "name": "“殉道者”，安多恩",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你可以选择一名玩家：你会得知他与其邻近的四名玩家中有几种角色类型。",
+    "otherNightReminder": "每个夜晚*，你可以选择一名玩家",
+    "otherNight": 16,
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/9_ontheland.png"
+    ]
+  },
+  {
+    "id": "10_ontheland",
+    "name": "白垩，“尘世遗骸”",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，得知一个在场的爪牙角色。如果你在夜晚死亡，你会被唤醒以选择任意名玩家：你会得知他们之中是否有那个爪牙角色。",
+    "firstNightReminder": "得知一个在场的爪牙角色",
+    "firstNight": 3700,
+    "otherNightReminder": "如果你在夜晚死亡，选择任意名玩家：你会得知他们之中是否有那个爪牙角色。",
+    "otherNight": 19,
+    "reminders": [
+      "巫术残骸"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/10_ontheland.png"
+    ]
+  },
+  {
+    "id": "11_ontheland",
+    "name": "“唤醒”",
+    "team": "townsfolk",
+    "ability": "如果你在夜晚死亡，你会与一名爪牙玩家交换角色。",
+    "otherNightReminder": "如果你在夜晚死亡，你会与一名爪牙玩家交换角色",
+    "otherNight": 20,
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/11_ontheland.png"
+    ]
+  },
+  {
+    "id": "13_ontheland",
+    "name": "“花匠”",
+    "team": "townsfolk",
+    "ability": "如果还有善良的外来者存活，你不会死亡。与你邻近的善良玩家之一免于爪牙的负面能力的影响。你不计入邪恶阵营的获胜条件之中。",
+    "reminders": [
+      "不会死亡",
+      "免于侵害"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/13_ontheland.png"
+    ]
+  },
+  {
+    "id": "14_ontheland",
+    "name": "特蕾西娅，“魔王”",
+    "team": "townsfolk",
+    "ability": "所有裹骸死士都知道你是谁。在你的首个夜晚，你死亡但会被当作仍然存活。对调胜负结果，即使你已死亡。[所有其他镇民都是裹骸死士]",
+    "reminders": [
+      "已经死亡"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/14_ontheland.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "19_ontheland",
+    "name": "裹骸死士",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个不在场的镇民角色。（与其他裹骸死士不同且不为恶魔的伪装）[+特蕾西娅，“魔王”]",
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/19_ontheland.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "15_ontheland",
+    "name": "乌萨斯平民",
+    "team": "outsider",
+    "ability": "在你死亡的下一个白天开始时，你立刻被处决。",
+    "otherNightReminder": "在你死亡的下一个白天开始时，你立刻被处决。",
+    "otherNight": 21,
+    "reminders": [
+      "立刻处决"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/15_ontheland.png"
+    ]
+  },
+  {
+    "id": "17_ontheland",
+    "name": "叙拉古平民",
+    "team": "outsider",
+    "ability": "当所有的叙拉古平民死亡时，会有一名善良玩家转变为邪恶阵营。[+0~1叙拉古平民]",
+    "otherNightReminder": "当所有的叙拉古平民死亡时，会有一名善良玩家转变为邪恶阵营",
+    "otherNight": 22,
+    "remindersGlobal": [
+      "变为邪恶"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/17_ontheland.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "16_ontheland",
+    "name": "修道院居民",
+    "team": "outsider",
+    "ability": "有一名邪恶玩家知道你在场。每个白天限一次，他可以公开或秘密猜测你是修道院居民，如果猜对，你的阵营落败。每个白天，你可以拜访说书人以回答一个问题，如果你答对了，你失去能力直至下个黎明。",
+    "firstNightReminder": "有一名邪恶玩家知道你在场",
+    "firstNight": 4100,
+    "reminders": [
+      "失去能力",
+      "已被猜测"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/16_ontheland.png"
+    ]
+  },
+  {
+    "id": "18_ontheland",
+    "name": "诺伯特平民",
+    "team": "outsider",
+    "ability": "你以为你是一个镇民角色，但其实你不是。你可能会被当做爪牙角色或恶魔角色。在你被当作错误的角色类型三次后，你失去能力。",
+    "remindersGlobal": [
+      "是诺伯特平民",
+      "剩余三次",
+      "剩余两次",
+      "剩余一次",
+      "失去能力"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/18_ontheland.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "22_ontheland",
+    "name": "喉舌",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：他会被当做爪牙角色或恶魔角色直至下个黄昏。",
+    "firstNightReminder": "你要选择一名玩家：他会被当做爪牙角色或恶魔角色直至下个黄昏",
+    "firstNight": 3500,
+    "otherNightReminder": "你要选择一名玩家：他会被当做爪牙角色或恶魔角色直至下个黄昏",
+    "otherNight": 5,
+    "reminders": [
+      "提线木偶"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/22_ontheland.png"
+    ]
+  },
+  {
+    "id": "24_ontheland",
+    "name": "伊莎玛拉，腐化之心",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择两名善良阵营玩家。如果他们均死于处决，在当晚你可以选择三名玩家：他们死亡。[+1外来者]",
+    "firstNightReminder": "在你的首个夜晚，你要选择两名善良阵营玩家。",
+    "firstNight": 3400,
+    "reminders": [
+      "被选择",
+      "今晚变身"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/24_ontheland.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "25_ontheland",
+    "name": "无垠回荡克雷松",
+    "team": "minion",
+    "ability": "所有善良阵营玩家选择玩家作为能力目标时会选择其顺时针上满足条件的下一名玩家。在你的首个夜晚，你要选择一名善良玩家：他不受你的能力效果影响。你死亡时所有玩家都会得知此事并得知你曾经选择过谁。",
+    "firstNightReminder": "在你的首个夜晚，你要选择一名善良玩家",
+    "firstNight": 3300,
+    "otherNightReminder": "你死亡时所有玩家都会得知此事并得知你曾经选择过谁。",
+    "otherNight": 24,
+    "reminders": [
+      "时空坍缩",
+      "免于坍缩"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/25_ontheland.png"
+    ]
+  },
+  {
+    "id": "23_ontheland",
+    "name": "伤心的大锁",
+    "team": "minion",
+    "ability": "当你首次将要死亡时，你不会死亡。每个白天的聊天阶段限时五分钟且提名阶段不允许说话。所有玩家都知道你在场。",
+    "firstNightReminder": "所有玩家都知道你在场。",
+    "firstNight": 4200,
+    "reminders": [
+      "破盾"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/23_ontheland.png"
+    ]
+  },
+  {
+    "id": "26_ontheland",
+    "name": "“剧作家”",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。 在你的每个白天，你可以拜访说书人并提出一个剧本（暗流涌动，黯月初升，梦陨春宵），你会获得该剧本一个恶魔的部分能力来作为你的额外能力，直到你下次拜访。[-1外来者]",
+    "otherNightReminder": "对应额外能力",
+    "otherNight": 4,
+    "reminders": [
+      "死亡"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/26_ontheland.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "27_ontheland",
+    "name": "伊祖米克，生态源泉",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择一名玩家：他变成邪恶的伊祖米克的子代。如果你被处决，善良阵营获胜。[无爪牙]",
+    "otherNightReminder": "你可以选择一名玩家：他变成邪恶的伊祖米克的子代",
+    "otherNight": 7,
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/27_ontheland.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "21_ontheland",
+    "name": "伊祖米克的子代",
+    "team": "demon",
+    "ability": "你会被当做是爪牙而不是恶魔。每个夜晚*，你们要共同醒来并选择一名玩家：他死亡。在你的首个夜晚，你会得知伊祖米克，“生态源泉”是谁。[不存在于初始配置中]",
+    "otherNightReminder": "在你的首个夜晚，你会得知伊祖米克，“生态源泉”是谁。你们共同醒来并选择一名玩家：他死亡。",
+    "otherNight": 8,
+    "reminders": [
+      "死亡"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/21_ontheland.png"
+    ]
+  },
+  {
+    "id": "28_ontheland",
+    "name": "路加萨尔古斯，历法之王",
+    "team": "demon",
+    "ability": "每个夜晚*，你要与哈兰杜汗，大地之鞭一起醒来并一起选择一名玩家：他死亡。 如果哈兰杜汗，大地之鞭已经死亡：限一次，在夜晚时你可以让所有镇民中毒直至下一个黄昏。[+哈兰杜汗，大地之鞭，-1爪牙]",
+    "otherNightReminder": "与哈兰杜汗，大地之鞭一起醒来",
+    "otherNight": 9,
+    "reminders": [
+      "全场中毒",
+      "死亡",
+      "已使用"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/28_ontheland.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "29_ontheland",
+    "name": "哈兰杜汗，大地之鞭",
+    "team": "demon",
+    "ability": "每个夜晚*，你要与路加萨尔古斯，历法之王一起醒来并一起选择一名玩家：他死亡。 如果路加萨尔古斯，历法之王已经死亡或不在场：限一次，你可以在夜晚选择一名玩家：他死亡。[-1外来者]",
+    "otherNightReminder": "与路加萨尔古斯，历法之王一起醒来",
+    "otherNight": 10,
+    "reminders": [
+      "死亡",
+      "已使用"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/29_ontheland.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "30_ontheland",
+    "name": "“阿米娅”，炉芯终曲",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名非爪牙的存活玩家：他死亡。如果你提名并处决了爪牙，邪恶阵营获胜。仅剩两名玩家存活或存活玩家均为邪恶玩家时，善良阵营获胜。所有玩家无法转变阵营。当你死亡时若所有爪牙均已死亡，邪恶阵营获胜。",
+    "otherNightReminder": "你要选择一名玩家：他死亡。",
+    "otherNight": 11,
+    "reminders": [
+      "死亡"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/30_ontheland.png"
+    ]
+  },
+  {
+    "id": "20_ontheland",
+    "name": "伊比利亚审判庭",
+    "team": "fabled",
+    "ability": "邪恶玩家总数不会超过常规配置数量加一名。如果有额外的玩家即将加入邪恶，他们会以为自己加入了邪恶阵营。",
+    "remindersGlobal": [
+      "以为邪恶"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/20_ontheland.png"
+    ]
+  },
+  {
+    "id": "32_ontheland",
+    "name": "终曲和声",
+    "team": "fabled",
+    "ability": "所有玩家不能提名自己。旅行者不会被当做“是玩家”。如果“阿米娅”，炉芯终曲在场，胜负结果不会被调转。",
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/32_ontheland.png"
+    ]
+  },
+  {
+    "id": "33_ontheland",
+    "name": "“召毁者”",
+    "team": "traveller",
+    "ability": "每个夜晚*，你可以选择一名玩家：如果他今晚行动过，他死亡。",
+    "otherNightReminder": "你可以选择一名玩家",
+    "otherNight": 23,
+    "reminders": [
+      "死亡"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/33_ontheland.png"
+    ]
+  },
+  {
+    "id": "34_ontheland",
+    "name": "“浮袭者”",
+    "team": "traveller",
+    "ability": "你可以提名已经被提名过的玩家且此次处决票数计算+2。对你的流放需要至少75%的玩家举手。",
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/34_ontheland.png"
+    ]
+  },
+  {
+    "id": "35_ontheland",
+    "name": "“纵尘者”",
+    "team": "traveller",
+    "ability": "每个夜晚，你可以选择至多两名玩家：他们在当晚会被当做是旅行者。",
+    "firstNightReminder": "选择至多两名玩家",
+    "firstNight": 3200,
+    "otherNightReminder": "选择至多两名玩家",
+    "otherNight": 3,
+    "reminders": [
+      "旅行者"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/35_ontheland.png"
+    ]
+  },
+  {
+    "id": "36_ontheland",
+    "name": "“湮灭者”",
+    "team": "traveller",
+    "ability": "每个夜晚，你可以选择一名玩家（与上个夜晚不同）：他在当晚不会被唤醒。",
+    "firstNightReminder": "睡",
+    "firstNight": 3100,
+    "otherNightReminder": "睡",
+    "otherNight": 2,
+    "reminders": [
+      "睡着了"
+    ],
+    "image": [
+      "https://www.bloodstar.xyz/p/HydrogenXenon/Ontheland/36_ontheland.png"
+    ]
+  }
+]

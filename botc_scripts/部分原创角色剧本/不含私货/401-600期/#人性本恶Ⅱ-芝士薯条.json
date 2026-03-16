@@ -1,0 +1,544 @@
+[{
+	"logo": "https://s21.ax1x.com/2025/03/21/pEwLwPx.png",
+	"description": "人性本恶Ⅱ",
+	"author": "芝士薯条",
+	"name": "人性本恶Ⅱ",
+	"id": "_meta",
+	"townsfolkName": "镇民",
+        "outsidersName": "外来者",
+        "minionsName": "爪牙",
+        "demonsName": "恶魔",
+        "townsfolk": "镇民",
+        "outsider": "外来者",
+        "minion": "爪牙",
+        "demon": "恶魔",
+        "a jinxedName": "相克",
+        "a jinxed": "相克",
+    "state": [
+			{
+				"stateName": "生存法则一",
+				"stateDescription": "人之性恶，其善者伪也。"
+			},
+			{
+				"stateName": "生存法则二",
+				"stateDescription": "杀人的不是兽，是兽性。"
+			},
+			{
+				"stateName": "生存法则三",
+				"stateDescription": "你神性的举动，却暴露了你兽性的行踪。"
+			},
+			{
+				"stateName": "生存法则四",
+				"stateDescription": "人性本恶。"
+			}
+		]
+
+},{
+	"ability": "每个白天限一次，你可以杀死与你邻近的两名存活的玩家中的一名，但需要另一边那个存活的玩家同意。",
+	"image": "https://clocktower-wiki.gstonegames.com/images/thumb/4/44/Gangster.png/300px-Gangster.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "heibang",
+	"firstNightReminder": "",
+	"otherNightReminder": "",
+	"name": "黑帮",
+	"otherNight": 0,
+	"setup": 0,
+	"reminders": [],
+	"remindersGlobal": [],
+	"team": "traveler",
+	"firstNight": 0
+},{
+	"ability": "在你首次提名玩家后，你会在当晚得知他的角色。恶魔会被你的能力当作善良角色。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/tixingguan.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "tixingguan_gstone",
+	"firstNightReminder": "",
+	"otherNightReminder": "在提刑官首次提名后的当晚，唤醒提刑官并告知被其提名的玩家的角色。",
+	"name": "提刑官",
+	"otherNight": 16,
+	"setup": 0,
+	"reminders": [
+		"已提名",
+		"失去能力"
+	],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 0
+},{
+	"ability": "在你的首个夜晚，你会得知一个在场的镇民角色。如果你“疯狂”地证明你是该角色，当他死亡时你获得该角色的能力。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/pixie.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "pixie_gstone",
+	"firstNightReminder": "对小精灵展示一个在场的镇民角色。",
+	"otherNightReminder": "",
+	"name": "小精灵",
+	"otherNight": 0,
+	"setup": 0,
+	"reminders": [
+		"疯狂",
+		"获得能力"
+	],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 14
+},{
+	"ability": "你拥有一个爪牙角色的能力。当你使用能力时，说书人可能会要求你更换选择。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/alchemist.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "alchemist_gstone",
+	"firstNightReminder": "唤醒炼金术士，对他展示他获得的能力所对应的爪牙角色标记。",
+	"otherNightReminder": "",
+	"name": "炼金术士",
+	"otherNight": 0,
+	"setup": 1,
+	"reminders": [],
+	"remindersGlobal": [
+		"是炼金术士"
+	],
+	"team": "townsfolk",
+	"firstNight": 2
+},{
+	"ability": "每个夜晚，你要选择一名玩家：如果你选中了爪牙，他会得知被传教士选中。所有被你选中的爪牙失去能力。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/preacher.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "preacher_gstone",
+	"firstNightReminder": "传教士选择一名玩家。如果他选中了爪牙，则唤醒并告知他被传教士选中。",
+	"otherNightReminder": "传教士选择一名玩家。如果她选中了爪牙，则唤醒并告知他被传教士选中。",
+	"name": "传教士",
+	"otherNight": 3,
+	"setup": 0,
+	"reminders": [
+		"失去能力"
+	],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 8
+},{
+	"ability": "每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/snake_charmer.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "snake_charmer_gstone",
+	"firstNightReminder": "让舞蛇人选择一名玩家。如果舞蛇人选中了恶魔：展示“你是”信息标记和恶魔角色标记。用拇指向下代表他阵营变为邪恶。在魔典中交换舞蛇人和恶魔的角色标记。让原来的舞蛇人重新入睡。唤醒原来的恶魔。对老恶魔展示“你是”信息标记和舞蛇人角色标记，并用拇指向上代表他阵营变为善良。",
+	"otherNightReminder": "让舞蛇人选择一名玩家。如果舞蛇人选中了恶魔：展示“你是”信息标记和恶魔角色标记。用拇指向下代表他阵营变为邪恶。在魔典中交换舞蛇人和恶魔的角色标记。让原来的舞蛇人重新入睡。唤醒原来的恶魔。对老恶魔展示“你是”信息标记和舞蛇人角色标记，并用拇指向上代表他阵营变为善良。",
+	"name": "舞蛇人",
+	"otherNight": 4,
+	"setup": 0,
+	"reminders": [
+		"中毒"
+	],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 10
+},{
+	"ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/fortune_teller.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "fortune_teller_gstone",
+	"firstNightReminder": "让占卜师选择两名玩家。如果其中有恶魔或“干扰项”，点头示意，否则摇头。",
+	"otherNightReminder": "让占卜师选择两名玩家。如果其中有恶魔或“干扰项”，点头示意，否则摇头。",
+	"name": "占卜师",
+	"otherNight": 15,
+	"setup": 0,
+	"reminders": [
+		"干扰项"
+	],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 15
+},{
+	"ability": "每局游戏限一次，在夜晚时，你可以选择一个善良角色：你获得该角色的能力。如果这个角色在场，他醉酒。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/philosopher.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "philosopher_gstone",
+	"firstNightReminder": "哲学家可以选择一个角色。如果选择的角色不在场，将哲学家的角色标题替换成对应角色，并标记“是哲学家”，否则标记该角色对应的玩家醉酒。从现在开始，你需要以哲学家获得能力的那种角色的行动方式来唤醒哲学家。",
+	"otherNightReminder": "哲学家可以选择一个角色。如果选择的角色不在场，将哲学家的角色标题替换成对应角色，并标记“是哲学家”，否则标记该角色对应的玩家醉酒。从现在开始，你需要以哲学家获得能力的那种角色的行动方式来唤醒哲学家。",
+	"name": "哲学家",
+	"otherNight": 1,
+	"setup": 0,
+	"reminders": [
+		"醉酒"
+	],
+	"remindersGlobal": [
+		"是哲学家"
+	],
+	"team": "townsfolk",
+	"firstNight": 1
+},{
+	"ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的两名玩家：你会得知他们是否为同一阵营。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/seamstress.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "seamstress_gstone",
+	"firstNightReminder": "女裁缝可以选择除自己以外的两名玩家。如果她这么做了，对她点头或摇头示意这两名玩家是否为同一阵营，随后标记女裁缝失去能力。之后的夜晚无需再唤醒女裁缝。",
+	"otherNightReminder": "女裁缝可以选择除自己以外的两名玩家。如果她这么做了，对她点头或摇头示意这两名玩家是否为同一阵营，随后标记女裁缝失去能力。之后的夜晚无需再唤醒女裁缝。",
+	"name": "女裁缝",
+	"otherNight": 17,
+	"setup": 0,
+	"reminders": [
+		"失去能力"
+	],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 16
+},{
+	"ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/cannibal.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "cannibal_gstone",
+	"firstNightReminder": "",
+	"otherNightReminder": "",
+	"name": "食人族",
+	"otherNight": 0,
+	"setup": 0,
+	"reminders": [
+		"中毒",
+		"死于处决"
+	],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 0
+},{
+	"ability": "每个夜晚*，你会得知今天是否有非镇民且非旅行者玩家死亡。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/upload/202404/c_2565080943171_2bd68241.jpg",
+	"edition": "custom",
+	"flavor": "",
+	"id": "zhifu_gstone",
+	"firstNightReminder": "",
+	"otherNightReminder": "如果在白天以及夜晚，只有镇民或旅行者玩家死亡，对知府摇头表示“否”，否则点头表示“是”。",
+	"name": "知府",
+	"otherNight": 18,
+	"setup": 0,
+	"reminders": [
+		"死于今日"
+	],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 0
+},{
+	"ability": "每局游戏限一次，在白天时，你可以让说书人给你一些能帮助你的阵营获胜的建议。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/fisherman.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "fisherman_gstone",
+	"firstNightReminder": "",
+	"otherNightReminder": "",
+	"name": "渔夫",
+	"otherNight": 0,
+	"setup": 0,
+	"reminders": [
+		"失去能力"
+	],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 0
+},{
+	"ability": "每个夜晚，你要选择至多三名玩家：你会得知今晚是否有邪恶玩家的能力选择或影响了他们之中的玩家。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/upload/202301/c_2147287694761_01761fcb.jpg",
+	"edition": "custom",
+	"flavor": "",
+	"id": "yinluren_gstone",
+	"firstNightReminder": "唤醒引路人，让其选择至多三名玩家。以点头或摇头作为信息给出。",
+	"otherNightReminder": "唤醒引路人，让其选择至多三名玩家。以点头或摇头作为信息给出。",
+	"name": "引路人",
+	"otherNight": 19,
+	"setup": 0,
+	"reminders": [],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 18
+},{
+	"ability": "如果你在夜晚死亡，你会被唤醒，然后你要选择一名玩家：你会得知他的角色。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/ravenkeeper.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "ravenkeeper_gstone",
+	"firstNightReminder": "",
+	"otherNightReminder": "如果守鸦人今晚死亡，唤醒他并让他选择一名玩家。对他展示那名玩家的角色标记。",
+	"name": "守鸦人",
+	"otherNight": 14,
+	"setup": 0,
+	"reminders": [],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 0
+},{
+	"ability": "任何在夜晚使用自身能力选择你的其他玩家，会改为选中另一名邪恶玩家作为替代。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/upload/202310/c_3833755308961_7e6f7e09.jpg",
+	"edition": "custom",
+	"flavor": "",
+	"id": "banxian_gstone",
+	"firstNightReminder": "",
+	"otherNightReminder": "",
+	"name": "半仙",
+	"otherNight": 0,
+	"setup": 0,
+	"reminders": [],
+	"remindersGlobal": [],
+	"team": "townsfolk",
+	"firstNight": 0
+},{
+	"ability": "在你的首个夜晚，你要选择除你以外的一名玩家：你转变为他的阵营，即使你已醉酒或中毒，但你不知道你转变后的阵营。",
+	"image": "https://clocktower-wiki.gstonegames.com/images/c/c5/Ogre.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "ogre_gstone",
+	"firstNightReminder": "在首个夜晚，唤醒食人魔。让食人魔指向一名玩家。让食人魔重新入睡。如果食人魔指向了一名邪恶玩家，将食人魔的角色标记倒转放置，代表食人魔现在属于邪恶阵营。",
+	"otherNightReminder": "",
+	"name": "食人魔",
+	"otherNight": 0,
+	"setup": 0,
+	"reminders": [],
+	"remindersGlobal": [],
+	"team": "outsider",
+	"firstNight": 17
+},{
+	"ability": "你以为你是一个恶魔，但其实你不是。恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/lunatic.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "lunatic_gstone",
+	"firstNightReminder": "如果有七名或更多玩家，唤醒疯子：展示“他们是你的爪牙”信息标记。指向任意对应数量的玩家。展示“这些角色不在场”信息标记。展示三个善良角色。让疯子重新入睡。唤醒恶魔。展示“你是”信息标记和恶魔角色标记。展示“这名玩家是”信息标记和疯子角色标记，然后指向疯子玩家。",
+	"otherNightReminder": "做任何需要做的事情来模拟一位恶魔的行动。让疯子重新入睡。唤醒恶魔。对恶魔展示疯子角色标记，并指向疯子玩家，随后是疯子的攻击目标。",
+	"name": "疯子",
+	"otherNight": 8,
+	"setup": 1,
+	"reminders": [],
+	"remindersGlobal": [
+		"被选择",
+		"是疯子"
+	],
+	"team": "outsider",
+	"firstNight": 6
+},{
+	"ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。",
+	"image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/91/Politician.png/300px-Politician.png",
+	"edition": "",
+	"flavor": "",
+	"id": "politician_gstone",
+	"firstNightReminder": "",
+	"otherNightReminder": "",
+	"name": "政客",
+	"otherNight": 0,
+	"setup": 0,
+	"reminders": [],
+	"remindersGlobal": [],
+	"team": "outsider",
+	"firstNight": 0
+},{
+	"ability": "对调胜负结果，即使你已死亡。",
+	"image": "https://clocktower-wiki.gstonegames.com/images/thumb/8/81/Heretic.png/300px-Heretic.png",
+	"edition": "",
+	"flavor": "",
+	"id": "heretic_gstone",
+	"firstNightReminder": "",
+	"otherNightReminder": "",
+	"name": "异端分子",
+	"otherNight": 0,
+	"setup": false,
+	"reminders": [],
+	"remindersGlobal": [],
+	"team": "outsider",
+	"firstNight": 0
+},{
+	"ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/psychopath.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "20003_137",
+	"firstNightReminder": "",
+	"otherNightReminder": "",
+	"name": "精神病患者",
+	"otherNight": 0,
+	"setup": 0,
+	"reminders": [],
+	"remindersGlobal": [],
+	"team": "minion",
+	"firstNight": 0
+},{
+	"ability": "每个夜晚，你要选择一名玩家：如果你提名他且他被处决，他的阵营落败。当你首次选择或更换目标时，所有玩家都会得知你选择了新的玩家。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/fearmonger.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "fearmonger_gstone",
+	"firstNightReminder": "唤醒恐惧之灵，让他选择一名玩家，随后通知所有玩家恐惧之灵选择了一名玩家。",
+	"otherNightReminder": "唤醒恐惧之灵，让他选择一名玩家，随后如果恐惧之灵的目标发生了变更，通知所有玩家恐惧之灵选择了一名玩家。",
+	"name": "恐惧之灵",
+	"otherNight": 7,
+	"setup": false,
+	"reminders": [
+		"恐惧"
+	],
+	"remindersGlobal": [],
+	"team": "minion",
+	"firstNight": 13
+},{
+	"ability": "每个夜晚，你要选择一名玩家：如果他明天白天发起提名，他死亡。如果只有三名存活的玩家，你失去此能力。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/witch.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "witch_gstone",
+	"firstNightReminder": "让女巫选择一名玩家。标记那名玩家被诅咒。",
+	"otherNightReminder": "让女巫选择一名玩家。标记那名玩家被诅咒。",
+	"name": "女巫",
+	"otherNight": 6,
+	"setup": 0,
+	"reminders": [
+		"被诅咒"
+	],
+	"remindersGlobal": [],
+	"team": "minion",
+	"firstNight": 12
+},{
+	"ability": "所有玩家在投票时闭眼，且票数会秘密统计。每个夜晚，你要选择自己是否醉酒直到下个黄昏。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/organ_grinder.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "organ_grinder_gstone",
+	"firstNightReminder": "",
+	"otherNightReminder": "",
+	"name": "街头风琴手",
+	"otherNight": 5,
+	"setup": false,
+	"reminders": [
+		"即将被处决",
+		"醉酒"
+	],
+	"remindersGlobal": [],
+	"team": "minion",
+	"firstNight": 11
+},{
+	"ability": "在你的首个夜晚，你要选择一名存活玩家：他死亡但会被当作存活。当他下一次即将死亡时，他重生，随后你重获能力。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/upload/202403/c_8796728760171_7caa0950.jpg",
+	"edition": "custom",
+	"flavor": "",
+	"id": "huapi_gstone",
+	"firstNightReminder": "首个夜晚，唤醒画皮，让其选择一名玩家，该玩家进入“活尸”状态。在魔典中该玩家的角色标记上添加帷幕标记，和“以为存活”标记。但不要宣布该玩家已经死亡，也不要在城镇广场上将该玩家的生命标记翻面。",
+	"otherNightReminder": "如果画皮选择的玩家重生，在画皮的角色标记旁放置“重获能力”标记。\n每个夜晚，如果画皮有“重获能力”标记，唤醒画皮，让其选择一名玩家，该玩家进入“活尸”状态。在魔典中该玩家的角色标记上添加帷幕标记，和“以为存活”标记。但不要宣布该玩家已经死亡，也不要在城镇广场上将该玩家的生命标记翻面。",
+	"name": "画皮",
+	"otherNight": 0,
+	"setup": 0,
+	"reminders": [
+		"以为存活",
+		"重获能力"
+	],
+	"remindersGlobal": [],
+	"team": "minion",
+	"firstNight": 9
+},{
+	"ability": "如果你在被提名后公开声明自己是哥布林且在那个白天被处决，你的阵营获胜。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/goblin.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "goblin_gstone",
+	"firstNightReminder": "",
+	"otherNightReminder": "",
+	"name": "哥布林",
+	"otherNight": 0,
+	"setup": 0,
+	"reminders": [
+		"已宣称"
+	],
+	"remindersGlobal": [],
+	"team": "minion",
+	"firstNight": 0
+},{
+	"ability": "每个夜晚*，你可以选择三名存活玩家，在他们之中：第一名玩家秘密选择一名玩家：他中毒直到下个黄昏；然后该玩家秘密选择一名玩家：他死亡；然后该玩家秘密选择一名玩家：他死亡。",
+	"image": "https://s21.ax1x.com/2025/03/20/pEwL3xU.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "pochuangxiaoying",
+	"firstNightReminder": "",
+	"otherNightReminder": "破窗效应选择三名存活玩家。在三名玩家中：唤醒第一名玩家并让他秘密选择一名玩家，那名玩家中毒直到下个黄昏。然后该玩家秘密选择一名玩家：他死亡；然后该玩家秘密选择一名玩家：他死亡。",
+	"name": "破窗效应",
+	"otherNight": 10,
+	"setup": false,
+	"reminders": [
+		"1",
+		"2",
+		"3",
+		"中毒",
+		"死亡"
+	],
+	"remindersGlobal": [],
+	"team": "demon",
+	"firstNight": 0
+},{
+	"ability": "每个夜晚*，你可以选择三名存活玩家（所有玩家都会得知谁仍然存活）：他们中的存活玩家分别秘密决定后续玩家（或自己）是否被你杀死，然后如果他们都存活则都死亡。",
+	"image": "https://s21.ax1x.com/2025/03/20/pEwLGMF.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "xuanyashenyuan",
+	"firstNightReminder": "",
+	"otherNightReminder": "悬崖深渊选择三名存活玩家。对所有人宣告第一名玩家，然后唤醒他并让他秘密决定后两名玩家是否一同被杀死，如果后两名玩家存活则对所有人宣告第二名玩家，然后唤醒他并让他秘密决定第三名玩家是否被杀死，如果第三名玩家存活则对所有人宣告第三名玩家，然后唤醒他并让他秘密决定自己是否被杀死。如果结算完所有玩家的决定后三名玩家都存活，他们都死去。",
+	"name": "悬崖深渊",
+	"otherNight": 11,
+	"setup": false,
+	"reminders": [
+		"1",
+		"2",
+		"3",
+		"死亡"
+	],
+	"remindersGlobal": [],
+	"team": "demon",
+	"firstNight": 0
+},{
+	"ability": "每个夜晚*，你可以选择三名存活玩家（所有玩家都会得知你选了谁）：第一名玩家在其他两名玩家中秘密选择一名玩家，他死亡，然后另一名玩家秘密决定他是否被你杀死，如果他存活则被他选择的玩家秘密决定另一名玩家是否被你杀死。",
+	"image": "https://s21.ax1x.com/2025/03/20/pEwLJr4.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "baiyangheizhi",
+	"firstNightReminder": "",
+	"otherNightReminder": "白羊黑痣选择三名存活玩家。对所有人宣告第一名玩家，然后唤醒他并让他在其他两名玩家中秘密选择一名玩家，他死亡。然后宣告未被第一名玩家选择的那名玩家，并让他秘密决定第一名玩家是否被杀死，如果第一名玩家存活则宣告被第一名玩家选择的那名玩家并让他秘密决定让第一名玩家存活的玩家是否被杀死。",
+	"name": "白羊黑痣",
+	"otherNight": 12,
+	"setup": false,
+	"reminders": [
+		"1",
+		"2",
+		"3",
+		"死亡"
+	],
+	"remindersGlobal": [],
+	"team": "demon",
+	"firstNight": 0
+},{
+	"ability": "每个夜晚*，你可以选择三名玩家（所有玩家都会得知你选了谁）：他们分别秘密决定自己的生死，然后如果他们都存活则都死亡。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/al-hadikhia.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "20003_138",
+	"firstNightReminder": "",
+	"otherNightReminder": "哈迪寂亚选择三名玩家。对所有人宣告第一名玩家，然后唤醒他并让他秘密选择活着还是死去。依次对第二第三名玩家如此做。如果三名玩家都选择活着，他们都死去。",
+	"name": "哈迪寂亚",
+	"otherNight": 9,
+	"setup": 0,
+	"reminders": ["1", "2", "3", "选择生", "选择死"],
+	"remindersGlobal": [],
+	"team": "demon",
+	"firstNight": 0
+},{
+	"ability": "在初始设置时，可能会额外增加或减少一个外来者。",
+	"image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/sentinel.png",
+	"edition": "custom",
+	"flavor": "",
+	"id": "20003_105",
+	"firstNightReminder": "",
+	"otherNightReminder": "",
+	"name": "哨兵",
+	"otherNight": 0,
+	"setup": 1,
+	"reminders": [],
+	"remindersGlobal": [],
+	"team": "fabled",
+	"firstNight": 0
+}]

@@ -1,0 +1,437 @@
+[
+  {
+    "id": "_meta",
+    "name": "致命华尔兹",
+    "author": "不是鱼子酱",
+    "almanac": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/almanac.html"
+  },
+  {
+    "id": "1_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/1_inthegr_58.png",
+    "firstNightReminder": "一名玩家转为邪恶。让赏金猎人看到一名玩家。",
+    "otherNightReminder": "如果赏金猎人的目标死亡，让赏金猎人看到另一名玩家。",
+    "reminders": [
+      "赏金目标"
+    ],
+    "setup": true,
+    "name": "赏金猎人",
+    "team": "traveller2",
+    "ability": "在你的首个夜晚，你会得知一名邪恶玩家。每当你得知的玩家死亡，你会在当晚得知另一名邪恶玩家。[会有一名镇民转变为邪恶阵营]",
+    "firstNight": 19,
+    "otherNight": 13
+  },
+  {
+    "id": "12_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/12_inthegr_58.png",
+    "otherNightReminder": "告知所有暴露状态玩家，它可以决定其中一名玩家死亡。",
+    "reminders": [
+      "处死目标"
+    ],
+    "name": "游侠",
+    "team": "traveller2",
+    "ability": "每个夜晚*，你会得知所有处于暴露的玩家，并可以代替说书人决定黎明谁将死亡。",
+    "otherNight": 14
+  },
+  {
+    "id": "5_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/5_inthegr_58.png",
+    "otherNightReminder": "选择一个假面角色：若角色不在场，无事发生；若目标已暴露，则你得知其角色；若非恶魔且未暴露，则其死亡（导致暴露）。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "伴舞女",
+    "team": "traveller2",
+    "ability": "每个夜晚*，选择一个假面角色：若目标已暴露，则你得知其角色；若非恶魔且未暴露，则其死亡（导致暴露）。",
+    "otherNight": 9
+  },
+  {
+    "id": "11_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/11_inthegr_58.png",
+    "otherNightReminder": "选择一名玩家，其醉酒。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "艺妓",
+    "team": "traveller2",
+    "ability": "每个夜晚*，你要选择一名玩家（与之前不同）：他醉酒直到下个黄昏。",
+    "otherNight": 3
+  },
+  {
+    "id": "_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/_inthegr_58.png",
+    "firstNightReminder": "使一名玩家醉酒",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "解谜大师",
+    "team": "traveller2",
+    "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。",
+    "firstNight": 16
+  },
+  {
+    "id": "9_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/9_inthegr_58.png",
+    "firstNightReminder": "获得其阵营的对应能力",
+    "reminders": [
+      "是学徒"
+    ],
+    "name": "学徒",
+    "team": "traveller2",
+    "ability": "在你的首个夜晚，如果你是善良的，你会获得一个镇民角色的能力；如果你是邪恶的，你会获得一个爪牙角色的能力。",
+    "firstNight": 15
+  },
+  {
+    "id": "8_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/8_inthegr_58.png",
+    "otherNightReminder": "选择一名玩家，你得知他的角色。",
+    "reminders": [
+      "被选择"
+    ],
+    "name": "流莺",
+    "team": "traveller2",
+    "ability": "每个夜晚*，你要选择一名存活的玩家：如果他同意，你会得知他的角色，但是你们两个可能同时死亡。",
+    "otherNight": 11
+  },
+  {
+    "id": "7_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/7_inthegr_58.png",
+    "remindersGlobal": [
+      "是叫花子"
+    ],
+    "name": "叫花子",
+    "team": "traveller2",
+    "ability": "每个白天限一次，你可以公开选择一名其他玩家，让他选择一个非恶魔角色：你可能会获得这个角色的能力，直到下个黎明。"
+  },
+  {
+    "id": "14_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/14_inthegr_58.png",
+    "firstNightReminder": "首次有善良玩家选择邪恶玩家时，打上标记。告知暗夜公爵首个点到邪恶玩家的玩家的角色。",
+    "reminders": [
+      "中毒"
+    ],
+    "setup": true,
+    "name": "暗夜公爵",
+    "team": "traveller2",
+    "ability": "每局游戏限一次，首个使用自身能力选择了邪恶玩家的善良玩家会中毒，直到下个黄昏。你会得知他的角色。[+1外来者]",
+    "firstNight": 20
+  },
+  {
+    "id": "6_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/6_inthegr_58.png",
+    "name": "精神病患者",
+    "team": "traveller2",
+    "ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。"
+  },
+  {
+    "id": "10_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/10_inthegr_58.png",
+    "otherNightReminder": "可以选择一名玩家，他必定死亡。",
+    "reminders": [
+      "强制死亡",
+      "失去能力"
+    ],
+    "name": "刺客",
+    "team": "traveller2",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。",
+    "otherNight": 6
+  },
+  {
+    "id": "30_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/30_inthegr_58.png",
+    "otherNightReminder": "选择三名玩家，开始狂欢吧！",
+    "reminders": [
+      "选择生",
+      "选择死"
+    ],
+    "name": "哈迪寂亚",
+    "team": "traveller2",
+    "ability": "每个夜晚*，你可以选择三名玩家（所有玩家都会得知你选了谁）：他们分别秘密决定自己的生死，然后如果他们都存活则都死亡。",
+    "otherNight": 12
+  },
+  {
+    "id": "32_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/32_inthegr_58.png",
+    "firstNightReminder": "得知两名玩家一个爪牙。",
+    "reminders": [
+      "know",
+      "wrong"
+    ],
+    "name": "调查员",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个爪牙角色：这两名玩家之一是该角色（或者你会得知没有爪牙在场）。",
+    "firstNight": 21
+  },
+  {
+    "id": "4_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/4_inthegr_58.png",
+    "firstNightReminder": "选择玩家，得知他的阵营。",
+    "otherNightReminder": "选择玩家，得知他的阵营。",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": true,
+    "name": "村夫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的阵营。[+0~2村夫，复数村夫中有一人醉酒]",
+    "firstNight": 22,
+    "otherNight": 10
+  },
+  {
+    "id": "3_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/3_inthegr_58.png",
+    "reminders": [
+      "正确信息",
+      "错误信息"
+    ],
+    "setup": true,
+    "name": "车夫",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以拜访说书人并选择一个话题，说书人会告诉你一个与他有关的事实。如果邻近存活玩家阵营不同，你得知错误信息。"
+  },
+  {
+    "id": "34_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/34_inthegr_58.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "渔夫",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以让说书人给你一些能帮助你的阵营获胜的建议。"
+  },
+  {
+    "id": "2_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/2_inthegr_58.png",
+    "reminders": [
+      "免于死亡"
+    ],
+    "setup": true,
+    "name": "茶艺师",
+    "team": "townsfolk",
+    "ability": "如果与你邻近的两名存活的玩家是善良的，他们不会死亡。"
+  },
+  {
+    "id": "13_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/13_inthegr_58.png",
+    "firstNightReminder": "告知其邪恶方的接头暗号。如果醉酒，改为告知错误的暗号。",
+    "name": "魔术师",
+    "team": "townsfolk",
+    "ability": "恶魔会以为你是爪牙。爪牙会以为你是恶魔。",
+    "firstNight": 13
+  },
+  {
+    "id": "17_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/17_inthegr_58.png",
+    "otherNightReminder": "如果造谣成功，使一名玩家死亡",
+    "reminders": [
+      "造谣正确",
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。如果该声明正确，在当晚会有一名玩家死亡。",
+    "otherNight": 5
+  },
+  {
+    "id": "15_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/15_inthegr_58.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "贞洁者",
+    "team": "townsfolk",
+    "ability": "当你首次被提名时，如果提名你的玩家是镇民，他立刻被处决。"
+  },
+  {
+    "id": "31_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/31_inthegr_58.png",
+    "otherNightReminder": "它可能死亡",
+    "reminders": [
+      "失去能力",
+      "死亡"
+    ],
+    "name": "歌伶",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以提议所有玩家观看你的演出，并从同意参加的玩家中选择你的观众。如果恶魔成为了观众，你会在当晚死亡。",
+    "otherNight": 4
+  },
+  {
+    "id": "18_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/18_inthegr_58.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "20_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/20_inthegr_58.png",
+    "name": "畸形秀演员",
+    "team": "outsider",
+    "ability": "如果你“疯狂”地证明自己是外来者，你可能被处决。"
+  },
+  {
+    "id": "19_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/19_inthegr_58.png",
+    "firstNightReminder": "告知所有爪牙：落难少女在场。",
+    "name": "落难少女",
+    "team": "outsider",
+    "ability": "所有爪牙都知道落难少女在场。每局游戏限一次，任意爪牙可以公开猜测你是落难少女，如果猜对，你的阵营落败。",
+    "firstNight": 14
+  },
+  {
+    "id": "22_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/22_inthegr_58.png",
+    "remindersGlobal": [
+      "是冒名客",
+      "中毒"
+    ],
+    "setup": true,
+    "name": "冒名客",
+    "team": "minion",
+    "ability": "每个白天，在你首次“疯狂”地证明自己是一个在场角色时，你使他中毒并获得该角色的能力，直到下个黎明。"
+  },
+  {
+    "id": "21_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/21_inthegr_58.png",
+    "firstNightReminder": "给相邻的玩家放置\"出幻觉\"标记，时刻提醒自己。",
+    "reminders": [
+      "出幻觉"
+    ],
+    "name": "致幻师",
+    "team": "minion",
+    "ability": "与你邻近的玩家（旅行者除外）会被善良玩家的能力当作错误的阵营和角色。",
+    "firstNight": 18
+  },
+  {
+    "id": "23_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/23_inthegr_58.png",
+    "firstNightReminder": "如果大限至，标记使镇民中毒。",
+    "otherNightReminder": "如果大限至，标记使镇民中毒。",
+    "reminders": [
+      "第一夜",
+      "第二夜",
+      "第三夜",
+      "全体中毒"
+    ],
+    "setup": true,
+    "name": "限",
+    "team": "minion",
+    "ability": "在等同于初始外来者数量的夜晚，所有镇民玩家中毒直到下个黄昏。[外来者数量任意]",
+    "firstNight": 17,
+    "otherNight": 2
+  },
+  {
+    "id": "24_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/24_inthegr_58.png",
+    "reminders": [
+      "任务目标"
+    ],
+    "name": "假面特工",
+    "team": "demon",
+    "ability": "每个白天（黎明除外），可能有一名玩家死亡。你可以在白天私下拜访说书人指定或更换\"任务目标\"：说书人要尽一切可能使目标死亡。"
+  },
+  {
+    "id": "25_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/25_inthegr_58.png",
+    "otherNightReminder": "说书人选玩家：他死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "军团",
+    "team": "demon",
+    "ability": "每个夜晚*，可能有一名玩家死亡。如果一项提名只有邪恶玩家投票，投票无效。你也会被视为具有爪牙角色。[多数玩家为军团]",
+    "otherNight": 7
+  },
+  {
+    "id": "26_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/26_inthegr_58.png",
+    "firstNightReminder": "告知其大牙关键词。",
+    "otherNightReminder": "建议说书人在这个时间开大牙的夜晚刀。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "牙噶巴卜",
+    "team": "demon",
+    "ability": "在你的首个夜晚，你会得知一段秘密短语。每次你在白天公开说出这段短语，当天便可能会有一名玩家在这之后死亡。",
+    "firstNight": 12,
+    "otherNight": 8
+  },
+  {
+    "id": "27_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/27_inthegr_58.png",
+    "firstNightReminder": "给恶魔提供伪装，提供应当提供的接头暗号。",
+    "otherNightReminder": "将要黎明。想好让谁因暴露而死亡了吗？",
+    "reminders": [
+      "暴露"
+    ],
+    "name": "假面狂欢",
+    "team": "fabled",
+    "ability": "玩家从“假面盲袋”和“初始盲袋”各抽一个角色组成所有能力，且首次死亡会改为获得“暴露”状态。每个黎明，说书人要公开暴露的玩家人数，并令其中一人死亡。恶魔爪牙无法相认，改为他们获得相同“接头暗号”。",
+    "firstNight": 11,
+    "otherNight": 15
+  },
+  {
+    "id": "38_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/38_inthegr_58.png",
+    "name": "汀镇调整",
+    "team": "fabled",
+    "ability": "5-6人游戏时，从剧本中移除以下8个角色：哈迪寂亚、精神病患者、赏金猎人、解谜大师、魔术师、落难少女、致幻师、牙嘎巴卜。"
+  },
+  {
+    "id": "16_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/16_inthegr_58.png",
+    "otherNightReminder": "如果此时仅剩3名玩家存活，宣布进入小提琴手。",
+    "name": "小提琴手",
+    "team": "fabled",
+    "ability": "每局游戏限一次，恶魔可以秘密选择一名对立阵营的玩家，所有玩家要表决：这两名玩家中谁的阵营获胜。（平局邪恶阵营获胜）",
+    "otherNight": 16
+  },
+  {
+    "id": "28_inthegr_58",
+    "image": "https://www.bloodstar.xyz/p/YanIce/InTheGr_58/28_inthegr_58.png",
+    "name": "旅行者·派对猫咪",
+    "team": "traveller",
+    "ability": "你\"暴露\"时，你死亡。你发动能力时，说书人可以拒绝你发动、或要求你更换选择。[旅行者玩家拥有该初始能力，并从“派对盲袋“中抽取一个不在场假面能力。]"
+  },
+  {
+    "id": "44_inthegr_58",
+    "name": "*角色得知",
+    "team": "a jinxes",
+    "ability": "如果没有特别指代，则“得知一名玩家的角色”会同时得知假面角色与基础角色。例如：流莺"
+  },
+  {
+    "id": "33_inthegr_58",
+    "name": "*角色选择",
+    "team": "a jinxes",
+    "ability": "在能力描述中，\"选择角色\"可以选假面角色，也可以选基础角色。假面角色均视为“善良角色”。"
+  },
+  {
+    "id": "47_inthegr_58",
+    "name": "*角色死亡",
+    "team": "a jinxes",
+    "ability": "死亡触发类技能在确认死亡(可以被宣告、挂帷幕的那种)时才会触发。比如赏金猎人。"
+  },
+  {
+    "id": "35_inthegr_58",
+    "name": "*角色复活",
+    "team": "a jinxes",
+    "ability": "复活玩家的假面角色与真实角色均视为重新入场，但已经“暴露”的玩家并不重置暴露状态。"
+  },
+  {
+    "id": "36_inthegr_58",
+    "name": "*状态：中毒醉酒",
+    "team": "a jinxes",
+    "ability": "中毒与醉酒状态只属于玩家。只要玩家拥有此异常状态，就一定会同时影响假面能力和基础能力。（村夫、限）"
+  },
+  {
+    "id": "29_inthegr_58",
+    "name": "*状态：暴露",
+    "team": "a jinxes",
+    "ability": "玩家首次死亡时，他不会死亡，而是获得“暴露”状态，死亡会保留。玩家对自己的“暴露”状态不自知。每个黎明，说书人要公开拥有暴露状态的玩家人数，并令其中一个玩家死亡。"
+  }
+]

@@ -1,0 +1,286 @@
+[
+    {
+        "id": "_meta",
+        "name": "人之常情",
+        "author": "Moll",
+        "logo": "https://i.postimg.cc/wxbxyczP/LOGO.png",
+        "description": "感谢鸭镇嗷",
+        "townsfolkName": "镇民",
+        "outsidersName": "外来者",
+        "minionsName": "爪牙",
+        "demonsName": "恶魔",
+        "townsfolk": "镇民",
+        "outsider": "外来者",
+        "minion": "爪牙",
+        "demon": "恶魔",
+        "a jinxedName": "相克",
+        "a jinxed": "相克"
+    },
+    {
+        "firstNightReminder": "内疚指向一个邪恶角色。点头表示在场，摇头表示不在场。",
+        "firstNight": 74,
+        "otherNightReminder": "内疚指向一个邪恶角色。点头表示在场，摇头表示不在场。",
+        "otherNight": 80,
+        "name": "内疚",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你要选择一个邪恶角色：你会得知该角色是否在场。",
+        "image": "https://i.postimg.cc/7LFcWZpj/image.png",
+        "id": "guilt_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "向焦虑展示与恶魔邻近的所有玩家之中的一个角色类型。",
+        "firstNight": 80,
+        "otherNightReminder": "向焦虑展示与恶魔邻近的所有玩家之中的一个角色类型。",
+        "otherNight": 81,
+        "name": "焦虑",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你会得知所有与存活的恶魔邻近的玩家中共同的角色类型（除旅行者以外）。",
+        "image": "https://i.postimg.cc/4xFjp5wf/image.png",
+        "id": "anxiety_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "指向与愤怒相同阵营的一名玩家。",
+        "firstNight": 87,
+        "otherNightReminder": "指向与愤怒相同阵营的一名玩家。",
+        "otherNight": 90,
+        "name": "愤怒",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "怒火"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你会得知你的阵营的一名玩家：他可能会以为有其他角色能力对他生效。",
+        "image": "https://i.postimg.cc/KYkwfMsn/image.png",
+        "id": "anger_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "向伤心展示一名死亡玩家的角色标记。",
+        "otherNight": 91,
+        "name": "伤心",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "每个夜晚*，你会得知一名死亡玩家的角色。",
+        "image": "https://i.postimg.cc/FHK2fqyC/image.png",
+        "id": "sadness_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "如果有玩家今天白天死于处决，向悲痛点头表示该玩家与恶魔邻近，摇头表示该玩家不与恶魔邻近。",
+        "otherNight": 92,
+        "name": "悲痛",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "今日处决"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚*，你会得知今天死于处决的玩家是否与恶魔邻近。",
+        "image": "https://i.postimg.cc/KcrV0FQs/image.png",
+        "id": "grief_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "如果夜晚没人死亡，标记恐惧死亡。",
+        "otherNight": 64,
+        "name": "恐惧",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "醉酒",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "ability": "与你邻近的存活的玩家（旅行者除外）醉酒且获得错误信息。每个夜晚*，如果当晚没人死亡，你死亡。",
+        "image": "https://i.postimg.cc/NMRVqwtF/image.png",
+        "id": "fear_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "失望",
+        "team": "outsider",
+        "setup": true,
+        "reminders": [],
+        "remindersGlobal": [
+            "是失望"
+        ],
+        "ability": "你以为你是一个爪牙，但其实你不是。",
+        "image": "https://i.postimg.cc/L6Dc8R1Z/image.png",
+        "id": "disappointment_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "无聊",
+        "team": "outsider",
+        "setup": false,
+        "reminders": [
+            "烦闷"
+        ],
+        "remindersGlobal": [],
+        "ability": "与你邻近的玩家在夜晚时可能会以为有其他角色能力对他生效。",
+        "image": "https://i.postimg.cc/5y3Ryq6M/image.png",
+        "id": "boredom_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "幸福指向一名玩家，标记快乐。唤醒那名玩家，向他展示该角色能力对你生效提示卡和幸福角色标记。",
+        "firstNight": 48,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "幸福",
+        "team": "minion",
+        "setup": false,
+        "reminders": [
+            "快乐"
+        ],
+        "remindersGlobal": [],
+        "ability": "在你的首个夜晚，你要选择一名玩家：他会得知被幸福选中，且他只能与你一同获胜。",
+        "image": "https://i.postimg.cc/Jzt27X89/image.png",
+        "id": "happiness_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "振奋指向一名玩家，标记激动。唤醒那名玩家，向他展示该角色能力对你生效提示卡和振奋角色标记。",
+        "firstNight": 46,
+        "otherNightReminder": "振奋指向一名玩家，标记激动。唤醒那名玩家，向他展示该角色能力对你生效提示卡和振奋角色标记。",
+        "otherNight": 12,
+        "name": "振奋",
+        "team": "minion",
+        "setup": false,
+        "reminders": [
+            "激动"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你要选择一名玩家：他会得知被振奋选中，且他会得知错误信息直到下个黄昏，如果他在下个白天被处决，他的阵营落败。",
+        "image": "https://i.postimg.cc/nh5wXLcM/image.png",
+        "id": "excitement_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "感恩",
+        "team": "minion",
+        "setup": true,
+        "reminders": [
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "ability": "每局游戏限一次，你可以在白天时公开猜测所有玩家的角色，如果猜对，你的阵营获胜。[+1外来者]",
+        "image": "https://i.postimg.cc/SRqPmtQr/image.png",
+        "id": "gratitude_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "爱指向一名玩家，标记明晚死亡，如果选中爪牙，改为向爱展示那名爪牙的角色。",
+        "firstNight": 67,
+        "otherNightReminder": "爱指向一名玩家，标记明晚死亡，如果选中爪牙，改为向爱展示那名爪牙的角色。如果上个夜晚选择的玩家不是爪牙，他死亡。",
+        "otherNight": 41,
+        "name": "爱",
+        "team": "demon",
+        "setup": true,
+        "reminders": [
+            "明晚死亡",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你要选择一名玩家：他在下个夜晚死亡。如果你选中了爪牙，改为你会得知他的角色。[+0或+1外来者]",
+        "image": "https://i.postimg.cc/029gvrbs/image.png",
+        "id": "love_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "将魔典展示给希望。",
+        "firstNight": 118,
+        "otherNightReminder": "希望要么摇头，要么指向一名玩家，那名玩家死亡。",
+        "otherNight": 39,
+        "name": "希望",
+        "team": "demon",
+        "setup": true,
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "ability": "在你的首个夜晚，你能查看魔典。每个夜晚*，你可以选择一名玩家：他死亡。所有爪牙都转变为善良阵营，但他们不会得知此事。其他角色的负面能力对你无效。[+1爪牙]",
+        "image": "https://i.postimg.cc/kXJHZZpM/image.png",
+        "id": "hope_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "唤醒一名信念，指向另一名信念玩家并展示信念角色标记。说书人可以选择一名玩家死亡。",
+        "otherNight": 42,
+        "name": "信念",
+        "team": "demon",
+        "setup": true,
+        "reminders": [],
+        "remindersGlobal": [
+            "是信念",
+            "死亡"
+        ],
+        "ability": "你以为你是一个不在场的善良角色，但其实你不是。每个夜晚*，可能会有一名玩家死亡，然后会有一名信念知道另一名信念是谁。如果三名玩家存活时有信念被处决，所有信念都会被处决。[所有爪牙都是信念]",
+        "image": "https://i.postimg.cc/fT8PhKGc/image.png",
+        "id": "faith_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "抑郁指向一名玩家。向那名玩家展示该角色能力对你生效提示卡和抑郁的角色标记，然后展示拇指向上表示善良，拇指向下表示邪恶。",
+        "otherNight": 1,
+        "name": "抑郁",
+        "team": "traveler",
+        "setup": false,
+        "reminders": [
+            "已选择"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚*，你要选择除你以外从未选择过的一名玩家：他会得知你的阵营。如果你被流放，你转变为对立阵营。[无初始信息]",
+        "image": "https://www.bloodstar.xyz/p/Moll_of_Power/Emotions/depression_emotions.png",
+        "id": "depression_emotions",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "螺旋",
+        "team": "fabled",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "邪恶旅行者不认识恶魔，不会在夜晚死亡。",
+        "image": "https://www.bloodstar.xyz/p/Moll_of_Power/Emotions/thespiral_emotions.png",
+        "id": "thespiral_emotions",
+        "flavor": ""
+    }
+]

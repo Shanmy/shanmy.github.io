@@ -1,0 +1,320 @@
+[
+  {
+    "id": "_meta",
+    "name": "指鹿为马",
+    "author": "斯派德米",
+    "logo": "https://free.picui.cn/free/2025/11/29/6929db35f0587.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/zhiluweima/almanac.html"
+  },
+  {
+    "id": "25_shizhanyachao",
+    "image": "https://free.picui.cn/free/2025/11/29/6929d0021ba80.png",
+    "name": "斯派德米",
+    "team": "fabled",
+    "ability": "当有玩家“疯狂”证明错误的角色运作或游戏规则时，说书人可能会公开解释正确的。"
+  },
+  {
+    "id": "1_zhiluweima",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/zhiluweima/1_zhiluweima.png",
+    "name": "圣洁之魂",
+    "team": "fabled",
+    "ability": "游戏过程中邪恶玩家的总数最多能比初始设置多一名。"
+  },
+  {
+    "id": "2_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/washerwoman.png",
+    "firstNightReminder": "唤醒洗衣妇，对她指向两名玩家，并展示一个镇民角色标记。这两名玩家其中之一是这个镇民。",
+    "reminders": [
+      "镇民",
+      "错误"
+    ],
+    "name": "洗衣妇",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个镇民角色：这两名玩家之一是该角色。",
+    "firstNight": 3600
+  },
+  {
+    "id": "3_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/empath.png",
+    "firstNightReminder": "唤醒共情者，对他用手势比划数字来告知他与他邻近的存活玩家中有几人是邪恶玩家。",
+    "otherNightReminder": "唤醒共情者，对他用手势比划数字来告知他与他邻近的存活玩家中有几人是邪恶玩家。",
+    "name": "共情者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知与你邻近的两名存活的玩家中邪恶玩家的数量。",
+    "firstNight": 3700,
+    "otherNight": 10
+  },
+  {
+    "id": "4_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/virgin.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "贞洁者",
+    "team": "townsfolk",
+    "ability": "当你首次被提名时，如果提名你的玩家是镇民，他立刻被处决。"
+  },
+  {
+    "id": "5_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/clockmaker.png",
+    "firstNightReminder": "唤醒钟表匠，对他用手势比划数字来告知他恶魔与爪牙之间的最近距离。",
+    "name": "钟表匠",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知恶魔与爪牙之间最近的距离。（邻座的玩家距离为1）",
+    "firstNight": 3800
+  },
+  {
+    "id": "6_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/dreamer.png",
+    "firstNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+    "otherNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+    "name": "筑梦师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 3900,
+    "otherNight": 11
+  },
+  {
+    "id": "7_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/mathematician.png",
+    "firstNightReminder": "唤醒数学家，用手势比划数字来告诉他今天有多少玩家的能力未正常生效。",
+    "otherNightReminder": "唤醒数学家，用手势比划数字来告诉他今天有多少玩家的能力未正常生效。",
+    "reminders": [
+      "未正常生效"
+    ],
+    "name": "数学家",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知有多少名玩家的能力因为其他角色的能力而未正常生效。（从上个黎明到你被唤醒时）",
+    "firstNight": 4200,
+    "otherNight": 14
+  },
+  {
+    "id": "8_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/savant.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "9_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/shugenja.png",
+    "firstNightReminder": "唤醒修行者，对他指向对应方向来告知他最近的邪恶玩家的方向。",
+    "name": "修行者",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知距离最近的邪恶玩家位于你的顺时针还是逆时针方向。如果两侧的邪恶玩家与你距离相等，你得知的信息由说书人决定。",
+    "firstNight": 4100
+  },
+  {
+    "id": "10_zhiluweima",
+    "image": "https://clocktower-wiki.gstonegames.com/images/d/d6/Alsaahir.png",
+    "name": "戏法师",
+    "team": "townsfolk",
+    "ability": "'每个白天，你可以公开进行一次谁是爪牙，谁是恶魔的猜测。如果你猜对，善良阵营获胜。"
+  },
+  {
+    "id": "11_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/heshang.png",
+    "reminders": [
+      "已生效"
+    ],
+    "name": "和尚",
+    "team": "townsfolk",
+    "ability": "每个夜晚，当有邪恶玩家的能力首次选择或影响与你邻近的存活玩家时，改为此次能力不生效并持续至下个黎明，且你会得知你的能力被触发。"
+  },
+  {
+    "id": "12_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/banxian.png",
+    "name": "半仙",
+    "team": "townsfolk",
+    "ability": "任何在夜晚使用自身能力选择你的其他玩家，会改为选中另一名邪恶玩家作为替代。"
+  },
+  {
+    "id": "13_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/wudaozhe.png",
+    "remindersGlobal": [
+      "是悟道者"
+    ],
+    "setup": true,
+    "name": "悟道者",
+    "team": "townsfolk",
+    "ability": "你以为你是一个外来者，但你实际上不是。如果有邪恶玩家的能力选择或影响了你，在该效果生效前你会变成一个不在场的镇民角色。"
+  },
+  {
+    "id": "14_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fengshuishi.png",
+    "firstNightReminder": "唤醒风水师，告知他“得知”标记旁的玩家角色类型，并将标记顺时针移动一名玩家。",
+    "otherNightReminder": "唤醒风水师，告知他“得知”标记旁的玩家角色类型，并将标记顺时针移动一名玩家。",
+    "reminders": [
+      "得知"
+    ],
+    "name": "风水师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名玩家的角色类型。每个夜晚*，你会从他的顺时针方向得知下一名非旅行者玩家的角色类型。",
+    "firstNight": 4000,
+    "otherNight": 13
+  },
+  {
+    "id": "15_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/zhifu.png",
+    "otherNightReminder": "唤醒知府，告诉他今天是否有非镇民且非旅行者的玩家死亡。",
+    "reminders": [
+      "客死他乡"
+    ],
+    "name": "知府",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知今天是否有非镇民且非旅行者的玩家死亡。",
+    "otherNight": 12
+  },
+  {
+    "id": "16_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/recluse.png",
+    "name": "陌客",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。"
+  },
+  {
+    "id": "17_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/mutant.png",
+    "name": "畸形秀演员",
+    "team": "outsider",
+    "ability": "如果你“疯狂”地证明自己是外来者，你可能被处决。"
+  },
+  {
+    "id": "18_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/politician.png",
+    "name": "政客",
+    "team": "outsider",
+    "ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。"
+  },
+  {
+    "id": "19_zhiluweima",
+    "image": "https://clocktower-wiki.gstonegames.com/images/1/1e/Hermit.png",
+    "remindersGlobal": [
+      "是隐士"
+    ],
+    "setup": true,
+    "name": "隐士",
+    "team": "outsider",
+    "ability": "你拥有所有外来者能力。[-0~1外来者]"
+  },
+  {
+    "id": "20_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/witch.png",
+    "firstNightReminder": "唤醒女巫，让她选择一名玩家，那名玩家被诅咒。",
+    "otherNightReminder": "唤醒女巫，让她选择一名玩家，那名玩家被诅咒。",
+    "reminders": [
+      "被诅咒"
+    ],
+    "name": "女巫",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：如果他明天白天发起提名，他死亡。如果只有三名存活的玩家，你失去此能力。",
+    "firstNight": 3400,
+    "otherNight": 5
+  },
+  {
+    "id": "21_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/pit-hag.png",
+    "otherNightReminder": "唤醒麻脸巫婆，让她选择一名玩家和角色列表上的一个角色。如果该角色不在场，则在麻脸巫婆入睡后通知该玩家角色变化。根据实际情况，可以将相关通知合并，例如玩家变成了恶魔，则在恶魔行动时一并唤醒，通知角色变化并让他执行相应行动。",
+    "name": "麻脸巫婆",
+    "team": "minion",
+    "ability": "每个夜晚*，你要选择一名玩家和一个角色，如果该角色不在场，他变成该角色。如果因此创造了一个恶魔，当晚的死亡由说书人决定。",
+    "otherNight": 2
+  },
+  {
+    "id": "22_zhiluweima",
+    "image": "https://clocktower-wiki.gstonegames.com/images/b/b9/Xaan.png",
+    "firstNightReminder": "如果夜晚天数等于初始外来者数量，所有镇民玩家中毒到下个黄昏。",
+    "otherNightReminder": "如果夜晚天数等于初始外来者数量，所有镇民玩家中毒到下个黄昏。",
+    "reminders": [
+      "第一晚",
+      "第二晚",
+      "第三晚",
+      "第四晚",
+      "大限将至"
+    ],
+    "setup": true,
+    "name": "限",
+    "team": "minion",
+    "ability": "在等同于初始外来者数量的夜晚，所有镇民玩家中毒直到下个黄昏。[外来者数量任意]",
+    "firstNight": 3200,
+    "otherNight": 3
+  },
+  {
+    "id": "23_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/gudiao.png",
+    "firstNightReminder": "唤醒蛊雕，让他选择左或者右，他得知该方向上的下一名存活善良玩家的角色，这个善良玩家中毒且其他善良玩家以为他是邪恶的蛊雕，直到下个黄昏。",
+    "otherNightReminder": "唤醒蛊雕，让他选择左或者右，他得知该方向上的下一名存活善良玩家的角色，这个善良玩家中毒且其他善良玩家以为他是邪恶的蛊雕，直到下个黄昏。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "蛊雕",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择左或右：你得知该方向上的下一名存活善良玩家的角色，他中毒且其他善良玩家以为他是邪恶的蛊雕，直到下个黄昏。",
+    "firstNight": 3300,
+    "otherNight": 4
+  },
+  {
+    "id": "24_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/pukka.png",
+    "firstNightReminder": "唤醒普卡，让他选择一名玩家，那名玩家中毒。",
+    "otherNightReminder": "唤醒普卡，让他选择一名玩家，该玩家中毒。上一个被普卡中毒的玩家死亡。",
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "name": "普卡",
+    "team": "demon",
+    "ability": "每个夜晚，你要选择一名玩家：他中毒。上个因你的能力中毒的玩家会死亡并恢复健康。",
+    "firstNight": 3500,
+    "otherNight": 6
+  },
+  {
+    "id": "25_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/vigormortis.png",
+    "otherNightReminder": "唤醒亡骨魔，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "保留能力",
+      "中毒"
+    ],
+    "setup": true,
+    "name": "亡骨魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+    "otherNight": 7
+  },
+  {
+    "id": "26_zhiluweima",
+    "image": "https://clocktower-wiki.gstonegames.com/images/1/18/Lordoftyphon.png",
+    "firstNightReminder": "将位于堤丰之首两侧的对应数量的玩家变成邪恶的爪牙，并分别唤醒他们通知他们的角色和阵营变化。",
+    "otherNightReminder": "唤醒堤丰之首，让他攻击一名玩家。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "堤丰之首",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。[邪恶玩家全部邻座，你位于正中，+1爪牙，-或+任意数量外来者]",
+    "firstNight": 11,
+    "otherNight": 8
+  },
+  {
+    "id": "27_zhiluweima",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/guhuoniao.png",
+    "otherNightReminder": "唤醒姑获鸟，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "获得能力"
+    ],
+    "name": "姑获鸟",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。你可能会拥有上一个死于处决的爪牙的能力。",
+    "otherNight": 9
+  },
+  {
+    "id": "27_shizhanyachao",
+    "name": "政客&麻脸巫婆",
+    "team": "jinxes",
+    "ability": "被麻脸巫婆创造的邪恶政客无法因为自身能力转变为善良阵营。"
+  }
+]

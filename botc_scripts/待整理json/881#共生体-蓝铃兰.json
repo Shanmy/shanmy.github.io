@@ -1,0 +1,344 @@
+[
+  {
+    "id": "_meta",
+    "name": "共生体",
+    "author": "蓝铃兰",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e1/1ojnshgxp6dewsk5ohlfa5awqneg0du.png",
+    "almanac": "有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png",
+    "reminders": [
+      "继位",
+      "刺杀",
+      "八爪",
+      "专权",
+      "傀儡"
+    ],
+    "name": "克林塔星",
+    "team": "fabled",
+    "ability": "照看小怪宝的爪牙会有额外的能力，小怪宝在玩家间传递超过一次后会死亡，忽略最后一天只剩一名爪牙存活的限制。继位：因爪牙死亡而将小怪宝传递给你不计入传递次数，你拥有那名爪牙的额外能力。刺杀：由你来决定谁会被小怪宝杀死。八爪：与你临近的两名镇民中毒，即使你中毒。专权：外来者可能会被善良玩家当作邪恶的爪牙。傀儡：会有一名善良玩家把你当作善良阵营和善良角色。"
+  },
+  {
+    "id": "1_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/df/cud437aq02j4lnizdmdyxp1dcc5lojm.png",
+    "firstNightReminder": "指向她的孙子玩家，并展示该玩家的角色标记。",
+    "otherNightReminder": "如果孙子被恶魔杀死，祖母也会一同死亡。标记祖母死亡。",
+    "reminders": [
+      "孙子",
+      "死亡"
+    ],
+    "name": "祖母",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名善良玩家和他的角色。如果恶魔杀死了他，你也会死亡。",
+    "firstNight": 3600,
+    "otherNight": 10
+  },
+  {
+    "id": "2_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/28/owc8naw8kwx5z1om04qs6j8aqs5djru.png",
+    "firstNightReminder": "工程师选择不使用能力，或在剧本列表中选择恶魔或爪牙角色。如果他选择爪牙角色，则需要选择对应数量的爪牙。然后将这些玩家依次唤醒，并告知他们变成了什么角色。",
+    "otherNightReminder": "工程师选择不使用能力，或在剧本列表中选择恶魔或爪牙角色。如果他选择爪牙角色，则需要选择对应数量的爪牙。然后将这些玩家依次唤醒，并告知他们变成了什么角色。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "工程师",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择让恶魔变成你选择的恶魔角色，或让所有爪牙变成你选择的爪牙角色。",
+    "firstNight": 3100,
+    "otherNight": 3
+  },
+  {
+    "id": "3_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/4cvv6gx6js190zpjqm110ps4j6bl587.png",
+    "firstNightReminder": "以任意顺序指向三名玩家，其中一名邪恶。",
+    "reminders": [
+      "被得知",
+      "被得知",
+      "被得知"
+    ],
+    "name": "贵族",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。",
+    "firstNight": 3800
+  },
+  {
+    "id": "4_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/72/gyk4euf2w6acfyevvmeke03zvv8r1ln.png",
+    "firstNightReminder": "唤醒任意一名村夫。让村夫指向一名玩家，对他给出拇指向上或向下的手势代表那名玩家的阵营。重复这个操作，直到所有村夫玩家都进行了夜晚行动。",
+    "otherNightReminder": "唤醒任意一名村夫。让村夫指向一名玩家，对他给出拇指向上或向下的手势代表那名玩家的阵营。重复这个操作，直到所有村夫玩家都进行了夜晚行动。",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": true,
+    "name": "村夫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的阵营。[+0~2村夫，复数村夫中有一人醉酒]",
+    "firstNight": 3900,
+    "otherNight": 14
+  },
+  {
+    "id": "5_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/89/qd1r9ozv96l6aftj402m46irjynbrem.png",
+    "otherNightReminder": "对她点头或摇头来示意今天白天是否有恶魔投过票。",
+    "reminders": [
+      "恶魔未投票",
+      "恶魔已投票"
+    ],
+    "name": "卖花女孩",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天时是否有恶魔投过票。",
+    "otherNight": 12
+  },
+  {
+    "id": "6_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ed/8gb1ezkhqkc865jead15pevypmc72g9.png",
+    "otherNightReminder": "对他点头或摇头示意今天白天是否有爪牙发起过提名。",
+    "reminders": [
+      "爪牙未提名",
+      "爪牙已提名"
+    ],
+    "name": "城镇公告员",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天时是否有爪牙发起过提名。",
+    "otherNight": 13
+  },
+  {
+    "id": "7_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e8/qjwy9igjkubwnqrk2p4sd2fs4vj59mo.png",
+    "firstNightReminder": "让筑梦师指向一名玩家。对他展示善良和邪恶的角色标记各一个，其中一个是属于该玩家的角色。",
+    "otherNightReminder": "让筑梦师指向一名玩家。对他展示善良和邪恶的角色标记各一个，其中一个是属于该玩家的角色。",
+    "name": "筑梦师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 3700,
+    "otherNight": 11
+  },
+  {
+    "id": "8_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/84/7a2ofp66u0ovh8x1lcvsd63qixll6oo.png",
+    "firstNightReminder": "唤醒气球驾驶员，指向一名玩家，在其角色标记旁放置“得知”提示标记。",
+    "otherNightReminder": "唤醒气球驾驶员，指向一名与放置“得知”角色标记玩家角色类型不同的玩家，在其角色标记旁放置“得知”提示标记。移除上一晚放置的“得知”角色标记。",
+    "reminders": [
+      "得知"
+    ],
+    "setup": true,
+    "name": "气球驾驶员",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名与上个夜晚得知的玩家角色类型不同的玩家。[+0~1外来者]",
+    "firstNight": 4000,
+    "otherNight": 15
+  },
+  {
+    "id": "9_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4b/5mg50ay9mxf5gvtsuroj8sf39mgk5jg.png",
+    "otherNightReminder": "让半兽人选择一名玩家。如果该玩家是善良玩家，该玩家死亡，且当晚恶魔不会造成死亡。",
+    "reminders": [
+      "失足",
+      "死亡"
+    ],
+    "name": "半兽人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名存活玩家：如果他是善良的，他死亡，并且当晚恶魔不会造成死亡。会有一名善良玩家始终被当作邪恶阵营。 ",
+    "otherNight": 6
+  },
+  {
+    "id": "10_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6f/oi460mqpnxwd7zgyboe78patdo8amc5.png",
+    "firstNightReminder": "传教士选择一名玩家。如果选中了爪牙，则唤醒并告知他被传教士选中。",
+    "otherNightReminder": "传教士选择一名玩家。如果选中了爪牙，则唤醒并告知他被传教士选中。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "传教士",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：如果你选中了爪牙，他会得知被传教士选中。所有被你选中的爪牙失去能力。",
+    "firstNight": 3200,
+    "otherNight": 4
+  },
+  {
+    "id": "11_hongshengti",
+    "reminders": [
+      "饱餐",
+      "中毒"
+    ],
+    "name": "食人族",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c1/ga80xr3gx817rh5wiqq18d9hv8b6xje.png",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "12_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/0gv4l35ovskh83z84qce8mikbmnpkfw.png",
+    "firstNightReminder": "告诉将军你认为的答案。",
+    "otherNightReminder": "告诉将军你认为的答案。",
+    "name": "将军",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知说书人认为哪个阵营当前更有优势（善良/邪恶/均势）。",
+    "firstNight": 4100,
+    "otherNight": 16
+  },
+  {
+    "id": "13_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/44/bio3bf3g3vunctpnldg6lsct4u4jt81.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "渔夫",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以让说书人给你一些能帮助你的阵营获胜的建议。"
+  },
+  {
+    "id": "14_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/1cqow962ds6jp9x5rz84qwgpstkyurs.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "15_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/1a/m6s8wbkeie9d2pyx1qb5agosonjypaq.png",
+    "name": "政客",
+    "team": "outsider",
+    "ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。"
+  },
+  {
+    "id": "16_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/67/q7r2sg4xzntxj5df6j7qepczuoer09p.png",
+    "firstNightReminder": "如果告密者在场，对爪牙展示三个不在场的善良角色标记。 ",
+    "name": "告密者",
+    "team": "outsider",
+    "ability": "爪牙会在其首个夜晚得知三个伪装。",
+    "firstNight": 19
+  },
+  {
+    "id": "17_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c8/5x5dl09pjvag87d6gspfnq79hdiz72h.png",
+    "otherNightReminder": "在当晚，一同唤醒所有爪牙和恶魔。对他们展示“该角色的能力对你生效”信息标记，然后展示帽匠角色标记。每名以此被唤醒的玩家可以选择摇头或指向角色列表上与自己当前角色类型相同的一个角色。如果一名玩家在做出自己的选择后会使得自己的角色与一名其他玩家选择的角色相同，对他摇头示意他重新选择。在选择完成后让他重新入睡。移除“今晚茶会”提示标记。根据这些玩家的选择，在魔典上执行相应的角色变化操作。",
+    "reminders": [
+      "今晚茶会"
+    ],
+    "name": "帽匠",
+    "team": "outsider",
+    "ability": "如果你死亡，当晚爪牙和恶魔玩家可以选择变成新的爪牙和恶魔角色。",
+    "otherNight": 2
+  },
+  {
+    "id": "18_hongshengti",
+    "otherNightReminder": "刺客可以选择一名玩家。如果他这么做了，标记那名玩家死亡，且刺客失去能力，之后的夜晚无需再唤醒刺客。",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "name": "刺客",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d0/ftyh3tzzolrzec1njghipdcbmk7opuf.png",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。（刺杀：由你来决定谁会被小怪宝杀死）",
+    "otherNight": 8
+  },
+  {
+    "id": "19_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a8/cp4tivyy734ut9fus8od0zub508qx8y.png",
+    "firstNightReminder": "对他展示所有在场的外来者标记。",
+    "otherNightReminder": "如果有外来者在今天白天死亡，让教父选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "教父",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]（专权：外来者可能会被善良玩家当作邪恶的爪牙）",
+    "firstNight": 3500,
+    "otherNight": 9
+  },
+  {
+    "id": "20_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/1c/9jir4i7ci8p8onrf70xvm49jx5t5l72.png",
+    "firstNightReminder": "向寡妇展示魔典，她想看多久就看多久。在她查看完毕后让她选择一名玩家，标记那名玩家中毒。随后如果寡妇未醉酒中毒，唤醒一名善良玩家，对他展示寡妇角色标记。 ",
+    "reminders": [
+      "中毒"
+    ],
+    "remindersGlobal": [
+      "得知"
+    ],
+    "name": "寡妇",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你能查看魔典并选择一名玩家：他中毒。随后，始终会有一名善良玩家知道寡妇在场。（八爪：与你邻近的两名镇民中毒，即使你中毒）",
+    "firstNight": 3400
+  },
+  {
+    "id": "21_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9a/39mexl68b71eyydru1jkze79qhwlfib.png",
+    "otherNightReminder": "如果红唇女郎今天变成了小恶魔，对她展示“你是”信息标记，和小恶魔角色标记。",
+    "reminders": [
+      "是恶魔"
+    ],
+    "remindersGlobal": [
+      "是恶魔"
+    ],
+    "name": "红唇女郎",
+    "team": "minion",
+    "ability": "如果大于等于五名玩家存活时（旅行者不计算在内）恶魔死亡，你变成那个恶魔。（继位：因爪牙死亡而将小怪宝传递给你不计入传递次数，你拥有那名爪牙的额外能力。）",
+    "otherNight": 5
+  },
+  {
+    "id": "22_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e5/el29kr1dznrpaa089tayj3chd444s6k.png",
+    "firstNightReminder": "如果提线木偶在场，对恶魔展示提线木偶角色标记并指向提线木偶玩家。",
+    "remindersGlobal": [
+      "是提线木偶",
+      "信任"
+    ],
+    "setup": true,
+    "name": "提线木偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]（傀儡：会有一名善良玩家把你当作善良阵营和善良角色）",
+    "firstNight": 2200
+  },
+  {
+    "id": "23_hongshengti",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/8f/8hdy40avvq6iiq66v8dnhf4hpl3ad3b.png",
+    "firstNightReminder": "唤醒所有爪牙，允许他们以指向的方式决定谁照看小怪宝，但不能产生其他交流，否则会有非常糟糕的事情发生。",
+    "otherNightReminder": "唤醒所有爪牙，允许他们以指向的方式决定谁照看小怪宝，但不能产生其他交流，否则会有非常糟糕的事情发生。说书人选择一名玩家，那名玩家死亡。",
+    "remindersGlobal": [
+      "是恶魔",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "小怪宝",
+    "team": "demon",
+    "ability": "每个夜晚，所有爪牙要秘密决定由哪名玩家来照看小怪宝并且“是恶魔”。每个夜晚*，可能会有一名玩家死亡。[+1爪牙]",
+    "firstNight": 3300,
+    "otherNight": 7
+  },
+  {
+    "id": "24_hongshengti",
+    "name": "气球驾驶员&提线木偶",
+    "team": "a jinxed",
+    "ability": "如果提线木偶抽到了气球驾驶员，也可能会+1外来者。"
+  },
+  {
+    "id": "25_hongshengti",
+    "name": "小怪宝&帽匠",
+    "team": "a jinxed",
+    "ability": "如果恶魔选择了小怪宝，则还需要选择一个爪牙角色，他变成这个爪牙且当晚照看小怪宝。"
+  },
+  {
+    "id": "26_hongshengti",
+    "name": "小怪宝&提线木偶",
+    "team": "a jinxed",
+    "ability": "提线木偶会与一名爪牙玩家邻座，而不是恶魔。提线木偶不会被唤醒来决定是否照看小怪宝，也不会在照看小怪宝时得知自己是提线木偶。"
+  },
+  {
+    "id": "27_hongshengti",
+    "name": "小怪宝&红唇女郎",
+    "team": "a jinxed",
+    "ability": "如果在五名及以上的玩家存活时照看小怪宝的玩家死亡，当晚红唇女郎需要照看小怪宝。"
+  }
+]

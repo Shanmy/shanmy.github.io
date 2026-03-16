@@ -1,0 +1,384 @@
+[
+  {
+    "name": "舍我其谁",
+    "author": "阿璟",
+    "logo":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/12/07h6x669fkxidvycucdlhxxe77qfwsa.png",
+    "id": "_meta"
+  },
+  {
+    "id": "1_shewoqishei",
+    "name": "钦天监",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知离你最近的邪恶玩家位于你的哪一侧（左/右/相同）。如果与你邻近的玩家中有邪恶阵营，你会得知错误信息作为替代。",
+    "flavor": "天降异象，荧惑守心。",
+    "firstNightReminder": "唤醒钦天监，对他指向对应方向来告知他最近的邪恶玩家的方向。",
+    "firstNight": 3009,
+    "otherNight": 0,
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9d/d3dsbqa7qxdctiw9bbmgyq67paqjthv.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "2_shewoqishei",
+    "name": "骑士",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名非恶魔玩家。",
+    "flavor": "当有人倒下时，他也就谋杀了世界上的某个部分。",
+    "firstNightReminder": "唤醒骑士，对他指向两名非恶魔玩家。",
+    "firstNight": 3006,
+    "otherNight": 0,
+    "reminders": [
+      "得知"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2b/ama9h6ak2lkejho57jirtrquvktlmsu.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "3_shewoqishei",
+    "name": "水手",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：你或他之一会醉酒直到下个黄昏。你不会死亡。",
+    "flavor": "你们随便谁来我都能把他喝到桌子底下说你呢！那个话痨！敢来和我喝一杯么？不来？那你呢，老太婆？你以前喝过老麦基利的加香料朗姆酒吗？保证能让你喝成个真男人！上船咯，噢耶！",
+    "firstNightReminder": "唤醒水手，让他选择一名玩家。决定他俩其中谁因为水手能力醉酒。",
+    "firstNight": 3001,
+    "otherNightReminder": "唤醒水手，让他选择一名玩家。决定他俩其中谁因为水手能力醉酒。",
+    "otherNight": 1,
+    "reminders": [
+      "醉酒"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/bt7yvbzi61ftut2iqheqrgznkdohslh.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "4_shewoqishei",
+    "name": "舞蛇人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。",
+    "flavor": "这位老爷……虽然我的烟斗是金色的，虽然我只要一首曲子就能驯服最狂野的灯神，但我只是一个卑贱的舞蛇人罢了，哎……听天由命吧。俗话说，人心不足蛇吞象。但不是我，这位老爷……真的不是我。",
+    "firstNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "firstNight": 3003,
+    "otherNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "otherNight": 2,
+    "reminders": [
+      "中毒"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fe/o9gzozrpeyh7exogeuro90qh0904qu1.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "5_shewoqishei",
+    "name": "郎中",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的一名玩家：你会得知一个与他能力相关的词语。",
+    "flavor": "脉浮而阳气不足，气不收敛，发散在外。",
+    "firstNightReminder": "唤醒郎中，让他指向一名玩家。对郎中展示一个与该玩家能力相关的词语。",
+    "firstNight": 3007,
+    "otherNightReminder": "唤醒郎中，让他指向一名玩家。对郎中展示一个与该玩家能力相关的词语。",
+    "otherNight": 12,
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/11/9kua3j15hmyhp3ianx7j4ew9u56jq6z.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "6_shewoqishei",
+    "name": "村夫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的阵营。[+0~2村夫，复数村夫中有一人醉酒]",
+    "flavor": "玫瑰花是蓝色哒！草桂花是红色哒！哦豁，俺说反啦！",
+    "firstNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "firstNight": 3008,
+    "otherNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "otherNight": 13,
+    "reminders": [
+      "醉酒"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/72/gyk4euf2w6acfyevvmeke03zvv8r1ln.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "7_shewoqishei",
+    "name": "提刑官",
+    "team": "townsfolk",
+    "ability": "在你首次提名玩家后，你会在当晚得知他的角色。外来者会被你的能力当作爪牙或恶魔角色。",
+    "firstNight": 0,
+    "otherNightReminder": "如果今天白天提刑官发起过提名，唤醒提刑官，对他展示那名玩家的角色标记。",
+    "otherNight": 11,
+    "reminders": [
+      "已提名",
+      "失去能力"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a5/qlyc7b7l9o10ybyq41qu2g0g47ngi4w.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "8_shewoqishei",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。",
+    "flavor": "地上有七十二根火柴……今天的太阳落得更早，月亮还是按时升起……一块破布……庄园里的邪恶之物……三个又三个……我们相信的事物和他真正看到的不一样……绿光代表镁……残留物，但是图案不太对……地上有七十二根火柴……",
+    "firstNight": 0,
+    "otherNight": 0,
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/chh8x7dptz128a42p7f0g5c0qn8o063.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "9_shewoqishei",
+    "name": "宠妃",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，说书人会在关于你的事情上打破规则。随后，你会秘密得知说书人为此做了什么。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "失去能力"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/e/e8/qzwtcaasywxktk62fw8rrtgshge1o32.png/240px-%E5%AE%A0%E5%A6%83.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "10_shewoqishei",
+    "name": "鸩",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一个镇民角色：如果他在场，他中毒并死亡。",
+    "firstNight": 0,
+    "otherNightReminder": "如果鸩未曾使用能力，唤醒鸩，他可以摇头不使用能力，或选择一个镇民角色。",
+    "otherNight": 8,
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/42/bo77afv4u0133r1oxn0gi0dkgxomgs8.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "11_shewoqishei",
+    "name": "弄臣",
+    "team": "townsfolk",
+    "ability": "当你首次将要死亡时，你不会死亡。",
+    "flavor": "……然后国王说道：‘什么？！我甚至从未有过一条橡胶马裤，更别提一门奶油大炮了！’嗬嗬！欢乐一日！",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "失去能力"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/ac/k0janaxds3dvtnf5hdskzarlbyp79oe.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "12_shewoqishei",
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。",
+    "flavor": "我是个只在社交场合里~嗝儿~喝酒的人，亲爱的。  但无可否认，我是一个非常~嗝儿~擅长社交的人。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/1cqow962ds6jp9x5rz84qwgpstkyurs.png"
+    ],
+    "setup": true
+  },
+  {
+    "id": "13_shewoqishei",
+    "name": "月之子",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。",
+    "flavor": "天蝎座侧身遥望恋人，此刻即为抉择进行之时。以白银拂过我的掌心，你的宿命将在此地揭示。以钢铁穿过我的咽喉，群星在上你将追悔莫及。",
+    "firstNight": 0,
+    "otherNightReminder": "如果月之子在今天白天的时候使用自己的能力选择了一名善良玩家，那名玩家死亡。",
+    "otherNight": 9,
+    "reminders": [
+      "死亡"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/3c/hulwpl4c71z09ixgyg3dlkeega2a3an.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "14_shewoqishei",
+    "name": "瘟疫医生",
+    "team": "outsider",
+    "ability": "当你死亡时，说书人会获得一个爪牙能力。",
+    "flavor": "辟免剧勒润动。输要时间康护。莫要，抹药。",
+    "firstNight": 0,
+    "otherNightReminder": "如果瘟疫医生死亡，说书人获得一项爪牙能力。",
+    "otherNight": 10,
+    "reminders": [
+      "说书人能力"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/12/ivgcxsn6c4ytbj9q35ekdpqszwiptb6.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "15_shewoqishei",
+    "name": "科学怪人",
+    "team": "minion",
+    "ability": "恶魔拥有一个不在场的善良角色的能力，即使他醉酒或中毒。你和他都知道他获得了什么能力。",
+    "flavor": "恒星的氢能，取之不尽，静待采掘；碳、氧、氖，尽数裂解。分子引发混沌，熵增由此产生，宇宙现象更替，原子紊乱重塑，物质聚合坍缩。所有的一切，都集中在这一个小小的锥形瓶中。",
+    "firstNightReminder": "（分别或同时）唤醒科学怪人和恶魔，通知他们恶魔因为科学怪人而获得的善良角色的能力。",
+    "firstNight": 1,
+    "otherNight": 0,
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4c/cbp9yi8vzy26hp8lyzpw8tgyb4981cx.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "16_shewoqishei",
+    "name": "养蛊人",
+    "team": "minion",
+    "ability": "在你存活时提名你的玩家会在当晚死亡，即使你已死亡。",
+    "flavor": "把毒蛇、蝎子、蜈蚣、蟾蜍、蜘蛛放在一起……多！来！点！",
+    "firstNight": 0,
+    "otherNightReminder": "今天白天提名了存活的养蛊人的玩家死亡。",
+    "otherNight": 7,
+    "reminders": [
+      "蛊"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e1/o9cn5nyqljzb1cch3ldd74f8l1834fv.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "17_shewoqishei",
+    "name": "魔鬼代言人",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名存活的玩家（与上个夜晚不同）：如果明天白天他被处决，他不会死亡。",
+    "flavor": "如果异议被驳回，我的委托人将进行无罪申辩，理由是控方不遵守法规第27章B条——针对动词进行非正确或误导性的词形变化。昨晚有九名陪审团成员死亡，这个事实只不过是表面证据，正如威尔斯诉图勒案所开创的先例，这是无罪释放的进一步理由。",
+    "firstNightReminder": "唤醒魔鬼代言人，让他选择一名玩家，那名玩家处决不死。",
+    "firstNight": 3004,
+    "otherNightReminder": "唤醒魔鬼代言人，让他选择一名与上一晚不同的玩家，那名玩家处决不死。",
+    "otherNight": 3,
+    "reminders": [
+      "处决不死"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2f/fbxp1pzgxjfs4vsrb0l30otb078m84e.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "18_shewoqishei",
+    "name": "鹰身女妖",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择两名玩家：明天第一名玩家需要“疯狂”地证明第二名玩家是邪恶的，否则他们之中可能会有人死亡。",
+    "flavor": "我从未见过如此光明的一日，阴森利爪不再笼罩着我。",
+    "firstNightReminder": "唤醒鹰身女妖，让她选择两名玩家，第一名玩家明天需要“疯狂”证明第二名玩家邪恶。在鹰身女妖入睡后通知第一名玩家被鹰身女妖选中。",
+    "firstNight": 3005,
+    "otherNightReminder": "唤醒鹰身女妖，让她选择两名玩家，第一名玩家明天需要“疯狂”证明第二名玩家邪恶。在鹰身女妖入睡后通知第一名玩家被鹰身女妖选中。",
+    "otherNight": 4,
+    "reminders": [
+      "疯狂",
+      "第二名"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/09ros4hk5mg8d380fmaxr5wzrsliinv.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "19_shewoqishei",
+    "name": "梼杌",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。当你将要死亡时，改为一名存活且具有能力的爪牙失去能力。你不会得知恶魔信息。",
+    "flavor": "有兽焉，其状如虎而大，毛长两尺，人面虎足，口牙，尾长一丈八尺，扰乱荒中，名梼杌。",
+    "firstNightReminder": "如果梼杌在场，跳过他的恶魔信息环节。",
+    "firstNight": 2500,
+    "otherNightReminder": "唤醒梼杌，让他攻击一名玩家。",
+    "otherNight": 6,
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e7/mittdbt0hah21yo07wia0acr050lie4.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "20_shewoqishei",
+    "name": "痢蛭",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名存活的玩家：他中毒，只有当他处于死亡状态时你才会立即死亡。",
+    "flavor": "美味，美味，美味，美味，美味，美味，美味，美味的脑——馅儿饼！是的。美味的老馅儿饼。我想说的就是这个。",
+    "firstNightReminder": "唤醒痢蛭，让他选择一名玩家以寄生。",
+    "firstNight": 3002,
+    "otherNightReminder": "唤醒痢蛭，让他攻击一名玩家。",
+    "otherNight": 5,
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e7/i3bse7nern4raiqwjpmzrpzjfa0vrq4.png"
+    ],
+    "setup": false
+  },
+  {
+    "id": "21_shewoqishei",
+    "name": "瘟疫医生&养蛊人",
+    "team":"a jinxed",
+    "ability":"如果瘟疫医生死亡且说书人会因此获得养蛊人的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。",
+    "image":["https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/12/ivgcxsn6c4ytbj9q35ekdpqszwiptb6.png"]
+  },
+  {
+    "id":"22_shewoqishei",
+    "name":"科学怪人&村夫",
+    "team":"a jinxed",
+    "ability":"如果村夫在场数量不足3人，科学怪人可以让恶魔拥有村夫的能力。",
+    "image":["https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4c/cbp9yi8vzy26hp8lyzpw8tgyb4981cx.png"]
+  },
+  {
+    "id":"23_shewoqishei",
+    "name":"科学怪人&酒鬼",
+    "team":"a jinxed",
+    "ability":"如果恶魔拥有酒鬼的能力，改为由科学怪人选择一名玩家：如果他是镇民，他醉酒。",
+    "image":["https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4c/cbp9yi8vzy26hp8lyzpw8tgyb4981cx.png"]
+  },
+  {
+    "id":"24_shewoqishei",
+    "name":"梼杌&舞蛇人",
+    "team":"a jinxed",
+    "ability":"如果梼杌的角色发生了交换，不会因此移除原本梼杌的“失去能力”提示标记。",
+    "image":["https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e7/mittdbt0hah21yo07wia0acr050lie4.png"]
+  },
+  {
+    "id":"25_shewoqishei",
+    "name":"杀身成仁",
+    "team":"fabled",
+    "ability":"如果白天没人被处决，邪恶阵营获胜。",
+    "image":["https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png"]
+  },
+  {
+    "id":"26_shewoqishei",
+    "name":"皇城司",
+    "team":"fabled",
+    "ability":"积极私聊的玩家可能会在夜晚得到有用的建议。阻止私聊的玩家可能会发生不好的事情。",
+    "image":["https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/8e/ntw4k0f2zkjejumsrza8209casmcgsa.png"]
+  }
+]

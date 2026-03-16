@@ -1,0 +1,218 @@
+[
+{
+		"id": "_meta",
+		"logo": "https://t.tutu.to/img/76dlw",
+		"name": "孰能无过",
+		"author": "狍子",
+		"state": [
+			{
+				"stateName": "醉酒与中毒",
+				"stateDescription": "醉酒或中毒的玩家会失去能力，但会认为自己仍具有能力，说书人会做出这些玩家仍然具有能力的行为。如果醉酒或中毒玩家的角色能力会给他提供信息，说书人可能会给出错误信息。醉酒或中毒的玩家不会得知自己醉酒或中毒。"
+			}
+		]
+	},
+    {
+        "id": "empath"
+    },
+    {
+        "id": "pacifist"
+    },
+    {
+        "id": "clockmaker"
+    },   
+   {
+        "id": "heretic"
+    },   
+    {
+        "id": "dreamer"
+    },
+    {
+        "id": "seamstress"
+    },
+    {
+        "id": "artist"
+    },
+    {
+        "id": "village_idiot"
+    },
+    {
+        "id": "knight"
+    },
+    {
+        "id": "dagengren"
+    },
+    {
+        "id": "golem"
+    },
+    {
+        "id": "plague_doctor"
+    },
+    {
+        "id": "jiubao"
+    },
+    {
+        "id": "poisoner"
+    },
+    {
+        "id": "devil's_advocate"
+    },
+    {
+        "id": "assassin"
+    },
+    {
+        "id": "imp"
+    },
+    {
+        "id": "diyRole1",
+        "name": "暮光精灵",
+        "ability": "在你首个夜晚，你会得知最多的相邻镇民数量。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "8601",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/07/05/pVK4R9x.png"
+    },
+    {
+        "id": "diyRole2",
+        "name": "机械弹簧狼",
+        "ability": "每个夜晚，你可以选择一名玩家:你会得知你们中与存活的邪恶玩家的距离最近的玩家，如果距离相等，你会得知自己。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "8603",
+        "otherNight": "11903",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "选择"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/07/05/pVK4cNR.png"
+    },
+    {
+        "id": "diyRole3",
+        "name": "魔法师",
+        "ability": "每个夜晚，你可以选择一名存活的玩家:你会得知他是否为爪牙，如果他是镇民，他在当晚和明天白天醉酒。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "7201",
+        "otherNight": "9001",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/07/05/pVK46E9.png"
+    },
+    {
+        "id": "diyRole4",
+        "name": "通灵师",
+        "ability": "每个夜晚*，你可以选择一名死亡的玩家:你会得知他的角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "11301",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/07/05/pVK4hjO.png"
+    },
+    {
+        "id": "diyRole5",
+        "name": "马厩男孩",
+        "ability": "每个夜晚，你会得知一个在场的角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "8602",
+        "otherNight": "11902",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "被得知"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/06/25/pVeTLse.png"
+    },
+    {
+        "id": "diyRole6",
+        "name": "乌鸦嘴",
+        "ability": "可能会有一名善良玩家得知一条虚假的信息，即使你已死亡。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "虚假"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/07/05/pVKoDu8.png"
+    },
+    {
+        "id": "diyRole7",
+        "name": "一品堂",
+        "ability": "每个白天，你只能投一票。\n如果你参与投票的玩家没有被处决，或者你没有投票，当晚恶魔可以选择一名玩家：他中毒直到下个黄昏。\n如果你死于处决，会有一名邪恶玩家拥有你的能力。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "已投票",
+            "中毒",
+            "拥有能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://t.tutu.to/img/7Lx5d"
+    },
+    {
+        "id": "diyRole8",
+        "name": "伪人",
+        "ability": "你以为你是一个善良镇民，但其实你不是。恶魔会知道你是伪人。[+1或-1外来者]",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "伪人"
+        ],
+        "remindersGlobal": [
+            "伪人"
+        ],
+        "setup": 1,
+        "image": "https://s21.ax1x.com/2025/07/08/pVMLj6s.png"
+    },
+    {
+        "id": "diyRole9",
+        "name": "饲疫者",
+        "ability": "每个夜晚*所有饲疫者要一起选择一名玩家，他死亡。你也会被会被当作其他邪恶角色。会有一名善良玩家始终会被当作邪恶阵营、爪牙角色或恶魔角色。【所有邪恶玩家均为饲疫者】",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "4899",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "视为邪恶"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://t.tutu.to/img/7Nsxn"
+    }
+]

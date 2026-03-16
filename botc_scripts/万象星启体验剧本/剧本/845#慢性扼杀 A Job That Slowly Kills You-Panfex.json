@@ -1,0 +1,552 @@
+[
+    {
+        "id": "_meta",
+        "author": "Panfex",
+        "name": "慢性扼杀 A Job That Slowly Kills You",
+        "hideTitle": true,
+        "background": "https://i.vgy.me/N5bGjk.jpg",
+        "logo": "https://www.helloimg.com/i/2025/12/18/694361fd37a5d.png",
+        "bootlegger": [
+            "This script contains homebrew characters from: Pandora's Box [¶] - Homebrews by Luis [✦] - The Garden Centre [₽] - The Bootlegger's Anthology [§] - DarkArtist's Stuff [ξ] - EldenThorn's Collection [⁂]",
+            "[v1.0]"
+        ]
+    },
+    {
+        "id": "pioneer_pandorasbox",
+        "image": [
+            "https://i.vgy.me/3nYgoJ.png"
+        ],
+        "firstNightReminder": "Show the Pioneer 1 character of each type, 1 of which they neighbour & the rest are not in play.",
+        "name": "先锋 ¶",
+        "team": "townsfolk",
+        "ability": "在你的首个夜晚，你得知每个角色类型的一个角色，其中一个是与你邻座玩家的角色，其余角色不在场。",
+        "flavor": "You can never cross the ocean unless you have the courage to lose sight of the shore.",
+        "firstNight": 3060.01
+    },
+    {
+        "id": "eyunxiaojie111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/bounty_hunter.png",
+        "edition": "custom",
+        "name": "赏金猎人",
+        "ability": "在你的首个夜晚，你会得知一名邪恶玩家。每当你得知的玩家死亡，你会在当晚得知另一名邪恶玩家。[会有一名镇民转变为邪恶阵营]",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 3075,
+        "otherNight": 94,
+        "firstNightReminder": "（在进入首个夜晚时立即通知赏金猎人转变的那个镇民他的阵营发生了变化）唤醒赏金猎人，对他指向一名邪恶玩家。",
+        "otherNightReminder": "如果赏金猎人之前得知的玩家死亡，唤醒赏金猎人，对他指向一名新的邪恶玩家。",
+        "reminders": [
+            "得知"
+        ],
+        "setup": true
+    },
+    {
+        "id": "jiushigebaichi111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/village_idiot.png",
+        "edition": "custom",
+        "name": "村夫",
+        "ability": "每个夜晚，你要选择一名玩家：你会得知他的阵营。[+0~2村夫，复数村夫中有一人醉酒]",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 3074,
+        "otherNight": 92,
+        "firstNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+        "otherNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+        "reminders": [
+            "醉酒"
+        ],
+        "setup": true
+    },
+    {
+        "id": "monarch_pandorasbox",
+        "image": [
+            "https://i.vgy.me/jwRy3a.png"
+        ],
+        "firstNightReminder": "Wake a Minion and show them who the Monarch is. Wake the Monarch and show them two players.",
+        "otherNightReminder": "Wake the Monarch and show them two players.",
+        "reminders": [
+            "得知"
+        ],
+        "name": "君主 ¶",
+        "team": "townsfolk",
+        "ability": "每个夜晚，你会得知两个角色，他们均在场或均不在场。一名爪牙知道你是君主。",
+        "flavor": "You've all read the news, no doubt. Those bastard columnists are quick at their work, I'll give them that. I trust that you all know what to do.",
+        "firstNight": 3056.01,
+        "otherNight": 74.01
+    },
+    {
+        "id": "mofashuijingqiu111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fortune_teller.png",
+        "edition": "custom",
+        "name": "占卜师",
+        "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 3040,
+        "otherNight": 71,
+        "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+        "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+        "reminders": [
+            "干扰项"
+        ],
+        "setup": false
+    },
+    {
+        "id": "royalist_pandorasbox",
+        "image": [
+            "https://i.vgy.me/r6DZu1.png"
+        ],
+        "otherNightReminder": "If a Monarch died at night, show the Royalist an evil player.",
+        "name": "保皇派 ¶",
+        "team": "townsfolk",
+        "ability": "如果君主在夜晚死亡，当晚及之后的每个夜晚，你会被唤醒并得知一名邪恶玩家。[+君主]",
+        "setup": true,
+        "flavor": "Yes, sire. Of course, sire. At once, sire... sire? Sire!",
+        "reminders": [
+            "被杀害"
+        ],
+        "otherNight": 74.02,
+        "jinxes": [
+            {
+                "id": "kazali",
+                "reason": "The Kazali can't choose the Monarch to become a Minion if a Royalist is in play."
+            }
+        ]
+    },
+    {
+        "id": "prankster_the_bootleggers_anthology",
+        "image": [
+            "https://i.vgy.me/vpkMrv.png"
+        ],
+        "otherNightReminder": "The Prankster points to a player. Put them to sleep. If it's a Minion, mark that player with \"Pranked\", then wake that Minion and show them the \"This character affected you\" token and the Prankster token. All \"Pranked\" Minions choose a player; mark that player with \"Demon Learns Tonight.\" Finally, wake the Demon, and point to each player marked \"Demon learns tonight\" in turn, and show them the corresponding character.",
+        "remindersGlobal": [
+            "恶作剧",
+            "恶魔得知",
+            "恶魔得知",
+            "恶魔得知"
+        ],
+        "name": "恶作剧者 §",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你要选择一名玩家，如果他是爪牙：他的能力变为\"每个夜晚，你要选择一名玩家：恶魔得知他的角色。\"",
+        "otherNight": 11.5,
+        "jinxes": [
+            {
+                "id": "organgrinder",
+                "reason": "Only 1 jinxed character can be in play."
+            },
+            {
+                "id": "vizier",
+                "reason": "If the Vizier loses their ability, they learn this. If the Vizier is executed while they have their ability, their team wins."
+            },
+            {
+                "id": "riot",
+                "reason": "Riot registers as a Minion to the Prankster."
+            },
+            {
+                "id": "legion",
+                "reason": "Only 1 jinxed character can be in play."
+            }
+        ]
+    },
+    {
+        "id": "huojin111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/savant.png",
+        "edition": "custom",
+        "name": "博学者",
+        "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+    {
+        "id": "wayfarer_darkartists_stuff",
+        "image": [
+            "https:\/\/www.bloodstar.xyz\/p\/TheDarkArtist\/DarkArtists_Stuff\/wayfarer_darkartists_stuff.png"
+        ],
+        "otherNightReminder": "If they haven't already, wake the Wayfarer and ask whether they want to choose a player tonight.",
+        "reminders": [
+            "失去能力"
+        ],
+        "name": "漂泊者 ξ",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在夜晚时*，你要选择一名被提名过的玩家：你会得知他是否提名过邪恶玩家。",
+        "otherNight": 78.3
+    },
+    {
+        "id": "shanliangdeniaoer111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/ravenkeeper.png",
+        "edition": "custom",
+        "name": "守鸦人",
+        "ability": "如果你在夜晚死亡，你会被唤醒，然后你要选择一名玩家：你会得知他的角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 70,
+        "firstNightReminder": "",
+        "otherNightReminder": "如果守鸦人死于夜晚，唤醒守鸦人，让他选择一名玩家。对他展示这名玩家的角色标记。",
+        "reminders": [],
+        "setup": false
+    },
+    {
+        "id": "psychiatrist_eldensstuff",
+        "image": [
+            "https://i.vgy.me/YsqkGQ.png"
+        ],
+        "reminders": [
+            "醉酒"
+        ],
+        "name": "精神病学家 ⁂",
+        "team": "townsfolk",
+        "setup": true,
+        "flavor": "Now moving on from your childhood. How do you think your seclusion from society has affected your social life and your ability to form relationships? …mhm …yes, alright … ok. Now I believe your introverted behavior is making you seem foreign and untrustworthy to the public. And that seems to be it for our time. It was nice meeting with you again and I really am seeing significant improvements.",
+        "ability": "外来者可能会对善良阵营带来帮助，且一名外来者会醉酒。[+1外来者]"
+    },
+    {
+        "id": "zhongdayande111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/poppy_grower.png",
+        "edition": "custom",
+        "name": "罂粟种植者",
+        "ability": "爪牙和恶魔互相不认识。如果你死亡，当晚他们会互相认识。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 903.4,
+        "otherNight": 4,
+        "firstNightReminder": "如果罂粟种植者在场，跳过今晚的爪牙信息和恶魔信息环节。",
+        "otherNightReminder": "如果罂粟种植者死于白天，插入执行爪牙信息和恶魔信息（不包含恶魔伪装）流程。如果罂粟种植者死于夜晚，则在当前玩家行动结束后立即执行相关流程。",
+        "reminders": [
+            "唤醒邪恶"
+        ],
+        "setup": false
+    },
+    {
+        "id": "chichichichichichichi111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/cannibal.png",
+        "edition": "custom",
+        "name": "食人族",
+        "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "饱餐",
+            "中毒"
+        ],
+        "setup": false
+    },
+    {
+        "id": "guardian_bollockscharacters",
+        "image": [
+            "https:\/\/www.bloodstar.xyz\/p\/0rig0nal\/BollocksCharacters\/guardian_bollockscharacters.png"
+        ],
+        "firstNightReminder": "Wake the Guardian and point to a player. Mark that player with the \"Guarding\" reminder.",
+        "reminders": [
+            "护卫"
+        ],
+        "name": "卫兵 ₽",
+        "team": "outsider",
+        "ability": "在你的首个夜晚，你会得知一名玩家：如果他被处决，他的阵营落败，即使你已死亡。",
+        "flavor": "不要哭泣，你此刻已很安全。只要有我的地方，任何东西都伤不了你。",
+        "firstNight": 3053.1
+    },
+    {
+        "id": "captain_pandorasbox",
+        "image": [
+            "https://i.vgy.me/MrV84o.png"
+        ],
+        "otherNightReminder": "If a Demon was killed other than by the Captain's execution & there are 5+ non-Travellers alive, they swap characters with an alive evil (& then count as having died.)",
+        "reminders": [
+            "抛锚"
+        ],
+        "name": "船长 ¶",
+        "team": "outsider",
+        "ability": "每局游戏限一次，在投票完成统计后，你可以公开宣布立刻执行处决。不因此原因死亡的恶魔在死亡前与一名爪牙交换角色，即使你已死亡。",
+        "flavor": "What is it, what nameless, inscrutable, unearthly thing is it; what cozening, hidden lord and master, and cruel, remorseless emperor commands me; Is it I, God, or who, that lifts this arm?",
+        "otherNight": 29.01,
+        "jinxes": [
+            {
+                "id": "lilmonsta",
+                "reason": "If the player holding the Lil' Monsta token dies other than to the Captain's immediate execution, they swap characters with a Minion, and that Minion is given the Lil' Monsta token tonight."
+            }
+        ]
+    },
+       {
+        "id": "wudidejiemidashi111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/puzzlemaster.png",
+        "edition": "custom",
+        "name": "解谜大师",
+        "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "醉酒",
+            "已猜测"
+        ],
+        "setup": false
+    },
+    {
+        "id": "amalgamate_pandorasbox",
+        "image": [
+            "https://i.postimg.cc/ZnTntwKf/4Sk-PPi.png"
+        ],
+        "remindersGlobal": [
+            "是合并",
+            "是合并",
+            "是合并",
+            "是合并",
+            "是合并"
+        ],
+        "name": "合并 ¶",
+        "team": "outsider",
+        "setup": true,
+        "ability": "合并们以为他们是某个相同的不在场的角色。[-1~+1外来者。所有外来者都是合并]",
+        "flavor": "Hello,      ! Take care?      , huh. It's fantastic, isn't      ! Ha      Ha Ha.",
+        "special": [
+            {
+                "name": "replace-character",
+                "type": "reveal"
+            },
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "jinxes": [
+            {
+                "id": "boffin",
+                "reason": "The Demon cannot have the Amalgamate ability."
+            },
+            {
+                "id": "huntsman",
+                "reason": "A Damsel added by the Huntsman's setup ability can't be removed by the Amalgamate's setup ability."
+            },
+            {
+                "id": "kukekua_pandorasbox",
+                "reason": "A Captain added by the Kukekua's setup ability can't be removed by the Amalgamate's setup ability."
+            }
+        ]
+    },
+    {
+        "id": "dhampir_pandorasbox",
+        "image": [
+            "https://i.vgy.me/SW7QVt.png"
+        ],
+        "otherNightReminder": "Mark a dead player with the *NEW BLOOD* reminder. Show that player's character to the Dhampir.",
+        "name": "半吸血鬼 ¶",
+        "team": "minion",
+        "setup": true,
+        "ability": "每个夜晚*，你会得知一名死亡角色：你可能被当作该角色直到下个黎明。[+1外来者。离你最远的外来者是邪恶的]",
+        "flavor": "Run far from here, tenderfoot. Leave but nothing in thy stead. Zoti të bekoftë, i huaj.",
+        "reminders": [
+            "新鲜血液"
+        ],
+        "otherNight": 113.01,
+        "jinxes": [
+            {
+                "id": "alchemist",
+                "reason": "An Alchemist-Dhampir's setup ability doesn't trigger."
+            },
+            {
+                "id": "bountyhunter",
+                "reason": "If both setup abilities would turn a player evil, only the Dhampir's does instead."
+            },
+            {
+                "id": "ogre",
+                "reason": "If the Dhampir's setup ability turns an Ogre evil, the Ogre loses their ability and learns who the Dhampir is."
+            },
+            {
+                "id": "lunatic",
+                "reason": "If the Dhampir's setup ability turn a Lunatic evil, the Dhampir must be in their Demon info."
+            }
+        ]
+    },
+    {
+        "id": "miasma_the_bootleggers_anthology",
+        "image": [
+            "https://i.vgy.me/F2IzW1.png"
+        ],
+        "firstNightReminder": "Each night, wake the Miasma. They either shake their head no or nod yes. If they shake their head, put the Miasma to sleep. If they nod, place the “Shrouded” reminder in the Grimoire, and mark the Miasma with “No ability”. While the “Shrouded” reminder is placed, all Townsfolk are poisoned, and additionally must receive false information if they get any information.",
+        "otherNightReminder": "Each night, wake the Miasma. They either shake their head no or nod yes. If they shake their head, put the Miasma to sleep. If they nod, place the “Shrouded” reminder in the Grimoire, and mark the Miasma with “No ability”. While the “Shrouded” reminder is placed, all Townsfolk are poisoned, and additionally must receive false information if they get any information.",
+        "reminders": [
+            "毒泷恶雾",
+            "失去能力"
+        ],
+        "name": "毒瘴魔 §",
+        "team": "minion",
+        "ability": "每局游戏限一次，在夜晚时，你可以使所有镇民中毒并产生错误信息，直到下个黄昏。",
+        "flavor": "No, bless you.",
+        "firstNight": 3022.5,
+        "otherNight": 12.5,
+        "jinxes": [
+            {
+                "id": "alchemist",
+                "reason": "If the Alchemist has the Miasma ability, they are safe from themselves."
+            }
+        ]
+    },
+    {
+        "id": "visionary_the_bootleggers_anthology",
+        "image": [
+            "https://i.vgy.me/ZSWMIr.png"
+        ],
+        "firstNightReminder": "Wake the Visionary and show them a piece of paper with a question written on it. Put them to sleep. Wake a good player and show them the same piece of paper. Put them to sleep.",
+        "reminders": [
+            "得知",
+            "失去能力"
+        ],
+        "name": "寻谜者 §",
+        "team": "minion",
+        "ability": "你与一名善良玩家在首个夜晚得知一个问题。每局游戏限一次，你可以公开回答它，如果答对：你的阵营获胜。",
+        "flavor": "SATOR AREPO TENET OPERA ROTAS.",
+        "firstNight": 3034.5,
+        "jinxes": [
+            {
+                "id": "spy",
+                "reason": "Only 1 jinxed character can be in play."
+            },
+            {
+                "id": "widow",
+                "reason": "Only 1 jinxed character can be in play."
+            },
+            {
+                "id": "plaguedoctor",
+                "reason": "If the Plague Doctor dies, a living Minion gains the Visionary ability in addition to their own ability, and learns this."
+            },
+            {
+                "id": "esper_the_bootleggers_anthology",
+                "reason": "Only 1 jinxed character can be in play."
+            }
+        ]
+    },
+    {
+        "id": "leftenent_darkartists_stuff",
+        "image": [
+            "https:\/\/www.bloodstar.xyz\/p\/TheDarkArtist\/DarkArtists_Stuff\/leftenent_darkartists_stuff.png"
+        ],
+        "firstNightReminder": "Wake the Leftenent, show them the player that chose the Demon and their character. You may choose to inform a good player of who the Leftenent is.",
+        "otherNightReminder": "Wake the Leftenent, show them the player that chose the Demon and their character. You may choose to inform a good player of who the Leftenent is.",
+        "reminders": [
+            "中毒",
+            "得知"
+        ],
+        "name": "中尉 ✦ξ",
+        "team": "minion",
+        "ability": "使用其自身能力选择恶魔的善良玩家中毒，且你会知道他们是谁。一名善良玩家随后可能会得知你是谁。",
+        "flavor": "I scour the waves for a sign, an enemy. I used to pray for the sailors pulled away from port town lovers, bone by bloated bone, that the sea shan't take those who desired her. She reduced my eyes to spectral pearls, forever alone, thus I shall sink those starry-eyed fools",
+        "firstNight": 3022,
+        "otherNight": 28
+    },
+    {
+        "id": "kukekua_pandorasbox",
+        "image": [
+            "https://i.vgy.me/uexN97.png"
+        ],
+        "firstNightReminder": "Wake the Captain & show them an alive character.",
+        "otherNightReminder": "Wake the Kukekua to choose a player. Wake the Captain & show them an alive character.",
+        "reminders": [
+            "死亡",
+            "已猜测"
+        ],
+        "name": "库克夸 ¶",
+        "team": "demon",
+        "setup": true,
+        "ability": "每局游戏限一次，邪恶玩家可以公开猜测谁是船长：如果猜对且船长的限次技能未发动，邪恶阵营获胜。每个夜晚*，你要选择一名玩家：他死亡。[+1外来者，一名外来者是船长]",
+        "flavor": "KNEEL AHAB. KNEEL AND GROVEL AND SPIT UP YOUR LAST. I AM THE HOLY GRAIL.",
+        "firstNight": 3057.01,
+        "otherNight": 35.06
+    },
+    {
+        "id": "xiaoemo1111111eee111eee111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/imp.png",
+        "edition": "custom",
+        "name": "小恶魔",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": 0,
+        "otherNight": 41,
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒小恶魔，让他攻击一名玩家。如果他成功自杀，则在他入睡后通知一名爪牙角色变化。",
+        "reminders": [
+            "死亡"
+        ],
+        "setup": false
+    },
+    {
+        "id": "yiqunshabiemo222",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/legion.png",
+        "edition": "custom",
+        "name": "军团",
+        "ability": "每个夜晚*，可能有一名玩家死亡。如果一项提名只有邪恶玩家投票，投票无效。你也会被当作是爪牙。[多数玩家为军团]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": 0,
+        "otherNight": 49,
+        "firstNightReminder": "",
+        "otherNightReminder": "决定今晚谁会因为军团能力死亡。",
+        "reminders": [
+            "即将被处决",
+            "死亡"
+        ],
+        "setup": true
+    },
+    {
+        "id": "hethaesta_hblreleased",
+        "team": "demon",
+        "name": "赫忒斯塔 ✦",
+        "ability": "你与一名善良玩家得知你的具体能力是什么。如果一名邪恶玩家死亡，你的能力变为\"每个夜晚，你要选择一名玩家：他死亡。\"",
+        "image": [
+            "https://raw.githubusercontent.com/notNothingMuch/HBL/refs/heads/main/Rendered%20Icons/demon/Icon_Hethaesta_evil.png?raw=true"
+        ],
+        "flavor": "Everything is metal if you try, hit and heat hard enough. It'll all become music to your ears... Take all the damned looks you like, you won't remember a thing.",
+        "reminders": [
+            "死亡",
+            "1",
+            "2",
+            "3",
+            "得知",
+            "非常规能力"
+        ],
+        "firstNightReminder": "One at a time, wake the Hethaesta and the player who *KNOWS* to let them know the custom ability. Run the Hethaesta's ability, if applicable.",
+        "otherNightReminder": "Run the Hethaesta's ability, if applicable.",
+        "firstNight": 1013.01,
+        "otherNight": 52.07,
+        "setup": true
+    },
+    "gardener",
+{
+    "id": "17_meta",
+    "image": "https://i.vgy.me/vpkMrv.png",
+    "name": "恶作剧者&军团",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "互为克星的角色在同一时间里只能有其中一个角色在场。"
+},
+{
+    "id": "18_meta",
+    "image": "https://i.vgy.me/uexN97.png",
+    "name": "合并&船长&库克夸",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "在初始设置中被库克夸能力加入的船长不会被合并的[设置调整]移除。"
+},
+{
+    "id": "19_meta",
+    "image": "https://i.vgy.me/SW7QVt.png",
+    "name": "半吸血鬼&赏金猎人",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "如果两个角色同时在场，且他们的[设置调整]都会使一名玩家转变为邪恶，改为只有半吸血鬼的[设置调整]能力生效。"
+}
+]

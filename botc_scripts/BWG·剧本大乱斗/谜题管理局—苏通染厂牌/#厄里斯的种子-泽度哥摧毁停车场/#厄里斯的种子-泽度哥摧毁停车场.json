@@ -1,0 +1,345 @@
+[
+  {
+    "id": "_meta",
+    "name": "厄里斯的种子",
+    "author": "泽度哥",
+    "logo": "https://www.bloodstar.xyz/p/westwind/Goldapple/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/westwind/Goldapple/almanac.html"
+  },
+  {
+    "id": "_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/_goldapple.png",
+    "firstNightReminder": "如果与雅典娜相邻的两名存活玩家都是善良的，其中之一会得知雅典娜",
+    "remindersGlobal": [
+      "已转增"
+    ],
+    "setup": true,
+    "name": "雅典娜",
+    "team": "townsfolk",
+    "ability": "初始携带金苹果。携带金苹果的镇民不受中毒、醉酒的影响。在你的首个夜晚，如果与你相邻的两名存活玩家都是善良的，其中之一会得知你是雅典娜 [必定出场、无法转换阵营]",
+    "firstNight": 18
+  },
+  {
+    "id": "1_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/1_goldapple.png",
+    "firstNightReminder": "分别唤醒有“口令”标记的玩家，告知他们本局的口令",
+    "reminders": [
+      "口令"
+    ],
+    "name": "竖琴手",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你要写一条口令，一名善良玩家和一名邪恶玩家得知该口令。如果存活玩家不多于三名，善良阵营获胜。",
+    "firstNight": 19
+  },
+  {
+    "id": "7_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/7_goldapple.png",
+    "firstNightReminder": "在首个夜晚，唤醒女教师，给她展示一个非镇民角色类型。该角色类型需要是距离他最近的非镇民玩家的角色类型。",
+    "name": "女家教",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你得知一个距离你最近的非镇民玩家类型（旅行者除外）。",
+    "firstNight": 17
+  },
+  {
+    "id": "2_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/2_goldapple.png",
+    "firstNightReminder": "唤醒哲学家，他可以摇头不使用能力，或选择获得角色列表上的一个善良角色的能力。",
+    "otherNightReminder": "如果哲学家未曾使用能力，唤醒哲学家，他可以摇头不使用能力，或选择获得角色列表上的一个善良角色的能力。",
+    "remindersGlobal": [
+      "是哲学家",
+      "醉酒"
+    ],
+    "name": "哲学家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个善良角色：你获得该角色的能力。如果这个角色在场，他醉酒。",
+    "firstNight": 12,
+    "otherNight": 3
+  },
+  {
+    "id": "3_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/3_goldapple.png",
+    "otherNightReminder": "如果教授未曾使用能力且在城镇广场上有玩家死亡，唤醒教授，他可以摇头不使用能力，或选择一名已死亡的玩家。如果该玩家是镇民，该玩家被起死回生。",
+    "reminders": [
+      "复活",
+      "失去能力"
+    ],
+    "name": "教授",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名死亡的玩家：如果他是镇民，你会将他起死回生。",
+    "otherNight": 9
+  },
+  {
+    "id": "9_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/9_goldapple.png",
+    "firstNightReminder": "每局游戏限一次，在夜晚时，你可以选择一个角色：你会得知两名玩家，如果该角色在场，这两名玩家之一是该角色。",
+    "otherNightReminder": "每局游戏限一次，在夜晚时，你可以选择一个角色：你会得知两名玩家，如果该角色在场，这两名玩家之一是该角色。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "改衣匠",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个角色：你会得知两名玩家，如果该角色在场，这两名玩家之一是该角色。",
+    "firstNight": 16,
+    "otherNight": 10
+  },
+  {
+    "id": "4_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/4_goldapple.png",
+    "reminders": [
+      "盟约",
+      "死亡"
+    ],
+    "name": "商人",
+    "team": "townsfolk",
+    "ability": "你可以与任意一名其他玩家缔结约定。在新约定达成之前，如果有玩家违约，你和他之一会在当晚死亡。"
+  },
+  {
+    "id": "10_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/10_goldapple.png",
+    "firstNightReminder": "唤醒女裁缝，她可以摇头不使用能力，或选择除自己以外的两名玩家。以点头或摇头告知她选择的玩家是否为同一阵营。",
+    "otherNightReminder": "如果女裁缝未曾使用能力，唤醒女裁缝，她可以摇头不使用能力，或选择除自己以外的两名玩家。以点头或摇头告知她选择的玩家是否为同一阵营。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "女裁缝",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的两名玩家：你会得知他们是否为同一阵营。",
+    "firstNight": 20,
+    "otherNight": 11
+  },
+  {
+    "id": "6_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/6_goldapple.png",
+    "otherNightReminder": "邮差发动能力",
+    "name": "邮差",
+    "team": "townsfolk",
+    "ability": "在最后一晚，即使你已死亡，选择一名玩家：他得知某些信息。你可以随时决定他得知什么。",
+    "otherNight": 12
+  },
+  {
+    "id": "5_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/5_goldapple.png",
+    "name": "火柴女孩",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下拜访说书人以得知一条建议，或一条正确信息，或一条从私聊中提取的正确信息，或你死亡。"
+  },
+  {
+    "id": "8_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/8_goldapple.png",
+    "name": "赞助人",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下拜访说书人以得知谁是目前最没有价值的存活玩家。"
+  },
+  {
+    "id": "11_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/11_goldapple.png",
+    "firstNightReminder": "展示1个善良角色标记和1个邪恶角色标记：其中一个在场。放置\"已得知\"在那个在场角色标记旁。",
+    "otherNightReminder": "如果带有\"已得知\"标记的玩家今天死亡，移除标记。展示1个善良角色标记和1个邪恶角色标记：其中一个在场。放置\"已得知\"在那个在场角色标记旁。",
+    "reminders": [
+      "已得知"
+    ],
+    "name": "护火贞女",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个善良角色和一个邪恶角色，其中一个角色在场。当在场角色的玩家死亡时，你在当晚得知一个善良角色和一个邪恶角色，其中一个角色在场。",
+    "firstNight": 21,
+    "otherNight": 13
+  },
+  {
+    "id": "12_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/12_goldapple.png",
+    "reminders": [
+      "存活"
+    ],
+    "name": "逃脱艺术家",
+    "team": "townsfolk",
+    "ability": "如果你即将在夜晚死亡，你会被唤醒并得知一个问题：如果回答正确，改为你存活。"
+  },
+  {
+    "id": "13_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/13_goldapple.png",
+    "name": " 阿芙洛狄忒",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶的赫拉。初始携带金苹果。[必定出场、无法转换阵营]"
+  },
+  {
+    "id": "29_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/29_goldapple.png",
+    "name": "政客",
+    "team": "outsider",
+    "ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。"
+  },
+  {
+    "id": "22_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/22_goldapple.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "30_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/30_goldapple.png",
+    "otherNightReminder": "在夜晚的任意时机，你都可以决定杀死修补匠。这里只是一个提示以免遗忘修补匠。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "修补匠",
+    "team": "outsider",
+    "ability": "你随时可能死亡。",
+    "otherNight": 14
+  },
+  {
+    "id": "21_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/21_goldapple.png",
+    "otherNightReminder": "技能卡在这个夜间结算顺位结算。多张妙手空空，先买的先使用。",
+    "name": "技能卡结算",
+    "team": "outsider",
+    "ability": "非角色牌；技能卡在这个夜间结算顺位结算。多张妙手空空，先买的先使用。",
+    "otherNight": 8
+  },
+  {
+    "id": "19_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/19_goldapple.png",
+    "firstNightReminder": "唤醒怪盗，让他选择一个角色",
+    "otherNightReminder": "唤醒怪盗，让他选择一个角色",
+    "remindersGlobal": [
+      "妙手空空",
+      "起死回生",
+      "荆棘护体",
+      "英雄归来",
+      "恶魔卡"
+    ],
+    "name": "怪盗",
+    "team": "minion",
+    "ability": "每个夜晚，你可以选择一个角色：如果该角色不在场，你获得该角色的能力直到下次选择。如果因此获得了恶魔的能力，所有恶魔玩家不会因其自身能力而被唤醒。当你获得能力时，所有玩家都会得知。",
+    "firstNight": 11,
+    "otherNight": 2
+  },
+  {
+    "id": "17_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/17_goldapple.png",
+    "firstNightReminder": "巫婆使用能力",
+    "otherNightReminder": "巫婆使用能力",
+    "reminders": [
+      "提出请求",
+      "失去能力"
+    ],
+    "remindersGlobal": [
+      "邪恶"
+    ],
+    "name": "巫婆",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一名玩家并向他提出一项请求：如果请求没有被满足，你们可能会在白天死亡并转变为邪恶。",
+    "firstNight": 15,
+    "otherNight": 7
+  },
+  {
+    "id": "15_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/15_goldapple.png",
+    "firstNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "otherNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "投毒者",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：他在当晚和明天白天中毒。",
+    "firstNight": 13,
+    "otherNight": 4
+  },
+  {
+    "id": "18_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/18_goldapple.png",
+    "firstNightReminder": "唤醒教父，对他展示外来者角色标记，告诉他有哪些外来者在场。",
+    "otherNightReminder": "如果今天白天有外来者死亡，唤醒教父，让他攻击一名玩家。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "教父",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]",
+    "firstNight": 14,
+    "otherNight": 6
+  },
+  {
+    "id": "14_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/14_goldapple.png",
+    "otherNightReminder": "赫拉使用恶魔卡",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "赫拉",
+    "team": "demon",
+    "ability": "初始携带金苹果。所有邪恶玩家共同唤醒。每个夜晚*选择一个其他恶魔，获得其能力直到你下次选择。你杀死玩家后你会获得他的金苹果。当你首次死亡时你会在当晚复活。[必定出场]",
+    "otherNight": 5
+  },
+  {
+    "id": "23_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/23_goldapple.png",
+    "reminders": [
+      "1",
+      "2",
+      "3",
+      "选择生",
+      "选择死"
+    ],
+    "name": "哈迪寂亚",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择三名玩家（所有玩家会得知你选了谁）：他们分别秘密决定自己的生死，然后如果他们都存活则都死亡。"
+  },
+  {
+    "id": "24_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/24_goldapple.png",
+    "reminders": [
+      "死亡",
+      "中毒",
+      "中毒"
+    ],
+    "name": "诺-达鲺",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。"
+  },
+  {
+    "id": "16_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/16_goldapple.png",
+    "name": "奥喇剌",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。 被你杀死的外来者保留能力并使一名与其相邻的镇民中毒。[+1外来者]"
+  },
+  {
+    "id": "25_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/25_goldapple.png",
+    "name": "云顶之役",
+    "team": "fabled",
+    "ability": "原双方获胜条件删除，改为终局结算分数更多的队伍获胜。游戏第四天，对所有死亡玩家进行暗拍拍卖，拍得者秘密决定其生死，全部拍完后一起公布。随后对无主苹果进行明拍，拍得后立即宣布给谁。最后终局结算。"
+  },
+  {
+    "id": "26_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/26_goldapple.png",
+    "remindersGlobal": [
+      "金苹果"
+    ],
+    "name": "金苹果之战",
+    "team": "fabled",
+    "ability": "金苹果共三个，赫拉/阿芙洛狄忒/雅典娜初始各持有一颗，白天可以转赠，死亡会掉落。终局计分：金苹果分 8/18/30分（根据团队持有的数量）；存活玩家分：雅典娜8分，其他镇民4分，阿芙洛狄特10分，其他外来6分；赫拉25分，爪牙15分。"
+  },
+  {
+    "id": "27_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/27_goldapple.png",
+    "name": "金币的游戏",
+    "team": "fabled",
+    "ability": "玩家初始4金币，上限20。每个黎明存活玩家获得2金币（红方4金）。每名玩家白天可进行1次转增，存活玩家可用金币购买技能卡并于当晚使用（效果仍受毒/酒影响）。"
+  },
+  {
+    "id": "28_goldapple",
+    "image": "https://www.bloodstar.xyz/p/westwind/Goldapple/28_goldapple.png",
+    "name": "技能商店",
+    "team": "fabled",
+    "ability": "每天每人限一张，红方买卡打五折：①妙手空空：8c/偷窃一名玩家全部金币和金苹果，或拾取全部无主苹果。②自我诊断：4c/你得知自己是否中毒/醉酒。③荆棘护体：6c/反弹当晚卡牌效果。④起死回生：6c/如果今晚你死亡，你复活。⑤英雄归来：10c/选择一名死亡玩家复活。"
+  }
+]

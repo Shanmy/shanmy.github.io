@@ -1,0 +1,136 @@
+[
+{
+		"id": "_meta",
+		"logo": "https://s21.ax1x.com/2025/07/01/pVut6L4.png",
+		"name": "丧彪是猫",
+		"author": "棒棒糖",
+		"state": [
+			{
+				"stateName": "醉酒与中毒",
+				"stateDescription": "醉酒或中毒的玩家会失去能力，但会认为自己仍具有能力，说书人会做出这些玩家仍然具有能力的行为。如果醉酒或中毒玩家的角色能力会给他提供信息，说书人可能会给出错误信息。醉酒或中毒的玩家不会得知自己醉酒或中毒。"
+			}
+		]
+	},
+
+    {
+        "id": "fortune_teller"
+    },
+    {
+        "id": "undertaker"
+    },
+    {
+        "id": "monk"
+    },
+    {
+        "id": "slayer"
+    },
+    {
+        "id": "chambermaid"
+    },
+    {
+        "id": "gambler"
+    },
+    {
+        "id": "gossip"
+    },
+    {
+        "id": "dreamer"
+    },
+    {
+        "id": "mathematician"
+    },
+    {
+        "id": "village_idiot"
+    },
+    {
+        "id": "knight"
+    },
+    {
+        "id": "drunk"
+    },
+    {
+        "id": "recluse"
+    },
+    {
+        "id": "tinker"
+    },
+    {
+        "id": "nichen"
+    },
+    {
+        "id": "scarlet_woman"
+    },
+    {
+        "id": "assassin"
+    },
+    {
+        "id": "yangguren"
+    },
+    {
+        "id": "gudiao"
+    },
+    {
+        "id": "po"
+    },  
+  {
+        "id": "witch"
+    },
+    {
+        "id": "yaggababble"
+    },
+    {
+        "id": "dianyuzhang"
+    },
+    {
+        "id": "diyRole1",
+        "name": "祈祷者",
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择今天白天被处决的玩家他保留能力。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "200",
+        "otherNight": "300",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "祈祷",
+            "祝福"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/07/04/pVKwgh9.png"
+    },
+    {
+        "id": "diyRole2",
+        "name": "养蜂人",
+        "ability": "一名邪恶玩家会被当作善良阵营、镇民或外来者。每局游戏限一次，如果你公开猜测到这名玩家是谁，你的阵营获胜。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "养蜂"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/07/01/pVuJxAI.png"
+    },
+    {
+        "id": "diyRole3",
+        "name": "丧彪",
+        "ability": "每个夜晚，你要选择一名玩家，他会被当作邪恶的丧彪直到下个黄昏。同时所有邪恶玩家也会被当作恶魔。\n每当有一名邪恶玩家死于白天，当晚你可以选择一名玩家，他死亡。[-1爪牙，+2邪恶玩家]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "6600",
+        "otherNight": "7300",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "爪痕"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://s21.ax1x.com/2025/07/04/pVKwRpR.png"
+    }
+]

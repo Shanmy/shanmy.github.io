@@ -1,0 +1,498 @@
+[
+    {
+        "id": "_meta",
+        "name": "颓败残局",
+        "author": "Subdog&Sionar",
+        "logo": "https://i.postimg.cc/4nR3kYCy/LOGO.png"
+    },
+    {
+        "firstNightReminder": "向王展示代表当晚得知数字的手势。",
+        "firstNight": 12600,
+        "otherNightReminder": "向王展示代表当晚得知数字的手势。",
+        "otherNight": 10400,
+        "name": "王",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你会得知一个数字，默认为0。该数字会因其他角色能力而改变。中毒或醉酒的玩家可能会让数字出现合理的错误改变。",
+        "image": "https://i.postimg.cc/8cHQs1m3/image.png",
+        "id": "Wang_ 123",
+        "flavor": ""
+    },
+    {
+        "firstNightReminder": "如果与王后邻近的存活玩家中有邪恶玩家，标记+1。",
+        "firstNight": 9200,
+        "otherNightReminder": "如果王后点头，向他展示手势表示与他邻近的存活玩家中是否有邪恶玩家，然后不标记+1。如果他摇头，如果与王后邻近的存活玩家中有邪恶玩家，标记+1。",
+        "otherNight": 9000,
+        "name": "王后",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "+1",
+            "限一次"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，如果与你邻近的存活玩家中有邪恶玩家，王得知的数字会+1。每局游戏限一次，在夜晚时*，你可以选择使用能力：当晚改为你得知此信息，且王得知的数字不会+1。",
+        "image": "https://i.postimg.cc/fLYhn7tM/image.png",
+        "id": "WangHou_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "让象指向一名玩家，如果该玩家当晚在象之前因自身能力被唤醒，标记+1。",
+        "firstNight": 9300,
+        "otherNightReminder": "如果象点头，标记全体清醒健康，并标记死亡，在黎明时标记死亡帷幕。让象指向一名玩家，如果该玩家当晚在象之前因自身能力被唤醒，标记+1。",
+        "otherNight": 9100,
+        "name": "象",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "+1",
+            "全体清醒健康",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你要选择一名玩家：如果今晚他在你之前因自身能力而被唤醒，王得知的数字会+1。每局游戏限一次，在夜晚时*，你可以选择使用能力：当晚所有存活的善良玩家都清醒且健康，然后你会在黎明时死亡。",
+        "image": "https://i.postimg.cc/2jFf0wNw/image.png",
+        "id": "Xiang_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "让马指向一名玩家，如果该玩家是镇民，标记+1。",
+        "firstNight": 9400,
+        "otherNightReminder": "让马指向一名玩家，如果马点头，且该玩家不是恶魔，标记醉酒；如果该玩家是镇民，标记+1。",
+        "otherNight": 9200,
+        "name": "马",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "+1",
+            "限一次",
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你要选择一名玩家：如果他是镇民，王得知的数字会+1。每局游戏限一次，在夜晚时*，你可以选择使用能力：如果你当晚选择的玩家不是恶魔，他醉酒直到下个黄昏。",
+        "image": "https://i.postimg.cc/xdwS4pds/image.png",
+        "id": "Ma_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "让车指向一名玩家，如果该玩家是爪牙，标记+1。",
+        "firstNight": 9500,
+        "otherNightReminder": "如果车点头，标记王车易位。让车指向一名玩家，如果该玩家是爪牙，标记+1。",
+        "otherNight": 9300,
+        "name": "车",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "+1",
+            "限一次",
+            "王车易位"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你要选择一名玩家：如果他是爪牙，王得知的数字会+1。",
+        "image": "https://i.postimg.cc/c1QdVWwf/image.png",
+        "id": "Ju_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "让食客指向一名玩家，标记改变目标。",
+        "firstNight": 3500,
+        "otherNightReminder": "让食客指向一名玩家，标记改变目标。",
+        "otherNight": 800,
+        "name": "食客",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "改变目标"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你要选择除你以外的一名玩家：任何在夜晚使用自身能力选择他的其他玩家，会改为选中你作为替代，直到下个黄昏。",
+        "image": "https://i.postimg.cc/tgZjDG9Z/image.png",
+        "id": "ShiKe_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "指向一名玩家，该玩家是王或被当作王。",
+        "firstNight": 8500,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "传令官",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "在你的首个夜晚，你会得知一名玩家：他是王。",
+        "image": "https://i.postimg.cc/SRqbyXCC/image.png",
+        "id": "ChuanLingGan_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "指向三名玩家，其中至少有一名玩家是邪恶的。",
+        "firstNight": 9100,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "抄写员",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "得知"
+        ],
+        "remindersGlobal": [],
+        "ability": "在你的首个夜晚，你会得知三名玩家：其中至少有一名玩家是邪恶的。",
+        "image": "https://i.postimg.cc/x8yYHGn6/image.png",
+        "id": "ChaoXieYuan_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "让修士指向一名玩家，标记该玩家已选择。",
+        "firstNight": 7400,
+        "otherNightReminder": "如果修士或标记玩家死亡，向他们之中的另一名玩家展示死亡玩家的角色标记。",
+        "otherNight": 7300,
+        "name": "修士",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "已选择",
+            "得知"
+        ],
+        "remindersGlobal": [],
+        "ability": "在你的首个夜晚，你要选择除你以外的一名玩家：如果你们中有人死亡，另一名玩家会在当晚得知他的角色。",
+        "image": "https://i.postimg.cc/L8hK6FYC/image.png",
+        "id": "XiuShi_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "酒侍",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "每个白天，你可以公开为一名玩家侍酒。如果他同意且与你为对立阵营，他立刻被处决。如果你中毒，改为他同意且与你为同一阵营时，他立刻被处决。",
+        "image": "https://i.postimg.cc/vZSyWZww/image.png",
+        "id": "JiuShi_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "如果王死亡，王子变为对应的角色和阵营，但他不会得知阵营转变，当他变成伊斯巴达登时会以为自己变成王。",
+        "otherNight": 7100,
+        "name": "王子",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "是王子"
+        ],
+        "remindersGlobal": [],
+        "ability": "如果王死亡，你变成他的角色，且转变为对应的阵营，但你不会得知阵营转变。如果你因此变成伊斯巴达登，你会以为自己变成王，然后你造成的死亡由说书人决定。",
+        "image": "https://i.postimg.cc/hPDR6dSq/image.png",
+        "id": "WangZi_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "如果王在夜晚死亡，让公主指向一名玩家，向他展示该玩家的角色标记。",
+        "otherNight": 7200,
+        "name": "公主",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "驾崩"
+        ],
+        "remindersGlobal": [],
+        "ability": "每局游戏限一次，如果王在夜晚死亡，你会被唤醒，然后你要选择一名玩家：你会得知他的角色。",
+        "image": "https://i.postimg.cc/CxKYBft4/image.png",
+        "id": "GongZhu_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "总管",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "王不会因处决以外的原因而死亡。",
+        "image": "https://i.postimg.cc/YqdBHC9L/image.png",
+        "id": "ZhongGuan_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "伪王",
+        "team": "outsider",
+        "setup": true,
+        "reminders": [],
+        "remindersGlobal": [
+            "是伪王"
+        ],
+        "ability": "你以为你是王，且会被当作王。每个夜晚，你会得知一个数字，必定不同于王应得知的正确数字。",
+        "image": "https://i.postimg.cc/bwYYx5Gk/image.png",
+        "id": "WeiWang_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "兵",
+        "team": "outsider",
+        "setup": false,
+        "reminders": [
+            "是兵"
+        ],
+        "remindersGlobal": [],
+        "ability": "你拥有一个不在场的非王的镇民角色能力，但你不知道是什么。每个夜晚，你可能会被唤醒以选择玩家，即使你的能力需要每晚醒来，或者不需要醒来。",
+        "image": "https://i.postimg.cc/hG5GP0tx/image.png",
+        "id": "Bing_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "信使",
+        "team": "outsider",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "当你首次被提名时，如果提名者为非王的善良玩家，你的阵营落败。",
+        "image": "https://i.postimg.cc/c40dWzB2/image.png",
+        "id": "XinShi_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "如果少女死亡，标记王醉酒。",
+        "otherNight": 300,
+        "name": "少女",
+        "team": "outsider",
+        "setup": false,
+        "reminders": [
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "ability": "如果你死亡，真正的王在当晚醉酒，直到下个黄昏。",
+        "image": "https://i.postimg.cc/FK89QsTV/image.png",
+        "id": "QingFu_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "向篡位者展示一个不在场的爪牙角色标记。",
+        "firstNight": 5600,
+        "otherNightReminder": "如果所有的王都已死亡，邪恶阵营获胜。如果莫甘娜在场，改为篡位者独自获胜。",
+        "otherNight": 13000,
+        "name": "篡位者",
+        "team": "minion",
+        "setup": true,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "在你的首个夜晚，你会得知一个不在场的爪牙角色。在黎明时，如果所有的王都已死亡，邪恶阵营获胜。如果莫甘娜在场，且所有的王都已死亡，改为你独自获胜。[+1外来者]",
+        "image": "https://i.postimg.cc/6Qy9SGfQ/image.png",
+        "id": "CuanWeiZhe_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "骗子拇指向上代表是，拇指向下代表否。",
+        "firstNight": 9600,
+        "otherNightReminder": "骗子拇指向上代表是，拇指向下代表否。",
+        "otherNight": 9400,
+        "name": "骗子",
+        "team": "minion",
+        "setup": false,
+        "reminders": [
+            "+1",
+            "-1"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你要选择是或否：如果选择是，王得知的数字会+1，如果选择否，王得知的数字会-1（最小为0）。",
+        "image": "https://i.postimg.cc/76zqP8c8/image.png",
+        "id": "PianZi_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "让共犯指向一名玩家，如果该玩家不是王，标记中毒。",
+        "firstNight": 4700,
+        "otherNightReminder": "让共犯指向一名玩家，如果该玩家不是王，标记中毒。",
+        "otherNight": 1300,
+        "name": "共犯",
+        "team": "minion",
+        "setup": false,
+        "reminders": [
+            "中毒"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚，你要选择一名玩家：如果他不是王，他中毒直到下个黄昏。",
+        "image": "https://i.postimg.cc/28GrSxH6/image.png",
+        "id": "GongFan_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "如果今天阴险酒侍的侍酒被拒绝，且酒侍在场，唤醒阴险酒侍并让他指向一名玩家，该玩家死亡。",
+        "otherNight": 6200,
+        "name": "阴险酒侍",
+        "team": "minion",
+        "setup": false,
+        "reminders": [
+            "今夜暗杀",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个白天，你可以公开为一名玩家侍酒。如果他同意且与你为对立阵营，他立刻被处决。如果酒侍在场且你的侍酒被拒绝，当晚你要选择一名玩家：他死亡。你可能会被当作善良的酒侍。",
+        "image": "https://i.postimg.cc/cCN0rkyK/image.png",
+        "id": "YinXianDeJiuShi_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "伊斯巴达登指向一名玩家，该玩家死亡。",
+        "otherNight": 3900,
+        "name": "伊斯巴达登",
+        "team": "demon",
+        "setup": false,
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。你会被当作王。且得知真正的王每晚应得知的数字。",
+        "image": "https://i.postimg.cc/KcLYxBSk/image.png",
+        "id": "JuRen_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "飞龙指向一名玩家，该玩家死亡。如果飞龙点头，且该玩家是存活的，改为该玩家及与该玩家邻近的玩家死亡。",
+        "otherNight": 4000,
+        "name": "飞龙",
+        "team": "demon",
+        "setup": false,
+        "reminders": [
+            "死亡",
+            "限一次"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。每局游戏限一次，你可以改为选择一名存活玩家：他和与他邻近的玩家都死亡。",
+        "image": "https://i.postimg.cc/7hvYSY7Z/image.png",
+        "id": "FeiLong_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "贾巴沃克指向一名玩家，他死亡。如果该玩家与魇魔邻近，标记全体善良中毒。",
+        "otherNight": 4100,
+        "name": "贾巴沃克",
+        "team": "demon",
+        "setup": true,
+        "reminders": [
+            "死亡",
+            "全体善良中毒"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式杀死了一名与你邻近的玩家，所有善良玩家都会中毒直到下个黄昏。[+1外来者]",
+        "image": "https://i.postimg.cc/xT21C8ns/image.png",
+        "id": "YanMo_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "所有非王的玩家转变为邪恶阵营，但他们不自知。唤醒王，告知他莫甘娜在场。",
+        "firstNight": 700,
+        "otherNightReminder": "莫甘娜指向一名玩家，他死亡。",
+        "otherNight": 4200,
+        "name": "莫甘娜",
+        "team": "demon",
+        "setup": false,
+        "reminders": [
+            "死亡",
+            "邪恶"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。王会知道莫甘娜在场。非王的玩家都会转变为邪恶阵营，但他们会仍然以为自己是初始的阵营。如果所有的王都死亡，善良阵营获胜。如果小于等于五名玩家存活时，所有的王在提名中只投票给你，善良阵营获胜。",
+        "image": "https://i.postimg.cc/BQBQ13vJ/image.png",
+        "id": "MoGanNa_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "领主",
+        "team": "traveler",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "每个白天，你可以公开选择一名其他玩家：如果他不是王且不是恶魔，他变成马直到下个黎明。",
+        "image": "https://i.postimg.cc/kGmKdW2R/3-2.png",
+        "id": "LingZhu_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "",
+        "otherNight": 0,
+        "name": "游歌者",
+        "team": "traveler",
+        "setup": false,
+        "reminders": [
+            "两票"
+        ],
+        "remindersGlobal": [],
+        "ability": "每个白天，在提名开始前，你可以演唱关于一名其他玩家的一段歌词，然后他今天白天的投票算作两票。",
+        "image": "https://i.postimg.cc/j24NqCfg/3.png",
+        "id": "ChanMeiZhe_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "向伊斯巴达登展示代表当晚王得知数字的手势。",
+        "firstNight": 12700,
+        "otherNightReminder": "向伊斯巴达登展示代表当晚王得知数字的手势。",
+        "otherNight": 10500,
+        "name": "伊斯巴达登的信息",
+        "team": "DDDemon_JuRenDeXinXi",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "ability": "提示伊斯巴达登应得知信息",
+        "image": "https://i.postimg.cc/MTfpcjnL/image.png",
+        "id": "JuRenDeXinXI_ 123",
+        "flavor": " "
+    },
+    {
+        "firstNightReminder": "",
+        "firstNight": 0,
+        "otherNightReminder": "按象、马、车的顺序唤醒他们，并询问他们是否使用自己的限次能力。",
+        "otherNight": 600,
+        "name": "茵席之乱",
+        "team": "fabled",
+        "setup": true,
+        "reminders": [
+            "今夜行动"
+        ],
+        "remindersGlobal": [],
+        "ability": "在初始设置时，至少会有一个王或被当作王的角色在场。象、马、车可以在夜晚提前使用自己的限次能力。只有当他们决定使用限次能力时才被当作一次唤醒。",
+        "image": "https://i.postimg.cc/bvJJh5pp/image.png",
+        "id": "ZhoGaoWuShang_ 123",
+        "flavor": " "
+    }
+]

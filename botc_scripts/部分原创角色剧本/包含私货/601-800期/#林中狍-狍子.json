@@ -1,0 +1,154 @@
+[	
+{
+		"id": "_meta",
+		"logo": "https://t.tutu.to/img/72i6B",
+		"name": "林中狍",
+		"author": "狍子",
+		"state": [
+			{
+				"stateName": "醉酒与中毒",
+				"stateDescription": "醉酒或中毒的玩家会失去能力，但会认为自己仍具有能力，说书人会做出这些玩家仍然具有能力的行为。如果醉酒或中毒玩家的角色能力会给他提供信息，说书人可能会给出错误信息。醉酒或中毒的玩家不会得知自己醉酒或中毒。"
+			}
+		]
+	},
+
+    {
+        "id": "monk"
+    },
+    {
+        "id": "gambler"
+    },
+    {
+        "id": "clockmaker"
+    },
+    {
+        "id": "oracle"
+    },
+    {
+        "id": "seamstress"
+    },
+    {
+        "id": "philosopher"
+    },
+    {
+        "id": "noble"
+    },
+    {
+        "id": "pixie"
+    },
+    {
+        "id": "acrobat"
+    },
+    {
+        "id": "qintianjian"
+    },
+    {
+        "id": "bingbi"
+    },
+    {
+        "id": "drunk"
+    },
+    {
+        "id": "moonchild"
+    },
+    {
+        "id": "zealot"
+    },
+    {
+        "id": "ogre"
+    },
+    {
+        "id": "poisoner"
+    },
+    {
+        "id": "scarlet_woman"
+    },
+    {
+        "id": "godfather"
+    },
+    {
+        "id": "witch"
+    },
+    {
+        "id": "gudiao"
+    },
+    {
+        "id": "imp"
+    },
+    {
+        "id": "vigormortis"
+    },
+    {
+        "id": "no_dashii"
+    },
+    {
+        "id": "diyRole1",
+        "name": "拷问官",
+        "ability": "每个白天，你可以公开选择一名玩家或说书人:询问他一个是与否的问题(是/否/我不知道)，当晚你会得知他有没有撒谎;如果选择的玩家为恶魔或外来者，之后你开始醉酒。【+1外来者】",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "12001",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "撒谎",
+            "未撒谎"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://s21.ax1x.com/2025/06/25/pVe7Vds.png"
+    },
+    {
+        "id": "diyRole2",
+        "name": "马厩男孩",
+        "ability": "每个夜晚，你会得知一个在场的角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "8700",
+        "otherNight": "12000",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "被得知"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/06/25/pVeTLse.png"
+    },
+    {
+        "id": "diyRole3",
+        "name": "烛阴",
+        "ability": "每个夜晚*，你要选择一名玩家:他死亡。如果你杀死了一名爪牙或外来者，那么你可以再选择一个镇民角色，如果他在场:他死亡。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "7900",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "死亡",
+            "双刀"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/06/28/pVmvS61.png"
+    },
+    {
+        "id": "diyRole4",
+        "name": "欢乐制造机",
+        "ability": "至多有一名玩家会在本场游戏中成为其他剧本外的镇民角色（可以是酒鬼）。（只有本人知道是什么角色）\n这个角色如果存在恶魔会得知这个情况。\n这个角色如果不存在说书人可以额外提供一个其他板子的伪装给邪恶玩家。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "200",
+        "otherNight": "300",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "欢乐"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://s21.ax1x.com/2025/06/25/pVeboin.png"
+    }
+]

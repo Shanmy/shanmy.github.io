@@ -1,0 +1,105 @@
+[
+  {
+    "id": "_meta",
+    "author": "Ben and Jams",
+    "name": "宏伟岩廊",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/the_grand_tor/_meta.png",
+    "bootlegger": [
+      "炼金术士&遗忘之门相克规则：炼金术士不会得知自己获得了什么爪牙能力。",
+      "Tor角色发生改变的玩家只会得知自己的角色发生了变化。如果玩家选择到了非法目标，说书人会让他重新选择。"
+    ]
+  },
+  {
+    "id": "chef"
+  },
+  {
+    "id": "noble"
+  },
+  {
+    "id": "empath"
+  },
+  {
+    "id": "snakecharmer"
+  },
+  {
+    "id": "mathematician"
+  },
+  {
+    "id": "monk"
+  },
+  {
+    "id": "gambler"
+  },
+  {
+    "id": "lycanthrope"
+  },
+  {
+    "id": "seamstress"
+  },
+  {
+    "id": "philosopher"
+  },
+  {
+    "id": "princess"
+  },
+  {
+    "id": "alchemist"
+  },
+  {
+    "id": "farmer"
+  },
+  {
+    "id": "butler"
+  },
+  {
+    "id": "ogre"
+  },
+  {
+    "id": "lunatic"
+  },
+  {
+    "id": "puzzlemaster"
+  },
+  {
+    "id": "devilsadvocate"
+  },
+  {
+    "id": "harpy"
+  },
+  {
+    "id": "pithag"
+  },
+  {
+    "id": "goblin"
+  },
+  {
+    "id": "pukka"
+  },
+  {
+    "id": "imp"
+  },
+  {
+    "id": "fanggu"
+  },
+  {
+    "id": "lleech"
+  },
+  {
+    "id": "tor"
+  },
+  {
+    "id": "bootlegger"
+  },
+  {
+    "id": "1shizhanyachao",
+    "name": "炼金术士&遗忘之门",
+    "team": "jinxes",
+    "ability": "炼金术士不会得知自己获得了什么爪牙能力。"
+  },
+  {
+    "id": "2shizhanyachao",
+    "name": "遗忘之门",
+    "team": "jinxes",
+    "ability": "角色发生改变的玩家只会得知自己的角色发生了变化。如果玩家选择到了非法目标，说书人会让他重新选择。"
+  }
+]

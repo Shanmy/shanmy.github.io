@@ -1,0 +1,287 @@
+[
+  {
+    "id": "_meta",
+    "name": "坠临世间",
+    "author": "洛甜蕾",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/9/91/8g3crafxzeywnj1uqij8wi0qk4vqyz4.png/1200px-%E5%9D%A0%E4%B8%B4%E4%B8%96%E9%97%B4logo.png",
+    "almanac": "祝洛甜蕾老师生日快乐喵~   Josn有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/c/cb/l9r8xuoxq0jfxc28zjj19qdl3ls82bj.png/1200px-%E9%95%87%E6%B0%91_%E7%AD%BE%E5%91%98_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "firstNightReminder": "唤醒签员，对他展示一个除签员以外的在场角色标记，该角色标记所对应的玩家必须与邪恶玩家邻座。",
+    "reminders": [
+      "得知"
+    ],
+    "name": "签员",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知除你以外的一个在场角色：他会与至少一名邪恶玩家邻座。（旅行者的存在不包含在内）",
+    "firstNight": 3700
+  },
+  {
+    "id": "1_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a6/duttrwlwawvxiqzttdxk8btqi0ha125.png",
+    "firstNightReminder": "唤醒共情者，对他用手势比划数字来告知他与他邻近的存活玩家中有几人是邪恶玩家。",
+    "otherNightReminder": "唤醒共情者，对他用手势比划数字来告知他与他邻近的存活玩家中有几人是邪恶玩家。",
+    "name": "共情者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知与你邻近的两名存活的玩家中邪恶玩家的数量。",
+    "firstNight": 3800,
+    "otherNight": 12
+  },
+  {
+    "id": "2_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e8/qjwy9igjkubwnqrk2p4sd2fs4vj59mo.png",
+    "firstNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+    "otherNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+    "name": "筑梦师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 3900,
+    "otherNight": 13
+  },
+  {
+    "id": "3_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/0d9uthaidhlal5rz0zjx2tvzzrviqdo.png",
+    "firstNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "otherNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 4100,
+    "otherNight": 16
+  },
+  {
+    "id": "4_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/9/92/5ha1krpditlc82m7vthwg4fwltd4nsy.png/1200px-%E9%95%87%E6%B0%91_%E6%97%A0%E7%95%8C%E8%A1%8C%E8%80%85_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "firstNightReminder": "唤醒无界行者，让他选择至多三名除自己以外的玩家。用手势比划数字来告诉他今天这些玩家中有多少存活玩家的能力未正常生效。",
+    "otherNightReminder": "唤醒无界行者，让他选择至多三名除自己以外的玩家。用手势比划数字来告诉他今天这些玩家中有多少存活玩家的能力未正常生效。",
+    "reminders": [
+      "未正常生效"
+    ],
+    "name": "无界行者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的至多三名玩家：你会得知他们中有多少名存活玩家的能力未正常生效。（从上个黎明到你被唤醒时）",
+    "firstNight": 4000,
+    "otherNight": 15
+  },
+  {
+    "id": "5_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c7/taxo86woqzpyk15pa9d92kfmw58erqh.png",
+    "otherNightReminder": "唤醒神谕者，对他用手势比划数字来告知他当前死亡玩家中邪恶玩家的数量。",
+    "name": "神谕者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知有多少名死亡的玩家是邪恶的。",
+    "otherNight": 14
+  },
+  {
+    "id": "6_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0a/55q4nfyb9gftn9jiujtt49ti2qa33h6.png",
+    "otherNightReminder": "唤醒赌徒，让他进行猜测。如果猜测错误，他死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "赌徒",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测该玩家的角色：如果你猜错了，你会死亡。",
+    "otherNight": 5
+  },
+  {
+    "id": "7_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/3/3a/2tl7xphrgjnq596d7mulh18qe4s6o7b.png/1200px-%E9%95%87%E6%B0%91_%E8%88%B0%E9%95%BF_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "otherNightReminder": "如果这是舰长的第二个夜晚，视舰长的生死状态，决定是唤醒舰长让他发动能力，还是唤醒一名存活的镇民玩家告知他角色变化。",
+    "reminders": [
+      "完成远航"
+    ],
+    "name": "舰长",
+    "team": "townsfolk",
+    "ability": "在你的第二个夜晚，如果你是存活的，你会被唤醒、选择一名玩家以得知他的一项角色能力类别；如果你在当晚死亡，一名存活的镇民会变成舰长。",
+    "otherNight": 11
+  },
+  {
+    "id": "8_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/chh8x7dptz128a42p7f0g5c0qn8o063.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "9_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/4/4a/taoecjbn37f2ymidyzn7i3yfehxzg8f.png/1200px-%E9%95%87%E6%B0%91_%E8%A8%80%E7%81%B5%E4%BD%BF_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "name": "言灵使",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下告知说书人一名玩家：要么你会得知一条有关于他未来的可能性，要么你会得知一条有关于他过去的既定现实。"
+  },
+  {
+    "id": "10_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/bf/0wf6zizpzk61n1txjo233fembq7utl3.png",
+    "name": "戏法师",
+    "team": "townsfolk",
+    "ability": "'每个白天，你可以公开进行一次谁是爪牙，谁是恶魔的猜测。如果你猜对，善良阵营获胜。"
+  },
+  {
+    "id": "11_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9c/5u4qpg1fv4x7nfx0b632914v9hoq6vf.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "艺术家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以私下询问说书人一个是非问题，你会得知该问题的答案。"
+  },
+  {
+    "id": "12_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/ijn6f8qa0qv7sb3g6cd28u5h38mlm3l.png",
+    "otherNightReminder": "如果贤者被恶魔杀死，唤醒贤者，对他指向两名玩家。其中之一是杀死贤者的恶魔。",
+    "name": "贤者",
+    "team": "townsfolk",
+    "ability": "如果恶魔杀死了你，在当晚你会被唤醒并得知两名玩家，其中一名是杀死你的那个恶魔。",
+    "otherNight": 10
+  },
+  {
+    "id": "13_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/d/d1/8gqzb5gixifkket22q0deq18vbeoka2.png/1200px-%E5%A4%96%E6%9D%A5%E8%80%85_%E6%B0%B8%E4%B8%96%E5%B0%91%E5%B9%B4_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "firstNightReminder": "唤醒永世少年并向他提供一条任务。随后在恶魔信息环节对恶魔提供永世少年的相关信息。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "永世少年",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，你和恶魔会得知一条相同的任务。即使你已死亡，你在完成任务时独自获胜，在邪恶阵营完成任务（或者你们同时完成）时中毒。",
+    "firstNight": 2200
+  },
+  {
+    "id": "14_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/7/79/frkbbpzmdigztcqoc2gw2ufsd0wfo1h.png/1200px-%E5%A4%96%E6%9D%A5%E8%80%85_%E7%B3%95%E7%82%B9%E5%B8%88_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "otherNightReminder": "如果这是糕点师得知她死亡后的首个夜晚，唤醒糕点师，让她选择一名玩家。随后进行相关操作。",
+    "reminders": [
+      "清醒且健康",
+      "行动两次"
+    ],
+    "name": "糕点师",
+    "team": "outsider",
+    "ability": "在你得知你死亡后的首个夜晚，你要选择一名玩家：如果他是善良的，他解除并免受醉酒和中毒影响，反之本局游戏恶魔的能力可以额外生效一次。",
+    "otherNight": 4
+  },
+  {
+    "id": "15_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/7/7b/1oxxdkxoperth19igrrki7fp0hgi0ny.png/1200px-%E5%A4%96%E6%9D%A5%E8%80%85_%E7%B2%BE%E7%81%B5%E9%B9%BF_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "firstNightReminder": "唤醒所有爪牙选择由谁照看精灵鹿。随后，决定照看精灵鹿的玩家会遭受什么负面效果。",
+    "otherNightReminder": "重新决定照看精灵鹿的玩家会遭受什么负面效果。",
+    "remindersGlobal": [
+      "醉酒或中毒",
+      "互动干扰"
+    ],
+    "setup": true,
+    "name": "精灵鹿",
+    "team": "outsider",
+    "ability": "在首个夜晚，所有爪牙要秘密决定由哪名玩家来照看精灵鹿并且“是外来者”。他要么醉酒或中毒，要么会被当作错误的阵营和角色。  [+1镇民]",
+    "firstNight": 3300,
+    "otherNight": 3
+  },
+  {
+    "id": "16_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/9/9a/fy2dhv7x46ytj76r85g0fnfwepn1fv4.png/1200px-%E5%A4%96%E6%9D%A5%E8%80%85_%E7%99%BD%E8%8E%B2%E8%8A%B1_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "firstNightReminder": "唤醒一名除白莲花以外的非旅行者善良玩家，向他提供一条可对可错或不分对错的信息。",
+    "reminders": [
+      "疯狂"
+    ],
+    "name": "白莲花",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，除你及旅行者以外的一名善良玩家会得知一条额外信息。他需要“疯狂”地证明这条信息是正确的，不然他可能被处决。",
+    "firstNight": 3600
+  },
+  {
+    "id": "17_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/a/aa/r5ynxe8ftggbtgitwvtljfbc73yn3nm.png/1200px-%E7%88%AA%E7%89%99_%E9%AD%85%E8%9D%B6%E5%A5%B3%E7%8E%8B_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "reminders": [
+      "限一次"
+    ],
+    "setup": true,
+    "name": "魅蝶女王",
+    "team": "minion",
+    "ability": "被恶魔使用其自身能力杀死的外来者改为变成邪恶的那个恶魔且那个恶魔代替他死亡，但每局游戏仅能成功转化一次。  [外来者\u003C2时，+1外来者]"
+  },
+  {
+    "id": "18_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/b/b7/byfvem9hwnwp1786r65ke1uf4f9l9yt.png/1200px-%E7%88%AA%E7%89%99_%E7%8E%AF%E8%84%91_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "name": "环脑",
+    "team": "minion",
+    "ability": "如果小于等于六名玩家存活时（旅行者不计算在内）恶魔在夜晚死亡，再最后进行一个白天。在那个白天如果你没有被处决，邪恶阵营获胜。"
+  },
+  {
+    "id": "19_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/c/cf/0qlb1u0qen0fxuigk13nfxoc2gvqn2k.png/1200px-%E7%88%AA%E7%89%99_%E5%A6%96%E7%A5%9E%E5%8F%B8_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "firstNightReminder": "唤醒妖神司，对她展示所有在场的外来者角色标记，然后让她选择获得角色列表上的任意个不在场外来者角色的能力。",
+    "setup": true,
+    "name": "妖神司",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。然后你可以选择任意个不在场的外来者角色：你获得他们的能力。  [外来者\u003E2时，-1外来者]",
+    "firstNight": 11
+  },
+  {
+    "id": "20_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/6/6b/ox8846sgt7muues9o3gd01bx57xzlma.png/1200px-%E7%88%AA%E7%89%99_%E8%9A%80%E5%BD%B1_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "firstNightReminder": "唤醒恶魔，让他选择一名玩家以寄生。",
+    "otherNightReminder": "如果蚀影死于白天，唤醒蚀影并让他决定是否保留能力。如果蚀影死于夜晚，则在当前玩家行动结束后立即唤醒并询问他。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "蚀影",
+    "team": "minion",
+    "ability": "在首个夜晚，恶魔要选择一名存活的玩家：他中毒，只有当他处于死亡状态时那个恶魔才会立即死亡。你可以选择在死亡后保留你的能力。",
+    "firstNight": 3400,
+    "otherNight": 2
+  },
+  {
+    "id": "21_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/03/1trck24gi8o05kklsg93al4co09nakb.png",
+    "otherNightReminder": "唤醒小恶魔，让他攻击一名玩家。如果他成功自杀，则在他入睡后通知一名爪牙角色变化。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 7
+  },
+  {
+    "id": "22_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/49/863ousn3gady70ilssmdzvzl2kbn1ee.png",
+    "firstNightReminder": "唤醒牙噶巴卜，对他展示他的秘密短语。",
+    "otherNightReminder": "根据已放置的提示标记数量，选择最多等同于该数量的玩家死亡。该夜晚行动只是一个提示，死亡的造成时机可以是白天，也可以是夜晚的任何时候。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "牙噶巴卜",
+    "team": "demon",
+    "ability": "在你的首个夜晚，你会得知一段秘密短语。每次你在白天公开说出这段短语，当天便可能会有一名玩家在这之后死亡。",
+    "firstNight": 3500,
+    "otherNight": 9
+  },
+  {
+    "id": "23_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2f/fifuf6ffk1g5oq59jupegk662fainf6.png",
+    "otherNightReminder": "唤醒奥赫，让他选择角色列表上的一个角色。该角色对应的玩家死亡，如果该角色不在场，替奥赫决定今晚谁会因为奥赫能力死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "奥赫",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一个角色：他死亡。如果该角色不在场，则由说书人来决定谁会被你杀死。",
+    "otherNight": 8
+  },
+  {
+    "id": "24_duolinrenjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/8/85/3pelx1yx3slsnwhykxlbuehy3zdgoao.png/1200px-%E6%81%B6%E9%AD%94_%E8%8E%B1%E8%96%87_%E6%B4%9B%E7%94%9C%E8%95%BE.png",
+    "otherNightReminder": "杀死一名在今天白天时被莱薇“疯狂”关注的存活玩家。该夜晚行动只是一个提示，死亡的造成时机可以是夜晚的任何时候。",
+    "reminders": [
+      "疯狂",
+      "死亡"
+    ],
+    "name": "莱薇",
+    "team": "demon",
+    "ability": "每个白天，被你“疯狂”关注的玩家之一会在当晚死亡。邪恶阵营的常规胜利条件从“只剩两名玩家存活”改为“三名”。",
+    "otherNight": 6
+  }
+]

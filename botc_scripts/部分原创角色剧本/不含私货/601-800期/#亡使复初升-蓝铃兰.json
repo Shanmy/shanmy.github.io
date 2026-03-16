@@ -1,0 +1,318 @@
+[
+  {
+    "id": "_meta",
+    "name": "亡使复初升",
+    "author": "蓝铃兰",
+    "logo": "https://www.bloodstar.xyz/p/bluebell/wsf/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/bluebell/wsf/almanac.html"
+  },
+  {
+    "id": "_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "获得能力",
+      "复活"
+    ],
+    "name": "亡使复",
+    "team": "townsfolk",
+    "ability": "处决已经死亡的玩家会使你获得他们的能力，如果是邪恶玩家，改为他在当晚复活。",
+    "otherNight": 17
+  },
+  {
+    "id": "1_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/1_wsf.png",
+    "firstNightReminder": "1",
+    "name": "厨师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "firstNight": 14
+  },
+  {
+    "id": "2_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/2_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "商人",
+    "team": "townsfolk",
+    "ability": "你可以与任意一名其他玩家缔结约定。 在新约定达成之前，如果有玩家违约，你和他之一会在当晚死亡。",
+    "otherNight": 13
+  },
+  {
+    "id": "3_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/3_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "醉酒",
+      "死亡"
+    ],
+    "name": "孙悟空",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家并猜测他的角色：如果你猜对了，他死亡。 当你首次即将在夜晚死亡时，改为你醉酒。",
+    "otherNight": 12
+  },
+  {
+    "id": "5_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/5_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。如果该声明正确，在当晚会有一名玩家死亡。",
+    "otherNight": 14
+  },
+  {
+    "id": "9_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/9_wsf.png",
+    "name": "茶艺师",
+    "team": "townsfolk",
+    "ability": "如果与你邻近的两名存活的玩家是善良的，他们不会死亡。"
+  },
+  {
+    "id": "10_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/10_wsf.png",
+    "name": "和平主义者",
+    "team": "townsfolk",
+    "ability": "被处决的善良玩家可能不会死亡。"
+  },
+  {
+    "id": "7_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/7_wsf.png",
+    "reminders": [
+      "小丑"
+    ],
+    "name": "愚者",
+    "team": "townsfolk",
+    "ability": "当你首次将要直临死亡时，你将死里逃生。"
+  },
+  {
+    "id": "4_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/4_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "醉酒",
+      "被保护"
+    ],
+    "name": "旅店老板",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择两名玩家：他们当晚不会死亡，但其中一人会醉酒到下个黄昏。",
+    "otherNight": 3
+  },
+  {
+    "id": "11_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/11_wsf.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "醉酒1",
+      "醉酒2",
+      "醉酒3",
+      "失去能力"
+    ],
+    "name": "侍臣",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个角色：如果该角色在场，该角色之一从当晚开始醉酒三天三夜。",
+    "firstNight": 13,
+    "otherNight": 4
+  },
+  {
+    "id": "12_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/12_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "被选择"
+    ],
+    "name": "驱魔人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家（与上个夜晚不同）：如果你选中了恶魔，他会得知你是驱魔人，但他当晚不会因其自身能力而被唤醒。",
+    "otherNight": 5
+  },
+  {
+    "id": "6_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/6_wsf.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 15,
+    "otherNight": 18
+  },
+  {
+    "id": "8_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/8_wsf.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "name": "引路人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择至多三名玩家：你会得知今晚是否有邪恶玩家的能力选择或影响了他们之中的玩家。",
+    "firstNight": 16,
+    "otherNight": 19
+  },
+  {
+    "id": "13_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/13_wsf.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "毛毛虫",
+    "team": "outsider",
+    "ability": "与你邻近的存活玩家之一醉酒 (每个夜晚都会与上个夜晚不同)。",
+    "firstNight": 12,
+    "otherNight": 2
+  },
+  {
+    "id": "14_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/14_wsf.png",
+    "reminders": [
+      "醉酒",
+      "邪恶"
+    ],
+    "name": "莽夫",
+    "team": "outsider",
+    "ability": "每个夜晚，首个使用其自身能力选择了你的玩家会醉酒直到下个黄昏。你会转变为他的阵营。"
+  },
+  {
+    "id": "15_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/15_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "月之子",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。",
+    "otherNight": 15
+  },
+  {
+    "id": "16_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/16_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡"
+    ],
+    "remindersGlobal": [
+      "是纳比"
+    ],
+    "setup": true,
+    "name": "纳纳瓦钦",
+    "team": "outsider",
+    "ability": "你以为你是一个镇民角色，但其实你不是。 每个夜晚*，如果今天白天没有人死于处决，你可能死亡。",
+    "otherNight": 0
+  },
+  {
+    "id": "17_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/17_wsf.png",
+    "firstNightReminder": "1",
+    "remindersGlobal": [
+      "是赝品"
+    ],
+    "setup": true,
+    "name": "赝品",
+    "team": "minion",
+    "ability": "你拥有一个在场爪牙的能力。 如果没有其他爪牙在场，在你的首个夜晚，你选择一名爪牙：你获得他的能力。",
+    "firstNight": 17
+  },
+  {
+    "id": "18_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/18_wsf.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡",
+      "死于今日"
+    ],
+    "setup": true,
+    "name": "教父",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。  如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]",
+    "firstNight": 18,
+    "otherNight": 11
+  },
+  {
+    "id": "19_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/19_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "name": "刺客",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。",
+    "otherNight": 10
+  },
+  {
+    "id": "20_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/20_wsf.png",
+    "firstNightReminder": "1",
+    "reminders": [
+      "以为存活",
+      "重获能力"
+    ],
+    "name": "画皮",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择一名存活玩家：他死亡但会被当作存活。  当他下一次即将死亡时，他重生，随后你重获能力。",
+    "firstNight": 19
+  },
+  {
+    "id": "21_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/21_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "鼎力支持",
+      "死亡"
+    ],
+    "name": "九鼎公",
+    "team": "demon",
+    "ability": "每个夜晚*，如果存活镇民数量是奇数，你要选择一名玩家：他死亡。被处决的爪牙会存活但被当作死亡，当晚你和他交换角色，然后你死亡。",
+    "otherNight": 9
+  },
+  {
+    "id": "22_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/22_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "name": "僵怖",
+    "team": "demon",
+    "ability": "每个夜晚*，如果今天白天没有人死亡，你会被唤醒并要选择一名玩家：他死亡。  当你首次死亡后，你仍存活，但会被当作死亡。",
+    "otherNight": 6
+  },
+  {
+    "id": "23_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/23_wsf.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡",
+      "反刍"
+    ],
+    "name": "沙巴洛斯",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择两名玩家：他们死亡。  你上个夜晚选择过且当前死亡的玩家之一可能会被你反刍。",
+    "otherNight": 7
+  },
+  {
+    "id": "24_wsf",
+    "image": "https://www.bloodstar.xyz/p/bluebell/wsf/24_wsf.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "name": "痢蛭",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名存活的玩家：他中毒，只有当他处于死亡状态时你才会立即死亡。",
+    "firstNight": 11,
+    "otherNight": 8
+  }
+]

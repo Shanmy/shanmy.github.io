@@ -1,0 +1,348 @@
+[
+  {
+    "id": "_meta",
+    "name": "幽隐图谋Shadowed Intentions",
+    "author": "Hystrex",
+    "logo": "https://i.postimg.cc/W4K6BQzb/LOGO.png",
+    "almanac": "https://www.bloodstar.xyz/p/worryhours/SI/almanac.html"
+  },
+  {
+    "id": "_si",
+    "image": "https://i.postimg.cc/3RXKwf7H/logician-shadowed-intentions.png",
+    "firstNightReminder": "Wake and show 3 Townsfolk and 1 Minion, exactly 2 of which are in play",
+    "reminders": [
+      "在场",
+      "不在场"
+    ],
+    "name": "逻辑学家",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三个镇民角色和一个爪牙角色，其中有且只有两个角色在场。",
+    "flavor": "存在这样一种构造，依据我们的公理体系，必须遵循既定原则；该对象与我们当前的时空理论不存在任何矛盾，而且——等等，矩形已经不复存在了。算了，当我没说？",
+    "firstNight": 17
+  },
+  {
+    "id": "1_si",
+    "image": "https://i.postimg.cc/wMWYtSGn/windvane-shadowed-intentions.png",
+    "firstNightReminder": "Wake the Wind Vane & show them any 3 players.",
+    "otherNightReminder": "If the 2nd player the Wind Vane knows died today or tonight, wake the Wind Vane and indicate clockwise, counter-clockwise, or neither.",
+    "reminders": [
+      "得知"
+    ],
+    "name": "风向标",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你要选择两名玩家：当其中一名玩家死亡时，你会得知距离最近的恶魔玩家位于他的（顺时针/逆时针)方向，若恶魔的位置与他距离相等，你得知的信息由说书人决定，随后你要再选择一名玩家。",
+    "flavor": "呼——————————————————",
+    "firstNight": 18,
+    "otherNight": 14
+  },
+  {
+    "id": "2_si",
+    "image": "https://i.postimg.cc/brRNmCFR/coroner-shadowed-intentions.png",
+    "firstNightReminder": "Wake the Coroner & show them any player",
+    "otherNightReminder": "If the player known by the Coroner is dead, wake them and show them an evil character token.",
+    "reminders": [
+      "得知"
+    ],
+    "name": "验尸官",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名玩家：如果他死亡，你会得知离他最近的存活的邪恶角色。",
+    "flavor": "请见谅，我必须进行尸检，而你还活着就无法操作。",
+    "firstNight": 19,
+    "otherNight": 15
+  },
+  {
+    "id": "3_si",
+    "image": "https://i.postimg.cc/Dzbv9yM0/highpriestess-shadowed-intentions.png",
+    "firstNightReminder": "Wake and show which player you think they should talk to the most.",
+    "otherNightReminder": "Wake and show which player you think they should talk to the most.",
+    "reminders": [
+      "得知"
+    ],
+    "name": "女祭司",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名说书人认为你最应该与其交流的玩家。",
+    "firstNight": 21,
+    "otherNight": 20
+  },
+  {
+    "id": "4_si",
+    "image": "https://i.postimg.cc/W1ypYJSx/hoarder-shadowed-intentions.png",
+    "firstNightReminder": "The hoarder points to a player. Mark them with the corresponding reminder token.",
+    "otherNightReminder": "The hoarder points to a player. Mark them with the corresponding reminder token if it's not already placed. They then nod or shake their head. If yes, show them a hand signal corresponding to how many character types have the \"Mine\" reminder token.",
+    "reminders": [
+      "镇民",
+      "外来者",
+      "爪牙",
+      "恶魔",
+      "失去能力"
+    ],
+    "name": "囤积者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名玩家。每局游戏限一次*，你可以得知你选择过的玩家共有几种角色类型，之后你不再因自身能力被唤醒。",
+    "flavor": "我的，我的！都是我的！",
+    "firstNight": 16,
+    "otherNight": 17
+  },
+  {
+    "id": "5_si",
+    "image": "https://i.postimg.cc/fT2Mk94k/prophesier-shadowed-intentions.png",
+    "otherNightReminder": "The Prophesier points to a player. Put them back to sleep. If that player dies later tonight, wake the Prophesier again and show thema character token.",
+    "reminders": [
+      "预知"
+    ],
+    "name": "传谕者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：如果他当晚死亡(即使你选择了你自己)，你会得知一个在场的角色。",
+    "flavor": "过去对未来大有启示。",
+    "otherNight": 4
+  },
+  {
+    "id": "6_si",
+    "image": "https://i.postimg.cc/9QDC9QVb/restrainer-shadowed-intentions.png",
+    "otherNightReminder": "The Restrainer chooses a dead player.",
+    "reminders": [
+      "第一名",
+      "第二名",
+      "失去能力"
+    ],
+    "name": "抑制者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名死亡的玩家：当你选择第二名镇民玩家时，恶魔当晚的攻击会失效。",
+    "flavor": "戴上这些镣铐，与我光明正大地对决！",
+    "otherNight": 5
+  },
+  {
+    "id": "8_si",
+    "image": "https://i.postimg.cc/9FWfD2rg/diviner-shadowed-intentions.png",
+    "reminders": [
+      "正确信息",
+      "错误信息"
+    ],
+    "name": "先知",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知一条信息：你得知的信息都是正确的或都是错误的。",
+    "flavor": "我当然是对的！每次解读结果都和上一次同样准确。"
+  },
+  {
+    "id": "9_si",
+    "image": "https://i.postimg.cc/y82ByC8H/scout-shadowed-intentions.png",
+    "otherNightReminder": "If the Scout chose a Minion for the first time today, wake a good player, show them the Scout character token, then put them to sleep.",
+    "reminders": [
+      "得知",
+      "失去能力"
+    ],
+    "name": "侦察兵",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开选择一名玩家：如果你首次以这种方式选中了爪牙，当晚一名善良玩家会得知此事。",
+    "flavor": "在那边！！我觉得。",
+    "otherNight": 16
+  },
+  {
+    "id": "7_si",
+    "image": "https://i.postimg.cc/0N6j9Cb8/bloodhound-shadowed-intentions.png",
+    "otherNightReminder": "If the Bloodhound has not yet used their ability: the Bloodhound either nods or shakes their head. If the Bloodhound nods show the corresponding hand signal.",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "寻血猎犬",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以得知有多少名死亡的玩家与邪恶玩家邻座。",
+    "flavor": "嗅，嗅",
+    "otherNight": 18
+  },
+  {
+    "id": "10_si",
+    "image": "https://i.postimg.cc/7h4ZM8X6/clairvoyant-shadowed-intentions.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "通灵师",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以私下询问说书人一个问题，你会得知该问题的多个答案，至少有一个答案是正确的。",
+    "flavor": "我怎会知晓？啊，你问得正好！"
+  },
+  {
+    "id": "11_si",
+    "image": "https://i.postimg.cc/1RKmhdJG/pendulum-shadowed-intentions.png",
+    "otherNightReminder": "If one of their alive neighbors dies at night, wake the Pendulum and give them a thumbs up or thumbs down.",
+    "name": "钟摆",
+    "team": "townsfolk",
+    "ability": "如果与你邻近的一名存活玩家在夜晚死亡，你会得知与你邻近的另一名存活玩家的阵营。",
+    "flavor": "别打扰我。所有组件须以每分钟六十拍精确运作，以免错失时机。我必须工作。",
+    "otherNight": 13
+  },
+  {
+    "id": "12_si",
+    "image": "https://i.postimg.cc/kGMdgnfx/whistleblower-shadowed-intentions.png",
+    "otherNightReminder": "If the Whistleblower died tonight, they choose 3 players. Show them the character tokens of any evil characters they chose in any order, or show a 0.",
+    "name": "吹哨人",
+    "team": "townsfolk",
+    "ability": "如果你在夜晚死亡，你会被唤醒，然后你要选择除你以外的三名玩家：你会得知你选中了哪些邪恶角色(或者你会得知没有)。",
+    "flavor": "民众必须知晓真相。",
+    "otherNight": 12
+  },
+  {
+    "id": "13_si",
+    "image": "https://i.postimg.cc/Y9HHTNFD/sommelier-shadowed-intentions.png",
+    "firstNightReminder": "Place the drunk token.",
+    "otherNightReminder": "如果侍酒师死于处决, 重新放置其醉酒标记。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "侍酒师",
+    "team": "outsider",
+    "ability": "与你邻近的两名镇民之一醉酒。当你死于处决，你保留能力且说书人可以改为让另一名镇民玩家醉酒。",
+    "flavor": "干杯！哎呀抱歉，我保证这些污渍洗得掉。",
+    "firstNight": 12,
+    "otherNight": 2
+  },
+  {
+    "id": "14_si",
+    "image": "https://i.postimg.cc/Ghhccj5Z/phantom-shadowed-intentions.png",
+    "otherNightReminder": "If the Phantom died, put the \"Misregisters\" reminder on the Demon.",
+    "reminders": [
+      "善良"
+    ],
+    "name": "幻象",
+    "team": "outsider",
+    "ability": "当你死亡时，恶魔可能会被当作善良阵营、镇民角色或外来者角色直到下个黄昏。",
+    "flavor": "分隔现实与虚幻的壁垒，仅存于汝等想象之中。",
+    "otherNight": 11
+  },
+  {
+    "id": "16_si",
+    "image": "https://i.postimg.cc/nzBLDc4g/boatman-shadowed-intentions.png",
+    "name": "船夫",
+    "team": "outsider",
+    "ability": "如果你已死亡且（除旅行者外）只有三名玩家存活，提名非恶魔的善良玩家死亡。",
+    "flavor": "踏上此船者，当弃绝一切希望。"
+  },
+  {
+    "id": "15_si",
+    "image": "https://i.postimg.cc/sXdjsdkc/klutz-shadowed-intentions.png",
+    "name": "呆瓜",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家：如果他是邪恶的，你的阵营落败。"
+  },
+  {
+    "id": "17_si",
+    "image": "https://i.postimg.cc/sfPXfxDZ/corruptor-shadowed-intentions.png",
+    "firstNightReminder": "The Corruptor chooses 2 players: they learn they were chosen.",
+    "otherNightReminder": "If the Demon died tonight, wake a corrupt player and tell them they are now any evil Demon. The Corruptor learns them.",
+    "reminders": [
+      "腐化",
+      "是恶魔"
+    ],
+    "name": "腐化者",
+    "team": "minion",
+    "ability": "有两名善良玩家可能会被当作邪恶的恶魔。在你的首个夜晚，他们会被唤醒得知此事，且你知道他们是谁。如果恶魔首次在夜晚死亡，你要选择他们之一变成邪恶的恶魔。",
+    "flavor": "宇宙之力触手可及……你可愿接受？",
+    "firstNight": 11,
+    "otherNight": 6
+  },
+  {
+    "id": "18_si",
+    "image": "https://i.postimg.cc/GpYRMg4s/seeker-shadowed-intentions.png",
+    "firstNightReminder": "Wake up the Prey and show them 2 players, one of which is the Seeker.",
+    "reminders": [
+      "猎物",
+      "错误"
+    ],
+    "name": "追踪者",
+    "team": "minion",
+    "ability": "一名善良玩家得知你在两名玩家之中。每个白天限一次，你可以公开猜测一名死亡的玩家得知了你在场，如果猜对，邪恶阵营获胜。如果你存活，善良阵营无法获胜。",
+    "flavor": "弱者，尔之消亡仅是时间问题。",
+    "firstNight": 14
+  },
+  {
+    "id": "19_si",
+    "image": "https://i.postimg.cc/wT0jJrNq/echomancer-shadowed-intentions.png",
+    "firstNightReminder": "The Echomancer chooses 2 players: they learn that the Echomancer chose them and who their echo is.",
+    "otherNightReminder": "The Echomancer chooses 2 players: they learn that the Echomancer chose them and who their echo is.",
+    "reminders": [
+      "疯狂",
+      "回声"
+    ],
+    "name": "回声使",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择两名玩家（包括至少一名善良玩家）：明天第一名玩家要“疯狂”地证明第二名玩家的言论是正确的，不然他可能被处决。",
+    "flavor": "观点？你在说什么？现实无非是看谁鬼话连篇！",
+    "firstNight": 15,
+    "otherNight": 3
+  },
+  {
+    "id": "20_si",
+    "image": "https://i.postimg.cc/QdCxqqgp/fateweaver-shadowed-intentions.png",
+    "firstNightReminder": "Wake & show a player or character",
+    "otherNightReminder": "Wake & show a player or character",
+    "reminders": [
+      "最后一天",
+      "将死之人"
+    ],
+    "name": "织命者",
+    "team": "minion",
+    "ability": "每个夜晚，你会得知恶魔当前选择哪一名玩家或哪一个角色是不利的。最后一个白天，获得最低票数的被提名的玩家会被处决，即使你已死亡。",
+    "flavor": "何须静候宿命？亲手编织岂不快哉！",
+    "firstNight": 20,
+    "otherNight": 19
+  },
+  {
+    "id": "22_si",
+    "image": "https://i.postimg.cc/GtbbTPhT/necrowhirl-shadowed-intentions.png",
+    "firstNightReminder": "Show the Necrowhirl which player they're poisoning.",
+    "otherNightReminder": "The Necrowhirl points to a player. That player dies. If the poison has moved, show the poisoned player.",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "name": "骸漩",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。顺时针方向与你邻近的一名存活的镇民中毒：你知道他是谁。",
+    "flavor": "转啊转，坠入死亡漩涡，一个接一个，皆为我所戮。",
+    "firstNight": 13,
+    "otherNight": 7
+  },
+  {
+    "id": "23_si",
+    "image": "https://i.postimg.cc/jqvbk7Sv/xenotoxin-shadowed-intentions.png",
+    "otherNightReminder": "The Xenotoxin points to a player. That player dies. If the first Outsider died today or tonight, the Xenotoxin chooses a character: they are poisoned.",
+    "reminders": [
+      "死亡",
+      "第一名",
+      "中毒"
+    ],
+    "setup": true,
+    "name": "瘴客",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。当首名外来者死亡时，你要选择一个镇民角色：他中毒，即使你已死亡。[+1外来者]",
+    "flavor": "滚出我的视线。",
+    "otherNight": 8
+  },
+  {
+    "id": "21_si",
+    "image": "https://i.postimg.cc/T1QfVyp7/ojo-shadowed-intentions.png",
+    "otherNightReminder": "The Ojo points to a character. That character dies.",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "奥赫",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一个角色：他死亡。如果该角色不在场，则由说书人来决定谁会被你杀死。",
+    "otherNight": 10
+  },
+  {
+    "id": "24_si",
+    "image": "https://i.postimg.cc/RFLBm3QS/vgorm0rtis-shadowed-intentions.png",
+    "otherNightReminder": "The Vigormortis points to a player. That player dies. If a Minion, they keep their ability and one of their Townsfolk neighbors is poisoned.",
+    "reminders": [
+      "死亡",
+      "保留能力",
+      "中毒"
+    ],
+    "setup": true,
+    "name": "亡骨魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+    "otherNight": 9
+  }
+]

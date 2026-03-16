@@ -1,0 +1,320 @@
+[
+  {
+    "id": "_meta",
+    "name": "美愿成真",
+    "author": "海雾",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4e/2lacy1n4emznn9gof28gp39zjsq1k7d.png",
+    "almanac": "Json有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/ff/qj1zakrq8miufyubhgsj2x7us2fasx4.png",
+    "firstNightReminder": "每个夜晚，唤醒祈求者，展示一个角色标记，并让祈求者重新入睡。",
+    "otherNightReminder": "每个夜晚，唤醒祈求者，展示一个角色标记，并让祈求者重新入睡。",
+    "name": "祈求者 ",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一个目前情况下对某一阵营有较大帮助的角色。",
+    "firstNight": 4100,
+    "otherNight": 17
+  },
+  {
+    "id": "1_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/36/4yqdhq0kap6l5a4q8og8kxmg8y2cjcg.png",
+    "firstNightReminder": "唤醒洗衣妇，对她指向两名玩家，并展示一个镇民角色标记。这两名玩家其中之一是这个镇民。",
+    "reminders": [
+      "镇民",
+      "错误"
+    ],
+    "name": "洗衣妇",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个镇民角色：这两名玩家之一是该角色。",
+    "firstNight": 3900
+  },
+  {
+    "id": "2_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/0d9uthaidhlal5rz0zjx2tvzzrviqdo.png",
+    "firstNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "otherNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 4300,
+    "otherNight": 18
+  },
+  {
+    "id": "3_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b1/f5bpgic2ja7fbuvxh1vigjkxdsu78j7.png",
+    "otherNightReminder": "如果造谣者今天白天的声明正确，一名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。在当晚，如果该声明是正确的，会有一名玩家死亡。",
+    "otherNight": 12
+  },
+  {
+    "id": "4_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/41/bo4vdaeeu09nejmy8xuwyozambudd0n.png",
+    "otherNightReminder": "如果教授未曾使用能力且在城镇广场上有玩家死亡，唤醒教授，他可以摇头不使用能力，或选择一名已死亡的玩家。如果该玩家是镇民，该玩家被起死回生。",
+    "reminders": [
+      "复活",
+      "失去能力"
+    ],
+    "name": "教授",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名死亡的玩家：如果他是镇民，你会将他起死回生。",
+    "otherNight": 15
+  },
+  {
+    "id": "5_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a4/t8h7diw8bpav612k1e3t62b10hlbizz.png",
+    "reminders": [
+      "不会死亡"
+    ],
+    "name": "茶艺师",
+    "team": "townsfolk",
+    "ability": "如果与你邻近的两名存活的玩家是善良的，他们不会死亡。"
+  },
+  {
+    "id": "6_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/ac/k0janaxds3dvtnf5hdskzarlbyp79oe.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "弄臣",
+    "team": "townsfolk",
+    "ability": "当你首次将要死亡时，你不会死亡。"
+  },
+  {
+    "id": "7_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/chh8x7dptz128a42p7f0g5c0qn8o063.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "8_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6f/oi460mqpnxwd7zgyboe78patdo8amc5.png",
+    "firstNightReminder": "唤醒传教士，让他选择一名玩家。如果他选中了爪牙，该爪牙失去能力。在传教士入睡后通知该爪牙被传教士选中。",
+    "otherNightReminder": "唤醒传教士，让他选择一名玩家。如果他选中了爪牙，该爪牙失去能力。在传教士入睡后通知该爪牙被传教士选中。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "传教士",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：如果你选中了爪牙，他会得知被传教士选中。所有被你选中的爪牙失去能力。",
+    "firstNight": 3300,
+    "otherNight": 3
+  },
+  {
+    "id": "9_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/84/7a2ofp66u0ovh8x1lcvsd63qixll6oo.png",
+    "firstNightReminder": "唤醒气球驾驶员，对他指向一名玩家。",
+    "otherNightReminder": "唤醒气球驾驶员，对他指向一名玩家，这名玩家与之前气球驾驶员上一个夜晚得知过的玩家属于不同的角色类型。",
+    "reminders": [
+      "得知"
+    ],
+    "setup": true,
+    "name": "气球驾驶员",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名与上个夜晚得知的玩家角色类型不同的玩家。[+0~1外来者]",
+    "firstNight": 4000,
+    "otherNight": 16
+  },
+  {
+    "id": "10_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6e/f49ozgdcvrsmvd6x7cuz7xui4yafy8n.png",
+    "firstNightReminder": "如果罂粟种植者在场，跳过今晚的爪牙信息和恶魔信息环节。",
+    "otherNightReminder": "如果罂粟种植者死于白天，插入执行爪牙信息和恶魔信息（不包含恶魔伪装）流程。如果罂粟种植者死于夜晚，则在当前玩家行动结束后立即执行相关流程。",
+    "reminders": [
+      "唤醒邪恶"
+    ],
+    "name": "罂粟种植者",
+    "team": "townsfolk",
+    "ability": "爪牙和恶魔互相不认识。如果你死亡，当晚他们会互相认识。",
+    "firstNight": 11,
+    "otherNight": 2
+  },
+  {
+    "id": "11_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/54/cx6vl3wdv1v51wfuh6z575vh7ef2kcz.png",
+    "firstNightReminder": "唤醒修行者，对他指向对应方向来告知他最近的邪恶玩家的方向。",
+    "name": "修行者",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知距离最近的邪恶玩家位于你的顺时针还是逆时针方向。如果两侧的邪恶玩家与你距离相等，你得知的信息由说书人决定。",
+    "firstNight": 4200
+  },
+  {
+    "id": "12_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b5/rdpsq1wjpsq66ah5y3f4p2wyuzl8wuk.png",
+    "reminders": [
+      "不会死亡"
+    ],
+    "name": "公主",
+    "team": "townsfolk",
+    "ability": "在你的首个白天，如果你提名并处决了一名玩家，当晚恶魔不会造成死亡。"
+  },
+  {
+    "id": "13_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/5e/dw5z7fnz58ia54bw160d1numjsjay8f.png",
+    "name": "陌客",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。"
+  },
+  {
+    "id": "14_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b2/dlocdcihmucmb9pxl3evrumx37q38ly.png",
+    "otherNightReminder": "在夜晚的任意时机，你都可以决定杀死修补匠。这里只是一个提示以免遗忘修补匠。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "修补匠",
+    "team": "outsider",
+    "ability": "你随时可能死亡。",
+    "otherNight": 13
+  },
+  {
+    "id": "15_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a6/j1n5byy4m214zrvq6l2xhv6b4yuy0lp.png",
+    "otherNightReminder": "如果心上人死亡，一名玩家醉酒。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "心上人",
+    "team": "outsider",
+    "ability": "当你死亡时，会有一名玩家开始醉酒。",
+    "otherNight": 14
+  },
+  {
+    "id": "16_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/67/q7r2sg4xzntxj5df6j7qepczuoer09p.png",
+    "firstNightReminder": "如果告密者在场，对爪牙展示三个不在场的善良角色标记。",
+    "name": "告密者",
+    "team": "outsider",
+    "ability": "爪牙会在其首个夜晚得知三个伪装。",
+    "firstNight": 2200
+  },
+  {
+    "id": "17_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/33/6wspdicyxe9hh221v9aodnk8umbdtsq.png",
+    "firstNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "otherNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "投毒者",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：他在当晚和明天白天中毒。",
+    "firstNight": 3500,
+    "otherNight": 4
+  },
+  {
+    "id": "18_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a8/cp4tivyy734ut9fus8od0zub508qx8y.png",
+    "firstNightReminder": "唤醒教父，对他展示外来者角色标记，告诉他有哪些外来者在场。",
+    "otherNightReminder": "如果今天白天有外来者死亡，唤醒教父，让他攻击一名玩家。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "教父",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]",
+    "firstNight": 3600,
+    "otherNight": 11
+  },
+  {
+    "id": "19_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2f/fbxp1pzgxjfs4vsrb0l30otb078m84e.png",
+    "firstNightReminder": "唤醒魔鬼代言人，让他选择一名玩家，那名玩家处决不死。",
+    "otherNightReminder": "唤醒魔鬼代言人，让他选择一名与上一晚不同的玩家，那名玩家处决不死。",
+    "reminders": [
+      "处决不死"
+    ],
+    "name": "魔鬼代言人",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名存活的玩家（与上个夜晚不同）：如果明天白天他被处决，他不会死亡。",
+    "firstNight": 3700,
+    "otherNight": 5
+  },
+  {
+    "id": "20_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/09/1mq0x5dohs05omj8m8agvwp1ww7ckid.png",
+    "firstNightReminder": "唤醒灵言师，对他展示他的关键词。",
+    "otherNightReminder": "如果首次有善良玩家说出了灵言师的关键词，唤醒该玩家并通知他阵营变化。",
+    "reminders": [
+      "转为邪恶",
+      "失去能力"
+    ],
+    "name": "灵言师",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知一个关键词。首个说出该关键词的善良玩家会在当晚转变为邪恶阵营。",
+    "firstNight": 3800,
+    "otherNight": 6
+  },
+  {
+    "id": "21_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b9/t7v2h6t5bwxmjp8qkkhlf1mm32v51pw.png",
+    "otherNightReminder": "决定上一夜被沙巴洛斯选择的玩家是否被反刍。然后唤醒沙巴洛斯，让他攻击两名玩家。",
+    "reminders": [
+      "死亡",
+      "复活"
+    ],
+    "name": "沙巴洛斯",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择两名玩家：他们死亡。你上个夜晚选择过且当前死亡的玩家之一可能会被你反刍。",
+    "otherNight": 7
+  },
+  {
+    "id": "22_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/67/rvx8mxa2s5jb9qiqzoubch8vfjr87hz.png",
+    "otherNightReminder": "唤醒珀，他可以攻击一名玩家或不进行攻击，如果他上一次选择了不进行攻击，则此次必须攻击三名玩家。",
+    "reminders": [
+      "攻击三次",
+      "死亡"
+    ],
+    "name": "珀",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择一名玩家：他死亡。如果你上次选择时没有选择任何玩家，当晚你要选择三名玩家：他们死亡。",
+    "otherNight": 8
+  },
+  {
+    "id": "23_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/3a/3bzh51psxnf95lld35qn6wywp4aduor.png",
+    "otherNightReminder": "唤醒亡骨魔，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "保留能力",
+      "中毒"
+    ],
+    "setup": true,
+    "name": "亡骨魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+    "otherNight": 9
+  },
+  {
+    "id": "24_meiyuanchengzhen",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/8f/8hdy40avvq6iiq66v8dnhf4hpl3ad3b.png",
+    "firstNightReminder": "唤醒所有爪牙选择由谁照看小怪宝。",
+    "otherNightReminder": "唤醒所有爪牙选择由谁照看小怪宝。随后，决定今晚谁会因为小怪宝能力死亡。",
+    "remindersGlobal": [
+      "是恶魔",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "小怪宝",
+    "team": "demon",
+    "ability": "每个夜晚，所有爪牙要秘密决定由哪名玩家来照看小怪宝并且“是恶魔”。每个夜晚*，可能会有一名玩家死亡。[+1爪牙]",
+    "firstNight": 3400,
+    "otherNight": 10
+  },
+  {
+    "id": "jinx01",
+    "name": "罂粟种植者&小怪宝",
+    "team": "a jinxed",
+    "ability": "如果罂粟种植者在场，爪牙们不会同时醒来选择照看小怪宝。他们会依次单独被唤醒，直到其中一人选择照看小怪宝。"
+  }
+]

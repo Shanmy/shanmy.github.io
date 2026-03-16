@@ -1,0 +1,329 @@
+[
+  {
+    "id": "_meta",
+    "name": "江州琵琶引",
+    "author": "L",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/almanac.html"
+  },
+  {
+    "id": "_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/_jiangzhoupipayin.png",
+    "firstNightReminder": "给他展示数字手势来告诉他场上邻座邪恶玩家有多少对。",
+    "name": "厨师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "firstNight": 3800
+  },
+  {
+    "id": "1_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/1_jiangzhoupipayin.png",
+    "firstNightReminder": "给他展示数字手势来告诉他与他邻近的存活玩家有几人是邪恶的。",
+    "otherNightReminder": "给他展示数字手势来告诉他与他邻近的存活玩家有几人是邪恶的。",
+    "name": "共情者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知与你邻近的两名存活的玩家中邪恶玩家的数量。",
+    "firstNight": 3900,
+    "otherNight": 18
+  },
+  {
+    "id": "2_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/2_jiangzhoupipayin.png",
+    "otherNightReminder": "如果守鸦人今晚死亡，唤醒他并让他选择一名玩家。对他展示那名玩家的角色标记。",
+    "name": "守鸦人",
+    "team": "townsfolk",
+    "ability": "如果你在夜晚死亡，你会被唤醒，然后你要选择一名玩家：你会得知他的角色。",
+    "otherNight": 16
+  },
+  {
+    "id": "3_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/3_jiangzhoupipayin.png",
+    "otherNightReminder": "让旅店老板选择两名玩家。标记这两名玩家不会死亡，并标记其中一人醉酒。",
+    "reminders": [
+      "不会死亡",
+      "醉酒"
+    ],
+    "name": "旅店老板",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择两名玩家：他们当晚不会死亡，但其中一人会醉酒到下个黄昏。",
+    "otherNight": 3
+  },
+  {
+    "id": "4_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/4_jiangzhoupipayin.png",
+    "otherNightReminder": "让赌徒选择一名玩家和一个角色。如果赌徒猜错了，标记赌徒死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "赌徒",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测他的角色：如果你猜错了，你会死亡。",
+    "otherNight": 5
+  },
+  {
+    "id": "5_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/5_jiangzhoupipayin.png",
+    "otherNightReminder": "如果白天的声明为真，会有一名玩家死亡，并由说书人来选择一名玩家，标记该玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。如果该声明正确，在当晚会有一名玩家死亡。",
+    "otherNight": 14
+  },
+  {
+    "id": "6_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/6_jiangzhoupipayin.png",
+    "firstNightReminder": "侍臣可以选择一个角色。如果他这么做了，标记侍臣失去能力，标记被选择的角色所对应的玩家醉酒。之后的夜晚无需再唤醒侍臣。",
+    "otherNightReminder": "侍臣可以选择一个角色。如果他这么做了，标记侍臣失去能力，标记被选择的角色所对应的玩家醉酒。之后的夜晚无需再唤醒侍臣。",
+    "reminders": [
+      "醉酒1",
+      "醉酒2",
+      "醉酒3",
+      "失去能力"
+    ],
+    "name": "侍臣",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个角色：如果该角色在场，该角色之一从当晚开始醉酒三天三夜。",
+    "firstNight": 3400,
+    "otherNight": 4
+  },
+  {
+    "id": "7_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/7_jiangzhoupipayin.png",
+    "otherNightReminder": "对她点头或摇头来示意今天白天是否有恶魔投过票。",
+    "reminders": [
+      "恶魔未投票",
+      "恶魔已投票"
+    ],
+    "name": "卖花女孩",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天时是否有恶魔投过票。",
+    "otherNight": 19
+  },
+  {
+    "id": "8_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/8_jiangzhoupipayin.png",
+    "otherNightReminder": "如果恶魔杀死了报丧女妖，高声宣布“报丧女妖觉醒了！”或发出奇怪的声音，并使用“具有能力”标记报丧女妖。",
+    "name": "报丧女妖",
+    "team": "townsfolk",
+    "ability": "如果恶魔杀死了你，所有玩家都会得知此事。从现在开始，你每天可以发起两次提名，每次投票时可以投两票。",
+    "otherNight": 17
+  },
+  {
+    "id": "9_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/9_jiangzhoupipayin.png",
+    "firstNightReminder": "唤醒店小二，对他指向标记有店小二的“熟客”和“醉酒”提示标记的这两名玩家。",
+    "reminders": [
+      "熟客",
+      "醉酒"
+    ],
+    "name": "店小二",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名善良玩家。他们之中会有一人醉酒，即使你已死亡。",
+    "firstNight": 4100
+  },
+  {
+    "id": "10_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/10_jiangzhoupipayin.png",
+    "otherNightReminder": "移除上个夜晚放置的“保护”标记。唤醒锦衣卫，让其选择一名玩家。在该玩家角色标记旁放置“保护”提示标记。",
+    "reminders": [
+      "保护"
+    ],
+    "name": "锦衣卫",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：如果他在下个黄昏前死亡，你代替他死亡。",
+    "otherNight": 6
+  },
+  {
+    "id": "11_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/11_jiangzhoupipayin.png",
+    "firstNightReminder": "唤醒郎中，让其指向一名玩家。以不会被其他玩家察觉的形式对其提供与该玩家角色能力相关的一个词语。",
+    "otherNightReminder": "唤醒郎中，让其指向一名玩家。以不会被其他玩家察觉的形式对其提供与该玩家角色能力相关的一个词语。",
+    "name": "郎中",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的一名玩家：你会得知一个与他能力相关的词语。",
+    "firstNight": 4000,
+    "otherNight": 20
+  },
+  {
+    "id": "12_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/12_jiangzhoupipayin.png",
+    "otherNightReminder": "如果在白天以及夜晚，只有镇民或旅行者玩家死亡，对知府摇头表示“否”，否则点头表示“是”。",
+    "reminders": [
+      "死于今日"
+    ],
+    "name": "知府",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知今天是否有非镇民且非旅行者玩家死亡。",
+    "otherNight": 21
+  },
+  {
+    "id": "13_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/13_jiangzhoupipayin.png",
+    "otherNightReminder": "如果月之子在白天触发了死亡能力并选择了一名善良玩家，该玩家死亡。标记那名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "月之子",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。",
+    "otherNight": 15
+  },
+  {
+    "id": "14_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/14_jiangzhoupipayin.png",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "莽夫",
+    "team": "outsider",
+    "ability": "每个夜晚，首个使用其自身能力选择了你的玩家会醉酒直到下个黄昏。你会转变为他的阵营。"
+  },
+  {
+    "id": "15_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/15_jiangzhoupipayin.png",
+    "firstNightReminder": "唤醒恶魔，并对他展示“该角色的能力对你触发”提示标记与书生角色标记。",
+    "otherNightReminder": "如果白天恶魔成功猜中了书生是谁，唤醒那个恶魔，让其选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "已猜测",
+      "猜测正确",
+      "死亡"
+    ],
+    "name": "书生",
+    "team": "outsider",
+    "ability": "恶魔知道你在场。每局游戏限一次，恶魔可以拜访说书人并猜测谁是书生。如果恶魔猜测正确，即使你已死亡，当晚该恶魔可以选择一名玩家：他死亡。",
+    "firstNight": 3200,
+    "otherNight": 12
+  },
+  {
+    "id": "16_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/16_jiangzhoupipayin.png",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "酒保",
+    "team": "outsider",
+    "ability": "与你邻近的善良玩家之一醉酒，即使你已死亡。"
+  },
+  {
+    "id": "17_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/17_jiangzhoupipayin.png",
+    "firstNightReminder": "在你的顺时针方向的下一名玩家中毒。 如果他是邪恶的，你和他立即交换角色。 每个夜晚*，如果他已死亡，该距离+1。",
+    "otherNightReminder": "在你的顺时针方向的下一名玩家中毒。 如果他是邪恶的，你和他立即交换角色。 每个夜晚*，如果他已死亡，该距离+1。",
+    "name": "战车",
+    "team": "minion",
+    "ability": "在你的顺时针方向的下一名玩家中毒。 如果他是邪恶的，你和他立即交换角色。 每个夜晚*，如果他已死亡，该距离+1。",
+    "firstNight": 3300,
+    "otherNight": 2
+  },
+  {
+    "id": "18_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/18_jiangzhoupipayin.png",
+    "firstNightReminder": "对他展示所有在场的外来者标记。",
+    "otherNightReminder": "如果有外来者在今天白天死亡，让教父选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "setup": 1,
+    "name": "教父",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]",
+    "firstNight": 3500,
+    "otherNight": 13
+  },
+  {
+    "id": "19_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/19_jiangzhoupipayin.png",
+    "firstNightReminder": "让女巫选择一名玩家。标记那名玩家被诅咒。",
+    "otherNightReminder": "让女巫选择一名玩家。标记那名玩家被诅咒。",
+    "reminders": [
+      "被诅咒"
+    ],
+    "name": "女巫",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：如果他明天白天发起提名，他死亡。如果只有三名存活的玩家，你失去此能力。",
+    "firstNight": 3600,
+    "otherNight": 7
+  },
+  {
+    "id": "20_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/20_jiangzhoupipayin.png",
+    "firstNightReminder": "让洗脑师选择一名玩家和一个善良角色。标记那名玩家疯狂。让洗脑师重新入睡。唤醒洗脑师的目标。对这名玩家展示“该角色的能力对你生效”信息标记，洗脑师角色标记，该玩家需要疯狂证明的角色标记。",
+    "otherNightReminder": "让洗脑师选择一名玩家和一个善良角色。标记那名玩家疯狂。让洗脑师重新入睡。唤醒洗脑师的目标。对这名玩家展示“该角色的能力对你生效”信息标记，洗脑师角色标记，该玩家需要疯狂证明的角色标记。",
+    "reminders": [
+      "疯狂"
+    ],
+    "name": "洗脑师",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家和一个善良角色。他明天白天和夜晚需要“疯狂”地证明自己是这个角色，不然他可能被处决。",
+    "firstNight": 3700,
+    "otherNight": 8
+  },
+  {
+    "id": "21_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/21_jiangzhoupipayin.png",
+    "firstNightReminder": "选择一个邻近恶魔的善良玩家放置提线木偶标记。唤醒恶魔并告知他谁是提线木偶。",
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "setup": 1,
+    "name": "提线木偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]",
+    "firstNight": 3100
+  },
+  {
+    "id": "22_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/22_jiangzhoupipayin.png",
+    "otherNightReminder": "唤醒饕餮，让其选择任意数量的玩家。如果这些玩家的角色类型均不相同，标记这些玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": 1,
+    "name": "饕餮",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择任意数量的非旅行者玩家或一名旅行者玩家：如果他们的角色类型均不相同，他们死亡。[+1外来者]",
+    "otherNight": 9
+  },
+  {
+    "id": "23_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/23_jiangzhoupipayin.png",
+    "otherNightReminder": "唤醒暴君，让其选择至多两名玩家。在这些玩家角色标记旁放置“死亡”提示标记。如果暴君选择的玩家数量与上个夜晚死亡的玩家数量相同，摇头示意其重新选择",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "暴君",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择至多两名玩家：他们死亡。你选择的玩家数量不能与上个夜晚死亡的玩家数量相同（超过二人时算作二人）。",
+    "otherNight": 10
+  },
+  {
+    "id": "24_jiangzhoupipayin",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhoupipayin/24_jiangzhoupipayin.png",
+    "otherNightReminder": "唤醒奸佞，让其选择一名玩家。如果白天奸佞未投票，改为让其选择两名玩家。标记他选择的玩家死亡。",
+    "reminders": [
+      "死亡",
+      "未被提名",
+      "已被提名"
+    ],
+    "name": "奸佞",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你今天白天没有投票，今晚你可以行动两次。",
+    "otherNight": 11
+  },
+  {
+    "id": "25_jiangzhou",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jiangzhou/25_jiangzhou.png",
+    "reminders": [
+      "天涯人",
+      "嘈嘈切切",
+      "血色罗裙"
+    ],
+    "name": "琴瑟和鸣",
+    "team": "fabled",
+    "ability": "游戏开始前，说书人可以随机抽取一个曲目进行演奏。"
+  }
+]

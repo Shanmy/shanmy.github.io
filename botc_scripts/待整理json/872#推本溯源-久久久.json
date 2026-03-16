@@ -1,0 +1,616 @@
+[
+  {
+    "id": "_meta",
+    "name": "推本溯源",
+    "author": "久久久",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f0/57j1871klp414vd7qlc6qo8cpqvdilv.png"
+  },
+  {
+    "id": "wangshnegjiguzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/7a/5rucngdkf94y0oeivqtw6erytaqeuj5.png",
+    "edition": "custom",
+    "name": "往生者",
+    "ability": "你没有阵营且不入村。每个白天，你可以向说书人询问n个是非问题（n由说书人决定）。如果你还原初始或当前魔典，你获胜。如果你对你的信息疯狂，你落败。",
+    "team": "traveler",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "获胜",
+      "落败"
+    ],
+    "setup": false
+  },
+  {
+    "ability": "每个夜晚，你要选择一名存活的玩家：你或他之一会醉酒直到下个黄昏。你不会死亡。",
+    "flavor": "你们随便谁来我都能把他喝到桌子底下去！说你呢！那个话痨！敢来和我喝一杯么？不来？那你呢，老太婆？你以前喝过老麦基利的加香料朗姆酒吗？保证能让你喝成个真男人！上船咯，噢耶！",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/bt7yvbzi61ftut2iqheqrgznkdohslh.png"
+    ],
+    "edition": "custom",
+    "id": "sailor_c",
+    "firstNightReminder": "让水手选择一名存活玩家。标记那名玩家或水手醉酒。",
+    "otherNightReminder": "让水手选择一名存活玩家。标记那名玩家或水手醉酒。",
+    "name": "水手",
+    "otherNight": 7.8,
+    "setup": false,
+    "reminders": [
+      "醉酒"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 3200
+  },
+  {
+    "ability": "每个夜晚，你会得知有多少名玩家的能力因为其他角色的能力而未正常生效。(从上个黎明到你被唤醒时）",
+    "flavor": "任何连续的，且能进行定量初等运算的形式系统X，都具有不完全性。也就是说，在这个形式系统X内存在一些命题，这些命题既不能被证明为真，也不能被证明为否。所以，你喝醉了。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/80/bl0qahd0ll0end1sidclt6374yrtflf.png"
+    ],
+    "edition": "custom",
+    "id": "mathematician_c",
+    "firstNightReminder": "给他展示数字手势来告诉他在首个夜晚里有多少玩家的角色能力受他人影响而未正常生效。",
+    "otherNightReminder": "给他展示数字手势来告诉他从上个黎明到数学家醒来前有多少玩家的角色能力受他人影响而未正常生效。",
+    "name": "数学家",
+    "otherNight": 89.2,
+    "setup": false,
+    "reminders": [
+      "未正常生效"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 4200
+  },
+  {
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "flavor": "我在你的灵魂中感受到了庞大的恶意！但……那可能只是你的香水味道。我对接骨木汁过敏。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/91/04je4dg5ituw4nymx4f0x0b80p6gntg.png"
+    ],
+    "edition": "custom",
+    "id": "fortune_teller_c",
+    "firstNightReminder": "让占卜师选择两名玩家。如果其中有恶魔或“干扰项”，点头示意，否则摇头。",
+    "otherNightReminder": "让占卜师选择两名玩家。如果其中有恶魔或“干扰项”，点头示意，否则摇头。",
+    "name": "占卜师",
+    "otherNight": 69.1,
+    "setup": false,
+    "reminders": [
+      "干扰项"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 3700
+  },
+  {
+    "ability": "每个夜晚，你要选择一名玩家：你会得知一个与他能力相关的词语。",
+    "flavor": "脉浮而阳气不足，气不收敛，发散在外。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/11/9kua3j15hmyhp3ianx7j4ew9u56jq6z.png"
+    ],
+    "edition": "custom",
+    "id": "langzhong_c",
+    "firstNightReminder": "唤醒郎中，让其指向一名玩家。以不会被其他玩家察觉的形式对其提供与该玩家角色能力相关的一个词语。",
+    "otherNightReminder": "唤醒郎中，让其指向一名玩家。以不会被其他玩家察觉的形式对其提供与该玩家角色能力相关的一个词语。",
+    "name": "郎中",
+    "otherNight": 76.9,
+    "setup": false,
+    "reminders": [],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 4000
+  },
+  {
+    "ability": "每个夜晚，你要选择两名存活玩家：如果他们阵营相同，今晚任何玩家使用自身能力选择他们之一作为目标时，改为选中另一名玩家。",
+    "flavor": "三教九流皆相识，稀有货、密讯、人脉不缺，报需求，价妥就成交。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ee/n25ksxnaku6ywxqn58ew1ifqnbpavlb.png"
+    ],
+    "edition": "custom",
+    "id": "qianke_c",
+    "firstNightReminder": "让掮客指向两名存活玩家。如果这两名玩家阵营相同，在这些玩家的角色标记旁放置“熟客”提示标记。",
+    "otherNightReminder": "移除上个夜晚放置的“熟客”标记。唤醒掮客，让他指向两名存活玩家。如果这两名玩家阵营相同，在这些玩家的角色标记旁放置“熟客”提示标记。",
+    "name": "掮客",
+    "otherNight": 8.4,
+    "setup": false,
+    "reminders": [
+      "交换目标",
+      "交换目标"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 3300
+  },
+  {
+    "ability": "每个夜晚，你要选择至多三名玩家：你会得知今晚是否有邪恶玩家的能力选择或影响了他们之中的玩家。",
+    "flavor": "船篙点波心，跟着这篷船，避过暗礁浅涡，往前面渡头走。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/32/0gt9g6fcf1dfqxt3mpthhhg4z4riivt.png"
+    ],
+    "edition": "custom",
+    "id": "yinluren_c",
+    "firstNightReminder": "让引路人选择一至三名玩家，以点头或摇头告知他选择的玩家中是否有玩家在当晚被邪恶玩家的能力选择或影响过。",
+    "otherNightReminder": "让引路人选择一至三名玩家，以点头或摇头告知他选择的玩家中是否有玩家在当晚被邪恶玩家的能力选择或影响过。",
+    "name": "引路人",
+    "otherNight": 86.9,
+    "setup": false,
+    "reminders": [
+      ""
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 4100
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家并猜测他的角色：如果你猜错了，你会死亡。",
+    "flavor": "正面，我赢。反面，你输。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0a/55q4nfyb9gftn9jiujtt49ti2qa33h6.png"
+    ],
+    "edition": "custom",
+    "id": "gambler_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "让赌徒选择一名玩家和一个角色。如果赌徒猜错了，标记赌徒死亡。",
+    "name": "赌徒",
+    "otherNight": 14.1,
+    "setup": false,
+    "reminders": [
+      "死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家：如果当晚他醉酒或中毒，你死亡。",
+    "flavor": "列位看官，请扶好帽盔，我将逆天而行，踏空起舞！身如飞燕，胆若雷霆，只为博君一笑一惊！",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/74/mg6f3rixn7i32hirqdtmwqahzmqoy0n.png"
+    ],
+    "edition": "custom",
+    "id": "acrobat_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "让杂技演员选择一名玩家。标记该名玩家“被选择”。让杂技演员重新入睡。 如果被选择的玩家在当晚任何时刻醉酒或中毒，标记杂技演员”死亡“。",
+    "name": "杂技演员",
+    "otherNight": 14.7,
+    "setup": false,
+    "reminders": [
+      "被选择",
+      "死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家：如果他是善良角色且当晚被邪恶角色杀死，你和他交换角色。\n\n",
+    "flavor": "爪子攥着魔法橡果，要换你口袋里的蜜糖，如何？",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/94/ifnw94hbxlw3mg6s4qingurlyunphkh.png"
+    ],
+    "edition": "custom",
+    "id": "limao_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "唤醒狸猫，让他指向一名玩家。让狸猫重新入睡。将“太子”标记放在对应玩家角色标记旁。\n如果标记太子的玩家死亡且不是恶魔，在魔典中交换狸猫和太子的角色标记。在新的交换后的角色旁放置“醉酒”提示标记。唤醒新的狸猫并依次向他展示“你是”信息标记、狸猫的角色标记。让狸猫重新入睡。唤醒原来的狸猫并依次向他展示“你是”信息标记，“太子”的角色标记。",
+    "name": "狸猫",
+    "otherNight": 16.6,
+    "setup": false,
+    "reminders": [
+      "太子"
+    ],
+    "jinxes": [
+      {
+        "id": "boffin_c",
+        "reason": "如果因科学怪人获得狸猫能力的恶魔与“太子“交换角色，改为“太子”变成狸猫且恶魔获得“太子“原本角色的能力。"
+      }
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个白天，你可以公开发表一个声明。如果该声明正确，在当晚会有一名玩家死亡。",
+    "flavor": "巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉。巴拉。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b1/f5bpgic2ja7fbuvxh1vigjkxdsu78j7.png"
+    ],
+    "edition": "custom",
+    "id": "gossip_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "如果白天的声明为真，会有一名玩家死亡，并由说书人来选择一名玩家，标记该玩家死亡。",
+    "name": "造谣者",
+    "otherNight": 55.2,
+    "setup": false,
+    "reminders": [
+      "死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 0
+  },
+  {
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个善良角色：你获得该角色的能力。如果这个角色在场，他醉酒。",
+    "flavor": "如果你要说什么事情是最真实的？我想是啤酒。痛快喝吧，说不定我们明天就要死了。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ed/5u0zlyh58gvbif2oan8qv9yhsta5lnh.png"
+    ],
+    "edition": "custom",
+    "id": "philosopher_c",
+    "firstNightReminder": "哲学家可以选择一个角色。如果选择的角色不在场，将哲学家的角色标题替换成对应角色，并标记“是哲学家”，否则标记该角色对应的玩家醉酒。从现在开始，你需要以哲学家获得能力的那种角色的行动方式来唤醒哲学家。",
+    "otherNightReminder": "哲学家可以选择一个角色。如果选择的角色不在场，将哲学家的角色标题替换成对应角色，并标记“是哲学家”，否则标记该角色对应的玩家醉酒。从现在开始，你需要以哲学家获得能力的那种角色的行动方式来唤醒哲学家。",
+    "name": "哲学家",
+    "otherNight": 5.9,
+    "setup": false,
+    "reminders": [
+      "醉酒"
+    ],
+    "remindersGlobal": [
+      "是哲学家"
+    ],
+    "team": "townsfolk",
+    "firstNight": 9.9,
+    "special": [
+      {
+        "name": "replace-character",
+        "type": "reveal"
+      }
+    ]
+  },
+  {
+    "ability": "如果与你邻近的两名存活的玩家是善良的，他们不会死亡。",
+    "flavor": "若你感到寒冷，茶能使你温暖。若你感到愤怒，茶能使你冷静。若你感到沮丧，茶能使你振奋。若你感到激动，茶能使你镇定。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a4/t8h7diw8bpav612k1e3t62b10hlbizz.png"
+    ],
+    "edition": "custom",
+    "id": "tea_lady_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "茶艺师",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [
+      "不会死亡",
+      "不会死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 0
+  },
+    {
+        "id": "shiguanuwhaouhsoifhais",
+        "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/sjvf3t4a2see24rfoq8x10c3b9q6suu.png",
+        "edition": "custom",
+        "name": "史官",
+        "ability": "每个夜晚*，如果今天白天有玩家死于处决，你会得知存活镇民的数量。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 77,
+        "firstNightReminder": "",
+        "otherNightReminder": "如果今天白天有玩家死于处决，唤醒史官，告知其在场存活镇民数量。",
+        "reminders": [
+            "死于今日"
+        ],
+        "remindersGlobal": [],
+        "setup": false
+    },
+  {
+    "ability": "在你的首个夜晚，你要选择除你以外的一名玩家：如果他先死于处决，你转变为邪恶；如果你先死于处决，他转变为邪恶。",
+    "flavor": "尔遣使遗尔舅祖总兵书，朕已洞悉。将军之心，犹豫未决。朕恐将军失次机会，殊可惜耳。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/1e/h90jwatf3hsfkchrlw2m4tpezsyswpm.png"
+    ],
+    "edition": "custom",
+
+    "id": "nichen_c",
+    "firstNightReminder": "唤醒逆臣，让其选择一名玩家。在该玩家的角色标记旁放置“不共戴天”提示标记。",
+    "otherNightReminder": "如果逆臣或标记了“不共戴天”的玩家死于处决，唤醒两者之中的另一名玩家，告诉他变为邪恶阵营。",
+    "name": "逆臣",
+    "otherNight": 20.4,
+    "setup": false,
+    "reminders": [
+      "不共戴天"
+    ],
+    "remindersGlobal": [],
+    "team": "outsider",
+    "firstNight": 3900
+  },
+    {
+        "id": "woheduolema111",
+        "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/1cqow962ds6jp9x5rz84qwgpstkyurs.png",
+        "edition": "custom",
+        "name": "酒鬼",
+        "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [
+            "是酒鬼"
+        ],
+        "setup": true
+    },
+    {
+        "id": "zhadiaole111",
+        "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0f/pfhfn5qttyankavkkm373qvk6jkd7de.png",
+        "edition": "custom",
+        "name": "畸形秀演员",
+        "ability": "如果你“疯狂”地证明自己是外来者，你可能被处决。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+  {
+    "ability": "恶魔知道你在场。每局游戏限一次，恶魔可以拜访说书人并猜测谁是书生。如果恶魔猜测正确，即使你已死亡，当晚该恶魔可以选择一名玩家：他死亡。",
+    "flavor": "杀我可以，不过我得死个明白——我到底死在谁的手里？",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9c/67upf47ipfqwyde3mc0pv5vce1pxwj9.png"
+    ],
+    "edition": "custom",
+    "id": "shusheng_c",
+    "firstNightReminder": "唤醒恶魔，并对他展示“该角色的能力对你触发”提示标记与书生角色标记。",
+    "otherNightReminder": "如果白天恶魔成功猜中了书生是谁，唤醒那个恶魔，让其选择一名玩家。标记那名玩家死亡。",
+    "name": "书生",
+    "otherNight": 41.4,
+    "setup": false,
+    "reminders": [
+      "已猜测",
+      "死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "outsider",
+    "firstNight": 3100
+  },
+  {
+    "ability": "每个夜晚，你要选择左或右：你得知该方向上的下一名存活善良玩家的角色，他中毒且其他善良玩家以为他是邪恶的蛊雕，直到下个黄昏。",
+    "flavor": " 献上你能出的最高筹码，否则蛊毒入体，无力回天。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f9/01g1rijfutdxho6iq96cee539f6iiy9.png"
+    ],
+    "edition": "custom",
+    "id": "gudiao_c",
+    "firstNightReminder": "唤醒蛊雕，让其选择一个方向。将他的“中毒”标记移动至那个方向上的下一个存活玩家的角色标记旁。随后对他指向那名玩家，并展示“他是”提示标记和该玩家的角色标记。",
+    "otherNightReminder": "唤醒蛊雕，让其选择一个方向。将他的“中毒”标记移动至那个方向上的下一个存活玩家的角色标记旁。随后对他指向那名玩家，并展示“他是”提示标记和该玩家的角色标记。",
+    "name": "蛊雕",
+    "otherNight": 12.1,
+    "setup": false,
+    "reminders": [
+      "中毒"
+    ],
+    "remindersGlobal": [],
+    "team": "minion",
+    "firstNight": 3500,
+    "special": [
+      {
+        "name": "card",
+        "type": "signal",
+        "value": "怎么飞？"
+      },
+      {
+        "name": "player",
+        "type": "signal",
+        "value": "左飞"
+      },
+      {
+        "name": "player",
+        "type": "signal",
+        "value": "右飞"
+      }
+    ]
+  },
+  {
+    "ability": "每个夜晚，你要选择一名存活的玩家（与上个夜晚不同）：如果明天白天他被处决，他不会死亡。",
+    "flavor": "如果异议被驳回，我的委托人将进行无罪申辩，理由是控方不遵守法规第27章B条——针对动词进行非正确或误导性的词形变化。昨晚有九名陪审团成员死亡，这个事实只不过是表面证据，正如威尔斯诉图勒案所开创的先例，这是无罪释放的进一步理由。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2f/fbxp1pzgxjfs4vsrb0l30otb078m84e.png"
+    ],
+    "edition": "custom",
+    "id": "devils_advocate_c",
+    "firstNightReminder": "让魔鬼代言人选择一名存活玩家。标记那名玩家处决不死。",
+    "otherNightReminder": "让魔鬼代言人选择一名存活玩家，不能是上一夜他选择过的玩家。标记那名玩家处决不死。",
+    "name": "魔鬼代言人",
+    "otherNight": 16.9,
+    "setup": false,
+    "reminders": [
+      "处决不死"
+    ],
+    "remindersGlobal": [],
+    "team": "minion",
+    "firstNight": 3600
+  },
+  {
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。",
+    "flavor": "……",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d0/ftyh3tzzolrzec1njghipdcbmk7opuf.png"
+    ],
+    "edition": "custom",
+    "id": "assassin_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "刺客可以选择一名玩家。如果他这么做了，标记那名玩家死亡，且刺客失去能力，之后的夜晚无需再唤醒刺客。",
+    "name": "刺客",
+    "otherNight": 49.0,
+    "setup": false,
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "remindersGlobal": [],
+    "team": "minion",
+    "firstNight": 0
+  },
+  {
+    "ability": "恶魔拥有一个不在场的善良角色的能力，即使他醉酒或中毒。你和他都知道他获得了什么能力。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4c/cbp9yi8vzy26hp8lyzpw8tgyb4981cx.png"
+    ],
+    "edition": "custom",
+    "flavor": "恒星的氢能，取之不尽，静待采掘；碳、氧、氖，尽数裂解。分子引发混沌，熵增由此产生，宇宙现象更替，原子紊乱重塑，物质聚合坍缩。所有的一切，都集中在这一个小小的锥形瓶中。",
+    "id": "boffin_c",
+    "firstNightReminder": "（分别或同时）唤醒科学怪人和恶魔，通知他们恶魔因为科学怪人而获得的善良角色的能力。 ",
+    "otherNightReminder": "",
+    "name": "科学怪人",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [],
+    "remindersGlobal": [],
+    "team": "minion",
+    "firstNight": 4.0
+  },
+  {
+    "ability": "如果大于等于五名玩家存活时（旅行者不计算在内）恶魔死亡，你变成那个恶魔。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9a/39mexl68b71eyydru1jkze79qhwlfib.png"
+    ],
+    "edition": "custom",
+    "flavor": "你曾向我展示了紫焰议会的秘密。我们也曾一起在烈火里拥抱，在欲望中交欢，在兽性的驱使下耳鬓厮磨，我将永生永世侍奉于你。但今晚，我亲爱的，我是你的主人。",
+    "id": "scarlet_woman_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "如果红唇女郎今天变成了小恶魔，对她展示“你是”信息标记，和小恶魔角色标记。",
+    "name": "红唇女郎",
+    "otherNight": 21.2,
+    "setup": false,
+    "reminders": [
+      "是恶魔"
+    ],
+    "remindersGlobal": [
+      "是恶魔"
+    ],
+    "team": "minion",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+    "flavor": "彼因汝之罪孽，吾已嗅汝之恶臭满溢全身。时日曷丧？予及汝皆亡。竖子命如草芥，以吾之力，使汝终末于深海，终于此良夜。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/8c/tuqiff39a278vl7zgiu1z9hki1b5gni.png"
+    ],
+    "edition": "custom",
+    "id": "no_dashii_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "让诺-达鲺选择一名玩家。标记那名玩家死亡。",
+    "name": "诺-达鲺",
+    "otherNight": 32.8,
+    "setup": false,
+    "reminders": [
+      "死亡",
+      "中毒",
+      "中毒"
+    ],
+    "remindersGlobal": [],
+    "team": "demon",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。",
+    "flavor": "世间万扉集为一体，世间万匙铸为一身。世间万盅将与我共饮，但凡饮下我所赐圣水者，必将永不干渴，化作万孔泉眼涌作永生。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/3a/3bzh51psxnf95lld35qn6wywp4aduor.png"
+    ],
+    "edition": "custom",
+    "id": "vigormortis_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "让亡骨魔选择一名玩家。标记那名玩家死亡。如果该玩家是爪牙，标记该玩家保留能力，并标记与该玩家邻近的镇民玩家之一中毒。",
+    "name": "亡骨魔",
+    "otherNight": 35.1,
+    "setup": false,
+    "reminders": [
+      "死亡",
+      "保留能力",
+      "中毒"
+    ],
+    "remindersGlobal": [],
+    "team": "demon",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式杀死了一名与你邻近的镇民玩家，所有善良玩家会中毒直到下个黄昏。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/8f/mudbc6j42u8lflap7gom8jn4ba1vmk2.png"
+    ],
+    "edition": "custom",
+    "flavor": "有神鸟，其状如黄囊，赤如丹火，六足四翼，浑敦无面目，是识歌舞，实惟帝江也。",
+    "id": "hundun_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "唤醒混沌。让混沌指向一名玩家。该玩家死亡，在他角色标记旁放置“死亡”提示标记（除非该玩家受到其他原因影响导致不会死亡）。让混沌重新入睡。\n如果混沌成功杀死了与自己邻近的一名镇民玩家，在魔典中央放置混沌的“善良中毒”提示标记。从现在起，所有玩家只要是善良阵营，就会处于中毒状态。在下一个黄昏开始时，移除混沌的“善良中毒”提示标记。",
+    "name": "混沌",
+    "otherNight": 41.3,
+    "setup": false,
+    "reminders": [
+      "死亡",
+      "善良中毒"
+    ],
+    "remindersGlobal": [],
+    "team": "demon",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家:他死亡。在你的首个夜晚，你要选择一名存活的玩家：他中毒，只有当他处于死亡状态时你才会立即死亡。",
+    "image": [
+      "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e7/i3bse7nern4raiqwjpmzrpzjfa0vrq4.png"
+    ],
+    "edition": "custom",
+    "flavor": "美味，美味，美味，美味，美味，美味，美味，美味的脑——馅儿饼！是的。美味的老馅儿饼。我想说的就是这个。",
+    "id": "lleech_c",
+    "firstNightReminder": "让痢蛭指向一名玩家。标记那名玩家中毒。",
+    "otherNightReminder": "寄生蛭指向一名玩家。那名玩家死亡。",
+    "name": "痢蛭",
+    "otherNight": 37.4,
+    "setup": false,
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "demon",
+    "firstNight": 3400
+  },
+  {
+    "id": "8c02a73c-5afb-4fcb-8be1-4e7e75e7a5df",
+    "name": "圣洁之魂",
+    "team": "fabled",
+    "ability": "游戏过程中邪恶玩家的总数最多能比初始设置多一名。",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/9f/Spiritofivory.png/300px-Spiritofivory.png"
+  },
+  {
+    "id": "20197662-38d9-411d-8fc0-aec48f78a3d2",
+    "name": "黄金钥匙",
+    "team": "fabled",
+    "ability": "亡骨魔不-1外来者。",
+    "image": "https://img.cdn1.vip/i/6944ad327c053_1766108466.webp"
+  },
+  {
+    "id": "809087df-4675-4816-8773-ca7c0ab2a4ed",
+    "name": "黄金造科",
+    "team": "fabled",
+    "ability": "因科学怪人获得造谣者能力的恶魔声称“我是善良造谣者。”算声明正确。",
+    "image": "https://img.cdn1.vip/i/6944afc06ea4a_1766109120.webp"
+  },
+    {
+    "id": "jinxed01",
+    "name": "引路人&数学家",
+    "team": "a jinxed",
+    "ability": "引路人会得知数学家是否被影响，即使他是在数学家之前醒来。"
+  },
+  {
+    "id": "jinxed02",
+    "name": "狸猫&科学怪人",
+    "team": "a jinxed",
+    "ability": "如果因科学怪人获得狸猫能力的恶魔与“太子”交换角色，改为“太子”变为狸猫且恶魔获得“太子”原本角色的能力。"
+  },
+  {
+    "id": "jinxed03",
+    "name": "科学怪人&酒鬼",
+    "team": "a jinxed",
+    "ability": "如果恶魔拥有酒鬼的能力，改为由科学怪人选择一名玩家：如果他是镇民，他醉酒。"
+  }
+]

@@ -1,0 +1,345 @@
+[{"id": "_meta",
+    "name": "直面恐惧",
+    "author": "Babel",
+    "logo": "https://i.postimg.cc/4x6CxGvx/Logo.png",
+    "almanac": "https://w.bmwwx.cn/eR7Cmh"
+  },{
+    "image": "https://i.ibb.co/ky30hZL/hunttwotoneng.png",
+    "id": "hunt",
+    "name": "狩猎",
+    "team": "townsfolk",
+   "firstNight": 80,
+   "otherNight": 160,
+    "ability": "在你的首个夜晚，你会得知一名邪恶玩家。每当你得知的玩家死亡，你会在当晚得知另一名邪恶玩家。两个白天后，如果那名邪恶玩家仍存活，每个夜晚，会有一名存活玩家死亡。",
+    "reminders": ["猎物","第一天", "第二天", "死亡"],
+"special": [
+			{
+			  "type": "selection",
+			  "name": "bag-duplicate"
+			}
+		]
+  },
+  {
+    "image": "https://i.ibb.co/9WBvSNm/corruptiontwotoneng.png",
+    "id": "corruption",
+    "name": "腐化",
+    "team": "townsfolk",
+   "firstNight": 90,
+   "otherNight": 170,
+    "ability": "每个夜晚，你得知一名存活的善良玩家，然后如果所有存活善良玩家都被你得知过（包括你自己在内），你的阵营落败。",
+   "reminders": ["巢穴"]
+  },
+  {
+    "image": "https://i.ibb.co/tssYhxX/strangertwotone-NG.png",
+    "id": "stranger",
+    "name": "局外者",
+    "team": "townsfolk",
+   "firstNight": 21,
+   "otherNight": 31,
+    "ability": "每个夜晚，你要选择除你以外的一名存活玩家：你获得他的能力直到下个黄昏，如果他是邪恶的，你中毒。如果与你同阵营的玩家选择或影响了他，你和他都中毒。",
+    "reminders": ["中毒","不思议"]  
+},{
+    "image": "https://i.ibb.co/zRKcBwr/webng.png",
+    "id": "web",
+    "name": "网络",
+    "team": "townsfolk",
+   "firstNight": 30,
+   "otherNight": 40,
+    "ability": "每个夜晚，你要选择两名存活玩家。每当其他玩家选择或影响第一名玩家时，可能会改为选择或影响第二名玩家，直到下个黄昏。",
+    "reminders": [
+      "Redirected", "新目标"
+    ]
+  },
+ {
+    "image": "https://i.ibb.co/s1dHd7x/desolationtwotoneng.png",
+    "id": "desolation",
+    "name": "荒芜",
+    "team": "townsfolk",
+   "firstNight": 70,
+   "otherNight": 140,
+    "ability": "每个夜晚，你可以选择一个爪牙角色：恶魔会得知该角色被你选中。在等同于在场爪牙数量的夜晚，所有被你选择过的在场爪牙角色死亡，即使你已死亡或中毒。",
+    "reminders": [
+      "命定1","命定2","命定3","死亡"
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/SPzc9yF/spiraltwotoneng.png",
+    "id": "spiral",
+    "name": "螺旋",
+    "team": "townsfolk",
+   "firstNight": 40,
+   "otherNight": 60,
+   "setup": true,
+    "ability": "每个夜晚，你要选择除你以外的一名存活玩家：从现在起，他的能力中由说书人决定的部分会改为对其对立阵营有利(外来者改为对善良阵营有利)。[+1外来者]",
+    "reminders": ["改动"]
+  
+  }, 
+{
+    "image": "https://i.ibb.co/TMNWyJf/vasttwotoneng.png",
+    "id": "vast",
+    "name": "浩瀚",
+    "team": "townsfolk",
+   "otherNight": 50,
+    "ability": "每个夜晚*，一名对善良阵营或邪恶阵营贡献最大的玩家会中毒直到下个黄昏，你会得知因你的能力中毒的玩家。",
+   "reminders": ["中毒"]
+  },{
+    "image": "https://i.ibb.co/FXhSs00/endtwotone.png",
+    "id": "end",
+    "name": "终结",
+    "team": "townsfolk",
+   "otherNight": 105,
+    "ability": "每个夜晚*，如果与你邻近的两名存活玩家是善良的，他们之一会死亡，另一名玩家不会死亡，除非你今天白天提名了死亡玩家。",
+    "reminders": [
+      "死","生","收获"
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/HTZxtjn2/dark4.png",
+    "id": "dark",
+    "name": "黑暗",
+    "team": "townsfolk",
+   "otherNight": 80,
+    "ability": "每个夜晚*，你要选择两名存活玩家。如果他们上个夜晚因自身能力被唤醒的次数相同，当有善良玩家即将死亡时，改为他们之一死亡。",
+    "reminders": ["覆盖层"]
+  },
+  
+  {
+    "image": "https://i.ibb.co/YR6BTTr/lonely.png",
+    "id": "lonely",
+    "name": "孤独",
+    "team": "townsfolk",
+   "otherNight": 90,
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择让自己从现在起被当作死亡。如果你这么做，你今晚不会死亡，且在此之后你仍然可以正常提名和投票。",
+    "reminders": [
+      "假死"
+   ]
+  }, {
+    "image": "https://i.ibb.co/s9qHJfD/buriedtwotoneng.png",
+    "id": "buried",
+    "name": "埋葬",
+    "team": "townsfolk",
+    "ability": "提名你的玩家会中毒直到黎明且当晚不会死亡。",
+    "reminders": [
+      "不死之身"
+    ]
+  },
+
+  {
+    "image": "https://i.ibb.co/R4QT7Ny/slaughtertwotoneng.png",
+    "id": "slaughter",
+    "name": "杀戮",
+    "team": "townsfolk",
+    "ability": "如果你提名的善良玩家在为他辩护的过程中发表了错误的声明，他会在当晚死亡。",
+
+   "otherNight": 132,
+    "reminders": [
+      "当晚死亡","死亡"
+    ]
+  }, {
+    "image": "https://i.ibb.co/9qwbLJ1/flestwotoneng.png",
+    "id": "flesh",
+    "name": "血肉",
+    "team": "townsfolk",
+    "ability": "如果你提名的玩家在当天被处决，你可以公开选择一名玩家。被你选择的玩家即将在夜晚死亡时，他不会死亡且你会得知此事。",
+    "reminders": [
+      "尸骨"
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/C5v41Wr/jurgentwotoneng.png",
+    "id": "jurgenleitner",
+    "name": "尤尔根·莱特纳",
+    "team": "outsider",
+   "firstNight": 15,
+   "otherNight": 20,
+    "ability": "每个夜晚，你会获得一个镇民角色的能力直到下个黄昏，即使你已死亡。如果邪恶玩家杀死了你，你醉酒。",
+    "reminders": [
+      "残酷死亡"
+    ]
+  },  {
+    "image": "https://i.ibb.co/42Zz2Rk/peterlukaswithbg-removebg-preview.png",
+    "id": "peterlukas",
+    "name": "彼得·卢卡斯",
+    "team": "outsider",
+   "firstNight": 20,
+   "otherNight": 30,
+    "ability": "每个夜晚，你要选择除你以外的一名存活玩家：你或他之一会醉酒直到下个黄昏。当你首次死亡后，你仍存活，但会被当作死亡，恶魔会在下个夜晚行动两次。",
+    "reminders": ["最近","苔原","赌注"]
+  },
+  {
+    "image": "https://i.ibb.co/KVLtfDq/gerardtwotoneng.png",
+    "id": "gerardkeay",
+    "name": "杰罗德·凯伊",
+    "team": "outsider",
+    "ability": "每局游戏限一次，在夜晚时，即使你已死亡，一名即将死亡的玩家可能不会死亡。如果你提名了一名存活的邪恶玩家或尤尔根·莱特纳，你醉酒直到下个黎明。",
+    "reminders": [
+      "不会死亡","刻薄老头的酒","限一次"
+    ]
+  },
+  {
+    "image": "https://i.ibb.co/7GQ9LQ2/daisytwotoneng.png",
+    "id": "daisytonner",
+    "name": "黛西·托纳",
+    "team": "outsider",
+   "setup": true,
+    "ability": "你以为你是狩猎并拥有他的能力。你拥有的狩猎能力会产生错误信息，但仍然会造成死亡。",
+    "remindersGlobal": ["是黛西"],
+"special": [
+            {
+                "name": "bag-disabled",
+                "type": "selection"
+            }
+        ]
+  },
+
+  {
+    "image": "https://i.ibb.co/3N9vFPg/martintwotoneng.png",
+    "id": "martinblackwood",
+    "name": "马丁·布莱克伍德",
+   "firstNight": 12,
+   "otherNight": 17,
+   "setup": true,
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个外来者角色：这两名玩家之一是该角色（或者你会得知没有外来者在场）。每个夜晚*：直至下个黄昏，你要选择一项：1）一名外来者玩家解除并免受醉酒、中毒、扭曲影响，会得知正确信息，会正常行动，即使他已经死亡；2）一名外来者玩家的能力生效两次。[-1或+1外来者]",
+   "reminders": ["图书管理员","诱饵","清醒健康", "行动两次"]
+  }, {
+    "image": "https://i.ibb.co/3kHvT99/timstokertwotoneng.png",
+    "id": "timstoker",
+    "name": "提姆·斯托克",
+    "team": "minion",
+   "firstNight": 100,
+   "otherNight": 180,
+    "ability": "你不认识其他邪恶玩家，但他们认识你。如果一名清醒的镇民将选择或影响与你邻近的存活的玩家，他立即醉酒且你转变为善良阵营，直到下下个黎明。如果你死亡，你转变为邪恶阵营。",
+   "reminders": ["醉酒","黎明1"]
+  },
+{
+    "image": "https://i.ibb.co/JQj3Pgz/sashang.png",
+    "id": "sashajames",
+    "name": "萨沙·詹姆斯",
+    "team": "minion",
+"firstNight": 11,
+    "otherNight": 16,
+    "ability": "每局游戏限一次，在夜晚时，你可以猜测至多5名玩家的角色：你会得知所有你猜对的镇民角色并获得他们的能力，随后你可能会被当作善良阵营，被你猜中的镇民可能会被当作邪恶阵营。",
+   "reminders": ["复制","限一次"]
+  }
+,  
+{
+    "image": "https://i.ibb.co/DRGXFDP/melanieng.png",
+    "id": "melanieking",
+    "name": "梅兰妮·金",
+    "team": "minion",
+   "otherNight": 131,
+    "ability": "每当有玩家在夜晚死亡，你得知他们的角色以及谁杀死了他们。如果你提名了一名你上个夜晚得知过的玩家（包含因爪牙信息得知），当晚会有一名玩家死亡。",
+    "reminders": [
+      "幽灵狩猎","死亡"
+    ]
+  }, {
+    "image": "https://i.ibb.co/PMZNRbr/jonahng.png",
+    "id": "jonahmagnus",
+    "name": "乔纳·马格鲁斯",
+    "team": "demon",
+   "otherNight": 130,
+    "ability": "每个夜晚*，你会得知谁是当天对善良阵营最有利的存活玩家，随后你要猜测他的角色：如果你猜错了，他死亡；否则你死亡。如果你因此死亡，那名玩家会变成邪恶的乔纳·马格鲁斯，但每局游戏仅能成功转化一次。",
+    "reminders": ["死亡","限一次"]
+  },{
+    "image": "https://i.ibb.co/6vxSFF6/gertrudetwotoneng.png",
+    "id": "gertruderobinson",
+    "name": "格特鲁德·罗宾森",
+    "team": "demon",
+   "otherNight": 120,
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。当一名爪牙死亡时，所有镇民玩家醉酒直到下个黄昏。",
+    "reminders": ["死亡","所有镇民醉酒"]
+  }, {
+    "image": "https://i.ibb.co/mS5FWV0/eyeng.png",
+    "id": "eye",
+    "name": "眼神",
+    "team": "demon",
+   "firstNight": 60,
+   "otherNight": 110,
+    "ability": "每个夜晚，你要选择并获得一个镇民角色的能力，然后你可以询问说书人一个关于该角色的问题。在此之后，你失去你上次以此法获得的能力，该角色对应的玩家死亡。",
+   "reminders": ["胁迫","死亡"]
+  
+}, {
+    "image": "https://i.ibb.co/z246vyB/archvistng.png",
+    "id": "archivist",
+    "name": "档案员",
+    "team": "demon",
+   "firstNight": 10,
+   "otherNight": 15,
+    "ability": "你不能杀死你未标记玩家。每个夜晚，顺时针方向最近的未标记玩家、最近选择或影响你的玩家和你尝试杀死的未标记玩家会被标记，随后你会得知并获得所有被标记或不在场的镇民能力。在黄昏时，如果你获得了剧本列表上全部镇民角色的能力，邪恶阵营获胜。[其他非镇民玩家会被你当作镇民]",
+    "reminders": ["标记","恐惧"]
+  },
+{
+    "team": "fabled",
+    "ability": "获得的带有延迟效果的能力会保持到延迟效果结束。对自己是尤尔根·莱特纳疯狂的玩家可能立即被处决，除非这样做确实会帮助到他们。",
+    "id": "fuckjurgen",
+    "name": "代号F*%&尤尔根·莱特纳",
+    "image": "https://i.ibb.co/g9rvgVz/Icon-hellslibrarian.png"
+},
+{
+    "team": "fabled",
+    "ability": "如多名玩家拥有相同能力，从该角色能力对应的玩家开始行动，然后才是获得该角色能力的玩家。",
+    "id": "fuckFGrgen",
+    "name": "特殊行动顺序",
+    "image": "https://i.ibb.co/g9rvgVz/Icon-hellslibrarian.png"
+},
+{
+    "team": "fabled",
+    "ability": "旅行者不能被选择、影响或被任何人得知，不会参与相邻玩家的计算。每个夜晚开始时，恶魔可以选择放弃他们的能力直到下个黄昏来杀死一名旅行者。",
+    "id": "moonlight",
+    "name": "月光",
+    "image": "https://i.ibb.co/g9fpWD2/moonlight.png",
+    "reminders": ["月光恋人","死亡"]
+},
+{
+    "team": "traveler",
+    "ability": "每个白天，你可以拜访说书人并选择一个镇民角色：你会获得一个物品和使用该物品的代价，你不能使用该物品但可以公开赠给其他玩家，他获得你选择的镇民角色能力直到下个黎明，并支付相应代价。",
+    "id": "salesa",
+    "name": "米凯尔·萨莱莎",
+    "image": "https://i.ibb.co/wgvx07V/salesahires.png"
+},
+{
+    "team": "traveler",
+    "ability": "你不会得知你的阵营，但恶魔知道。如果你是善良的，你会获得一个镇民角色的能力；如果你是邪恶的，你会获得一个爪牙角色的能力，你以为你同时具有这两个能力。",
+    "id": "distortion",
+    "name": "扭曲",
+    "image": "https://i.ibb.co/KXXm1JG/thedistortion.png"
+},
+{
+    "team": "traveler",
+    "ability": "非旅行者玩家可以拜访说书人获得铀标记：拥有铀标记玩家的投票会记为3票且死亡不消耗投票标记。如果半数及以上玩家拥有铀标记，你死亡且所有铀标记失效。从现在起，如没有存活玩家拥有铀标记，游戏立即结束，所有无铀标记玩家获胜(善良阵营与邪恶阵营不会同时获胜)。",
+    "id": "extinction",
+    "name": "消亡",
+    "image": "https://i.ibb.co/NLkh4Jr/theextinction.png",
+    "reminders": ["铀","转变胜负"]
+},
+{
+    "team": "traveler",
+    "ability": "每个白天，与你邻近的存活玩家可以向你签订协议：你可以接受其中一名玩家的协议，若接受协议，另一名与你邻座存活玩家会立即死亡。如果一名玩家违背了他的协议，他会失去能力直到下个黎明。",
+    "id": "mrspider",
+    "name": "蜘蛛先生",
+    "image": "https://i.ibb.co/hsqrxfR/mrspider.png",
+    "reminders": ["签订协议","咚咚"]
+},
+{
+    "team": "traveler",
+    "ability": "布雷肯和霍普共享一个座位，投票视作一票，必定为一个阵营。如果布雷肯即将死亡，改为霍普死亡。[是两名玩家]",
+    "id": "breekonandhope",
+    "name": "布雷肯&霍普",
+    "image": "https://i.ibb.co/4TWPWVZ/breekonhope.png"
+},
+{
+    "team": "traveler",
+    "ability": "在你的首个夜晚，你得知一个关键词。每个白天限一次，如果有玩家公开说出这个词语，你可以“偷取”他的座位和角色名直到你下次偷取。他获得你原本的座位和角色名。",
+    "id": "breekon",
+    "name": "布雷肯",
+    "image": "https://i.ibb.co/4TWPWVZ/breekonhope.png"
+},
+{
+    "team": "traveler",
+    "ability": "每个黄昏，说书人会提出一个问题，你和布雷肯需要通过一人一词的方式轮流回答：如果你们回答正确，布雷肯会获得一个在场的角色能力直到下个黄昏：否则布雷肯会以为自己获得了能力。",
+    "id": "hope",
+    "name": "霍普",
+    "image": "https://i.ibb.co/4TWPWVZ/breekonhope.png"
+}
+]

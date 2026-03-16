@@ -1,0 +1,385 @@
+[
+  {
+    "id": "_meta",
+    "name": "新大陆",
+    "author": "蓝铃兰",
+    "logo": "https://free.picui.cn/free/2025/12/06/69338ae577231.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/xindalu/almanac.html"
+  },
+  {
+    "id": "_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/courtier.png",
+    "firstNightReminder": "唤醒侍臣，他可以摇头不使用能力，或选择角色列表上的一个任意角色，该角色对应的玩家之一醉酒。",
+    "otherNightReminder": "如果侍臣未曾使用能力，唤醒侍臣，他可以摇头不使用能力，或选择角色列表上的一个任意角色，该角色对应的玩家之一醉酒。",
+    "reminders": [
+      "醉酒1",
+      "醉酒2",
+      "醉酒3",
+      "失去能力"
+    ],
+    "name": "侍臣",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个角色：如果该角色在场，一个该角色从当晚开始醉酒三天三夜。",
+    "firstNight": 3600,
+    "otherNight": 2
+  },
+  {
+    "id": "1_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/mathematician.png",
+    "firstNightReminder": "唤醒数学家，用手势比划数字来告诉他今天有多少玩家的能力未正常生效。",
+    "otherNightReminder": "唤醒数学家，用手势比划数字来告诉他今天有多少玩家的能力未正常生效。",
+    "reminders": [
+      "未正常生效"
+    ],
+    "name": "数学家",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知有多少名玩家的能力因为其他角色的能力而未正常生效。（从上个黎明到你被唤醒时）",
+    "firstNight": 4300,
+    "otherNight": 17
+  },
+  {
+    "id": "2_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/flowergirl.png",
+    "otherNightReminder": "唤醒卖花女孩，以点头或摇头告知她今天白天是否有恶魔参与投票。",
+    "reminders": [
+      "恶魔未投票",
+      "恶魔已投票"
+    ],
+    "name": "卖花女孩",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天时是否有恶魔投过票。",
+    "otherNight": 11
+  },
+  {
+    "id": "3_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/artist.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "艺术家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以私下询问说书人一个是非问题，你会得知该问题的答案。"
+  },
+  {
+    "id": "4_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/sage.png",
+    "otherNightReminder": "如果贤者被恶魔杀死，唤醒贤者，对他指向两名玩家。其中之一是杀死贤者的恶魔。",
+    "name": "贤者",
+    "team": "townsfolk",
+    "ability": "如果恶魔杀死了你，在当晚你会被唤醒并得知两名玩家，其中一名是杀死你的那个恶魔。",
+    "otherNight": 10
+  },
+  {
+    "id": "5_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/pixie.png",
+    "firstNightReminder": "唤醒小精灵，对他展示一个在场镇民角色标记。",
+    "reminders": [
+      "疯狂",
+      "获得能力"
+    ],
+    "name": "小精灵",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个在场的镇民角色。如果你“疯狂”地证明你是该角色，当他死亡时你获得该角色的能力。",
+    "firstNight": 3900
+  },
+  {
+    "id": "6_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/general.png",
+    "firstNightReminder": "唤醒将军，对他用手势比划当前的优势阵营。",
+    "otherNightReminder": "唤醒将军，对他用手势比划当前的优势阵营。",
+    "name": "将军",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知说书人认为哪个阵营当前更有优势（善良/邪恶/均势）。",
+    "firstNight": 4200,
+    "otherNight": 16
+  },
+  {
+    "id": "7_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/balloonist.png",
+    "firstNightReminder": "唤醒气球驾驶员，对他指向一名玩家。",
+    "otherNightReminder": "唤醒气球驾驶员，对他指向一名玩家，这名玩家与之前气球驾驶员上一个夜晚得知过的玩家属于不同的角色类型。",
+    "reminders": [
+      "得知"
+    ],
+    "setup": true,
+    "name": "气球驾驶员",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名与上个夜晚得知的玩家角色类型不同的玩家。[+0~1外来者]",
+    "firstNight": 4000,
+    "otherNight": 12
+  },
+  {
+    "id": "8_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fisherman.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "渔夫",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以让说书人给你一些能帮助你的阵营获胜的建议。"
+  },
+  {
+    "id": "9_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/langzhong.png",
+    "firstNightReminder": "唤醒郎中，让他指向除他以外的一名玩家。对郎中展示一个与该玩家能力相关的词语。",
+    "otherNightReminder": "唤醒郎中，让他指向除他以外的一名玩家。对郎中展示一个与该玩家能力相关的词语。",
+    "name": "郎中",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的一名玩家：你会得知一个与他能力相关的词语。",
+    "firstNight": 4100,
+    "otherNight": 13
+  },
+  {
+    "id": "10_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/bianlianshi.png",
+    "remindersGlobal": [
+      "是变脸师"
+    ],
+    "name": "变脸师",
+    "team": "townsfolk",
+    "ability": "每个白天，如果你“疯狂”地证明自己是一个善良角色（与之前不同），你可能会在当晚获得那个角色的能力，直到下个黄昏。"
+  },
+  {
+    "id": "11_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/shiguan.png",
+    "otherNightReminder": "如果今天白天有玩家死于处决，唤醒史官，告知其在场存活镇民数量。",
+    "reminders": [
+      "死于今日"
+    ],
+    "name": "史官",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，如果今天白天有玩家死于处决，你会得知存活镇民的数量。",
+    "otherNight": 14
+  },
+  {
+    "id": "12_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/yishi.png",
+    "otherNightReminder": "如果驿使白天公开声明了一个角色，唤醒驿使：1.如果该角色在场，得知是；2.如果该角色不在场，得知否，并且驿使失去能力。",
+    "reminders": [
+      "在场",
+      "失去能力"
+    ],
+    "name": "驿使",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开声明一个角色。在当晚，你会得知该角色是否在场。如果你因此得知了否，你失去此能力。",
+    "otherNight": 15
+  },
+  {
+    "id": "13_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/drunk.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "14_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/recluse.png",
+    "name": "陌客",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。"
+  },
+  {
+    "id": "15_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/sweetheart.png",
+    "otherNightReminder": "如果心上人死亡，一名玩家醉酒。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "心上人",
+    "team": "outsider",
+    "ability": "当你死亡时，会有一名玩家开始醉酒。",
+    "otherNight": 9
+  },
+  {
+    "id": "16_xindalu",
+    "image": "https://clocktower-wiki.gstonegames.com/images/1/1e/Hermit.png",
+    "remindersGlobal": [
+      "是隐士"
+    ],
+    "setup": true,
+    "name": "隐士",
+    "team": "outsider",
+    "ability": "你拥有所有外来者能力。[-0~1外来者]"
+  },
+  {
+    "id": "17_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/evil_twin.png",
+    "firstNightReminder": "分别独自唤醒镜像双子和对立双子，告知他们由于镜像双子能力而得知的信息。",
+    "reminders": [
+      "对立双子"
+    ],
+    "name": "镜像双子",
+    "team": "minion",
+    "ability": "你与一名对立阵营的玩家互相知道对方是什么角色。如果其中善良玩家被处决，邪恶阵营获胜。如果你们都存活，善良阵营无法获胜。",
+    "firstNight": 3700
+  },
+  {
+    "id": "18_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/marionette.png",
+    "firstNightReminder": "如果提线木偶在场，对恶魔展示提线木偶角色标记并指向提线木偶玩家。",
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "setup": true,
+    "name": "提线木偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]",
+    "firstNight": 3400
+  },
+  {
+    "id": "19_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/summoner.png",
+    "firstNightReminder": "唤醒召唤师，对他展示三个不在场的善良角色标记。",
+    "otherNightReminder": "如果这是游戏中的第三个夜晚，唤醒召唤师，让他选择一名玩家和一个恶魔角色，那名玩家变成由他选择的邪恶恶魔。",
+    "reminders": [
+      "第一晚",
+      "第二晚",
+      "第三晚"
+    ],
+    "setup": true,
+    "name": "召唤师",
+    "team": "minion",
+    "ability": "在首个夜晚，你会得知三个伪装。在第三个夜晚，你要选择一名玩家：他变成由你选择的邪恶恶魔。[无恶魔在场]",
+    "firstNight": 2300,
+    "otherNight": 4
+  },
+  {
+    "id": "20_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/humeiniang.png",
+    "firstNightReminder": "唤醒狐媚娘，让她选择一名玩家。在狐媚娘入睡后通知那名玩家狐媚娘在场。",
+    "otherNightReminder": "如果狐媚娘死于处决，唤醒她选择的玩家并通知他阵营变化。",
+    "reminders": [
+      "被魅惑"
+    ],
+    "name": "狐媚娘",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择一名玩家：他会知道狐媚娘在场。如果你死于处决，当晚他转变为邪恶阵营。",
+    "firstNight": 3800,
+    "otherNight": 3
+  },
+  {
+    "id": "21_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/lil_monsta.png",
+    "firstNightReminder": "唤醒所有爪牙选择由谁照看小怪宝。",
+    "otherNightReminder": "唤醒所有爪牙选择由谁照看小怪宝。随后，决定今晚谁会因为小怪宝能力死亡。",
+    "remindersGlobal": [
+      "是恶魔",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "小怪宝",
+    "team": "demon",
+    "ability": "每个夜晚，所有爪牙要秘密决定由哪名玩家来照看小怪宝并且“是恶魔”。每个夜晚*，可能会有一名玩家死亡。[+1爪牙]",
+    "firstNight": 3500,
+    "otherNight": 6
+  },
+  {
+    "id": "22_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/legion.png",
+    "otherNightReminder": "决定今晚谁会因为军团能力死亡。",
+    "reminders": [
+      "即将被处决",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "军团",
+    "team": "demon",
+    "ability": "每个夜晚*，可能有一名玩家死亡。如果一项提名只有邪恶玩家投票，投票无效。你也会被当作是爪牙。[多数玩家为军团]",
+    "otherNight": 5
+  },
+  {
+    "id": "23_xindalu",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/kazali.png",
+    "firstNightReminder": "唤醒卡扎力，让他选择玩家变成邪恶爪牙。",
+    "otherNightReminder": "唤醒卡扎力，让他攻击一名玩家。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "卡扎力",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。[由你决定谁是什么爪牙，-或+任意数量外来者]",
+    "firstNight": 12,
+    "otherNight": 7
+  },
+  {
+    "id": "24_xindalu",
+    "image": "https://clocktower-wiki.gstonegames.com/images/1/18/Lordoftyphon.png",
+    "firstNightReminder": "将位于堤丰之首两侧的对应数量的玩家变成邪恶的爪牙，并分别唤醒他们通知他们的角色和阵营变化。",
+    "otherNightReminder": "唤醒堤丰之首，让他攻击一名玩家。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "堤丰之首",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。[邪恶玩家全部邻座，你位于正中，+1爪牙，-或+任意数量外来者]",
+    "firstNight": 11,
+    "otherNight": 8
+  },
+  {
+    "id": "25_xindalu",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/xindalu/25_xindalu.png",
+    "name": "圣洁之魂",
+    "team": "fabled",
+    "ability": "游戏过程中邪恶玩家的总数最多能比初始设置多一名。"
+  },
+  {
+    "id": "26_xindalu",
+    "name": "数学家&酒鬼&提线木偶",
+    "team": "jinxes",
+    "ability": "数学家可能会得知酒鬼/提线木偶产生了错误信息或“能力未正常生效”。"
+  },
+  {
+    "id": "27_xindalu",
+    "name": "气球&提线木偶",
+    "team": "jinxes",
+    "ability": "如果提线木偶抽到了气球驾驶员，在设置调整阶段可能会+1外来者。"
+  },
+  {
+    "id": "28_xindalu",
+    "name": "贤者&陌客",
+    "team": "jinxes",
+    "ability": "陌客可能会被贤者当作杀死他的恶魔。"
+  },
+  {
+    "id": "29_xindalu",
+    "name": "提线木偶&小怪宝&召唤师&卡扎力",
+    "team": "jinxes",
+    "ability": "如果提线木偶本应初始在场，i他们会在恶魔之后进场并与恶魔邻座。"
+  },
+  {
+    "id": "30_xindalu",
+    "name": "召唤师&侍臣",
+    "team": "jinxes",
+    "ability": "如果存活的召唤师失去能力，说书人会获得召唤师的能力。"
+  },
+  {
+    "id": "31_xindalu",
+    "name": "军团&召唤师",
+    "team": "jinxes",
+    "ability": "如果召唤师召唤了军团，所有邪恶玩家会变成军团。"
+  },
+  {
+    "id": "32_xindalu",
+    "name": "堤丰之首&召唤师",
+    "team": "jinxes",
+    "ability": "如果召唤师创造了堤丰之首，则堤丰之首必须与一名爪牙相邻，且堤丰之首另一侧的玩家会变成一个邪恶的爪牙。"
+  },
+  {
+    "id": "33_xindalu",
+    "name": "卡扎力&召唤师",
+    "team": "jinxes",
+    "ability": "如果召唤师创造了第二个存活的恶魔，当晚的死亡由说书人决定。"
+  },
+  {
+    "id": "34_xindalu",
+    "name": "圣洁之魂&军团",
+    "team": "jinxes",
+    "ability": "圣洁之魂对初始的军团无效。"
+  }
+]

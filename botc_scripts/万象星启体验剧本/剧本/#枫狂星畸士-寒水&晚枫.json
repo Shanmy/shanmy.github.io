@@ -1,0 +1,63 @@
+[{      "status": [{
+		"skill": "游戏过程中不允许有额外的邪恶玩家。",
+		"name": "善良的晚枫"
+	}],
+        "id": "_meta",
+        "name": "枫狂星畸士",
+        "author": "寒水&晚枫",
+        "logo":"https://s21.ax1x.com/2025/09/04/pVgOiB8.png"
+      },{"id":"Chef"},{"id":"noble"},{"id":"Savant"},{"id":"empath"},{"id":"dreamer"},{"id":"exorcist"},{"id":"alsaahir"},{"id":"undertaker"},{"id":"gossip"},{"id":"banxian"},{"id":"innkeeper"},{"id":"poppy_grower"},
+  {
+    "id": "yinshishihsihsihsihsihsissssssss",
+    "image": "https://clocktower-wiki.gstonegames.com/images/1/1e/Hermit.png",
+    "edition": "custom",
+    "name": "隐士",
+    "ability": "你拥有所有外来者能力。[-0~1外来者]",
+    "team": "outsider",
+    "firstNight": 0,
+    "otherNight": 0,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [],
+    "remindersGlobal": [
+      "是隐士"
+    ],
+    "setup": true
+  },
+	{
+		"ability": "在说书人宣布你死亡时没有鼓掌的玩家可能会一起死亡。",
+		"image": "https://i.postimg.cc/kGXHpLFM/image.webp",
+		"edition": "custom",
+		"flavor": "",
+		"id": "Showman",
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"name": "作秀狂",
+		"otherNight": 0,
+		"setup": 0,
+		"reminders": [
+			"死亡"
+		],
+		"remindersGlobal": [],
+		"team": "outsider",
+		"firstNight": 0
+	},{"id":"banshee"},{"id":"mutant"},{"id":"lunatic"},{"id":"assassin"},{"id":"wizard"},{"id":"cerenovus"},{"id":"Marionette"},{"id":"goblin"},{"id":"TaoTie"},{"id":"no_dashii"},
+	{
+		"ability": "每个夜晚*，即使你已死亡，你要选择一名玩家：他死亡。如果死亡的爪牙公开声称九头蛇在场，他会变成九头蛇。",
+		"image": "https://i.postimg.cc/RZY5wYhV/image.png",
+		"edition": "custom",
+		"flavor": "",
+		"id": "Hydra",
+		"firstNightReminder": "",
+		"otherNightReminder": "让九头蛇选择一名玩家。标记那名玩家死亡。",
+		"name": "九头蛇",
+		"otherNight": 5560,
+		"setup": 0,
+		"reminders": [
+			"死亡",
+			"同化"
+		],
+		"remindersGlobal": [],
+		"team": "demon",
+		"firstNight": 0
+	}]

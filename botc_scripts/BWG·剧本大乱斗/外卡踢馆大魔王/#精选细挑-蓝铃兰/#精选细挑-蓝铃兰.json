@@ -1,0 +1,361 @@
+[
+  {
+    "id": "_meta",
+    "name": "精选细挑",
+    "author": "蓝",
+    "logo": "https://www.bloodstar.xyz/p/bluebell/jtxx/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/bluebell/jtxx/almanac.html"
+  },
+  {
+    "id": "1_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/1_jtxx.png",
+    "reminders": [
+      "未正常生效",
+      "做题"
+    ],
+    "remindersGlobal": [
+      "未正常生效",
+      "做题"
+    ],
+    "name": "小镇做题家",
+    "team": "fabled",
+    "ability": "每个白天，所有玩家表决一名玩家（与之前不同），他可以拜访你以得知昨天夜晚有多少名玩家的能力因其他玩家的能力未正常生效（结果论）。"
+  },
+  {
+    "id": "2_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/2_jtxx.png",
+    "reminders": [
+      "偏题",
+      "离题"
+    ],
+    "remindersGlobal": [
+      "偏题",
+      "离题"
+    ],
+    "name": "小题大做",
+    "team": "fabled",
+    "ability": "本局游戏中有小镇做题家，每个白天必须有玩家通过小镇做题家拜访说书人（此过程称为获取小镇做题家）。 如果邪恶的或已死亡的玩家获取小镇做题家累计超过两次，邪恶阵营在当晚获胜。"
+  },
+  {
+    "id": "3_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/3_jtxx.png",
+    "firstNightReminder": "1",
+    "name": "司簿",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你要选择一名玩家：你会得知该玩家以及与他邻近的玩家之中有几种角色类型。",
+    "firstNight": 17
+  },
+  {
+    "id": "_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "name": "点指兵兵",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择任意名玩家：你下一晚只能选择数量刚好等同于他们中与邪恶玩家邻座的数量的玩家。",
+    "firstNight": 24,
+    "otherNight": 17
+  },
+  {
+    "id": "4_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/4_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "档案管理员",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的一名玩家：你会得知一名角色类型与他相同的玩家（或得知无）。 会有一名善良玩家被你的能力当作恶魔（干扰项）。",
+    "firstNight": 20,
+    "otherNight": 13
+  },
+  {
+    "id": "5_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/5_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "天机",
+      "天机"
+    ],
+    "name": "天机阁",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名除你以外的邻座玩家：你会得知相较于上一个夜晚，你是否选择了更多的邪恶玩家。",
+    "firstNight": 21,
+    "otherNight": 14
+  },
+  {
+    "id": "6_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/6_jtxx.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "成佛"
+    ],
+    "name": "铸佛师",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：任何在今晚使用自身能力选择他的其他玩家，会改为选中你作为替代。",
+    "otherNight": 3
+  },
+  {
+    "id": "7_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/7_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "name": "筑梦师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 19,
+    "otherNight": 12
+  },
+  {
+    "id": "8_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/8_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "宿敌"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。 会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 18,
+    "otherNight": 11
+  },
+  {
+    "id": "9_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/9_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "name": "骁勇者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择至多3名玩家和至多3个爪牙角色：你会得知他们邻近的玩家中是否有这些角色。",
+    "firstNight": 23,
+    "otherNight": 16
+  },
+  {
+    "id": "10_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/10_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "痴愚",
+      "痴愚"
+    ],
+    "name": "谛听",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择其他两名非旅行者玩家：你会得知他们角色名的字数之和相较于上一晚更少/相同/更多。",
+    "firstNight": 22,
+    "otherNight": 15
+  },
+  {
+    "id": "11_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/11_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "name": "引路人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择至多三名玩家：你会得知今晚是否有邪恶玩家的能力选择或影响了他们之中的玩家。",
+    "firstNight": 27,
+    "otherNight": 20
+  },
+  {
+    "id": "12_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/12_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "name": "怪物专家",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你要选择一个邪恶角色写入图鉴。 每个夜晚*，你要选择任意名玩家：如果他们中没有图鉴上的角色，你要选择新的邪恶角色写入图鉴。",
+    "firstNight": 25,
+    "otherNight": 18
+  },
+  {
+    "id": "13_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/13_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "雪花",
+      "醉酒"
+    ],
+    "name": "大雪怪",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你可以选择一名玩家：他可能会醉酒直到下个黄昏，你会得知你选中过的玩家中镇民的数量是否大于非镇民的数量。",
+    "firstNight": 16,
+    "otherNight": 10
+  },
+  {
+    "id": "14_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/14_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "船长",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的一名玩家：你得知他通过自身能力选择过的目标中有哪些角色类型。",
+    "firstNight": 26,
+    "otherNight": 19
+  },
+  {
+    "id": "15_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/15_jtxx.png",
+    "name": "陌客",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。"
+  },
+  {
+    "id": "16_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/16_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "邪恶",
+      "不共戴天"
+    ],
+    "name": "逆臣",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，你要选择除你以外的一名玩家：如果他先死于处决，你会在当晚转变为邪恶；如果你先死于处决，他会在当晚转变为邪恶。",
+    "firstNight": 14,
+    "otherNight": 2
+  },
+  {
+    "id": "17_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/17_jtxx.png",
+    "reminders": [
+      "醉酒",
+      "已猜测"
+    ],
+    "name": "解谜大师",
+    "team": "outsider",
+    "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。"
+  },
+  {
+    "id": "18_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/18_jtxx.png",
+    "name": "暴民",
+    "team": "outsider",
+    "ability": "与你邻近的存活的玩家使用其自身能力选择玩家时，可能会改为选择你成为其中一个目标。"
+  },
+  {
+    "id": "19_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/19_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "无题",
+    "team": "minion",
+    "ability": "获取过小镇做题家的玩家可能会被善良玩家当作邪恶的无题。 每局游戏限一次，在夜晚时，你可以选择查看魔典，然后决定小镇做题家的下一次信息。",
+    "firstNight": 28,
+    "otherNight": 21
+  },
+  {
+    "id": "20_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/20_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "中毒"
+    ],
+    "setup": true,
+    "name": "限",
+    "team": "minion",
+    "ability": "在等同于初始外来者数量的夜晚，所有镇民玩家中毒直到下个黄昏。[外来者数量任意]",
+    "firstNight": 15,
+    "otherNight": 9
+  },
+  {
+    "id": "21_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/21_jtxx.png",
+    "firstNightReminder": "1",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "毒舞者",
+    "team": "minion",
+    "ability": "会有一名存活的玩家中毒。你会得知他的角色。 如果该玩家被镇民选择，改为那个镇民中毒。",
+    "firstNight": 13
+  },
+  {
+    "id": "22_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/22_jtxx.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "失去能力",
+      "化尸",
+      "获得能力"
+    ],
+    "name": "化尸道人",
+    "team": "minion",
+    "ability": "你知道所有死亡玩家的角色。 每局游戏限一次，在夜晚时*，你可以选择一名玩家和一个死亡的非恶魔角色：他获得该角色的能力。",
+    "otherNight": 8
+  },
+  {
+    "id": "23_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/23_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "指指点点",
+      "死亡"
+    ],
+    "name": "指点江山",
+    "team": "demon",
+    "ability": "每个夜晚，你要选择一名玩家：他在下个夜晚死亡。每名善良玩家首次使用自身能力选择邪恶玩家时会改为选中你上一个选择的玩家。",
+    "firstNight": 11,
+    "otherNight": 4
+  },
+  {
+    "id": "24_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/24_jtxx.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "空间大盗",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。 所有镇民能力在夜晚选择的目标改为该玩家顺时针方向上的下一名玩家。",
+    "otherNight": 7
+  },
+  {
+    "id": "25_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/25_jtxx.png",
+    "otherNightReminder": "1",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "食梦貘",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。 使用自身能力选择你的玩家，可能会改为选中他自己。[-1外来者]",
+    "otherNight": 6
+  },
+  {
+    "id": "26_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/26_jtxx.png",
+    "firstNightReminder": "1",
+    "otherNightReminder": "1",
+    "reminders": [
+      "中毒",
+      "死亡",
+      "死于今日"
+    ],
+    "setup": true,
+    "name": "天龙教",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。 在你的首个夜晚，你会得知所有的外来者玩家，然后选择其中一名玩家：他顺时针方向上最近的镇民中毒。 当他死于处决时，你重获能力。[至少有两个外来者在场]",
+    "firstNight": 12,
+    "otherNight": 5
+  },
+  {
+    "id": "27_jtxx",
+    "image": "https://www.bloodstar.xyz/p/bluebell/jtxx/27_jtxx.png",
+    "name": "化尸道人&陌客",
+    "team": "jinxes",
+    "ability": "陌客可以被化尸道人当作其他角色。但只有化尸道人在使用他的能力时因此受到干扰的当晚，才会被小镇做题家检测。"
+  }
+]

@@ -1,0 +1,368 @@
+[
+  {
+    "name": "波谲云诡",
+    "logo":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ea/49arjm4qe3e87lfv2etfkxqbn8jtwc0.png",
+    "author": "栉风",
+    "id": "_meta"
+  },
+  {
+    "id": "1_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/7d/8ns1pftlkxjbrau1b6v3o7vyq0zpnyt.png",
+    "name": "厨师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "flavor": "今晚的预约有些古怪。我从未见过梅威瑟太太此前跟那个哈德逊巷的流氓有过交情。  然而今晚，他们订了一张双人桌。真奇怪。",
+    "firstNight": 3005,
+    "otherNight": 0,
+    "setup": false
+  },
+  {
+    "id": "2_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/54/cx6vl3wdv1v51wfuh6z575vh7ef2kcz.png",
+    "name": "修行者",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知距离最近的邪恶玩家位于你的顺时针还是逆时针方向。如果两侧的邪恶玩家与你距离相等，你得知的信息由说书人决定。",
+    "flavor": "此即梦境。彼亦梦境。所见之物，非此即彼。",
+    "firstNight": 3008,
+    "otherNight": 0,
+    "setup": false
+  },
+  {
+    "id": "3_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/2/21/lq66sps3amx1xgd1ew5ubtkqap8o8jv.png/240px-%E9%A3%8E%E6%B0%B4%E5%B8%88.png",
+    "name": "风水师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名玩家的角色类型。每个夜晚*，你会从他的顺时针方向得知下一名非旅行者玩家的角色类型。",
+    "firstNight": 3007,
+    "otherNight": 14,
+    "reminders": [
+      "起点"
+    ],
+    "setup": false
+  },
+  {
+    "id": "4_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/91/04je4dg5ituw4nymx4f0x0b80p6gntg.png",
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "flavor": "我在你的灵魂中感受到了庞大的恶意！  但……那可能只是你的香水味道。我对接骨木汁过敏。",
+    "firstNight": 3006,
+    "otherNight": 12,
+    "reminders": [
+      "干扰项"
+    ],
+    "setup": false
+  },
+  {
+    "id": "5_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/0d9uthaidhlal5rz0zjx2tvzzrviqdo.png",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "flavor": "我没有看到任何不寻常的事，夫人。请原谅我，但要是我真的看到了什么，那一定不是屋子主人在大约十一点的时候溜进了教授的实验室还把那些花花绿绿的药剂混合在了一起，就如你所说的那样，女士。",
+    "firstNight": 3009,
+    "otherNight": 16,
+    "setup": false
+  },
+  {
+    "id": "6_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/80/bl0qahd0ll0end1sidclt6374yrtflf.png",
+    "name": "数学家",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知有多少名玩家的能力因为其他角色的能力而未正常生效。（从上个黎明到你被唤醒时）",
+    "flavor": "任何连续的，且能进行定量初等运算的形式系统X，都具有不完全性。也就是说，在这个形式系统X内存在一些命题，这些命题既不能被证明为真，也不能被证明为否。所以，你喝醉了。",
+    "firstNight": 3010,
+    "otherNight": 17,
+    "reminders": [
+      "未正常生效"
+    ],
+    "setup": false
+  },
+  {
+    "id": "7_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6f/oi460mqpnxwd7zgyboe78patdo8amc5.png",
+    "name": "传教士",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：如果你选中了爪牙，他会得知被传教士选中。所有被你选中的爪牙失去能力。",
+    "flavor": "富有和健康总比贫穷和疾病要好。",
+    "firstNight": 3001,
+    "otherNight": 1,
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "8_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6b/oxwrfoe7ilg4aljmz431kq1ig7exwm1.png",
+    "name": "送葬者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知今天白天死于处决的玩家的角色。",
+    "flavor": "嗯……看看我们发现了什么？左靴到足跟都有磨损，靴尖下还有些硝石屑。这是军人才会有的装束。",
+    "firstNight": 0,
+    "otherNight": 13,
+    "reminders": [
+      "死于今日"
+    ],
+    "setup": false
+  },
+  {
+    "id": "9_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0a/55q4nfyb9gftn9jiujtt49ti2qa33h6.png",
+    "name": "赌徒",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测该玩家的角色：如果你猜错了，你会死亡。",
+    "flavor": "正面，我赢。  反面，你输。",
+    "firstNight": 0,
+    "otherNight": 3,
+    "reminders": [
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "10_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9d/tmsycr8d4qnodiie25mk8ujyqw5ep51.png",
+    "name": "巡察",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的两个善良角色：如果他们都存活，他们当晚不会死亡。",
+    "firstNight": 0,
+    "otherNight": 2,
+    "reminders": [
+      "不会死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "11_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/2/24/8xj2dihb8f5u8mcrs7o3qc6un1gox94.png/240px-%E9%95%87%E6%B0%91_%E6%8E%A2%E7%9F%BF%E8%80%85_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "name": "勘探者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知与你今天提名的玩家最近的邪恶玩家位于他的顺时针还是逆时针方向。如果距离相等，你得知的信息由说书人决定。",
+    "flavor": "你居然不知道？你把那五个花花绿绿的石头押出去，就是城里老爷看中的那五种，你就能在官署那领到证，有了那玩意你想挖多少就挖多少！什么？只押四个就够？在哪？在哪？",
+    "firstNight": 0,
+    "otherNight": 15,
+    "reminders": [
+      "被提名"
+    ],
+    "setup": false
+  },
+  {
+    "id": "12_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/62/45vbn9sjtgbpyum4uuyxvety6ckc9ua.png",
+    "name": "小说家",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以邀请一名玩家（与之前不同）与你分别私下询问说书人：他可以问一个是非问题，随后你会得知一个答案相同的是非问题。",
+    "flavor": "我写下世界的片段，结果世界把我当成了编剧。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "已邀请"
+    ],
+    "setup": false
+  },
+  {
+    "id": "13_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/14/6aquestw0mu3br3a92yyghhqjrbzokq.png",
+    "name": "秉笔",
+    "team": "townsfolk",
+    "ability": "如果你在白天死亡，当晚你会得知一名善良玩家。如果你在夜晚死亡，当晚你会得知一名邪恶玩家。",
+    "flavor": "是非曲直，自在人心。",
+    "firstNight": 0,
+    "otherNight": 11,
+    "reminders": [
+      "死于今日"
+    ],
+    "setup": false
+  },
+  {
+    "id": "14_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/3/3e/7gzwox2tqrc9eysrq3c9biliqu92vjq.png/240px-%E5%A4%96%E6%9D%A5%E8%80%85_%E4%BA%A1%E5%91%BD%E5%BE%92_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "name": "亡命徒",
+    "team": "outsider",
+    "ability": "如果你没有“疯狂”地证明自己是一个在场的镇民角色，一名镇民可能会死亡，即使你已死亡。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "15_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/1cqow962ds6jp9x5rz84qwgpstkyurs.png",
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。",
+    "flavor": "我是个只在社交场合里~嗝儿~喝酒的人，亲爱的。  但无可否认，我是一个非常~嗝儿~擅长社交的人。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true
+  },
+  {
+    "id": "16_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/12/ivgcxsn6c4ytbj9q35ekdpqszwiptb6.png",
+    "name": "瘟疫医生",
+    "team": "outsider",
+    "ability": "当你死亡时，说书人会获得一个爪牙能力。",
+    "flavor": "辟免剧勒润动。输要时间康护。莫要，抹药。",
+    "firstNight": 0,
+    "otherNight": 10,
+    "reminders": [
+      "说书人能力"
+    ],
+    "setup": false
+  },
+  {
+    "id": "17_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0f/pfhfn5qttyankavkkm373qvk6jkd7de.png",
+    "name": "畸形秀演员",
+    "team": "outsider",
+    "ability": "如果你“疯狂”地证明自己是外来者，你可能被处决。",
+    "flavor": "我不是怪物！我是人！求你了！",
+    "firstNight": 0,
+    "otherNight": 0,
+    "setup": false
+  },
+  {
+    "id": "18_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e0/q5j2j5gs8pph5qj0ggibdqk0dgth31g.png",
+    "name": "斯芬克斯",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一个角色：下个白天，如果该角色在场，他会被公开询问一个是非问题。没有答对的玩家可能会被处决。",
+    "flavor": "凡人的视野总被谎言蒙蔽，而我的凝视能穿透一切伪装。当命运的诘问降临时，唯有洞察真理者方能幸存。",
+    "firstNight": 3003,
+    "otherNight": 5,
+    "reminders": [
+      "提问"
+    ],
+    "setup": false
+  },
+  {
+    "id": "19_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/2/2b/kkjskbri64h66xa50tz9nu76l8ke516.png/240px-%E7%88%AA%E7%89%99_%E8%87%B4%E5%B9%BB%E5%B8%88_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "name": "致幻师",
+    "team": "minion",
+    "ability": "与你邻近的玩家（旅行者除外）会被善良玩家的能力当作错误的阵营和角色。",
+    "flavor": "我看到了！他是恶魔！",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "致幻"
+    ],
+    "setup": false
+  },
+  {
+    "id": "20_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/8/87/mg1raad561ttrpj3q6yz2y5uu5b03og.png/240px-%E7%88%AA%E7%89%99_%E5%86%92%E5%90%8D%E5%AE%A2_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "name": "冒名客",
+    "team": "minion",
+    "ability": "每个白天，在你首次“疯狂”地证明自己是一个在场角色时，你在那天让他中毒并获得该角色的能力。",
+    "flavor": "对，没错，是我。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "冒名"
+    ],
+    "setup": false
+  },
+  {
+    "id": "21_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/93/1mbj50frgt437orcnd30o6umsdw47aw.png",
+    "name": "洗脑师",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家和一个善良角色。他明天白天和夜晚需要“疯狂”地证明自己是这个角色，不然他可能被处决。",
+    "flavor": "所谓的现实，其实，只是一种想法罢了。具体点来说，是我的想法。",
+    "firstNight": 3002,
+    "otherNight": 4,
+    "reminders": [
+      "疯狂"
+    ],
+    "setup": false
+  },
+  {
+    "id": "22_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/ff/74557e1biovcdw48ntqme4ctjljci6t.png",
+    "name": "狂戮",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择任意名玩家，并猜测他们是哪些善良角色：如果你都没猜错，他们死亡。如果你不做选择，会有一名玩家死亡。",
+    "firstNight": 0,
+    "otherNight": 8,
+    "reminders": [
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "23_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/75/p5adfu7aib17qfuaoos044qbk24xacd.png",
+    "name": "普卡",
+    "team": "demon",
+    "ability": "每个夜晚，你要选择一名玩家：他中毒。上个因你的能力中毒的玩家会死亡并恢复健康。",
+    "flavor": "您人真好，发生了这样的事情，您还愿意让我来您金碧辉煌的家里做客。我很抱歉，刚才不小心划伤了您。这是一点点赔礼，没事的，请收下吧，把这根金牙签当做我那卑微的歉意吧。",
+    "firstNight": 3004,
+    "otherNight": 6,
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "24_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/bf/0hkqz1yosb353roykx40clamystnt4a.png",
+    "name": "迷雾",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。当你首次死亡时，一名爪牙会变成剧本中除迷雾以外的恶魔角色。爪牙会代替你获得恶魔信息且不知道你是恶魔。",
+    "firstNight": 0,
+    "otherNight": 9,
+    "reminders": [
+      "死亡"
+    ],
+    "setup": false
+  },
+  {
+    "id": "25_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/8c/tuqiff39a278vl7zgiu1z9hki1b5gni.png",
+    "name": "诺·达鲺",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+    "flavor": "彼因汝之罪孽，吾已嗅汝之恶臭满溢全身。时日曷丧？予及汝皆亡。竖子命如草芥，以吾之力，使汝终末于深海，终于此良夜。",
+    "firstNight": 0,
+    "otherNight": 7,
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "setup": false
+  },
+  {
+    "id": "26_bojueyungui",
+    "name": "侍女&数学家",
+    "team": "a jinxed",
+    "ability": "侍女会得知数学家是否醒来，即使她是在数学家之前醒来。"
+  },
+  {
+    "id": "27_bojueyungui",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png",
+    "name": "妙笔生花",
+    "team": "fabled",
+    "ability": "小说家不受致幻师的互动干扰影响"
+  },
+  {
+    "id": "28_bojueyungui",
+    "name": "瘟疫医生&致幻师&冒名客",
+    "team": "a jinxed",
+    "ability": "如果瘟疫医生死亡且说书人会因此获得冒名客或致幻师的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+  },
+  {
+    "id": "29_bojueyungui",
+    "name": "冒名客&迷雾",
+    "team": "a jinxed",
+    "ability": "冒名客无法获得迷雾的能力且不会让迷雾中毒。"
+  }
+]

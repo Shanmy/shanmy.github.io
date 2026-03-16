@@ -1,0 +1,310 @@
+[
+  {
+    "id": "_meta",
+    "name": "咦？有家店？！",
+    "author": "程十安",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/f34u8un3b8ko211rzswptns7lcrpudp.png",
+    "almanac": "有问题联系SE谢谢喵"
+  },
+  {
+    "id": "_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/36/kmrowr4h491q6i775hrp57mscbuvya6.png",
+    "reminders": [
+      "禁止邪恶"
+    ],
+    "name": "圣洁之魂",
+    "team": "fabled",
+    "ability": "游戏过程中邪恶玩家的总数最多能比初始设置多一名（旅行者不计算在内）。"
+  },
+  {
+    "id": "1_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4a/8qqnrkz9ipf8w9d8o6yit2r3lung1gz.png",
+    "name": "哨兵",
+    "team": "fabled",
+    "ability": "在初始设置时，可能会额外增加或减少一个外来者。"
+  },
+  {
+    "id": "2_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/94/ifnw94hbxlw3mg6s4qingurlyunphkh.png",
+    "otherNightReminder": "唤醒狸猫，让他选择一名玩家，将“太子”标记放在对应玩家角色标记旁。如果当晚邪恶角色杀死了“太子”，交换狸猫与“太子”的角色，并依次唤醒告知。",
+    "reminders": [
+      "太子"
+    ],
+    "name": "狸猫",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：如果他是善良角色且当晚被邪恶角色杀死，你和他交换角色。",
+    "otherNight": 3
+  },
+  {
+    "id": "3_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/eb/h05w4mb2leuobylf99jvhui1zx0sh49.png",
+    "otherNightReminder": "在六扇门提名时，在对应的玩家标记旁放置“追查”标记。在夜晚时，唤醒六扇门，用点头和摇头来示意与有“追查”标记邻近的玩家中是否存在非镇民玩家。",
+    "reminders": [
+      "追查"
+    ],
+    "name": "六扇门",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知今天白天你提名的玩家邻近的玩家中是否存在非镇民玩家。",
+    "otherNight": 15
+  },
+  {
+    "id": "4_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/7d/8ns1pftlkxjbrau1b6v3o7vyq0zpnyt.png",
+    "firstNightReminder": "唤醒厨师，对他用手势比划数字来告知他邻座邪恶玩家有几对。",
+    "name": "厨师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "firstNight": 3500
+  },
+  {
+    "id": "5_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/91/04je4dg5ituw4nymx4f0x0b80p6gntg.png",
+    "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 3600,
+    "otherNight": 14
+  },
+  {
+    "id": "6_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/79/8rd5mfvpkzq4i73sctbzjyrvthr082g.png",
+    "name": "镇长",
+    "team": "townsfolk",
+    "ability": "如果只有三名玩家存活且白天没有人被处决，你的阵营获胜。如果你在夜晚死亡，可能会有一名其他玩家代替你死亡。"
+  },
+  {
+    "id": "7_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/93/pmqle84ql1xbj7ostadk9i2zyal9ifw.png",
+    "otherNightReminder": "唤醒旅店老板，让他选择两名玩家。这两名玩家今晚不死，同时需要决定他俩其中谁因为旅店老板能力醉酒。",
+    "reminders": [
+      "不会死亡",
+      "醉酒"
+    ],
+    "name": "旅店老板",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择两名玩家：他们当晚不会死亡，但其中一人会醉酒到下个黄昏。",
+    "otherNight": 2
+  },
+  {
+    "id": "8_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0a/55q4nfyb9gftn9jiujtt49ti2qa33h6.png",
+    "otherNightReminder": "唤醒赌徒，让他进行猜测。如果猜测错误，他死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "赌徒",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测该玩家的角色：如果你猜错了，你会死亡。",
+    "otherNight": 4
+  },
+  {
+    "id": "9_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b1/f5bpgic2ja7fbuvxh1vigjkxdsu78j7.png",
+    "otherNightReminder": "如果造谣者今天白天的声明正确，一名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。在当晚，如果该声明是正确的，会有一名玩家死亡。",
+    "otherNight": 12
+  },
+  {
+    "id": "10_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fe/o9gzozrpeyh7exogeuro90qh0904qu1.png",
+    "firstNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "otherNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "舞蛇人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。",
+    "firstNight": 3200,
+    "otherNight": 5
+  },
+  {
+    "id": "11_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/chh8x7dptz128a42p7f0g5c0qn8o063.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "12_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/4cvv6gx6js190zpjqm110ps4j6bl587.png",
+    "firstNightReminder": "唤醒贵族，对他指向三名玩家。这三名玩家中有且仅有一名是邪恶玩家。",
+    "reminders": [
+      "被得知"
+    ],
+    "name": "贵族",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。",
+    "firstNight": 3700
+  },
+  {
+    "id": "13_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/30/oj9m95xe218zispv6mg1jkf02esfdb6.png",
+    "firstNightReminder": "唤醒店小二，对他指向两名善良玩家。",
+    "reminders": [
+      "熟客",
+      "醉酒"
+    ],
+    "name": "店小二",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名善良玩家。他们之中会有一人醉酒，即使你已死亡。",
+    "firstNight": 3800
+  },
+  {
+    "id": "14_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/3a/6veln4oley01anbbgxc2d6l59botkn1.png",
+    "remindersGlobal": [
+      "是悟道者"
+    ],
+    "setup": true,
+    "name": "悟道者",
+    "team": "townsfolk",
+    "ability": "你以为你是一个外来者，但你实际上不是。如果有邪恶玩家的能力选择或影响了你，在该效果生效前你会变成一个不在场的镇民角色。"
+  },
+  {
+    "id": "15_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/1cqow962ds6jp9x5rz84qwgpstkyurs.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "16_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/3c/hulwpl4c71z09ixgyg3dlkeega2a3an.png",
+    "otherNightReminder": "如果月之子在今天白天的时候使用自己的能力选择了一名善良玩家，那名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "月之子",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。",
+    "otherNight": 13
+  },
+  {
+    "id": "17_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/89/ge09m69i6ymwudxtr1plmt68pek8sgh.png",
+    "reminders": [
+      "无法提名"
+    ],
+    "name": "魔像",
+    "team": "outsider",
+    "ability": "每局游戏你只能发起提名一次。当你发起提名时，如果被你提名的玩家不是恶魔，他死亡。"
+  },
+  {
+    "id": "18_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/be/67ycdvhq93470nc0jsiol8dhazf8ey1.png",
+    "name": "狂热者",
+    "team": "outsider",
+    "ability": "如果有大于等于五名玩家存活，你必须在所有提名中投票。"
+  },
+  {
+    "id": "19_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9a/39mexl68b71eyydru1jkze79qhwlfib.png",
+    "otherNightReminder": "如果红唇女郎的能力曾被触发，唤醒她并告知她变成了哪个恶魔角色。",
+    "reminders": [
+      "是恶魔"
+    ],
+    "name": "红唇女郎",
+    "team": "minion",
+    "ability": "如果大于等于五名玩家存活时（旅行者不计算在内）恶魔死亡，你变成那个恶魔。",
+    "otherNight": 7
+  },
+  {
+    "id": "20_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d7/msb759ew0f2hudkvxhsz15jnxsqqpy9.png",
+    "name": "精神病患者",
+    "team": "minion",
+    "ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。"
+  },
+  {
+    "id": "21_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/09/1mq0x5dohs05omj8m8agvwp1ww7ckid.png",
+    "firstNightReminder": "唤醒灵言师，对他展示他的关键词。",
+    "otherNightReminder": "如果首次有善良玩家说出了灵言师的关键词，唤醒该玩家并通知他阵营变化。",
+    "reminders": [
+      "转为邪恶",
+      "失去能力"
+    ],
+    "name": "灵言师",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知一个关键词。首个说出该关键词的善良玩家会在当晚转变为邪恶阵营。",
+    "firstNight": 3300,
+    "otherNight": 6
+  },
+  {
+    "id": "22_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e5/el29kr1dznrpaa089tayj3chd444s6k.png",
+    "firstNightReminder": "如果提线木偶在场，对恶魔展示提线木偶角色标记并指向提线木偶玩家。",
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "setup": true,
+    "name": "提线木偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]",
+    "firstNight": 3100
+  },
+  {
+    "id": "23_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/03/1trck24gi8o05kklsg93al4co09nakb.png",
+    "otherNightReminder": "唤醒小恶魔，让他攻击一名玩家。如果他成功自杀，则在他入睡后通知一名爪牙角色变化。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 8
+  },
+  {
+    "id": "24_yiyoujiadian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/5a/nnstco20zk0tuwof5qgy66rinibkvi1.png",
+    "otherNightReminder": "唤醒饕餮，让他选择任意数量的非旅行者玩家或一名旅行者玩家。如果这些玩家角色类型不同，他们死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "饕餮",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择任意数量的非旅行者玩家或一名旅行者玩家：如果他们的角色类型均不相同，他们死亡。[+1外来者]",
+    "otherNight": 9
+  },
+  {
+    "id": "25_yiyoujiadian",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/a/a6/23rdh3m2jjs96jd4u3x1oy2ccox9w22.png/240px-%E5%85%B8%E7%8B%B1%E9%95%BF.png",
+    "firstNightReminder": "唤醒典狱长，让他选择至多三名玩家。",
+    "otherNightReminder": "唤醒典狱长，让他选择至多三名玩家。如果上个夜晚选择的玩家之中有人死于处决，上个夜晚选择的其余玩家均死亡，否则其中之一死亡。",
+    "reminders": [
+      "囚禁",
+      "死亡"
+    ],
+    "name": "典狱长",
+    "team": "demon",
+    "ability": "每个夜晚，你要选择至多三名玩家：如果明天白天他们之一死于处决，上次被你选择的其他玩家会在当晚死亡。否则，当晚他们之中会有一名玩家死亡。",
+    "firstNight": 3400,
+    "otherNight": 10
+  },
+  {
+    "id": "26_yiyoujiadian",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fa/ldk7ke5hy1lp24i8lmk98ha1bt4qbc5.png",
+    "otherNightReminder": "每个夜晚*，你要选择两名玩家：他们会被单独唤醒并要选择一名玩家。 他们之中没有被对方选中的玩家死亡。",
+    "name": "朋友游戏",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择两名玩家：他们会被单独唤醒并要选择一名玩家。 他们之中没有被对方选中的玩家死亡。",
+    "otherNight": 11
+  }
+]

@@ -1,0 +1,553 @@
+[
+  {
+    "id": "_meta",
+    "name": "心动男嘉宾",
+    "author": "轩轩大王",
+    "logo": "https://free.picui.cn/free/2025/10/29/6901d46ca7728.png",
+    "A jinxed": "相克",
+    "status": [
+      {
+        "name": "彩虹堡绿色交友管家1",
+        "skill": "[通讯录] 除了老妈子之外的镇民角色都是“通讯录”，微双直男和变装皇后可能被视为非“通讯录”。"
+      },
+      {
+        "name": "彩虹堡绿色交友管家2",
+        "skill": "[沉沦] 指角色能力失效，但说书人依然会做出配合能力的行为。如果玩家的能力可以获得信息，说书人可能会给出错误的信息。"
+      }
+    ]
+  },
+  {
+    "id": "uv6d022fft221231",
+    "name": "[通讯录]",
+    "team": "fabled",
+    "ability": "除了老妈子之外的镇民角色都是“通讯录”，微双直男和变装皇后可能被视为非“通讯录”。",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/97/Bootlegger.png/200px-Bootlegger.png",
+    "setup": false,
+    "reminders": []
+  },
+  {
+    "id": "uv6d022fft221232",
+    "name": "[沉沦]",
+    "team": "fabled",
+    "ability": "指角色能力失效，但说书人依然会做出配合能力的行为。如果玩家的能力可以获得信息，说书人可能会给出错误的信息。",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/97/Bootlegger.png/200px-Bootlegger.png",
+    "setup": false,
+    "reminders": []
+  },
+  {
+    "id": "xdnjb_xdnyy",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ee99a8a32.png",
+    "edition": "custom",
+    "name": "心动男演员",
+    "ability": "你获得一个不在场的角色能力，该角色在剧本中的初始阵营与你一致。当该能力所属角色是“通讯录”时，你同样被视为“通讯录”。只有在当天未发动角色能力时，你的投票被视为有效。[心动男演员数量任意]",
+    "team": "traveler",
+    "firstNight": 0.001,
+    "otherNight": 0.001,
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "reminders": [
+      "是心动男嘉宾"
+    ],
+    "setup": true
+  },
+  {
+    "id": "xdnjb_1",
+    "name": "零点五",
+    "ability": "每个夜晚，你要选择除你之外的一名玩家：你会得知他与上个夜晚选择的玩家是否同为“通讯录”。［+0～1外来者］",
+    "image": "https://free.picui.cn/free/2025/10/29/6901eead95cb1.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 0,
+    "setup": true,
+    "reminders": [
+      "选择",
+      "上晚选择"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 3800
+  },
+  {
+    "id": "xdnjb_2",
+    "name": "微双直男",
+    "ability": "每个白天，你可以私下拜访说书人以得知一条信息。你能得知至多等同于与你邻座“通讯录”数量的正确信息。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901eeb223daa.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [
+      "得知1",
+      "得知2",
+      "得知3"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 0
+  },
+  {
+    "id": "xdnjb_3",
+    "name": "杏爱大师",
+    "ability": "每个夜晚，你要选择一名玩家：如果他是邪恶的，且你之前选择过邪恶玩家，你死亡且其他杏爱大师在当晚沉沦。［+0～2杏爱大师］",
+    "image": "https://free.picui.cn/free/2025/10/29/6901eebf400c4.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 3,
+    "setup": true,
+    "reminders": [
+      "选到邪恶",
+      "死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 3300
+  },
+  {
+    "id": "xdnjb_4",
+    "name": "给吧老板",
+    "ability": "每个夜晚*，你要选择一名除你之外的玩家（与上个夜晚不同）：如果他是“通讯录”，当晚你不会死亡。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901eec663735.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 5,
+    "setup": false,
+    "reminders": [
+      "不会死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 0
+  },
+  {
+    "id": "xdnjb_5",
+    "name": "变装皇后",
+    "ability": "每个夜晚，你要选择“穿男装”或“穿女装”：你“穿男装”时，如果当晚你死亡，一名善良玩家可能代替你死亡；你“穿女装”时，当晚和下个白天，与你左右邻近的两名存活玩家免疫爪牙能力。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901eedd1a61b.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 7,
+    "setup": false,
+    "reminders": [
+      "穿男装",
+      "死亡",
+      "穿女装",
+      "无效"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 3500
+  },
+  {
+    "id": "xdnjb_6",
+    "name": "马尼BOY",
+    "ability": "每个夜晚，你可以选择两名存活玩家：当晚这两名玩家中，任意一名玩家被除你之外的玩家选择时，改为另一名玩家被选择，且不会被其他能力改变选择。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901eee4c863d.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 2,
+    "setup": false,
+    "reminders": [
+      "交换"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 3100
+  },
+  {
+    "id": "xdnjb_7",
+    "name": "老妈子",
+    "ability": "在你的首个夜晚，你会得知小部分玩家的阵营或角色，恶魔被你的能力当作善良阵营或善良角色。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef011519d.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [
+      "查看过",
+      "当作善良"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 3700
+  },
+  {
+    "id": "xdnjb_8",
+    "name": "纯一",
+    "ability": "在你的首个白天，你可以公开选择除你之外的五名玩家，当晚你会得知五个与他们角色或能力相关的词语，不同词语对应不同玩家（词语顺序由说书人决定）。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef07f3db3.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 13,
+    "setup": false,
+    "reminders": [
+      "被选择"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 0
+  },
+  {
+    "id": "xdnjb_9",
+    "name": "纯零",
+    "ability": "当与你邻座的“通讯录”玩家数量为0 / 1 / 2时，在你的首个夜晚，你会得知与你邻近恶魔  / 爪牙 / 外来者玩家的最近距离。 （邻座的玩家距离为1，角色不存在时得知0）",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef0b4ce6f.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 14,
+    "setup": false,
+    "reminders": [
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 4000
+  },
+  {
+    "id": "xdnjb_10",
+    "name": "SIDE男",
+    "ability": "邪恶阵营的互认会推迟到第三个夜晚开始时。在游戏的第二/三个白天，你会得知所有在场爪牙/恶魔角色。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef15912fa.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [
+      "推迟互认",
+      "第二天",
+      "第三天"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 0
+  },
+  {
+    "id": "xdnjb_11",
+    "name": "U熊",
+    "ability": "每个白天，你可以公开选择除你之外的三名存活玩家：在下个夜晚，如果恶魔没有选择他们之一，则恶魔当晚可能沉沦。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef1a866ee.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [
+      "不会死亡",
+      "上晚未触发",
+      "死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 0
+  },
+  {
+    "id": "xdnjb_12",
+    "name": "肌肉男",
+    "ability": "每个夜晚，你可以选择除你之外的一名玩家：当晚他不会死于恶魔的能力。如果你提名前一晚选择的玩家：他被处决，然后你沉沦。恶魔知道你邻近他哪一侧。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef1f74c33.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 4,
+    "setup": false,
+    "reminders": [
+      "被选择",
+      "不会死于恶魔",
+      "沉沦"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 3200
+  },
+  {
+    "id": "xdnjb_13",
+    "name": "福瑞BOY",
+    "ability": "每个夜晚，你要选择除你之外的一名存活玩家：如果他与你前一晚选择的玩家阵营不同，他死亡，并且当晚其它死亡不会发生。会有一名善良玩家被你的能力当作邪恶阵营。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef24f3f73.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 6,
+    "setup": false,
+    "reminders": [
+      "上次选择",
+      "死亡",
+      "当作邪恶"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 3400
+  },
+  {
+    "id": "xdnjb_14",
+    "name": "心动男嘉宾",
+    "ability": "每个夜晚，你可以选择一个镇民角色，如果该角色没有被其他镇民选择，你获得或延续该角色能力直到第二天黄昏，否则，你沉沦至第二天黄昏。邪恶阵营知道心动男嘉宾在场。[所有镇民都是心动男嘉宾，外来者数量任意]",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef31b1474.png",
+    "edition": "custom",
+    "flavor": "",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "otherNight": 0.1,
+    "setup": true,
+    "reminders": [
+      "获得能力",
+      "沉沦"
+    ],
+    "remindersGlobal": [],
+    "team": "townsfolk",
+    "firstNight": 1
+  },
+  {
+    "ability": "你以为你是一个“通讯录”，但其实你不是。在夜晚*时，你可以闭眼举手以秘密宣称自己是腐男，不是腐男的玩家会因该行为而死亡。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef606bdb9.png",
+    "edition": "custom",
+    "id": "xdnjb_20",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "腐男",
+    "otherNight": 16,
+    "setup": true,
+    "reminders": [],
+    "remindersGlobal": [
+      "是腐男",
+      "死亡"
+    ],
+    "team": "outsider",
+    "firstNight": 0
+  },
+  {
+    "ability": "在你的首个夜晚，说书人会秘密给你一个“任务”，如果你完成了它，你会获得一个可能打破规则的能力。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef66e5122.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "xdnjb_21",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "直男抖M",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [
+      "下发任务",
+      "完成",
+      "打破规则"
+    ],
+    "remindersGlobal": [],
+    "team": "outsider",
+    "firstNight": 3900
+  },
+  {
+    "ability": "如果你死于邪恶阵营/“通讯录”玩家提名的处决，你的阵营落败/你免于此次死亡，并获得一个“通讯录”的能力。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef6aa1090.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "xdnjb_22",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "腐女",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [
+      "获得能力"
+    ],
+    "remindersGlobal": [
+      "是腐女"
+    ],
+    "team": "outsider",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个白天，你要私下拜访说书人，向恶魔提一个由说书人秘密转达的是非问题：你在下次拜访说书人时得知恶魔的回答（他可以撒谎）。在得知恶魔两次正确答案后的夜晚，你转变阵营并沉沦。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef6ddb2d4.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "xdnjb_23",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "小雏男",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [
+      "正确一次",
+      "正确两次",
+      "加入邪恶",
+      "沉沦"
+    ],
+    "remindersGlobal": [],
+    "team": "outsider",
+    "firstNight": 0
+  },
+  {
+    "ability": "一名玩家沉沦。每个夜晚，你可以选择一名玩家：你得知该玩家角色。当你被处决时，上个夜晚被你选择的玩家同时被处决。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef8936d9f.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "xdnjb_31",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "杨永信",
+    "otherNight": 12,
+    "setup": false,
+    "reminders": [
+      "被选择"
+    ],
+    "remindersGlobal": [
+      "沉沦"
+    ],
+    "team": "minion",
+    "firstNight": 3600
+  },
+  {
+    "ability": "在夜晚时，镇民角色能力选择的玩家，被改为所选玩家顺时针方向的下一位邻座玩家",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef889139a.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "xdnjb_32",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "椿药商",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [
+      "转移"
+    ],
+    "team": "minion",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡，并保留能力直到下个黄昏。你的能力对邪恶阵营无效，你与邪恶阵营互不认识。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901ef89b3467.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "xdnjb_33",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "割根医生",
+    "otherNight": 15,
+    "setup": false,
+    "reminders": [
+      "割根",
+      "死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "minion",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/psychopath.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "psychopath_c",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "精神病患者",
+    "otherNight": 0,
+    "setup": false,
+    "reminders": [],
+    "remindersGlobal": [],
+    "team": "minion",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家：如果他是“通讯录”，他死亡。你的死亡会导致游戏结束时，再进行一个夜晚，且你的能力保留。没有存活“通讯录”时，你的阵营获胜。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901efab3c773.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "xdnjb_41",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "反同杀手",
+    "otherNight": 8,
+    "setup": false,
+    "reminders": [
+      "死亡"
+    ],
+    "remindersGlobal": [
+      "额外一夜"
+    ],
+    "team": "demon",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个夜晚，与你左右邻近的存活“通讯录”沉沦或死亡。你知道外来者玩家和他们的角色。每局游戏限一次：在夜晚*时，你可以与一名爪牙交换角色。［+任意数量外来者］",
+    "image": "https://free.picui.cn/free/2025/10/29/6901efabb80b1.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "xdnjb_42",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "顺直大帝",
+    "otherNight": 9,
+    "setup": true,
+    "reminders": [
+      "沉沦",
+      "死亡",
+      "限一次"
+    ],
+    "remindersGlobal": [],
+    "team": "demon",
+    "firstNight": 0
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。游戏首个夜晚开始时，你要选择一名玩家：当你被宣布死亡时，你要大喊“我是扫货”，然后他变成邪恶的至尊扫货，并在下个夜晚沉沦，每局游戏仅能成功转变一次。［-1外来者］",
+    "image": "https://free.picui.cn/free/2025/10/29/6901efae6d67f.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "xdnjb_44",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "至尊扫货",
+    "otherNight": 10,
+    "setup": true,
+    "reminders": [
+      "潜在扫货",
+      "死亡",
+      "限一次"
+    ],
+    "remindersGlobal": [
+      "是扫货"
+    ],
+    "team": "demon",
+    "firstNight": 2
+  },
+  {
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果有“通讯录”死于处决的下一个白天你被处决，邪恶阵营获胜。",
+    "image": "https://free.picui.cn/free/2025/10/29/6901efabb1be8.png",
+    "edition": "custom",
+    "flavor": "",
+    "id": "xdnjb_46",
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "复仇同妻",
+    "otherNight": 11,
+    "setup": false,
+    "reminders": [
+      "沉沦",
+      "死亡"
+    ],
+    "remindersGlobal": [],
+    "team": "demon",
+    "firstNight": 0
+  }
+]

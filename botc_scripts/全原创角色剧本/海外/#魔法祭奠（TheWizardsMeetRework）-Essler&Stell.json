@@ -1,0 +1,590 @@
+[
+    {
+        "logo": "https://i.postimg.cc/4yCg2BFN/1.png",
+        "author": "Essler + Stell",
+        "name": "魔法祭奠重制版The Wizards Meet Rework ",
+        "almanac": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/almanac.html",
+        "isOfficial": false,
+        "id": "_meta"
+    },
+    {
+        "id": "scribethewizardsmeetrework",
+        "name": "录咒师",
+        "ability": "每个夜晚，你会得知所有提交的咒语的名称：你可以选择一个名称并得知其咒语的具体效果。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "32",
+        "firstNightReminder": "",
+        "otherNightReminder": "Tell the Scribe the names of all the Spells submitted tonight and ask them to choose one. Place the \"Scribed\" token on the caster, then give the Scribe the full text of their chosen Spell.",
+        "reminders": [
+            "录咒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/scribe_thewizardsmeetrework.png"
+    },
+    {
+        "id": "skepticthewizardsmeetrework",
+        "name": "疑咒师",
+        "ability": "你不能提交咒语。每个夜晚，你会得知你的对立阵营提交的一条被施放的咒语：你可以选择将它变为哑咒，随后所有玩家会得知此事。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "30",
+        "firstNightReminder": "",
+        "otherNightReminder": "Tell the Skeptic the full text of a Spell that was cast today by a player opposite their alignment, then ask the Skeptic if they'd like to un-cast it. If yes, place the \"Un-Cast\" token on the caster and publicly announce that the Skeptic has un-cast a spell.",
+        "reminders": [
+            "哑咒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/skeptic_thewizardsmeetrework.png"
+    },
+    {
+        "id": "wellspringthewizardsmeetrework",
+        "name": "涌咒者",
+        "ability": "当你存活时，你提交的咒语不会被抽中。如果你死亡，会按提交顺序释放所有之前提交过的咒语(提交过的咒语可能因被说书人否决而变成哑咒)。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "11",
+        "firstNightReminder": "",
+        "otherNightReminder": "If the Wellspring is dead, place the \"Magic Spring\" token on them and cast all their previously-submitted spells in order of submission, ignoring the maximum Spell limit. (Remember, any of these spells can be vetoed as \"Duds\"!)",
+        "reminders": [
+            "魔法之泉"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/wellspring_thewizardsmeetrework.png"
+    },
+    {
+        "id": "partymagicianthewizardsmeetrework",
+        "name": "派对魔术师",
+        "ability": "你提交的咒语不会对任意阵营有利。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/partymagician_thewizardsmeetrework.png"
+    },
+    {
+        "id": "bardthewizardsmeetrework",
+        "name": "吟游诗人",
+        "ability": "每个夜晚，你要提交一段歌词以代替提交咒语。说书人会将其诠释为一个咒语。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "10",
+        "firstNightReminder": "",
+        "otherNightReminder": "Interpret the Bard's song lyric into a Spell (following all standard spellcasting rules), then submit it on their behalf.",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/bard_thewizardsmeetrework.png"
+    },
+    {
+        "id": "paladinthewizardsmeetrework",
+        "name": "圣骑士",
+        "ability": "每个夜晚，你会得知是否有邪恶玩家的咒语被抽中。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "24",
+        "otherNight": "26",
+        "firstNightReminder": "If any evil players (or players who register as evil) have a \"Cast\" token, give the Paladin a \"YES\". Otherwise, give them a \"NO\".",
+        "otherNightReminder": "If any evil players (or players who register as evil) have a \"Cast\" token, give the Paladin a \"YES\". Otherwise, give them a \"NO\".",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/paladin_thewizardsmeetrework.png"
+    },
+    {
+        "id": "druidthewizardsmeetrework",
+        "name": "德鲁伊",
+        "ability": "每个夜晚，你会得知一条被抽中的咒语的最多10个连续的字。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "25",
+        "otherNight": "25",
+        "firstNightReminder": "Tell the Druid up to 10 consecutive words of a Spell that was cast tonight.",
+        "otherNightReminder": "Tell the Druid up to 10 consecutive words of a Spell that was cast tonight.",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/druid_thewizardsmeetrework.png"
+    },
+    {
+        "id": "thaumaturgethewizardsmeetrework",
+        "name": "奇术师",
+        "ability": "每个夜晚，你会得知第一条被抽中的咒语的名称：你可以选择是否将其变为哑咒。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "18",
+        "otherNight": "23",
+        "firstNightReminder": "Tell the Thaumaturge the name of the first Spell you drew tonight and ask if they'd like to veto it. If yes, mark said Spell as a \"Dud\" and ignore its effects.",
+        "otherNightReminder": "Tell the Thaumaturge the name of the first Spell you drew tonight and ask if they'd like to veto it. If yes, mark said Spell as a \"Dud\" and ignore its effects.",
+        "reminders": [
+            "Dud"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/thaumaturge_thewizardsmeetrework.png"
+    },
+    {
+        "id": "archmagethewizardsmeetrework",
+        "name": "大魔法师",
+        "ability": "每个夜晚，你可以选择将施法上限的数量+1或-1。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "11",
+        "otherNight": "2",
+        "firstNightReminder": "Ask the Archmage if they'd like to raise or lower the maximum amount of Spells that can be cast tonight. If they raise, add the \"+1 Cast\" token and you can cast an additional Spell. If they lower, add the \"-1 Cast\" token and you can cast one less Spell. Otherwise, you can cast up to [ ⅓ # of players, rounded ] Spells.",
+        "otherNightReminder": "Ask the Archmage if they'd like to raise or lower the maximum amount of Spells that can be cast tonight. If they raise, add the \"+1 Cast\" token and you can cast an additional Spell. If they lower, add the \"-1 Cast\" token and you can cast one less Spell. Otherwise, you can cast up to [ ⅓ # of players, rounded ] Spells.",
+        "reminders": [
+            "+1 施法",
+            "-1 施法"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/archmage_thewizardsmeetrework.png"
+    },
+    {
+        "id": "clairvoyantthewizardsmeetrework",
+        "name": "灵视者",
+        "ability": "每个夜晚，你要选择一名玩家：你会得知两个名称，其中一个是该玩家提交的咒语的名称。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "23",
+        "otherNight": "27",
+        "firstNightReminder": "Ask the Clairvoyant to choose a player. Tell the Clairvoyant the name of the Spell that player submitted tonight along with another fake Spell name (1-3 words).",
+        "otherNightReminder": "Ask the Clairvoyant to choose a player. Tell the Clairvoyant the name of the Spell that player submitted tonight along with another fake Spell name (1-3 words).",
+        "reminders": [
+            "得知"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/clairvoyant_thewizardsmeetrework.png"
+    },
+    {
+        "id": "illusionistthewizardsmeetrework",
+        "name": "幻术师",
+        "ability": "每个夜晚，你要选择一名玩家：说书人可以更改其提交的咒语中的一个词，你会得知更改前和更改后的词。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "20",
+        "otherNight": "22",
+        "firstNightReminder": "Ask the Illusionist to choose a player. Change one word of that player's Spell, then tell the Illuionist what the word used to be and what the word is now.",
+        "otherNightReminder": "Ask the Illusionist to choose a player. Change one word of that player's Spell, then tell the Illuionist what the word used to be and what the word is now.",
+        "reminders": [
+            "更改"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/illusionist_thewizardsmeetrework.png"
+    },
+    {
+        "id": "cryostatthewizardsmeetrework",
+        "name": "冰霜法师",
+        "ability": "每个夜晚*，你要选择一名玩家：如果你选中了爪牙，他会得知被冰霜法师选中。所有被你选中的爪牙的咒语不会被抽取。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "21",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ask the Cryostat to choose a player. If a minion is chosen, place the \"Frozen\" token on that player, then immediately wake them up to inform them they've been chosen by the Cryostat. If the Cryostat is dead, remove any \"Frozen\" tokens from the grimoire.",
+        "reminders": [
+            "冻结"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/cryostat_thewizardsmeetrework.png"
+    },
+    {
+        "id": "abjurerthewizardsmeetrework",
+        "name": "防护法师",
+        "ability": "每个夜晚*，你要选择一名玩家：如果他的咒语被抽中，当晚其他玩家的咒语和恶魔的负面效果对他无效。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "9",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ask the Abjurer to choose a player. If that player has the \"Cast\" or \"Dud\" token, place the \"Abjured\" token on said player.",
+        "reminders": [
+            "防护"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/abjurer_thewizardsmeetrework.png"
+    },
+    {
+        "id": "enchantressthewizardsmeetrework",
+        "name": "女附魔师",
+        "ability": "每个夜晚*，你要选择一名玩家：首个被你的能力选中的外来者会变成一个不在场的镇民。[+0-1外来者]",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "19",
+        "otherNight": "20",
+        "firstNightReminder": "Ask the Enchantress if they'd like to choose a player. If yes, place the \"No Ability\" token on the Enchantress. If an outsider is chosen, place the \"Enchanted\" token on that player, replace their character with a not-in-play Townsfolk, and immediately wake said player to inform them of their new character.",
+        "otherNightReminder": "Ask the Enchantress if they'd like to choose a player. If yes, place the \"No Ability\" token on the Enchantress. If an outsider is chosen, place the \"Enchanted\" token on that player, replace their character with a not-in-play Townsfolk, and immediately wake said player to inform them of their new character.",
+        "reminders": [
+            "失去能力",
+            "附魔"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/enchantress_thewizardsmeetrework.png"
+    },
+    {
+        "id": "conjurorthewizardsmeetrework",
+        "name": "召唤法师",
+        "ability": "每局游戏限一次，在夜晚时，你可以选择一个爪牙角色：如果该角色不在场，你获得该角色的能力；反之，你醉酒。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "16",
+        "otherNight": "5",
+        "firstNightReminder": "Ask the Conjuror if they'd like to choose a minion character. If yes, place the \"No Ability\" token on the Conjuror. If not in-play, place the \"is Conjuror\" token on the Conjuror and immediately replace their character with the chosen minion. Otherwise, place the \"Drunk\" token on the Conjuror. Wake them exactly as if they were the chosen minion.",
+        "otherNightReminder": "Ask the Conjuror if they'd like to choose a minion character. If yes, place the \"No Ability\" token on the Conjuror. If not in-play, place the \"is Conjuror\" token on the Conjuror and immediately replace their character with the chosen minion. Otherwise, place the \"Drunk\" token on the Conjuror. Wake them exactly as if they were the chosen minion.",
+        "reminders": [
+            "失去能力",
+            "醉酒"
+        ],
+        "remindersGlobal": [
+            "是召唤法师"
+        ],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/conjuror_thewizardsmeetrework.png"
+    },
+    {
+        "id": "sorcererthewizardsmeetrework",
+        "name": "血契师",
+        "ability": "如果你即将成为一个咒语的目标，该咒语会改为以施法者为目标。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/sorcerer_thewizardsmeetrework.png"
+    },
+    {
+        "id": "clericthewizardsmeetrework",
+        "name": "神职者",
+        "ability": "你不会因为提交包含了禁咒3(第3条禁咒)的咒语而死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "28",
+        "firstNightReminder": "",
+        "otherNightReminder": "If a player was resurrected by the Cleric's spell, place the \"Ressurected\" token on said player.",
+        "reminders": [
+            "复活"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/cleric_thewizardsmeetrework.png"
+    },
+    {
+        "id": "ritualistthewizardsmeetrework",
+        "name": "仪式祭司",
+        "ability": "你降下的第一条诅咒不会消耗投票标记。你可以在存活时降下诅咒。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "29",
+        "firstNightReminder": "",
+        "otherNightReminder": "If the Ritualist has chosen to invoke a Curse, replace the \"Free Curse\" token with the \"Invoked Curse\" token.",
+        "reminders": [
+            "降下诅咒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/ritualist_thewizardsmeetrework.png"
+    },
+    {
+        "id": "entropistthewizardsmeetrework",
+        "name": "熵术师",
+        "ability": "每个夜晚，你会得知一名玩家。你当晚提交的咒语只会以该玩家为目标。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "13",
+        "otherNight": "4",
+        "firstNightReminder": "Give the Entropist the name of a player (choose a specific player or choose at random), and place the \"Must Target\" token on them. Their Spell must target said player.",
+        "otherNightReminder": "Give the Entropist the name of a player (choose a specific player or choose at random), and place the \"Must Target\" token on them. Their Spell must target said player.",
+        "reminders": [
+            "仅为目标"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/entropist_thewizardsmeetrework.png"
+    },
+    {
+        "id": "pyroclastthewizardsmeetrework",
+        "name": "焰碎者",
+        "ability": "当与你相同阵营的一名玩家成为一条咒语的目标时，施法者可能会死亡。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "26",
+        "otherNight": "31",
+        "firstNightReminder": "If any cast Spells targeted \"the pyroclast\", or a player of alignament of the Pyroclast player's, place the \"Targeted\" token on the caster. You can kill any player who has the \"Targeted\" token. If so, replace said token with the \"Dead\" token.",
+        "otherNightReminder": "If any cast Spells targeted \"the pyroclast\", or a player of alignament of the Pyroclast player's, place the \"Targeted\" token on the caster. You can kill any player who has the \"Targeted\" token. If so, replace said token with the \"Dead\" token.",
+        "reminders": [
+            "目标",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/pyroclast_thewizardsmeetrework.png"
+    },
+    {
+        "id": "acolytethewizardsmeetrework",
+        "name": "侍僧",
+        "ability": "你不知道你是侍僧。你以为你是一个镇民角色，但其实你不是。说书人可能会更改你提交的咒语。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "12",
+        "otherNight": "3",
+        "firstNightReminder": "Wake Acolyte exactly as if they were said townsfolk. You can alter their submitted Spell as you see fit.",
+        "otherNightReminder": "Wake the Acolyte exactly as if they were their assigned townsfolk. You can alter their submitted Spell as you see fit.",
+        "reminders": [],
+        "remindersGlobal": [
+            "是侍僧"
+        ],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/acolyte_thewizardsmeetrework.png"
+    },
+    {
+        "id": "accursedthewizardsmeetrework",
+        "name": "咒缚者",
+        "ability": "你的咒语要对你的对立阵营有利。如果你死于处决，你可能无法降下诅咒。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "无法诅咒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/accursed_thewizardsmeetrework.png"
+    },
+    {
+        "id": "warlockthewizardsmeetrework",
+        "name": "术士",
+        "ability": "每个夜晚*，如果你当晚提交了一条空白咒语，你要选择昨天被施放咒语的名称：该咒语的施法者会死亡。如果恶魔因你的能力而死亡，游戏不会因此结束，随后你“是恶魔”且保留你的能力。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "6",
+        "firstNightReminder": "",
+        "otherNightReminder": "If the Demon dies, place the \"Demon\" token on the Warlock. Ask the Warlock if they'd like to kill at the cost of submitting a Spell. If so, ask them for the name of a Spell that was cast yesterday. Immediately kill the player (unless already dead) and place the \"Dead\" token on them.",
+        "reminders": [
+            "死亡",
+            "恶魔"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/warlock_thewizardsmeetrework.png"
+    },
+    {
+        "id": "necromancerthewizardsmeetrework",
+        "name": "死灵法师",
+        "ability": "如果你的咒语被施放，一名死亡的玩家可能会复活。你降下诅咒时不会消耗投票标记。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "16",
+        "firstNightReminder": "",
+        "otherNightReminder": "If the Necromancer has a \"Cast\" or \"Dud\" token, you can resurrect a dead player and place the \"Resurrected\" token on them. If the Necromancer is dead, place the \"Free Curse\" token on them.",
+        "reminders": [
+            "复活"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/necromancer_thewizardsmeetrework.png"
+    },
+    {
+        "id": "bloodmagethewizardsmeetrework",
+        "name": "血法师",
+        "ability": "你提交禁咒后可能不会死亡。在大于等于五名玩家存活时，如果有多于一条禁咒被成功释放或者没有禁咒被成功释放，你不会死亡。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "15",
+        "firstNightReminder": "",
+        "otherNightReminder": "If the Blood Mage submitted a Forbidden Spell and it was successfully cast, place the \"Dead\" token on them and immediately kill them.",
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/bloodmage_thewizardsmeetrework.png"
+    },
+    {
+        "id": "hecatombthewizardsmeetrework",
+        "name": "百牲祭",
+        "ability": "在你死亡的当晚，镇民的咒语不会被抽中。每个夜晚*，如果大于等于五名玩家存活，你可以选择死亡。[+1外来者]",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "13",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ask the Hecatomb if they'd like to die (if less than 4 players are alive, they cannot). If yes, kill the Hecatomb. If the Hecatomb is dead, place the \"Sacrificed\" token on them. No Townsfolk Spells can be cast tonight.",
+        "reminders": [
+            "牺牲"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/hecatomb_thewizardsmeetrework.png"
+    },
+    {
+        "id": "elderdrakethewizardsmeetrework",
+        "name": "上古魔龙",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。每个夜晚你可以提交最多三条咒语。[施法上限数量增加1]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "14",
+        "otherNight": "17",
+        "firstNightReminder": "Place the \"+1 Cast\" token on the Elder Drake.",
+        "otherNightReminder": "Ask the Elder Drake to choose a player. Kill that player and place a \"Dead\" token on them.",
+        "reminders": [
+            "死亡",
+            "+1施法"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/elderdrake_thewizardsmeetrework.png"
+    },
+    {
+        "id": "scourgethewizardsmeetrework",
+        "name": "苦难根源",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。每个夜晚*，如果一条咒语以一名邪恶玩家为目标，你会得知施法者且可以选择杀死他。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "18",
+        "firstNightReminder": "",
+        "otherNightReminder": "If any cast Spells target an evil player, evil character, or the evil team, place the \"Targeted\" token on the caster. If any players have the \"Targeted\" token, tell the Scourge one their names and ask if they'd like to kill said player. Then, ask the Scourge to choose a(nother) player to kill. Kill the player(s) and place a \"Dead\" token on them.",
+        "reminders": [
+            "目标",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/scourge_thewizardsmeetrework.png"
+    },
+    {
+        "id": "infernusthewizardsmeetrework",
+        "name": "地狱业火",
+        "ability": "每个夜晚*，你要选择一名玩家：你会得知该玩家当晚提交的咒语，并以原名称提交一个新的能力效果。该咒语会成为今晚首条施放的咒语，然后该施法者死亡。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "12",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ask the Infernus to choose a player. Tell the Infernus the full text (and name) of the Spell and ask them to rewrite it to their liking. Then after Ritual, kill that player and place a \"Dead\" token on them.",
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/infernus_thewizardsmeetrework.png"
+    },
+    {
+        "id": "theveiledonethewizardsmeetrework",
+        "name": "蔽世之影",
+        "ability": "每个夜晚*，你可以查看魔典并得知任意提交的咒语，然后你要盖上一个角色标记。你提交禁咒后不会死亡。你提交的咒语总是最先被抽中。[无爪牙在场]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "15",
+        "otherNight": "19",
+        "firstNightReminder": "Place the \"SPELL PRIORITY\" token on The Veiled One. ALWAYS DRAW THE VEILED ONE'S SPELL FIRST.",
+        "otherNightReminder": "ALWAYS DRAW THE VEILED ONE'S SPELL FIRST. Show The Veiled One the grimoire and all cast/submitted Spells, then ask them to choose a player. Kill that player and place a \"Dead\" token on them.",
+        "reminders": [
+            "施法优先",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/theveiledone_thewizardsmeetrework.png"
+    },
+    {
+        "id": "studythewizardsmeetrework",
+        "name": "法术研究",
+        "ability": "每个夜晚，所有存活的玩家要提交一条咒语或一条不会被抽取的空白咒语。每个咒语至多60个字，且需附带一个至多5字的准确或富有创意的名称。",
+        "team": "fabled",
+        "sch_team": "传奇角色",
+        "firstNight": "17",
+        "otherNight": "7",
+        "firstNightReminder": "Publicly call for all players to submit Spells. When everyone has submitted, draw Spells.",
+        "otherNightReminder": "Publicly call for all living players to submit Spells. When every living player has submitted, draw Spells.",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/study_thewizardsmeetrework.png"
+    },
+    {
+        "id": "ritualthewizardsmeetrework",
+        "name": "咒法仪式",
+        "ability": "每个夜晚，等同于施法上限数量的咒语将被抽取然后施放。[初始为玩家总数的1/3，向下取整]说书人可以将任何被抽中的咒语变为失去效果的哑咒。具有持续效果的咒语需要“施法专注”，如果另外一条此类的咒语被施放则前一个咒语的效果终止。每个黎明，被施放的咒语的名称会被公布。",
+        "team": "fabled",
+        "sch_team": "传奇角色",
+        "firstNight": "21",
+        "otherNight": "24",
+        "firstNightReminder": "Cast Spells in the order they were drawn even if those players died tonight. Remove any \"Ongoing Effect\" tokens from dead players or those who cast a new spell. Place a \"Cast\" token on each player whose spell was successfully cast (or a \"Dud\" token if vetoed). Place an \"Ongoing Effect\" token on any player whose cast spell includes a lasting effect.",
+        "otherNightReminder": "Cast Spells in the order they were drawn even if those players died tonight. Remove any \"Ongoing Effect\" tokens from dead players or those who cast a new spell. Place a \"Cast\" token on each player whose spell was successfully cast (or a \"Dud\" token if vetoed). Place an \"Ongoing Effect\" token on any player whose cast spell includes a lasting effect.",
+        "reminders": [],
+        "remindersGlobal": [
+            "释放",
+            "释放",
+            "释放",
+            "释放"
+        ],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/ritual_thewizardsmeetrework.png"
+    },
+    {
+        "id": "cursethewizardsmeetrework",
+        "name": "诅咒",
+        "ability": "死亡玩家可以消耗自己的投票标记以降下一个诅咒，诅咒是一个具有持续效果且会被公布的咒语。说书人可以拒绝诅咒被降下，被拒绝的玩家不会消耗投票标记。",
+        "team": "fabled",
+        "sch_team": "传奇角色",
+        "firstNight": "",
+        "otherNight": "8",
+        "firstNightReminder": "",
+        "otherNightReminder": "Ask dead players and the Ritualist if they'd like to invoke a Curse. Place an \"Invoked Curse\" token on any player whose Curse takes effect tonight.",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/curse_thewizardsmeetrework.png"
+    },
+    {
+        "id": "forbiddenspellsthewizardsmeetrework",
+        "name": "禁咒",
+        "ability": "如果一名玩家提交以下任何咒语，他死亡。（1）改变阵营。（2）更改角色能力或使角色能力失效（醉酒和中毒除外）。（3）复活。",
+        "team": "fabled",
+        "sch_team": "传奇角色",
+        "firstNight": "22",
+        "otherNight": "14",
+        "firstNightReminder": "Kill any player that submitted a forbidden spell, unless their ability allows it.",
+        "otherNightReminder": "Kill any player that submitted a forbidden spell, unless their ability allows it.",
+        "reminders": [],
+        "remindersGlobal": [
+            "死亡",
+            "死亡",
+            "死亡",
+            "死亡"
+        ],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/twf07wfz/TheWizardsMeetRework/forbiddenspells_thewizardsmeetrework.png"
+    }
+]

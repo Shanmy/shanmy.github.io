@@ -1,0 +1,373 @@
+[
+  {
+    "id": "_meta",
+    "name": "三神谜题",
+    "author": "华稽",
+    "logo": "https://free.picui.cn/free/2025/12/17/69418ec67d9dd.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/sanshenmiti/almanac.html"
+  },
+  {
+    "id": "_sanshenmiti",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/97/Bootlegger.png/180px-Bootlegger.png",
+    "reminders": [
+      "是正确之神",
+      "是错误之神"
+    ],
+    "name": "变幻之神",
+    "team": "fabled",
+    "ability": "本局游戏存在两名说书人，其中一位只会给出正确信息，另外一位只会给出错误信息，恶魔知道他们分别是谁。所有玩家在每次获取信息之前要选择两名说书人中的一名：由他来负责为你给出信息。中毒醉酒的玩家得知的信息会正误对调。"
+  },
+  {
+    "id": "1_sanshenmiti",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/97/Bootlegger.png/180px-Bootlegger.png",
+    "name": "神之谜题：酒鬼规则细节",
+    "team": "fabled",
+    "ability": "酒鬼无论选择哪名神，获得的信息都随机。"
+  },
+  {
+    "id": "2_sanshenmiti",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/97/Bootlegger.png/180px-Bootlegger.png",
+    "name": "神之谜题：村夫",
+    "team": "fabled",
+    "ability": "村夫不能选择自己。"
+  },
+  {
+    "id": "3_sanshenmiti",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/97/Bootlegger.png/180px-Bootlegger.png",
+    "name": "神之谜题：理发师",
+    "team": "fabled",
+    "ability": "或者恶魔可以选择交换两名说书人的角色。"
+  },
+  {
+    "id": "4_sanshenmiti",
+    "image": "https://free.picui.cn/free/2025/12/17/6941986d13c9d.png",
+    "otherNightReminder": "在六扇门提名时，在对应的玩家标记旁放置“追查”标记。在夜晚时，唤醒六扇门，用点头和摇头来示意与有“追查”标记邻近的玩家中是否存在非镇民玩家。",
+    "reminders": [
+      "追查"
+    ],
+    "name": "六扇门",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知今天白天你提名的玩家邻近的玩家中是否存在非镇民玩家。",
+    "otherNight": 20
+  },
+  {
+    "id": "5_sanshenmiti",
+    "image": "https://free.picui.cn/free/2025/12/17/6941986fc077f.png",
+    "otherNightReminder": "如果勘探者提名了一名玩家，告诉他最近的邪恶玩家位于那名玩家的顺时针还是逆时针方向。如果距离相等，你得知的信息由说书人决定。",
+    "reminders": [
+      "被提名"
+    ],
+    "name": "勘探者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知与你今天提名的玩家最近的邪恶玩家位于他的顺时针还是逆时针方向。如果距离相等，你得知的信息由说书人决定。",
+    "otherNight": 19
+  },
+  {
+    "id": "6_sanshenmiti",
+    "image": "https://free.picui.cn/free/2025/12/11/693aa4caba4e3.png",
+    "reminders": [
+      "已邀请"
+    ],
+    "name": "小说家",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以邀请一名玩家（与之前不同）与你分别私下询问说书人：他可以问一个是非问题，随后你会得知一个答案相同的是非问题。"
+  },
+  {
+    "id": "7_sanshenmiti",
+    "image": "https://free.picui.cn/free/2025/12/17/6941986d22fab.png",
+    "otherNightReminder": "每局游戏限一次，在夜晚时*，你可以选择一名说书人：他成为正确之神，直到下个黄昏。",
+    "reminders": [
+      "已使用"
+    ],
+    "name": "教皇",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名说书人：他成为正确之神，直到下个黄昏。",
+    "otherNight": 11
+  },
+  {
+    "id": "8_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fortune_teller.png",
+    "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 3600,
+    "otherNight": 14
+  },
+  {
+    "id": "9_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/chambermaid.png",
+    "firstNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "otherNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 4000,
+    "otherNight": 21
+  },
+  {
+    "id": "10_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/town_crier.png",
+    "otherNightReminder": "唤醒城镇公告员，以点头或摇头告知他今天白天是否有爪牙发起提名。",
+    "reminders": [
+      "爪牙未提名",
+      "爪牙已提名"
+    ],
+    "name": "城镇公告员",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天时是否有爪牙发起过提名。",
+    "otherNight": 15
+  },
+  {
+    "id": "11_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/seamstress.png",
+    "firstNightReminder": "唤醒女裁缝，她可以摇头不使用能力，或选择除自己以外的两名玩家。以点头或摇头告知她选择的玩家是否为同一阵营。",
+    "otherNightReminder": "如果女裁缝未曾使用能力，唤醒女裁缝，她可以摇头不使用能力，或选择除自己以外的两名玩家。以点头或摇头告知她选择的玩家是否为同一阵营。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "女裁缝",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的两名玩家：你会得知他们是否为同一阵营。",
+    "firstNight": 3700,
+    "otherNight": 16
+  },
+  {
+    "id": "12_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/noble.png",
+    "firstNightReminder": "唤醒贵族，对他指向三名玩家。这三名玩家中有且仅有一名是邪恶玩家。",
+    "reminders": [
+      "被得知"
+    ],
+    "name": "贵族",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。",
+    "firstNight": 3800
+  },
+  {
+    "id": "13_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fisherman.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "渔夫",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以让说书人给你一些能帮助你的阵营获胜的建议。"
+  },
+  {
+    "id": "14_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/village_idiot.png",
+    "firstNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "otherNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": true,
+    "name": "村夫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的阵营。[+0~2村夫，复数村夫中有一人醉酒]",
+    "firstNight": 3900,
+    "otherNight": 17
+  },
+  {
+    "id": "15_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/bingbi.png",
+    "otherNightReminder": "在夜晚时，如果秉笔旁放置了“死于今日”提示标记，唤醒秉笔。对他指向一名善良玩家。让秉笔重新入睡。移除“死于今日”提示标记。如果秉笔在夜晚死亡，唤醒秉笔。对他指向一名邪恶玩家。让秉笔重新入睡。",
+    "reminders": [
+      "死于今日"
+    ],
+    "name": "秉笔",
+    "team": "townsfolk",
+    "ability": "如果你在白天死亡，当晚你会得知一名善良玩家。如果你在夜晚死亡，当晚你会得知一名邪恶玩家。",
+    "otherNight": 13
+  },
+  {
+    "id": "16_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/shiguan.png",
+    "otherNightReminder": "如果今天白天有玩家死于处决，唤醒史官，告知其在场存活镇民数量。",
+    "reminders": [
+      "死于今日"
+    ],
+    "name": "史官",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，如果今天白天有玩家死于处决，你会得知存活镇民的数量。",
+    "otherNight": 18
+  },
+  {
+    "id": "17_sanshenmiti",
+    "image": "https://free.picui.cn/free/2025/12/17/6941986d54758.png",
+    "otherNightReminder": "唤醒恶魔，让他选神。",
+    "reminders": [
+      "死于处决"
+    ],
+    "name": "孟菲斯",
+    "team": "outsider",
+    "ability": "如果你死于处决，当晚恶魔可以选择将一名说书人变为“错误之神”。",
+    "otherNight": 8
+  },
+  {
+    "id": "18_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/drunk.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "19_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/barber.png",
+    "otherNightReminder": "如果理发师死于白天，唤醒恶魔让他决定是否使用理发师的能力。如果理发师死于夜晚，（如果让除攻击理发师以外的恶魔进行选择则需要等当前恶魔入睡后）让一名恶魔决定是否使用理发师的能力。",
+    "reminders": [
+      "今晚理发"
+    ],
+    "name": "理发师",
+    "team": "outsider",
+    "ability": "如果你死亡，在当晚恶魔可以选择两名玩家（不能选择其他恶魔）交换角色。",
+    "otherNight": 9
+  },
+  {
+    "id": "20_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/plague_doctor.png",
+    "otherNightReminder": "如果瘟疫医生死亡，说书人获得一项爪牙能力。",
+    "reminders": [
+      "说书人能力"
+    ],
+    "name": "瘟疫医生",
+    "team": "outsider",
+    "ability": "当你死亡时，说书人会获得一个爪牙能力。",
+    "otherNight": 12
+  },
+  {
+    "id": "21_sanshenmiti",
+    "image": "https://free.picui.cn/free/2025/12/17/6941986ff2236.png",
+    "firstNightReminder": "毒",
+    "otherNightReminder": "毒",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "战车",
+    "team": "minion",
+    "ability": "与你顺时针距离为1的玩家中毒。如果是邪恶的非旅行者玩家，改为和他交换角色。每个夜晚*，或该玩家死亡时，该距离+1。",
+    "firstNight": 3100,
+    "otherNight": 2
+  },
+  {
+    "id": "22_sanshenmiti",
+    "image": "https://free.picui.cn/free/2025/12/17/6941986d3bde4.png",
+    "name": "谜题魔",
+    "team": "minion",
+    "ability": "当小于等于五名存活玩家，邪恶阵营落败时，所有玩家要同时猜测谁是谜题魔，如果少于复数善良玩家猜测你，邪恶阵营获胜，即使你已死亡。"
+  },
+  {
+    "id": "23_sanshenmiti",
+    "image": "https://free.picui.cn/free/2025/11/14/69171f861ffa4.png",
+    "firstNightReminder": "每个夜晚，你可以选择一名玩家：下个提名阶段，说书人会首先提名该玩家并问他一个是非问题，如果他答错那么他可能会被处决。",
+    "otherNightReminder": "每个夜晚，你可以选择一名玩家：下个提名阶段，说书人会首先提名该玩家并问他一个是非问题，如果他答错那么他可能会被处决。",
+    "reminders": [
+      "提问"
+    ],
+    "name": "斯芬克斯",
+    "team": "minion",
+    "ability": "每个夜晚，你可以选择一名玩家：下个提名阶段，说书人会首先提名该玩家并问他一个是非问题，如果他答错那么他可能会被处决。",
+    "firstNight": 3400,
+    "otherNight": 3
+  },
+  {
+    "id": "24_sanshenmiti",
+    "image": "https://free.picui.cn/free/2025/09/12/68c3fe1fb18df.png",
+    "firstNightReminder": "在你的首个夜晚，你要选择一名玩家：他中毒。",
+    "otherNightReminder": "每局游戏限一次，在夜晚时*，你可以选择杀死该玩家，或使中毒目标改变。",
+    "reminders": [
+      "中毒",
+      "死亡",
+      "限一次"
+    ],
+    "name": "魔笛手",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择一名玩家：他中毒。每局游戏限一次，在夜晚时*，你可以选择杀死该玩家，或使中毒目标改变。",
+    "firstNight": 3300,
+    "otherNight": 10
+  },
+  {
+    "id": "25_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/godfather.png",
+    "firstNightReminder": "唤醒教父，对他展示外来者角色标记，告诉他有哪些外来者在场。",
+    "otherNightReminder": "如果今天白天有外来者死亡，唤醒教父，让他攻击一名玩家。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "教父",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]",
+    "firstNight": 3500,
+    "otherNight": 7
+  },
+  {
+    "id": "26_sanshenmiti",
+    "image": "https://free.picui.cn/free/2025/12/17/6941986fdaf2e.png",
+    "firstNightReminder": "游戏的首个夜晚，你要选择一名说书人：他成为“变化之神”，另一名成为“正确之神”。",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家：他死亡。",
+    "reminders": [
+      "是变化之神",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "邪祭司",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。游戏的首个夜晚，你要选择一名说书人：他成为“变化之神”，另一名成为“正确之神”。[-1外来者]",
+    "firstNight": 3200,
+    "otherNight": 6
+  },
+  {
+    "id": "27_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/imp.png",
+    "otherNightReminder": "唤醒小恶魔，让他攻击一名玩家。如果他成功自杀，则在他入睡后通知一名爪牙角色变化。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 4
+  },
+  {
+    "id": "28_sanshenmiti",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/no_dashii.png",
+    "otherNightReminder": "唤醒诺-达鲺，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "name": "诺-达鲺",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+    "otherNight": 5
+  },
+  {
+    "id": "29_sanshenmiti",
+    "name": "瘟疫医生&战车",
+    "team": "jinxes",
+    "ability": "如果瘟疫医生死亡且说书人因此获得战车的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+  },
+  {
+    "id": "30_sanshenmiti",
+    "name": "谜题魔&瘟疫医生",
+    "team": "jinxes",
+    "ability": "如果瘟疫医生死亡且说书人因此获得谜题魔的能力，在指认谜题魔时需要至少初始爪牙数量的玩家指向说书人，否则邪恶阵营获胜。"
+  },
+  {
+    "id": "31_sanshenmiti",
+    "name": "魔笛手&战车",
+    "team": "jinxes",
+    "ability": "如果魔笛手因为战车交换角色而重新入场，不会因此移除魔笛手的任何提示标记，魔笛手不会重获能力。"
+  }
+]

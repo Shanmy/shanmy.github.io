@@ -1,0 +1,366 @@
+[
+  {
+    "id": "_meta",
+    "name": "以太梦境",
+    "author": "厦门·染染秘社-小平&Lei",
+    "logo": "https://free.picui.cn/free/2025/11/28/6929aba04391e.png",
+    "almanac": "https://www.bloodstar.xyz/p/worryhours/yitai/almanac.html"
+  },
+  {
+    "id": "12_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/13_yitai.png",
+    "remindersGlobal": [
+      "线索"
+    ],
+    "name": "高阶奇美拉炼金术",
+    "team": "fabled",
+    "ability": "该剧本登场的恶魔固定为奇美拉，奇美拉不再调整外来者数量。在奇美拉的首个夜晚，他要从“嵌合体的囚笼”中选择3个恶魔作为本局即将使用的能力，随后说书人会乱序公布他的选择。新入场的奇美拉不用再更换选中。如果在第4个夜晚之后，奇美拉可以选择除初始选择的3个恶魔之外的恶魔，如果他这么做了，说书人会公布他留下痕迹。"
+  },
+  {
+    "id": "_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/_yitai.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "真心人",
+    "team": "townsfolk",
+    "ability": "在你的首个白天，你可以邀请说书人见证你与一名玩家互通角色，说书人会秘密告诉你是否有人说谎。"
+  },
+  {
+    "id": "17_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/17_yitai.png",
+    "firstNightReminder": "得知外来者或爪牙",
+    "otherNightReminder": "若死亡得知外来者或爪牙",
+    "reminders": [
+      "得知"
+    ],
+    "setup": 1,
+    "name": "治安官",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名外来者或爪牙玩家。如果你在夜晚死亡，你会得知一名外来者或爪牙玩家（角色类型与上次不同）。［+1外来者］",
+    "firstNight": 3500,
+    "otherNight": 16
+  },
+  {
+    "id": "18_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/18_yitai.png",
+    "firstNightReminder": "得知一个在场角色，并在该玩家角色旁放置“得知”标记",
+    "otherNightReminder": "若白天她猜对，得知另一个在场角色，并在该玩家角色旁放置“得知”标记",
+    "reminders": [
+      "得知"
+    ],
+    "name": "画家",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个在场角色。每个白天你可以进行一次猜测，每当你猜对谁是你最近得知的角色，当晚你会得知另一个在场角色。",
+    "firstNight": 3600,
+    "otherNight": 17
+  },
+  {
+    "id": "1_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/1_yitai.png",
+    "firstNightReminder": "唤醒他并让他选择2名玩家，告知他选择的玩家皆不属于哪种角色类型。",
+    "otherNightReminder": "唤醒他并让他选择2名玩家，告知他选择的玩家皆不属于哪种角色类型。",
+    "name": "牧师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的两名玩家:你会得知他们皆不属于哪种角色类型。",
+    "firstNight": 3700,
+    "otherNight": 18
+  },
+  {
+    "id": "24_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/24_yitai.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名不与你邻座的存活玩家：你会得知你与他顺时针方向上之间有多少名邪恶玩家。 如果你选择了邪恶玩家，你会获得错误的信息。",
+    "name": "提夫林",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名不与你邻座的存活玩家：你会得知你与他顺时针方向上之间有多少名邪恶玩家。 如果你选择了邪恶玩家，你会获得错误的信息。",
+    "otherNight": 21
+  },
+  {
+    "id": "28_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/28_yitai.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "死亡",
+      "免死"
+    ],
+    "name": "女武神",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，死亡延迟到你同意死亡名单之后才会发生，如果你不同意，当晚有且只有你死亡。",
+    "otherNight": 14
+  },
+  {
+    "id": "19_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/19_yitai.png",
+    "otherNightReminder": "唤醒并询问公爵是否发动能力",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "remindersGlobal": [
+      "是公爵"
+    ],
+    "name": "公爵",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡且当晚恶魔不会造成死亡。如果你杀死了恶魔，你和他交换阵营和角色。",
+    "otherNight": 4
+  },
+  {
+    "id": "21_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/21_yitai.png",
+    "otherNightReminder": "如果有玩家因为疗养师的能力避免了死亡（即：他避免了本应发生的死亡，且没有受到其他角色的保护）：在他的旁边放置护理标志，如果有玩家有护理标志，告知疗养师是，否则告知否",
+    "reminders": [
+      "醉酒",
+      "护理"
+    ],
+    "name": "疗养师",
+    "team": "townsfolk",
+    "ability": "一名玩家醉酒。中毒或醉酒的玩家不会死亡，每个夜晚*，你会得知是否有玩家因为你避免了死亡（从上个黎明到你被唤醒时）。",
+    "otherNight": 24
+  },
+  {
+    "id": "3_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/3_yitai.png",
+    "otherNightReminder": "如果他在白天公开宣读了，唤醒他并告知他“是”或“否”。",
+    "reminders": [
+      "真新闻",
+      "假新闻"
+    ],
+    "name": "送报童",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知一条“新闻”，如果你公开宣读了该“新闻”，当天晚上你会得知它是否正确。",
+    "otherNight": 19
+  },
+  {
+    "id": "2_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/2_yitai.png",
+    "otherNightReminder": "如果游歌者在白天公开选择了，唤醒并告知他此刻场上因他醉酒的人数。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "游歌者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开选择任意名存活玩家：其中的镇民会醉酒直到你再次选择。当晚你会得知正因你醉酒的人数。",
+    "otherNight": 20
+  },
+  {
+    "id": "4_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/4_yitai.png",
+    "otherNightReminder": "如果“探险者”存活，告知猫猫探险队一名与“探险者”阵营相同的玩家。",
+    "reminders": [
+      "探险者"
+    ],
+    "name": "猫猫探险队",
+    "team": "townsfolk",
+    "ability": "每个白天限一次，没有“探险”过的存活玩家可以公开“探险”：在当晚，如果他存活，你会得知一名与他阵营不同的玩家。",
+    "otherNight": 22
+  },
+  {
+    "id": "7_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/7_yitai.png",
+    "firstNightReminder": "唤醒一名爪牙，告知他牛仔在场。",
+    "otherNightReminder": "如果“发起提名”被放置在场上，唤醒牛仔",
+    "reminders": [
+      "宿敌",
+      "发起提名",
+      "了断"
+    ],
+    "name": "牛仔",
+    "team": "townsfolk",
+    "ability": "一名爪牙知道牛仔在场。每当他发起提名，你会在当晚被唤醒。你们中首次被对方提名的玩家立即被处决。",
+    "firstNight": 3800,
+    "otherNight": 23
+  },
+  {
+    "id": "6_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/6_yitai.png",
+    "otherNightReminder": "如果死亡唤醒他，告知他所有类型的玩家（除旅行者）各一名。如果他被标记了“醉酒”，你可以告知他错误信息。",
+    "reminders": [
+      "被得知",
+      "醉酒"
+    ],
+    "name": "空中飞人",
+    "team": "townsfolk",
+    "ability": "你死亡的当晚会被唤醒并得知所有角色类型的玩家各一名。你死于善良玩家发起的提名处决或能力时你醉酒。",
+    "otherNight": 15
+  },
+  {
+    "id": "8_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/8_yitai.png",
+    "reminders": [
+      "罢黜（醉酒）"
+    ],
+    "name": "地狱弃子",
+    "team": "outsider",
+    "ability": "每个白天提名开始前，爪牙可以公开拥立地狱弃子：你立即转变为邪恶且与恶魔交换角色，然后他醉酒。"
+  },
+  {
+    "id": "5_yitai",
+    "image": "https://youke1.picui.cn/s1/2025/11/09/690fb93d49e51.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "白骑士",
+    "team": "outsider",
+    "ability": "如果有玩家“疯狂”地想要存活，那么当天他即将死于处决时可能不会死亡（每局游戏限一次）。"
+  },
+  {
+    "id": "9_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/9_yitai.png",
+    "reminders": [
+      "“他”"
+    ],
+    "name": "堂吉诃德",
+    "team": "outsider",
+    "ability": "一名玩家会被镇民的能力当作恶魔，即使你已死亡。你可以私下询问说书人以得知“他”是谁，随后“他”会改为另一名玩家。"
+  },
+  {
+    "id": "10_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/10_yitai.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "舔狗替死"
+    ],
+    "name": "大小姐",
+    "team": "outsider",
+    "ability": "你首次即将死亡时，可能会有两名存活玩家代替你死亡。",
+    "otherNight": 13
+  },
+  {
+    "id": "22_yitai",
+    "image": "https://free.picui.cn/free/2025/11/28/6929acad0f7e1.png",
+    "otherNightReminder": "唤醒他，他要摇头或是选择一个非恶魔角色，为该角色标记死亡。如果他选择的角色不在场，让他再次选择一名玩家，该玩家变成那个角色。",
+    "reminders": [
+      "失去能力",
+      "被变化",
+      "死亡"
+    ],
+    "name": "帕克",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一个非恶魔角色：他死亡。如果该角色不在场，你要再选择一名玩家：他变成该角色。",
+    "otherNight": 6
+  },
+  {
+    "id": "23_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/23_yitai.png",
+    "otherNightReminder": "如果今天在唤醒亡灵骑士之前有外来者死亡，唤醒亡灵骑士，告知他死亡的外来者玩家是谁，并让他猜测具体角色，如果他猜中至少一名，标记一名玩家死亡，然后去除所有的“离魂抽离”标记。",
+    "reminders": [
+      "死亡",
+      "灵魂抽离"
+    ],
+    "setup": true,
+    "name": "亡灵骑士",
+    "team": "minion",
+    "ability": "每个夜晚*，你会得知当天死亡的外来者是谁，且你要猜测他的角色，如果你猜对，会有一名玩家死亡。[+1外来者]",
+    "otherNight": 7
+  },
+  {
+    "id": "20_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/20_yitai.png",
+    "firstNightReminder": "唤醒斯芬克斯，并问他是否选择一名玩家。",
+    "otherNightReminder": "唤醒斯芬克斯，并问他是否选择一名玩家。",
+    "remindersGlobal": [
+      "被提问"
+    ],
+    "name": "斯芬克斯",
+    "team": "minion",
+    "ability": "每个夜晚，你可以选择一名玩家：下个提名阶段，说书人会首先提名该玩家并问他一个是非问题，如果他答错那么他可能会被处决。",
+    "firstNight": 3200,
+    "otherNight": 3
+  },
+  {
+    "id": "26_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/26_yitai.png",
+    "firstNightReminder": "选择一名玩家。标记那名玩家中毒。如果麻醉师选择了一名新的玩家，且原玩家还存活，告知原玩家麻醉师在场。",
+    "otherNightReminder": "选择一名玩家。标记那名玩家中毒。如果麻醉师选择了一名新的玩家，且原玩家还存活，告知原玩家麻醉师在场。",
+    "reminders": [
+      "中毒",
+      "得知"
+    ],
+    "name": "麻醉师",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：他中毒直到你更换选择目标，当你更换选择目标时，如果他还存活他会得知麻醉师在场。",
+    "firstNight": 3100,
+    "otherNight": 2
+  },
+  {
+    "id": "13_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/13_yitai.png",
+    "firstNightReminder": " ",
+    "otherNightReminder": "唤醒他，他要选择一个除奇美拉以外的恶魔（与前两次选择均不同），他获得该恶魔能力。然后当晚像对待他选择的恶魔一样让他使用能力。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "奇美拉",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一个除奇美拉以外的恶魔角色（与前两次的选择均不同）：你获得该角色的能力直到下个黄昏。",
+    "firstNight": 3300,
+    "otherNight": 5
+  },
+  {
+    "id": "15_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/15_yitai.png",
+    "otherNightReminder": "让涡流选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "涡流",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。镇民玩家的能力都会产生错误信息。如果白天没人被处决，邪恶阵营获胜。",
+    "otherNight": 10
+  },
+  {
+    "id": "27_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/27_yitai.png",
+    "otherNightReminder": "唤醒诺-达鲺，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "中毒",
+      "中毒"
+    ],
+    "name": "诺-达鲺",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+    "otherNight": 9
+  },
+  {
+    "id": "11_yitai",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/lleech.png",
+    "firstNightReminder": "唤醒痢蛭，让他选择一名玩家以寄生。",
+    "otherNightReminder": "唤醒痢蛭，让他攻击一名玩家。",
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "name": "痢蛭",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名存活的玩家：他中毒，只有当他处于死亡状态时你才会立即死亡。",
+    "firstNight": 3400,
+    "otherNight": 8
+  },
+  {
+    "id": "16_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/16_yitai.png",
+    "otherNightReminder": "唤醒，让他选择一名玩家，为该玩家标记死亡。如果场上存在多名奇美拉，由你来决定谁先行动。",
+    "reminders": [
+      "死亡",
+      "是海德拉"
+    ],
+    "name": "海德拉",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你在非最后一个白天死于处决，一名善良玩家与一名邪恶玩家会变成海德拉。",
+    "otherNight": 12
+  },
+  {
+    "id": "14_yitai",
+    "image": "https://www.bloodstar.xyz/p/worryhours/yitai/14_yitai.png",
+    "otherNightReminder": "唤醒大巫妖",
+    "reminders": [
+      "死亡",
+      "已触发"
+    ],
+    "name": "大巫妖",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。一名死亡玩家首次被大巫妖的能力选择时，他要选择两名玩家：其中不是恶魔的玩家死亡。",
+    "otherNight": 11
+  }
+]

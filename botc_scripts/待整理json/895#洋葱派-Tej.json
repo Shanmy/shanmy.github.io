@@ -1,0 +1,291 @@
+[
+  {
+    "id": "_meta",
+    "name": "洋葱派Onion Pies",
+    "author": "Tej",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/46/cy67p47gqnmdmigv5gmg0mmx2m5w93l.png",
+    "almanac": "有问题联系SE谢谢喵"
+  },
+  {
+    "id": "_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/72/mlafp72cxlsc80kyelhx6stnexyqyhw.png",
+    "otherNightReminder": "唤醒那名玩家，依次向他展示“你是”提示标记和新的角色标记，然后让他们重新入睡。",
+    "reminders": [
+      "不是我"
+    ],
+    "name": "笑匠",
+    "team": "traveller",
+    "ability": "每个白天，你要选择一名玩家：一名其他玩家会在当晚改变角色。",
+    "otherNight": 2
+  },
+  {
+    "id": "1_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/36/4yqdhq0kap6l5a4q8og8kxmg8y2cjcg.png",
+    "firstNightReminder": "唤醒洗衣妇，对她指向两名玩家，并展示一个镇民角色标记。这两名玩家其中之一是这个镇民。",
+    "reminders": [
+      "镇民",
+      "错误"
+    ],
+    "name": "洗衣妇",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个镇民角色：这两名玩家之一是该角色。",
+    "firstNight": 14000
+  },
+  {
+    "id": "2_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/18/s6zgwg9oxao74onxk6f21fz8ain7b87.png",
+    "firstNightReminder": "唤醒图书管理员，对他指向两名玩家，并展示一个外来者角色标记。这两名玩家其中之一是这个外来者。",
+    "reminders": [
+      "外来者",
+      "错误"
+    ],
+    "name": "图书管理员",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个外来者角色：这两名玩家之一是该角色（或者你会得知没有外来者在场）。",
+    "firstNight": 15000
+  },
+  {
+    "id": "3_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/7d/8ns1pftlkxjbrau1b6v3o7vyq0zpnyt.png",
+    "firstNightReminder": "唤醒厨师，对他用手势比划数字来告知他邻座邪恶玩家有几对。",
+    "name": "厨师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "firstNight": 16000
+  },
+  {
+    "id": "4_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a6/duttrwlwawvxiqzttdxk8btqi0ha125.png",
+    "firstNightReminder": "唤醒共情者，对他用手势比划数字来告知他与他邻近的存活玩家中有几人是邪恶玩家。",
+    "otherNightReminder": "唤醒共情者，对他用手势比划数字来告知他与他邻近的存活玩家中有几人是邪恶玩家。",
+    "name": "共情者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知与你邻近的两名存活的玩家中邪恶玩家的数量。",
+    "firstNight": 17000,
+    "otherNight": 8
+  },
+  {
+    "id": "5_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/91/04je4dg5ituw4nymx4f0x0b80p6gntg.png",
+    "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 18000,
+    "otherNight": 9
+  },
+  {
+    "id": "6_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a3/nxckynoy8mshn7pwnsnnraceso4zx2p.png",
+    "otherNightReminder": "唤醒僧侣，让他选择除自己以外的一名玩家，那名玩家今晚免受恶魔负面效果影响。",
+    "reminders": [
+      "保护"
+    ],
+    "name": "僧侣",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的一名玩家：当晚恶魔的负面能力对他无效。",
+    "otherNight": 4
+  },
+  {
+    "id": "7_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/dc/49ardir6f1osygmvs27t9kbgcmyfgsa.png",
+    "otherNightReminder": "如果守鸦人死于夜晚，唤醒守鸦人，让他选择一名玩家。对他展示这名玩家的角色标记。",
+    "name": "守鸦人",
+    "team": "townsfolk",
+    "ability": "如果你在夜晚死亡，你会被唤醒，然后你要选择一名玩家：你会得知他的角色。",
+    "otherNight": 7
+  },
+  {
+    "id": "8_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/14/gk3bmjwzy80yzezuvzca5b1vb51g0wk.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "贞洁者",
+    "team": "townsfolk",
+    "ability": "当你首次被提名时，如果提名你的玩家是镇民，他立刻被处决。"
+  },
+  {
+    "id": "9_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b5/hsyches6mycnt4uyofz8uwqw1y06r0o.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "猎手",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，你可以在白天时公开选择一名玩家：如果他是恶魔，他死亡。"
+  },
+  {
+    "id": "10_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c9/kfa7czupvk2jnejrqexerz4vdx8njwr.png",
+    "name": "士兵",
+    "team": "townsfolk",
+    "ability": "恶魔的负面能力对你无效。"
+  },
+  {
+    "id": "11_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/79/8rd5mfvpkzq4i73sctbzjyrvthr082g.png",
+    "name": "镇长",
+    "team": "townsfolk",
+    "ability": "如果只有三名玩家存活且白天没有人被处决，你的阵营获胜。如果你在夜晚死亡，可能会有一名其他玩家代替你死亡。"
+  },
+  {
+    "id": "12_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/4cvv6gx6js190zpjqm110ps4j6bl587.png",
+    "firstNightReminder": "唤醒贵族，对他指向三名玩家。这三名玩家中有且仅有一名是邪恶玩家。",
+    "reminders": [
+      "被得知"
+    ],
+    "name": "贵族",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。",
+    "firstNight": 19000
+  },
+  {
+    "id": "13_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6a/9r3z8m0fen1nqr4u8vfx35rzei7ekp2.png",
+    "firstNightReminder": "唤醒小精灵，对他展示一个在场镇民角色标记。",
+    "reminders": [
+      "疯狂",
+      "获得能力"
+    ],
+    "name": "小精灵",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个在场的镇民角色。如果你“疯狂”地证明你是该角色，当他死亡时你获得该角色的能力。",
+    "firstNight": 13000
+  },
+  {
+    "id": "14_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c1/ga80xr3gx817rh5wiqq18d9hv8b6xje.png",
+    "reminders": [
+      "饱餐",
+      "中毒"
+    ],
+    "name": "食人族",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "15_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/1cqow962ds6jp9x5rz84qwgpstkyurs.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "16_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/5e/dw5z7fnz58ia54bw160d1numjsjay8f.png",
+    "name": "陌客",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。"
+  },
+  {
+    "id": "17_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/ac/mrlvexpiy2a8gedva2hapgce6zk57if.png",
+    "name": "圣徒",
+    "team": "outsider",
+    "ability": "如果你死于处决，你的阵营落败。"
+  },
+  {
+    "id": "18_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/73/pgakqxxr1gostnluw2xkp4cnudn3z7a.png",
+    "firstNightReminder": "唤醒食人魔，让他选择一名玩家。如果他选择了邪恶玩家，将他的角色标记在魔典中倒置以表示他转变为邪恶阵营。",
+    "reminders": [
+      "挚友"
+    ],
+    "name": "食人魔",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，你要选择除你以外的一名玩家：你转变为他的阵营，即使你已醉酒或中毒，但你不知道你转变后的阵营。",
+    "firstNight": 21000
+  },
+  {
+    "id": "19_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/33/6wspdicyxe9hh221v9aodnk8umbdtsq.png",
+    "firstNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "otherNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "投毒者",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：他在当晚和明天白天中毒。",
+    "firstNight": 12000,
+    "otherNight": 3
+  },
+  {
+    "id": "20_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c4/qmcx4rs9w0skrk2gc9zr896al0c0cdo.png",
+    "firstNightReminder": "唤醒间谍，让他查看魔典。",
+    "otherNightReminder": "唤醒间谍，让他查看魔典。",
+    "name": "间谍",
+    "team": "minion",
+    "ability": "每个夜晚，你能查看魔典。你可能会被当作善良阵营、镇民角色或外来者角色，即使你已死亡。",
+    "firstNight": 20000,
+    "otherNight": 10
+  },
+  {
+    "id": "21_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9a/39mexl68b71eyydru1jkze79qhwlfib.png",
+    "otherNightReminder": "如果红唇女郎的能力曾被触发，唤醒她并告知她变成了哪个恶魔角色。",
+    "reminders": [
+      "是恶魔"
+    ],
+    "name": "红唇女郎",
+    "team": "minion",
+    "ability": "如果大于等于五名玩家存活时（旅行者不计算在内）恶魔死亡，你变成那个恶魔。",
+    "otherNight": 5
+  },
+  {
+    "id": "22_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d9/jg7k6wd0cy1bk89o3uzhdti6oxund8n.png",
+    "setup": true,
+    "name": "男爵",
+    "team": "minion",
+    "ability": "会有额外的外来者在场。[+2 外来者]"
+  },
+  {
+    "id": "23_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e5/el29kr1dznrpaa089tayj3chd444s6k.png",
+    "firstNightReminder": "如果提线木偶在场，对恶魔展示提线木偶角色标记并指向提线木偶玩家。",
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "setup": true,
+    "name": "提线木偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]",
+    "firstNight": 11
+  },
+  {
+    "id": "24_yangcongpai",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/03/1trck24gi8o05kklsg93al4co09nakb.png",
+    "otherNightReminder": "唤醒小恶魔，让他攻击一名玩家。如果他成功自杀，则在他入睡后通知一名爪牙角色变化。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+   "otherNight": 6
+  },
+  {
+    "id": "25_yangcongpai",
+    "name": "陌客&食人族",
+    "team": "a jinxed",
+    "ability": "如果陌客被食人族当作邪恶阵营，食人族会得知自己转变为邪恶。"
+  },
+  {
+    "id": "26_yangcongpai",
+    "name": "间谍&食人族",
+    "team": "a jinxed",
+    "ability": "间谍必定被食人族当作邪恶阵营。"
+  }
+]

@@ -1,0 +1,235 @@
+[
+  {
+    "id": "_meta",
+    "author": "phillyCHEEEEEZ",
+    "name": "#神灯交易v9.0.0-mphillyCHEEEEEZist",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/shendengjiaoyi/_meta.png",
+    "firstNight": [
+      "dusk",
+      "minioninfo",
+      "demoninfo",
+      "noita111",
+      "daerduotutu111",
+      "mangshengnifaxianlehuadian111",
+      "wocaishichushen111",
+      "mofashuijingqiu111",
+      "rangwokangkang111",
+      "seamstress",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "hatter",
+      "innkeeper",
+      "noita111",
+      "scarletwoman",
+      "gongwenbaozaren111",
+      "imp",
+      "meiyoudashi11111",
+      "vortox",
+      "baonijuhua111",
+      "plaguedoctor",
+      "shanliangdeniaoer111",
+      "mofashuijingqiu111",
+      "rangwokangkang111",
+      "oracle",
+      "seamstress",
+      "dawn"
+    ],
+    "bootlegger": [
+      "提名者可以在发起提名后选择死亡。如果他这么做了，被提名者下次能力会生效两次，直到下个黄昏。"
+    ]
+  },
+  {
+    "id": "daerduotutu111",
+    "name": "图书管理员",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/librarian.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个外来者角色：这两名玩家之一是该角色（或者你会得知没有外来者在场）。",
+    "firstNight": 36,
+    "otherNight": 0,
+    "firstNightReminder": "唤醒图书管理员，对他指向两名玩家，并展示一个外来者角色标记。这两名玩家其中之一是这个外来者。",
+    "reminders": [
+      "外来者",
+      "错误"
+    ]
+  },
+  {
+    "id": "mangshengnifaxianlehuadian111",
+    "name": "调查员",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/investigator.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个爪牙角色：这两名玩家之一是该角色（或者你会得知没有爪牙在场）。",
+    "firstNight": 37,
+    "otherNight": 0,
+    "firstNightReminder": "唤醒调查员，对他指向两名玩家，并展示一个爪牙角色标记。这两名玩家其中之一是这个爪牙。",
+    "reminders": [
+      "爪牙",
+      "错误"
+    ]
+  },
+  {
+    "id": "wocaishichushen111",
+    "name": "厨师",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/chef.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "firstNight": 38,
+    "otherNight": 0,
+    "firstNightReminder": "唤醒厨师，对他用手势比划数字来告知他邻座邪恶玩家有几对。",
+    "reminders": []
+  },
+  {
+    "id": "mofashuijingqiu111",
+    "name": "占卜师",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fortune_teller.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 40,
+    "otherNight": 81,
+    "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "reminders": [
+      "干扰项"
+    ]
+  },
+  {
+    "id": "rangwokangkang111",
+    "name": "筑梦师",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/dreamer.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 45,
+    "otherNight": 84,
+    "firstNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+    "otherNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+    "reminders": []
+  },
+  "seamstress",
+  "innkeeper",
+  {
+    "id": "gongwenbaozaren111",
+    "name": "驱魔人",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/exorcist.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每个夜晚*，你要选择一名玩家（与上个夜晚不同）：如果你选中了恶魔，他会得知你的角色，但他当晚不会因其自身能力而被唤醒。",
+    "firstNight": 0,
+    "otherNight": 29,
+    "otherNightReminder": "唤醒驱魔人，让他选择一名与上一晚不同的玩家。如果他选中了恶魔，则在驱魔人入睡后通知该恶魔谁是驱魔人。",
+    "reminders": [
+      "被选择"
+    ]
+  },
+  "oracle",
+  "slayer",
+  {
+    "id": "diaoshangyizhengtiandeyu111",
+    "name": "渔夫",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fisherman.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每局游戏限一次，在白天时，你可以让说书人给你一些能帮助你的阵营获胜的建议。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "失去能力"
+    ]
+  },
+  {
+    "id": "shanliangdeniaoer111",
+    "name": "守鸦人",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/ravenkeeper.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "如果你在夜晚死亡，你会被唤醒，然后你要选择一名玩家：你会得知他的角色。",
+    "firstNight": 0,
+    "otherNight": 70,
+    "otherNightReminder": "如果守鸦人死于夜晚，唤醒守鸦人，让他选择一名玩家。对他展示这名玩家的角色标记。",
+    "reminders": []
+  },
+  "mayor",
+  {
+    "id": "woheduolema111",
+    "name": "酒鬼",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/drunk.png",
+    "team": "outsider",
+    "edition": "custom",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [],
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true
+  },
+  "politician",
+  "hatter",
+  "plaguedoctor",
+  {
+    "id": "noita111",
+    "name": "女巫",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/witch.png",
+    "team": "minion",
+    "edition": "custom",
+    "ability": "每个夜晚，你要选择一名玩家：如果他明天白天发起提名，他死亡。如果只有三名存活的玩家，你失去此能力。",
+    "firstNight": 24,
+    "otherNight": 19,
+    "firstNightReminder": "唤醒女巫，让她选择一名玩家，那名玩家被诅咒。",
+    "otherNightReminder": "唤醒女巫，让她选择一名玩家，那名玩家被诅咒。",
+    "reminders": [
+      "被诅咒"
+    ]
+  },
+  {
+    "id": "baonijuhua111",
+    "name": "刺客",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/assassin.png",
+    "team": "minion",
+    "edition": "custom",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。",
+    "firstNight": 0,
+    "otherNight": 52,
+    "otherNightReminder": "如果刺客未曾使用能力，唤醒刺客，他可以摇头不使用能力，或选择攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ]
+  },
+  "baron",
+  "scarletwoman",
+  {
+    "id": "meiyoudashi11111",
+    "name": "诺-达鲺",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/no_dashii.png",
+    "team": "demon",
+    "edition": "custom",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+    "firstNight": 0,
+    "otherNight": 37,
+    "otherNightReminder": "唤醒诺-达鲺，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ]
+  },
+  "imp",
+  "vortox",
+  "bootlegger",
+  {
+    "id": "35addde2-e27a-4de2-9a9e-df0e78364717",
+    "name": "私货商人",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202304/c_1310810162861_4da173fa.jpg",
+    "team": "fabled",
+    "edition": "custom",
+    "ability": "这个剧本包含有自制角色或自制规则。",
+    "firstNight": 0,
+    "otherNight": 0
+  }
+]

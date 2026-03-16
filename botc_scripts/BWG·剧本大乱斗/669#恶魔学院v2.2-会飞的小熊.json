@@ -1,0 +1,374 @@
+[
+  {
+    "id": "_meta",
+    "name": "恶魔学院V2.0",
+    "author": "小熊",
+    "logo": "https://free.picui.cn/free/2025/12/17/6941aaf50a972.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/emoxueyuan/almanac.html"
+  },
+  {
+    "id": "_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941adcc2f82b.png",
+    "firstNightReminder": "在你的首个夜晚，你会得知哪些邪恶角色在场。",
+    "name": "学者",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知哪些邪恶角色在场。",
+    "firstNight": 3500
+  },
+  {
+    "id": "1_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941ad7dae19f.png",
+    "firstNightReminder": "在你的首个夜晚，你会得知一名善良玩家。",
+    "otherNightReminder": "如果他在夜晚死亡，当晚你要选择一个善良角色：如果他不在场，你变成该角色。",
+    "reminders": [
+      "得知"
+    ],
+    "name": "七色鹿",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名善良玩家。 如果他在夜晚死亡，当晚你要选择一个善良角色：如果他不在场，你变成该角色。",
+    "firstNight": 3400,
+    "otherNight": 12
+  },
+  {
+    "id": "2_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/dreamer.png",
+    "firstNightReminder": "让筑梦师指向一名玩家。对他展示善良和邪恶的角色标记各一个，其中一个是属于该玩家的角色。",
+    "otherNightReminder": "让筑梦师指向一名玩家。对他展示善良和邪恶的角色标记各一个，其中一个是属于该玩家的角色。",
+    "name": "筑梦师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 3600,
+    "otherNight": 13
+  },
+  {
+    "id": "3_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/savant.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "4_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/zhifu.png",
+    "otherNightReminder": "如果在白天以及夜晚，只有镇民玩家死亡，对司民摇头表示“否”，否则点头表示“是”。",
+    "reminders": [
+      "客死他乡"
+    ],
+    "name": "知府",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知今天是否有非镇民且非旅行者玩家死亡。",
+    "otherNight": 14
+  },
+  {
+    "id": "5_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941ad7d105b1.png",
+    "firstNightReminder": "每局游戏限一次，在夜晚时，你可以选择除你以外的至多四名玩家：你会得知他们有几种角色类型。",
+    "otherNightReminder": "每局游戏限一次，在夜晚时，你可以选择除你以外的至多四名玩家：你会得知他们有几种角色类型。",
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": true,
+    "name": "龙庭侍卫",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的至多四名玩家：你会得知他们有几种角色类型。[+1外来者]",
+    "firstNight": 3700,
+    "otherNight": 15
+  },
+  {
+    "id": "6_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/artist.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "艺术家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以私下询问说书人一个是非问题，你会得知该问题的答案。"
+  },
+  {
+    "id": "7_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/monk.png",
+    "otherNightReminder": "让僧侣选择除自己外的一名玩家。标记那名玩家被保护。",
+    "reminders": [
+      "保护"
+    ],
+    "name": "僧侣",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的一名玩家：当晚恶魔的负面能力对他无效。",
+    "otherNight": 3
+  },
+  {
+    "id": "8_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941ad7d6a190.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "罗姆人",
+    "team": "townsfolk",
+    "ability": "首个被你提名或提名你的爪牙玩家会变成罗姆人。"
+  },
+  {
+    "id": "9_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941ad7e0db1f.png",
+    "otherNightReminder": "当你首次被恶魔杀死时，你仍存活但会被当作死亡，且会获得一个不在场的镇民能力。 ",
+    "remindersGlobal": [
+      "是巴隆"
+    ],
+    "name": "巴隆-撒麦迪",
+    "team": "townsfolk",
+    "ability": "当你首次被恶魔杀死时，你仍存活但会被当作死亡，且会获得一个不在场的镇民能力。如果只有三名玩家存活，你死亡。",
+    "otherNight": 9
+  },
+  {
+    "id": "10_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941ad8035a05.png",
+    "remindersGlobal": [
+      "使阴阳先生",
+      "邪恶被处决"
+    ],
+    "setup": true,
+    "name": "阴阳先生",
+    "team": "townsfolk",
+    "ability": "你以为你是一个外来者，但其实你不是。 当邪恶玩家被处决时，你变成一个不在场的镇民角色。"
+  },
+  {
+    "id": "11_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/gambler.png",
+    "otherNightReminder": "唤醒赌徒，让他进行猜测。如果猜测错误，他死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "赌徒",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测该玩家的角色：如果你猜错了，你会死亡。",
+    "otherNight": 2
+  },
+  {
+    "id": "12_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/chambermaid.png",
+    "firstNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "otherNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 3800,
+    "otherNight": 16
+  },
+  {
+    "id": "13_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/acrobat.png",
+    "otherNightReminder": "如果杂技演员左右两侧最近的存活善良玩家之一中毒或醉酒，杂技演员死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "杂技演员",
+    "team": "outsider",
+    "ability": "每个夜晚*，如果与你邻近的存活善良玩家之一醉酒或中毒，你死亡。",
+    "otherNight": 11
+  },
+  {
+    "id": "14_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/moonchild.png",
+    "otherNightReminder": "如果月之子在白天触发了死亡能力并选择了一名善良玩家，该玩家死亡。标记那名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "月之子",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。",
+    "otherNight": 10
+  },
+  {
+    "id": "15_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/snitch.png",
+    "firstNightReminder": "如果告密者在场，对爪牙展示三个不在场的善良角色标记。 ",
+    "name": "告密者",
+    "team": "outsider",
+    "ability": "爪牙会在其首个夜晚得知三个伪装。",
+    "firstNight": 2100
+  },
+  {
+    "id": "16_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941ae6ad4967.png",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "逍遥谷",
+    "team": "outsider",
+    "ability": "距离你最远或者最近的一名善良玩家醉酒，如果你提名并处决了这名玩家，改为一名邪恶玩家醉酒，即使你已死亡。"
+  },
+  {
+    "id": "17_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941ad7fb99d1.png",
+    "firstNightReminder": "在你的首个夜晚，得知三个在场的善良角色，选择其一：你可能会被善良玩家当做善良的该角色，他中毒且会被善良玩家当做邪恶的雾影，你得知他是谁。",
+    "remindersGlobal": [
+      "是雾影",
+      "雾影"
+    ],
+    "name": "雾影",
+    "team": "minion",
+    "ability": "在你的首个夜晚，得知三个在场的善良角色，选择其一：你可能会被善良玩家当做善良的该角色，他中毒且会被善良玩家当做邪恶的雾影，你得知他是谁。",
+    "firstNight": 3200
+  },
+  {
+    "id": "18_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941ad8040190.png",
+    "reminders": [
+      "得知"
+    ],
+    "setup": true,
+    "name": "学院长",
+    "team": "minion",
+    "ability": "在你的首个白天，拜访并告知说书人一项新的可以获得进修点的任务，一名善良玩家可能会得知一些相关的线索。"
+  },
+  {
+    "id": "19_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941ad7d9c986.png",
+    "firstNightReminder": "每个夜晚，你会得知当天即将宣布的格言。每局游戏限一次，在夜晚时，你决定下个黎明播报什么学院的格言或者不播报。",
+    "otherNightReminder": "每个夜晚，你会得知当天即将宣布的格言。每局游戏限一次，在夜晚时，你决定下个黎明播报什么学院的格言或者不播报。",
+    "reminders": [
+      "鬼谋",
+      "暴虐",
+      "千变",
+      "黑冕",
+      "不报"
+    ],
+    "name": "肃清使",
+    "team": "minion",
+    "ability": "每个夜晚，你会得知当天即将宣布的格言。每局游戏限一次，在夜晚时，你决定下个黎明播报什么学院的格言或者不播报。",
+    "firstNight": 3300,
+    "otherNight": 6
+  },
+  {
+    "id": "20_emoxueyuan",
+    "image": "https://free.picui.cn/free/2025/12/17/6941c9119860f.png",
+    "otherNightReminder": "每局游戏限一次，在夜晚时*，你可以选择一名玩家:他死亡。 如果你以此方式杀死了恶魔，你与他交换角色。",
+    "reminders": [
+      "死亡",
+      "限一次"
+    ],
+    "name": "死神",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家:他死亡。 如果你以此方式杀死了恶魔，你与他交换角色。",
+    "otherNight": 8
+  },
+  {
+    "id": "21_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/assassin.png",
+    "otherNightReminder": "如果刺客未曾使用能力，唤醒刺客，他可以摇头不使用能力，或选择攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "name": "刺客",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。",
+    "otherNight": 7
+  },
+  {
+    "id": "22_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/imp.png",
+    "otherNightReminder": "让小恶魔选择一名玩家。标记那名玩家死亡。如果小恶魔选择了自己：用一个备用的小恶魔标记替换一个存活的爪牙角色标记。让原来的小恶魔重新入睡。唤醒新的小恶魔。对他展示“你是”信息标记，和小恶魔角色标记。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 5
+  },
+  {
+    "id": "23_emoxueyuan",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/vigormortis.png",
+    "otherNightReminder": "让亡骨魔选择一名玩家。标记那名玩家死亡。如果该玩家是爪牙，标记该玩家保留能力，并标记与该玩家邻近的镇民玩家之一中毒。",
+    "reminders": [
+      "死亡",
+      "保留能力",
+      "中毒"
+    ],
+    "setup": 1,
+    "name": "亡骨魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+    "otherNight": 4
+  },
+  {
+    "id": "24_emoxueyuan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/emoxueyuan/24_emoxueyuan.png",
+    "name": "恶魔学院",
+    "team": "fabled",
+    "ability": "说书人需要在游戏开始前，决定使用“刺客”还是“死神”并告知玩家（不会同时在场）。每个夜晚，恶魔可以消耗一个进修点来将一个未选择过的学院中的一个能力变为自己能力的一部分(可以叠加和传递)。下个黎明时，所有玩家会得知恶魔选择的学院的格言。"
+  },
+  {
+    "id": "25_emoxueyuan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/emoxueyuan/25_emoxueyuan.png",
+    "reminders": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "name": "小恶魔自习室",
+    "team": "fabled",
+    "ability": "小恶魔在场时，完成以下任务会获得进修点，每个任务每局游戏限完成一次。①成为恶魔。②一名曾经的爪牙成为恶魔。③一名外来者被处决。④大于等于一半玩家死亡。"
+  },
+  {
+    "id": "26_emoxueyuan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/emoxueyuan/26_emoxueyuan.png",
+    "reminders": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "name": "亡骨魔补习班",
+    "team": "fabled",
+    "ability": "亡骨魔在场时，完成以下任务会获得进修点，每个任务每局游戏限完成一次。①成为恶魔。②一名爪牙死亡并保留能力。③疯狂自己是一名外来者。④大于等于一半玩家死亡。"
+  },
+  {
+    "id": "27_emoxueyuan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/emoxueyuan/27_emoxueyuan.png",
+    "reminders": [
+      "错误信息",
+      "中毒",
+      "诺达鲺",
+      "涡流"
+    ],
+    "name": "诡谋参议院",
+    "team": "fabled",
+    "ability": "毒药两滴，可葬王朝；黑白颠倒，亦覆乾坤。①诺达鲺:与你邻近的两名镇民中毒。②涡流:镇民玩家的能力会产生错误的信息。"
+  },
+  {
+    "id": "28_emoxueyuan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/emoxueyuan/28_emoxueyuan.png",
+    "reminders": [
+      "被提名",
+      "浪劫",
+      "烛阴"
+    ],
+    "name": "暴虐斗技场",
+    "team": "fabled",
+    "ability": "力量即真理，鲜血铸王座。①浪劫：每个夜晚*，选择一名玩家：如果他上个白天被邪恶玩家提名过，他死亡。 ②烛阴:如果恶魔杀死了一名爪牙或外来者，那么可以再选择一个镇民角色，如果他在场：他死亡。"
+  },
+  {
+    "id": "29_emoxueyuan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/emoxueyuan/29_emoxueyuan.png",
+    "reminders": [
+      "死于处决",
+      "姑获鸟",
+      "麻脸巫婆"
+    ],
+    "name": "千变穹顶阁",
+    "team": "fabled",
+    "ability": "形无常驻，念即疆域。①姑获鸟:恶魔拥有上个死于处决的爪牙的能力。②麻脸巫婆:每局游戏限一次，在夜晚*时，选择一名玩家和一个非恶魔角色:如果该角色不在场，他变为那个角色。"
+  },
+  {
+    "id": "30_emoxueyuan",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/emoxueyuan/30_emoxueyuan.png",
+    "reminders": [
+      "即将结束"
+    ],
+    "name": "黑冕拜谒堂",
+    "team": "fabled",
+    "ability": "乌金噬星芒， 骸骨塑冕章。仅完成四个任务后可以选择。毕业快乐:下黄昏结束时，邪恶阵营获胜。"
+  }
+]

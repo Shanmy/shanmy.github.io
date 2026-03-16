@@ -1,0 +1,425 @@
+[
+  {
+    "id": "_meta",
+    "name": "灯火管制",
+    "author": "星火乐",
+    "logo": "https://s2.loli.net/2025/05/10/2P9YajXHeGSgZrN.png"
+    },
+  {
+        "id": "_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/_blackout.png",
+        "firstNightReminder": "告知士兵四个角色，随后在在场角色上标记“得知”",
+        "otherNightReminder": "如果标记的“得知”的玩家死亡，唤醒并让士兵选择一名玩家，标记“不受影响”。如果士兵加入邪恶，将“不受影响”替换为死亡。",
+        "reminders": [
+            "得知",
+            "不受影响",
+            "死亡"
+        ],
+        "name": "士兵",
+        "team": "townsfolk",
+        "ability": "在你的首个夜晚，你得知九个角色。如果你得知的角色死亡，你会在当晚被唤醒，并选择除你以外的一名玩家：邪恶玩家的负面能力对他无效。如果你加入邪恶，改为他们中的非恶魔玩家死亡。",
+        "firstNight": 18,
+        "otherNight": 5
+    },
+    {
+        "id": "1_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/1_blackout.png",
+        "firstNightReminder": "唤醒调酒师，让他选择3名玩家。",
+        "otherNightReminder": "唤醒调酒师，询问他是否在首夜选择的三名玩家中选择一个玩家与效果，如果他选择了，为该玩家标记对应token。",
+        "reminders": [
+            "醉酒",
+            "念珠",
+            "定酒",
+            "不死"
+        ],
+        "name": "调酒师",
+        "team": "townsfolk",
+        "ability": "在你的首个夜晚，你得知除你以外至多三名玩家，他们得知你是调酒师。每个夜晚*，你要选择让他们获得由说书人决定的正面/负面效果直到下个黄昏，他们会得知自己获得了什么效果。[如果没有调酒师在场，一名爪牙拥有调酒师的能力]",
+        "firstNight": 12,
+        "otherNight": 8
+    },
+    {
+        "id": "2_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/2_blackout.png",
+        "firstNightReminder": "唤醒侦察兵，告知一个在场爪牙。",
+        "otherNightReminder": "唤醒侦察兵，告知他有几名邪恶玩家存活。",
+        "reminders": [
+            "得知爪牙"
+        ],
+        "name": "侦察兵",
+        "team": "townsfolk",
+        "ability": "在你的首个夜晚，你得知一个在场的爪牙。每个夜晚*，你得知有几名邪恶玩家存活。",
+        "firstNight": 19,
+        "otherNight": 22
+    },
+    {
+        "id": "3_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/3_blackout.png",
+        "otherNightReminder": "如果侦探公开选择的玩家没有死亡，告知他标记“调查”玩家身边的存活玩家阵营是否相同；否则，告诉他标记“调查”玩家的身份。",
+        "reminders": [
+            "调查"
+        ],
+        "name": "侦探",
+        "team": "townsfolk",
+        "ability": "在白天时，你可以公开选择一名玩家：如果他死于夜晚，你得知他的角色；否则，你得知与他邻座的玩家阵营是否相同。",
+        "otherNight": 23
+    },
+    {
+        "id": "4_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/4_blackout.png",
+        "firstNightReminder": "唤醒标记者，让他选择一名玩家。如果选择了邪恶，给标记者标记“中毒”。",
+        "otherNightReminder": "唤醒标记者，告知他上次标记的玩家行动顺位，随后让他选择一名玩家。如果选择了邪恶，给标记者标记“中毒”。",
+        "reminders": [
+            "标记",
+            "中毒"
+        ],
+        "name": "标记者",
+        "team": "townsfolk",
+        "ability": "每个夜晚，你得知与你上次选择最有关联性的玩家，随后你要选择一名玩家。",
+        "firstNight": 20,
+        "otherNight": 24
+    },
+    {
+        "id": "5_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/5_blackout.png",
+        "otherNightReminder": "唤醒友军，如果他的目标依然存活，告诉他一名玩家。",
+        "reminders": [
+            "友军"
+        ],
+        "name": "友军",
+        "team": "townsfolk",
+        "ability": "在你的首个夜晚，你得知一名与你同阵营的玩家，如果他存活，且你在夜晚死亡，你不会死亡并会再次得知一名玩家。",
+        "firstNight": 19.5,
+        "otherNight": 20
+    },
+    {
+        "id": "6_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/6_blackout.png",
+        "otherNightReminder": "唤醒黑客，让他选择一名善良角色，告知信息。如果选择的不在场，告诉他一个错误的信息并给黑客标记“故障”。",
+        "reminders": [
+            "故障"
+        ],
+        "name": "黑客",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你要选择一个善良角色，你得知他是谁。如果你选择的角色不在场，你得知错误信息并死亡。",
+        "otherNight": 9
+    },
+    {
+        "id": "7_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/7_blackout.png",
+        "otherNightReminder": "唤醒离反者，让他选择一名玩家，如果阵营不同，标记“死亡”。如果选择了恶魔，无事发生。",
+        "reminders": [
+            "死亡"
+        ],
+        "name": "离反者",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你要选择一名玩家，如果他与你阵营不同并且不是恶魔，他死亡。",
+        "otherNight": 17
+    },
+    {
+        "id": "8_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/8_blackout.png",
+        "otherNightReminder": "唤醒医生并让他选择一名玩家，为该玩家标记💊。当他死亡或加入邪恶，改为不生效并在一切死亡与加入邪恶结算过后取下💊token，如果你决定让该玩家死亡，不要取下💊token，并在白天宣布该玩家死亡。",
+        "reminders": [
+            "💊"
+        ],
+        "name": "医生",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你要选择一名玩家，他今晚不会死亡；不会加入邪恶阵营。但如果这两个事情都没有发生，他直到黎明前随时可能死亡。",
+        "otherNight": 7
+    },
+    {
+        "id": "9_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/9_blackout.png",
+        "otherNightReminder": "唤醒科学家，如果他决定对死亡玩家使用技能，标记复活。随后唤醒科学家复活的人并告知阵营与不能讲话。",
+        "reminders": [
+            "复活"
+        ],
+        "name": "科学家",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，如果死亡的玩家大于或等于存活的玩家数量，你可以选择一名死亡玩家：如果他不是外来者，他复活。",
+        "otherNight": 19
+    },
+    {
+        "id": "10_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/10_blackout.png",
+        "otherNightReminder": "在偶数夜晚唤醒猎人（首夜为1），让他选择一名玩家，随后告知他所查验目标的角色和阵营。",
+        "reminders": [
+            "查验"
+        ],
+        "name": "猎人",
+        "team": "townsfolk",
+        "ability": "每个偶数夜晚，你要选择一名玩家，你得知他的角色与阵营，你免疫爪牙的负面能力。",
+        "otherNight": 21
+    },
+    {
+        "id": "11_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/11_blackout.png",
+        "otherNightReminder": "如果免疫者在白天死亡，立刻标记免疫日；如果免疫者在夜晚死亡，立刻标记免疫夜。（提示标记）",
+        "reminders": [
+            "免疫日",
+            "免疫夜"
+        ],
+        "name": "免疫者",
+        "team": "townsfolk",
+        "ability": "如果你在白天死亡，直到下个黎明不会有人加入邪恶阵营。你在夜里死亡时，所有邪恶玩家醉酒直到下个黄昏， 你拥有一枚念珠。",
+        "otherNight": 15
+    },
+    {
+        "id": "12_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/12_blackout.png",
+        "otherNightReminder": "如果教士在白天提名了一名善良玩家，为该玩家标记念珠；如果教士提名了一名邪恶玩家，唤醒恶魔并询问他是否再次选择一名玩家。",
+        "reminders": [
+            "念珠",
+            "两次袭击"
+        ],
+        "name": "教士",
+        "team": "townsfolk",
+        "ability": "你提名的镇民将立刻拥有念珠。如果你提名了一名邪恶玩家，恶魔当晚可以选择一名玩家：他死亡。 你拥有一枚念珠。",
+        "otherNight": 13.5
+    },
+    {
+        "id": "13_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/13_blackout.png",
+        "firstNightReminder": "唤醒雪人，告诉他一个除恶魔伪装外的不在场身份。",
+        "name": "雪人",
+        "team": "outsider",
+        "ability": "你拥有一个伪装。你可能被当作邪恶阵营，爪牙角色。如果你存活，游戏不会结束。当小于等于四名玩家存活时，你单独获胜。你的阵营不会改变。",
+        "firstNight": 11
+    },
+    {
+        "id": "14_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/14_blackout.png",
+        "otherNightReminder": "唤醒身份窃贼，询问他是否选择一名死亡玩家。如果他选择了，告诉身份窃贼他现在的角色与阵营。",
+        "remindersGlobal": [
+            "保留能力"
+        ],
+        "name": "身份窃贼",
+        "team": "outsider",
+        "ability": "每局游戏限一次，在夜晚时，你可以选择一名死亡玩家：你与他交换角色且你加入他的阵营。你不会被恶魔杀死且无法获胜。当你死于处决时，你保留能力。",
+        "otherNight": 4
+    },
+    {
+        "id": "15_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/15_blackout.png",
+        "firstNightReminder": "唤醒一名镇民，告知他谁是无辜者。",
+        "otherNightReminder": "将得知无辜者的镇民身边标记“是无辜者”。",
+        "remindersGlobal": [
+            "得知",
+            "是无辜者"
+        ],
+        "setup": true,
+        "name": "无辜者",
+        "team": "outsider",
+        "ability": "你以为你是一个镇民，且拥有那个角色的能力。如果你被处决，你的阵营落败。首个夜晚，一名镇民得知你是无辜者。第二个夜晚，他变为无辜者。",
+        "firstNight": 17,
+        "otherNight": 3
+    },
+    {
+        "id": "16_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/16_blackout.png",
+        "otherNightReminder": "如果站队者被处决，在此时决定谁被站队者杀死。",
+        "reminders": [
+            "善",
+            "恶"
+        ],
+        "name": "站队者",
+        "team": "outsider",
+        "ability": "当你被其他玩家以自身能力选择时，你加入他的阵营，即使你失去能力。当你被处决时，一名与你相同阵营的玩家可能在夜晚死亡。",
+        "otherNight": 14
+    },
+    {
+        "id": "17_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/17_blackout.png",
+        "firstNightReminder": "唤醒告密者，让他选择一名玩家，标记提示。",
+        "otherNightReminder": "如果告密者在白天死亡，唤醒一名因告密者能力加入邪恶的玩家告诉他成为了新的告密者。唤醒告密者，让他选择一名玩家，标记提示。如果被标记的玩家提名或被提名，在他身边以此标记一/二/三。当标记了三时，在告密者行动后告知他加入了邪恶，并清除标记“三”。",
+        "reminders": [
+            "标记",
+            "一次",
+            "两次",
+            "三次"
+        ],
+        "setup": true,
+        "name": "告密者",
+        "team": "minion",
+        "ability": "每个夜晚，你要选择一名玩家。当他参与三次提名时，当晚他加入邪恶阵营。[+1外来者]",
+        "firstNight": 15,
+        "otherNight": 16
+    },
+    {
+        "id": "18_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/18_blackout.png",
+        "otherNightReminder": "唤醒恶种，询问他是否选择一名死亡玩家。如果他选择了，唤醒并告知该玩家加入了邪恶。如果恶种死亡，此时杀死所有因恶种加入邪恶的玩家。",
+        "reminders": [
+            "复活"
+        ],
+        "setup": true,
+        "name": "恶种",
+        "team": "minion",
+        "ability": "每个夜晚*，你可以选择一名死亡玩家：他复活随后加入邪恶阵营。在你死亡时，所有因你加入邪恶的玩家死亡。[-1外来者]",
+        "otherNight": 18
+    },
+    {
+        "id": "19_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/19_blackout.png",
+        "otherNightReminder": "唤醒提名恶魔的玩家，告诉他加入了邪恶。",
+        "reminders": [
+            "提名",
+            "保留能力"
+        ],
+        "name": "死灵法师",
+        "team": "minion",
+        "ability": "如果恶魔死于处决，他保留能力且游戏不会结束。提名恶魔的玩家会在当晚加入邪恶。",
+        "otherNight": 6
+    },
+    {
+        "id": "20_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/20_blackout.png",
+        "firstNightReminder": "唤醒巫师，让他选择一名玩家，为该玩家标记诅咒。如果他在夜晚被善良玩家选择或影响，告诉该玩家加入了邪恶并唤醒巫师，让他再次选择一名玩家。",
+        "otherNightReminder": "如果巫师选择的玩家在夜晚被善良玩家选择或影响，立刻唤醒巫师让他再选择一名玩家。",
+        "reminders": [
+            "诅咒"
+        ],
+        "name": "巫师",
+        "team": "minion",
+        "ability": "在你的首个夜晚，你要选择一名玩家：如果被你选择的玩家是善良的：他中毒。在他死亡或在夜晚被除他以外的善良玩家选择时，他解毒，随后加入邪恶；随后你需要再次选择一名玩家。",
+        "firstNight": 16,
+        "otherNight": 25
+    },
+    {
+        "id": "21_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/21_blackout.png",
+        "firstNightReminder": "唤醒背叛者，告诉他所有在场身份。他可以在夜晚任何时候拜访，如果他猜测得足够正确，发生一些对邪恶方有利的事。（提示：互认是在背叛者行动顺位之前举行，因为无法更改所以只能在最下面。）",
+        "otherNightReminder": "唤醒背叛者，让他选择一名玩家，随后为该玩家标记死亡。他可以在夜晚任何时候拜访你，如果他还原的足够正确，发生一些对邪恶方有利的事情。",
+        "reminders": [
+            "死亡"
+        ],
+        "name": "背叛者",
+        "team": "demon",
+        "ability": "每个夜晚*，你要选择一名玩家，他死亡。说书人会给予你一份在场角色名单。每局游戏限一次，你可以向说书人出示你标记的魔典。如果你标对了，会发生一些好的事情。",
+        "firstNight": 13,
+        "otherNight": 10
+    },
+    {
+        "id": "22_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/22_blackout.png",
+        "otherNightReminder": "唤醒破坏者，让他选择两名玩家，标记他们死亡。",
+        "reminders": [
+            "死亡"
+        ],
+        "setup": true,
+        "name": "破坏者",
+        "team": "demon",
+        "ability": "每个夜晚*，你要选择两名玩家，他们死亡。邪恶方不会进行互认。[初始无外来者在场，+或-任意数量爪牙]",
+        "otherNight": 11
+    },
+    {
+        "id": "23_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/23_blackout.png",
+        "firstNightReminder": "唤醒绝命毒师，让他选择两名玩家，标记中毒。",
+        "otherNightReminder": "唤醒绝命毒师，让他选择两名玩家，标记中毒。所有因他中毒的玩家一名标记死亡，一名解毒。",
+        "reminders": [
+            "中毒",
+            "死亡"
+        ],
+        "name": "绝命毒师",
+        "team": "demon",
+        "ability": "每个夜晚，你要选择两名玩家，他们中毒。如果你选择了自己，所有中毒或醉酒的玩家死亡。你不会中毒或醉酒。",
+        "firstNight": 14,
+        "otherNight": 12
+    },
+    {
+        "id": "em_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/em_blackout.png",
+        "otherNightReminder": "唤醒科学怪人，让他选择一名玩家，标记死亡。随后询问他是否选择一个全球活动，如果他选择了，该传奇角色立刻生效。",
+        "reminders": [
+            "死亡"
+        ],
+        "name": "EM星人",
+        "team": "demon",
+        "ability": "EM星人：每个夜晚，你要选择一个未选择过的全球活动，所有玩家立刻得知该全球活动被发动。如果所有的全球活动均被发动过，邪恶阵营在下个黄昏结束时获胜。",
+        "firstNight": 14.5,
+        "otherNight": 13
+    },
+    {
+        "id": "24_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/24_blackout.png",
+        "name": "雪地冤魂",
+        "team": "fabled",
+        "ability": "死亡玩家可以使用遗言票提名。如果一项提名中仅有非善良玩家投票，此次投票会失效。半数玩家为邪恶阵营时（向下取整），不会有玩家因爪牙加入邪恶。疯狂的想要改变阵营的玩家，可能不会改变阵营。"
+    },
+    {
+        "id": "25_blackout",
+        "image": "https://www.bloodstar.xyz/p/bluebell/blackout/25_blackout.png",
+        "reminders": [
+            "念珠"
+        ],
+        "remindersGlobal": [
+            "念珠"
+        ],
+        "name": "念珠",
+        "team": "fabled",
+        "ability": "每人只能拥有一枚，死亡后失去。如果该玩家加入邪恶，改为此次阵营转变不生效并失去念珠，如果有念珠被消耗了，所有玩家会在黎明时得知此事。玩家不会得知自己是否拥有念珠。"
+    },
+  {
+    "id": "E11",
+    "image": "https://www.bloodstar.xyz/p/XHLLL/123123123/_123123123.png",
+    "edition": "custom",
+    "name": "太阳耀斑",
+    "ability": "每个夜晚*，所有存活爪牙会被一同唤醒并分别选择一名玩家，他们死亡。",
+    "team": "fabled",
+    "firstNight": 0,
+    "otherNight": 13.5,
+    "reminders": [
+      "死亡"
+    ]
+  },
+  {
+    "id": "E12",
+    "image": "https://www.bloodstar.xyz/p/XHLLL/123123123/newcharacter_123123123.png",
+    "edition": "custom",
+    "name": "歇斯底里气体",
+    "ability": "获取信息的玩家改为收到一段与信息相关的谜语。",
+    "team": "fabled",
+    "firstNight": 0,
+    "otherNight": 0
+    
+  },
+  {
+    "id": "E13",
+    "image": "https://www.bloodstar.xyz/p/XHLLL/123123123/newcharacter1_123123123.png",
+    "edition": "custom",
+    "name": "魔法时刻",
+    "ability": "所有死亡玩家复活，其中的善良玩家中毒。[仅能在死亡三名以上玩家时发动]",
+    "team": "fabled",
+    "firstNight": 0,
+    "otherNight": 13.4,
+    "reminders": [
+      "复活",
+      "中毒"
+    ]
+  },
+  {
+    "id": "E14",
+    "image": "https://www.bloodstar.xyz/p/XHLLL/123123123/newcharacter2_123123123.png",
+    "edition": "custom",
+    "name": "月食事件",
+    "ability": "所有玩家需要闭眼投票，并进行秘密统计。",
+    "team": "fabled",
+    "firstNight": 0,
+    "otherNight": 0
+  },
+  {
+    "id": "E15",
+    "image": "https://www.bloodstar.xyz/p/XHLLL/123123123/newcharacter3_123123123.png",
+    "edition": "custom",
+    "name": "暴风雪",
+    "ability": "暴风雪：每天只能进行五分钟的公聊（除第一个白天），说书人可以驳回无意义的提名。（说书人可以适当拉长公聊时间，但是不应该太长）",
+    "team": "fabled",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "不被唤醒"
+    ]
+  }
+]

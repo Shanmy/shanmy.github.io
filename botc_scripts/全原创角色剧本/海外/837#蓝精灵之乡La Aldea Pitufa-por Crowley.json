@@ -1,0 +1,143 @@
+[
+  {
+    "id": "_meta",
+    "name": "La Aldea Pitufa",
+    "author": "Crowley",
+    "logo": "https://free.picui.cn/free/2025/12/15/693ee1b8845b9.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/la/almanac.html"
+  },
+  {
+    "id": "_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_pitufina",
+    "firstNightReminder": "唤醒蓝妹妹，向她展示了一个空座位的角色。",
+    "otherNightReminder": "唤醒蓝妹妹，向她展示了一个空座位的角色。",
+    "name": "蓝妹妹",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你得知一个空座位的角色。",
+    "firstNight": 11,
+    "otherNight": 6
+  },
+  {
+    "id": "1_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_pitufodetective",
+    "firstNightReminder": "每个夜晚，你要选择一名玩家。如果你上个夜晚选中了恶魔，当晚你不会被唤醒进行选择。",
+    "otherNightReminder": "每个夜晚，你要选择一名玩家。如果你上个夜晚选中了恶魔，当晚你不会被唤醒进行选择。",
+    "reminders": [
+      "选中"
+    ],
+    "name": "侦探聪聪",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家。如果你上个夜晚选中了恶魔，当晚你不会被唤醒进行选择。",
+    "firstNight": 12,
+    "otherNight": 7
+  },
+  {
+    "id": "2_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_azrael",
+    "otherNightReminder": "交换左手玩家的角色（或不交换）",
+    "reminders": [
+      "交换"
+    ],
+    "name": "阿兹猫",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你顺时针方向最近的玩家（左手边的玩家）可能会与另一位玩家交换角色。如果因此交换角色的玩家中有格格巫，你转变为邪恶阵营，但你不会得知此事。",
+    "otherNight": 5
+  },
+  {
+    "id": "3_la",
+    "reminders": [
+      "首次已转移"
+    ],
+    "name": "蓝爸爸",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_papapitufo",
+    "team": "townsfolk",
+    "ability": "当你首次将要变成格格巫时，会有一名其他玩家代替你变成格格巫并转变阵营。"
+  },
+  {
+    "id": "4_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_pitufobromista",
+    "remindersGlobal": [
+      "是乐乐"
+    ],
+    "setup": true,
+    "name": "乐乐",
+    "team": "townsfolk",
+    "ability": "你以为你是格格巫，但其实你不是。如果你与格格巫交换了角色，你不会得知你变化后的阵营或角色。"
+  },
+  {
+    "id": "5_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_pitufooscuro",
+    "otherNightReminder": "如果你在第二个夜晚死亡，之后不会再有玩家在夜晚死亡。",
+    "reminders": [
+      "代替死亡"
+    ],
+    "name": "笨笨",
+    "team": "townsfolk",
+    "ability": "如果你在第二个夜晚死亡，之后不会再有玩家在夜晚死亡。如果格格巫即将被处决，改为你替他死亡。",
+    "otherNight": 2
+  },
+  {
+    "id": "6_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_pitufotontin",
+    "name": "黑暗蓝精灵",
+    "team": "townsfolk",
+    "ability": "当你首次将要死亡时，如果你与格格巫邻座，你不会死亡。"
+  },
+  {
+    "id": "7_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_gargamel",
+    "otherNightReminder": "你要选择一名玩家：他死亡。然后你与他临近的存活玩家之一交换角色和阵营。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "格格巫",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。然后你与他临近的存活玩家之一交换角色和阵营。",
+    "otherNight": 3
+  },
+  {
+    "id": "8_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_vampitufo",
+    "otherNightReminder": "你要选择一名玩家：他变成邪恶的吸血鬼精灵，然后你死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "吸血鬼精灵",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他变成邪恶的吸血鬼精灵，然后你死亡。如果在一项提名中只有吸血鬼精灵投票，此次投票会被计为0票。",
+    "otherNight": 4
+  },
+  {
+    "id": "9_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_apitufar",
+    "name": "蓝精灵板凳",
+    "team": "fabled",
+    "ability": "每名玩家都会带来一个[空座位]。"
+  },
+  {
+    "id": "10_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_amistadpitufa",
+    "firstNightReminder": "说书人会为每个空座位随机选择一名玩家：每个白天，如果被提名者不是该玩家，他就会投票。如果只有3名玩家存活，这条规则失效。",
+    "otherNightReminder": "说书人会为每个空座位随机选择一名玩家：每个白天，如果被提名者不是该玩家，他就会投票。如果只有3名玩家存活，这条规则失效。",
+    "reminders": [
+      "1号玩家",
+      "2号玩家",
+      "3号玩家",
+      "4号玩家",
+      "5号玩家",
+      "6号玩家"
+    ],
+    "name": "蓝精灵友谊",
+    "team": "fabled",
+    "ability": "每个夜晚，说书人会为每个空座位随机选择一名玩家：每个白天，如果被提名者不是该玩家，他就会投票。如果只有3名玩家存活，这条规则失效。",
+    "firstNight": 13,
+    "otherNight": 8
+  },
+  {
+    "id": "11_la",
+    "image":"http://villacuervos.es/personajes/icono/laaldeapitufa_viajepitufo",
+    "name": "蓝精灵之旅",
+    "team": "fabled",
+    "ability": "角色的变化不会刷新角色的能力状态。角色变化改为在黎明时通知，而不是像之前那样（立即通知发生变化的玩家）。"
+  }
+]

@@ -1,0 +1,314 @@
+[
+  {
+    "id": "_meta",
+    "name": "#反转银河-山口二大伯",
+    "author": "山口二大伯",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/almanac.html"
+  },
+  {
+    "id": "_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/_fanzhuanyinhe.png",
+    "reminders": [
+      "疯狂"
+    ],
+    "remindersGlobal": [
+      "是变脸师"
+    ],
+    "name": "变脸师",
+    "team": "townsfolk",
+    "ability": "每个白天，如果你“疯狂”地证明自己是一个善良角色（与之前不同），你可能会在当晚获得那个角色的能力，直到下个黄昏。"
+  },
+  {
+    "id": "1_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/1_fanzhuanyinhe.png",
+    "firstNightReminder": "唤醒钦天监，对其用拇指指向其左侧或右侧示意。如果两侧邪恶玩家与他距离相同，拇指朝下示意。",
+    "name": "钦天监",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知离你最近的邪恶玩家位于你的哪一侧（左/右/相同）。如果与你邻近的玩家中有邪恶阵营，你会得知错误信息。",
+    "firstNight": 4500
+  },
+  {
+    "id": "2_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/2_fanzhuanyinhe.png",
+    "remindersGlobal": [
+      "是悟道者"
+    ],
+    "setup": 1,
+    "name": "悟道者",
+    "team": "townsfolk",
+    "ability": "你以为你是一个外来者，但你实际上不是。如果有邪恶玩家的能力选择或影响了你，你会立即变成一个不在场的镇民角色。"
+  },
+  {
+    "id": "3_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/3_fanzhuanyinhe.png",
+    "firstNightReminder": "唤醒熊孩子，让其选择一个镇民角色。如果该角色在场，在对应角色标记旁放置“捣蛋”提示标记。",
+    "otherNightReminder": "移除上个夜晚放置的“捣蛋”提示标记。唤醒熊孩子，让其选择一个镇民角色。如果该角色在场，在对应角色标记旁放置“捣蛋”提示标记。",
+    "reminders": [
+      "捣蛋"
+    ],
+    "name": "熊孩子",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一个镇民角色：他的能力会产生错误信息，直到下个黄昏。",
+    "firstNight": 3600,
+    "otherNight": 4
+  },
+  {
+    "id": "4_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/4_fanzhuanyinhe.png",
+    "firstNightReminder": "唤醒阴阳师，并对其展示两个善良角色，两个邪恶角色，共四个角色标记。其中正好只有两个角色在场。",
+    "name": "阴阳师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两个善良角色和两个邪恶角色。其中有且只有两个角色在场。",
+    "firstNight": 4300
+  },
+  {
+    "id": "5_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/5_fanzhuanyinhe.png",
+    "firstNightReminder": "唤醒逆臣，让其选择一名玩家。在该玩家的角色标记旁放置“不共戴天”提示标记。",
+    "otherNightReminder": "如果逆臣或标记了“不共戴天”的玩家死于处决，唤醒两者之中的另一名玩家，告诉他变为邪恶阵营。",
+    "reminders": [
+      "不共戴天"
+    ],
+    "name": "逆臣",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，你要选择除你以外的一名玩家：如果他先死于处决，你会在当晚转变为邪恶；如果你先死于处决，他会在当晚转变为邪恶。",
+    "firstNight": 3900,
+    "otherNight": 6
+  },
+  {
+    "id": "6_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/6_fanzhuanyinhe.png",
+    "otherNightReminder": "如果秉笔人在夜晚死去，唤醒他并指向一名邪恶玩家；如果秉笔在白天死去，唤醒他并指向一名善良玩家。随后让他重新入睡。",
+    "name": "秉笔",
+    "team": "townsfolk",
+    "ability": "如果你在白天死亡，当晚你会得知一名善良玩家。如果你在夜晚死亡，当晚你会得知一名邪恶玩家。",
+    "otherNight": 11
+  },
+  {
+    "id": "7_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/7_fanzhuanyinhe.png",
+    "firstNightReminder": "唤醒引路人，让其选择至多三名玩家。以点头或摇头作为信息给出。",
+    "otherNightReminder": "唤醒引路人，让其选择至多三名玩家。以点头或摇头作为信息给出。",
+    "name": "引路人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择至多三名玩家：你会得知今晚是否有邪恶玩家的能力选择或影响了他们之中的玩家。",
+    "firstNight": 5000,
+    "otherNight": 16
+  },
+  {
+    "id": "8_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/8_fanzhuanyinhe.png",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "酒保",
+    "team": "outsider",
+    "ability": "与你邻近的善良玩家之一醉酒，即使你已死亡。"
+  },
+  {
+    "id": "9_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/9_fanzhuanyinhe.png",
+    "firstNightReminder": "唤醒蛊雕，让其选择一个方向。将他的“中毒”标记移动至那个方向上的下一个存活玩家的角色标记旁。随后对他指向那名玩家，并展示“他是”提示标记和该玩家的角色标记。",
+    "otherNightReminder": "唤醒蛊雕，让其选择一个方向。将他的“中毒”标记移动至那个方向上的下一个存活玩家的角色标记旁。随后对他指向那名玩家，并展示“他是”提示标记和该玩家的角色标记。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "蛊雕",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择左或右：你得知该方向上的下一名存活善良玩家的角色，他中毒且其他善良玩家以为他是邪恶的蛊雕，直到下个黄昏。",
+    "firstNight": 3300,
+    "otherNight": 2
+  },
+  {
+    "id": "10_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/10_fanzhuanyinhe.png",
+    "firstNightReminder": "唤醒酿酒师，让其选择一个角色并给出该角色对应的信息形式。如果该角色在场，在对应的角色标记旁放置“微醺”提示标记。如有必要，记录下该信息形式作为备忘，但不要将这一信息展示给任何能查看魔典的玩家。",
+    "otherNightReminder": "唤醒酿酒师，让其选择一个角色并给出该角色对应的信息形式。如果该角色在场，在对应的角色标记旁放置“微醺”提示标记。如有必要，记录下该信息形式作为备忘，但不要将这一信息展示给任何能查看魔典的玩家。",
+    "reminders": [
+      "微醺"
+    ],
+    "setup": 1,
+    "name": "酿酒师",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一个镇民角色：当他下一次通过自身能力获取信息时，改为得知你给出的信息。",
+    "firstNight": 3400,
+    "otherNight": 3
+  },
+  {
+    "id": "11_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/11_fanzhuanyinhe.png",
+    "name": "小鸟伏特加",
+    "team": "fabled",
+    "ability": "酿酒师/蛊雕不会同时在场"
+  },
+  {
+    "id": "12_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/12_fanzhuanyinhe.png",
+    "firstNightReminder": "给他展示数字手势来告诉他场上邻座邪恶玩家有多少对。",
+    "name": "厨师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "firstNight": 3700
+  },
+  {
+    "id": "13_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/13_fanzhuanyinhe.png",
+    "firstNightReminder": "给他展示数字手势来告诉他与他邻近的存活玩家有几人是邪恶的。",
+    "otherNightReminder": "给他展示数字手势来告诉他与他邻近的存活玩家有几人是邪恶的。",
+    "name": "共情者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知与你邻近的两名存活的玩家中邪恶玩家的数量。",
+    "firstNight": 3800,
+    "otherNight": 12
+  },
+  {
+    "id": "14_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/14_fanzhuanyinhe.png",
+    "firstNightReminder": "让筑梦师指向一名玩家。对他展示善良和邪恶的角色标记各一个，其中一个是属于该玩家的角色。",
+    "otherNightReminder": "让筑梦师指向一名玩家。对他展示善良和邪恶的角色标记各一个，其中一个是属于该玩家的角色。",
+    "name": "筑梦师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 4000,
+    "otherNight": 13
+  },
+  {
+    "id": "15_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/15_fanzhuanyinhe.png",
+    "firstNightReminder": "女裁缝可以选择除自己以外的两名玩家。如果她这么做了，对她点头或摇头示意这两名玩家是否为同一阵营，随后标记女裁缝失去能力。之后的夜晚无需再唤醒女裁缝。",
+    "otherNightReminder": "女裁缝可以选择除自己以外的两名玩家。如果她这么做了，对她点头或摇头示意这两名玩家是否为同一阵营，随后标记女裁缝失去能力。之后的夜晚无需再唤醒女裁缝。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "女裁缝",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的两名玩家：你会得知他们是否为同一阵营。",
+    "firstNight": 4100,
+    "otherNight": 14
+  },
+  {
+    "id": "16_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/16_fanzhuanyinhe.png",
+    "firstNightReminder": "选择一种角色类型，并告知其一个符合该类型的玩家。在该玩家旁边标记已被知晓。",
+    "otherNightReminder": "选择一种与被放置得知的玩家不同的角色类型，并告知其一个符合该类型的玩家。在该玩家旁边标记已被知晓。",
+    "reminders": [
+      "得知"
+    ],
+    "setup": 1,
+    "name": "气球驾驶员",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名与上个夜晚得知的玩家角色类型不同的玩家。[+0~1外来者]",
+    "firstNight": 4200,
+    "otherNight": 15
+  },
+  {
+    "id": "17_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/17_fanzhuanyinhe.png",
+    "reminders": [
+      "中毒",
+      "死于今日"
+    ],
+    "name": "食人族",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "18_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/18_fanzhuanyinhe.png",
+    "name": "狂热者",
+    "team": "outsider",
+    "ability": "如果有大于等于五名玩家存活，你必须在所有提名中投票。"
+  },
+  {
+    "id": "19_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/19_fanzhuanyinhe.png",
+    "firstNightReminder": "在首个夜晚，唤醒食人魔。让食人魔指向一名玩家。让食人魔重新入睡。如果食人魔指向了一名邪恶玩家，将食人魔的角色标记倒转放置，代表食人魔现在属于邪恶阵营。",
+    "name": "食人魔",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，你要选择除你以外的一名玩家：你转变为他的阵营，即使你已醉酒或中毒，但你不知道你转变后的阵营。",
+    "firstNight": 4400
+  },
+  {
+    "id": "20_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/20_fanzhuanyinhe.png",
+    "otherNightReminder": "如果红唇女郎今天变成了小恶魔，对她展示“你是”信息标记，和小恶魔角色标记。",
+    "remindersGlobal": [
+      "是恶魔"
+    ],
+    "name": "红唇女郎",
+    "team": "minion",
+    "ability": "如果大于等于五名玩家存活时（旅行者不计算在内）恶魔死亡，你变成那个恶魔。",
+    "otherNight": 7
+  },
+  {
+    "id": "21_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/21_fanzhuanyinhe.png",
+    "firstNightReminder": "让洗脑师选择一名玩家和一个善良角色。标记那名玩家疯狂。让洗脑师重新入睡。唤醒洗脑师的目标。对这名玩家展示“该角色的能力对你生效”信息标记，洗脑师角色标记，该玩家需要疯狂证明的角色标记。",
+    "otherNightReminder": "让洗脑师选择一名玩家和一个善良角色。标记那名玩家疯狂。让洗脑师重新入睡。唤醒洗脑师的目标。对这名玩家展示“该角色的能力对你生效”信息标记，洗脑师角色标记，该玩家需要疯狂证明的角色标记。",
+    "reminders": [
+      "疯狂"
+    ],
+    "name": "洗脑师",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家和一个善良角色。他明天白天和夜晚需要“疯狂”地证明自己是这个角色，不然他可能被处决。",
+    "firstNight": 3500,
+    "otherNight": 5
+  },
+  {
+    "id": "22_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/22_fanzhuanyinhe.png",
+    "firstNightReminder": "选择一个邻近恶魔的善良玩家放置提线木偶标记。唤醒恶魔并告知他谁是提线木偶。",
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "setup": 1,
+    "name": "提线木偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]",
+    "firstNight": 3200
+  },
+  {
+    "id": "23_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/23_fanzhuanyinhe.png",
+    "otherNightReminder": "让小恶魔选择一名玩家。标记那名玩家死亡。如果小恶魔选择了自己：用一个备用的小恶魔标记替换一个存活的爪牙角色标记。让原来的小恶魔重新入睡。唤醒新的小恶魔。对他展示“你是”信息标记，和小恶魔角色标记。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 8
+  },
+  {
+    "id": "24_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/24_fanzhuanyinhe.png",
+    "otherNightReminder": "让方古选择一名玩家。标记那名玩家死亡。如果他选择了外来者，且“限一次”标记未放置在魔典中：用备用的方古角色标记替换那名外来者的角色标记。让方古重新入睡。唤醒方古的目标玩家。对该玩家展示“你是”信息标记和方古角色标记，并用拇指向下代表他阵营变为邪恶。将“首次”标记放置在魔典中。标记原本的方古玩家死亡，且他选择的玩家不会被标记为死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "remindersGlobal": [
+      "限一次"
+    ],
+    "setup": 1,
+    "name": "方古",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被该能力杀死的外来者改为变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者]",
+    "otherNight": 9
+  },
+  {
+    "id": "25_fanzhuanyinhe",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/fanzhuanyinhe/25_fanzhuanyinhe.png",
+    "firstNightReminder": "在进行游戏设置时，将角色标记放入盲抽袋前，移除所有的爪牙角色标记，并加入等量的镇民或外来者角色标记作为补充。\n\n在首个夜晚，分别依次唤醒位于堤丰之首两侧的，等同于常规游戏爪牙数量加一的玩家。分别对这些玩家展示一个不同的爪牙角色标记和朝下的大拇指，再让他们重新入睡。再用展示给他们的爪牙角色标记替换魔典中这些玩家的善良角色标记。然后再如常进行爪牙信息和恶魔信息步骤。",
+    "otherNightReminder": "在除首个夜晚以外的每个夜晚，唤醒堤丰之首。让他指向任意一名玩家。那名玩家死亡——用“死亡”提示标记标记那名玩家。让堤丰之首重新入睡。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": 1,
+    "name": "堤丰之首",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。[邪恶玩家全部邻座，你靠近正中，+1爪牙，-或+任意数量外来者]",
+    "firstNight": 11,
+    "otherNight": 10
+  }
+]

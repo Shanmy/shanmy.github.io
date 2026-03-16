@@ -1,0 +1,96 @@
+[{
+	"id": "_meta",
+	"name": "夜行者",
+	"author": "小烯社群—段时",
+	"almanac": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/night\/almanac.html"
+}, {
+	"id": "_night",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/night\/_night.png",
+	"firstNightReminder": "守夜人可以指向一名玩家。如果他这么做，则唤醒那名玩家，告知其被守夜人选中，且告知他守夜人是谁。",
+	"otherNightReminder": "守夜人可以指向一名玩家。如果他这么做，则唤醒那名玩家，告知其被守夜人选中，且告知他守夜人是谁。",
+	"reminders": ["失去能力"],
+	"name": "守夜人（很多）",
+	"team": "townsfolk",
+	"ability": "每局游戏限一次，在夜晚时，你可以选择一名玩家：他会得知你是守夜人。",
+	"firstNight": 15,
+	"otherNight": 4
+}, {
+	"id": "1_night",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/night\/1_night.png",
+	"firstNightReminder": "唤醒科学怪人，向他展示恶魔获得的能力的对应的角色标记。",
+	"name": "科学怪人",
+	"team": "minion",
+	"ability": "恶魔拥有守夜人的能力。",
+	"firstNight": 11
+}, {
+	"id": "3_night",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/night\/3_night.png",
+	"name": "炸弹人",
+	"team": "minion",
+	"ability": "如果你被处决，除三名玩家以外的其他所有玩家均会死亡。一分钟之后，被最多玩家手指指着的玩家死亡。"
+}, {
+	"id": "4_night",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/night\/4_night.png",
+	"firstNightReminder": "111",
+	"otherNightReminder": "111",
+	"reminders": ["选择", "死亡"],
+	"name": "亡命徒",
+	"team": "minion",
+	"ability": "每个夜晚，你要选择一名玩家：明天白天提名他的善良玩家会立刻死亡。如果只有三名存活的玩家，你失去此能力。",
+	"firstNight": 14,
+	"otherNight": 5
+}, {
+	"id": "5_night",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/night\/5_night.png",
+	"name": "政客",
+	"team": "outsider",
+	"ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。"
+}, {
+	"id": "7_night",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/night\/7_night.png",
+	"reminders": ["已生效"],
+	"name": "使节",
+	"team": "outsider",
+	"ability": "每个夜晚限一次，一名玩家在使用自身能力选择邪恶玩家时会改为选中你，即使你已死亡。"
+}, {
+	"id": "8_night",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/night\/8_night.png",
+	"firstNightReminder": "唤醒所有爪牙，并告知他们场中有落难少女。",
+	"otherNightReminder": "如果被巡山人选中，唤醒并为其展示新角色。",
+	"reminders": ["已被猜测", "中毒"],
+	"name": "落难少女",
+	"team": "outsider",
+	"ability": "所有爪牙都知道落难少女在场。每局游戏限一次，任意爪牙可以公开猜测你是落难少女，如果猜对，你的阵营落败。",
+	"firstNight": 13,
+	"otherNight": 6
+}, {
+	"id": "9_night",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/night\/9_night.png",
+	"firstNightReminder": "痢蛭指向一名玩家。放置寄生标记，那名玩家中毒。",
+	"otherNightReminder": "寄生蛭指向一名玩家。那名玩家死亡。",
+	"reminders": ["死亡", "中毒"],
+	"name": "痢蛭",
+	"team": "demon",
+	"ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名存活的玩家：他中毒，如果且只有他死亡你才会死亡。",
+	"firstNight": 12,
+	"otherNight": 2
+}, {
+	"id": "10_night",
+	"image": "https:\/\/www.bloodstar.xyz\/p\/C2H43g\/night\/10_night.png",
+	"otherNightReminder": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+	"reminders": ["死亡", "中毒"],
+	"name": "诺-达鲺",
+	"team": "demon",
+	"ability": "每个夜晚*，你要选择一名玩家：他死亡。与你相邻的村民中毒。",
+	"otherNight": 3
+}, {
+		"id": "ef42503a-d4aa-46cd-9c61-6ce8e42450r",
+		"image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/97/Bootlegger.png/300px-Bootlegger.png",
+		"edition": "custom",
+		"name": "私货商人",
+		"ability": "镇民都是守夜人，科学怪人只会给恶魔守夜人的能力。",
+		"reminders": [],
+		"team": "fabled",
+		"firstNight": 0,
+		"otherNight": 0
+}]

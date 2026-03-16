@@ -1,0 +1,20 @@
+[{
+        "id": "_meta",
+        "name": "王车易位",
+        "author": "认出无害",
+        "logo":"https://i.postimg.cc/vZ60SP3m/LOGO.png"
+      },{"id":"clockmaker"},{"id":"yinyangshi"},{"id":"qintianjian"},{"id":"nightwatchman"},{"id":"tixingguan"},{"id":"undertaker"},{"id":"fortune_teller"},{"id":"dreamer"},{"id":"empath"},{"id":"high_priestess"},{"id":"alsaahir"},{"id":"qianke"},{"id":"farmer"},{"id":"politician"},{"id":"recluse"},{"id":"sweetheart"},{"id":"barber"},{"id":"widow"},{"id":"goblin"},{"id":"scarlet_woman"},{"id":"hundun"},{"id":"ojo"},{"id":"imp"},{"id":"kazali"},{
+        "id": "charoit",
+        "image": "https://www.bloodstar.xyz/p/Airell_clocktower/Assets_of_Lei_Gallery/chariot_assets_of_lei_gallery.png",
+        "edition": "custom",
+        "name": "战车 ",
+        "ability": "与你顺时针距离为1的玩家中毒。如果是邪恶的非旅行者玩家，改为和他交换角色。每个夜晚*，或该玩家死亡的，该距离+1。",
+        "team": "minion",
+        "firstNight": 4801,
+        "otherNight": 1501,
+        "firstNightReminder":"初始设置时，在战车顺时针距离为1的善良玩家的角色标记旁放置“控制”提示标记以表示他是由于战车的能力中毒；如果战车的顺时针距离为1的玩家是邪恶的，则战车将与其交换角色，随后在新战车的顺时针距离为1的善良玩家的角色标记旁放置“控制”提示标记。",
+        "otherNightReminder": "将战车的“控制”提示标记以顺时针方向推进到下一名玩家。如果落在邪恶玩家上，则战车将与其交换角色，随后在新战车的顺时针距离为1的善良玩家的角色标记旁放置“控制”提示标记。",
+        "remindersGlobal": [
+            "控制"
+        ]
+    }]

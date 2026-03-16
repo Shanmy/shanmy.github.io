@@ -1,0 +1,435 @@
+[
+  {
+    "id": "_meta",
+    "name": "暮光审判",
+    "author": "小楼& Souung",
+    "logo": "https://www.bloodstar.xyz/p/Rickfelix/WOW/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/Rickfelix/WOW/almanac.html"
+  },
+  {
+    "id": "25_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/25_wow.png",
+    "firstNightReminder": "得知两名非恶魔玩家。",
+    "otherNightReminder": "得知标记”圣光道标“的玩家中是否有邪恶玩家。",
+    "reminders": [
+      "圣光道标"
+    ],
+    "name": "圣骑士",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名非恶魔玩家。如果你在夜晚死亡，你会得知他们中是否有邪恶玩家。",
+    "flavor": "奉献即获庇佑，牺牲方得明识。",
+    "firstNight": 3900,
+    "otherNight": 12
+  },
+  {
+    "id": "24_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/24_wow.png",
+    "firstNightReminder": "选择一名存活玩家（与之前不同），他醉酒且不会死亡直到下个黄昏。",
+    "otherNightReminder": "选择一名存活玩家（与之前不同），他醉酒且不会死亡直到下个黄昏。",
+    "reminders": [
+      "醉酿投",
+      "已选择"
+    ],
+    "name": "武僧",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活玩家（与之前不同），他醉酒且不会死亡直到下个黄昏。",
+    "flavor": "客至禅院同举盏，酒暖乾坤庆生平",
+    "firstNight": 3700,
+    "otherNight": 2
+  },
+  {
+    "id": "23_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/23_wow.png",
+    "otherNightReminder": "每当你提名并处决一名存活的善良玩家，当晚你会得知距他最近的恶魔位于他的哪一侧（左/右）。如果两侧距离相同，你得知的信息由说书人决定。",
+    "reminders": [
+      "眼棱"
+    ],
+    "name": "恶魔猎手",
+    "team": "townsfolk",
+    "ability": "每当你提名并处决一名存活的善良玩家，当晚你会得知距他最近的恶魔位于他的哪一侧（左/右）。如果两侧距离相同，你得知的信息由说书人决定。",
+    "flavor": "恶魔猎手即是复仇的化身——不仅针对恶魔，也针对上一局游戏洗脑他五天的玩家",
+    "otherNight": 16
+  },
+  {
+    "id": "22_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/22_wow.png",
+    "otherNightReminder": "每个白天，你可以公开选择最多三名玩家：当晚，你会得知他们中哪些玩家使用自身能力选择了除你以外的玩家。即使你在当晚死亡。",
+    "reminders": [
+      "嘲讽",
+      "怯战"
+    ],
+    "name": "战士",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开选择最多三名玩家：当晚，你会得知他们中哪些玩家使用自身能力选择了除你以外的玩家。即使你在当晚死亡。",
+    "flavor": "战士一直因为贴脸行为不太受冒险小队欢迎，直到他找到这个名正言顺嘲讽他人的职业。",
+    "otherNight": 16.5
+  },
+  {
+    "id": "21_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/21_wow.png",
+    "firstNightReminder": "每个夜晚，你可以选择一个非镇民角色：你会得知除他以外与他最近的邪恶玩家和他的距离；如果该角色不在场，你会得知此事，然后你失去能力。",
+    "otherNightReminder": "每个夜晚，你可以选择一个非镇民角色：你会得知除他以外与他最近的邪恶玩家和他的距离；如果该角色不在场，你会得知此事，然后你失去能力。",
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": true,
+    "name": "猎人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你可以选择一个非镇民角色：你会得知除他以外与他最近的邪恶玩家和他的距离；如果该角色不在场，你会得知此事，然后你失去能力。［+1外来者］",
+    "flavor": "为了那些不知道该把什么外来者放入游戏的说书人准备的！",
+    "firstNight": 4000,
+    "otherNight": 13
+  },
+  {
+    "id": "20_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/20_wow.png",
+    "otherNightReminder": "你要选择至少三名其他玩家，如果他们均是善良玩家，你死亡。",
+    "name": "萨满祭司",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择至少三名其他玩家，如果他们均是善良的，你死亡。",
+    "flavor": "萨满祭司不太愿意被称作开完嗜血就可以躺尸的角色，但似乎到了其他冒险也是这样。",
+    "otherNight": 5
+  },
+  {
+    "id": "19_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/19_wow.png",
+    "otherNightReminder": "每当善良/邪恶玩家死于处决，你会在当晚获得一条正确/错误信息。如果处决来自于你发起的提名，这条信息将更有价值。",
+    "reminders": [
+      "献祭"
+    ],
+    "name": "术士",
+    "team": "townsfolk",
+    "ability": "每当善良/邪恶玩家死于处决，你会在当晚获得一条正确/错误信息。如果处决来自于你发起的提名，这条信息将更有价值。",
+    "flavor": "我知道我不像一个镇民，但相信我，我和恶魔永远不会成为真正的朋友。",
+    "otherNight": 15
+  },
+  {
+    "id": "18_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/18_wow.png",
+    "firstNightReminder": "你要选择两名玩家，你得知他们均不属于哪种角色类型。每局游戏限一次，你可以额外选择一名玩家。",
+    "otherNightReminder": "你要选择两名玩家，你得知他们均不属于哪种角色类型。每局游戏限一次，你可以额外选择一名玩家。",
+    "reminders": [
+      "圣言术"
+    ],
+    "name": "牧师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家，你得知他们均不属于哪种角色类型。每局游戏限一次，你可以额外选择一名玩家。",
+    "flavor": "每名牧师都应该成为一名逻辑学家，这对布道颇有帮助。",
+    "firstNight": 4100,
+    "otherNight": 14
+  },
+  {
+    "id": "17_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/17_wow.png",
+    "reminders": [
+      "失去伪装"
+    ],
+    "name": "潜行者",
+    "team": "townsfolk",
+    "ability": "使用自身能力选择你的玩家将改为选中与你最近的存活邪恶玩家作为替代。如果你“疯狂”地证明你是潜行者，你失去能力。",
+    "flavor": "过于没有存在感的副作用是并没有人注意到她在冒险第二天去买了一杯奶茶，第五天才回来。"
+  },
+  {
+    "id": "16_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/16_wow.png",
+    "firstNightReminder": "每局游戏限一次，在夜晚，你可以选择一名玩家，如果他与你阵营相同：你与他交换角色，然后他醉酒直到下个黄昏。否则他获得法师的能力。",
+    "otherNightReminder": "每局游戏限一次，在夜晚，你可以选择一名玩家，如果他与你阵营相同：你与他交换角色，然后他醉酒直到下个黄昏。否则他获得法师的能力。",
+    "reminders": [
+      "时间扭曲",
+      "镜像"
+    ],
+    "name": "法师",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚，你可以选择一名玩家，如果他与你阵营相同：你与他交换角色，然后他醉酒直到下个黄昏。否则他获得法师的能力。",
+    "flavor": "火球术，冰锥术……这些法术只是学徒的玩具，我的目标是把达拉然整个传送走。",
+    "firstNight": 4300,
+    "otherNight": 17
+  },
+  {
+    "id": "15_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/15_wow.png",
+    "otherNightReminder": "如果德鲁伊首个白天预言的梦境中的场景发生，你会被唤醒。",
+    "reminders": [
+      "激活"
+    ],
+    "name": "德鲁伊",
+    "team": "townsfolk",
+    "ability": "在你的首个白天，你可以私下拜访说书人预言一个梦境。每个夜晚*，如果梦境中的场景发生，你会在当晚被唤醒。",
+    "flavor": "我在翡翠梦境沉睡了一万年，因为猜错了恶魔的角色。",
+    "otherNight": 18
+  },
+  {
+    "id": "14_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/14_wow.png",
+    "firstNightReminder": "你的首个夜晚，你要选择一名玩家，如果你与他最近距离之间有爪牙，你得知其中一个爪牙的角色。",
+    "name": "唤魔师",
+    "team": "townsfolk",
+    "ability": "你的首个夜晚，你要选择一名玩家，如果你与他最近距离之间有爪牙，你得知其中一个爪牙的角色。",
+    "flavor": "16+手法增辉自带钥匙黑不散的来",
+    "firstNight": 3800
+  },
+  {
+    "id": "13_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/13_wow.png",
+    "otherNightReminder": "如果死亡骑士处于死亡状态，他在下个黎明作为认知的镇民复活",
+    "remindersGlobal": [
+      "是死亡骑士",
+      "大墓地意志"
+    ],
+    "setup": true,
+    "name": "死亡骑士",
+    "team": "townsfolk",
+    "ability": "你不知道你是死亡骑士，你以为你是一个镇民角色。当你首次死亡时，你在下一个黎明作为你认知的镇民复活。",
+    "flavor": "也许是入夜太长睡过了头，也许是说书人忘了唤醒我。死亡骑士总是隐瞒自己的复生秘诀。",
+    "otherNight": 22
+  },
+  {
+    "id": "12_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/12_wow.png",
+    "firstNightReminder": "一名善良玩家可能被当做邪恶阵营和恶魔角色。",
+    "reminders": [
+      "附身",
+      "已猜测"
+    ],
+    "name": "麦迪文",
+    "team": "outsider",
+    "ability": "一名善良玩家可能被当做邪恶阵营、恶魔角色，即使你已死亡。每局游戏限一次，你可以猜测那名玩家是谁，如果你猜测正确/错误，你会得知一条对善良阵营有/没有帮助的建议。",
+    "flavor": "自从迷上卡拉赞的象棋游戏，麦迪文热衷于各类机智问答，并自封解谜小师。",
+    "firstNight": 3100
+  },
+  {
+    "id": "10_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/10_wow.png",
+    "otherNightReminder": "一名恶魔要选择一名玩家和一种阵营，你明天白天和夜晚需要疯狂地证明那名玩家是对应阵营，否则他可能被处决。",
+    "reminders": [
+      "圣光布道",
+      "暗影布道"
+    ],
+    "name": "暮光主教",
+    "team": "outsider",
+    "ability": "每个夜晚*，一名恶魔要选择一名玩家和一种阵营，你明天白天和夜晚需要疯狂地证明那名玩家是对应阵营，否则他可能被处决。如果你疯狂地证明自己是外来者，你可能被处决。",
+    "flavor": "暮光教派吸纳祭祀的方式总是很迷惑：\n\n1.能接受无底线的阿谀奉承或指鹿为马；\n\n2.身患畸形。",
+    "otherNight": 21
+  },
+  {
+    "id": "9_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/9_wow.png",
+    "reminders": [
+      "倒计时",
+      "砰"
+    ],
+    "name": "米尔豪斯",
+    "team": "outsider",
+    "ability": "每个黄昏，如果游戏已经进行10个白天，你独自获胜。每当你提名善良玩家、被善良玩家提名或被善良角色能力选择，便提前一天触发。",
+    "flavor": "你等着，等到我有十点法力值的时候！"
+  },
+  {
+    "id": "11_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/11_wow.png",
+    "firstNightReminder": "在你的首个夜晚，你得知与你处于同一位面的玩家。",
+    "reminders": [
+      "裂隙",
+      "位面崩塌"
+    ],
+    "name": "节点亲王",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，你得知与你处于同一位面的玩家。所有你提名或提名你的玩家转换位面。你死亡后，如果一项提名中提名者与被提名者处于不同位面，投票无效。［有五名玩家处于一个位面，其他玩家处于另一个］",
+    "flavor": "在破坏了六个位面后，节点亲王决定碾碎说书人的魔典。",
+    "firstNight": 4200
+  },
+  {
+    "id": "8_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/8_wow.png",
+    "otherNightReminder": "如果当天有非镇民玩家被处决，你要选择一项：与你邻近的一名存活镇民死亡，或与他邻近的两名镇民中毒直到下个黄昏。",
+    "reminders": [
+      "孢子",
+      "复仇",
+      "死亡"
+    ],
+    "name": "瓦丝琪",
+    "team": "minion",
+    "ability": "每个夜晚*，如果当天有非镇民玩家被处决，你要选择一项：与你邻近的一名存活镇民死亡，或与他邻近的两名镇民中毒直到下个黄昏。",
+    "flavor": "瓦丝琪女士蛰伏于毒蛇神殿，随时准备用自己的方式复仇。",
+    "otherNight": 4
+  },
+  {
+    "id": "7_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/7_wow.png",
+    "otherNightReminder": "每局游戏限一次，在夜晚*，你可以选择一名玩家，如果他处于死亡状态，他复活。然后你得知一名与之阵营不同的玩家：只要被你复活的玩家处于存活状态，他不会死亡。因你能力复活的玩家再次死亡的当晚，你重获能力。",
+    "reminders": [
+      "复活",
+      "护命",
+      "已使用"
+    ],
+    "name": "巫妖王",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚*，你可以选择一名玩家，如果他处于死亡状态，他复活。然后你得知一名与之阵营不同的玩家：只要被你复活的玩家处于存活状态，他不会死亡。因你能力复活的玩家再次死亡的当晚，你重获能力。",
+    "flavor": "巫妖王总不积极起身私聊——有人推测他可能被冻在了座位上：这导致他总是最后拿到伪装。",
+    "otherNight": 19
+  },
+  {
+    "id": "6_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/6_wow.png",
+    "firstNightReminder": "得知三个伪装，选择一名玩家，他会得知一条由基尔加丹指定的信息。",
+    "otherNightReminder": "在第三个夜晚，你要选择一名玩家，他变成由你选择的邪恶恶魔。",
+    "reminders": [
+      "欺诈"
+    ],
+    "setup": true,
+    "name": "基尔加丹",
+    "team": "minion",
+    "ability": "你的首个夜晚，你会得知三个伪装，你要选择一名玩家，他会得知一条由你指定的信息。在第三个夜晚，你要选择一名玩家，他变成由你选择的邪恶恶魔。每局游戏仅能成功转化一次。［无恶魔在场］",
+    "flavor": "萨格拉斯之墓的失败让欺诈者基尔加丹痛定思痛，他决定在职业领袖中寻找新的恶魔人选。",
+    "firstNight": 3300,
+    "otherNight": 3
+  },
+  {
+    "id": "5_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/5_wow.png",
+    "firstNightReminder": "选择一名玩家，他变为邪恶的加尔。",
+    "otherNightReminder": "如果古或加尔死亡，另一位玩家也会死亡。",
+    "reminders": [
+      "腐化",
+      "死亡"
+    ],
+    "name": "古",
+    "team": "minion",
+    "ability": "首个夜晚，你要选择一名玩家，他变为邪恶的加尔。加尔死亡时，你会在当晚死亡。在你存活时提名你的玩家中毒直到下个黎明，即使你已死亡。",
+    "flavor": "和朋友一起来的，可以免修仙费吗？",
+    "firstNight": 3200,
+    "otherNight": 10
+  },
+  {
+    "id": "4_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/4_wow.png",
+    "otherNightReminder": "如果古或加尔死亡，另一位玩家也会死亡。",
+    "reminders": [
+      "腐化",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "加尔",
+    "team": "minion",
+    "ability": "古死亡时，你会在当晚死亡。在你存活时提名你的玩家中毒直到下个黎明，即使你已死亡。［不在初始游戏中］",
+    "flavor": "我对象走了，我也不玩了。",
+    "otherNight": 11
+  },
+  {
+    "id": "3_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/3_wow.png",
+    "firstNightReminder": "始终有一名存活善良玩家得知一个任务。",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家，他死亡。始终有一名存活善良玩家得知一个任务：任务完成前，每个夜晚你行动两次。",
+    "reminders": [
+      "开门",
+      "死亡"
+    ],
+    "name": "克苏恩",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家，他死亡。\n\n始终有一名存活善良玩家得知一个任务：任务完成前，每个夜晚你行动两次。",
+    "flavor": "我抽到的是，被封印的黑暗大古神！",
+    "firstNight": 3600,
+    "otherNight": 9
+  },
+  {
+    "id": "2_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/2_wow.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家，他死亡。你拥有上一个被你杀死的非镇民玩家的能力。",
+    "reminders": [
+      "仆从",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "恩佐斯",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家，他死亡。你拥有上一个被你杀死的非镇民玩家的能力。[+1外来者]",
+    "flavor": "恩佐斯有着诺-达鲺的外形，亡骨魔的能力和方古的设置调整，不得不承认他是四位古神中适应得最好的。",
+    "otherNight": 7
+  },
+  {
+    "id": "1_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/1_wow.png",
+    "firstNightReminder": "始终有一名存活善良玩家得知他是“大酋长”，他“是恶魔”。",
+    "otherNightReminder": "如果上个白天没有爪牙死于处决，你要选择一名玩家，他死亡。",
+    "reminders": [
+      "大酋长",
+      "煞魔逸散",
+      "死亡"
+    ],
+    "name": "亚煞极",
+    "team": "demon",
+    "ability": "始终有一名存活善良玩家得知他是“大酋长”，他“是恶魔”。如果白天没有恶魔或爪牙被处决，邪恶阵营获胜。每个夜晚*，如果上个白天没有爪牙死于处决，你要选择一名玩家，他死亡。",
+    "flavor": "亚煞极享受冒险者们自相残杀的感觉。",
+    "firstNight": 3400,
+    "otherNight": 8
+  },
+  {
+    "id": "_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/_wow.png",
+    "firstNightReminder": "你的首个夜晚，你要选择一名玩家并提供一条信息，直到你下次选择，他需要疯狂证明你提供的信息为真，否则他可能被处决。",
+    "otherNightReminder": "如果上一个”丧失理智“的玩家死亡，当晚你要重新选择玩家和提供信息。每个夜晚*，会有一名玩家死亡。",
+    "reminders": [
+      "丧失理智",
+      "死亡"
+    ],
+    "name": "尤格萨隆",
+    "team": "demon",
+    "ability": "你的首个夜晚，你要选择一名玩家并提供一条信息，直到你下次选择，他需要疯狂证明你提供的信息为真，否则他可能被处决。如果他死亡，当晚你要重新选择玩家和提供信息。每个夜晚*，会有一名玩家死亡。",
+    "flavor": "一位真正意义上的导演，过于苛刻以至于无法忍受不太配合的演员。",
+    "firstNight": 3500,
+    "otherNight": 6
+  },
+  {
+    "id": "29_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/29_wow.png",
+    "name": "祖尔金",
+    "team": "traveller",
+    "ability": "如果你对你阵营获胜做出巨大贡献，下一局游戏开始前，你可以选择剧本中的一个善良角色和一个邪恶角色，你会是其中一个角色，即使你已死亡。",
+    "flavor": "他只是来得晚，不是玩得差。"
+  },
+  {
+    "id": "27_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/27_wow.png",
+    "reminders": [
+      "缔约"
+    ],
+    "name": "加里维克斯",
+    "team": "traveller",
+    "ability": "每局游戏限一次，你可以邀请其他两名玩家一起拜访说书人，并见证他们相互缔结一项条约。 如果有玩家主动违约，你会在当晚得知违约的玩家。违约的玩家可能死亡。",
+    "flavor": "这位金融大亨偶尔也会客串婚礼司仪。"
+  },
+  {
+    "id": "30_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/30_wow.png",
+    "name": "游学者周卓",
+    "team": "traveller",
+    "ability": "你可以在夜晚讲述一个惊心动魄的冒险故事。 每个白天，在提名开始前，你可以公开选择一名玩家：说书人会要求他回答一个关于你故事的问题。如果他回答错误，他可能死亡。",
+    "flavor": "有时候周卓的故事比游戏本身更吸引人"
+  },
+  {
+    "id": "28_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/28_wow.png",
+    "name": "拉格纳罗斯",
+    "team": "traveller",
+    "ability": "每个白天提名前，你可以公开宣布一个数字X：当天第X名玩家投票时，他死亡。",
+    "flavor": "让火焰净化一切！"
+  },
+  {
+    "id": "26_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/26_wow.png",
+    "reminders": [
+      "已使用"
+    ],
+    "name": "克罗米",
+    "team": "traveller",
+    "ability": "每个白天，玩家需要提前公开确认对某名玩家发起提名，由你决定每个提名发生的顺序。 每局游戏限一次，你可以令一次提名重新进行投票统计。",
+    "flavor": "预判了数十个时间线后，克罗米始终无法摆脱被流放的命运。"
+  },
+  {
+    "id": "31_wow",
+    "image": "https://www.bloodstar.xyz/p/Rickfelix/WOW/31_wow.png",
+    "name": "地城副本",
+    "team": "fabled",
+    "ability": "如果玩家即将使用自身能力选中一个旅行者角色或一名旅行者玩家，说书人可能会要求他重新选择。",
+    "flavor": "尊敬的玩家，检测到你仍在一个地下城队伍中，无法与主世界NPC互动，如果仍有位面重置问题，请联系您的GM"
+  }
+]

@@ -1,0 +1,490 @@
+[
+    {
+        "id": "_meta",
+        "name": "诸神黄昏Ragnarök-V9",
+        "author": "LemonSneeze",
+        "logo": "https:\/\/www.bloodstar.xyz\/p\/Kingle\/32\/_meta.png",
+        "almanac": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/almanac.html"
+    },
+    {
+        "id": "odin_ragnarok09",
+        "name": "奥丁",
+        "ability": "在你的首个夜晚，你会得知三个除旅行者以外的角色，一名与你邻座的存活玩家是其中一个角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "13",
+        "otherNight": "",
+        "firstNightReminder": "唤醒奥丁并向他展示3个角色，一名与他邻座的存活玩家是其中一个角色。",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/odin_ragnarok09.png"
+    },
+    {
+        "id": "heimdall_ragnarok09",
+        "name": "海姆达尔",
+        "ability": "在你的首个夜晚，你会得知一个除旅行者以外离你最近的存活邪恶玩家所对应角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "14",
+        "otherNight": "",
+        "firstNightReminder": "唤醒海姆达尔并向他展示离他最近的存活邪恶玩家所对应角色。",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/heimdall_ragnarok09.png"
+    },
+    {
+        "id": "sif_ragnarok09",
+        "name": "希芙",
+        "ability": "在你的首个夜晚，你会得知一名存活的善良玩家，他保持清醒且健康。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "12",
+        "otherNight": "",
+        "firstNightReminder": "唤醒希芙并向她展示一名存活的善良玩家",
+        "otherNightReminder": "",
+        "reminders": [
+            "清醒健康"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/sif_ragnarok09.png"
+    },
+    {
+        "id": "bragi_ragnarok09",
+        "name": "布拉基",
+        "ability": "在你的首个夜晚，你会得知一个短语。每个夜晚*，如果你在当天白天时公开说出这个短语，你要选择一名玩家：你得知他的阵营。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "16",
+        "otherNight": "15",
+        "firstNightReminder": "唤醒布拉基并给他一个短语。",
+        "otherNightReminder": "如果布拉基在白天时公开说出这个短语, 唤醒他并让他选择一名玩家, 展示他选择的那名玩家的阵营.",
+        "reminders": [
+            "说出短语"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/bragi_ragnarok09.png"
+    },
+    {
+        "id": "freyja_ragnarok09",
+        "name": "芙蕾雅",
+        "ability": "每个夜晚，你会得知一个不在场的角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "15",
+        "otherNight": "17",
+        "firstNightReminder": "向芙蕾雅展示一个不在场的角色",
+        "otherNightReminder": "向芙蕾雅展示一个不在场的角色",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/freyja_ragnarok09.png"
+    },
+    {
+        "id": "frigg_ragnarok09",
+        "name": "弗丽嘉",
+        "ability": "每个夜晚*，你要选择两名玩家：第一名玩家当晚不会死亡，第二名玩家一直保持清醒且健康直到下个黄昏。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "3",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒并询问弗丽嘉选择两名玩家，第一名玩家当晚不会死亡，第二名玩家一直保持清醒且健康直到下个黄昏。",
+        "reminders": [
+            "清醒健康",
+            "保护"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/frigg_ragnarok09.png"
+    },
+    {
+        "id": "mimir_ragnarok09",
+        "name": "密米尔",
+        "ability": "每个夜晚*，你要选择一名玩家：你会得知放置在他的角色标记旁所有提示标记的文字描述。(或者你得知没有标记)",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "18",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒并询问密米尔选择一名玩家. 展示给他放置在他的角色标记旁所有提示标记的文字描述。(或者得知没有标记)",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/mimir_ragnarok09.png"
+    },
+    {
+        "id": "freyr_ragnarok09",
+        "name": "弗雷",
+        "ability": "每局游戏限一次，在夜晚时，你可以选择一名玩家：你得知他的角色，随后你中毒。恶魔会被你的能力当作爪牙角色。你不会在夜晚死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "17",
+        "otherNight": "16",
+        "firstNightReminder": "唤醒并询问弗雷他是否想使用他的能力。如果同意，让弗雷指向一名玩家，向弗雷展示他选择的玩家角色，然后弗雷中毒。",
+        "otherNightReminder": "唤醒并询问弗雷他是否想使用他的能力。如果同意，让弗雷指向一名玩家，向弗雷展示他选择的玩家角色，然后弗雷中毒。",
+        "reminders": [
+            "中毒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/freyr_ragnarok09.png"
+    },
+    {
+        "id": "thor_ragnarok09",
+        "name": "托尔",
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择杀死在今天白天提名你的玩家。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "13",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒并询问托尔是否他需要使用能力，如果使用，选择一名在当天白天提名过托尔的玩家：他死亡，如果没有，则托尔失去能力。",
+        "reminders": [
+            "死亡",
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/thor_ragnarok09.png"
+    },
+    {
+        "id": "iounn_ragnarok09",
+        "name": "伊登",
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一名存活玩家：如果他不是恶魔，他重获能力，然后他会保持清醒且健康直到下个黄昏。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "14",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒伊登并询问她是否使用她的能力：如果同意，伊登选择一名存活玩家：如果他不是恶魔，他再次获得他的能力且保持清醒且健康，直到下个黄昏。",
+        "reminders": [
+            "失去能力",
+            "重获能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/iounn_ragnarok09.png"
+    },
+    {
+        "id": "tr_ragnarok09",
+        "name": "提尔",
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择杀死自己：若你因此死亡，恶魔会中毒直到下个黄昏。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "2",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒提尔并询问他是否使用他的能力，如使用，提尔死亡，恶魔中毒直到下个黄昏",
+        "reminders": [
+            "中毒",
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/tr_ragnarok09.png"
+    },
+    {
+        "id": "masterbuilder_ragnarok09",
+        "name": "建筑大师",
+        "ability": "每局游戏限一次，你可以与说书人达成一项协议。每局游戏限一次，任意邪恶玩家可以公开猜测你是建筑大师，如果猜对，该协议将失效。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "失去能力",
+            "生效协议"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/masterbuilder_ragnarok09.png"
+    },
+    {
+        "id": "baldr_ragnarok09",
+        "name": "巴德尔",
+        "ability": "每个夜晚，你会得知哪个爪牙角色使用了他的能力。你不会在夜晚死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": "19",
+        "otherNight": "19",
+        "firstNightReminder": "如果有爪牙使用了他的能力，唤醒巴德尔告知哪个爪牙角色使用了他的能力。",
+        "otherNightReminder": "如果有爪牙使用了他的能力，唤醒巴德尔告知哪个爪牙角色使用了他的能力。",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/baldr_ragnarok09.png"
+    },
+    {
+        "id": "brokksindri_ragnarok09",
+        "name": "布洛克&辛得里",
+        "ability": "每个夜晚，你可能会得到一个任务：如果你在得到新任务前泄露了任务内容或未能完成上一个任务，会有一名玩家中毒直到下个黄昏。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "18",
+        "otherNight": "12",
+        "firstNightReminder": "可能被唤醒并得到一个任务",
+        "otherNightReminder": "可能被唤醒并得到一个任务。如果之前的任务未完成或公开暴露了任务内容，会有一名玩家中毒直到下个黄昏。",
+        "reminders": [
+            "中毒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/brokksindri_ragnarok09.png"
+    },
+    {
+        "id": "gylfi_ragnarok09",
+        "name": "古鲁菲",
+        "ability": "每个夜晚*，你要与恶魔猜拳直到有人获胜。如果你输了，会有一名玩家中毒直到下个黄昏，随后你会得知他是谁。（你不会与恶魔在夜晚见面)",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "10",
+        "firstNightReminder": "",
+        "otherNightReminder": "先唤醒古鲁菲并询问他出拳，之后让他入睡.然后唤醒恶魔并询问他出拳，之后让他入睡。如果出现平局，再次唤醒直到有人获胜. 如果古鲁菲失败, 一名玩家会中毒直到下个黄昏，你会得知他是谁。如果古鲁菲胜利，让他们继续入睡。",
+        "reminders": [
+            "中毒",
+            "获胜"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/gylfi_ragnarok09.png"
+    },
+    {
+        "id": "gefjon_ragnarok09",
+        "name": "葛冯",
+        "ability": "首个使用其自身能力选择你的镇民会中毒直到下个黄昏，并且他会在下个夜晚死亡，即使你已死亡。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "11",
+        "firstNightReminder": "",
+        "otherNightReminder": "杀死因葛冯能力在当天黄昏前中毒的玩家。",
+        "reminders": [
+            "中毒",
+            "死亡",
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/gefjon_ragnarok09.png"
+    },
+    {
+        "id": "lfar_ragnarok09",
+        "name": "精灵",
+        "ability": "如果你“疯狂”地证明你是精灵，你可能会被处决。你会转变为除你以外首位公开猜对你是精灵的玩家阵营。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "善良",
+            "邪恶"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/lfar_ragnarok09.png"
+    },
+    {
+        "id": "thiazzi_ragnarok09",
+        "name": "夏基",
+        "ability": "每局游戏限一次，在夜晚时，你可以选择一名玩家：他中毒且你获得他的能力。(你不会得知他的角色)",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "11",
+        "otherNight": "4",
+        "firstNightReminder": "唤醒并询问夏基是否使用他的能力，如使用，他选择一名玩家，那名玩家中毒且夏基获得那名玩家的能力，获得能力时按那个角色对应的首个夜晚开始计算，直到夏基死亡失去能力。夏基不会得知他选择的那名玩家的角色。",
+        "otherNightReminder": "Wake and ask if Thiazzi if they would like to use their ability. If yes, they select a player. That player is poisioned and Thiazzi gains their ability as if it was their first day. Thiazzi does not learn the character.",
+        "reminders": [
+            "失去能力",
+            "中毒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/thiazzi_ragnarok09.png"
+    },
+    {
+        "id": "skrmir_ragnarok09",
+        "name": "斯克里米尔",
+        "ability": "每局游戏限一次，在夜晚时*，你可以让所有中毒的善良玩家死亡。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "9",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒并决定是否使用能力",
+        "reminders": [
+            "失去能力",
+            "死亡",
+            "死亡",
+            "死亡"
+        ],
+        "remindersGlobal": [
+            "死亡",
+            "死亡",
+            "死亡",
+            "死亡"
+        ],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/skrmir_ragnarok09.png"
+    },
+    {
+        "id": "loki_ragnarok09",
+        "name": "洛基",
+        "ability": "如果你死于处决，从此之后恶魔可以行动两次且爪牙重新获得他的能力。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "处决死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/loki_ragnarok09.png"
+    },
+    {
+        "id": "nidhogg_ragnarok09",
+        "name": "尼德霍格",
+        "ability": "如果有外来者在白天死亡，当晚他邻近的两名存活镇民玩家会中毒直到下个黄昏。[+1外来者]",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "中毒",
+            "中毒"
+        ],
+        "remindersGlobal": [],
+        "setup": 1,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/nidhogg_ragnarok09.png"
+    },
+    {
+        "id": "hel_ragnarok09",
+        "name": "海拉",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你顺时针方向上距离你最近的镇民玩家中毒。每个黄昏，中毒玩家会变成该方向上的下一名镇民玩家。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "5",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒并询问海拉选择一名玩家：他死亡",
+        "reminders": [
+            "死亡",
+            "死亡",
+            "中毒"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/hel_ragnarok09.png"
+    },
+    {
+        "id": "fenrir_ragnarok09",
+        "name": "芬里尔",
+        "ability": "每个夜晚*，你可以选择一名玩家：他死亡。在夜晚时*，如果你没有攻击任何玩家，你可以在之后的夜晚额外行动一次。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "6",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒并询问芬里厄选择一名玩家, 被选择的玩家死亡. 如果芬里厄没有选择玩家，在芬里厄角色标记旁放置“生长”标记.每增加一个“生长”标记, 就会询问芬里厄额外再选择一名玩家。",
+        "reminders": [
+            "死亡",
+            "生长",
+            "生长",
+            "生长"
+        ],
+        "remindersGlobal": [
+            "生长"
+        ],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/fenrir_ragnarok09.png"
+    },
+    {
+        "id": "jrmungandr_ragnarok09",
+        "name": "耶梦加得",
+        "ability": "每个夜晚*，你要选择两名玩家：其中至少有一名玩家会死亡，然后他们中仍存活的玩家会中毒直到下个黄昏。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "7",
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒并询问耶梦加得选择两名玩家, 他们之中至少一名玩家死亡，如果其中一名玩家没有死亡，他中毒直到下个黄昏。",
+        "reminders": [
+            "中毒",
+            "中毒",
+            "死亡",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/jrmungandr_ragnarok09.png"
+    },
+    {
+        "id": "surtr_ragnarok09",
+        "name": "苏尔特尔",
+        "ability": "在第2个夜晚，你要为所有玩家编排一个顺序。每个夜晚*，任意数量的玩家会以你所选择的顺序依次死亡。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": "",
+        "otherNight": "8",
+        "firstNightReminder": "",
+        "otherNightReminder": "在第2个夜晚唤醒苏鲁特，让他选择一个包括所有玩家的顺序。",
+        "reminders": [
+            "死亡",
+            "死亡",
+            "死亡",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/surtr_ragnarok09.png"
+    },
+    {
+        "id": "skllhati_ragnarok09",
+        "name": "斯库尔&哈提",
+        "ability": "每局游戏限两次，你可以宣布“当前为夜晚*”、“当前为白天*”或“提名阶段开始*“，你宣布的事情会立即发生。你每次只能宣布其中一件事情。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "夜晚",
+            "白天",
+            "提名"
+        ],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/skllhati_ragnarok09.png"
+    },
+    {
+        "id": "ymir_ragnarok09",
+        "name": "尤弥尔",
+        "ability": "当你被流放时，你可以查看魔典并改变说书人允许你改变的一些事情。",
+        "team": "traveller",
+        "sch_team": "旅行者",
+        "firstNight": "",
+        "otherNight": "",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [],
+        "setup": 0,
+        "image": "https://www.bloodstar.xyz/p/LemonSneeze/Ragnarok-09/ymir_ragnarok09.png"
+    }
+]

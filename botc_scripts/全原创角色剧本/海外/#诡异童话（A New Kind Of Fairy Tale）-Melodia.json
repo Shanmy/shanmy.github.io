@@ -1,0 +1,434 @@
+[
+  {
+    "id": "_meta",
+    "name": "诡异童话1",
+    "author": "Melodia",
+    "logo": "https://i.postimg.cc/y8hTXJCn/1-LOGO.png",
+    "almanac": ""
+  },
+  {
+    "id": "_th",
+    "image": "https://i.postimg.cc/s290X62j/hanselgretel-fairy-tale.png",
+    "firstNightReminder": " ",
+    "setup": true,
+    "name": "汉塞尔&格蕾特",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知恶魔与外来者之间最近的距离是否小于恶魔与爪牙之间最近的距离。如果相等，你得知的信息由说书人决定。(邻座玩家距离为1)[+0~1外来者]",
+    "firstNight": 17
+  },
+  {
+    "id": "11_th",
+    "image": "https://i.postimg.cc/9F6xB5RX/maui-fairy-tale.png",
+    "firstNightReminder": " ",
+    "name": "毛伊",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你要选择每种角色类型的各一个角色：你会得知其中不在场的角色数量。",
+    "firstNight": 20
+  },
+  {
+    "id": "2_th",
+    "image": "https://i.postimg.cc/FRN8Vt6k/anansi-fairy-tale.png",
+    "firstNightReminder": " ",
+    "otherNightReminder": " ",
+    "name": "阿南西",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名玩家：你会得知他们中有多少玩家的能力能在夜晚造成或阻止死亡。",
+    "firstNight": 19,
+    "otherNight": 17
+  },
+  {
+    "id": "3_th",
+    "image": "https://i.postimg.cc/R0rjqJQR/alice-fairy-tale.png",
+    "firstNightReminder": " ",
+    "otherNightReminder": " ",
+    "reminders": [
+      "保护"
+    ],
+    "name": "爱丽丝",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名玩家：在奇数夜晚，他们不会醉酒或中毒直到下个黄昏；在偶数夜晚，他们不会死亡。",
+    "firstNight": 11,
+    "otherNight": 2
+  },
+  {
+    "id": "1_th",
+    "image": "https://i.postimg.cc/sxBcpw3Z/ridinghood-fairy-tale.png",
+    "firstNightReminder": " ",
+    "otherNightReminder": " ",
+    "reminders": [
+      "镇民",
+      "外来者",
+      "爪牙",
+      "恶魔"
+    ],
+    "name": "小红帽",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一个与上个夜晚不同的角色类型：与你临近的存活玩家均不是这个类型的角色。",
+    "firstNight": 18,
+    "otherNight": 16
+  },
+  {
+    "id": "6_th",
+    "image": "https://i.postimg.cc/t4G5x3wY/yurlunggur-fairy-tale.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "彩虹蛇",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一个角色：如果该角色不在场，会有一名玩家死亡。如果你死亡，你会在当晚得知是否有玩家因你的能力死亡。",
+    "otherNight": 15
+  },
+  {
+    "id": "5_th",
+    "image": "https://i.postimg.cc/pdD3jVst/anubis-fairy-tale.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "死于处决",
+      "提名者"
+    ],
+    "name": "阿努比斯",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，如果最近死于处决的玩家不是你提名的玩家，你得知他与提名者是否为同一角色类型。",
+    "otherNight": 18
+  },
+  {
+    "id": "8_th",
+    "image": "https://i.postimg.cc/FFnC7JhL/littlematchgirl-fairy-tale.png",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "火柴女孩",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以拜访说书人以获取一条建议，或一条正确信息，或一条来自私聊的有用的信息，或死亡。"
+  },
+  {
+    "id": "7_th",
+    "image": "https://i.postimg.cc/wMSkFLB4/scheherazade-fairy-tale.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "山鲁佐德",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。每个夜晚*，如果你发表过的声明中有（至少1个）正确的，你死亡。",
+    "otherNight": 13
+  },
+  {
+    "id": "10_th",
+    "image": "https://i.postimg.cc/28ZGycHs/sunwukong-fairy-tale.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "醉酒",
+      "死亡"
+    ],
+    "name": "孙悟空",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家并猜测他是一个善良角色：如果你猜对了，他死亡。当你首次即将在夜晚死亡时，你不会死亡，改为你醉酒。",
+    "otherNight": 11
+  },
+  {
+    "id": "9_th",
+    "image": "https://i.postimg.cc/pXhG8Xd1/mwindo-fairy-tale.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "平安夜",
+      "失去能力"
+    ],
+    "name": "姆温都",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名除你以外的存活玩家：如果他是善良的，今晚不会有玩家死亡。",
+    "otherNight": 4
+  },
+  {
+    "id": "12_th",
+    "image": "https://i.postimg.cc/fL827VX1/iwasamedi-fairy-tale.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "死亡",
+      "是伊瓦"
+    ],
+    "name": "伊瓦·萨梅迪",
+    "team": "townsfolk",
+    "ability": "当你首次即将在夜晚死亡时，你会被唤醒并要选择一个善良角色：如果该角色不在场，当你死亡后，你获得该角色的能力。否则，你不会死亡。",
+    "otherNight": 12
+  },
+  {
+    "id": "4_th",
+    "image": "https://i.postimg.cc/Y9DRGJBH/rapunzel-fairy-tale.png",
+    "reminders": [
+      "不会死亡"
+    ],
+    "name": "莴苣姑娘",
+    "team": "townsfolk",
+    "ability": "如果除你以外离你最远的存活镇民即将在夜晚死亡，他不会死亡，你得知他是谁。"
+  },
+  {
+    "id": "13_th",
+    "image": "https://i.postimg.cc/Hkb6ZZXw/nanahuatzin-fairy-tale.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "死亡"
+    ],
+    "remindersGlobal": [
+      "是纳纳瓦钦"
+    ],
+    "setup": true,
+    "name": "纳纳瓦钦",
+    "team": "outsider",
+    "ability": "你以为你是一个镇民角色，但其实你不是。每个夜晚*，如果今天白天没有人死于处决，你可能死亡。",
+    "otherNight": 14
+  },
+  {
+    "id": "14_th",
+    "image": "https://i.postimg.cc/bNsMT9mg/frogprince-fairy-tale.png",
+    "reminders": [
+      "真爱"
+    ],
+    "name": "青蛙王子",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家：当且仅当他获胜时你才会获胜，即使你醉酒或中毒。"
+  },
+  {
+    "id": "15_th",
+    "image": "https://i.postimg.cc/kXzHhRZm/goldspinner-fairy-tale.png",
+    "reminders": [
+      "失去能力",
+      "干扰项"
+    ],
+    "name": "金轮女",
+    "team": "outsider",
+    "ability": "一名玩家可能会被当做与他原本不同的阵营或恶魔，即使你已死亡。每局游戏限一次，你可以猜测谁是那个玩家，如果你猜对了，你会变成一个不在场的镇民角色。"
+  },
+  {
+    "id": "16_th",
+    "image": "https://i.postimg.cc/6p4k9fRq/aladdin-fairy-tale.png",
+    "otherNightReminder": " ",
+    "name": "阿拉丁",
+    "team": "outsider",
+    "ability": "如果你在夜晚死亡，恶魔可以选择阻止你的死亡并查看魔典。如果你被处决，当晚恶魔可以查看魔典。",
+    "otherNight": 19
+  },
+  {
+    "id": "20_th",
+    "image": "https://i.postimg.cc/sx1nT34x/kitsune-fairy-tale.png",
+    "firstNightReminder": " ",
+    "remindersGlobal": [
+      "是狐仙"
+    ],
+    "name": "狐仙",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择一个角色：你可能会被当作该角色、该角色类型及该角色的阵营，即使你已死亡。爪牙和恶魔会在夜晚一同被唤醒。",
+    "firstNight": 13
+  },
+  {
+    "id": "18_th",
+    "image": "https://i.postimg.cc/BZyNq9C5/shinigami-fairy-tale.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "name": "死神",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡。如果你以此法杀死了恶魔，你与其交换角色。",
+    "otherNight": 10
+  },
+  {
+    "id": "19_th",
+    "image": "https://i.postimg.cc/Pqh2BWQB/piedpiper-fairy-tale.png",
+    "firstNightReminder": " ",
+    "otherNightReminder": " ",
+    "reminders": [
+      "中毒",
+      "死亡",
+      "失去能力"
+    ],
+    "name": "魔笛手",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择一名玩家：他中毒。每局游戏限一次，在夜晚时*，你可以杀死该玩家，或改变中毒目标。",
+    "firstNight": 14,
+    "otherNight": 9
+  },
+  {
+    "id": "17_th",
+    "image": "https://i.postimg.cc/G2LgsFBk/ifrit-fairy-tale.png",
+    "firstNightReminder": " ",
+    "otherNightReminder": " ",
+    "reminders": [
+      "失去能力",
+      "不会死亡"
+    ],
+    "name": "伊芙利特",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择让下一名你参与了投票的被处决玩家不会死亡。如果只有4名玩家存活，你失去此能力。",
+    "firstNight": 15,
+    "otherNight": 8
+  },
+  {
+    "id": "23_th",
+    "image": "https://i.postimg.cc/90fksdCW/bigbadwolfr-fairy-tale.png",
+    "firstNightReminder": " ",
+    "otherNightReminder": " ",
+    "reminders": [
+      "猎物",
+      "死亡"
+    ],
+    "name": "大灰狼",
+    "team": "demon",
+    "ability": "在你的首个夜晚，你要选择一名存活玩家成为猎物。每个夜晚*，你要选择一名玩家：他死亡。如果猎物在今天白天死亡，改为选择两名玩家，随后，你要选择新的猎物。",
+    "firstNight": 16,
+    "otherNight": 6
+  },
+  {
+    "id": "21_th",
+    "image": "https://i.postimg.cc/63cSHjsj/babayaga-fairy-tale.png",
+    "firstNightReminder": " ",
+    "otherNightReminder": " ",
+    "reminders": [
+      "是芭芭雅嘎",
+      "中毒"
+    ],
+    "setup": true,
+    "name": "芭芭雅嘎",
+    "team": "demon",
+    "ability": "每个夜晚限一次，选择一个角色：你获得该角色的能力直到你改变选择，如果该角色在场，该角色中毒。[-1外来者]",
+    "firstNight": 12,
+    "otherNight": 3
+  },
+  {
+    "id": "22_th",
+    "image": "https://i.postimg.cc/MTptGz45/rakshasa-fairy-tale.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "大开杀戒",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "罗刹",
+    "team": "demon",
+    "ability": "每个夜晚*，如果今天白天死亡的玩家与你昨晚杀死的玩家角色类型不同，你要选择至多两名玩家：他们死亡。[+1外来者]。",
+    "otherNight": 7
+  },
+  {
+    "id": "24_th",
+    "image": "https://i.postimg.cc/VNRD1J75/queenofhearts-fairy-tale.png",
+    "otherNightReminder": " ",
+    "reminders": [
+      "死亡",
+      "红心",
+      "方块",
+      "黑桃",
+      "梅花"
+    ],
+    "name": "红心皇后",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择发布一个未发布过的赦令并执行效果。随后，你要选择一名玩家：他死亡。",
+    "otherNight": 5
+  },
+  {
+    "id": "30_fairy_tale_hugo",
+    "image": "https://i.postimg.cc/ZYWyKkWc/download-2.png",
+    "name": "红心赦令",
+    "team": "fabled",
+    "ability": "所有其他玩家中毒，直到下个黄昏。",
+    "flavor": ""
+  },
+  {
+    "id": "31_fairy_tale_hugo",
+    "image": "https://i.postimg.cc/ZnvZkxK8/download-1.png",
+    "name": "黑桃赦令",
+    "team": "fabled",
+    "ability": "死亡的爪牙与你今晚击杀的爪牙重获能力直到下个黄昏。",
+    "flavor": ""
+  },
+  {
+    "id": "32_fairy_tale_hugo",
+    "image": "https://i.postimg.cc/fLrZgrZW/download.png",
+    "name": "方块赦令",
+    "team": "fabled",
+    "ability": "你要选择一名玩家:他死亡。如果你因此杀死了一名爪牙，刷新其他所有令。",
+    "flavor": ""
+  },
+  {
+    "id": "33_fairy_tale_hugo",
+    "image": "https://i.postimg.cc/MXkwzfvh/download-3.png",
+    "name": "梅花赦令",
+    "team": "fabled",
+    "ability": "你要选择一名玩家:他死亡。即使任何原因让他不会死亡。",
+    "flavor": ""
+  },
+  {
+    "id": "25_fairy_tale_hugo",
+    "image": "https://i.postimg.cc/KYgSJVw6/shrek-fairy-tale.png",
+    "firstNightReminder": "如果史莱克没有打破疯狂，唤醒他，并让他选择一名玩家。该玩家在明天白天要“疯狂”地证明他是唐基。",
+    "otherNightReminder": "如果史莱克没有打破疯狂，唤醒他，并让他选择一名玩家。该玩家在明天白天要“疯狂”地证明他是唐基。",
+    "reminders": [
+      "我是史莱克",
+      "我是唐基"
+    ],
+    "name": "史莱克",
+    "team": "traveler",
+    "ability": "每个夜晚，如果你在游戏中“疯狂”地证明自己是史莱克（指电影角色），你要选择一名玩家：他在下个白天要“疯狂”地证明他是唐基（指电影角色），否则他不能投票。",
+    "flavor": "有人曾经告诉我，世界将要转动。",
+    "firstNight": 12,
+    "otherNight": 5
+  },
+  {
+    "id": "26_fairy_tale_hugo",
+    "image": "https://i.postimg.cc/GpN3pvnC/gingerbreadman-fairy-tale.png",
+    "firstNightReminder": "唤醒姜饼人，让他指向一名玩家。唤醒那名玩家，向他展示“该角色能力对你生效”提示卡并展示姜饼人角色标记，并让他立刻行动。",
+    "otherNightReminder": "唤醒姜饼人，让他指向一名玩家。唤醒那名玩家，向他展示“该角色能力对你生效”提示卡并展示姜饼人角色标记，并让他立刻行动。",
+    "name": "姜饼人",
+    "team": "traveler",
+    "ability": "每个夜晚，你要选择一名玩家：如果他今晚可以行动，他得知自己被你选择，并且他在你的行动结束后立即行动。",
+    "flavor": "快点动起来。",
+    "firstNight": 12,
+    "otherNight": 2
+  },
+  {
+    "id": "27_fairy_tale_hugo",
+    "image": "https://i.postimg.cc/Z5b5sTx1/chesirecat-fairy-tale.png",
+    "firstNightReminder": "唤醒柴郡猫，让他指向一名玩家，他在今晚仅有一次会被当作错误的角色/阵营。",
+    "otherNightReminder": "唤醒柴郡猫，让他指向一名玩家，他在今晚仅有一次会被当作错误的角色/阵营。",
+    "reminders": [
+      "错误",
+      "限一次"
+    ],
+    "name": "柴郡猫",
+    "team": "traveler",
+    "ability": "每个夜晚，你要选择一名玩家：当晚限一次，他可能被当作错误的角色和阵营。你可以在下个白天询问说书人并得知那名玩家今晚得知的信息。",
+    "flavor": "怎么了，亲爱的？我的微笑让你不安吗？",
+    "firstNight": 14,
+    "otherNight": 4
+  },
+  {
+    "id": "28_fairy_tale_hugo",
+    "image": "https://i.postimg.cc/66VKkkqw/princecharming-fairy-tale.png",
+    "firstNightReminder": "唤醒白马王子，让他指向一名玩家（与上个夜晚不同），为那名放置迷恋标记。该玩家在今晚获取的信息必须包括白马王子，使用其自身能力选择的目标改为白马王子。",
+    "otherNightReminder": "唤醒白马王子，让他指向一名玩家（与上个夜晚不同），为那名放置迷恋标记。该玩家在今晚获取的信息必须包括白马王子，使用其自身能力选择的目标改为白马王子。",
+    "reminders": [
+      "迷恋"
+    ],
+    "name": "白马王子",
+    "team": "traveler",
+    "ability": "每个夜晚，你要选择一名玩家（与上个夜晚不同）：他获取信息的目标必须包括你在内，并且他的自身能力必须指向你，直至下个黄昏。",
+    "flavor": "我穿衬衫太性感了。",
+    "firstNight": 13,
+    "otherNight": 3
+  },
+  {
+    "id": "29_fairy_tale_hugo",
+    "image": "https://i.postimg.cc/3xx3CtKh/magicmirror-fairy-tale.png",
+    "otherNightReminder": "唤醒魔镜，他要么摇头，要么角色列表上的一个角色，说书人决定角色对应的玩家遭遇什么不好的事情。",
+    "reminders": [
+      "失去能力",
+      "不好的事"
+    ],
+    "name": "魔镜",
+    "team": "traveler",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一个角色：该角色的玩家会发生不好的事情。",
+    "flavor": "魔镜魔镜告诉我，谁是世上最坏的人？",
+    "otherNight": 6
+  }
+]

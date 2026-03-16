@@ -1,0 +1,368 @@
+[
+  {
+    "id": "_meta",
+    "name": "犹格斯真菌",
+    "author": "SE",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/adtlo7w2jtotvhwbzk9mytzyyhcxga5.png",
+    "almanac": "有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "26_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/4cvv6gx6js190zpjqm110ps4j6bl587.png",
+    "firstNightReminder": "唤醒贵族，对他指向三名玩家。这三名玩家中有且仅有一名是邪恶玩家。",
+    "reminders": [
+      "被得知"
+    ],
+    "name": "贵族",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。",
+    "firstNight": 18000
+  },
+  {
+    "id": "27_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9d/d3dsbqa7qxdctiw9bbmgyq67paqjthv.png",
+    "firstNightReminder": "唤醒钦天监，对他指向对应方向来告知他最近的邪恶玩家的方向。",
+    "name": "钦天监",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知离你最近的邪恶玩家位于你的哪一侧（左/右/相同）。如果与你邻近的玩家中有邪恶阵营，你会得知错误信息。",
+    "firstNight": 19000
+  },
+  {
+    "id": "28_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0b/5vm43eozf935l4abdkoo5uud7z4rquc.png",
+    "firstNightReminder": "在首个夜晚，唤醒调音师。对他展示一个外来者角色和一个爪牙角色，这两个角色需要满足其中一个在场而另一个不在场的条件。",
+    "name": "调音师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个外来者角色和一个爪牙角色，他们中有且只有一个在场。",
+    "firstNight": 20000
+  },
+  {
+    "id": "29_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/91/04je4dg5ituw4nymx4f0x0b80p6gntg.png",
+    "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 17000,
+    "otherNight": 14
+  },
+  {
+    "id": "30_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/0d9uthaidhlal5rz0zjx2tvzzrviqdo.png",
+    "firstNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "otherNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 21000,
+    "otherNight": 18
+  },
+  {
+    "id": "31_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ed/8gb1ezkhqkc865jead15pevypmc72g9.png",
+    "otherNightReminder": "唤醒城镇公告员，以点头或摇头告知他今天白天是否有爪牙发起提名。",
+    "reminders": [
+      "爪牙未提名",
+      "爪牙已提名"
+    ],
+    "name": "城镇公告员",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天时是否有爪牙发起过提名。",
+    "otherNight": 15
+  },
+  {
+    "id": "32_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/32/0gt9g6fcf1dfqxt3mpthhhg4z4riivt.png",
+    "firstNightReminder": "唤醒引路人，让他选择至多三名玩家，告诉引路人今晚是否有邪恶玩家的能力选择或影响了他们之中的玩家。",
+    "otherNightReminder": "唤醒引路人，让他选择至多三名玩家，告诉引路人今晚是否有邪恶玩家的能力选择或影响了他们之中的玩家。",
+    "name": "引路人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择至多三名玩家：你会得知今晚是否有邪恶玩家的能力选择或影响了他们之中的玩家。",
+    "firstNight": 22000,
+    "otherNight": 19
+  },
+  {
+    "id": "33_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/eb/h05w4mb2leuobylf99jvhui1zx0sh49.png",
+    "otherNightReminder": "在六扇门提名时，在对应的玩家标记旁放置“追查”标记。在夜晚时，唤醒六扇门，用点头和摇头来示意与有“追查”标记邻近的玩家中是否存在非镇民玩家。",
+    "reminders": [
+      "追查"
+    ],
+    "name": "六扇门",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知今天白天你提名的玩家邻近的玩家中是否存在非镇民玩家。",
+    "otherNight": 16
+  },
+  {
+    "id": "34_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0a/55q4nfyb9gftn9jiujtt49ti2qa33h6.png",
+    "otherNightReminder": "唤醒赌徒，让他进行猜测。如果猜测错误，他死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "赌徒",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测该玩家的角色：如果你猜错了，你会死亡。",
+    "otherNight": 4
+  },
+  {
+    "id": "35_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/5/55/hegup32ipc3yibzhq46uzg8zo9xu2le.png/1200px-%E9%95%87%E6%B0%91_%E7%8C%AB%E7%8C%AB%E6%8E%A2%E9%99%A9%E9%98%9F_%E5%A4%AA%E4%B8%80.png",
+    "otherNightReminder": "如果“探险者”存活，告知猫猫探险队一名与“探险者”阵营相同的玩家。",
+    "reminders": [
+      "探险者"
+    ],
+    "name": "猫猫探险队",
+    "team": "townsfolk",
+    "ability": "每个白天限一次，没有“探险”过的存活玩家可以公开“探险”：在当晚，如果他存活，你会得知一名与他阵营不同的玩家。",
+    "otherNight": 17
+  },
+  {
+    "id": "36_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a3/nxckynoy8mshn7pwnsnnraceso4zx2p.png",
+    "otherNightReminder": "唤醒僧侣，让他选择除自己以外的一名玩家，那名玩家今晚免受恶魔负面效果影响。",
+    "reminders": [
+      "保护"
+    ],
+    "name": "僧侣",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的一名玩家：当晚恶魔的负面能力对他无效。",
+    "otherNight": 3
+  },
+  {
+    "id": "37_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/79/8rd5mfvpkzq4i73sctbzjyrvthr082g.png",
+    "name": "镇长",
+    "team": "townsfolk",
+    "ability": "如果只有三名玩家存活且白天没有人被处决，你的阵营获胜。如果你在夜晚死亡，可能会有一名其他玩家代替你死亡。"
+  },
+  {
+    "id": "38_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6f/nxsyozfqf4p0mhg7vez1iiewlfac6iv.png",
+    "otherNightReminder": "如果死亡唤醒他，告知他所有类型的玩家（除旅行者）各一名。如果他被标记了“醉酒”，你可以告知他错误信息。",
+    "reminders": [
+      "被得知",
+      "醉酒"
+    ],
+    "name": "空中飞人",
+    "team": "townsfolk",
+    "ability": "你死亡的当晚会被唤醒并得知所有角色类型的玩家各一名。你死于善良玩家发起的提名处决或能力时你醉酒。",
+    "otherNight": 13
+  },
+  {
+    "id": "39_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/3c/hulwpl4c71z09ixgyg3dlkeega2a3an.png",
+    "otherNightReminder": "如果月之子在今天白天的时候使用自己的能力选择了一名善良玩家，那名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "月之子",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。",
+    "otherNight": 12
+  },
+  {
+    "id": "40_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/1a/m6s8wbkeie9d2pyx1qb5agosonjypaq.png",
+    "name": "政客",
+    "team": "outsider",
+    "ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。"
+  },
+  {
+    "id": "1_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/1e/981aphu0rhqqyyo6g7ny7pqeucww4a2.png",
+    "remindersGlobal": [
+      "是唠叨者",
+      "修改现实"
+    ],
+    "name": "唠叨者",
+    "team": "outsider",
+    "ability": "你拥有一个镇民角色的能力。 你“疯狂”证明正确的事可能会变成错误。"
+  },
+  {
+    "id": "2_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/62/rbspu4swneysyg4tfo01y1d9jrdqx70.png",
+    "firstNightReminder": "告诉一名善良玩家：梦游者在场。",
+    "remindersGlobal": [
+      "是梦游者",
+      "得知"
+    ],
+    "setup": true,
+    "name": "梦游者",
+    "team": "outsider",
+    "ability": "你以为你是一个镇民角色，但在相同情况下，你的能力却与其有所不同。一名善良玩家知道你在游戏中。",
+    "firstNight": 16000
+  },
+  {
+    "id": "migo1_daoluyimu",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/daoluyimu/migo1_daoluyimu.png",
+    "otherNightReminder": "说书人放置一个“沉默”标记到一名说书人认为最沉默的玩家身上，随后唤醒米·戈，让他选择一个玩家和一个角色，如果猜测正确，放置“中毒”标记到猜测正确的玩家身上。如果那名玩家被说书人放置了“沉默”标记，不管猜测是否正确，他死亡，移除沉默标记替换成“死亡”标记。",
+    "reminders": [
+      "沉默",
+      "中毒",
+      "死亡"
+    ],
+    "name": "米·戈",
+    "team": "minion",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测他的角色：如果猜测正确，他中毒直到你下次行动；如果猜测错误且他是说书人认为上一个白天最沉默寡言的玩家，他死亡。",
+    "flavor": "咔嗒—嗡嗡—嘶咿咿……咿啭·咿啭……\n“Zzrrh-ka… thrii… n’kath.”\n嗡——喀、喀——嗡——\n“听见了吗？你们的静默像雪一样厚。开口，发声，交换讯息；不然我们会把你当作空壳，带走你最有价值的那一部分。”",
+    "otherNight": 11
+  },
+  {
+    "id": "43_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/09ros4hk5mg8d380fmaxr5wzrsliinv.png",
+    "firstNightReminder": "唤醒鹰身女妖，让她选择两名玩家，第一名玩家明天需要“疯狂”证明第二名玩家邪恶。在鹰身女妖入睡后通知第一名玩家被鹰身女妖选中。",
+    "otherNightReminder": "唤醒鹰身女妖，让她选择两名玩家，第一名玩家明天需要“疯狂”证明第二名玩家邪恶。在鹰身女妖入睡后通知第一名玩家被鹰身女妖选中。",
+    "reminders": [
+      "疯狂",
+      "第二名"
+    ],
+    "name": "鹰身女妖",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择两名玩家：明天第一名玩家需要“疯狂”地证明第二名玩家是邪恶的，否则他们之中可能会有人死亡。",
+    "firstNight": 13000,
+    "otherNight": 5
+  },
+  {
+    "id": "_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a8/cp4tivyy734ut9fus8od0zub508qx8y.png",
+    "firstNightReminder": "唤醒教父，对他展示外来者角色标记，告诉他有哪些外来者在场。",
+    "otherNightReminder": "如果今天白天有外来者死亡，唤醒教父，让他攻击一名玩家。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "教父",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]",
+    "firstNight": 12000,
+    "otherNight": 10
+  },
+  {
+    "id": "44_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/99/i114w7koyl3l5ttn4mo15ya6s3b8kbp.png",
+    "firstNightReminder": "让妖猫选择一名玩家，给被选中的玩家放置喵标记，告知被选中的玩家发言只能是“喵喵喵”直至下个黄昏。",
+    "otherNightReminder": "让妖猫选择一名玩家，给被选中的玩家放置喵标记，告知被选中的玩家发言只能是“喵喵喵”直至下个黄昏。",
+    "reminders": [
+      "喵"
+    ],
+    "name": "妖猫",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家（可选说书人1次）：他中毒（恶魔除外）且发言只能是“喵喵喵”直至下个黄昏，不然可能被处决。",
+    "firstNight": 14000,
+    "otherNight": 6
+  },
+  {
+    "id": "45_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a2/otom7ysg9j2rijmsne4c532v4ykbp9f.png",
+    "firstNightReminder": "唤醒双头巨人，让他选择一名玩家，将他选择的玩家变为邪恶的双头巨人，并让2名双头巨人互认。如果双头巨人选中一名爪牙或者恶魔，你可以让他重新选择。",
+    "otherNightReminder": "如果一名双头巨人已经死亡，标记所有其他双头巨人死亡。",
+    "reminders": [
+      "共生体",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "双头巨人",
+    "team": "minion",
+    "ability": "你死亡后其他双头巨人会在当晚死亡。只有所有双头巨人一起投票，他们的投票才有效。[+1双头巨人（你决定谁是）]",
+    "firstNight": 11,
+    "otherNight": 2
+  },
+  {
+    "id": "46_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/3a/3bzh51psxnf95lld35qn6wywp4aduor.png",
+    "otherNightReminder": "唤醒亡骨魔，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "保留能力",
+      "中毒"
+    ],
+    "setup": true,
+    "name": "亡骨魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+    "otherNight": 7
+  },
+  {
+    "id": "48_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/09/mxpvbxh4oq8jnp6cyzgyllb5txl614k.png",
+    "otherNightReminder": "让亚瑟王选择一名玩家。标记那名玩家死亡。如果他是爪牙且可以被亚瑟王杀死，为他放置“王车易位”标记然后为亚瑟王和爪牙交换角色且会有2名玩家代替他死亡。",
+    "reminders": [
+      "死亡",
+      "王车易位"
+    ],
+    "name": "亚瑟王",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家:他死亡。被该能力杀死的爪牙改为与你交换角色且会有2名玩家代替他死亡，但每局游戏仅能成功转化一次。",
+    "otherNight": 9
+  },
+  {
+    "id": "49_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/49/863ousn3gady70ilssmdzvzl2kbn1ee.png",
+    "firstNightReminder": "唤醒牙噶巴卜，对他展示他的秘密短语。",
+    "otherNightReminder": "根据已放置的提示标记数量，选择最多等同于该数量的玩家死亡。该夜晚行动只是一个提示，死亡的造成时机可以是白天，也可以是夜晚的任何时候。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "牙噶巴卜",
+    "team": "demon",
+    "ability": "在你的首个夜晚，你会得知一段秘密短语。每次你在白天公开说出这段短语，当天便可能会有一名玩家在这之后死亡。",
+    "firstNight": 15000,
+    "otherNight": 8
+  },
+  {
+    "id": "50_daoluyimu",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/36/kmrowr4h491q6i775hrp57mscbuvya6.png",
+    "name": "利益熏心的圣洁之魂",
+    "team": "fabled",
+    "ability": "游戏过程中邪恶玩家的总数最多能比初始设置多一名，当场是只剩下一名存活的邪恶玩家时，政客可以无视圣洁之魂的效果。"
+  },
+  {
+    "id": "ke1_daoluyimu",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/daoluyimu/ke1_daoluyimu.png",
+    "name": "K·E",
+    "team": "fabled",
+    "ability": "被“疯狂”和妖猫选择的玩家更容易被说书人认为是沉默的。"
+  },
+  {
+    "id": "51_daoluyimu",
+    "name": "亡骨魔&双头巨人",
+    "team": "a jinxed",
+    "ability": "如果亡骨魔杀死了双头巨人，那么两个双头巨人都视为被亡骨魔杀死，两个双头巨人两侧的镇民之一会中毒。"
+  },
+  {
+    "id": "3_daoluyimu",
+    "name": "双头巨人&引路人",
+    "team": "a jinxed",
+    "ability": "引路人会得知被加入的双头巨人（引路人在首夜选择了被加入红的双头巨人会得知是）。"
+  },
+  {
+    "id": "4_daoluyimu",
+    "name": "亡骨魔&双头巨人&僧侣",
+    "team": "a jinxed",
+    "ability": "如果僧侣守护了因为被亡骨魔杀死而被连带死亡的双头巨人，那么被守护的双头巨人不会死我转而会在下个夜晚死亡。"
+  },
+  {
+    "id": "5_daoluyimu",
+    "name": "双头巨人&侍女",
+    "team": "a jinxed",
+    "ability": "首夜选择的双头巨人和被选择的双头巨人都会被侍女得知+1。"
+  },
+  {
+    "id": "6_daoluyimu",
+    "name": "双头巨人",
+    "team": "a jinxed",
+    "ability": "SE不建议大家通过强制验票的玩法来验证双头巨人的位置，且一个白天提名数应当控制在5次及以下。"
+  },
+  {
+    "id": "7_daoluyimu",
+    "name": "侍女&引路人",
+    "team": "a jinxed",
+    "ability": "侍女会得知引路人是否醒来，即使她是在引路人之前醒来。"
+  }
+]

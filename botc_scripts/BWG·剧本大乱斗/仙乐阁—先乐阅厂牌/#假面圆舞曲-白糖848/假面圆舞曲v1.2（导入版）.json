@@ -1,0 +1,397 @@
+﻿[
+    {
+        "id": "_meta",
+        "name": "假面圆舞曲",
+        "author": "白糖848",
+        "almanac": "https://www.bloodstar.xyz/p/baitang848/jmywq2/almanac.html"
+    },
+    {
+        "id": "_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bd4ab02d8.png",
+        "name": "私货商人",
+        "team": "fabled",
+        "ability": "这个剧本包含有自制角色或自制规则。"
+    },
+    {
+        "id": "1_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bd95e2da3.png",
+        "name": "灯神",
+        "team": "fabled",
+        "ability": "使用灯神的相克规则。所有玩家都会知道其内容。"
+    },
+    {
+        "id": "2_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bd4ab02d8.png",
+        "firstNightReminder": " ",
+        "otherNightReminder": " ",
+        "name": "特殊规则：舞曲渐起",
+        "team": "jinxes",
+        "ability": "恶魔与爪牙不会互相认识。每个黎明，恶魔要选择一个善良角色：该角色在本局游戏的余下时段内受到暴风捕手影响，并在白天时宣布该角色（如果是第一个白天则同时宣布暴风捕手加入游戏）。所有受暴风捕手影响的角色对应的玩家不会被计入邪恶阵营的获胜条件。",
+        "flavor": "当假面随着音乐声开始剥落……我们能看到什么样的表情呢？",
+        "firstNight": 17,
+        "otherNight": 17
+    },
+    {
+        "id": "25_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bd4ab02d8.png",
+        "name": "不完美的假面",
+        "team": "fabled",
+        "ability": "部分来自botc玩家原创角色档案馆的角色描述与能力会与原版不同（能力发生变化的会以*标注）"
+    },
+    {
+        "id": "3_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bd4ab02d8.png",
+        "name": "私货相克规则",
+        "team": "fabled",
+        "ability": "浸礼会教徒&吟游诗人：若一名爪牙被处决同时触发了浸礼会教徒与吟游诗人的能力，浸礼会教徒会先转变该爪牙的阵营。"
+    },
+    {
+        "id": "4_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bd95e2da3.png",
+        "remindersGlobal": [
+            "失去能力"
+        ],
+        "name": "相克规则",
+        "team": "fabled",
+        "ability": "痢蛭&主谋：如果主谋存活且痢蛭的宿主死于处决，痢蛭存活但失去能力。"
+    },
+    {
+        "id": "5_jmywq2",
+        "image": "https://www.bloodstar.xyz/p/baitang848/jmywq2/5_jmywq2.png",
+        "otherNightReminder": " ",
+        "reminders": [
+            "死亡",
+            "平安夜",
+            "礼物用尽"
+        ],
+        "name": "撒旦老人",
+        "team": "demon",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡，然后每局游戏限一次，如果上个夜晚没有玩家死亡，你可以选择一个玩家，他加入你的阵营。",
+        "flavor": "今天要留给好孩子们的礼物是：人瓜馅饼、人排、鲜血牌红巧克力……",
+        "otherNight": 11
+    },
+    {
+        "id": "6_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853ba493d3a1.png",
+        "firstNightReminder": " ",
+        "otherNightReminder": " ",
+        "reminders": [
+            "中毒",
+            "死亡"
+        ],
+        "name": "痢蛭",
+        "team": "demon",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名存活的玩家：他中毒，只有当他处于死亡状态时你才会立即死亡。",
+        "firstNight": 15,
+        "otherNight": 13
+    },
+    {
+        "id": "7_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853c05e21e39.png",
+        "otherNightReminder": " ",
+        "reminders": [
+            "死亡"
+        ],
+        "remindersGlobal": [
+            "行动两次"
+        ],
+        "name": "西西弗斯*",
+        "team": "demon",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。在夜晚时，如果场上没有存活的邪恶爪牙，你要选择一个除西西弗斯以外的恶魔角色：你变成那个角色，并在之后每个夜晚额外行动一次。",
+        "otherNight": 10
+    },
+    {
+        "id": "8_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853ba288264a.png",
+        "otherNightReminder": " ",
+        "reminders": [
+            "死于今日",
+            "死亡"
+        ],
+        "name": "僵怖",
+        "team": "demon",
+        "ability": "每个夜晚*，如果今天白天没有人死亡，你会被唤醒并要选择一名玩家：他死亡。当你首次死亡后，你仍存活，但会被当作死亡。",
+        "otherNight": 12
+    },
+    {
+        "id": "10_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853cef786769.png",
+        "name": "炸弹人",
+        "team": "minion",
+        "ability": "如果你被处决，除三名玩家以外的其他所有玩家均会死亡。倒数十声后，被最多玩家手指指着的玩家死亡。"
+    },
+    {
+        "id": "11_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853c0034904e.webp",
+        "setup": true,
+        "name": "庄园主",
+        "team": "minion",
+        "ability": "如果“疯狂”证明自己是外来者的玩家的数量与在场外来者数量不符，其中一名“疯狂”的玩家可能被处决。[+/-1外来者]"
+    },
+    {
+        "id": "12_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853b7ca7291c.png",
+        "reminders": [
+            "死于恶魔"
+        ],
+        "name": "假面酒侍",
+        "team": "minion",
+        "ability": "如果你在夜晚被恶魔杀死，且下一名被处决的玩家为邪恶阵营，你的阵营获胜。"
+    },
+    {
+        "id": "13_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bcaf2ed9e.png",
+        "name": "主谋",
+        "team": "minion",
+        "ability": "如果恶魔因为死于处决而因此导致游戏结束时，再额外进行一个夜晚和一个白天。在那个白天如果有玩家被处决，他的阵营落败。"
+    },
+    {
+        "id": "38_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853b896dfe1a.png",
+        "otherNightReminder": " ",
+        "reminders": [
+            "今晚理发"
+        ],
+        "name": "理发师",
+        "team": "outsider",
+        "ability": "如果你死亡，在当晚恶魔可以选择两名玩家（不能选择其他恶魔）交换角色。",
+        "otherNight": 14
+    },
+    {
+        "id": "15_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853b8b7bd35e.png",
+        "name": "呆瓜",
+        "team": "outsider",
+        "ability": "当你得知你死亡时，你要公开选择一名存活的玩家：如果他是邪恶的，你的阵营落败。"
+    },
+    {
+        "id": "16_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853b9ca76cd4.png",
+        "reminders": [
+            "无法提名"
+        ],
+        "name": "魔像",
+        "team": "outsider",
+        "ability": "每局游戏你只能发起提名一次。当你发起提名时，如果被你提名的玩家不是恶魔，他死亡。"
+    },
+    {
+        "id": "18_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bc5c12caf.png",
+        "reminders": [
+            "醉酒",
+            "已猜测"
+        ],
+        "name": "解谜大师",
+        "team": "outsider",
+        "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。"
+    },
+    {
+        "id": "19_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853d7fd16318.png",
+        "otherNightReminder": " ",
+        "reminders": [
+            "死于今日"
+        ],
+        "name": "秉笔",
+        "team": "townsfolk",
+        "ability": "如果你在白天死亡，当晚你会得知一名善良玩家。如果你在夜晚死亡，当晚你会得知一名邪恶玩家。",
+        "otherNight": 14.1
+    },
+    {
+        "id": "20_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bb77b9d04.png",
+        "firstNightReminder": " ",
+        "otherNightReminder": " ",
+        "reminders": [
+            "？"
+        ],
+        "name": "失忆者",
+        "team": "townsfolk",
+        "ability": "你不知道你的能力是什么。每个白天你可以找说书人猜测一次，你会得知你的猜测有多准确。",
+        "firstNight": 14,
+        "otherNight": 8
+    },
+    {
+        "id": "21_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853b90ba3b33.png",
+        "firstNightReminder": " ",
+        "otherNightReminder": " ",
+        "reminders": [
+            "醉酒"
+        ],
+        "remindersGlobal": [
+            "是哲学家"
+        ],
+        "name": "哲学家",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在夜晚时，你可以选择一个善良角色：你获得该角色的能力。如果这个角色在场，他醉酒。",
+        "firstNight": 1,
+        "otherNight": 4
+    },
+    {
+        "id": "22_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853d8f9b1939.png",
+        "otherNightReminder": " ",
+        "reminders": [
+            "复活",
+            "失去能力"
+        ],
+        "name": "教授",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一名死亡的玩家：如果他是镇民，你会将他起死回生。",
+        "otherNight": 15
+    },
+    {
+        "id": "23_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bc0050974.png",
+        "reminders": [
+            "全员醉酒"
+        ],
+        "name": "吟游诗人",
+        "team": "townsfolk",
+        "ability": "当一名爪牙死于处决时，除了你和旅行者以外的所有其他玩家醉酒直到明天黄昏。"
+    },
+    {
+        "id": "37_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853baf69e0b2.png",
+        "name": "博学者",
+        "team": "townsfolk",
+        "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+    },
+    {
+        "id": "24_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853b8de8adff.png",
+        "firstNightReminder": " ",
+        "name": "钟表匠",
+        "team": "townsfolk",
+        "ability": "在你的首个夜晚，你会得知恶魔与爪牙之间最近的距离。（邻座的玩家距离为1）",
+        "firstNight": 16
+    },
+    {
+        "id": "26_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bb25637e0.png",
+        "otherNightReminder": " ",
+        "reminders": [
+            "恶魔未投票",
+            "恶魔已投票"
+        ],
+        "name": "卖花女孩",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，你会得知在今天白天时是否有恶魔投过票。",
+        "otherNight": 15
+    },
+    {
+        "id": "27_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853d81e8805e.png",
+        "firstNightReminder": " ",
+        "otherNightReminder": " ",
+        "reminders": [
+            "治疗"
+        ],
+        "name": "庸医",
+        "team": "townsfolk",
+        "ability": "每个夜晚，你要选择两名存活玩家：今晚任何玩家使用自身能力选择他们之一作为目标时，改为选中另一名玩家。恶魔不会因此能力而死亡。",
+        "firstNight": 13.9,
+        "otherNight": 7
+    },
+    {
+        "id": "28_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bec0f22a0.png",
+        "reminders": [
+            "失去能力"
+        ],
+        "name": "舰队司令",
+        "team": "townsfolk",
+        "ability": "每局游戏限一次，在白天时，你可以私下询问说书人以得知两名玩家：其中一名是对你们帮助最大的对立阵营玩家，另一名是对你们损害最大的我方阵营玩家。"
+    },
+    {
+        "id": "29_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bf66c0c0b.png",
+        "otherNightReminder": " ",
+        "reminders": [
+            "唤醒邪恶"
+        ],
+        "setup": true,
+        "name": "鸟类学家",
+        "team": "townsfolk",
+        "ability": "当你存活时，爪牙和恶魔不知道自己的角色和能力是什么。如果你死亡，当晚他们会知道自己的角色和能力。[爪牙和恶魔会抽到空白标记]",
+        "otherNight": 6
+    },
+    {
+        "id": "30_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853bf02a980d.png",
+        "otherNightReminder": " ",
+        "name": "学院院长*",
+        "team": "townsfolk",
+        "ability": "每个夜晚*，如果邪恶玩家中仅有恶魔存活，你死亡并得知他是谁。",
+        "otherNight": 16
+    },
+    {
+        "id": "31_jmywq2",
+        "image": "https://s1.imagehub.cc/images/2025/06/19/af5ef9de2c36ba5337fef5b2deb39e04.png",
+        "otherNightReminder": " ",
+        "reminders": [
+            "失去能力"
+        ],
+        "setup": true,
+        "name": "浸礼会教徒",
+        "team": "townsfolk",
+        "ability": "第一个死亡的爪牙加入你的阵营并得知你是谁。[+1爪牙，-1外来者]",
+        "otherNight": 5
+    },
+    {
+        "id": "32_jmywq2",
+        "image": "https://www.bloodstar.xyz/p/baitang848/jmywq2/32_jmywq2.png",
+        "name": "教皇",
+        "team": "traveller",
+        "ability": "每个白天，你可以公开对说书人提一个建议：说书人会宣布他是否采纳该建议。",
+        "flavor": "Urbi et Orbi（致城市与世界）"
+    },
+    {
+        "id": "33_jmywq2",
+        "image": "https://s1.imagehub.cc/images/2025/06/19/445d500b620c2dcb981d6d2778cab85f.png",
+        "firstNightReminder": " ",
+        "otherNightReminder": " ",
+        "reminders": [
+            "接听电话"
+        ],
+        "name": "经销商",
+        "team": "traveller",
+        "ability": "每个夜晚，你会得知明天当电话铃响后接听电话后会发生什么：接听电话的人也会知道会发生什么。",
+        "firstNight": 12,
+        "otherNight": 2
+    },
+    {
+        "id": "34_jmywq2",
+        "image": "https://s1.imagehub.cc/images/2025/06/19/0a6240337703421aa03b9e3929a88b6f.png",
+        "firstNightReminder": " ",
+        "otherNightReminder": " ",
+        "reminders": [
+            "3票"
+        ],
+        "name": "官员",
+        "team": "traveller",
+        "ability": "每个夜晚，你要选择除你以外的一名玩家：明天白天，他的投票算作三票。",
+        "firstNight": 11,
+        "otherNight": 1
+    },
+    {
+        "id": "35_jmywq2",
+        "image": "https://img.picui.cn/free/2025/06/19/6853c34ca7a55.png",
+        "otherNightReminder": "",
+        "reminders": [
+            "死亡"
+        ],
+        "name": "流莺",
+        "team": "traveller",
+        "ability": "每个夜晚*，你要选择一名存活的玩家：如果他同意，你会得知他的角色，但是你们两个可能同时死亡。",
+        "otherNight": 3
+    },
+    {
+        "id": "36_jmywq2",
+        "image": "https://s1.imagehub.cc/images/2025/06/19/98f471699a5e2720534ad6c87807e1d0.png",
+        "name": "巫毒师",
+        "team": "traveller",
+        "ability": "只有你和死亡的玩家可以投票，且投票不需要使用投票标记。忽略票数需要过半的要求。"
+    }
+]

@@ -1,0 +1,433 @@
+[
+    {
+        "id": "_meta",
+        "name": "布偶惊魂",
+        "logo": "https://i.postimg.cc/yWqyVvg4/Title.png",
+        "author":"Patrick & Josie",
+        "description": "",
+        "townsfolkName": "镇民",
+        "outsidersName": "外来者",
+        "minionsName": "爪牙",
+        "demonsName": "恶魔",
+        "townsfolk": "镇民",
+        "outsider": "外来者",
+        "minion": "爪牙",
+        "demon": "恶魔",
+        "a jinxedName": "相克",
+        "a jinxed": "相克",
+        "state": [ ]
+    },
+    {
+        "id": "bensen",
+        "image": "https://i.postimg.cc/c4s3gpw3/image.png",
+        "edition": "custom",
+        "name": "本森博士",
+        "ability": "在你的首个夜晚，你会得知有多少名在场角色能够创造人类演员。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 1,
+        "otherNight": 0,
+        "firstNightReminder": "计算以下角色在场的数量：山姆鹰，摄像师，动物鼓手，猪小姐，致命叔叔。",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+    {
+        "id": "rowlf",
+        "image": "https://i.postimg.cc/mkdgF5W3/image.png",
+        "edition": "custom",
+        "name": "罗尔夫狗",
+        "ability": "在你的首个夜晚，你会得知两名非镇民玩家。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 2,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "不是镇民"
+        ],
+        "setup": false
+    },
+    {
+        "id": "pepe",
+        "image": "https://i.postimg.cc/sDwhpT4N/image.png",
+        "edition": "custom",
+        "name": "对虾佩佩",
+        "ability": "在你的首个夜晚，你会得知在场的恶魔角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 3,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+    {
+        "id": "sam",
+        "image": "https://i.postimg.cc/wv26SGMK/image.png",
+        "edition": "custom",
+        "name": "山姆鹰",
+        "ability": "每个夜晚，你会得知一名存活的邪恶玩家与你之间的距离。（邻座的玩家距离为1）[+1人类演员]",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 4,
+        "otherNight": 12,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": ["是人类"],
+        "setup": true
+    },
+    {
+        "id": "kermit",
+        "image": "https://i.postimg.cc/zGyVT8By/image.png",
+        "edition": "custom",
+        "name": "科米蛙",
+        "ability": "每个夜晚*，你要选择除你以外的一名玩家：如果你选中了人类演员，他会变成他以为的那个镇民角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 11,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+    {
+        "id": "camilla",
+        "image": "https://i.postimg.cc/MT2MWNzv/image.png",
+        "edition": "custom",
+        "name": "卡米拉鸡",
+        "ability": "每个夜晚*，你会得知一名与今天白天死于处决的玩家相同阵营的玩家。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 13,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+           "今日被处决"
+        ],
+        "remindersGlobal": [],
+        "setup": false
+    },
+    {
+        "id": "sweet",
+        "image": "https://i.postimg.cc/7YFyQk9G/image.png",
+        "edition": "custom",
+        "name": "甜怪",
+        "ability": "每个夜晚*，你会得知今天白天时有多少名邪恶玩家投过票。",
+        "team": "townsfolk",
+        "firstNight": 0,
+        "otherNight": 14,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "邪恶投票"
+	],
+        "setup": false
+    },
+    {
+        "id": "chef111",
+        "image": "https://i.postimg.cc/4yFX3HpB/image.png",
+        "edition": "custom",
+        "name": "瑞典厨师",
+        "ability": "每个夜晚*，你会得知相较于上一个夜晚，人类演员的数量是否有变化。如果你在第一个白天用非语言交流，你会转而得知有多少名人类演员在场。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 17,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "非语言"
+        ],
+        "setup": false
+    },
+    {
+        "id": "gonzo",
+        "image": "https://i.postimg.cc/QtdLWx8P/image.png",
+        "edition": "custom",
+        "name": "伟大冈佐",
+        "ability": "每个夜晚*，你可以选择一名玩家：如果你选中了爪牙，他死亡。如果你选中了镇民，你死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 1,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "死亡"
+        ],
+        "setup": false
+    },
+    {
+        "id": "rat1",
+        "image": "https://i.postimg.cc/s2Sx0m5y/image.png",
+        "edition": "custom",
+        "name": "老鼠里佐",
+        "ability": "每个夜晚*，你可以选择一名玩家：如果他在当晚被恶魔杀死，你会得知一个存活的角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 2,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": ["选择"],
+        "setup": false
+    },
+    {
+        "id": "fuzzy",
+        "image": "https://i.postimg.cc/vm6xwbFJ/image.png",
+        "edition": "custom",
+        "name": "福滋熊",
+        "ability": "每个白天，你可以公开发表一个玩笑话~哇咔哇咔！，当晚你会得知它是否正确。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 15,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "正确", "错误"
+        ],
+        "setup": false
+    },
+    {
+        "id": "Beaker",
+        "image": "https://i.postimg.cc/Y0xmDRKj/image.png",
+        "edition": "custom",
+        "name": "比克",
+        "ability": "如果你在第一个白天用非语言交流，当晚你会得知白天时非语言交流玩家的角色（最多四个，额外有一个不在场角色）。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 16,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": ["非语言"],
+        "setup": false
+    },
+    {
+        "id": "Teeth",
+        "image": "https://i.postimg.cc/fT0GdPsw/image.png",
+        "edition": "custom",
+        "name": "牙齿博士",
+        "ability": "如果你被恶魔杀死，一名人类演员会变成他以为的那个镇民角色，你会得知他是谁。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 9,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+    {
+        "id": "Silver",
+        "image": "https://i.postimg.cc/XYPBPXhK/image.png",
+        "edition": "custom",
+        "name": "史约翰",
+        "ability": "每个夜晚*，一名今天白天时给你投票玩家可能会死亡，即使你已死亡。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 10,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "死亡","已投票"
+        ],
+        "setup": false
+    },
+    {
+        "id": "woheduolema111",
+        "image": "https://i.postimg.cc/RVFFz4wg/image.png",
+        "edition": "custom",
+        "name": "人类演员",
+        "ability": "你不知道你是人类演员。你以为你是一个镇民角色，但其实你不是。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [
+            "是人类"
+        ],
+        "setup": true
+    },
+    {
+        "id": "Scrooge ",
+        "image": "https://i.postimg.cc/jSBCXmwZ/image.png",
+        "edition": "custom",
+        "name": "史高治",
+        "ability": "在夜晚时，一名玩家选择其他玩家时可能会改为选中你。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "吝啬"
+        ],
+        "setup": false
+    },
+    {
+        "id": "Camerman",
+        "image": "https://i.postimg.cc/3xG3KRNF/image.png",
+        "edition": "custom",
+        "name": "摄像师",
+        "ability": "如果你在第一个白天用语言交流，一名镇民玩家可能会立刻变成人类演员。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "是人类"
+        ],
+        "setup": false
+    },
+    {
+        "id": "CrazyHarry",
+        "image": "https://i.postimg.cc/7ZhTXSBY/image.png",
+        "edition": "custom",
+        "name": "疯狂哈利",
+        "ability": "每个夜晚*，你要选择一名玩家：第一名被你选中的外来者会转变成邪恶阵营。[+1外来者]",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 0,
+        "otherNight": 4,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "转为邪恶"
+        ],
+        "setup": true
+    },
+    {
+        "id": "Constantine",
+        "image": "https://i.postimg.cc/3JSkydKM/image.png",
+        "edition": "custom",
+        "name": "康斯坦丁",
+        "ability": "每个夜晚*，你可以选择除恶魔以外的两名玩家：他们交换角色，但不会视作重新入场。你可能会被当作善良阵营或科米蛙，即使你已死亡。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 0,
+        "otherNight": 5,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+    {
+        "id": "Animal",
+        "image": "https://i.postimg.cc/dQRd0skv/image.png",
+        "edition": "custom",
+        "name": "动物鼓手",
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡。如果你在第一个白天用非语言交流，与他邻近的镇民之一变成人类演员。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 0,
+        "otherNight": 3,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "非语言",
+            "死亡",
+            "失去能力"
+        ],
+        "setup": false
+    },
+    {
+        "id": "weishenmebushilianjinshushi111",
+        "image": "https://i.postimg.cc/d0KwDYTP/image.png",
+        "edition": "custom",
+        "name": "斯古特",
+        "ability": "每个白天限一次，你可以公开选择一名玩家：他脱离“即将被处决”状态。如果只有三名存活的玩家，你失去此能力。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": ["今日已用","失去能力"],
+        "setup": false
+    },
+    {
+        "id": "wangguuuuuuuu111111",
+        "image": "https://i.postimg.cc/pdP4gXFT/image.png",
+        "edition": "custom",
+        "name": "猪小姐",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。被科米蛙选择的镇民玩家可能会变成人类演员。[+科米蛙]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": 0,
+        "otherNight": 6,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "死亡",
+            "堕落",
+            "是人类"
+        ],
+        "setup": true
+    },
+    {
+        "id": "Deadly",
+        "image": "https://i.postimg.cc/4x6jLhnq/image.png",
+        "edition": "custom",
+        "name": "致命叔叔",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。提名你的镇民玩家会变成人类演员。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": 0,
+        "otherNight": 8,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "死亡",
+            "是人类"
+        ],
+        "setup": false
+    },
+    {
+        "id": "Statler",
+        "image": "https://i.postimg.cc/3rbhmpDZ/image.png",
+        "edition": "custom",
+        "name": "斯塔特勒",
+        "ability": "每个夜晚*，你与瓦尔多夫一同被唤醒并要共同选择一名玩家：他死亡。[+瓦尔多夫,-1爪牙]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": 0,
+        "otherNight": 7.1,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "死亡"
+        ],
+        "setup": true
+    },
+    {
+        "id": "Waldorf",
+        "image": "https://i.postimg.cc/rpc2MNvq/image.png",
+        "edition": "custom",
+        "name": "瓦尔多夫",
+        "ability": "每个夜晚*，你与斯塔特勒一同被唤醒并要共同选择一名玩家：他死亡。[+斯塔特勒]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": 0,
+        "otherNight": 7.2,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "死亡"
+        ],
+        "setup": true
+    }
+]

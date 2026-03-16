@@ -1,0 +1,391 @@
+[
+  {
+    "id": "_meta",
+    "name": "马蹄湾",
+    "author": "Leon",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f1/h90djzzep89kun437h3sppc26hiryne.png",
+    "almanac": "有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "14_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/ce/dvc815fc9f4nb80rld7xaszl7rxdarx.png",
+    "firstNightReminder": "每个夜晚，你要选择一个数字：你会得知邪恶玩家的座位数之和是否能被该数字整除。",
+    "otherNightReminder": "每个夜晚，你要选择一个数字：你会得知邪恶玩家的座位数之和是否能被该数字整除。",
+    "name": "荷官",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一个数字：你会得知邪恶玩家的座位数之和是否能被该数字整除。",
+    "firstNight": 18000,
+    "otherNight": 14
+  },
+  {
+    "id": "15_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b4/3rdz1n0ctjzqzl0b5y2rck5fci2o20q.png",
+    "firstNightReminder": "唤醒卡牌大师，让他在角色列表上选择一个除自己以外的善良角色和一个邪恶角色。以点头或摇头告知他是否至少有一个角色在场。",
+    "otherNightReminder": "唤醒卡牌大师，让他在角色列表上选择一个除自己以外的善良角色和一个邪恶角色。以点头或摇头告知他是否至少有一个角色在场。",
+    "name": "卡牌大师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一个善良角色（除你之外）和一个邪恶角色：你会得知这两个角色中是否至少有一个在场。",
+    "firstNight": 17000,
+    "otherNight": 15
+  },
+  {
+    "id": "16_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/25/71l58tb6rwbm58mqum58xhhldrj6obj.png",
+    "otherNightReminder": "每个夜晚*，你可能会得知一名曾“疯狂”证明你是邪恶的善良玩家。",
+    "reminders": [
+      "得知",
+      "限一次"
+    ],
+    "name": "老千",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你可能会得知一名曾“疯狂”证明你是邪恶的善良玩家。每局游戏限一次，爪牙可以猜测你是老千，如果猜对，你失去能力。",
+    "otherNight": 19
+  },
+  {
+    "id": "17_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e7/rp3cfve6hrr7ebkl7vh57x6gjg2hxdi.png",
+    "otherNightReminder": "每个夜晚*，你会得知死亡外来者和死亡爪牙的总数。如果你死亡，当晚你可以让存活外来者选择变成任意外来者角色（允许重复）。",
+    "name": "牧羊人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知死亡外来者和死亡爪牙的总数。如果你死亡，当晚你可以让存活外来者选择变成任意外来者角色（允许重复）。[+0~1外来者]",
+    "otherNight": 17
+  },
+  {
+    "id": "18_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/2/24/8xj2dihb8f5u8mcrs7o3qc6un1gox94.png/240px-%E9%95%87%E6%B0%91_%E6%8E%A2%E7%9F%BF%E8%80%85_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "otherNightReminder": "每个夜晚*，你会得知与你今天提名的玩家最近的邪恶玩家位于他的顺时针还是逆时针方向。如果距离相等，你得知的信息由说书人决定。",
+    "reminders": [
+      "提名"
+    ],
+    "name": "勘探者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知与你今天提名的玩家最近的邪恶玩家位于他的顺时针还是逆时针方向。如果距离相等，你得知的信息由说书人决定。",
+    "otherNight": 18
+  },
+  {
+    "id": "19_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/bd/ifnjrm9jqz789q7u4eh9nqlycfqxtf6.png",
+    "name": "庄园主",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以拜访说书人以得知两条相悖的建议，“疯狂”与你认可同一条建议的其他玩家如果在当晚即将死亡，可能会有一名邻近玩家代替他死亡。"
+  },
+  {
+    "id": "20_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/9/97/n835iiin43kgp8zsel5l3gmc7se79cf.png/240px-%E9%95%87%E6%B0%91_%E8%BD%A6%E5%A4%AB_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "reminders": [
+      "错误"
+    ],
+    "name": "车夫",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以拜访说书人并选择一个话题以得知一条与其有关的正确信息。 如果与你邻近的两名存活的玩家阵营不同，你会得知错误信息。"
+  },
+  {
+    "id": "21_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/05/54lf9sn89y2morhgk4vrclrdc1zlgu4.png",
+    "otherNightReminder": "当晚如果他被恶魔杀死，你会被唤醒并得知一名邪恶玩家和他的角色。",
+    "reminders": [
+      "得知"
+    ],
+    "name": "镖客",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开选择除你以外的一名存活玩家：当晚如果他被恶魔杀死，你会被唤醒并得知一名邪恶玩家和他的角色。",
+    "otherNight": 12
+  },
+  {
+    "id": "22_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/m9b2zdoht83nqd6ykkp4cj0qby7309v.png",
+    "otherNightReminder": "当你得知你死亡时，你可以公开询问说书人一个是非问题，当晚一名善良玩家会得知答案（是/不是/我不知道）。",
+    "reminders": [
+      "得知"
+    ],
+    "name": "敲钟人",
+    "team": "townsfolk",
+    "ability": "当你得知你死亡时，你可以公开询问说书人一个是非问题，当晚一名善良玩家会得知答案（是/不是/我不知道）。",
+    "otherNight": 20
+  },
+  {
+    "id": "_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fe/o9gzozrpeyh7exogeuro90qh0904qu1.png",
+    "firstNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "otherNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "舞蛇人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。",
+    "firstNight": 13000,
+    "otherNight": 4
+  },
+  {
+    "id": "1_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/89/qd1r9ozv96l6aftj402m46irjynbrem.png",
+    "otherNightReminder": "唤醒卖花女孩，以点头或摇头告知她今天白天是否有恶魔参与投票。",
+    "reminders": [
+      "恶魔未投票",
+      "恶魔已投票"
+    ],
+    "name": "卖花女孩",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天时是否有恶魔投过票。",
+    "otherNight": 16
+  },
+  {
+    "id": "2_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/4cvv6gx6js190zpjqm110ps4j6bl587.png",
+    "firstNightReminder": "唤醒贵族，对他指向三名玩家。这三名玩家中有且仅有一名是邪恶玩家。",
+    "reminders": [
+      "被得知"
+    ],
+    "name": "贵族",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。",
+    "firstNight": 19000
+  },
+  {
+    "id": "3_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/bf/0wf6zizpzk61n1txjo233fembq7utl3.png",
+    "name": "戏法师",
+    "team": "townsfolk",
+    "ability": "'每个白天，你可以公开进行一次谁是爪牙，谁是恶魔的猜测。如果你猜对，善良阵营获胜。"
+  },
+  {
+    "id": "4_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/22/0inqbergvawmpfzmeno0mj3ieuk74gm.png",
+    "otherNightReminder": "如果理发师死于白天，唤醒恶魔让他决定是否使用理发师的能力。如果理发师死于夜晚，（如果让除攻击理发师以外的恶魔进行选择则需要等当前恶魔入睡后）让一名恶魔决定是否使用理发师的能力。",
+    "reminders": [
+      "今晚理发"
+    ],
+    "name": "理发师",
+    "team": "outsider",
+    "ability": "如果你死亡，在当晚恶魔可以选择两名玩家（不能选择其他恶魔）交换角色。",
+    "otherNight": 13
+  },
+  {
+    "id": "23_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/ca/7ffv4anog03ce5nmn7juenzinh8rvdl.png",
+    "otherNightReminder": "当你被提名时，你立即转变为提名者的阵营，但你只有死亡时才会得知你当前的阵营。投票导致你死于处决的镇民玩家醉酒直到明天黄昏。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "迷途羔羊",
+    "team": "outsider",
+    "ability": "当你被提名时，你立即转变为提名者的阵营，但你只有死亡时才会得知你当前的阵营。投票导致你死于处决的镇民玩家醉酒直到明天黄昏。",
+    "otherNight": 2
+  },
+  {
+    "id": "24_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/39/ffuftmeblggpchudluz8t2kmo17xq3c.png",
+    "otherNightReminder": "如果你死于处决，当晚恶魔可以选择从哪一天开始，所有玩家在投票时闭眼且票数被秘密统计。",
+    "reminders": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "name": "淘金客",
+    "team": "outsider",
+    "ability": "如果你死于处决，当晚恶魔可以选择从哪一天开始，所有玩家在投票时闭眼且票数被秘密统计。",
+    "otherNight": 7
+  },
+  {
+    "id": "25_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/1/11/flo3rwgk1wdqbh2r4yra07anpvpyhqj.png/240px-%E5%A4%96%E6%9D%A5%E8%80%85_%E5%93%8D%E9%A9%AC_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "name": "响马",
+    "team": "outsider",
+    "ability": "在游戏的最后一天，投票标记无效，即使你已死亡。"
+  },
+  {
+    "id": "26_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b0/g1hy83vd8tbtdhco2r268sgzo2ymusf.png",
+    "firstNightReminder": "在你的首个夜晚，你会得知一个关键词。首个说出该关键词的善良玩家会在当晚转变为邪恶阵营，即使你死于处决。",
+    "otherNightReminder": "在你的首个夜晚，你会得知一个关键词。首个说出该关键词的善良玩家会在当晚转变为邪恶阵营，即使你死于处决。",
+    "reminders": [
+      "转为邪恶",
+      "失去能力"
+    ],
+    "name": "灵言师",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，你会得知一个关键词。首个说出该关键词的善良玩家会在当晚转变为邪恶阵营，即使你死于处决。",
+    "firstNight": 15000,
+    "otherNight": 6
+  },
+  {
+    "id": "5_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/73/p0movwsio10pgvn1irzgu47nsbiql3k.png",
+    "firstNightReminder": "唤醒女巫，让她选择一名玩家，那名玩家被诅咒。",
+    "otherNightReminder": "唤醒女巫，让她选择一名玩家，那名玩家被诅咒。",
+    "reminders": [
+      "被诅咒"
+    ],
+    "name": "女巫",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：如果他明天白天发起提名，他死亡。如果只有三名存活的玩家，你失去此能力。",
+    "firstNight": 14000,
+    "otherNight": 5
+  },
+  {
+    "id": "6_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c9/kh5wed6rg4r03mlw7uxqdgwuvnxp99s.png",
+    "reminders": [
+      "已宣称"
+    ],
+    "name": "哥布林",
+    "team": "minion",
+    "ability": "如果你在被提名后公开声明自己是哥布林且在那个白天被处决，你的阵营获胜。"
+  },
+  {
+    "id": "8_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e5/el29kr1dznrpaa089tayj3chd444s6k.png",
+    "firstNightReminder": "如果提线木偶在场，对恶魔展示提线木偶角色标记并指向提线木偶玩家。",
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "setup": true,
+    "name": "提线木偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]",
+    "firstNight": 12000
+  },
+  {
+    "id": "27_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/74/2fdw4z0lbn9nfza1pvbqnfvh0k9us17.png",
+    "otherNightReminder": "每个夜晚*，你会得知今天白天谁没有被“疯狂”证明是邪恶的，你可以选择其中一人（与之前不同）：他中毒直到他在白天“疯狂”证明一名善良玩家是邪恶的。",
+    "reminders": [
+      "中毒且疯狂"
+    ],
+    "name": "疑心病人",
+    "team": "minion",
+    "ability": "每个夜晚*，你会得知今天白天谁没有被“疯狂”证明是邪恶的，你可以选择其中一人（与之前不同）：他中毒直到他在白天“疯狂”证明一名善良玩家是邪恶的。",
+    "otherNight": 3
+  },
+  {
+    "id": "28_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/5/52/quj1efrj9zkqtxuiqtevbqhof0hxn9q.png/240px-%E7%88%AA%E7%89%99_%E7%A8%BB%E8%8D%89%E4%BA%BA_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "name": "稻草人",
+    "team": "minion",
+    "ability": "善良玩家会把你当作恶魔，恶魔当作爪牙。投票导致你死于处决的善良玩家可能会把一名其他玩家当作自己曾“疯狂”证明他是的那个角色，角色类型，阵营直到对方死亡。"
+  },
+  {
+    "id": "9_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2f/fifuf6ffk1g5oq59jupegk662fainf6.png",
+    "otherNightReminder": "唤醒奥赫，让他选择角色列表上的一个角色。该角色对应的玩家死亡，如果该角色不在场，替奥赫决定今晚谁会因为奥赫能力死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "奥赫",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一个角色：他死亡。如果该角色不在场，则由说书人来决定谁会被你杀死。",
+    "otherNight": 8
+  },
+  {
+    "id": "29_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/06/kdyvtxyjfh7d48vcqkaaw13d1u3ki21.png",
+    "firstNightReminder": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名爪牙：在他存活时与他邻近的两名镇民中毒。如果他死亡，下个黎明前一名善良玩家会得知你在场。",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名爪牙：在他存活时与他邻近的两名镇民中毒。如果他死亡，下个黎明前一名善良玩家会得知你在场。",
+    "reminders": [
+      "中毒",
+      "得知",
+      "死亡"
+    ],
+    "name": "魔鬼塔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名爪牙：在他存活时与他邻近的两名镇民中毒。如果他死亡，下个黎明前一名善良玩家会得知你在场。",
+    "firstNight": 16000,
+    "otherNight": 11
+  },
+  {
+    "id": "30_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/47/27n2c7g9zmfvu5wq8lzo03i6qrxho08.png",
+    "otherNightReminder": "每个夜晚*，你要选择除你以外的一名存活玩家：他要选择除他以外的一名存活玩家：该玩家死亡。如果你因此死亡，他的阵营落败。[+1外来者]",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "羽蛇",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择除你以外的一名存活玩家：他要选择除他以外的一名存活玩家：该玩家死亡。如果你因此死亡，他的阵营落败。[+1外来者]",
+    "otherNight": 9
+  },
+  {
+    "id": "31_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/44/63mqb0xmpc36d5o5usahoiqdkac1kfq.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家：他死亡。你可以让被该能力杀死的爪牙改为变成寂嗣且你代替他死亡。爪牙和恶魔互相不认识。当你被唤醒时，死亡的邪恶玩家也会被唤醒。[+1爪牙，-1外来者]",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "寂嗣",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。你可以让被该能力杀死的爪牙改为变成寂嗣且你代替他死亡。爪牙和恶魔互相不认识。当你被唤醒时，死亡的邪恶玩家也会被唤醒。[+1爪牙，-1外来者]",
+    "otherNight": 10
+  },
+  {
+    "id": "10_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/36/kmrowr4h491q6i775hrp57mscbuvya6.png",
+    "name": "圣洁之魂",
+    "team": "fabled",
+    "ability": "游戏过程中邪恶玩家的总数最多能比初始设置多一名。"
+  },
+  {
+    "id": "32_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f0/1rkv10pcbl5our8bn7cam7a75lftkl4.png",
+    "name": "狂儒",
+    "team": "traveller",
+    "ability": "每个白天提名阶段，你自由发言且不能被流放。如果有玩家发起了提名，你可以选择让提名者和被提名者在本次提名中自由发言。"
+  },
+  {
+    "id": "7_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/da/90bsrjbcjhnj2ikeravt691aifjy972.png",
+    "firstNightReminder": "唤醒窃贼。让窃贼指向任意一名玩家。用窃贼的“负票”提示标记那名被选中的玩家。让窃贼入睡。",
+    "otherNightReminder": "唤醒窃贼。让窃贼指向任意一名玩家。用窃贼的“负票”提示标记那名被选中的玩家。让窃贼入睡。",
+    "reminders": [
+      "负票"
+    ],
+    "name": "窃贼",
+    "team": "traveller",
+    "ability": "每个夜晚，你要选择除你以外的一名玩家：明天白天他的投票会被算作负数。",
+    "firstNight": 11,
+    "otherNight": 22
+  },
+  {
+    "id": "11_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/89/qz7yelil5pvop2evvzmme6i5znmf5cg.png",
+    "otherNightReminder": "唤醒流莺。让流莺指向任意一名玩家。让流莺重新入睡。唤醒被选中的玩家，对该玩家展示“该角色的能力对你生效”提示标记和流莺角色标记。该玩家需要通过点头表示是，摇头表示否。然后让该玩家重新入睡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "流莺",
+    "team": "traveller",
+    "ability": "每个夜晚*，你要选择一名存活的玩家：如果他同意，你会得知他的角色，但是你们两个可能同时死亡。",
+    "otherNight": 21
+  },
+  {
+    "id": "13_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/18/b4wmhj6ygtx4ydatdq6lyvfdrngruyc.png",
+    "name": "黑帮",
+    "team": "traveller",
+    "ability": "每个白天限一次，你可以杀死与你邻近的两名存活的玩家中的一名，但需要另一边那个存活的玩家同意。"
+  },
+  {
+    "id": "33_matiwan",
+    "name": "迷途羔羊&理发师",
+    "team": "a jinxed",
+    "ability": "恶魔将一名邪恶阵营玩家与迷途羔羊交换角色后，该玩家无法再因自身能力转变为善良阵营。"
+  },
+  {
+    "id": "35_matiwan",
+    "name": "稻草人&舞蛇人",
+    "team": "a jinxed",
+    "ability": "如果舞蛇人选择了被他当作邪恶的非恶魔玩家，他们只会交换角色不会交换阵营，并且交换后也不会中毒。"
+  },
+  {
+    "id": "34_matiwan",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png",
+    "name": "私货商人",
+    "team": "fabled",
+    "ability": "灵言师的角色类型发生了变化，角色能力也有所调整。"
+  }
+]

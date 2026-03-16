@@ -1,0 +1,549 @@
+[
+  {
+    "id": "_meta",
+    "author": "奈何&amp;大庭",
+    "name": "天机不可泄露",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/96/7rxnznqnj1irkd5gzg6wvoirda11fy1.png",
+    "A jinxed": "相克",
+    "firstNight": [
+      "dusk",
+      "zhanche_c",
+      "minioninfo",
+      "demoninfo",
+      "marionette_c",
+      "zuanmingshi111",
+      "shisha_c",
+      "xinmo111",
+      "fangshi_c",
+      "librarian_c",
+      "seamstress_c",
+      "langzhong_c",
+      "daoke_c",
+      "yanluo_c",
+      "shugenja_c",
+      "chambermaid_c",
+      "ad7b1f4e-326c-4842-93e1-e7fba2fbbec5",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "zhanche_c",
+      "jinyiwei_c",
+      "tiandaohuashen111",
+      "hundun_c",
+      "yanluo_c",
+      "guhuoniao_c",
+      "shaxing_c",
+      "seamstress_c",
+      "langzhong_c",
+      "shiguan_c",
+      "fangshi_c",
+      "chambermaid_c",
+      "ad7b1f4e-326c-4842-93e1-e7fba2fbbec5",
+      "dawn"
+    ]
+  },
+  {
+    "id": "shugenja_c",
+    "name": "修行者",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202411/c_9825126871371_4fbea129.jpg",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "在你的首个夜晚，你会得知距离最近的邪恶玩家位于你的顺时针还是逆时针方向。如果两侧的邪恶玩家与你距离相等，你得知的信息由说书人决定。",
+    "firstNight": 12000,
+    "otherNight": 0,
+    "firstNightReminder": "在首个夜晚，唤醒修行者。用手指水平指向修行者的某一侧，告诉他与他距离最近的邪恶玩家位于这一侧。如果修行者两侧最近的邪恶玩家与他的距离相等，由你来决定告诉他什么样的信息，并用手指指向对应的一侧。让修行者重新入睡。",
+    "reminders": [],
+    "remindersGlobal": [],
+    "special": [
+      {
+        "name": "card",
+        "type": "signal",
+        "value": "顺时针"
+      },
+      {
+        "name": "card",
+        "type": "signal",
+        "value": "逆时针"
+      }
+    ]
+  },
+  {
+    "id": "fangshi_c",
+    "name": "方士",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202301/c_9290087694761_94c7b6f3.jpg",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "在你的首个夜晚，你要选择一个数字。在该数字对应的那一个夜晚，你会得知对应数量的在场角色。",
+    "firstNight": 7420,
+    "otherNight": 14300,
+    "firstNightReminder": "让方士选择一个数字。如果他选择了当晚对应的数字，向他展示对应数量在场的角色标记。",
+    "otherNightReminder": "在对应数字的夜晚，唤醒方士，向他展示对应数量在场的角色标记。",
+    "reminders": [
+      "得知"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "daoke_c",
+    "name": "刀客",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202403/c_5751437760171_79dd1401.jpg",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "在你的首个夜晚，你会得知一个在场的爪牙角色。每局游戏限一次，你可以在白天时公开选择一名玩家：如果他是你得知的角色，在当晚他会死亡。",
+    "firstNight": 9410,
+    "otherNight": 9300,
+    "firstNightReminder": "在为首个夜晚做准备时，将刀客的“追杀”标记放置在一个爪牙角色标记旁。\n在首个夜晚，唤醒刀客。对他展示标记了“追杀”的爪牙角色标记。让刀客重新入睡。",
+    "otherNightReminder": "如果刀客在今天白天的时候使用自己的能力选择了一名他得知的爪牙玩家，或者，他得知的爪牙不在场但那名玩家是爪牙，那名玩家死亡。",
+    "reminders": [
+      "得知",
+      "失去能力"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "seamstress_c",
+    "name": "女裁缝",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/seamstress.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择除你以外的两名玩家：你会得知他们是否为同一阵营。",
+    "firstNight": 8600,
+    "otherNight": 11900,
+    "firstNightReminder": "女裁缝可以选择除自己以外的两名玩家。如果她这么做了，对她点头或摇头示意这两名玩家是否为同一阵营，随后标记女裁缝失去能力。之后的夜晚无需再唤醒女裁缝。",
+    "otherNightReminder": "女裁缝可以选择除自己以外的两名玩家。如果她这么做了，对她点头或摇头示意这两名玩家是否为同一阵营，随后标记女裁缝失去能力。之后的夜晚无需再唤醒女裁缝。",
+    "reminders": [
+      "失去能力"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "savant_c",
+    "name": "博学者",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/savant.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  {
+    "id": "langzhong_c",
+    "name": "郎中",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202301/c_9255777694761_7594675d.jpg",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每个夜晚，你要选择除你以外的一名玩家：你会得知一个与他能力相关的词语。",
+    "firstNight": 9300,
+    "otherNight": 12200,
+    "firstNightReminder": "唤醒郎中，让其指向一名玩家。以不会被其他玩家察觉的形式对其提供与该玩家角色能力相关的一个词语。",
+    "otherNightReminder": "唤醒郎中，让其指向一名玩家。以不会被其他玩家察觉的形式对其提供与该玩家角色能力相关的一个词语。",
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  {
+    "id": "bianlianshi_c",
+    "name": "变脸师",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202310/c_2669745308961_3cd6048e.jpg",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每个白天，如果你“疯狂”地证明自己是一个善良角色（与之前不同），你在当晚可能会获得那个角色的能力，直到下个黄昏。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "疯狂"
+    ],
+    "remindersGlobal": [
+      "是变脸师"
+    ]
+  },
+  {
+    "id": "jinyiwei_c",
+    "name": "锦衣卫",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202301/c_5878087694761_691045fa.jpg",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每个夜晚*，你要选择一名玩家：如果他在下个黄昏前死亡，你代替他死亡。",
+    "firstNight": 0,
+    "otherNight": 2400,
+    "otherNightReminder": "移除上个夜晚放置的“保护”标记。唤醒锦衣卫，让其选择一名玩家。在该玩家角色标记旁放置“保护”提示标记。",
+    "reminders": [
+      "保护"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "wudaozhe_c",
+    "name": "悟道者",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202310/c_9233465308961_9aa67828.jpg",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "你以为你是一个外来者，但你实际上不是。如果有邪恶玩家的能力选择或影响了你，你会立即变成一个不在场的镇民角色。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [],
+    "remindersGlobal": [
+      "是悟道者"
+    ],
+    "setup": true,
+    "special": [
+      {
+        "name": "bag-disabled",
+        "type": "selection"
+      },
+      {
+        "name": "replace-character",
+        "type": "reveal"
+      }
+    ]
+  },
+  {
+    "id": "tianjigezhu111",
+    "name": "天机阁主",
+    "image": "https://www.freeimg.cn/uploads/535/691708ec463db.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每个白天，你可以拜访说书人并猜测当天的天条，随后说书人会给你一条能帮助你的阵营获胜的建议。如果你猜测错误，你醉酒直到下一次猜测。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "醉酒"
+    ]
+  },
+  {
+    "id": "librarian_c",
+    "name": "▲图书管理员",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/librarian.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个外来者角色：这两名玩家之一是该角色（或者你会得知没有外来者在场）。",
+    "firstNight": 7600,
+    "otherNight": 0,
+    "firstNightReminder": "展示那个外来者角色标记。指向被你标记“外来者”和“错误”的两名玩家。",
+    "reminders": [
+      "外来者",
+      "错误"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "shiguan_c",
+    "name": "▲史官",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202404/c_7627472943171_a65c3206.jpg",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每个夜晚*，如果白天有玩家死于处决，你会得知存活镇民的数量。",
+    "firstNight": 0,
+    "otherNight": 13110,
+    "otherNightReminder": "如果白天有玩家死于处决，唤醒史官。对他用手势比划存活的镇民玩家的数量。",
+    "reminders": [
+      "死于今日"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "chambermaid_c",
+    "name": "▲侍女",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/chambermaid.png",
+    "team": "townsfolk",
+    "edition": "custom",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 12400,
+    "otherNight": 14800,
+    "firstNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
+    "otherNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
+    "reminders": [],
+    "remindersGlobal": [],
+    "special": [
+      {
+        "name": "card",
+        "type": "signal",
+        "value": "非法目标，重新选择！"
+      }
+    ]
+  },
+  {
+    "id": "puzzlemaster_c",
+    "name": "解谜大师",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/puzzlemaster.png",
+    "team": "outsider",
+    "edition": "custom",
+    "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "醉酒",
+      "已猜测"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "mutant_c",
+    "name": "畸形秀演员",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/mutant.png",
+    "team": "outsider",
+    "edition": "custom",
+    "ability": "如果你“疯狂”地证明自己是外来者，你可能被处决。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [],
+    "remindersGlobal": []
+  },
+  {
+    "id": "duodongzhenghuanzhe111",
+    "name": "多动症患者",
+    "image": "https://www.freeimg.cn/uploads/535/69170a5c59134.png",
+    "team": "outsider",
+    "edition": "custom",
+    "ability": "如果你死于触犯天条，你转变为邪恶阵营，否则会有一名玩家变为多动症患者。",
+    "firstNight": 0,
+    "otherNight": 10000,
+    "otherNightReminder": "如果他死于触犯天条，唤醒他告知他阵营转变。",
+    "reminders": [
+      "邪魔外道"
+    ]
+  },
+  {
+    "id": "zuanmingshi111",
+    "name": "篡命师",
+    "image": "https://www.freeimg.cn/uploads/535/69170a5bb6517.png",
+    "team": "outsider",
+    "edition": "custom",
+    "ability": "恶魔知道篡命师在场。每局游戏限一次，恶魔可以要求说书人打破规则帮助他一次（无关阵营和胜负），即使你已死亡。随后你会知道说书人做了什么。",
+    "firstNight": 3201,
+    "otherNight": 0,
+    "firstNightReminder": "唤醒恶魔，告诉他篡命师在场。",
+    "reminders": [
+      "逆天改命"
+    ]
+  },
+  {
+    "id": "shaxing_c",
+    "name": "▲煞星",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202310/c_0178555308961_1721ee8f.jpg",
+    "team": "outsider",
+    "edition": "custom",
+    "ability": "如果你死亡，当晚与你邻近的存活玩家之一可能会死亡。",
+    "firstNight": 0,
+    "otherNight": 9400,
+    "otherNightReminder": "如果煞星死亡，将与其邻近的存活善良玩家之一标记为死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "marionette_c",
+    "name": "提线木偶",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/marionette.png",
+    "team": "minion",
+    "edition": "custom",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]",
+    "firstNight": 3200,
+    "otherNight": 0,
+    "firstNightReminder": "如果提线木偶在场，对恶魔展示提线木偶角色标记并指向提线木偶玩家。",
+    "reminders": [],
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "setup": true,
+    "special": [
+      {
+        "name": "bag-disabled",
+        "type": "selection"
+      },
+      {
+        "name": "replace-character",
+        "type": "reveal"
+      }
+    ]
+  },
+  {
+    "id": "shisha_c",
+    "name": "尸煞",
+    "image": "https://www.freeimg.cn/uploads/535/691708e9539fb.png",
+    "team": "minion",
+    "edition": "custom",
+    "ability": "死于天条的镇民中毒，你拥有一个不在场的外来者角色的能力。[-1外来者]",
+    "firstNight": 3203,
+    "otherNight": 0,
+    "firstNightReminder": "唤醒尸煞，告知他获得的不在场外来者角色的能力。",
+    "reminders": [],
+    "remindersGlobal": [
+      "中毒",
+      "是尸煞"
+    ],
+    "setup": true
+  },
+  {
+    "id": "xinmo111",
+    "name": "心魔",
+    "image": "https://www.freeimg.cn/uploads/535/691708e468776.png",
+    "team": "minion",
+    "edition": "custom",
+    "ability": "在你的首个夜晚，你要选择一名玩家：你得知他的角色。他得知的信息始终由你给出。如果他是外来者，当你首次触犯天条时，他代替你死亡。",
+    "firstNight": 3202,
+    "otherNight": 0,
+    "firstNightReminder": "唤醒心魔，让他选择一名玩家。",
+    "reminders": [
+      "心魔作祟"
+    ]
+  },
+  {
+    "id": "zhanche_c",
+    "name": "▲战车",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/Locked-Space/30_lockedspace.png",
+    "team": "minion",
+    "edition": "custom",
+    "ability": "与你顺时针距离为1的玩家中毒。如果是邪恶的非旅行者玩家，改为和他交换角色。每个夜晚*，或该玩家死亡时，该距离+1。",
+    "firstNight": 4,
+    "otherNight": 2,
+    "firstNightReminder": "战车顺时针距离为1的玩家中毒。",
+    "otherNightReminder": "战车顺时针距离为1的玩家中毒。",
+    "reminders": [
+      "中毒"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "hundun_c",
+    "name": "混沌",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202310/c_9149178608961_89693def.jpg",
+    "team": "demon",
+    "edition": "custom",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式杀死了一名与你邻近的镇民玩家，所有除旅行者以外的善良玩家会中毒直到下个黄昏。",
+    "firstNight": 0,
+    "otherNight": 7900,
+    "otherNightReminder": "唤醒混沌。让混沌指向一名玩家。该玩家死亡，在他角色标记旁放置“死亡”提示标记（除非该玩家受到其他原因影响导致不会死亡）。让混沌重新入睡。\n如果混沌成功杀死了与自己邻近的一名镇民玩家，在魔典中央放置混沌的“善良中毒”提示标记。从现在起，所有玩家只要是善良阵营，就会处于中毒状态。在下一个黄昏开始时，移除混沌的“善良中毒”提示标记。",
+    "reminders": [
+      "死亡",
+      "善良中毒"
+    ],
+    "remindersGlobal": []
+  },
+  {
+    "id": "yanluo_c",
+    "name": "阎罗",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202403/c_2190498760171_1c483826.jpg",
+    "team": "demon",
+    "edition": "custom",
+    "ability": "在你的首个夜晚，你能查看魔典并选择一名玩家：他在第三个夜晚死亡，即使因为任何原因让他不会死亡。每个夜晚，你要选择一名玩家：上个夜晚被你选择的玩家死亡。",
+    "firstNight": 11710,
+    "otherNight": 8410,
+    "firstNightReminder": "首个夜晚，唤醒阎罗并让他按自己意愿的时长来查看魔典。\n让阎罗选择一名玩家，放置“选择”标记在其角色图标旁，其在覅三个夜晚必定会死亡。\n让阎罗选择一名玩家，放置“即将死亡”标记在其角色图标旁。",
+    "otherNightReminder": "让阎罗选择一名玩家，放置“即将死亡”标记在其角色图标旁。",
+    "reminders": [
+      "三更将死",
+      "即将死亡",
+      "死亡"
+    ],
+    "remindersGlobal": [],
+    "special": [
+      {
+        "name": "grimoire",
+        "type": "signal",
+        "time": "night"
+      }
+    ]
+  },
+  {
+    "id": "tiandaohuashen111",
+    "name": "天道化身",
+    "image": "https://www.freeimg.cn/uploads/535/691708e6d169f.png",
+    "team": "demon",
+    "edition": "custom",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果存活玩家大于或等于五名，由你设下天条。如果你死于天条，一名爪牙和你交换角色。",
+    "firstNight": 0,
+    "otherNight": 7899,
+    "otherNightReminder": "唤醒天道化身，让他选择一名玩家，标记那名玩家死亡。然后在设下天条的轮次唤醒他，让他设下天条。",
+    "reminders": [
+      "死亡"
+    ]
+  },
+  {
+    "id": "guhuoniao_c",
+    "name": "▲姑获鸟",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202404/c_3002932943171_72f4def0.jpg",
+    "team": "demon",
+    "edition": "custom",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。当爪牙死于处决时，你可能会获得他的能力，但每局游戏仅能获得一次。",
+    "firstNight": 0,
+    "otherNight": 8430,
+    "otherNightReminder": "唤醒姑获鸟，让其选择一名玩家，在玩家角色标记旁放置“死亡”提示标记。",
+    "reminders": [
+      "死亡",
+      "获得能力"
+    ],
+    "remindersGlobal": []
+  },
+  "bootlegger",
+  {
+    "id": "4bf52ac2-0161-469c-8fa0-45b7b3894eab",
+    "name": "一线生机",
+    "image": "https://www.freeimg.cn/uploads/535/69170d5403af2.png",
+    "team": "fabled",
+    "ability": "每局游戏限一次，死于雷劫的玩家可以在白天拜访说书人猜测他触犯的天条是什么。如果猜测正确，他重获能力直到下个黎明。[9人以上加入游戏]",
+    "firstNight": 0,
+    "otherNight": 0
+  },
+  {
+    "id": "2034e219-6bd5-472b-a36b-9ee1600e418a",
+    "name": "涅槃重生",
+    "image": "https://www.freeimg.cn/uploads/535/69170d5403af2.png",
+    "team": "fabled",
+    "ability": "每局游戏限一次，死于雷劫的玩家可以在下个白天拜访说书人猜测他触犯的天条是什么。如果猜测正确，他会在黄昏时起死回生。[7~9人时加入游戏，同时带▲的角色会不在剧本中]",
+    "firstNight": 0,
+    "otherNight": 0
+  },
+  {
+    "id": "ad7b1f4e-326c-4842-93e1-e7fba2fbbec5",
+    "name": "九天雷劫",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/doomsayer.png",
+    "team": "fabled",
+    "ability": "在游戏的首个夜晚，说书人会秘密设置一个天条（比如禁止自提），首个触犯该天条的存活玩家会立即死亡，在当晚说书人会秘密设置下一个天条。恶魔始终知晓天条。",
+    "firstNight": 100000,
+    "otherNight": 100000,
+    "firstNightReminder": "设置天条。",
+    "otherNightReminder": "设置天条。",
+    "reminders": [
+      "触犯天条"
+    ]
+  },
+  {
+    "id": "c1abb0ab-c8b5-4aa5-aae8-f99ee6eeb8fb",
+    "name": "阎罗&战车",
+    "team": "A jinxed",
+    "ability": "如果阎罗的角色因战车能力发生了交换，不会因此移除原本阎罗的“即将死亡”提示标记。",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202403/c_2190498760171_1c483826.jpg"
+  },
+  {
+    "id": "c1abb0ab-c8b5-4aa5-aae8-f99ee6eeb8fc",
+    "name": "郎中&能力修改",
+    "team": "A jinxed",
+    "ability": "除首个夜晚外，郎中可以选择说书人以得知天条相关的词语。",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202301/c_9255777694761_7594675d.jpg"
+  },
+  {
+    "id": "c1abb0ab-c8b5-4aa5-aae8-f99ee6eeb8fd",
+    "name": "尸煞&能力修改",
+    "team": "A jinxed",
+    "ability": "如果玩家人数少于10人，尸煞能力中的'中毒'改为'死于天条的镇民始终中毒，即使他复活'。",
+    "image": "https://www.freeimg.cn/uploads/535/691708e9539fb.png"
+  },
+  {
+    "id": "c1abb0ab-c8b5-4aa5-aae8-f99ee6eeb8fe",
+    "name": "尸煞&篡命师",
+    "team": "A jinxed",
+    "ability": "如果尸煞获得篡命师的能力，改为'随后会有一名善良玩家知道说书人做了什么'。",
+    "image": "https://www.freeimg.cn/uploads/535/691708e9539fb.png"
+  },
+  {
+    "id": "c1abb0ab-c8b5-4aa5-aae8-f99ee6eeb8ff",
+    "name": "侍女&天道化身",
+    "team": "A jinxed",
+    "ability": "侍女会得知天道化身是否醒来，即使她是在天道化身之前醒来。",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/chambermaid.png"
+  }
+]

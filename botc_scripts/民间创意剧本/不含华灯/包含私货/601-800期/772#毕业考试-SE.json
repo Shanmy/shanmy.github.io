@@ -1,0 +1,326 @@
+[
+  {
+    "id": "_meta",
+    "name": "毕业考试",
+    "author": "SERRAEVELYN",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/almanac.html"
+  },
+  {
+    "id": "_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/_graduation_examination.png",
+    "firstNightReminder": "唤醒小精灵，对他展示一个在场镇民角色标记。",
+    "reminders": [
+      "疯狂",
+      "获得能力"
+    ],
+    "name": "小精灵",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个在场的镇民角色。如果你“疯狂”地证明你是该角色，当他死亡时你获得该角色的能力。",
+    "firstNight": 3500
+  },
+  {
+    "id": "1_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/1_graduation_examination.png",
+    "firstNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "otherNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 3600,
+    "otherNight": 19
+  },
+  {
+    "id": "2_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/2_graduation_examination.png",
+    "firstNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "otherNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "舞蛇人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。",
+    "firstNight": 3300,
+    "otherNight": 8
+  },
+  {
+    "id": "3_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/3_graduation_examination.png",
+    "firstNightReminder": "唤醒数学家，用手势比划数字来告诉他今天有多少玩家的能力未正常生效。",
+    "otherNightReminder": "唤醒数学家，用手势比划数字来告诉他今天有多少玩家的能力未正常生效。",
+    "reminders": [
+      "未正常生效"
+    ],
+    "name": "数学家",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知有多少名玩家的能力因为其他角色的能力而未正常生效。（从上个黎明到你被唤醒时）",
+    "firstNight": 3700,
+    "otherNight": 20
+  },
+  {
+    "id": "4_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/4_graduation_examination.png",
+    "otherNightReminder": "唤醒僧侣，让他选择除自己以外的一名玩家，那名玩家今晚免受恶魔负面效果影响。",
+    "reminders": [
+      "保护"
+    ],
+    "name": "僧侣",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的一名玩家：当晚恶魔的负面能力对他无效。",
+    "otherNight": 9
+  },
+  {
+    "id": "5_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/5_graduation_examination.png",
+    "otherNightReminder": "唤醒旅店老板，让他选择两名玩家。这两名玩家今晚不死，同时需要决定他俩其中谁因为旅店老板能力醉酒。",
+    "reminders": [
+      "不会死亡",
+      "醉酒"
+    ],
+    "name": "旅店老板",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择两名玩家：他们当晚不会死亡，但其中一人会醉酒到下个黄昏。",
+    "otherNight": 7
+  },
+  {
+    "id": "6_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/6_graduation_examination.png",
+    "otherNightReminder": "唤醒半兽人，让他选择一名玩家。如果该玩家是善良玩家，该玩家死亡，且当晚恶魔不会造成死亡。",
+    "reminders": [
+      "失足",
+      "死亡"
+    ],
+    "name": "半兽人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名存活玩家：如果他是善良的，他死亡，并且当晚恶魔不会造成死亡。  会有一名善良玩家始终被当作邪恶阵营。",
+    "otherNight": 11
+  },
+  {
+    "id": "7_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/7_graduation_examination.png",
+    "firstNightReminder": "唤醒哲学家，他可以摇头不使用能力，或选择获得角色列表上的一个善良角色的能力。",
+    "otherNightReminder": "如果哲学家未曾使用能力，唤醒哲学家，他可以摇头不使用能力，或选择获得角色列表上的一个善良角色的能力。",
+    "remindersGlobal": [
+      "是哲学家",
+      "醉酒"
+    ],
+    "name": "哲学家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个善良角色：你获得该角色的能力。  如果这个角色在场，他醉酒。",
+    "firstNight": 12,
+    "otherNight": 3
+  },
+  {
+    "id": "8_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/8_graduation_examination.png",
+    "otherNightReminder": "如果造谣者今天白天的声明正确，一名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。如果该声明正确，在当晚会有一名玩家死亡。",
+    "otherNight": 16
+  },
+  {
+    "id": "9_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/9_graduation_examination.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "10_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/10_graduation_examination.png",
+    "firstNightReminder": "决定失忆者的能力，并根据具体能力决定是否需要唤醒失忆者、何时唤醒、唤醒后让他做出什么操作或得知什么信息。",
+    "otherNightReminder": "根据失忆者的具体能力决定是否需要唤醒失忆者、何时唤醒、唤醒后让他做出什么操作或得知什么信息。",
+    "reminders": [
+      "？"
+    ],
+    "name": "失忆者",
+    "team": "townsfolk",
+    "ability": "你不知道你的能力是什么。每个白天你可以找说书人猜测一次，你会得知你的猜测有多准确。",
+    "firstNight": 11,
+    "otherNight": 2
+  },
+  {
+    "id": "11_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/11_graduation_examination.png",
+    "firstNightReminder": "如果罂粟种植者在场，跳过今晚的爪牙信息和恶魔信息环节。",
+    "otherNightReminder": "如果罂粟种植者死于白天，插入执行爪牙信息和恶魔信息（不包含恶魔伪装）流程。如果罂粟种植者死于夜晚，则在当前玩家行动结束后立即执行相关流程。",
+    "reminders": [
+      "唤醒邪恶"
+    ],
+    "name": "罂粟种植者",
+    "team": "townsfolk",
+    "ability": "爪牙和恶魔互相不认识。如果你死亡，当晚他们会互相认识。",
+    "firstNight": 13,
+    "otherNight": 5
+  },
+  {
+    "id": "12_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/12_graduation_examination.png",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "食人族",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "13_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/13_graduation_examination.png",
+    "otherNightReminder": "如果理发师死于白天，唤醒恶魔让他决定是否使用理发师的能力。如果理发师死于夜晚，（如果让除攻击理发师以外的恶魔进行选择则需要等当前恶魔入睡后）让一名恶魔决定是否使用理发师的能力。",
+    "reminders": [
+      "今晚理发"
+    ],
+    "name": "理发师",
+    "team": "outsider",
+    "ability": "如果你死亡，在当晚恶魔可以选择两名玩家（不能选择其他恶魔）交换角色。",
+    "otherNight": 17
+  },
+  {
+    "id": "14_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/14_graduation_examination.png",
+    "otherNightReminder": "如果帽匠死于白天，（建议分别）唤醒恶魔和爪牙并让他们选择是否改变角色。如果帽匠死于夜晚，则在当前玩家行动结束后立即开始茶会。",
+    "reminders": [
+      "今晚茶会"
+    ],
+    "name": "帽匠",
+    "team": "outsider",
+    "ability": "如果你死亡，当晚爪牙和恶魔玩家可以选择变成新的爪牙和恶魔角色。",
+    "otherNight": 4
+  },
+  {
+    "id": "15_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/15_graduation_examination.png",
+    "reminders": [
+      "醉酒",
+      "已猜测"
+    ],
+    "name": "解密大师",
+    "team": "outsider",
+    "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。"
+  },
+  {
+    "id": "16_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/16_graduation_examination.png",
+    "otherNightReminder": "如果瘟疫医生死亡，说书人获得一项爪牙能力。",
+    "reminders": [
+      "说书人能力"
+    ],
+    "name": "瘟疫医生",
+    "team": "outsider",
+    "ability": "当你死亡时，说书人会获得一个爪牙能力。",
+    "otherNight": 18
+  },
+  {
+    "id": "17_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/17_graduation_examination.png",
+    "otherNightReminder": "唤醒麻脸巫婆，让她选择一名玩家和角色列表上的一个角色。如果该角色不在场，则在麻脸巫婆入睡后通知该玩家角色变化。根据实际情况，可以将相关通知合并，例如玩家变成了恶魔，则在恶魔行动时一并唤醒，通知角色变化并让他执行相应行动。",
+    "name": "麻脸巫婆",
+    "team": "minion",
+    "ability": "每个夜晚*，你要选择一名玩家和一个角色，如果该角色不在场，他变成该角色。如果因此创造了一个恶魔，当晚的死亡由说书人决定。",
+    "otherNight": 6
+  },
+  {
+    "id": "18_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/18_graduation_examination.png",
+    "firstNightReminder": "唤醒寡妇，让她查看魔典。在她查看完毕后让她选择一名玩家，那名玩家中毒。随后如果寡妇未醉酒中毒，唤醒一名善良玩家，对他展示寡妇角色标记。",
+    "reminders": [
+      "中毒",
+      "得知"
+    ],
+    "name": "寡妇",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你能查看魔典并选择一名玩家：他中毒。随后，始终会有一名善良玩家知道寡妇在场。",
+    "firstNight": 3200
+  },
+  {
+    "id": "19_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/19_graduation_examination.png",
+    "firstNightReminder": "唤醒召唤师，对他展示三个不在场的善良角色标记。",
+    "otherNightReminder": "如果这是游戏中的第三个夜晚，唤醒召唤师，让他选择一名玩家和一个恶魔角色，那名玩家变成由他选择的邪恶恶魔。",
+    "reminders": [
+      "第一晚",
+      "第二晚",
+      "第三晚"
+    ],
+    "name": "召唤师",
+    "team": "minion",
+    "ability": "在首个夜晚，你会得知三个伪装。在第三个夜晚，你要选择一名玩家：他变成由你选择的邪恶恶魔。[无恶魔在场]",
+    "firstNight": 2500,
+    "otherNight": 10
+  },
+  {
+    "id": "20_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/20_graduation_examination.png",
+    "reminders": [
+      "已宣称"
+    ],
+    "name": "哥布林",
+    "team": "minion",
+    "ability": "如果你在被提名后公开声明自己是哥布林且在那个白天被处决，你的阵营获胜。"
+  },
+  {
+    "id": "21_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/21_graduation_examination.png",
+    "firstNightReminder": "唤醒所有爪牙选择由谁照看小怪宝。",
+    "otherNightReminder": "唤醒所有爪牙选择由谁照看小怪宝。随后，决定今晚谁会因为小怪宝能力死亡。",
+    "remindersGlobal": [
+      "是恶魔",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "小怪宝",
+    "team": "demon",
+    "ability": "每个夜晚，所有爪牙要秘密决定由哪名玩家来照看小怪宝并且“是恶魔”。每个夜晚*，可能会有一名玩家死亡。[+1爪牙]",
+    "firstNight": 3100,
+    "otherNight": 15
+  },
+  {
+    "id": "22_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/22_graduation_examination.png",
+    "firstNightReminder": "唤醒普卡，让他选择一名玩家，那名玩家中毒。",
+    "otherNightReminder": "唤醒普卡，让他选择一名玩家，该玩家中毒。上一个被普卡中毒的玩家死亡。",
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "name": "普卡",
+    "team": "demon",
+    "ability": "每个夜晚，你要选择一名玩家：他中毒。  上个因你的能力中毒的玩家会死亡并恢复健康。",
+    "firstNight": 3400,
+    "otherNight": 12
+  },
+  {
+    "id": "23_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/23_graduation_examination.png",
+    "otherNightReminder": "唤醒方古，让他攻击一名玩家。如果该玩家是外来者并成功转化，则方古死亡，在他入睡后通知那名外来者角色变化。",
+    "reminders": [
+      "死亡",
+      "限一次"
+    ],
+    "setup": true,
+    "name": "方古",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。  被该能力杀死的外来者改为变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者]",
+    "otherNight": 13
+  },
+  {
+    "id": "24_graduation_examination",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/Graduation_examination/24_graduation_examination.png",
+    "otherNightReminder": "唤醒亡骨魔，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "保留能力",
+      "中毒"
+    ],
+    "setup": true,
+    "name": "亡骨魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。  被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+    "otherNight": 14
+  }
+]

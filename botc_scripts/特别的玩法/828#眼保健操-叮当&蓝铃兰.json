@@ -1,0 +1,287 @@
+[
+  {
+    "id": "_meta",
+    "name": "眼保健操",
+    "author": "叮当&蓝铃兰",
+    "logo": "https://free.picui.cn/free/2025/12/10/693910be1f5e2.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/yanbaojiancao/almanac.html"
+  },
+  {
+    "id": "laizhebushan",
+    "name": "来者不善",
+    "team": "fabled",
+    "image": "https://free.picui.cn/free/2025/12/01/692d980b16fc7.png",
+    "ability": "游戏默认使用局外人规则，加入游戏的局外人会替换一名外来者。在游戏类型的判定上，局外人被当作善良阵营，外来者类型。不会出现重复的局外人角色，通常情况下初始局外人最多只会有1个在场。局外人无法被改变成其他角色，其他角色也无法变成局外人或者获得局外人的能力。如果某个阵营的玩家因自身能力导致游戏结束，另外两个阵营共同获胜/落败。"
+  },
+  {
+    "id": "laizhebushan_1",
+    "name": "可选规则",
+    "team": "fabled",
+    "image": "https://free.picui.cn/free/2025/12/01/692d980b16fc7.png",
+    "ability": "在首个夜晚，告知局外人一个不在场角色。"
+  },
+  {
+    "id": "laizhebushan_2",
+    "name": "可选死亡任务",
+    "team": "fabled",
+    "image": "https://free.picui.cn/free/2025/12/01/692d980b16fc7.png",
+    "reminders": [
+      "随之获胜"
+    ],
+    "ability": "如果第三方阵营玩家都死亡，说书人可以给每个第三方阵营玩家单独发布一条任务，完成任务后的玩家随获胜阵营一同获胜。1）不能对你睁眼看到的额外信息“疯狂”，并复原魔典。2）“疯狂”地证明自己是亡魂。3）在白天拜访说书人，秘密猜测3个不在场的角色。"
+  },
+  {
+    "id": "_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/investigator.png",
+    "firstNightReminder": "唤醒调查员，对他指向两名玩家，并展示一个爪牙角色标记。这两名玩家其中之一是这个爪牙。",
+    "reminders": [
+      "爪牙",
+      "错误"
+    ],
+    "name": "调查员",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名玩家和一个爪牙角色：这两名玩家之一是该角色（或者你会得知没有爪牙在场）。",
+    "firstNight": 3300
+  },
+  {
+    "id": "1_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fortune_teller.png",
+    "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 3400,
+    "otherNight": 10
+  },
+  {
+    "id": "2_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/grandmother.png",
+    "firstNightReminder": "唤醒祖母，对她指向一名善良玩家，并展示该玩家的角色标记。",
+    "otherNightReminder": "如果恶魔杀死了孙子，祖母死亡。",
+    "reminders": [
+      "孙子",
+      "死亡"
+    ],
+    "name": "祖母",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名善良玩家和他的角色。如果恶魔杀死了他，你也会死亡。",
+    "firstNight": 3500,
+    "otherNight": 8
+  },
+  {
+    "id": "3_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/gossip.png",
+    "otherNightReminder": "如果造谣者今天白天的声明正确，一名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。在当晚，如果该声明是正确的，会有一名玩家死亡。",
+    "otherNight": 5
+  },
+  {
+    "id": "4_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/minstrel.png",
+    "reminders": [
+      "全员醉酒"
+    ],
+    "name": "吟游诗人",
+    "team": "townsfolk",
+    "ability": "当一名爪牙死于处决时，除了你和旅行者以外的所有其他玩家醉酒直到明天黄昏。"
+  },
+  {
+    "id": "5_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/tea_lady.png",
+    "reminders": [
+      "不会死亡"
+    ],
+    "name": "茶艺师",
+    "team": "townsfolk",
+    "ability": "如果与你邻近的两名存活的玩家是善良的，他们不会死亡。"
+  },
+  {
+    "id": "6_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fool.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "弄臣",
+    "team": "townsfolk",
+    "ability": "当你首次将要死亡时，你不会死亡。"
+  },
+  {
+    "id": "7_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/oracle.png",
+    "otherNightReminder": "唤醒神谕者，对他用手势比划数字来告知他当前死亡玩家中邪恶玩家的数量。",
+    "name": "神谕者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知有多少名死亡的玩家是邪恶的。",
+    "otherNight": 11
+  },
+  {
+    "id": "8_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/savant.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "9_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/bounty_hunter.png",
+    "firstNightReminder": "（在进入首个夜晚时立即通知赏金猎人转变的那个镇民他的阵营发生了变化）唤醒赏金猎人，对他指向一名邪恶玩家。",
+    "otherNightReminder": "如果赏金猎人之前得知的玩家死亡，唤醒赏金猎人，对他指向一名新的邪恶玩家。",
+    "reminders": [
+      "得知"
+    ],
+    "setup": true,
+    "name": "赏金猎人",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名邪恶玩家。每当你得知的玩家死亡，你会在当晚得知另一名邪恶玩家。[会有一名镇民转变为邪恶阵营]",
+    "firstNight": 3600,
+    "otherNight": 12
+  },
+  {
+    "id": "10_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/cannibal.png",
+    "reminders": [
+      "饱餐",
+      "中毒"
+    ],
+    "name": "食人族",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "11_yanbaojiancao",
+    "image": "https://clocktower-wiki.gstonegames.com/images/d/d6/Alsaahir.png",
+    "name": "戏法师",
+    "team": "townsfolk",
+    "ability": "'每个白天，你可以公开进行一次谁是爪牙，谁是恶魔的猜测。如果你猜对，善良阵营获胜。"
+  },
+  {
+    "id": "12_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/wudaozhe.png",
+    "remindersGlobal": [
+      "是悟道者"
+    ],
+    "setup": true,
+    "name": "悟道者",
+    "team": "townsfolk",
+    "ability": "你以为你是一个外来者，但你实际上不是。如果有邪恶玩家的能力选择或影响了你，在该效果生效前你会变成一个不在场的镇民角色。"
+  },
+  {
+    "id": "13_yanbaojiancao",
+    "image": "https://free.picui.cn/free/2025/12/10/693910bc6065b.png",
+    "firstNightReminder": "夜晚睁眼",
+    "otherNightReminder": "夜晚睁眼",
+    "name": "小女孩",
+    "team": "outsider",
+    "ability": "每个夜晚，如果说书人允许，你可以在夜晚睁眼。 在夜晚被其他玩家发现睁眼你死亡，并且当晚恶魔不会造成死亡。 每局游戏限两次，你存活时复原了魔典，你独自获胜。",
+    "firstNight": 11,
+    "otherNight": 2
+  },
+  {
+    "id": "14_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/moonchild.png",
+    "otherNightReminder": "如果月之子在今天白天的时候使用自己的能力选择了一名善良玩家，那名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "月之子",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。",
+    "otherNight": 6
+  },
+  {
+    "id": "15_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/sweetheart.png",
+    "otherNightReminder": "如果心上人死亡，一名玩家醉酒。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "心上人",
+    "team": "outsider",
+    "ability": "当你死亡时，会有一名玩家开始醉酒。",
+    "otherNight": 9
+  },
+  {
+    "id": "16_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/puzzlemaster.png",
+    "reminders": [
+      "醉酒",
+      "已猜测"
+    ],
+    "name": "解谜大师",
+    "team": "outsider",
+    "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。"
+  },
+  {
+    "id": "17_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/shaxing.png",
+    "otherNightReminder": "如果煞星死亡，决定是否让一名与他邻近的存活玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "煞星",
+    "team": "outsider",
+    "ability": "如果你死亡，当晚与你邻近的存活玩家之一可能会死亡。",
+    "otherNight": 7
+  },
+  {
+    "id": "18_yanbaojiancao",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/yanbaojiancao/18_yanbaojiancao.png",
+    "name": "亡魂",
+    "team": "minion",
+    "ability": "你可以在夜晚睁眼。当其他邪恶玩家睁眼时，你也会被唤醒。（可选规则：每局游戏限一次，如果一名玩家“疯狂”的证明你是亡魂，他死亡。"
+  },
+  {
+    "id": "19_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/devils_advocate.png",
+    "firstNightReminder": "唤醒魔鬼代言人，让他选择一名玩家，那名玩家处决不死。",
+    "otherNightReminder": "唤醒魔鬼代言人，让他选择一名与上一晚不同的玩家，那名玩家处决不死。",
+    "reminders": [
+      "处决不死"
+    ],
+    "name": "魔鬼代言人",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名存活的玩家（与上个夜晚不同）：如果明天白天他被处决，他不会死亡。",
+    "firstNight": 3200,
+    "otherNight": 3
+  },
+  {
+    "id": "20_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/mastermind.png",
+    "name": "主谋",
+    "team": "minion",
+    "ability": "如果恶魔因为死于处决而因此导致游戏结束时，再额外进行一个夜晚和一个白天。在那个白天如果有玩家被处决，他的阵营落败。"
+  },
+  {
+    "id": "21_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/ganshiren.png",
+    "reminders": [
+      "活尸"
+    ],
+    "setup": true,
+    "name": "赶尸人",
+    "team": "minion",
+    "ability": "与你邻近的两名镇民玩家会在其首次死亡时被当作仍然存活。[-1外来者]"
+  },
+  {
+    "id": "22_yanbaojiancao",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/po.png",
+    "otherNightReminder": "唤醒珀，他可以攻击一名玩家或不进行攻击，如果他上一次选择了不进行攻击，则此次必须攻击三名玩家。",
+    "reminders": [
+      "攻击三次",
+      "死亡"
+    ],
+    "name": "珀",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择一名玩家：他死亡。如果你上次选择时没有选择任何玩家，当晚你要选择三名玩家：他们死亡。",
+    "otherNight": 4
+  }
+]

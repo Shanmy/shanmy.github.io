@@ -1,0 +1,195 @@
+[
+  {
+    "id": "_meta",
+    "name": "尖塔的诅咒",
+    "author": "小烯C2H43g",
+    "almanac": "https://www.bloodstar.xyz/p/C2H43g/spire/almanac.html"
+  },
+  {
+    "id": "_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/_spire.png",
+    "firstNightReminder": "选择位置",
+    "otherNightReminder": "移动",
+    "reminders": [
+      "上层",
+      "中层",
+      "下层"
+    ],
+    "name": "尖塔",
+    "team": "fabled",
+    "ability": "游戏开始时，所有玩家要秘密选择尖塔的上/中/下层作为初始位置，每个夜晚*，存活玩家可以进行一次移动。",
+    "firstNight": 12000,
+    "otherNight": 3
+  },
+  {
+    "id": "1_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/1_spire.png",
+    "name": "行动",
+    "team": "fabled",
+    "ability": "每名未堕落的存活玩家每个楼层限一次，你可以秘密地与说书人进行猜拳（平局则继续），如果你获胜，你可以选择未选择过的一项。1:得知本层有哪些玩家。2:选择一名玩家并得知他的阵营，如果他与你处于不同层，你得知错误信息。3:选择一个角色得知他是否在场，你和该角色之间有人被诅咒，你获得错误信息。"
+  },
+  {
+    "id": "7_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/7_spire.png",
+    "name": "诅咒",
+    "team": "fabled",
+    "ability": "游戏初始设置中的外来者将被替换为被诅咒的镇民，每名镇名玩家最多受到一个诅咒。"
+  },
+  {
+    "id": "3_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/3_spire.png",
+    "name": "私货商人",
+    "team": "fabled",
+    "ability": "邪恶玩家会互认且得知不在场身份。"
+  },
+  {
+    "id": "2_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/2_spire.png",
+    "otherNightReminder": "选择一个角色。",
+    "reminders": [
+      "祝福"
+    ],
+    "name": "涅奥",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你选择一个其他角色（与上一个夜晚不同），邪恶角色能力对他无效直到下个黄昏。你的能力对已堕落的玩家不会生效。",
+    "otherNight": 4
+  },
+  {
+    "id": "4_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/4_spire.png",
+    "otherNightReminder": "得知",
+    "name": "铁甲战士",
+    "team": "townsfolk",
+    "ability": "你不会被诅咒。如果你堕落，当晚你得知所有玩家所在的楼层。",
+    "otherNight": 7
+  },
+  {
+    "id": "5_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/5_spire.png",
+    "otherNightReminder": "得知",
+    "name": "静默猎手",
+    "team": "townsfolk",
+    "ability": "如果你没有堕落，每个夜晚*，你会得知当晚你处于的楼层是否存在邪恶玩家。",
+    "otherNight": 8
+  },
+  {
+    "id": "6_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/6_spire.png",
+    "otherNightReminder": "选择",
+    "reminders": [
+      "在启动了",
+      "失去能力"
+    ],
+    "name": "故障机器人",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，如果你没有堕落且上个白天没有行动，在夜晚时*，你可以得知哪些邪恶角色在场以及他们当晚所在的位置。",
+    "otherNight": 9
+  },
+  {
+    "id": "8_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/8_spire.png",
+    "firstNightReminder": "选择一个状态",
+    "otherNightReminder": "选择一个形态",
+    "reminders": [
+      "冷静",
+      "愤怒"
+    ],
+    "name": "观者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你可以选择一个形态  1.平静：你在行动中的平手视为获胜。  2.愤怒：你在每层都有一次额外行动的机会，但你的平手会被视为失败。",
+    "firstNight": 14000,
+    "otherNight": 10
+  },
+  {
+    "id": "9_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/9_spire.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": true,
+    "name": "亡命之人",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，你可以公开选择一名玩家，如果他是爪牙或者他被诅咒，他立刻被处决。［+0～1诅咒］"
+  },
+  {
+    "id": "10_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/10_spire.png",
+    "remindersGlobal": [
+      "废物"
+    ],
+    "name": "凡庸（诅咒）",
+    "team": "outsider",
+    "ability": "你始终位于你的初始位置，但你会以为自己进行了移动且可以正常的进行\"行动\"。"
+  },
+  {
+    "id": "11_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/11_spire.png",
+    "remindersGlobal": [
+      "认知偏差",
+      "中毒"
+    ],
+    "name": "疑虑（诅咒）",
+    "team": "outsider",
+    "ability": "你不会得知你堕落，你堕落后会中毒且通过行动获取的信息的正误由说书人决定。"
+  },
+  {
+    "id": "17_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/17_spire.png",
+    "remindersGlobal": [
+      "NO.4"
+    ],
+    "name": "傲慢（诅咒）",
+    "team": "outsider",
+    "ability": "你获得的所有信息正误反转。"
+  },
+  {
+    "id": "13_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/13_spire.png",
+    "firstNightReminder": "选择楼层",
+    "otherNightReminder": "查看尖塔",
+    "reminders": [
+      "上层反转",
+      "中层反转",
+      "下层反转"
+    ],
+    "name": "尖塔之盾",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择一个楼层，该层善良玩家获得的所有信息正误反转。每个夜晚，你会得知所有玩家的位置。",
+    "firstNight": 13000,
+    "otherNight": 6
+  },
+  {
+    "id": "14_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/14_spire.png",
+    "firstNightReminder": "查看魔典",
+    "setup": true,
+    "name": "尖塔之矛",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你得知诅咒的数量，然后查看魔典并决定哪些诅咒在哪些镇民身上。［+1诅咒］",
+    "firstNight": 11000
+  },
+  {
+    "id": "15_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/15_spire.png",
+    "otherNightReminder": "选择一个楼层",
+    "reminders": [
+      "堕落"
+    ],
+    "name": "腐化之心",
+    "team": "demon",
+    "ability": "每个夜晚*，你选择一个楼层，当晚位于该层的存活善良玩家会堕落且得知此事，如果所有存活善良玩家均堕落或第四个白天结束时，邪恶阵营获胜。",
+    "otherNight": 5
+  },
+  {
+    "id": "16_spire",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/spire/16_spire.png",
+    "otherNightReminder": "选择",
+    "reminders": [
+      "商品"
+    ],
+    "name": "尖塔商人",
+    "team": "traveler",
+    "ability": "你没有阵营且不会进入尖塔以及参与行动。每个白天，你可以跟说书人共同制定一个道具并公开其效果。每个玩家可以私下告诉你他的购买代价，当晚你可以选择其中一名玩家获得道具。",
+    "otherNight": 2
+  }
+]

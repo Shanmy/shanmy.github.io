@@ -1,0 +1,461 @@
+[
+  {
+    "id": "_meta",
+    "name": "局部失忆",
+    "author": "Rocky",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/almanac.html"
+  },
+  {
+    "id": "_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/_jubushiyi.png",
+    "otherNightReminder": "唤醒玩家，让他选择一个顽疾和一个角色，如果正确获得内个玩家能力，如果时邪恶能力他死亡。",
+    "reminders": [
+      "获得能力",
+      "死亡"
+    ],
+    "name": "窥梦人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家猜测该玩家的角色：如果猜测正确，你会拥有他的能力直至下个黄昏，如果你因此即将获得邪恶角色的能力，你死亡。每个角色能力只能获取一次。",
+    "otherNight": 5
+  },
+  {
+    "id": "1_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/1_jubushiyi.png",
+    "firstNightReminder": "给他展示数字手势来告诉他场上邻座邪恶玩家有多少对。",
+    "name": "厨师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "firstNight": 20
+  },
+  {
+    "id": "2_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/2_jubushiyi.png",
+    "firstNightReminder": "给他展示数字手势来告诉他与他邻近的存活玩家有几人是邪恶的。",
+    "otherNightReminder": "给他展示数字手势来告诉他与他邻近的存活玩家有几人是邪恶的。",
+    "name": "共情者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知与你邻近的两名存活的玩家中邪恶玩家的数量。",
+    "firstNight": 21,
+    "otherNight": 19
+  },
+  {
+    "id": "3_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/3_jubushiyi.png",
+    "firstNightReminder": "让水手选择一名存活玩家。标记那名玩家或水手醉酒。",
+    "otherNightReminder": "让水手选择一名存活玩家。标记那名玩家或水手醉酒。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "水手",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：你或他之一会醉酒直到下个黄昏。你不会死亡。",
+    "firstNight": 14,
+    "otherNight": 2
+  },
+  {
+    "id": "4_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/4_jubushiyi.png",
+    "otherNightReminder": "如果白天的声明为真，会有一名玩家死亡，并由说书人来选择一名玩家，标记该玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。如果该声明正确，在当晚会有一名玩家死亡。",
+    "otherNight": 18
+  },
+  {
+    "id": "5_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/5_jubushiyi.png",
+    "firstNightReminder": "让舞蛇人选择一名玩家。如果舞蛇人选中了恶魔：展示“你是”信息标记和恶魔角色标记。用拇指向下代表他阵营变为邪恶。在魔典中交换舞蛇人和恶魔的角色标记。让原来的舞蛇人重新入睡。唤醒原来的恶魔。对老恶魔展示“你是”信息标记和舞蛇人角色标记，并用拇指向上代表他阵营变为善良。",
+    "otherNightReminder": "让舞蛇人选择一名玩家。如果舞蛇人选中了恶魔：展示“你是”信息标记和恶魔角色标记。用拇指向下代表他阵营变为邪恶。在魔典中交换舞蛇人和恶魔的角色标记。让原来的舞蛇人重新入睡。唤醒原来的恶魔。对老恶魔展示“你是”信息标记和舞蛇人角色标记，并用拇指向上代表他阵营变为善良。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "舞蛇人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。",
+    "firstNight": 17,
+    "otherNight": 6
+  },
+  {
+    "id": "6_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/6_jubushiyi.png",
+    "firstNightReminder": "给他展示数字手势来告诉他在首个夜晚里有多少玩家的角色能力受他人影响而未正常生效。",
+    "otherNightReminder": "给他展示数字手势来告诉他从上个黎明到数学家醒来前有多少玩家的角色能力受他人影响而未正常生效。",
+    "reminders": [
+      "未正常生效"
+    ],
+    "name": "数学家",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知有多少名玩家的能力因为其他角色的能力而未正常生效。(从上个黎明到你被唤醒时）",
+    "firstNight": 25,
+    "otherNight": 21
+  },
+  {
+    "id": "7_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/7_jubushiyi.png",
+    "otherNightReminder": "给他展示数字手势来告诉他当前已死亡的玩家中有多少玩家是邪恶的。",
+    "name": "神谕者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知有多少名死亡的玩家是邪恶的。",
+    "otherNight": 20
+  },
+  {
+    "id": "8_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/8_jubushiyi.png",
+    "otherNightReminder": "半兽人指向一名存活玩家：如果那名玩家善良，则立刻死去且今夜不会再有玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "半兽人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名存活的玩家，如果他是善良的，他死亡，并且当晚不会再有其他玩家死亡。",
+    "otherNight": 9
+  },
+  {
+    "id": "9_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/9_jubushiyi.png",
+    "firstNightReminder": "以任意顺序指向三名玩家，其中一名邪恶。",
+    "reminders": [
+      "得知"
+    ],
+    "name": "贵族",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。",
+    "firstNight": 23
+  },
+  {
+    "id": "10_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/10_jubushiyi.png",
+    "firstNightReminder": "展示给炼金术士一个不在场的角色标记。",
+    "remindersGlobal": [
+      "是炼金术士"
+    ],
+    "name": "炼金术士",
+    "team": "townsfolk",
+    "ability": "你拥有一个不在场的爪牙角色的能力。",
+    "firstNight": 11
+  },
+  {
+    "id": "11_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/11_jubushiyi.png",
+    "reminders": [
+      "中毒",
+      "死于今日"
+    ],
+    "name": "食人族",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "12_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/12_jubushiyi.png",
+    "remindersGlobal": [
+      "是悟道者"
+    ],
+    "setup": 1,
+    "name": "悟道者",
+    "team": "townsfolk",
+    "ability": "你以为你是一个外来者，但你实际上不是。如果有邪恶玩家的能力选择或影响了你，你会立即变成一个不在场的镇民角色。"
+  },
+  {
+    "id": "13_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/13_jubushiyi.png",
+    "otherNightReminder": "如果你在夜晚死亡，你会得知在场的恶魔角色。 如果存活玩家中仅存在一名善良玩家或邪恶玩家，你会得知此事，即使你已死亡。",
+    "name": "萨满",
+    "team": "townsfolk",
+    "ability": "如果你在夜晚死亡，你会得知在场的恶魔角色。 如果存活玩家中仅存在一名善良玩家或邪恶玩家，你会得知此事，即使你已死亡。",
+    "otherNight": 17
+  },
+  {
+    "id": "14_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/14_jubushiyi.png",
+    "firstNightReminder": "如果有七名或更多玩家，唤醒疯子：展示“他们是你的爪牙”信息标记。指向任意对应数量的玩家。展示“这些角色不在场”信息标记。展示三个善良角色。让疯子重新入睡。唤醒恶魔。展示“你是”信息标记和恶魔角色标记。展示“这名玩家是”信息标记和疯子角色标记，然后指向疯子玩家。",
+    "otherNightReminder": "做任何需要做的事情来模拟一位恶魔的行动。让疯子重新入睡。唤醒恶魔。对恶魔展示疯子角色标记，并指向疯子玩家，随后是疯子的攻击目标。",
+    "remindersGlobal": [
+      "被选择",
+      "是疯子"
+    ],
+    "name": "疯子",
+    "team": "outsider",
+    "ability": "你以为你是一个恶魔，但其实你不是。恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。",
+    "firstNight": 12,
+    "otherNight": 8
+  },
+  {
+    "id": "15_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/15_jubushiyi.png",
+    "reminders": [
+      "醉酒",
+      "已猜测"
+    ],
+    "name": "解谜大师",
+    "team": "outsider",
+    "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。"
+  },
+  {
+    "id": "16_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/16_jubushiyi.png",
+    "firstNightReminder": "在首个夜晚，唤醒食人魔。让食人魔指向一名玩家。让食人魔重新入睡。如果食人魔指向了一名邪恶玩家，将食人魔的角色标记倒转放置，代表食人魔现在属于邪恶阵营。",
+    "name": "食人魔",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，你要选择除你以外的一名玩家：你转变为他的阵营，即使你已醉酒或中毒，但你不知道你转变后的阵营。",
+    "firstNight": 24
+  },
+  {
+    "id": "17_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/17_jubushiyi.png",
+    "firstNightReminder": "唤醒恶魔，并对他展示“该角色的能力对你触发”提示标记与书生角色标记。",
+    "otherNightReminder": "如果白天恶魔成功猜中了书生是谁，唤醒那个恶魔，让其选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "已猜测",
+      "猜测正确",
+      "死亡"
+    ],
+    "name": "书生",
+    "team": "outsider",
+    "ability": "恶魔知道你在场。每局游戏限一次，恶魔可以拜访说书人并猜测谁是书生。如果恶魔猜测正确，即使你已死亡，当晚该恶魔可以选择一名玩家：他死亡。",
+    "firstNight": 13,
+    "otherNight": 14
+  },
+  {
+    "id": "18_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/18_jubushiyi.png",
+    "firstNightReminder": "唤醒书童，让其选择一名玩家，在其选择的玩家标记旁放置“选择”。",
+    "reminders": [
+      "选择",
+      "死亡"
+    ],
+    "name": "书童",
+    "team": "outsider",
+    "ability": "在你的首个夜晚，你要选择除你以外的一名玩家：除首个夜晚以外，当他被邪恶玩家的能力选择或影响时，你会在当晚死亡。",
+    "firstNight": 22
+  },
+  {
+    "id": "19_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/19_jubushiyi.png",
+    "firstNightReminder": "对他展示所有在场的外来者标记。",
+    "otherNightReminder": "如果有外来者在今天白天死亡，让教父选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "setup": 1,
+    "name": "教父",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]",
+    "firstNight": 18,
+    "otherNight": 16
+  },
+  {
+    "id": "20_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/20_jubushiyi.png",
+    "otherNightReminder": "刺客可以选择一名玩家。如果他这么做了，标记那名玩家死亡，且刺客失去能力，之后的夜晚无需再唤醒刺客。",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "name": "刺客",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。",
+    "otherNight": 15
+  },
+  {
+    "id": "21_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/21_jubushiyi.png",
+    "firstNightReminder": "让女巫选择一名玩家。标记那名玩家被诅咒。",
+    "otherNightReminder": "让女巫选择一名玩家。标记那名玩家被诅咒。",
+    "reminders": [
+      "被诅咒"
+    ],
+    "name": "女巫",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：如果他明天白天发起提名，他死亡。如果只有三名存活的玩家，你失去此能力。",
+    "firstNight": 19,
+    "otherNight": 7
+  },
+  {
+    "id": "22_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/22_jubushiyi.png",
+    "otherNightReminder": "让麻脸巫婆选择一名玩家和一个角色。如果她选择的角色不在场：让麻脸巫婆重新入睡。唤醒她的目标玩家。对该玩家展示“你是”信息标记和他的新角色标记。",
+    "name": "麻脸巫婆",
+    "team": "minion",
+    "ability": "每个夜晚*，你要选择一名玩家和一个角色，如果该角色不在场，他变成该角色。如果因此创造了一个恶魔，当晚的死亡由说书人决定。",
+    "otherNight": 3
+  },
+  {
+    "id": "23_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/23_jubushiyi.png",
+    "reminders": [
+      "已公开声明"
+    ],
+    "name": "哥布林",
+    "team": "minion",
+    "ability": "如果你在被提名后公开声明自己是哥布林且在那个白天被处决，你的阵营获胜。"
+  },
+  {
+    "id": "24_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/24_jubushiyi.png",
+    "firstNightReminder": "在等同初始外来者数量的夜晚，所有镇民中毒。",
+    "otherNightReminder": "在等同初始外来者数量的夜晚，所有镇民中毒。",
+    "reminders": [
+      "第一夜",
+      "第二夜",
+      "第三夜",
+      "大限将至"
+    ],
+    "setup": true,
+    "name": "限",
+    "team": "minion",
+    "ability": "在等同于初始外来者数量的夜晚，所有镇民玩家中毒直到下个黄昏。[外来者数量任意]",
+    "firstNight": 16,
+    "otherNight": 4
+  },
+  {
+    "id": "25_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/25_jubushiyi.png",
+    "otherNightReminder": "让方古选择一名玩家。标记那名玩家死亡。如果他选择了外来者，且“限一次”标记未放置在魔典中：用备用的方古角色标记替换那名外来者的角色标记。让方古重新入睡。唤醒方古的目标玩家。对该玩家展示“你是”信息标记和方古角色标记，并用拇指向下代表他阵营变为邪恶。将“首次”标记放置在魔典中。标记原本的方古玩家死亡，且他选择的玩家不会被标记为死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "remindersGlobal": [
+      "限一次"
+    ],
+    "setup": 1,
+    "name": "方古",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被该能力杀死的外来者改为变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者]",
+    "otherNight": 10
+  },
+  {
+    "id": "26_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/26_jubushiyi.png",
+    "otherNightReminder": "让亡骨魔选择一名玩家。标记那名玩家死亡。如果该玩家是爪牙，标记该玩家保留能力，并标记与该玩家邻近的镇民玩家之一中毒。",
+    "reminders": [
+      "死亡",
+      "保留能力",
+      "中毒"
+    ],
+    "setup": 1,
+    "name": "亡骨魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+    "otherNight": 11
+  },
+  {
+    "id": "27_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/27_jubushiyi.png",
+    "firstNightReminder": "寄生蛭指向一名玩家。放置寄生标记，那名玩家中毒。",
+    "otherNightReminder": "寄生蛭指向一名玩家。那名玩家死亡。",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "name": "痢蛭",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名存活的玩家：他中毒，只有当他处于死亡状态时你才会立即死亡。",
+    "firstNight": 15,
+    "otherNight": 12
+  },
+  {
+    "id": "28_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/28_jubushiyi.png",
+    "otherNightReminder": "唤醒，让他选择一名玩家，为该玩家标记死亡。如果场上存在多名奇美拉，由你来决定谁先行动。",
+    "reminders": [
+      "死亡",
+      "是海德拉"
+    ],
+    "name": "海德拉",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你在非最后一个白天死于处决，一名善良玩家与一名邪恶玩家会变成海德拉。",
+    "otherNight": 13
+  },
+  {
+    "id": "29_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/29_jubushiyi.png",
+    "reminders": [
+      "死亡",
+      "茶客"
+    ],
+    "setup": 1,
+    "name": "长安红茶",
+    "team": "demon",
+    "ability": "首个夜晚，你要选择等同初始爪牙数量的玩家加入邪恶阵营。每个夜晚*，会有一名玩家死亡，只有说书人被处决，邪恶阵营落败，即使你已死亡。[无爪牙角色在场]"
+  },
+  {
+    "id": "30_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/30_jubushiyi.png",
+    "name": "遗忘之门",
+    "team": "fabled",
+    "ability": "玩家不知道自己的角色和阵营。当他们死亡时才会得知这些信息。"
+  },
+  {
+    "id": "31_jubushiyi",
+    "name": "数学家&疯子",
+    "team": "jinxes",
+    "ability": "数学家会得知疯子是否攻击力与真正恶魔不同的目标。"
+  },
+  {
+    "id": "32_jubushiyi",
+    "name": "炼金术士&遗忘之门",
+    "team": "jinxes",
+    "ability": "炼金术士不会的值自己获得了什么爪牙能力。炼金术士不会因为获得限的能力使自己中毒。"
+  },
+  {
+    "id": "33_jubushiyi",
+    "name": "食人族&遗忘之门",
+    "team": "jinxes",
+    "ability": "食人族获得悟道者或者疯子的能力当晚会被通知角色变化，直到悟道者能力生效或者下一位玩家死于处决。"
+  },
+  {
+    "id": "34_jubushiyi",
+    "name": "麻脸巫婆&食人魔",
+    "team": "jinxes",
+    "ability": "被麻脸巫婆创造的邪恶食人魔无法因为自身能力转变为善良阵营。"
+  },
+  {
+    "id": "35_jubushiyi",
+    "name": "麻脸巫婆&长安红茶",
+    "team": "jinxes",
+    "ability": "被麻脸巫婆创造的长安红茶始终处于中毒醉酒状态。"
+  },
+  {
+    "id": "36_jubushiyi",
+    "name": "限&遗忘之门",
+    "team": "jinxes",
+    "ability": "限将同时得知能力发动当晚有多少名玩家的能力因为你的能力而未正常生效。"
+  },
+  {
+    "id": "37_jubushiyi",
+    "name": "教父&遗忘之门",
+    "team": "jinxes",
+    "ability": "教父首夜不会得知外来者角色，改为得知在场外来者数量。"
+  },
+  {
+    "id": "38_jubushiyi",
+    "name": "长安红茶&遗忘之门",
+    "team": "jinxes",
+    "ability": "长安红茶首夜选择等同于初始爪牙数量的玩家转变阵营改为：每个夜晚，选择一名除你以外的玩家转变为邪恶阵营直到等同于初始爪牙数量。"
+  },
+  {
+    "id": "39_jubushiyi",
+    "name": "贵族&长安红茶",
+    "team": "jinxes",
+    "ability": "贵族可以得知因长安红茶选择转变的邪恶玩家。"
+  },
+  {
+    "id": "40_jubushiyi",
+    "name": "遗忘之门",
+    "team": "jinxes",
+    "ability": "角色发生改变的玩家只会得知自己的角色发生了变化。如果玩家选择到了非法目标，说书人会让他重新选择。"
+  },
+  {
+    "id": "41_jubushiyi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/jubushiyi/41_jubushiyi.png",
+    "name": "一无所知",
+    "team": "fabled",
+    "ability": "[在游戏的开始之前，需要决定教父还是限加入游戏，他们只会有一个在场。]"
+  }
+]

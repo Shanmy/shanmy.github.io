@@ -1,0 +1,140 @@
+[
+  {
+    "id": "_meta",
+    "author": "Team Badger",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/AbandonedHouses/_meta.png",
+    "name": "十室九空 Abandoned Houses",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/AbandonedHouses/almanac.html",
+    "firstNight": [
+      "dusk",
+      "highpriestess",
+      "empath",
+      "minioninfo",
+      "demoninfo",
+      "savant",
+      "exorcist",
+      "amnesiac",
+      "minstrel",
+      "juggler",
+      "chef",
+      "pixie",
+      "fisherman",
+      "towncrier",
+      "soldier",
+      "oracle",
+      "sweetheart",
+      "recluse",
+      "hermit",
+      "poisoner",
+      "wraith",
+      "fearmonger",
+      "godfather",
+      "yaggababble",
+      "dawn"
+    ],
+    "otherNight": [
+      "dusk",
+      "minstrel",
+      "fisherman",
+      "exorcist",
+      "towncrier",
+      "empath",
+      "oracle",
+      "soldier",
+      "amnesiac",
+      "juggler",
+      "savant",
+      "highpriestess",
+      "chef",
+      "pixie",
+      "sweetheart",
+      "recluse",
+      "hermit",
+      "poisoner",
+      "wraith",
+      "fearmonger",
+      "godfather",
+      "yaggababble",
+      "dawn"
+    ]
+  },
+  {
+    "id": "chef"
+  },
+  {
+    "id": "pixie"
+  },
+  {
+    "id": "empath"
+  },
+  {
+    "id": "highpriestess"
+  },
+  {
+    "id": "towncrier"
+  },
+  {
+    "id": "oracle"
+  },
+  {
+    "id": "exorcist"
+  },
+  {
+    "id": "savant"
+  },
+  {
+    "id": "fisherman"
+  },
+  {
+    "id": "juggler"
+  },
+  {
+    "id": "soldier"
+  },
+  {
+    "id": "amnesiac"
+  },
+  {
+    "id": "minstrel"
+  },
+  {
+    "id": "hermit"
+  },
+  {
+    "id": "recluse"
+  },
+  {
+    "id": "sweetheart"
+  },
+  {
+    "id": "_abandonedhouses",
+    "name": "大象",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/AbandonedHouses/_abandonedhouses.png",
+    "team": "outsider",
+    "ability": "在提名阶段，你要手持一个笨重的大物件。 今天白天每有一名善良玩家“疯狂”地证明你是大象，就可能有一名善良玩家醉酒直到下个黄昏。",
+    "firstNight": 0,
+    "otherNight": 0,
+    "reminders": [
+      "疯狂",
+      "醉酒"
+    ]
+  },
+  {
+    "id": "godfather"
+  },
+  {
+    "id": "poisoner"
+  },
+  {
+    "id": "fearmonger"
+  },
+  {
+    "id": "wraith"
+  },
+  {
+    "id": "yaggababble"
+  },
+  {
+    "id": "bootlegger"
+  }
+]

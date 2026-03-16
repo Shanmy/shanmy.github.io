@@ -1,0 +1,374 @@
+[
+  {
+    "id": "_meta",
+    "name": "上锁房间",
+    "author": "小平",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/9/9d/8gyrdlb1hfkxh72osk2hzyaw7xq5bay.png/1600px-%E4%B8%8A%E9%94%81%E6%88%BF%E9%97%B4logo.png",
+    "almanac": "有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/5/50/4rnbseleopifksftp9y94o57hd2m9ov.png/240px-%E9%95%87%E6%B0%91_%E9%94%81%E5%8C%A0_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "reminders": [
+      "是锁匠",
+      "失去能力"
+    ],
+    "setup": true,
+    "name": "锁匠",
+    "team": "townsfolk",
+    "ability": "你以为你是一个外来者，但其实你不是。 当你首次被处决时，你不会死亡直到下个黎明。"
+  },
+  {
+    "id": "1_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/91/04je4dg5ituw4nymx4f0x0b80p6gntg.png",
+    "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 3400,
+    "otherNight": 14.1
+  },
+  {
+    "id": "2_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a3/nxckynoy8mshn7pwnsnnraceso4zx2p.png",
+    "otherNightReminder": "唤醒僧侣，让他选择除自己以外的一名玩家，那名玩家今晚免受恶魔负面效果影响。",
+    "reminders": [
+      "保护"
+    ],
+    "name": "僧侣",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的一名玩家：当晚恶魔的负面能力对他无效。",
+    "otherNight": 3
+  },
+  {
+    "id": "3_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/14/gk3bmjwzy80yzezuvzca5b1vb51g0wk.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "贞洁者",
+    "team": "townsfolk",
+    "ability": "当你首次被提名时，如果提名你的玩家是镇民，他立刻被处决。"
+  },
+  {
+    "id": "4_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fe/o9gzozrpeyh7exogeuro90qh0904qu1.png",
+    "firstNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "otherNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "舞蛇人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。",
+    "firstNight": 3300,
+    "otherNight": 2
+  },
+  {
+    "id": "5_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/89/qd1r9ozv96l6aftj402m46irjynbrem.png",
+    "otherNightReminder": "唤醒卖花女孩，以点头或摇头告知她今天白天是否有恶魔参与投票。",
+    "reminders": [
+      "恶魔未投票",
+      "恶魔已投票"
+    ],
+    "name": "卖花女孩",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天时是否有恶魔投过票。",
+    "otherNight": 14
+  },
+  {
+    "id": "6_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/sjvf3t4a2see24rfoq8x10c3b9q6suu.png",
+    "otherNightReminder": "如果今天白天有玩家死于处决，唤醒史官，告知其在场存活镇民数量。",
+    "reminders": [
+      "死于今日"
+    ],
+    "name": "史官",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，如果今天白天有玩家死于处决，你会得知存活镇民的数量。",
+    "otherNight": 15
+  },
+  {
+    "id": "7_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e2/9mn9ladhyb0ue2iwdz87ec2ym1floug.png",
+    "firstNightReminder": "告诉灶王爷二名玩家和一个数字，该数字为灶王爷和他们的角色类型数量。",
+    "reminders": [
+      "知晓"
+    ],
+    "name": "灶王爷",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知二名玩家和一个数字：该数字为你和他们的角色类型数量。",
+    "firstNight": 3500
+  },
+  {
+    "id": "8_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ea/9qn2qbiukxl4u74cmfxm6ezl2aruq4h.png",
+    "otherNightReminder": "如果他在白天公开宣读了，唤醒他并告知他“是”或“否”。",
+    "reminders": [
+      "真新闻",
+      "假新闻"
+    ],
+    "name": "送报童",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知一条“新闻”，如果你公开宣读了该“新闻”，当天晚上你会得知它是否正确。",
+    "otherNight": 17
+  },
+  {
+    "id": "9_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/ph481fltbdrgqrnjeezfuz4n3vuct5m.png",
+    "firstNightReminder": "得知外来者或爪牙",
+    "otherNightReminder": "若死亡得知外来者或爪牙",
+    "setup": 1,
+    "name": "治安官",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名外来者或爪牙玩家。如果你在夜晚死亡，你会得知一名外来者或爪牙玩家（角色类型与上次不同）。［+1外来者］",
+    "firstNight": 3600,
+    "otherNight": 11
+  },
+  {
+    "id": "10_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/44/ctdp2evtff3hrnwjunvaqursl55pte7.png",
+    "firstNightReminder": "每个夜晚，你会得知你和舞龙尾最近距离间存活的善良玩家数量（不含旅行者）。[离你最远的一名镇民是舞龙尾]",
+    "otherNightReminder": "每个夜晚，你会得知你和舞龙尾最近距离间存活的善良玩家数量（不含旅行者）。[离你最远的一名镇民是舞龙尾]",
+    "setup": 1,
+    "name": "舞龙头",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知你和舞龙尾最近距离间存活的善良玩家数量（不含旅行者）。[离你最远的一名镇民是舞龙尾]",
+    "firstNight": 3800,
+    "otherNight": 18
+  },
+  {
+    "id": "11_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/68/adsy4f0pr17t6gzkx2myej6295gdma0.png",
+    "firstNightReminder": "得知一个在场角色，并在该玩家角色旁放置“得知”标记",
+    "otherNightReminder": "若白天她猜对，得知另一个在场角色，并在该玩家角色旁放置“得知”标记",
+    "reminders": [
+      "得知"
+    ],
+    "name": "画家",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个在场角色。每个白天你可以进行一次猜测，每当你猜对谁是你最近得知的角色，当晚你会得知另一个在场角色。",
+    "firstNight": 3700,
+    "otherNight": 12
+  },
+  {
+    "id": "12_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/88/cl9huerpjqy4xvh0u2f3vrjvbrcox9c.png",
+    "remindersGlobal": [
+      "舞龙尾"
+    ],
+    "setup": 1,
+    "name": "舞龙尾",
+    "team": "townsfolk",
+    "ability": "你不知道你是舞龙尾，你以为你是其他镇民角色。如果你和舞龙头之间的其他玩家都已死亡，这些玩家变成舞龙身并复活，在此之前你只会死于处决。[+舞龙头]"
+  },
+  {
+    "id": "13_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2a/296guu1g4metf323gdyk55kz1kw2gdv.png",
+    "firstNightReminder": "Point to an evil player or an Outsider. Recall that if they have the \"false info\" reminder token, that you must show them a player which is neither (most of the time, this is a Townsfolk).",
+    "otherNightReminder": "Point to an evil player or an Outsider. Recall that if they have the \"false info\" reminder token, that you must show them a player which is neither (most of the time, this is a Townsfolk).",
+    "reminders": [
+      "错误信息"
+    ],
+    "name": "阴谋家",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知一名邪恶玩家或外来者。如果你的邻座存在非旅行者的邪恶玩家，你得知错误信息。",
+    "firstNight": 3900,
+    "otherNight": 19
+  },
+  {
+    "id": "14_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/35/gc8n9q1mvlgs42dgu1og2324h6fz3wk.png",
+    "otherNightReminder": "每个夜晚*，你会得知你提名过的玩家之中共有多少种角色类型。 如果每个白天你没有提名其他存活的玩家，你的阵营落败",
+    "reminders": [
+      "被提名"
+    ],
+    "name": "面包师",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知你提名过的玩家之中共有多少种角色类型。 如果每个白天你没有提名其他存活的玩家，你的阵营落败",
+    "otherNight": 16
+  },
+  {
+    "id": "15_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/89/ge09m69i6ymwudxtr1plmt68pek8sgh.png",
+    "reminders": [
+      "无法提名"
+    ],
+    "name": "魔像",
+    "team": "outsider",
+    "ability": "每局游戏你只能发起提名一次。当你发起提名时，如果被你提名的玩家不是恶魔，他死亡。"
+  },
+  {
+    "id": "16_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/51/p2oi211ggn3c5px3azic9dfvliikgtv.png",
+    "firstNightReminder": "存活的恶魔和爪牙(仅限游戏的首个夜晚，玩偶除外)知道你是醉汉以及你的认知，并得知你当晚的行动与获取的信息。",
+    "remindersGlobal": [
+      "醉汉"
+    ],
+    "setup": true,
+    "name": "醉汉",
+    "team": "outsider",
+    "ability": "你不知道你是醉汉，你以为你是一个其他角色，但其实你不是。存活的恶魔和爪牙(仅限游戏的首个夜晚，玩偶除外)知道你是醉汉以及你的认知，并得知你当晚的行动与获取的信息。",
+    "firstNight": 3001
+  },
+  {
+    "id": "17_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ee/738cdn7upk4u7zdu1c585tffdhwdjx0.png",
+    "firstNightReminder": "你不会醉酒或中毒。有一名恶魔中毒且与爪牙互相不认识。[+1恶魔，-1爪牙]",
+    "reminders": [
+      "中毒"
+    ],
+    "setup": true,
+    "name": "看守者",
+    "team": "outsider",
+    "ability": "你不会醉酒或中毒。有一名恶魔中毒且与爪牙互相不认识。[+1恶魔，-1爪牙]",
+    "firstNight": 11
+  },
+  {
+    "id": "18_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/1/18/40rwrodxzg0bcgnso84f1v3st8rv4ky.png/1200px-%E5%A4%96%E6%9D%A5%E8%80%85_%E5%A0%82%E5%90%89%E8%AF%83%E5%BE%B7_%E5%A4%AA%E4%B8%80.png",
+    "reminders": [
+      "“他”"
+    ],
+    "name": "堂吉诃德",
+    "team": "outsider",
+    "ability": "一名玩家会被镇民的能力当作恶魔，即使你已死亡。你可以私下询问说书人以得知“他”是谁，随后“他”会改为另一名玩家。"
+  },
+  {
+    "id": "19_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/7/7e/0tbzzm1wjkdotx6d3wjyzuj4gs9cycn.png/240px-%E7%88%AA%E7%89%99_%E6%88%98%E8%BD%A6_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "firstNightReminder": "初始设置时，在战车顺时针距离为1的善良玩家的角色标记旁放置“控制”提示标记以表示他是由于战车的能力中毒；如果战车的顺时针距离为1的玩家是邪恶的，则战车将与其交换角色，随后在新战车的顺时针距离为1的善良玩家的角色标记旁放置“控制”提示标记。",
+    "otherNightReminder": "将战车的“控制”提示标记以顺时针方向推进到下一名玩家。如果落在邪恶玩家上，则战车将与其交换角色，随后在新战车的顺时针距离为1的善良玩家的角色标记旁放置“控制”提示标记。",
+    "remindersGlobal": [
+      "控制"
+    ],
+    "name": "战车",
+    "team": "minion",
+    "ability": "与你顺时针距离为1的玩家中毒。如果是邪恶的非旅行者玩家，改为和他交换角色。每个夜晚*，或该玩家死亡的，该距离+1。",
+    "firstNight": 3200,
+    "otherNight": 4
+  },
+  {
+    "id": "20_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4c/cbp9yi8vzy26hp8lyzpw8tgyb4981cx.png",
+    "firstNightReminder": "（分别或同时）唤醒科学怪人和恶魔，通知他们恶魔因为科学怪人而获得的善良角色的能力。",
+    "setup": true,
+    "name": "科学怪人",
+    "team": "minion",
+    "ability": "恶魔拥有一个不在场的善良角色的能力，即使他醉酒或中毒。你和他都知道他获得了什么能力。",
+    "firstNight": 12
+  },
+  {
+    "id": "21_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/86/7g7bzjls9vkn9pn1xw5dd0zeijozuam.png",
+    "otherNightReminder": "如果你被恶魔杀死，恶魔要选择一名玩家：他变成玩偶。",
+    "remindersGlobal": [
+      "初始玩偶",
+      "新玩偶"
+    ],
+    "setup": 1,
+    "name": "玩偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。如果你被恶魔杀死，恶魔要选择一名玩家：他变成玩偶。[玩偶会与恶魔邻座]",
+    "otherNight": 9
+  },
+  {
+    "id": "22_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2c/dmvdbv8nahd75uppfk430y642h75hcu.png",
+    "firstNightReminder": "唤醒画皮，让画皮选择一名存活玩家，那名存活玩家变成活尸。",
+    "otherNightReminder": "如果首夜被画皮变成活尸的玩家死亡，他重生，然后画皮重获能力。唤醒画皮，让画皮选择一名存活玩家，那名存活玩家变成活尸。",
+    "reminders": [
+      "以为存活",
+      "重获能力"
+    ],
+    "name": "画皮",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择一名存活玩家：他死亡但会被当作存活。当他下一次死亡时，他重生，随后你重获能力。",
+    "firstNight": 3100,
+    "otherNight": 10
+  },
+  {
+    "id": "23_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/03/1trck24gi8o05kklsg93al4co09nakb.png",
+    "otherNightReminder": "唤醒小恶魔，让他攻击一名玩家。如果他成功自杀，则在他入睡后通知一名爪牙角色变化。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 5
+  },
+  {
+    "id": "24_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/5jaw5tcw1cctwr699faa2irvpeh0tqi.png",
+    "otherNightReminder": "唤醒方古，让他攻击一名玩家。如果该玩家是外来者并成功转化，则方古死亡，在他入睡后通知那名外来者角色变化。",
+    "reminders": [
+      "死亡",
+      "限一次"
+    ],
+    "setup": true,
+    "name": "方古",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被该能力杀死的外来者变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者]",
+    "otherNight": 6
+  },
+  {
+    "id": "25_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/96/cp3pizd5ftmscbdlvx6jq6666dohcy6.png",
+    "otherNightReminder": "让奇奇默克选择一名玩家，标记那名玩家死亡。",
+    "reminders": [
+      "死亡",
+      "错误"
+    ],
+    "name": "奇奇默克",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。距离你最远爪牙与你之间的镇民玩家能力都会产生错误信息。",
+    "otherNight": 8
+  },
+  {
+    "id": "26_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/be/da75t70wt3qeje4kf0ugo90a0kyqyaa.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家:他死亡。",
+    "reminders": [
+      "死亡",
+      "冤呐"
+    ],
+    "setup": 1,
+    "name": "冤",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家:他死亡。如果你在被提名后公开声明我冤呐（最后一天除外），在你死于处决后私下选择一名给你投票的玩家，他会变成邪恶的冤，但每局游戏仅能成功转化一次。[-1外来者]",
+    "otherNight": 7
+  },
+  {
+    "id": "27_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/11/4xfaulhiamz08py47u0mmekxxjh34on.png",
+    "name": "舞龙身",
+    "team": "traveller",
+    "ability": "你无法被流放。每个白天舞龙头可以向一名非旅行者玩家发起流放，此次流放仅舞龙能参与且半数以上舞龙同意即可流放成功。[不可选择]"
+  },
+  {
+    "id": "28_shangsuofangjian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png",
+    "name": "外来者保护法",
+    "team": "fabled",
+    "ability": "方古和冤不会同时在场。"
+  },
+  {
+    "id": "29_shangsuofangjian",
+    "name": "锁匠&科学怪人",
+    "team": "a jinxed",
+    "ability": "如果恶魔拥有锁匠的能力，他不会以为自己是一个外来者。"
+  },
+  {
+    "id": "30_shangsuofangjian",
+    "name": "醉汉&科学怪人",
+    "team": "a jinxed",
+    "ability": "如果恶魔拥有醉汉的能力，改为由科学怪人选择一名玩家：他醉酒。"
+  }
+]

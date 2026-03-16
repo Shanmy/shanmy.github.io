@@ -1,0 +1,331 @@
+[
+  {
+    "id": "_meta",
+    "name": "黯月初升异术士版",
+    "author": "TPI",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/almanac.html"
+  },
+  {
+    "id": "_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/_anyuechushengyishushi.png",
+    "firstNightReminder": "唤醒祖母，对她指向一名善良玩家，并展示该玩家的角色标记。",
+    "otherNightReminder": "如果恶魔杀死了孙子，祖母死亡。",
+    "reminders": [
+      "孙子",
+      "死亡"
+    ],
+    "name": "祖母",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名善良玩家和他的角色。如果恶魔杀死了他，你也会死亡。",
+    "firstNight": 3700,
+    "otherNight": 20
+  },
+  {
+    "id": "1_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/1_anyuechushengyishushi.png",
+    "firstNightReminder": "唤醒水手，让他选择一名玩家。决定他俩其中谁因为水手能力醉酒。",
+    "otherNightReminder": "唤醒水手，让他选择一名玩家。决定他俩其中谁因为水手能力醉酒。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "水手",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：你或他之一会醉酒直到下个黄昏。你不会死亡。",
+    "firstNight": 3200,
+    "otherNight": 2
+  },
+  {
+    "id": "2_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/2_anyuechushengyishushi.png",
+    "firstNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "otherNightReminder": "唤醒侍女，让她选择两名除自己以外的存活玩家。用手势比划数字来告知她这些玩家中因自己能力而唤醒的玩家数量。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 3800,
+    "otherNight": 21
+  },
+  {
+    "id": "3_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/3_anyuechushengyishushi.png",
+    "otherNightReminder": "唤醒驱魔人，让他选择一名与上一晚不同的玩家。如果他选中了恶魔，则在驱魔人入睡后通知该恶魔谁是驱魔人。",
+    "reminders": [
+      "被选择"
+    ],
+    "name": "驱魔人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家（与上个夜晚不同）：如果你选中了恶魔，他会得知你的角色，但他当晚不会因其自身能力而被唤醒。",
+    "otherNight": 8
+  },
+  {
+    "id": "4_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/4_anyuechushengyishushi.png",
+    "otherNightReminder": "唤醒旅店老板，让他选择两名玩家。这两名玩家今晚不死，同时需要决定他俩其中谁因为旅店老板能力醉酒。",
+    "reminders": [
+      "不会死亡",
+      "醉酒"
+    ],
+    "name": "旅店老板",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择两名玩家：他们当晚不会死亡，但其中一人会醉酒到下个黄昏。",
+    "otherNight": 3
+  },
+  {
+    "id": "5_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/5_anyuechushengyishushi.png",
+    "otherNightReminder": "唤醒赌徒，让他进行猜测。如果猜测错误，他死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "赌徒",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测该玩家的角色：如果你猜错了，你会死亡。",
+    "otherNight": 5
+  },
+  {
+    "id": "6_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/6_anyuechushengyishushi.png",
+    "otherNightReminder": "如果造谣者今天白天的声明正确，一名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。在当晚，如果该声明是正确的，会有一名玩家死亡。",
+    "otherNight": 15
+  },
+  {
+    "id": "7_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/7_anyuechushengyishushi.png",
+    "firstNightReminder": "唤醒侍臣，他可以摇头不使用能力，或选择角色列表上的一个任意角色，该角色对应的玩家之一醉酒。",
+    "otherNightReminder": "如果侍臣未曾使用能力，唤醒侍臣，他可以摇头不使用能力，或选择角色列表上的一个任意角色，该角色对应的玩家之一醉酒。",
+    "reminders": [
+      "醉酒1",
+      "醉酒2",
+      "醉酒3",
+      "失去能力"
+    ],
+    "name": "侍臣",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一个角色：如果该角色在场，一个该角色从当晚开始醉酒三天三夜。",
+    "firstNight": 3300,
+    "otherNight": 4
+  },
+  {
+    "id": "8_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/8_anyuechushengyishushi.png",
+    "otherNightReminder": "如果教授未曾使用能力且在城镇广场上有玩家死亡，唤醒教授，他可以摇头不使用能力，或选择一名已死亡的玩家。如果该玩家是镇民，该玩家被起死回生。",
+    "reminders": [
+      "复活",
+      "失去能力"
+    ],
+    "name": "教授",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名死亡的玩家：如果他是镇民，你会将他起死回生。",
+    "otherNight": 18
+  },
+  {
+    "id": "9_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/9_anyuechushengyishushi.png",
+    "reminders": [
+      "全员醉酒"
+    ],
+    "name": "吟游诗人",
+    "team": "townsfolk",
+    "ability": "当一名爪牙死于处决时，除了你和旅行者以外的所有其他玩家醉酒直到明天黄昏。"
+  },
+  {
+    "id": "10_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/10_anyuechushengyishushi.png",
+    "reminders": [
+      "不会死亡"
+    ],
+    "name": "茶艺师",
+    "team": "townsfolk",
+    "ability": "如果与你邻近的两名存活的玩家是善良的，他们不会死亡。"
+  },
+  {
+    "id": "11_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/11_anyuechushengyishushi.png",
+    "name": "和平主义者",
+    "team": "townsfolk",
+    "ability": "被处决的善良玩家可能不会死亡。"
+  },
+  {
+    "id": "12_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/12_anyuechushengyishushi.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "弄臣",
+    "team": "townsfolk",
+    "ability": "当你首次将要死亡时，你不会死亡。"
+  },
+  {
+    "id": "13_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/13_anyuechushengyishushi.png",
+    "otherNightReminder": "在夜晚的任意时机，你都可以决定杀死修补匠。这里只是一个提示以免遗忘修补匠。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "修补匠",
+    "team": "outsider",
+    "ability": "你随时可能死亡。",
+    "otherNight": 16
+  },
+  {
+    "id": "14_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/14_anyuechushengyishushi.png",
+    "otherNightReminder": "如果月之子在今天白天的时候使用自己的能力选择了一名善良玩家，那名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "月之子",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家。如果他是善良的，在当晚他会死亡。",
+    "otherNight": 17
+  },
+  {
+    "id": "15_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/15_anyuechushengyishushi.png",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "莽夫",
+    "team": "outsider",
+    "ability": "每个夜晚，首个使用其自身能力选择了你的玩家会醉酒直到下个黄昏。你会转变为他的阵营。"
+  },
+  {
+    "id": "16_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/16_anyuechushengyishushi.png",
+    "firstNightReminder": "唤醒疯子并向他提供恶魔信息。如可能，则让疯子进行相应的恶魔行动。随后在恶魔信息环节对恶魔提供疯子的相关信息。",
+    "otherNightReminder": "如果疯子以为的恶魔会在当晚行动，唤醒疯子，并让他以恶魔的方式行动。",
+    "reminders": [
+      "被选择"
+    ],
+    "remindersGlobal": [
+      "是疯子"
+    ],
+    "setup": true,
+    "name": "疯子",
+    "team": "outsider",
+    "ability": "你以为你是一个恶魔，但其实你不是。恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。",
+    "firstNight": 2100,
+    "otherNight": 7
+  },
+  {
+    "id": "17_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/17_anyuechushengyishushi.png",
+    "firstNightReminder": "唤醒教父，对他展示外来者角色标记，告诉他有哪些外来者在场。",
+    "otherNightReminder": "如果今天白天有外来者死亡，唤醒教父，让他攻击一名玩家。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "教父",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]",
+    "firstNight": 3400,
+    "otherNight": 14
+  },
+  {
+    "id": "18_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/18_anyuechushengyishushi.png",
+    "firstNightReminder": "唤醒魔鬼代言人，让他选择一名玩家，那名玩家处决不死。",
+    "otherNightReminder": "唤醒魔鬼代言人，让他选择一名与上一晚不同的玩家，那名玩家处决不死。",
+    "reminders": [
+      "处决不死"
+    ],
+    "name": "魔鬼代言人",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名存活的玩家（与上个夜晚不同）：如果明天白天他被处决，他不会死亡。",
+    "firstNight": 3500,
+    "otherNight": 6
+  },
+  {
+    "id": "19_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/19_anyuechushengyishushi.png",
+    "otherNightReminder": "如果刺客未曾使用能力，唤醒刺客，他可以摇头不使用能力，或选择攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "name": "刺客",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：他死亡，即使因为任何原因让他不会死亡。",
+    "otherNight": 13
+  },
+  {
+    "id": "20_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/20_anyuechushengyishushi.png",
+    "name": "主谋",
+    "team": "minion",
+    "ability": "如果恶魔因为死于处决而因此导致游戏结束时，再额外进行一个夜晚和一个白天。在那个白天如果有玩家被处决，他的阵营落败。"
+  },
+  {
+    "id": "21_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/21_anyuechushengyishushi.png",
+    "otherNightReminder": "如果白天无人死亡，唤醒僵怖，让他攻击一名玩家。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "name": "僵怖",
+    "team": "demon",
+    "ability": "每个夜晚*，如果今天白天没有人死亡，你会被唤醒并要选择一名玩家：他死亡。当你首次死亡后，你仍存活，但会被当作死亡。",
+    "otherNight": 9
+  },
+  {
+    "id": "22_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/22_anyuechushengyishushi.png",
+    "firstNightReminder": "唤醒普卡，让他选择一名玩家，那名玩家中毒。",
+    "otherNightReminder": "唤醒普卡，让他选择一名玩家，该玩家中毒。上一个被普卡中毒的玩家死亡。",
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "name": "普卡",
+    "team": "demon",
+    "ability": "每个夜晚，你要选择一名玩家：他中毒。上个因你的能力中毒的玩家会死亡并恢复健康。",
+    "firstNight": 3600,
+    "otherNight": 10
+  },
+  {
+    "id": "23_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/23_anyuechushengyishushi.png",
+    "otherNightReminder": "决定上一夜被沙巴洛斯选择的玩家是否被反刍。然后唤醒沙巴洛斯，让他攻击两名玩家。",
+    "reminders": [
+      "死亡",
+      "复活"
+    ],
+    "name": "沙巴洛斯",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择两名玩家：他们死亡。你上个夜晚选择过且当前死亡的玩家之一可能会被你反刍。",
+    "otherNight": 11
+  },
+  {
+    "id": "24_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/24_anyuechushengyishushi.png",
+    "otherNightReminder": "唤醒珀，他可以攻击一名玩家或不进行攻击，如果他上一次选择了不进行攻击，则此次必须攻击三名玩家。",
+    "reminders": [
+      "攻击三次",
+      "死亡"
+    ],
+    "name": "珀",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择一名玩家：他死亡。如果你上次选择时没有选择任何玩家，当晚你要选择三名玩家：他们死亡。",
+    "otherNight": 12
+  },
+  {
+    "id": "25_anyuechushengyishushi",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/anyuechushengyishushi/25_anyuechushengyishushi.png",
+    "reminders": [
+      "目标"
+    ],
+    "name": "异术士",
+    "team": "fabled",
+    "ability": "一名或多名玩家各自拥有一个目标。当达成目标后，他会获得一条正确信息。"
+  }
+]

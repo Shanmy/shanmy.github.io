@@ -1,0 +1,701 @@
+[
+    {
+        "almanac": "https://www.bloodstar.xyz//p//omarmotta008//AvengersV7//almanac.html",
+        "author": "Jobs",
+        "logo": "https://i.postimg.cc/fbqh6ySw/logo.png",
+        "background": "https://images.hdqwalls.com/wallpapers/avengers-logo-mg.jpg",
+        "firstNight": [
+            "dusk",
+            "minioninfo",
+            "demoninfo",
+            "nickfury_avengersv2",
+            "captainamerica_avengersv2",
+            "kaecilius_avengersv2",
+            "loki_avengersv2",
+            "arnimzola_avengersv2",
+            "thor_avengersv2",
+            "spiderman_avengersv2",
+            "vision_avengersv2",
+            "scarletwitch_avengersv2",
+            "drax_avengersv2",
+            "daredevil_avengersv2",
+            "dawn"
+        ],
+        "id": "_meta",
+        "name": "复仇者集结 Avengers, Assemble!",
+        "otherNight": [
+            "dusk",
+            "groot_avengersv2",
+            "nebula_avengersv2",
+            "ironman_avengersv2",
+            "kaecilius_avengersv2",
+            "loki_avengersv2",
+            "nickfury_avengersv2",
+            "doctorstrange_avengersv2",
+            "thanos_avengersv2",
+            "dormammu_avengersv2",
+            "hela_avengersv2",
+            "ultron_avengersv2",
+            "starlord_avengersv2",
+            "thor_avengersv2",
+            "hawkeye_avengersv2",
+            "scarletwitch_avengersv2",
+            "hulk_avengersv2",
+            "spiderman_avengersv2",
+            "vision_avengersv2",
+            "blackwidow_avengersv2",
+            "captainamerica_avengersv2",
+            "daredevil_avengersv2",
+            "dawn"
+        ]
+    },
+    {
+        "ability": "在你的首个夜晚，你会得知一段秘密短语。如果首个公开说出这段短语的玩家是一名外来者，当晚他会有好事发生。[+0~1外来者]",
+        "firstNightReminder": "Show the Nick Fury their secret phrase.",
+        "flavor": "Last time I trusted someone, I lost an eye.",
+        "id": "nickfury_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/nickfury_avengersv2.png",
+        "name": "尼克·弗瑞",
+        "firstNight": 1,
+        "otherNight": 13,
+        "otherNightReminder": "If the secret phrase was 1st spoken today by an Outsider, something good happens to them.",
+        "reminders": [
+            "激活",
+            "失去能力"
+        ],
+        "setup": true,
+        "special": [
+            {
+                "name": "card",
+                "type": "signal",
+                "value": "The secret phrase is"
+            },
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "在你的首个夜晚，你要选择一名玩家：如果你在夜晚死亡且他存活，他会变成雷神托尔。如果你选中了一名邪恶玩家，你醉酒。",
+        "firstNightReminder": "The Thor points to a player. If they are good, mark them 'Worthy'. Otherwise, mark the Thor '醉酒'.",
+        "flavor": "I would rather be a good man than a great king.",
+        "id": "thor_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/thor_avengersv2.png",
+        "name": "雷神托尔",
+        "firstNight": 6,
+        "otherNight": 20,
+        "otherNightReminder": "If the Thor died tonight and the player marked 'Worthy' is still alive, wake that player.<br><br>Show the <b>YOU ARE</b> card and the Thor token. Run the new Thor's 1st night ability.",
+        "reminders": [
+            "大人物",
+            "醉酒"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "在你的首个夜晚，你要选择一个方向：每个白天，该方向上的下一名存活的镇民玩家不会死于处决。",
+        "firstNightReminder": "The Captain America points clockwise or anti-clockwise. Mark the Captain America with that direction.<br><br>Mark the next living Townsfolk in the chosen direction 'Shielded'.",
+        "flavor": "I can do this all day.",
+        "id": "captainamerica_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/captainamerica_avengersv2.png",
+        "name": "美国队长",
+        "firstNight": 2,
+        "otherNight": 27,
+        "otherNightReminder": "Mark the next living Townsfolk in the chosen direction 'Shielded'.",
+        "reminders": [
+            "顺时针",
+            "逆时针",
+            "守护"
+        ],
+        "special": [
+            {
+                "name": "card",
+                "type": "signal",
+                "value": "Clockwise"
+            },
+            {
+                "name": "card",
+                "type": "signal",
+                "value": "Anti-Clockwise"
+            },
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "在你的第二个夜晚，你要选择一名玩家：他醉酒。如果只有三名存活的玩家且他是其中之一，善良阵营获胜，即使你已死亡。如果你选中了一名邪恶玩家，你醉酒。",
+        "flavor": "Destiny has dire plans for you, my friend.",
+        "id": "doctorstrange_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/doctorstrange_avengersv2.png",
+        "name": "奇异博士",
+        "otherNight": 14,
+        "otherNightReminder": "On their 2nd night, wake the Doctor Strange. They point to a player. If they are good, mark that player '醉酒'. Otherwise, mark the Doctor Strange '醉酒'.",
+        "reminders": [
+            "醉酒"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "每个夜晚，你会得知一个不在场的邪恶角色（与之前不同），直到所有不在场的邪恶角色你都得知过一次。",
+        "firstNightReminder": "Show the character token of a not-in-play evil character.<br><br>Mark the Vision with the reminder for that character.",
+        "flavor": "Our very strength invites challenge. Challenge incites conflict. And conflict\u2026 breeds catastrophe.",
+        "id": "vision_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/vision_avengersv2.png",
+        "name": "幻视",
+        "firstNight": 8,
+        "otherNight": 25,
+        "otherNightReminder": "Show the character token of a not-in-play evil character whose reminder hasn't been placed on the Vision yet, if there are any. Mark the Vision with the reminder for that character.",
+        "reminders": [
+            "得知洛基",
+            "得知卡西利亚斯",
+            "得知灭霸",
+            "得知阿尼姆·佐拉",
+            "得知红骷髅",
+            "得知多玛姆",
+            "得知海拉",
+            "得知奥创"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "每个夜晚，你要选择一名玩家（与上个夜晚不同）：如果你选中了爪牙，他会得知此事，且明天白天他的投票算作零票。",
+        "firstNightReminder": "The Spider-Man points to a player. If a Minion was chosen, wake them and show the <b>THIS CHARACTER SELECTED YOU</b> card and then the Spider-Man token.",
+        "flavor": "With great power, there must also come great responsibility.",
+        "id": "spiderman_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/spiderman_avengersv2.png",
+        "name": "蜘蛛侠",
+        "firstNight": 7,
+        "otherNight": 24,
+        "otherNightReminder": "The Spider-Man points to a player, different to last night.<br><br>If a Minion was chosen, wake them and show the <b>THIS CHARACTER SELECTED YOU</b> card and then the Spider-Man token.",
+        "reminders": [
+            "织网"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            },
+            {
+                "name": "multiplier",
+                "type": "vote",
+                "value": 0.000000000001
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "每个夜晚，你会得知有多少名玩家在当晚因其自身能力而被唤醒。",
+        "firstNightReminder": "Show the Daredevil the number of players that 唤醒 due to their ability.",
+        "flavor": "Yeah, the accident blinded me. It just also uh, sharpened my other senses.",
+        "id": "daredevil_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/daredevil_avengersv2.png",
+        "name": "夜魔侠",
+        "firstNight": 11,
+        "otherNight": 28,
+        "otherNightReminder": "Show the Daredevil the number of players that 唤醒 due to their ability.",
+        "reminders": [
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒",
+            "唤醒"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "每个夜晚*，如果你今天白天公开声明“我生气了”，你要选择与你邻近的一名存活的玩家：如果他是爪牙或外来者，他死亡。[+0~1外来者]",
+        "flavor": "Hulk... SMASH!",
+        "id": "hulk_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/hulk_avengersv2.png",
+        "name": "绿巨人浩克",
+        "otherNight": 23,
+        "otherNightReminder": "If the Hulk announced to be ANGRY during the day, wake them.<br><br>The Hulk points to one of their alive neighbors: If that player is a Minion or an Outsider, they die.<br><br>Clear the 'Angry' token.",
+        "reminders": [
+            "生气"
+        ],
+        "setup": true,
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一个非恶魔的角色：他死亡。如果这个角色不在场，则由说书人来决定谁会被你杀死。",
+        "flavor": "I see better from a distance.",
+        "id": "hawkeye_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v5\/hawkeye_avengers_v5.png",
+        "name": "鹰眼",
+        "otherNight": 21,
+        "otherNightReminder": "The Hawkeye either shows a 'no' head signal, or points to a non-Demon character on the sheet.<br><br>If the Hawkeye used their ability: If that character is in play, they die. Otherwise, you choose a player to die.",
+        "reminders": [
+            "失去能力"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "如果你在被提名后公开声明自己是钢铁侠且在那个白天被处决，提名你的玩家会在当晚死亡。",
+        "flavor": "I'm sorry, Earth is closed today. You better pack it up and get outta here.",
+        "id": "ironman_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/ironman_avengersv2.png",
+        "name": "钢铁侠",
+        "otherNight": 10,
+        "otherNightReminder": "If the Iron Man claimed their role when they were nominated & executed today, the player who nominated them dies.",
+        "reminders": [
+            "我是钢铁侠"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "如果恶魔杀死了你，在当晚你会被唤醒并得知哪些玩家是爪牙。",
+        "flavor": "I come from Earth, a planet of outlaws: Billie the Kid, Bonnie and Clyde, John Stamos.",
+        "id": "starlord_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/starlord_avengersv2.png",
+        "name": "星爵",
+        "otherNight": 19,
+        "otherNightReminder": "If the Star-Lord was killed by the Demon, wake the Star-Lord and point to the Minion player(s).",
+        "reminders": [
+            "得知",
+            "得知",
+            "得知"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "如果一名善良玩家在夜晚时即将死亡，你可能会代替他死亡，随后你会被唤醒并得知他是哪名玩家。",
+        "flavor": "Whatever it takes.",
+        "id": "blackwidow_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v5\/blackwidow_avengers_v5.png",
+        "name": "黑寡妇",
+        "otherNight": 26,
+        "otherNightReminder": "If the Black Widow died because of their abillity, wake them. Point to the player they saved.",
+        "reminders": [
+            "拯救"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "你不会死亡。如果你发起过提名或投过票，你醉酒。",
+        "flavor": "You didn't see that coming!",
+        "id": "quicksilver_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/quicksilver_avengersv2.png",
+        "name": "快银",
+        "reminders": [
+            "醉酒"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "townsfolk"
+    },
+    {
+        "ability": "在你的首个夜晚，你会得知一个不在场的镇民角色。如果幻视死亡，当晚你转变为邪恶阵营。[+幻视]",
+        "firstNightReminder": "Show the character token of 1 not-in-play Townsfolk.",
+        "flavor": "I used to think of myself one way. But, after this. I am something else. I'm still me, I think. But... that's not what everyone else sees.",
+        "id": "scarletwitch_avengersv2",
+        "image": [
+            "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v5\/scarletwitch_avengers_v5.png"
+        ],
+        "name": "绯红女巫",
+        "firstNight": 9,
+        "otherNight": 22,
+        "otherNightReminder": "If the Vision died today or tonight, the Scarlet Witch is 唤醒n and informed of their new alignment.",
+        "reminders": [
+            "转变邪恶"
+        ],
+        "setup": true,
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "outsider"
+    },
+    {
+        "ability": "每个夜晚*，如果你今天白天投过票，可能会有一名玩家死亡。",
+        "flavor": "I wasn't always like this.",
+        "id": "nebula_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/nebula_avengersv2.png",
+        "name": "星云",
+        "otherNight": 9,
+        "otherNightReminder": "If the Nebula voted today, a player might die.",
+        "reminders": [
+            "投票"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "outsider"
+    },
+    {
+        "ability": "你要'疯狂'地证明你是格鲁特，否则你可能被处决。如果你死亡，与你邻近的镇民醉酒直到下个黄昏。",
+        "flavor": "I am Groot.",
+        "id": "groot_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/groot_avengersv2.png",
+        "name": "格鲁特",
+        "otherNight": 8,
+        "otherNightReminder": "If the Groot died yesterday, clear the '醉酒' tokens.",
+        "reminders": [
+            "醉酒",
+            "醉酒"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            }
+        ],
+        "team": "outsider"
+    },
+    {
+        "ability": "你不知道你是德拉克斯。你以为你是一个镇民角色，但其实你不是。一名玩家知道你是谁，如果他“疯狂”地证明你是德拉克斯，他可能被处决。",
+        "attribution": "Thanks Siickniick for the concept!",
+        "firstNightReminder": "Mark a player '得知s', then wake them. Point to the Drax player. Show the <b>THIS PLAYER IS</b> card, then point to the Drax on the sheet.",
+        "flavor": "I've mastered the ability of standing so incredibly still, that I become invisible to the eye. Watch.",
+        "id": "drax_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_V4\/drax_avengers_v4.png",
+        "name": "德拉克斯",
+        "firstNight": 9,
+        "reminders": [
+            "处决",
+            "得知"
+        ],
+        "remindersGlobal": [
+            "是德拉克斯"
+        ],
+        "special": [
+            {
+                "name": "bag-duplicate",
+                "type": "selection"
+            },
+            {
+                "name": "bag-disabled",
+                "type": "selection"
+            }
+        ],
+        "team": "outsider"
+    },
+    {
+        "ability": "每个夜晚，你可以选择一名善良玩家：与他邻近的两名存活的镇民中毒直到下个黄昏，随后他会得知被洛基选择。如果他明天“疯狂”地证明自己被洛基选择，他可能被处决。",
+        "firstNightReminder": "The Loki shows 'No' or points to a good player. Mark that player 'Mad', then wake that player. Show the <b>THIS CHARACTER SELECTED YOU</b> card, then the Loki token. Mark both of that player's living Townsfolk neighbors '中毒'. If the player is 'mad' about being chosen by Loki tomorrow, they can be executed.",
+        "flavor": "Freedom is life's great lie. Once you accept that, in your heart...you will 得知 peace.",
+        "id": "loki_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/loki_avengersv2.png",
+        "name": "洛基",
+        "firstNight": 4,
+        "otherNight": 12,
+        "otherNightReminder": "Clear the '中毒' and 'Mad' tokens.<br><br>The Loki shows 'No' or points to a good player. Mark that player 'Mad', then wake that player.<br><br>Show the <b>THIS CHARACTER SELECTED YOU</b> card, then the Loki token.<br><br>Mark both of that player's living Townsfolk neighbors '中毒'.<br><br>If the player is 'mad' about being chosen by Loki tomorrow, they can be executed.",
+        "reminders": [
+            "中毒",
+            "中毒",
+            "疯狂"
+        ],
+        "team": "minion"
+    },
+    {
+        "ability": "每个夜晚，你要选择两名玩家（与上个夜晚不同）：明天如果第一名玩家被提名且被处决，第二名玩家会代替他被处决。如果只有四名存活的玩家，你失去此能力。",
+        "firstNightReminder": "The Kaecilius points to 2 players. Mark them '1st' and '2nd'.",
+        "flavor": "We don't seek to rule this world. We seek to save it!",
+        "id": "kaecilius_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/kaecilius_avengersv2.png",
+        "name": "卡西利亚斯",
+        "firstNight": 3,
+        "otherNight": 11,
+        "otherNightReminder": "The Kaecilius points to 2 players (different to last night). Mark them '1st' and '2nd'.",
+        "reminders": [
+            "首选",
+            "次选"
+        ],
+        "team": "minion"
+    },
+    {
+        "ability": "你提名的玩家中毒。提名你的玩家被当作邪恶阵营和爪牙角色。",
+        "attribution": "Inspired by the 'Glykon' from the amazing <b>Fall of Rome</b> script!",
+        "flavor": "Quite simply, gentlemen, I have harnessed the power of the gods.",
+        "id": "redskull_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/redskull_avengersv2.png",
+        "name": "红骷髅",
+        "reminders": [
+            "中毒",
+            "中毒",
+            "中毒",
+            "中毒",
+            "中毒",
+            "误认",
+            "误认",
+            "误认",
+            "误认",
+            "误认"
+        ],
+        "team": "minion"
+    },
+    {
+        "ability": "有一对相同的善良角色在场，在你的首个夜晚，你会得知他们是谁以及他们的角色是什么。[-1或+1外来者。有一对相同的善良角色在场，其中之一中毒]",
+        "firstNightReminder": "Point to the players in the pair. Show the <b>THIS PLAYER IS</b> card, then their character.",
+        "flavor": "Cut off one head, two more shall take its place.",
+        "id": "arnimzola_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/arnimzola_avengersv2.png",
+        "name": "阿尼姆·佐拉",
+        "firstNight": 5,
+        "reminders": [
+            "中毒"
+        ],
+        "setup": true,
+        "team": "minion"
+    },
+    {
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。每有一名死亡的玩家持有无限宝石，你就要额外行动一次。[无限宝石加入游戏]",
+        "flavor": "I am... inevitable.",
+        "id": "thanos_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/thanos_avengersv2.png",
+        "name": "灭霸",
+        "otherNight": 15,
+        "otherNightReminder": "The Thanos points to a player. That player dies.",
+        "reminders": [
+            "死亡",
+            "死亡",
+            "死亡",
+            "死亡"
+        ],
+        "setup": true,
+        "special": [
+            {
+                "name": "card",
+                "type": "signal",
+                "value": "These characters hold Infinity Stones"
+            }
+        ],
+        "team": "demon"
+    },
+    {
+        "ability": "每个夜晚*，你可以选择一名玩家：他死亡。如果你首次在夜晚选择放弃攻击，在此之后的每个夜晚改为你可以选择两名玩家：他们死亡。",
+        "flavor": "You've come to die! Your world is now my world, like all worlds!",
+        "id": "dormammu_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/dormammu_avengersv2.png",
+        "name": "多玛姆",
+        "otherNight": 16,
+        "otherNightReminder": "The Dormammu shows a 'no' head signal or points to a player, plus one if the Dormammu is marked 'Extra kill'. Those players die.<br><br>If no players were chosen, mark the Dormammu 'Extra kill'.",
+        "reminders": [
+            "额外刀",
+            "死亡",
+            "死亡",
+            "死亡",
+            "死亡"
+        ],
+        "setup": false,
+        "team": "demon"
+    },
+    {
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。被处决的爪牙可能不会死亡。",
+        "flavor": "I'm not a queen or a monster. I'm the Goddess of Death.",
+        "id": "hela_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/hela_avengersv2.png",
+        "name": "海拉",
+        "otherNight": 17,
+        "otherNightReminder": "The Hela points to a player. That player dies.",
+        "reminders": [
+            "死亡",
+            "死亡"
+        ],
+        "team": "demon"
+    },
+    {
+        "ability": "每个夜晚*，可能会有至多两名玩家死亡。如果有爪牙存活，你不会死亡。",
+        "flavor": "When the dust settles, the only thing living in this world... will be metal.",
+        "id": "ultron_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/ultron_avengersv2.png",
+        "name": "奥创",
+        "otherNight": 18,
+        "otherNightReminder": "Choose up to 2 players. Those players die.",
+        "reminders": [
+            "死亡",
+            "死亡",
+            "死亡",
+            "死亡"
+        ],
+        "team": "demon"
+    },
+    {
+        "ability": "每个白天，你可以拜访说书人以得知关于本局的一件有趣的事。",
+        "flavor": "Fourth wall? What fourth wall?",
+        "id": "deadpool_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v5\/deadpool_avengers_v5.png",
+        "name": "死侍",
+        "team": "traveler"
+    },
+    {
+        "ability": "如果最高得票出现了平局，你要选择得票相同的其中一名玩家：他立刻被处决。",
+        "flavor": "You 得知, I guess one person can make a difference.",
+        "id": "stanlee_avengersv2",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/AvengersV2\/stanlee_avengersv2.png",
+        "name": "斯坦·李",
+        "team": "traveler"
+    },
+    {
+        "ability": "如果灭霸在场，等同于爪牙数量的善良玩家初始会持有一颗无限宝石且他们会得知此事。无限宝石在其持有者存活时会提供不同的限次能力，该能力不受中毒和醉酒的影响。",
+        "flavor": "At the dawn of the universe, there was nothing. Then... boom. The Big Bang sent six elemental crystals hurtling across the virgin universe. These Infinity Stones each control an essential aspect of existence.",
+        "id": "thegauntlet_avengers_v5",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v5\/thegauntlet_avengers_v5.png",
+        "name": "无限手套",
+        "otherNight": 1,
+        "reminders":[
+            "失去能力",
+            "失去能力",
+            "失去能力"
+        ],
+        "team": "fabled"
+    },
+    {
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：如果他是善良的，他死亡，并且当晚不会再有其他玩家死亡。",
+        "flavor": "The stone reacts to anything organic. The bigger the target, the bigger the power surge.",
+        "id": "powerstone_avengers_v5",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v6\/powerstone_avengers_v6.png",
+        "name": "力量宝石",
+        "otherNight": 2,
+        "otherNightReminder": "The holder of the Power Stone shows a 'No' or points to a player. If that player is good, they die.",
+        "reminders": [
+            "力量宝石",
+            "死亡"
+        ],
+        "team": "fabled"
+    },
+    {
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：你会得知他的阵营。",
+        "flavor": "After unspecified experimentation with the Mind Stone, Maximoff gained telekinetic and telepathic abilities.",
+        "id": "mindstone_avengers_v5",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v5\/mindstone_avengers_v5.png",
+        "name": "心灵宝石",
+        "otherNight": 3,
+        "otherNightReminder": "The holder of the Mind Stone shows a 'No' or points to a player. Show that player's alignment.",
+        "reminders": [
+            "心灵宝石"
+        ],
+        "team": "fabled"
+    },
+    {
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：邪恶玩家的负面能力对他无效直到下个黄昏。",
+        "flavor": "Fabled to hold the power to rewrite the very laws of physics and unlock doors across the universe.",
+        "id": "spacestone_avengers_v5",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v5\/spacestone_avengers_v5.png",
+        "name": "空间宝石",
+        "otherNight": 4,
+        "otherNightReminder": "The holder of the Space Stone shows a 'No' or points to a player. Mark that player 'Safe'.",
+        "reminders": [
+            "空间宝石",
+            "安全"
+        ],
+        "team": "fabled"
+    },
+    {
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一名死亡的玩家：他复活，但会在下个黄昏死亡。",
+        "flavor": "Temporal manipulations can create branches in time. Unstable dimensional openings. Spatial paradoxes, time loops! You want to get stuck reliving the same moment over, and over, forever, or never having existed at all?",
+        "id": "timestone_avengers_v5",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v5\/timestone_avengers_v5.png",
+        "name": "时间宝石",
+        "otherNight": 5,
+        "otherNightReminder": "The holder of the Time Stone shows a 'No' or points to a dead player. That player is resurrected.",
+        "reminders": [
+            "时间宝石",
+            "借用光阴"
+        ],
+        "team": "fabled"
+    },
+    {
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一个镇民角色：如果这个角色不在场，你变成这个角色。",
+        "flavor": "Reality is often disappointing. That is, it was. Now, reality can be whatever I want.",
+        "id": "realitystone_avengers_v5",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v5\/realitystone_avengers_v5.png",
+        "name": "现实宝石",
+        "otherNight": 6,
+        "otherNightReminder": "The holder of the Reality Stone shows a 'No' or points to a character. If that character is not in play, the holder becomes that character.",
+        "reminders": [
+            "现实宝石"
+        ],
+        "team": "fabled"
+    },
+    {
+        "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：如果你选中了恶魔，他醉酒直到下个黎明。",
+        "flavor": "Soul holds a special place among the Infinity Stones. You might say it has a certain wisdom.",
+        "id": "soulstone_avengers_v5",
+        "image": "https:\/\/www.bloodstar.xyz\/p\/omarmotta008\/Avengers_v5\/soulstone_avengers_v5.png",
+        "name": "灵魂宝石",
+        "otherNight": 7,
+        "otherNightReminder": "The holder of the Soul Stone shows a 'No' or points to a player. If that player is the Demon, mark them '醉酒'.",
+        "reminders": [
+            "灵魂宝石",
+            "醉酒"
+        ],
+        "team": "fabled"
+    }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "_meta",
+    "name": "夜行者",
+    "author": "小烯C2H43g & 段时",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2b/mn98icwlce2qdiib6teiri9i7vmtz88.png",
+    "almanac": "有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/cb/73bu8y1ghivk16k7frn80upymp06h2t.png",
+    "firstNightReminder": "唤醒守夜人，他可以摇头不使用能力，或选择一名玩家。如果守夜人选择了玩家，则在守夜人入睡后通知那名玩家谁是守夜人。",
+    "otherNightReminder": "如果守夜人未曾使用能力，唤醒守夜人，他可以摇头不使用能力，或选择一名玩家。如果守夜人选择了玩家，则在守夜人入睡后通知那名玩家谁是守夜人。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "守夜人",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一名玩家：他会得知你是守夜人。",
+    "firstNight": 3400,
+    "otherNight": 5
+  },
+  {
+    "id": "1_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/1cqow962ds6jp9x5rz84qwgpstkyurs.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "2_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/78/plh5dvc0wcrn429ff19lk6xoenw9bbr.png",
+    "firstNightReminder": "如果落难少女在场，对爪牙展示落难少女角色标记。",
+    "otherNightReminder": "0",
+    "reminders": [
+      "已被猜测"
+    ],
+    "name": "落难少女",
+    "team": "outsider",
+    "ability": "所有爪牙都知道落难少女在场。每局游戏限一次，任意爪牙可以公开猜测你是落难少女，如果猜对，你的阵营落败。",
+    "firstNight": 0,
+    "otherNight": 0
+  },
+  {
+    "id": "3_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/1a/m6s8wbkeie9d2pyx1qb5agosonjypaq.png",
+    "name": "政客",
+    "team": "outsider",
+    "ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。"
+  },
+  {
+    "id": "4_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/31/rkm8eze1twocl47kxggrnladba8v02i.png",
+    "remindersGlobal": [
+      "是隐士"
+    ],
+    "setup": true,
+    "name": "隐士",
+    "team": "outsider",
+    "ability": "你拥有所有外来者能力。[-0~1外来者]"
+  },
+  {
+    "id": "5_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d9/jg7k6wd0cy1bk89o3uzhdti6oxund8n.png",
+    "setup": true,
+    "name": "男爵",
+    "team": "minion",
+    "ability": "会有额外的外来者在场。[+2 外来者]"
+  },
+  {
+    "id": "6_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d7/msb759ew0f2hudkvxhsz15jnxsqqpy9.png",
+    "name": "精神病患者",
+    "team": "minion",
+    "ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。"
+  },
+  {
+    "id": "7_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e5/ismmyqbij3uprn5w0vhf5vtfec6o027.png",
+    "name": "炸弹人",
+    "team": "minion",
+    "ability": "如果你被处决，除三名玩家以外的其他所有玩家均会死亡。倒数十声后，被最多玩家手指指着的玩家死亡。"
+  },
+  {
+    "id": "8_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4c/cbp9yi8vzy26hp8lyzpw8tgyb4981cx.png",
+    "firstNightReminder": "（分别或同时）唤醒科学怪人和恶魔，通知他们恶魔因为科学怪人而获得的善良角色的能力。",
+    "setup": true,
+    "name": "科学怪人",
+    "team": "minion",
+    "ability": "恶魔拥有一个不在场的善良角色的能力，即使他醉酒或中毒。你和他都知道他获得了什么能力。",
+    "firstNight": 11
+  },
+  {
+    "id": "9_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/8c/tuqiff39a278vl7zgiu1z9hki1b5gni.png",
+    "otherNightReminder": "唤醒诺-达鲺，让他攻击一名玩家。",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "name": "诺-达鲺",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+    "otherNight": 3
+  },
+  {
+    "id": "10_yexingzhe",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e7/i3bse7nern4raiqwjpmzrpzjfa0vrq4.png",
+    "firstNightReminder": "唤醒痢蛭，让他选择一名玩家以寄生。",
+    "otherNightReminder": "唤醒痢蛭，让他攻击一名玩家。",
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "name": "痢蛭",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名存活的玩家：他中毒，只有当他处于死亡状态时你才会立即死亡。",
+    "firstNight": 3300,
+    "otherNight": 4
+  },
+  {
+    "id": "11_yexingzhe",
+    "name": "落难少女&私货商人",
+    "team": "a jinxed",
+    "ability": "爪牙不会得知落难少女在场"
+  },
+  {
+    "id": "12_yexingzhe",
+    "name": "科学怪人&私货商人",
+    "team": "a jinxed",
+    "ability": "科学怪人只会赋予恶魔守夜人的能力。"
+  },
+  {
+    "id": "61ecfdb0-2225-465c-9a7c-5d0b4c46d5ed",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png",
+    "name": "私货商人",
+    "team": "fabled",
+    "ability": "有私货的相克规则。"
+  },
+  {
+    "id": "_mycxjhb",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/bc/irnsk5kjolajz8gldu0kbdgmf95z9zp.png",
+    "name": "教皇",
+    "team": "fabled",
+    "ability": "会有重复的善良角色在场。他们也可能是恶魔的伪装。"
+  },{
+		"id": "ydjjt",
+		"name": "印度教教徒",
+		"team": "fabled",
+		"ability": "最先死亡的四名玩家会立刻以相同阵营的旅行者转世重生。如果恶魔死亡变成了旅行者，一名爪牙玩家变成这个恶魔。",
+		"image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ef/kqlms0w8wp372gvh76lov0c08e6z8m3.png",
+		"firstNight": 0.0,
+		"otherNight": 0,
+		"reminders": [],
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"remindersGlobal": []
+	}
+]

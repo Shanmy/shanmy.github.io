@@ -1,0 +1,313 @@
+[
+  {
+    "id": "_meta",
+    "name": "光阴似箭",
+    "author": "Delta",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/15/rfsch7cswrmejfrn906ia1ws76mpwkv.png",
+    "almanac": "有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4a/8qqnrkz9ipf8w9d8o6yit2r3lung1gz.png",
+    "name": "哨兵",
+    "team": "fabled",
+    "ability": "在初始设置时，可能会额外增加或减少一个外来者。"
+  },
+  {
+    "id": "1_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a3/nxckynoy8mshn7pwnsnnraceso4zx2p.png",
+    "otherNightReminder": "唤醒僧侣，让他选择除自己以外的一名玩家，那名玩家今晚免受恶魔负面效果影响。",
+    "reminders": [
+      "保护"
+    ],
+    "name": "僧侣",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的一名玩家：当晚恶魔的负面能力对他无效。",
+    "otherNight": 5
+  },
+  {
+    "id": "2_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fe/o9gzozrpeyh7exogeuro90qh0904qu1.png",
+    "firstNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "otherNightReminder": "唤醒舞蛇人，让他选择一名存活玩家。如果选中恶魔则执行角色和阵营的交换，并在舞蛇人入睡后通知旧恶魔角色变化。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "舞蛇人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活的玩家：如果你选中了恶魔，你和他交换角色和阵营，然后他中毒。",
+    "firstNight": 3300,
+    "otherNight": 4
+  },
+  {
+    "id": "3_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/chh8x7dptz128a42p7f0g5c0qn8o063.png",
+    "name": "博学者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。"
+  },
+  {
+    "id": "4_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6a/9r3z8m0fen1nqr4u8vfx35rzei7ekp2.png",
+    "firstNightReminder": "唤醒小精灵，对他展示一个在场镇民角色标记。",
+    "reminders": [
+      "疯狂",
+      "获得能力"
+    ],
+    "name": "小精灵",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个在场的镇民角色。如果你“疯狂”地证明你是该角色，当他死亡时你获得该角色的能力。",
+    "firstNight": 3500
+  },
+  {
+    "id": "5_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/0gv4l35ovskh83z84qce8mikbmnpkfw.png",
+    "firstNightReminder": "唤醒将军，对他用手势比划当前的优势阵营。",
+    "otherNightReminder": "唤醒将军，对他用手势比划当前的优势阵营。",
+    "name": "将军",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知说书人认为哪个阵营当前更有优势（善良/邪恶/均势）。",
+    "firstNight": 3800,
+    "otherNight": 15
+  },
+  {
+    "id": "6_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/28/owc8naw8kwx5z1om04qs6j8aqs5djru.png",
+    "firstNightReminder": "唤醒工程师，他可以摇头不使用能力，或选择角色列表上的恶魔或爪牙角色，来执行同角色类型的这些玩家的角色变化。",
+    "otherNightReminder": "如果工程师未曾使用能力，唤醒工程师，他可以摇头不使用能力，或选择角色列表上的恶魔或爪牙角色，来执行同角色类型的这些玩家的角色变化。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "工程师",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择让恶魔变成你选择的恶魔角色，或让所有爪牙变成你选择的爪牙角色。",
+    "firstNight": 3100,
+    "otherNight": 2
+  },
+  {
+    "id": "7_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/44/bio3bf3g3vunctpnldg6lsct4u4jt81.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "渔夫",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以让说书人给你一些能帮助你的阵营获胜的建议。"
+  },
+  {
+    "id": "8_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/57/qrlls4zem4zblwft8qbp5ribzis1o5p.png",
+    "firstNightReminder": "唤醒巡山人，他可以摇头不使用能力，或选择一名玩家。如果巡山人选中了落难少女，则在巡山人入睡后通知落难少女角色变化。",
+    "otherNightReminder": "如果巡山人未曾使用能力，唤醒巡山人，他可以摇头不使用能力，或选择一名玩家。如果巡山人选中了落难少女，则在巡山人入睡后通知落难少女角色变化。",
+    "reminders": [
+      "失去能力"
+    ],
+    "setup": true,
+    "name": "巡山人",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一名存活的玩家：如果你选中了落难少女，她会变成一个不在场的镇民角色。[+落难少女]",
+    "firstNight": 3600,
+    "otherNight": 14
+  },
+  {
+    "id": "9_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c1/ga80xr3gx817rh5wiqq18d9hv8b6xje.png",
+    "reminders": [
+      "饱餐",
+      "中毒"
+    ],
+    "name": "食人族",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "10_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/54/cx6vl3wdv1v51wfuh6z575vh7ef2kcz.png",
+    "firstNightReminder": "唤醒修行者，对他指向对应方向来告知他最近的邪恶玩家的方向。",
+    "name": "修行者",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知距离最近的邪恶玩家位于你的顺时针还是逆时针方向。如果两侧的邪恶玩家与你距离相等，你得知的信息由说书人决定。",
+    "firstNight": 3700
+  },
+  {
+    "id": "11_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/db/c3eh7h72datpfz6mu6o3c3p334y7g26.png",
+    "otherNightReminder": "如果恶魔杀死了报丧女妖，宣布“报丧女妖觉醒了”，并使用“具有能力”标记报丧女妖。",
+    "reminders": [
+      "具有能力"
+    ],
+    "name": "报丧女妖",
+    "team": "townsfolk",
+    "ability": "如果恶魔杀死了你，所有玩家都会得知此事。从现在开始，你每天可以发起两次提名，每次投票时可以投两票。",
+    "otherNight": 13
+  },
+  {
+    "id": "12_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/bf/0wf6zizpzk61n1txjo233fembq7utl3.png",
+    "name": "戏法师",
+    "team": "townsfolk",
+    "ability": "'每个白天，你可以公开进行一次谁是爪牙，谁是恶魔的猜测。如果你猜对，善良阵营获胜。"
+  },
+  {
+    "id": "13_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b5/rdpsq1wjpsq66ah5y3f4p2wyuzl8wuk.png",
+    "otherNightReminder": "0",
+    "reminders": [
+      "不会死亡"
+    ],
+    "name": "公主",
+    "team": "townsfolk",
+    "ability": "在你的首个白天，如果你提名并处决了一名玩家，当晚恶魔不会造成死亡。",
+    "otherNight": 7
+  },
+  {
+    "id": "14_guangyinsujian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/guangyinsujian/14_guangyinsujian.png",
+    "name": "畸形秀演员",
+    "team": "outsider",
+    "ability": "如果你“疯狂”地证明自己是外来者，你可能被处决。"
+  },
+  {
+    "id": "15_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/22/0inqbergvawmpfzmeno0mj3ieuk74gm.png",
+    "otherNightReminder": "如果理发师死于白天，唤醒恶魔让他决定是否使用理发师的能力。如果理发师死于夜晚，（如果让除攻击理发师以外的恶魔进行选择则需要等当前恶魔入睡后）让一名恶魔决定是否使用理发师的能力。",
+    "reminders": [
+      "今晚理发"
+    ],
+    "name": "理发师",
+    "team": "outsider",
+    "ability": "如果你死亡，在当晚恶魔可以选择两名玩家（不能选择其他恶魔）交换角色。",
+    "otherNight": 11
+  },
+  {
+    "id": "16_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/59/ns2ifb3z40ukn4xa61a460473sm6lhq.png",
+    "reminders": [
+      "醉酒",
+      "已猜测"
+    ],
+    "name": "解谜大师",
+    "team": "outsider",
+    "ability": "一名玩家醉酒，即使你已死亡。每局游戏限一次，你可以猜测谁是那个醉酒的玩家，如果猜对了，你会得知谁是恶魔，但如果猜错了，你会得知错误的“谁是恶魔”信息。"
+  },
+  {
+    "id": "17_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/78/plh5dvc0wcrn429ff19lk6xoenw9bbr.png",
+    "firstNightReminder": "如果落难少女在场，对爪牙展示落难少女角色标记。",
+    "reminders": [
+      "已被猜测"
+    ],
+    "name": "落难少女",
+    "team": "outsider",
+    "ability": "所有爪牙都知道落难少女在场。每局游戏限一次，任意爪牙可以公开猜测你是落难少女，如果猜对，你的阵营落败。",
+    "firstNight": 11
+  },
+  {
+    "id": "18_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/12/ivgcxsn6c4ytbj9q35ekdpqszwiptb6.png",
+    "otherNightReminder": "如果瘟疫医生死亡，说书人获得一项爪牙能力。",
+    "reminders": [
+      "说书人能力"
+    ],
+    "name": "瘟疫医生",
+    "team": "outsider",
+    "ability": "当你死亡时，说书人会获得一个爪牙能力。",
+    "otherNight": 12
+  },
+  {
+    "id": "19_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d7/msb759ew0f2hudkvxhsz15jnxsqqpy9.png",
+    "name": "精神病患者",
+    "team": "minion",
+    "ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。"
+  },
+  {
+    "id": "20_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e5/ismmyqbij3uprn5w0vhf5vtfec6o027.png",
+    "name": "炸弹人",
+    "team": "minion",
+    "ability": "如果你被处决，除三名玩家以外的其他所有玩家均会死亡。倒数十声后，被最多玩家手指指着的玩家死亡。"
+  },
+  {
+    "id": "21_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/08/d07uaz1srg9r92ptr27xr2bbjbqy0ok.png",
+    "firstNightReminder": "让街头风琴手选择自己是否醉酒。如果他点头，标记街头风琴手醉酒。",
+    "otherNightReminder": "让街头风琴手选择自己是否醉酒。如果他点头，标记街头风琴手醉酒。如果他摇头，移除街头风琴手的醉酒标记。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "街头风琴手",
+    "team": "minion",
+    "ability": "所有玩家在投票时闭眼，且票数会秘密统计。每个夜晚，你要选择自己是否醉酒直到下个黄昏。",
+    "firstNight": 3400,
+    "otherNight": 6
+  },
+  {
+    "id": "22_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6d/m578bdye4jzavd4y1bjxgxwxsrw95za.png",
+    "firstNightReminder": "0",
+    "otherNightReminder": "0",
+    "reminders": [
+      "失去能力",
+      "兑现",
+      "代价",
+      "线索"
+    ],
+    "name": "巫师",
+    "team": "minion",
+    "ability": "每局游戏限一次，你可以向说书人许愿。如果愿望被实现，可能会伴随着代价和线索。",
+    "firstNight": 3200,
+    "otherNight": 3
+  },
+  {
+    "id": "23_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/03/1trck24gi8o05kklsg93al4co09nakb.png",
+    "otherNightReminder": "唤醒小恶魔，让他攻击一名玩家。如果他成功自杀，则在他入睡后通知一名爪牙角色变化。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 8
+  },
+  {
+    "id": "24_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b9/t7v2h6t5bwxmjp8qkkhlf1mm32v51pw.png",
+    "otherNightReminder": "决定上一夜被沙巴洛斯选择的玩家是否被反刍。然后唤醒沙巴洛斯，让他攻击两名玩家。",
+    "reminders": [
+      "死亡",
+      "复活"
+    ],
+    "name": "沙巴洛斯",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择两名玩家：他们死亡。你上个夜晚选择过且当前死亡的玩家之一可能会被你反刍。",
+    "otherNight": 9
+  },
+  {
+    "id": "25_guangyinsujian",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/5jaw5tcw1cctwr699faa2irvpeh0tqi.png",
+    "otherNightReminder": "唤醒方古，让他攻击一名玩家。如果该玩家是外来者并成功转化，则方古死亡，在他入睡后通知那名外来者角色变化。",
+    "reminders": [
+      "死亡",
+      "限一次"
+    ],
+    "setup": true,
+    "name": "方古",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被该能力杀死的外来者变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者]",
+    "otherNight": 10
+  },
+  {
+    "id": "26_guangyinsujian",
+    "name": "食人族&公主",
+    "team": "a jinxed",
+    "ability": "如果食人族提名并处决了公主且公主因此死亡，当晚恶魔不会造成死亡。"
+  },
+  {
+    "id": "27_guangyinsujian",
+    "name": "瘟疫医生&炸弹人",
+    "team": "a jinxed",
+    "ability": "如果瘟疫医生死于处决且说书人会因此获得炸弹人的能力，那么炸弹人的能力会立即被触发。"
+  }
+]

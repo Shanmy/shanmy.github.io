@@ -1,0 +1,411 @@
+[
+  {
+    "id": "_meta",
+    "name": "命定灾祸 Ver.1.3",
+    "author": "Stitchface & Bra1n",
+    "logo": "https://i.postimg.cc/QxnMTLYq/命定灾祸LOGO.png",
+    "almanac": "https://www.bloodstar.xyz/p/lunatichugo/Ides-of-Blood-Bra1n-Chinese/almanac.html",
+    "state":[{
+      "stateName": "负伤",
+      "stateDescription": "负伤是一个状态，不会因为负伤来源死亡、醉酒或中毒而移除如果负伤的玩家再次负伤，他死亡。"
+    },
+    {
+      "stateName": "庇佑",
+      "stateDescription": "1）受到庇护的玩家在夜间不会负伤;2）受到庇护的玩家在夜晚死亡，改为负伤;3）受到庇护的负伤玩家在夜晚死亡，他死亡。"
+    },
+    {
+      "stateName": "命运指针",
+      "stateDescription": "游戏开始时，命运指针指向恶魔。每个黄昏，命运指针会顺时针指向下一名玩家。玩家不会被告知他正被命运指针指向。"
+    }
+  ],
+  "status": [{
+      "name": "负伤",
+      "skill": "负伤是一个状态，不会因为负伤来源死亡、醉酒或中毒而移除如果负伤的玩家再次负伤，他死亡。"
+    },
+    {
+      "name": "庇佑",
+      "skill": "1）受到庇护的玩家在夜间不会负伤;2）受到庇护的玩家在夜晚死亡，改为负伤;3）受到庇护的负伤玩家在夜晚死亡，他死亡。"
+    },
+    {
+      "name": "命运指针",
+      "skill": "游戏开始时，命运指针指向恶魔。每个黄昏，命运指针会顺时针指向下一名玩家。玩家不会被告知他正被命运指针指向。"
+    }
+  ]
+  },
+  {
+    "id": "1_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/JnbyNTHz/渎神者.png",
+    "firstNightReminder": "唤醒亵神者，向他展示一个在场的镇民角色标记。",
+    "otherNightReminder": "唤醒渎神者，他摇头或点头，如果他点头，且命运指针指向了他，他死亡两次。死亡两次意味着即使他因为某些原因被庇佑，也仍然会死亡，而非进入负伤状态。",
+    "reminders": [
+      "镇民",
+      "死亡"
+    ],
+    "name": "渎神者",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个在场的镇民角色。每个夜晚*，选择是或否：如果你在被命运指针指向时选择了是，你会死亡两次。",
+    "firstNight": 14,
+    "otherNight": 7
+  },
+  {
+    "id": "_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/HkVVZW8K/酋长.png",
+    "firstNightReminder": "唤醒酋长，向他展示一个在场的外来者角色标记。",
+    "otherNightReminder": "唤醒酋长，如果命运指针正指向一名外来者，向酋长点头，否则摇头。",
+    "reminders": [
+      "外来者"
+    ],
+    "setup": true,
+    "name": "酋长",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个在场的外来者角色。每个夜晚*，你会得知命运指针是否正指向外来者。[+1外来者]",
+    "firstNight": 13,
+    "otherNight": 16
+  },
+  {
+    "id": "8_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/nztrhvSb/巡逻兵.png",
+    "firstNightReminder": "唤醒巡逻兵，向他展示一个在场的爪牙角色标记。",
+    "otherNightReminder": "当巡逻兵在夜晚死亡时，唤醒他，并指向一名爪牙玩家。",
+    "reminders": [
+      "爪牙"
+    ],
+    "name": "巡逻兵",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个在场的爪牙角色。如果你在夜晚死亡，你会得知一名爪牙玩家。",
+    "firstNight": 17,
+    "otherNight": 22
+  },
+  {
+    "id": "9_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/BbpXyXgW/看守人.png",
+    "firstNightReminder": "唤醒看守人，并向他展示在场的恶魔角色标记。跟随命运指针放置庇佑标记。",
+    "otherNightReminder": "跟随命运指针放置庇佑标记。",
+    "reminders": [
+      "庇佑"
+    ],
+    "name": "看守人",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知在场的恶魔角色。在夜晚时，被命运指针指向的玩家被你庇佑。",
+    "firstNight": 18,
+    "otherNight": 1
+  },
+  {
+    "id": "2_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/pTYThp39/陷阱师.png",
+    "firstNightReminder": "唤醒陷阱师，让他指向一名玩家，在该玩家的角色标记旁放置绊索标记。",
+    "otherNightReminder": "唤醒陷阱师，如果命运指针正指向陷阱师或标记有绊索标记的玩家，点头，否则摇头。",
+    "reminders": [
+      "绊索"
+    ],
+    "name": "陷阱师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你要选择一名除你以外的玩家。每个夜晚*，你会得知命运指针是否正指向你或他其中之一。",
+    "firstNight": 15,
+    "otherNight": 17
+  },
+  {
+    "id": "7_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/T2JLh4Xk/瞭望员.png",
+    "firstNightReminder": "唤醒瞭望员，如果瞭望员顺时针方向最近的存活玩家是爪牙，点头，否则摇头。",
+    "otherNightReminder": "唤醒瞭望员，如果瞭望员顺时针方向最近的存活玩家是爪牙，点头，否则摇头。",
+    "name": "瞭望员",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知与你顺时针邻近的存活玩家是否是爪牙。 ",
+    "firstNight": 16,
+    "otherNight": 21
+  },
+  {
+    "id": "4_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/RhgZd2S4/占星师.png",
+    "otherNightReminder": "唤醒占星师，如果命运指针指向了善良阵营玩家，给出向上的大拇指，否则给出向下的大拇指。",
+    "name": "占星师",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知正被命运指针指向的玩家的阵营。",
+    "otherNight": 19
+  },
+  {
+    "id": "5_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/QM7VD6bJ/先知.png",
+    "otherNightReminder": "如果命运指针正指向先知或邪恶玩家，他醉酒。唤醒先知，让他指向一名玩家。向先知展示该玩家的角色标记。如果先知正处于醉酒状态，则展示任意一个角色标记。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "先知",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：你会得知他的角色。如果命运指针正指向你或邪恶玩家时，你醉酒直到命运指针再次移动。",
+    "otherNight": 20
+  },
+  {
+    "id": "11_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/2yk54Cf0/勇士.png",
+    "firstNightReminder": "为勇士放置庇佑标记。",
+    "otherNightReminder": "唤醒勇士，如果勇士处于负伤状态，点头，否则摇头。",
+    "reminders": [
+      "庇佑"
+    ],
+    "name": "勇士",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知你是否负伤。你在夜晚时被庇佑。",
+    "firstNight": 1,
+    "otherNight": 24
+  },
+  {
+    "id": "12_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/BQZ8FBSJ/前线医师.png",
+    "otherNightReminder": "唤醒前线医师，并让他指向两名玩家，他们获得庇佑效果，直到下个黎明。",
+    "reminders": [
+      "庇佑",
+      "庇佑"
+    ],
+    "name": "前线医师",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的两名玩家：他们在今晚被你庇佑。",
+    "otherNight": 6
+  },
+  {
+    "id": "6_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/7hw5mgSM/肠卜僧.png",
+    "firstNightReminder": "为一个镇民放置负伤标记。",
+    "otherNightReminder": "唤醒肠卜僧，他不使用能力或指向一名玩家，如果他选择了一名善良玩家，给出向上的大拇指，否则给出向下的大拇指。然后，选择是否要为一名玩家放置负伤标记。",
+    "name": "肠卜僧",
+    "team": "townsfolk",
+    "ability": "一名镇民因为你的能力而在首个夜晚负伤。每个夜晚*，你可以选择一名玩家：你会得知他的阵营，但同时可能会有一名玩家负伤。",
+    "firstNight": 2,
+    "otherNight": 15
+  },
+  {
+    "id": "3_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/g2Qrf9v0/偷猎者.png",
+    "otherNightReminder": "唤醒偷猎者，他摇头不使用能力，或选择一名玩家。如果他选择了一名玩家，且命运指针正指向该玩家或与他顺时针邻近的玩家，点头，否则摇头。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "偷猎者",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名玩家：你会得知命运指针是否正指向他或与他顺时针邻近的玩家。",
+    "otherNight": 18
+  },
+  {
+    "id": "10_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/Kv91D3jB/外勤员.png",
+    "otherNightReminder": "为与外勤员顺时针邻近的玩家放置庇佑标记。唤醒外勤员，他摇头不使用能力，或指向一名已死亡的玩家，如果他指向了一名善良玩家，给出向上的大拇指，否则给出向下的大拇指。",
+    "reminders": [
+      "失去能力",
+      "庇佑"
+    ],
+    "name": "外勤员",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名已死亡玩家：你会得知他的阵营。在夜晚时*，与你顺时针邻近的玩家被你庇佑。",
+    "otherNight": 23
+  },
+  {
+    "id": "13_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/ZnSdXkzN/恶棍.png",
+    "otherNightReminder": "如果命运指针指向了恶棍，唤醒他，并向他展示向下的大拇指，然后唤醒恶魔，展示恶棍的角色标记并指向恶棍。",
+    "reminders": [
+      "邪恶"
+    ],
+    "name": "恶棍",
+    "team": "outsider",
+    "ability": "如果命运指针指向了你，你会转为邪恶，且恶魔会得知你是恶棍。",
+    "otherNight": 5
+  },
+  {
+    "id": "14_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/Y26gYSQz/扫把星.png",
+    "firstNightReminder": "为扫把星放置负伤标记。",
+    "otherNightReminder": "如果扫把星放置了被处决标记，唤醒恶魔，询问他今晚是否要移动命运指针",
+    "reminders": [
+      "被处决"
+    ],
+    "name": "扫把星",
+    "team": "outsider",
+    "ability": "如果你被处决，在当晚，恶魔可以选择将命运指针拨动一格。你在首个夜晚负伤。",
+    "firstNight": 3,
+    "otherNight": 4
+  },
+  {
+    "id": "15_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/6qfvXHBm/帮凶.png",
+    "reminders": [
+      "顺时针邻近"
+    ],
+    "name": "帮凶",
+    "team": "outsider",
+    "ability": "如果与你顺时针邻近的玩家是善良阵营且被处决，你的阵营落败，即使你已死亡。"
+  },
+  {
+    "id": "16_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/ncnmktkb/兽王.png",
+    "otherNightReminder": "如果大于等于六名玩家存活时兽王死亡，一名玩家死亡，或者三名玩家负伤。",
+    "reminders": [
+      "野兽出逃",
+      "死亡"
+    ],
+    "name": "兽王",
+    "team": "outsider",
+    "ability": "如果大于等于六名玩家存活时你死亡，在当晚会有一名玩家死亡，或有三名玩家负伤。",
+    "otherNight": 14
+  },
+  {
+    "id": "17_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/rwmtBC3f/掩日者.png",
+    "otherNightReminder": "唤醒掩日者，如果他已经死亡，询问他是否选择拨动命运指针，点头或摇头。如果掩日者没有死亡并点头，他死亡，然后询问他是否选择拨动命运指针。",
+    "reminders": [
+      "死亡",
+      "失去能力"
+    ],
+    "name": "掩日者",
+    "team": "minion",
+    "ability": "当你死亡时，在当晚你可以选择是否将命运指针拨动一格。每个夜晚*，选择是或否：如果你选择了是，你死亡。",
+    "otherNight": 3
+  },
+  {
+    "id": "18_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/BvPP6ZqD/阴谋家.png",
+    "firstNightReminder": "唤醒阴谋家，让他查看魔典。他选择点头或摇头。如果点头，为他顺时针方向最近的镇民角色放置中毒标记直至下个黄昏。",
+    "otherNightReminder": "唤醒阴谋家，让他查看魔典。他选择点头或摇头。如果点头，为他顺时针方向最近的镇民角色放置中毒标记直至下个黄昏。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "阴谋家",
+    "team": "minion",
+    "ability": "每个夜晚，你能查看魔典，且可以选择让与你顺时针邻近的镇民中毒直到下个黄昏。",
+    "firstNight": 9,
+    "otherNight": 2
+  },
+  {
+    "id": "19_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/Z5My4vh4/悲剧家.png",
+    "otherNightReminder": "唤醒悲剧家，让他指向一名玩家，如果他指向了一名外来者，向他点头，否则摇头，并在被指向的玩家角色标记旁放置负伤标记。",
+    "setup": true,
+    "name": "悲剧家",
+    "team": "minion",
+    "ability": "每个夜晚*，你要选择一名玩家：你会得知他是否是外来者。如果他不是外来者，他负伤。[+1外来者]",
+    "otherNight": 12
+  },
+  {
+    "id": "20_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/Tw8LW8ws/二把手.png",
+    "firstNightReminder": "为二把手放置负伤标记。",
+    "otherNightReminder": "唤醒二把手，让他指向一名玩家，如果该玩家正被命运时针指向，他死亡。否则，他负伤。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "二把手",
+    "team": "minion",
+    "ability": "每个夜晚*，你要选择一名玩家：他负伤。如果你选择了正被命运指针指向的玩家，改为他死亡。你在首个夜晚负伤。",
+    "firstNight": 4,
+    "otherNight": 13
+  },
+  {
+    "id": "21_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/hPnL5mKY/逆时旅人.png",
+    "firstNightReminder": "说书人选择放置中毒标记在一名玩家旁直至下个黄昏。",
+    "otherNightReminder": "唤醒逆时旅人，让他指向一名玩家，那名玩家死亡。",
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "逆时旅人",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，会有一名玩家中毒直到下个黄昏。[命运指针会逆时针转动]",
+    "firstNight": 10,
+    "otherNight": 8
+  },
+  {
+    "id": "22_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/RZswhbwr/沼泽蜥人.png",
+    "firstNightReminder": "如果命运指针正指向的玩家及与他顺时针邻近的玩家均为镇民，为他们放置中毒标记。",
+    "otherNightReminder": "唤醒沼泽蜥人，让他指向一名玩家，那名玩家死亡。如果命运指针正指向的玩家及与他顺时针邻近的玩家均为镇民，为他们放置中毒标记。",
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "name": "沼泽蜥人",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果命运指针正指向的玩家及与他顺时针邻近的玩家均为镇民，他们会中毒。",
+    "firstNight": 11,
+    "otherNight": 9
+  },
+  {
+    "id": "23_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/CL4GTK1x/末日执行者.png",
+    "firstNightReminder": "唤醒末日执行者，让他指向一名玩家，为那名玩家放置中毒标记。",
+    "otherNightReminder": "唤醒末日执行者，让他指向一名玩家，那名玩家死亡。",
+    "reminders": [
+      "中毒",
+      "死亡"
+    ],
+    "name": "末日执行者",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。在你的首个夜晚，你要选择一名玩家：他中毒，且不计入邪恶阵营的胜利条件中。",
+    "firstNight": 12,
+    "otherNight": 10
+  },
+  {
+    "id": "24_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/BnQxqGLc/万钧之力.png",
+    "otherNightReminder": "唤醒万钧之力，他指向一名或三名玩家，如果基洛选择一名玩家，他死亡。如果基洛选择三名玩家，他们负伤。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "万钧之力",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择一名或三名玩家。如果你选择了一名玩家：他死亡；如果你选择了三名玩家：他们负伤。",
+    "otherNight": 11
+  },
+  {
+    "id": "25_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/1Rw0BB16/4.png",
+    "reminders": [
+      "命运指针",
+      "逆向命运指针"
+    ],
+    "name": "命运指针",
+    "team": "fabled",
+    "ability": "游戏开始时，命运指针正指向恶魔。每个黄昏，命运指针会顺时针指向下一名玩家。玩家不会被告知他正被命运指针指向。"
+  },
+  {
+    "id": "28idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/cCRQJxBT/43.png",
+    "reminders": [
+      "庇护"
+    ],
+    "name": "庇护",
+    "team": "fabled",
+    "ability": "1）受到庇护的玩家在夜间不会负伤;2）受到庇护的玩家在夜晚死亡，改为负伤;3）受到庇护的负伤玩家在夜晚死亡，他死亡。"
+  },
+  {
+    "id": "26_idesofbloodbra1nchinese",
+    "image": "https://i.postimg.cc/fyncZtmJ/3.png",
+    "reminders": [
+      "负伤"
+    ],
+    "name": "负伤",
+    "team": "fabled",
+    "ability": "负伤是一个状态，不会因为负伤来源死亡、醉酒或中毒而移除如果负伤的玩家再次负伤，他死亡。"
+  },
+  {
+    "id": "27_rhigh",
+    "image": "https://i.postimg.cc/zf4WSbd0/1.png",
+    "name": "夜枭",
+    "team": "traveller",
+    "reminders": [
+      "邪恶"
+    ],
+    "ability": "你加入游戏时一定是善良的。每局游戏限一次，在夜晚时，你可以猜测指针的位置，如果你猜测正确，你转变为邪恶。"
+  },
+  {
+    "id": "28_rhigh",
+    "image": "https://i.postimg.cc/PqCYwzMC/2.png",
+    "reminders": [
+      "不再负伤"
+    ],
+    "name": "不老泉",
+    "team": "traveller",
+    "ability": "每局游戏限一次，在夜晚时*，你可以使所有玩家不再负伤，但命运指针立刻拨动一格。"
+  }
+]

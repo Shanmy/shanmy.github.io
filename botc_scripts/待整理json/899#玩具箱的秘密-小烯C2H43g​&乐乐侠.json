@@ -1,0 +1,440 @@
+[
+  {
+    "id": "_meta",
+    "name": "玩具箱的秘密",
+    "author": "小烯&乐乐侠",
+    "logo": "https://www.bloodstar.xyz/p/C2H43g/YS/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/C2H43g/YS/almanac.html"
+  },
+  {
+    "id": "_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/_ys.png",
+    "firstNightReminder": "给他展示数字手势来告诉他场上邻座邪恶玩家有多少对。",
+    "name": "厨师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "firstNight": 15000
+  },
+  {
+    "id": "1_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/1_ys.png",
+    "firstNightReminder": "女裁缝可以选择除自己以外的两名玩家。如果她这么做了，对她点头或摇头示意这两名玩家是否为同一阵营，随后标记女裁缝失去能力。之后的夜晚无需再唤醒女裁缝。",
+    "otherNightReminder": "女裁缝可以选择除自己以外的两名玩家。如果她这么做了，对她点头或摇头示意这两名玩家是否为同一阵营，随后标记女裁缝失去能力。之后的夜晚无需再唤醒女裁缝。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "女裁缝",
+    "team": "townsfolk",
+    "ability": "整局游戏限一次，夜晚，选择两名其他玩家，得知他们是否属于同阵营。",
+    "firstNight": 18000,
+    "otherNight": 22
+  },
+  {
+    "id": "2_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/2_ys.png",
+    "firstNightReminder": "唤醒事务官，对他指向一名善良玩家。",
+    "reminders": [
+      "得知"
+    ],
+    "name": "事务官",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一名善良玩家。",
+    "firstNight": 19000
+  },
+  {
+    "id": "46_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/46_ys.png",
+    "firstNightReminder": "给他展示数字手势来告诉他与他邻近的存活玩家有几人是邪恶的。",
+    "otherNightReminder": "给他展示数字手势来告诉他与他邻近的存活玩家有几人是邪恶的。",
+    "name": "共情者",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知与你邻近的两名存活的玩家中邪恶玩家的数量。",
+    "firstNight": 16000,
+    "otherNight": 20
+  },
+  {
+    "id": "4_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/4_ys.png",
+    "firstNightReminder": "哲学家可以选择一个角色。如果选择的角色不在场，将哲学家的角色标题替换成对应角色，并标记“是哲学家”，否则标记该角色对应的玩家醉酒。从现在开始，你需要以哲学家获得能力的那种角色的行动方式来唤醒哲学家。",
+    "otherNightReminder": "哲学家可以选择一个角色。如果选择的角色不在场，将哲学家的角色标题替换成对应角色，并标记“是哲学家”，否则标记该角色对应的玩家醉酒。从现在开始，你需要以哲学家获得能力的那种角色的行动方式来唤醒哲学家。",
+    "reminders": [
+      "醉酒",
+      "是哲学家"
+    ],
+    "name": "哲学家",
+    "team": "townsfolk",
+    "ability": "整局游戏限一次，夜晚，选择一个善良身份，获取他的技能，如果有玩家为该身份，他醉酒。",
+    "firstNight": 11,
+    "otherNight": 8
+  },
+  {
+    "id": "5_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/5_ys.png",
+    "firstNightReminder": "让占卜师选择两名玩家。如果其中有恶魔或“干扰项”，点头示意，否则摇头。",
+    "otherNightReminder": "让占卜师选择两名玩家。如果其中有恶魔或“干扰项”，点头示意，否则摇头。",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 17000,
+    "otherNight": 21
+  },
+  {
+    "id": "6_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/6_ys.png",
+    "firstNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
+    "otherNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 20000,
+    "otherNight": 24
+  },
+  {
+    "id": "47_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/47_ys.png",
+    "otherNightReminder": "唤醒巡查，让其选择两个善良角色，如果这两个角色都在场，在对应玩家角色标记旁放置“不会死亡”标记。",
+    "reminders": [
+      "不会死亡"
+    ],
+    "name": "巡察",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的两个善良角色：如果他们都存活，他们当晚不会死亡。",
+    "otherNight": 10
+  },
+  {
+    "id": "8_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/8_ys.png",
+    "otherNightReminder": "让赌徒选择一名玩家和一个角色。如果赌徒猜错了，标记赌徒死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "赌徒",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家并猜测该玩家的角色：如果你猜错了，你会死亡。",
+    "otherNight": 11
+  },
+  {
+    "id": "9_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/9_ys.png",
+    "otherNightReminder": "给他展示数字手势来告诉他当前已死亡的玩家中有多少玩家是邪恶的。",
+    "name": "神谕者",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知有多少名死亡的玩家是邪恶的。",
+    "otherNight": 23
+  },
+  {
+    "id": "10_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/10_ys.png",
+    "otherNightReminder": "鸩可以选择一个镇民角色。如果他这么做了，且该角色在场，给该角色的玩家标记醉酒并死亡，随后标记鸩失去能力。",
+    "reminders": [
+      "失去能力",
+      "醉酒并死亡"
+    ],
+    "name": "鸩",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一个镇民角色：如果他在场，他醉酒并死亡。",
+    "otherNight": 18
+  },
+  {
+    "id": "11_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/11_ys.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "猎手",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，你可以在白天时公开选择一名玩家：如果他是恶魔，他死亡。"
+  },
+  {
+    "id": "24_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/24_ys.png",
+    "otherNightReminder": "如果农民在夜晚死去，则选择另一位善良玩家成为农民。唤醒这名玩家，并告知他成为了农民。",
+    "name": "农夫",
+    "team": "townsfolk",
+    "ability": "如果你在夜晚死亡，一名存活的善良玩家会变成农夫。",
+    "otherNight": 19
+  },
+  {
+    "id": "12_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/12_ys.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": 1,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "13_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/13_ys.png",
+    "name": "呆瓜",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家：如果他是邪恶的，你的阵营落败。"
+  },
+  {
+    "id": "42_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/42_ys.png",
+    "firstNightReminder": "111",
+    "otherNightReminder": "111",
+    "reminders": [
+      "死亡",
+      "已被猜测"
+    ],
+    "name": "书生",
+    "team": "outsider",
+    "ability": "恶魔知道书生在场。每局游戏限一次，恶魔可以拜访说书人并猜测你是书生。如果恶魔猜测正确，即使你已死亡，当晚该恶魔可以选择一名玩家：他死亡。",
+    "firstNight": 12000,
+    "otherNight": 17
+  },
+  {
+    "id": "48_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/48_ys.png",
+    "otherNightReminder": "当瘟疫医生死亡时，将一个不在场的爪牙角色标记放置在魔典左侧的正中位置，并用瘟疫医生的“说书人能力”标记标记该爪牙角色。如可能，在夜晚顺序表旁添加相应的夜晚标记用以提示。",
+    "reminders": [
+      "说书人能力"
+    ],
+    "name": "瘟疫医生",
+    "team": "outsider",
+    "ability": "如果你死亡，说书人获得一个不在场的爪牙能力。",
+    "otherNight": 25
+  },
+  {
+    "id": "19_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/19_ys.png",
+    "remindersGlobal": [
+      "是提线木偶"
+    ],
+    "name": "提线木偶",
+    "team": "minion",
+    "ability": "你以为你是一个善良角色，但其实你不是。恶魔会知道你是提线木偶。[提线木偶会与恶魔邻座]"
+  },
+  {
+    "id": "17_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/17_ys.png",
+    "firstNightReminder": "告诉灵言师他的秘密词语。",
+    "otherNightReminder": "唤醒第一个说出灵言师词语的玩家并告知他已经变成邪恶阵营。",
+    "reminders": [
+      "邪恶",
+      "失去能力"
+    ],
+    "name": "灵言师",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知一个关键词。首个说出该关键词的善良玩家会在当晚转变为邪恶阵营。",
+    "firstNight": 14000,
+    "otherNight": 9
+  },
+  {
+    "id": "34_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/34_ys.png",
+    "firstNightReminder": "对他展示所有在场的外来者标记。",
+    "otherNightReminder": "如果有外来者在今天白天死亡，让教父选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "死于今日",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "教父",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]",
+    "firstNight": 13000,
+    "otherNight": 16
+  },
+  {
+    "id": "43_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/43_ys.png",
+    "otherNightReminder": "捣蛋小鬼可以选择发动能力，如果这样做那么当晚抽取道具的玩家改为捣蛋小鬼。随后标记失去能力。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "捣蛋小鬼",
+    "team": "minion",
+    "ability": "每局游戏限一次，在夜晚时*，你可以使当晚抽取道具的玩家改为你。",
+    "otherNight": 2
+  },
+  {
+    "id": "23_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/23_ys.png",
+    "otherNightReminder": "让饕餮选择任意数量的非旅行者玩家或一名旅行者玩家，如果他们角色类型均不相同，那么标记他们死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "饕餮",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择任意数量的非旅行者玩家或一名旅行者玩家：如果他们的角色类型均不相同，他们死亡。[+1外来者]",
+    "otherNight": 12
+  },
+  {
+    "id": "39_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/39_ys.png",
+    "otherNightReminder": "让诺-达鲺选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "死亡",
+      "中毒"
+    ],
+    "name": "诺-达鲺",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。与你邻近的两名镇民中毒。",
+    "otherNight": 13
+  },
+  {
+    "id": "21_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/21_ys.png",
+    "otherNightReminder": "让小恶魔选择一名玩家。标记那名玩家死亡。如果小恶魔选择了自己：用一个备用的小恶魔标记替换一个存活的爪牙角色标记。让原来的小恶魔重新入睡。唤醒新的小恶魔。对他展示“你是”信息标记，和小恶魔角色标记。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 14
+  },
+  {
+    "id": "22_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/22_ys.png",
+    "otherNightReminder": "让涡流选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "涡流",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。镇民玩家的能力都会产生错误信息。如果白天没人被处决，邪恶阵营获胜。",
+    "otherNight": 15
+  },
+  {
+    "id": "41_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/41_ys.png",
+    "name": "伊甸的祝福",
+    "team": "fabled",
+    "ability": "胜方MVP的非旅行者玩家可以在下局游戏开始时从玩具箱抽取一个道具。"
+  },
+  {
+    "id": "25_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/25_ys.png",
+    "name": "玩具箱",
+    "team": "fabled",
+    "ability": "死于处决的玩家可以在夜晚选择一名存活玩家:如果他没有道具且是善良/邪恶的非旅行者玩家，可以立刻从玩具箱中抽取/选择一个道具。"
+  },
+  {
+    "id": "26_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/26_ys.png",
+    "otherNightReminder": "拥有六面骰的玩家可以选择发动能力，将他的角色标记替换为相同类型的角色标记，然后标记拥有六面骰的玩家已发动。",
+    "reminders": [
+      "拥有",
+      "已发动"
+    ],
+    "name": "六面骰",
+    "team": "fabled",
+    "ability": "每局游戏限一次，在夜晚时，你可以立刻变成一个相同类型的角色。",
+    "otherNight": 7
+  },
+  {
+    "id": "27_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/27_ys.png",
+    "otherNightReminder": "让悬挂着达摩剑的玩家丢一次d6，如果结果≤当前天数，标记拥有达摩剑的玩家死亡。",
+    "reminders": [
+      "死亡",
+      "悬挂"
+    ],
+    "name": "达摩剑",
+    "team": "fabled",
+    "ability": "你的能力每天都可以生效两次（限次 能力改为额外发动一次）。每个夜晚，你要丢一次d6:结果≤当前天数，你死亡。",
+    "otherNight": 3
+  },
+  {
+    "id": "28_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/28_ys.png",
+    "reminders": [
+      "已生效",
+      "拥有"
+    ],
+    "name": "安卡十字",
+    "team": "fabled",
+    "ability": "你首次死亡后会立刻变成相同阵营的旅行者并复活。"
+  },
+  {
+    "id": "29_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/29_ys.png",
+    "reminders": [
+      "已合成",
+      "拥有",
+      "？"
+    ],
+    "name": "合成宝袋",
+    "team": "fabled",
+    "ability": "每局游戏限一次，你可以公开选择除你以外的两个角色，你的能力改为你与另外两个角色的结合。"
+  },
+  {
+    "id": "30_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/30_ys.png",
+    "otherNightReminder": "让拥有圣经的玩家可以选择一名非旅行者玩家。标记那名玩家保护。如果拥有圣经的玩家是善良的并且选中了恶魔，标记拥有圣经的玩家死亡。随后标记已发动。",
+    "reminders": [
+      "拥有",
+      "保护",
+      "死亡",
+      "已发动"
+    ],
+    "name": "圣经",
+    "team": "fabled",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名非旅行者玩家:如果他在下个黄昏之前首次死亡，他不会死亡。如果你选中了恶魔且你是善良阵营，你死亡。",
+    "otherNight": 4
+  },
+  {
+    "id": "31_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/31_ys.png",
+    "otherNightReminder": "拥有减位骰的玩家可以选择一名非旅行者玩家，那名玩家的角色标记替换为角色能力表上一个顺位的角色标记，然后标记拥有减位骰的玩家已发动。",
+    "reminders": [
+      "拥有",
+      "已发动"
+    ],
+    "name": "减位骰",
+    "team": "fabled",
+    "ability": "每局游戏限一次，在夜晚时*，你可以选择一名非旅行者玩家，他变成他的角色所对应的角色能力表上一个顺位的角色。",
+    "otherNight": 6
+  },
+  {
+    "id": "33_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/33_ys.png",
+    "otherNightReminder": "拥有虚空的玩家可以选择一名非旅行者玩家，使那名玩家失去所有道具并标记吸收随后告知拥有虚空的玩家那些道具是什么，然后拥有虚空的玩家可以给拥有吸收的玩家标记死亡，最后标记拥有虚空的玩家已发动。",
+    "reminders": [
+      "拥有",
+      "吸收",
+      "死亡",
+      "已发动"
+    ],
+    "setup": true,
+    "name": "虚空",
+    "team": "fabled",
+    "ability": "每局游戏限一次，在夜晚时，你可以选择一名非旅行者玩家，他失去他的所有道具然后你得知那些道具是什么。然后你可以选择是否杀死他。",
+    "otherNight": 5
+  },
+  {
+    "id": "40_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/40_ys.png",
+    "reminders": [
+      "拥有"
+    ],
+    "name": "谷底石",
+    "team": "fabled",
+    "ability": "你的阵营、角色、状态不会发生变化且死亡后依旧会保留能力。"
+  },
+  {
+    "id": "45_ys",
+    "image": "https://www.bloodstar.xyz/p/C2H43g/YS/45_ys.png",
+    "reminders": [
+      "禁止邪恶"
+    ],
+    "name": "圣洁之魂",
+    "team": "fabled",
+    "ability": "游戏过程中邪恶玩家的总数最多能比初始设置多一名。"
+  },
+  {
+    "id": "49_ys",
+    "name": "捣蛋小鬼&瘟疫医生",
+    "team": "a jinxed",
+    "ability": "如果瘟疫医生死亡且说书人会因此获得捣蛋小鬼的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+  }
+]

@@ -1,0 +1,269 @@
+[
+  {
+    "id": "_meta",
+    "name": "天外寒情It's Cold Outside",
+    "author": "Ben Burns",
+    "logo": "https://www.helloimg.com/i/2025/12/14/693edd07be56c.png",
+    "hideTitle": true,
+    "firstNight": ["dusk","minioninfo","demoninfo","sparehead3","despairsquid","inquisitor","confidence","kochanski","vendingmachine","kryten","dawn"],
+    "otherNight": ["dusk","rimmer","captainhollister","cat","confidence","mrflibble","queeg500","despairsquid","unspeakableone","inquisitor","paranoia","vindaloobeast","emohawk","jesus","talkietoaster","lister","suitcase","vendingmachine","skutter","jimbexleyspeed","kryten","dawn"]
+  },
+  {
+    "id": "kochanski",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/christiene_reddwarf.png"],
+    "firstNightReminder": "Wake Kochanski and show them two character tokens. Put them back to sleep.",
+    "name": "科克汉斯基",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三个角色：其中至少有一个角色是恶魔的伪装。",
+    "firstNight": 3006
+  },
+  {
+    "id": "confidence",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/confidence_reddwarf.png"],
+    "firstNightReminder": "Ask the player to select clockwise or anti-clockwise, place the 'confident' token next to them. :reminder:",
+    "otherNightReminder": "Ask the player to select clockwise or anti-clockwise, place the 'confident' token next to them. :reminder:",
+    "reminders": ["自信"],
+    "name": "自信",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择顺时针或逆时针：在该方向上离你最近的存活镇民免受醉酒和中毒影响，且会得知正确信息。",
+    "firstNight": 3005,
+    "otherNight": 5
+  },
+  {
+    "id": "vendingmachine",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/fridge_reddwarf.png"],
+    "firstNightReminder": "Wake the player and have them point to an evil character on the script. Point to two players and then put them back to sleep",
+    "otherNightReminder": "Wake the player and have them point to an evil character on the script. Point to two players and then put them back to sleep",
+    "name": "自动售货机",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一个邪恶角色：你会得知两名存活的玩家，他们均不为该角色。",
+    "firstNight": 3007,
+    "otherNight": 18
+  },
+  {
+    "id": "kryten",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/kryton_reddwarf.png"],
+    "firstNightReminder": "Wake the player and show them clockwise, anti-clockwise, or zero.",
+    "otherNightReminder": "Wake the player and show them clockwise, anti-clockwise, or zero.",
+    "name": "克莱滕",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知离你最近的存活的醉酒或中毒玩家位于你的顺时针还是逆时针方向。如果两侧的玩家与你距离相等或没有玩家醉酒或中毒，你得知0。",
+    "firstNight": 3008,
+    "otherNight": 22
+  },
+  {
+    "id": "jimbexleyspeed",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/bex_reddwarf.png"],
+    "otherNightReminder": "Wake up Jim Bexley Speed and have them select two players. If either of them selected another player tonight, point to one of the players. Otherwise, shake your head and put Jim Bexley Speed back to sleep.",
+    "name": "吉姆·贝克斯利·斯皮德",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择两名存活的玩家：你会得知一名除你以外的当晚选择或影响了他们的玩家（或者你会得知没有）。",
+    "otherNight": 21
+  },
+  {
+    "id": "cat",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/cat_reddwarf.png"],
+    "otherNightReminder": "Wake up Cat and direct them to select one of their living neighbours. Place the 'Safe' token next to their token and place the 'Drunk' token next to Cat's other living neighbour (if good). :reminder: :reminder:",
+    "reminders": ["保护", "醉酒"],
+    "name": "凯特",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名与你邻近的存活玩家：当晚邪恶玩家的能力对他无效。如果与你邻近的另一名存活玩家是善良的，他醉酒直到下个黄昏。",
+    "otherNight": 4
+  },
+  {
+    "id": "talkietoaster",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/toast_reddwarf.png"],
+    "otherNightReminder": "Wake up Talkie Toaster and show them a number. :reminder:",
+    "reminders": ["嗨哆嘚哩哆", "嗨哆嘚哩哆", "嗨哆嘚哩哆", "嗨哆嘚哩哆", "嗨哆嘚哩哆", "嗨哆嘚哩哆", "嗨哆嘚哩哆", "嗨哆嘚哩哆", "嗨哆嘚哩哆", "失去能力"],
+    "name": "话痨吐司机",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知在今天白天最先公开声明“嗨，哆嘚哩哆”的五名玩家中有多少名玩家是善良的。如果你“疯狂”地证明自己是话痨吐司机，你失去能力。",
+    "otherNight": 15
+  },
+  {
+    "id": "holly",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/holly_reddwarf.png"],
+    "reminders": ["醉酒"],
+    "name": "霍莉",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，首个使用自身能力选择了你的邪恶玩家会醉酒直到下个黄昏。"
+  },
+  {
+    "id": "lister",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/lister_reddwarf.png"],
+    "otherNightReminder": "Wake Lister and have them select three players. Show them a number, either one, two, or three.",
+    "name": "李斯特",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的三名玩家：你会得知他们之中的角色类型数量。如果你选中了恶魔，你醉酒直到下个黎明。",
+    "otherNight": 16
+  },
+    {
+    "id": "skutter",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/skutter_reddwarf.png"],
+    "otherNightReminder": "Wake all living Skutters and have them select a player. Show them a number of characters equal to the number of living Skutters and then put them back to sleep.",
+    "setup": true, 
+    "reminders": ["醉酒"],   
+    "name": "勤务机",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，所有存活的勤务机一同被唤醒并要选择一名玩家：你们会得知等同于存活勤务机数量的角色，该玩家是其中一个角色。一名善良的勤务机醉酒。[+1~3勤务机，其中一名可能转变为邪恶阵营]",    
+    "otherNight": 19,
+    "special": [{"type": "selection", "name": "bag-duplicate"}]
+  },
+  {
+    "id": "acerimmer",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/ace_reddwarf.png"],
+    "otherNightReminder": "If Ace Rimmer died tonight, wake them and have them select a dead player. Place the 'What a Guy' reminder token next to them. Remove the death shroud from their token and announce their resurrection in the morning.",
+    "reminders": ["处决救星"],
+    "name": "王牌瑞默",
+    "team": "townsfolk",
+    "ability": "一名善良玩家不会死于处决。",
+    "otherNight": 1
+  },
+  {
+    "id": "suitcase",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/suitcase_reddwarf.png"],
+    "setup": true,
+    "otherNightReminder": "If the 'Owner Found' reminder token is next to the Suitcase's character token, wake the Suitcase and point to a player, then put them back to sleep. :reminder:",
+    "reminders": ["主人找回"],
+    "name": "手提箱",
+    "team": "townsfolk",
+    "ability": "当你首次提名并处决杀死了一名外来者，当晚你会得知与一名邪恶玩家邻近的一名玩家。[+1外来者]",
+    "otherNight": 17
+  },
+  {
+    "id": "jesus",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/jesus_reddwarf.png"],
+    "otherNightReminder": "If Jesus died tonight, wake the player and have them select a character. If the character is in play, point to the relevant player. If not, replace the 'Jesus' token with this character and place the 'Resurrected' reminder token next to them. :reminder:",
+    "reminders": ["复活"],
+    "name": "耶稣",
+    "team": "townsfolk",
+    "ability": "如果你在夜晚死亡，你会被唤醒，然后你要选择一个善良角色：你会得知他是谁。如果这个角色不在场，你会变成这个角色并复活。",
+    "otherNight": 14
+  },
+  {
+    "id": "sparehead3",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/spare_reddwarf.png"],
+    "firstNightReminder": "Select a good player and place the 'Droid Rot' token next to them in the grimoire. :reminder:",
+    "reminders": ["机甲锈蚀"],
+    "name": "备用头颅3号",
+    "team": "outsider",
+    "ability": "一名善良玩家醉酒且始终被善良玩家的能力当作邪恶的恶魔，即使你已死亡。",
+    "firstNight": 3001
+  },
+  {
+    "id": "duanedibley",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/dwane_reddwarf.png"],
+    "setup": true,     
+    "name": "杜安·迪布利",
+    "team": "outsider",
+    "ability": "如果没有外来者存活，善良阵营无法获胜，即使你已死亡。[+0~2杜安·迪布利]",
+    "special": [{"type": "selection", "name": "bag-duplicate"}]
+  },
+  {
+    "id": "rimmer",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/rimmer_reddwarf.png"],
+    "otherNightReminder": "If the 'Mad' reminder token is next to Rimmer and Rimmer was executed today, you may select an alive good character token and place the 'Becomes Rimmer' token next to them. Wake that player and show them the 'You Are' reminder token and the Rimmer character token. Replace their character token with the Rimmer token.:reminder:",
+    "reminders": ["变成阿诺德·里默", "疯狂"],
+    "name": "阿诺德·瑞默",
+    "team": "outsider",
+    "ability": "如果你'疯狂'地证明你是阿诺德·里默且死于处决，一名存活的善良玩家可能会变成阿诺德·里默。",
+    "otherNight": 2
+  },
+  {
+    "id": "captainhollister",
+   "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/cpt_reddwarf.png"],
+    "otherNightReminder": "If a player has the 'Turns Evil' reminder token next to them. Select one of their good, living neighbours. Wake that player and show them the 'You Are' card, before giving them a thumbs-down. :reminder:",
+    "reminders": ["转变邪恶"],
+    "name": "霍利斯特舰长",
+    "team": "outsider",
+    "ability": "当你得知你死亡时，你要公开选择一名存活的玩家：如果他是邪恶的，当晚，与他邻近的一名存活善良玩家转变为邪恶。",
+    "otherNight": 3
+  },
+  {
+    "id": "despairsquid",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/squid_reddwarf.png"],
+    "firstNightReminder": "Wake the Despair Squid and have them select a player. Place the 'Poisoned' token next to each of their good-aligned neighbours. :reminder: :reminder:",
+    "otherNightReminder": "Wake the Despair Squid and have them select a player. Place the 'Poisoned' token next to each of their good-aligned neighbours. :reminder: :reminder:",
+    "reminders": ["中毒","中毒","选择"],
+    "name": "绝望乌贼",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：如果与你选择的玩家邻座的玩家都是善良的，他们中毒。",
+    "firstNight": 3002,
+    "otherNight": 8
+  },
+  {
+    "id": "queeg500",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/queeg_reddwarf.png"],
+    "otherNightReminder": "Wake the player and wait for them to either nod or shake their head. If they nod, have them select an evil player. Show them the 'You Are' card and the token of their new character. Put them to sleep, wake the player they selected and show them the 'You are card' and the Queeg 500 token. Swap the two tokens around in your grimoire.",
+    "name": "奎格500",
+    "team": "minion",
+    "ability": "每个夜晚*，你要选择一名玩家：如果你选中了一名邪恶玩家，你和他交换角色。",
+    "otherNight": 7
+  },
+  {
+    "id": "unspeakableone",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/one_reddwarf.png"],
+    "otherNightReminder": "If the player was nominated today, wake them up and have them select a player to die. :reminder:",
+    "reminders": ["深渊中浮现","死亡"],
+    "name": "无名之物",
+    "team": "minion",
+    "ability": "每个夜晚*，如果你在今天白天被一名善良玩家提名过，你要选择一名玩家：他死亡。",
+    "otherNight": 9
+  },
+  {
+    "id": "mrflibble",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/flible_reddwarf.png"],
+    "setup": true,
+    "otherNightReminder": "If a player has the 'Turns Evil' reminder token next to them. Select one of their good, living neighbours. Wake that player and show them the 'You Are' card, before giving them a thumbs-down.:reminder:",
+    "reminders": ["变成爪牙", "失去能力"],
+    "name": "弗利布尔先生",
+    "team": "minion",
+    "ability": "每个夜晚*，你要选择一名玩家和一个不在场的爪牙角色：他变成那个爪牙角色并转变为邪恶阵营，直到在场的爪牙数量与初始设置相同。[-1或-2爪牙]",
+    "otherNight": 6
+  },
+  {
+    "id": "inquisitor",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/inquis_reddwarf.png"],
+    "firstNightReminder": "Wake up the Inquisitor and have them select a player. Put the 'Chosen' token next to that player and then show the Inquisitor that player's character token. :reminder:",
+    "otherNightReminder": "Wake up the Inquisitor and point to the 'chosen' player. If the Inquisitor then nods, kill that player. Otherwise, allow them to select a different player to die and place the 'Once' token next to the Inquisitor and do not repeat this step again. Have the Inquisitor select a new player and put the 'Chosen' token next to that player and then show the Inquisitor that player's character token. :reminder:",
+    "reminders": ["选择","死亡","限一次"],
+    "name": "审问者",
+    "team": "demon",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的角色，下个夜晚他死亡。每局游戏限一次，在夜晚时*，你可以选择一名其他玩家代替他死亡。",
+    "firstNight": 3003,
+    "otherNight": 10
+  },
+    {
+    "id": "vindaloobeast",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/curry_reddwarf.png"],
+    "otherNightReminder": "Wake the Vindaloo Beast and have them select a two player. Place the 'Dead' reminder token next to one of them.",
+    "reminders": ["死亡", "死亡"],
+    "name": "温达鲁野兽",
+    "team": "demon",
+    "setup": true,
+    "ability": "每个夜晚*，你要选择两名玩家：他们之中会有人死亡。只有当所有镇民死亡时你才会立即死亡。[+2外来者]",
+    "otherNight": 12
+  },
+  {
+    "id": "emohawk",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/hawk_reddwarf.png"],
+    "otherNightReminder": "The Emohawk chooses a player to die.:reminder:",
+    "reminders": ["死亡", "限一次"],
+    "name": "艾莫霍克",
+    "team": "demon",
+    "setup": false,
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果大于等于五名玩家存活时，你首次死于处决，提名你的玩家变成邪恶的艾莫霍克。",
+    "otherNight": 13
+   },
+   {
+    "id": "paranoia",
+    "image": ["https://www.bloodstar.xyz/p/Rowlf/Reddwarf/para_reddwarf.png"],
+    "otherNightReminder": "Wake Paranoia and have them select a player. Place the 'dead' token next to that player. :reminder:",
+    "reminders": ["死亡","中毒","中毒"],
+    "name": "偏执",
+    "team": "demon",
+    "setup": true,
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果自信存活，与他邻近的两名存活的镇民中毒。[+自信]",
+    "otherNight": 11
+  }
+]

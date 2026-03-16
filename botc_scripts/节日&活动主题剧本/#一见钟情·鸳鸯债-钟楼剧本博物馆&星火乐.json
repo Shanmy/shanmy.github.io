@@ -1,0 +1,508 @@
+[
+    {
+        "id": "_meta",
+        "name": "一见钟情·鸳鸯债",
+        "logo": "https://www.helloimg.com/i/2025/02/14/67ae2efce767d.png",
+        "author":"钟楼剧本博物馆&星火乐",
+        "description": "一见钟情·鸳鸯债",
+        "townsfolkName": "镇民",
+        "outsidersName": "外来者",
+        "minionsName": "爪牙",
+        "demonsName": "恶魔",
+        "townsfolk": "镇民",
+        "outsider": "外来者",
+        "minion": "爪牙",
+        "demon": "恶魔",
+        "a jinxedName": "相克",
+        "a jinxed": "相克",
+        "state": [
+            {
+                "stateName": "鸳鸯债",
+                "stateDescription": "*1.巡山人和鸳可以同时在场，但说书人会在游戏开始前声明他是否会这样做。*2.鸳和鸯不会得知国王，但如果必须得知时，爪牙会代替他得知。*3.无论恶魔是否为莉莉丝，在游戏开始前所有玩家都会被分为不同的特征。"
+            },
+            {
+                "stateName": "规则细节①",
+                "stateDescription": "窥镜人&落难少女：如果窥镜人选择了落难少女，直到下个黄昏爪牙即使猜对了落难少女也不会让他的阵营落败。"
+            },
+            {
+                "stateName": "规则细节②",
+                "stateDescription": "窥镜人&采莲君：如果采莲君选择了被窥镜人保护的玩家，他既不会加入邪恶也不会死亡，但是会正常回答问题。"
+            },
+            {
+                "stateName": "规则细节③",
+                "stateDescription": "窥镜人&鸳：说书人使用的爪牙能力依然可以对窥镜人选择的玩家生效。"
+            },
+            {
+                "stateName": "规则细节④",
+                "stateDescription": "巡山人&鸯：巡山人可以与鸯同时在场，且如果巡山人选择了鸯，鸯会变成一个不在场镇民，随后邪恶会因为没有恶魔落败。"
+            }
+        ]
+    },
+    {
+        "id": "daerduotutu111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/librarian.png",
+        "edition": "custom",
+        "name": "图书管理员",
+        "ability": "在你的首个夜晚，你会得知两名玩家和一个外来者角色：这两名玩家之一是该角色（或者你会得知没有外来者在场）。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 36,
+        "otherNight": 0,
+        "firstNightReminder": "唤醒图书管理员，对他指向两名玩家，并展示一个外来者角色标记。这两名玩家其中之一是这个外来者。",
+        "otherNightReminder": "",
+        "reminders": [
+            "外来者",
+            "错误"
+        ],
+        "setup": false
+    },
+    {
+        "id": "arknights111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/knight.png",
+        "edition": "custom",
+        "name": "骑士",
+        "ability": "在你的首个夜晚，你会得知两名非恶魔玩家。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 48,
+        "otherNight": 0,
+        "firstNightReminder": "唤醒骑士，对他指向两名非恶魔玩家。",
+        "otherNightReminder": "",
+        "reminders": [
+            "得知"
+        ],
+        "setup": false
+    },{
+		"id": "sibu_button",
+		"image": "https://www.bloodstar.xyz//p//comm503//extra-role//14_extrarole.png",
+		"edition": "custom",
+		"name": "司簿",
+		"ability": "在你的首个夜晚，你要选择一名玩家，你会得知该玩家及其相邻玩家的角色种类数量。",
+		"team": "townsfolk",
+		"sch_team": "镇民",
+		"firstNight": 37,
+		"otherNight": 0,
+		"firstNightReminder": "唤醒司簿，让他选择一名玩家，告诉他该玩家及其相邻玩家的角色种类数量。",
+		"otherNightReminder": "",
+		"reminders": [
+			"廪赐"
+		],
+		"remindersGlobal": [],
+		"setup": 0
+	},
+  {
+    "id": "10_jing",
+    "image": "https://vip.helloimg.com/i/2024/07/14/66939d709a5ba.png",
+    "firstNightReminder": "让辩护律师选择一名玩家，用“辩护目标”标记那名玩家。",
+    "otherNightReminder": "",
+    "reminders": [
+      "辩护目标"
+    ],
+    "name": "辩护律师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你要选择除你以外的一名玩家：如果他健康清醒且存活，你可以在白天时私下询问说书人并得知一条正确信息。如果他中毒、醉酒或死亡，你可能会得知错误信息。",
+    "firstNight": 37.5,
+    "otherNight": 0
+  },
+    {
+        "id": "rangwokangkang111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/dreamer.png",
+        "edition": "custom",
+        "name": "筑梦师",
+        "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 45,
+        "otherNight": 84,
+        "firstNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+        "otherNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+        "reminders": [],
+        "setup": false
+    },
+    {
+        "ability": "每个夜晚，你要选择一名除你以外的玩家：爪牙的负面能力在今晚和明天白天对他无效。",
+        "image": "https://www.helloimg.com/i/2025/02/14/67ae22b31a8a3.png",
+        "edition": "custom",
+        "flavor": "",
+        "id": "kuijingzhe",
+        "firstNightReminder": "让窥镜者选择一名其他玩家，将“保护”放置在那名玩家的角色标记身边。",
+        "otherNightReminder": "让窥镜者选择一名其他玩家，将“保护”放置在那名玩家的角色标记身边。",
+        "name": "窥镜者",
+        "otherNight":2,
+        "firstNight": 10,
+        "setup": 0,
+        "reminders": [
+            "保护"
+        ],
+        "remindersGlobal": [],
+        "team": "townsfolk"
+    },
+    {
+        "id": "wocaishiguowang111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/king.png",
+        "edition": "custom",
+        "name": "国王",
+        "ability": "每个夜晚，如果死亡的玩家数量大于或等于存活的玩家数量，你会得知一个存活的角色。恶魔知道你是国王。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 9,
+        "otherNight": 93,
+        "firstNightReminder": "如果国王在场，对恶魔展示国王角色标记并指向国王玩家。",
+        "otherNightReminder": "如果满足国王的唤醒条件，唤醒国王，对他展示一个存活的角色标记。",
+        "reminders": [],
+        "setup": false
+    },
+  {
+    "id": "TianJiGe",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/1722264608_197011_430.png",
+    "firstNightReminder": "在首个夜晚，唤醒天机阁，让其选择两名连坐的玩家，并在其角色标记旁放置“探查”标记。",
+    "otherNightReminder": "唤醒天机阁，让其选择两名连坐的玩家，用点头或者摇头来告知是否选择了更多的邪恶玩家，移除之前的“探查”标记，并在新选择的玩家角色标记旁放置“探查”标记。",
+    "reminders": [
+      "探查"
+    ],
+    "name": "天机阁",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名除你以外的邻座玩家，你会得知相较于上一个夜晚，你是否选择了更多的邪恶玩家。",
+    "attribution": "刘中奇",
+    "flavor": "稚子问翁新悟处，欲言直恐泄天机。",
+    "firstNight": 46,
+    "otherNight": 85
+  },
+    {
+        "id": "tiandanwuzaoxiaoxinhuozhu111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/dagengren.png",
+        "edition": "custom",
+        "name": "打更人",
+        "ability": "每个夜晚*，你要猜测今晚首个死亡的玩家与你的距离。如果你猜测正确，则除你以外的所有玩家今晚不会死亡，但你可能会死亡。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 12,
+        "firstNightReminder": "",
+        "otherNightReminder": "唤醒打更人，让他进行猜测，并放置提示标记到对应玩家旁。",
+        "reminders": [
+            "警惕",
+            "死亡"
+        ],
+        "setup": false
+    },
+    {
+        "id": "haogaodeshan111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/huntsman.png",
+        "edition": "custom",
+        "name": "巡山人",
+        "ability": "每局游戏限一次，在夜晚时，你可以选择一名存活的玩家：如果你选中了落难少女，她会变成一个不在场的镇民角色。[+落难少女]",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 34,
+        "otherNight": 77,
+        "firstNightReminder": "唤醒巡山人，他可以摇头不使用能力，或选择一名玩家。如果巡山人选中了落难少女，则在巡山人入睡后通知落难少女角色变化。",
+        "otherNightReminder": "如果巡山人未曾使用能力，唤醒巡山人，他可以摇头不使用能力，或选择一名玩家。如果巡山人选中了落难少女，则在巡山人入睡后通知落难少女角色变化。",
+        "reminders": [
+            "失去能力"
+        ],
+        "setup": true
+    },{
+		"ability": "每个白天，你可以邀请一名玩家（与之前不同）与你分别私下询问说书人：他可以问一个是非问题，随后你会得知一个答案相同的是非问题。",
+		"image": "https://oss.gstonegames.com/data_file/clocktower/upload/1697467997_197011_5602.png",
+		"edition": "custom",
+		"flavor": "",
+		"id": "20236_38",
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"name": "小说家",
+		"name_id": "fictionist",
+		"otherNight": 0,
+		"setup": 0,
+		"reminders": ["已邀请"],
+		"remindersGlobal": [],
+		"team": "townsfolk",
+		"firstNight": 0
+	}, 
+    {
+        "id": "changshinanniang111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/choirboy.png",
+        "edition": "custom",
+        "name": "唱诗男孩",
+        "ability": "如果恶魔杀死了国王，你会得知哪名玩家是恶魔。[+国王]",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 73,
+        "firstNightReminder": "",
+        "otherNightReminder": "如果恶魔杀死了国王，唤醒唱诗男孩，对他指向恶魔。",
+        "reminders": [],
+        "setup": true
+    },
+    {
+        "id": "tiepigu111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/virgin.png",
+        "edition": "custom",
+        "name": "贞洁者",
+        "ability": "当你首次被提名时，如果提名你的玩家是镇民，他立刻被处决。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "失去能力"
+        ],
+        "setup": false
+    },
+    {
+        "id": "chichichichichichichi111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/cannibal.png",
+        "edition": "custom",
+        "name": "食人族",
+        "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "饱餐",
+            "中毒"
+        ],
+        "setup": false
+    },
+    {
+        "id": "bushiwo111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/damsel.png",
+        "edition": "custom",
+        "name": "落难少女",
+        "ability": "所有爪牙都知道落难少女在场。每局游戏限一次，任意爪牙可以公开猜测你是落难少女，如果猜对，你的阵营落败。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 5.1,
+        "otherNight": 0,
+        "firstNightReminder": "如果落难少女在场，对爪牙展示落难少女角色标记。",
+        "otherNightReminder": "0",
+        "reminders": [
+            "已被猜测"
+        ],
+        "setup": false
+    },
+    {
+        "id": "woheduolema111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/drunk.png",
+        "edition": "custom",
+        "name": "酒鬼",
+        "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [
+            "是酒鬼"
+        ],
+        "setup": true
+    },
+    {
+        "id": "tougexiangxian111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/politician.png",
+        "edition": "custom",
+        "name": "政客",
+        "ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+    {
+        "id": "zhadiaole111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/mutant.png",
+        "edition": "custom",
+        "name": "畸形秀演员",
+        "ability": "如果你“疯狂”地证明自己是外来者，你可能被处决。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+    {
+        "id": "cailianjun",
+        "image": "https://www.helloimg.com/i/2025/02/14/67ae21c2ee494.png",
+        "edition": "custom",
+        "name": "采莲君",
+        "ability": "每局游戏限一次，在夜晚时*，你可以设计一个有答案的是非问题并选择一名玩家向他提问：如果他的答案与之相符，他转变为邪恶阵营，否则他死亡。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 0,
+        "otherNight": 16,
+        "firstNightReminder": "",
+        "otherNightReminder": "如果采莲君使用他的能力，让采莲君设计一个有答案的是非问题并选择一名玩家向他提问：如果他的答案与之相符，他转变为邪恶阵营，否则他死亡。然后标记采莲君失去能力。",
+        "reminders": [
+            "回答问题",
+            "加入邪恶",
+            "死亡",
+            "失去能力"
+        ],
+        "setup": false
+    },
+    {
+        "id": "gebulinaaaaaaa111111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/goblin.png",
+        "edition": "custom",
+        "name": "哥布林",
+        "ability": "如果你在被提名后公开声明自己是哥布林且在那个白天被处决，你的阵营获胜。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "已宣称"
+        ],
+        "setup": false
+    },
+    {
+        "id": "jiandieeeeeee111",
+        "image": "https://clocktower-wiki.gstonegames.com/images/thumb/3/36/Spy.png/600px-Spy.png",
+        "edition": "custom",
+        "name": "间谍",
+        "ability": "每个夜晚，你能查看魔典。你可能会被当作善良阵营、镇民角色或外来者角色，即使你已死亡。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 58,
+        "otherNight": 97,
+        "firstNightReminder": "唤醒间谍，让他查看魔典。",
+        "otherNightReminder": "唤醒间谍，让他查看魔典。",
+        "reminders": [],
+        "setup": false
+    },
+  {
+    "id":  "20_meta",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/3/36/Spy.png/300px-Spy.png",
+    "name": "间谍&落难少女",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "如果间谍正在场或曾经在场，落难少女中毒。"
+  },
+  {
+    "id":  "2320_meta",
+    "image": "https://www.helloimg.com/i/2025/02/14/67ae22662976d.png",
+    "name": "间谍&鸯",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "鸯不会因为落难少女&间谍的相克规则中毒。"
+  },
+  {
+    "id":  "2042_meta",
+    "image": "https://www.helloimg.com/i/2025/02/14/67ae21c2e68bf.png",
+    "name": "间谍&三威之力",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "间谍必定会被三威之力当做外来者。"
+  },
+    {
+        "id": "touduzheeeeeeee111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/poisoner.png",
+        "edition": "custom",
+        "name": "投毒者",
+        "ability": "每个夜晚，你要选择一名玩家：他在当晚和明天白天中毒。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 18,
+        "otherNight": 9,
+        "firstNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+        "otherNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+        "reminders": [
+            "中毒"
+        ],
+        "setup": false
+    },
+    {
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果被你杀死的玩家均与你某个特征不同，他们转变为邪恶并不再能在这局游戏中投票。所有人都知道这个特征是什么。",
+        "image": "https://www.helloimg.com/i/2024/11/27/6747264482b39.png",
+        "edition": "custom",
+        "flavor": "",
+        "id": "lilisi",
+        "firstNightReminder": "宣布莉莉丝的特征，即使莉莉丝不在场。",
+        "otherNightReminder": "唤醒莉莉丝，让他选择一名玩家。如果选择了特征不同的玩家，他转别为邪恶。",
+        "name": "莉莉丝",
+        "otherNight": 13,
+        "firstNight": 2,
+        "setup": 0,
+        "reminders": [
+            "特征不同",
+            "死亡",
+            "不能投票"
+        ],
+        "remindersGlobal": [],
+        "team": "demon"
+    },
+  {
+    "id": "veni_vidi_vici",
+    "image": "https://www.helloimg.com/i/2025/02/14/67ae21c2e68bf.png",
+    "edition": "custom",
+    "firstNight": 0,
+    "firstNightReminder": "",
+    "otherNight": 14,
+    "otherNightReminder": "唤醒三威之力，让他指向一名玩家：他死亡。如果他指向自己，且没有存活的外来者，邪恶阵营获胜。",
+    "reminders": ["死亡"],
+    "remindersGlobal": [],
+    "setup": 1,
+    "name": "三威之力",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀且没有存活的外来者时，邪恶阵营获胜。[场上固定3名外来者]"
+  },
+    {
+        "id": "yuanyang11",
+        "image": "https://www.helloimg.com/i/2025/02/14/67ae22662a1bd.png",
+        "edition": "custom",
+        "name": "鸳",
+        "ability": "你以为你是巡山人，但其实你不是，你不会得知恶魔信息。如果你选择了鸯，邪恶阵营获胜。如果鸯死亡，善良阵营获胜。说书人可以使用所有爪牙的能力。[无爪牙在场，+鸯]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "remindersGlobal": [
+            "是鸳",
+            "限一次",
+            "爪牙能力"
+        ],
+        "firstNight": 5.2,
+        "otherNight": 74,
+        "firstNightReminder": "如果鸳在场，跳过鸳的恶魔信息环节。在当晚巡山人行动的顺序时唤醒鸳，以巡山人的操作让他执行。如果鸳选择了鸯，邪恶阵营获胜。",
+        "otherNightReminder": "在当晚巡山人行动的顺序时唤醒鸳，以巡山人的操作让他执行。如果鸳选择了鸯，邪恶阵营获胜。",
+        "reminders": [
+            "死亡",
+            "限一次"
+        ],
+        "setup": true
+    },
+    {
+        "id": "yuanyang22",
+        "image": "https://www.helloimg.com/i/2025/02/14/67ae22662976d.png",
+        "edition": "custom",
+        "name": "鸯",
+        "ability": "你以为你是落难少女，但其实你不是，爪牙代替你得知恶魔信息且你会被当作落难少女。每个夜晚*，可能有一名善良玩家死亡。每名玩家限一次，首个在白天公开声称自己是爪牙并猜测你是落难少女的善良玩家会在当晚转变为邪恶阵营。[-落难少女]",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": 5.3,
+        "otherNight": 15,
+        "remindersGlobal": [
+            "是鸯",
+            "死亡",
+            "限一次",
+            "变为邪恶"
+        ],
+        "firstNightReminder": "如果鸯在场，跳过鸯的恶魔信息环节，将鸯本应得知的信息告诉给爪牙。",
+        "otherNightReminder": "说书人来决定当晚是否有一名善良玩家死亡。如果白天有人声称自己是爪牙并且猜测对了鸯是落难少女的话，让那个人加入邪恶阵营。",
+        "setup": true
+    }
+]

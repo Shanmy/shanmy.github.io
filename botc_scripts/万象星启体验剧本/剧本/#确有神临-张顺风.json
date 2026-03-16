@@ -1,0 +1,547 @@
+[
+    {"id":"_meta",
+    "name":"确有神临",
+    "author":"张顺风",
+    "logo":"https://img.picui.cn/free/2025/03/14/67d30394820ca.png",
+    "a jinxedName": "相克",
+    "a jinxed": "相克",
+    "description":"确有神临",
+    "townsfolkName":"镇民",
+    "outsidersName":"外来者",
+    "minionsName":"爪牙",
+    "demonsName":"恶魔",
+    "townsfolk":"镇民",
+    "outsider":"外来者",
+    "minion":"爪牙",
+    "demon":"恶魔"
+},
+	{
+        "id": "huojin111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/savant.png",
+        "edition": "custom",
+        "name": "博学者",
+        "ability": "每个白天，你可以私下询问说书人以得知两条信息：一个是正确的，一个是错误的。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+	
+	{
+        "id": "diaoshangyizhengtiandeyu111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/fisherman.png",
+        "edition": "custom",
+        "name": "渔夫",
+        "ability": "每局游戏限一次，在白天时，你可以让说书人给你一些能帮助你的阵营获胜的建议。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "失去能力"
+        ],
+        "setup": false
+    },
+	
+	{
+        "id": "chuangsishuoshuren111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/atheist.png",
+        "edition": "custom",
+        "name": "无神论者",
+        "ability": "说书人可以打破游戏规则。如果说书人被处决，善良阵营获胜，即使你已死亡。[无邪恶角色在场]",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": true
+    },
+	
+	{
+        "id": "shiyizhezhezhezhe",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/amnesiac.png",
+        "edition": "custom",
+        "name": "失忆者",
+        "ability": "你不知道你的能力是什么。每个白天你可以找说书人猜测一次，你会得知你的猜测有多准确。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 1.5,
+        "otherNight": 1.5,
+        "firstNightReminder": "决定失忆者的能力，并根据具体能力决定是否需要唤醒失忆者、何时唤醒、唤醒后让他做出什么操作或得知什么信息。",
+        "otherNightReminder": "根据失忆者的具体能力决定是否需要唤醒失忆者、何时唤醒、唤醒后让他做出什么操作或得知什么信息。",
+        "reminders": [
+            "？"
+        ],
+        "setup": false
+    },
+	
+	{
+        "id": "xinjide11111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/alchemist.png",
+        "edition": "custom",
+        "name": "炼金术士",
+        "ability": "你拥有一个爪牙角色的能力。当你使用能力时，说书人可能会要求你更换选择。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 600,
+        "otherNight": 0,
+        "firstNightReminder": "唤醒炼金术士，对他展示他获得的能力所对应的爪牙角色标记。",
+        "remindersGlobal": [
+            "是炼金术士"
+        ],
+        "setup": true
+    },
+	
+	{
+        "id": "chonggggggggggfeiiiiiiiiiiiiiiiiiiiiiiiiiiiiiwww",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/chongfei.png",
+        "edition": "custom",
+        "name": "宠妃",
+        "ability": "每局游戏限一次，说书人会在关于你的事情上打破规则。随后，你会秘密得知说书人为此做了什么。",
+        "team": "townsfolk",
+        "sch_team": "镇民",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "失去能力"
+        ],
+        "remindersGlobal": [],
+        "setup": false
+    },
+	
+	{
+        "ability": "在你的首个夜晚，你得知哪些邪恶角色在场。",
+        "image": "https://www.helloimg.com/i/2025/03/06/67c9b78b8e599.png",
+        "edition": "custom",
+        "flavor": "",
+        "id": "Scholar",
+        "firstNightReminder": "给他展示在场的邪恶角色。",
+        "otherNightReminder": "",
+        "name": "学者",
+        "otherNight": 0,
+        "setup": 0,
+        "reminders": [],
+        "remindersGlobal": [],
+        "team": "townsfolk",
+        "firstNight": 7901
+     },
+	
+	{
+		"id": "f1431400-3621-4729-84b4-baaece0ac86e",
+		"image": "https://i.postimg.cc/NMqv5dCJ/image.png",
+		"edition": "custom",
+		"name": "芭蕾舞者",
+		"ability": "在你的首个夜晚，你会得知在你的顺时针方向的镇民与你的距离是奇数居多还是偶数居多。如果两者相同，你得知的信息由说书人决定。",
+		"team": "townsfolk",
+		"sch_team": "镇民",
+		"firstNight": 3080,
+		"otherNight": 0,
+		"firstNightReminder": "以任意顺序指向三名玩家，其中一名邪恶。",
+		"otherNightReminder": "",
+		"reminders": [
+			
+		],
+		"remindersGlobal": [],
+		"setup": 0
+	},
+	
+	{
+		"ability": "每个夜晚，你会得知一个在场角色。",
+		"image": "https://www.bloodstar.xyz/p/Airell_clocktower/Assets_of_Lei_Gallery/newcharacter22_assets_of_lei_gallery.png",
+		"edition": "custom",
+		"flavor": "",
+		"id": "Stableboy",
+		"firstNightReminder": "唤醒马厩男孩展示一个在场角色。",
+		"otherNightReminder": "唤醒马厩男孩展示一个在场角色。",
+		"name": "马厩男孩",
+		"otherNight": 12101,
+		"setup": 0,
+		"reminders": [
+			
+		],
+		"remindersGlobal": [],
+		"team": "townsfolk",
+		"firstNight": 9202
+	},
+	
+	{
+        "ability": "如果与你邻座的玩家均已死亡，会有好事发生。",
+        "image": "https://www.helloimg.com/i/2025/03/06/67c9988c0f46b.png",
+        "edition": "custom",
+        "flavor": "",
+        "id": "qingdoafu",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "name": "清道夫",
+        "otherNight": 0,
+        "setup": 0,
+        "reminders": [],
+        "remindersGlobal": [],
+        "team": "townsfolk",
+        "firstNight": 0
+    },
+	
+	{
+        "ability": "在你的首个白天，你可以拜访说书人获得一个剧本外角色的能力，即使你醉酒或中毒。",
+        "image": "https://i.postimg.cc/4dpBXC7j/image.png",
+        "edition": "custom",
+        "flavor": "",
+        "id": "jixiugong",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "name": "机修工",
+        "otherNight": 0,
+        "firstNight": 0,
+        "setup": 0,
+        "reminders": ["获得能力"],
+        "remindersGlobal": [],
+        "team": "townsfolk"
+    },
+	
+	{
+		"image": "https://i.postimg.cc/cCHMHsCW/image-2.png",
+		"name": "药剂师",
+		"team": "townsfolk",
+		"ability": "每局游戏限一次，如果说书人同意，你可以公开改变一条游戏规则。",
+		"id": "apothecary",
+		"edition": "custom",
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"setup": false,
+		"reminders": ["失去能力"],
+		"remindersGlobal": [],
+		"firstNight": 0,
+		"otherNight": 0
+	},
+	
+	{
+		"image": "https://i.postimg.cc/Wz2pmCV5/image.png",
+		"name": "马车夫",
+		"team": "townsfolk",
+		"ability": "每个白天，你可以拜访说书人并选择一个话题，说书人会告诉你一个与他有关的事实。如果你的相邻存活玩家阵营不同，你得知错误信息。 ",
+		"id": "coachman",
+		"edition": "custom",
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"setup": false,
+		"reminders": ["错误信息"],
+		"remindersGlobal": [],
+		"firstNight": 0,
+		"otherNight": 0
+	},
+	
+	{
+		"ability": "每个白天，你要拜访说书人得知一条错误信息。每局游戏限一次，你得知正确信息。",
+		"image": "https://www.bloodstar.xyz/p/Airell_clocktower/Assets_of_Lei_Gallery/astrologer_assets_of_lei_gallery.png",
+		"edition": "custom",
+		"flavor": "",
+		"id": "Astrologer",
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"name": "占星师",
+		"otherNight": 0,
+		"setup": 0,
+		"reminders": ["月明星稀"],
+		"remindersGlobal": [],
+		"team": "townsfolk",
+		"firstNight": 0
+	},
+	
+	{
+        "id": "woheduolema111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/drunk.png",
+        "edition": "custom",
+        "name": "酒鬼",
+        "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "remindersGlobal": [
+            "是酒鬼"
+        ],
+        "setup": true
+    },
+	
+	{
+        "id": "zabusini111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/golem.png",
+        "edition": "custom",
+        "name": "魔像",
+        "ability": "每局游戏你只能发起提名一次。当你发起提名时，如果被你提名的玩家不是恶魔，他死亡。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [
+            "无法提名"
+        ],
+        "setup": false
+    },
+	
+	{
+        "id": "prisoner",
+        "image": "https://i.postimg.cc/fbDF4cbp/image-1.png",
+        "edition": "custom",
+        "name": "囚犯",
+        "ability": "你知道一个不在场角色。如果超过半数玩家同意释放你，你会在当晚变成这个角色和对应的阵营。在你被释放前你不能投票。",
+        "team": "outsider",
+        "sch_team": "外来者",
+        "firstNight": 9203,
+        "otherNight": 9,
+        "firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+        "remindersGlobal": [],
+        "setup": false
+    },
+	
+	{
+        "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202412/c_8587034974371_8cf03e42.jpg",
+        "name": "牧驴者",
+        "team": "outsider",
+        "ability": "如果你被提名的当天恶魔未被处决，你的阵营落败[你的角色标记是方形的]",
+        "id": "DonkeyWrangler",
+        "edition": "custom",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "setup": true,
+        "reminders": [],
+        "remindersGlobal": [],
+        "firstNight": 0,
+        "otherNight": 0
+    },
+	
+	{
+        "id": "hongchunnvlangaaaaaaaa111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/scarlet_woman.png",
+        "edition": "custom",
+        "name": "红唇女郎",
+        "ability": "如果大于等于五名玩家存活时（旅行者不计算在内）恶魔死亡，你变成那个恶魔。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 0,
+        "otherNight": 26,
+        "otherNightReminder": "如果红唇女郎的能力曾被触发，唤醒她并告知她变成了哪个恶魔角色。",
+        "reminders": [
+            "是恶魔"
+        ]
+    },
+	
+	{
+        "id": "zhijiagedaziji111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/godfather.png",
+        "edition": "custom",
+        "name": "教父",
+        "ability": "在你的首个夜晚，你会得知有哪些外来者角色在场。如果有外来者在白天死亡，你会在当晚被唤醒并且你要选择一名玩家：他死亡。[-1或+1外来者]",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 21,
+        "otherNight": 53,
+        "firstNightReminder": "唤醒教父，对他展示外来者角色标记，告诉他有哪些外来者在场。",
+        "otherNightReminder": "如果今天白天有外来者死亡，唤醒教父，让他攻击一名玩家。",
+        "reminders": [
+            "死于今日",
+            "死亡"
+        ],
+        "setup": true
+    },
+	
+	{
+        "id": "dafutoufeiguolaila111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/psychopath.png",
+        "edition": "custom",
+        "name": "精神病患者",
+        "ability": "每个白天，在提名开始前，你可以公开选择一名玩家：他死亡。如果你被处决，提名你的玩家需要和你猜拳，只有你输了你才会死亡。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": false
+    },
+	
+	{
+        "id": "weishenmebushilianjinshushi111",
+        "image": "https://clocktower-wiki.gstonegames.com/images/f/f1/Boffin.png",
+        "edition": "custom",
+        "name": "科学怪人",
+        "ability": "恶魔拥有一个不在场的善良角色的能力，即使他醉酒或中毒。你和他都知道他获得了什么能力。",
+        "team": "minion",
+        "sch_team": "爪牙",
+        "firstNight": 1.45,
+        "otherNight": 0,
+        "firstNightReminder": "（分别或同时）唤醒科学怪人和恶魔，通知他们恶魔因为科学怪人而获得的善良角色的能力。",
+        "otherNightReminder": "",
+        "reminders": [],
+        "setup": true
+    },
+	
+	{
+        "ability": "每局游戏限一次，在白天时，你可以拜访说书人进行许愿：如果愿望兑现，会付出相应代价且留下线索。",
+        "image": "https://clocktower-wiki.gstonegames.com/images/thumb/c/c7/Wizard.png/200px-Wizard.png",
+        "edition": "custom",
+        "flavor": "",
+        "id": "Wizard",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "name": "巫师",
+        "otherNight": 0,
+        "setup": 0,
+        "reminders": [
+            "已许愿",
+            "兑现"
+        ],
+        "remindersGlobal": [],
+        "team": "minion",
+        "firstNight": 0
+    },
+	
+    {
+        "id": "hundundundundun111",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/hundun.png",
+        "edition": "custom",
+        "name": "混沌",
+        "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式杀死了一名与你邻近的镇民玩家，除旅行者外的所有善良玩家会中毒直到下个黄昏。",
+        "team": "demon",
+        "sch_team": "恶魔",
+        "firstNight": 0,
+        "otherNight": 47,
+        "firstNightReminder": "0",
+        "otherNightReminder": "唤醒混沌，让他攻击一名玩家。如果他杀死了自己邻近的镇民，所有善良玩家中毒。",
+        "reminders": [
+            "死亡",
+            "善良中毒"
+        ],
+        "setup": false
+    },
+ 
+
+
+
+
+{
+    "id": "3_meta",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202304/c_1310810162861_4da173fa.jpg",
+    "name": "",
+    "team": "a jinxed",
+    "setup": 0,
+	"remindersGlobal":["被得知"],
+    "ability": "如果盲抽袋里有邪恶角色，说书人在游戏内只能因为无神论者的能力而打破一次规则，且会有一名玩家得知一些与此相关的线索。此规则不可被打破。"
+  },
+
+{
+    "id": "4_meta",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202304/c_1310810162861_4da173fa.jpg",
+    "name": "",
+    "team": "a jinxed",
+    "setup": 0, 
+    "ability": "如果盲抽袋里有邪恶角色，并且场上存在无神论者的能力时说书人被处决，改为持有无神论者能力的玩家的阵营落败。此规则不可被打破。"
+  },
+
+{
+    "id": "5_meta",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202304/c_1310810162861_4da173fa.jpg",
+    "name": "",
+    "team": "a jinxed",
+    "setup": 0, 
+    "ability": "失忆者及宠妃都不能拥有无神论者的能力。"
+  },
+
+ {
+    "id": "1122000000222222222222222333_meta",
+    "image": "https://clocktower-wiki.gstonegames.com/images/f/f1/Boffin.png",
+    "name": "科学怪人&酒鬼",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "如果恶魔拥有酒鬼的能力，改为由科学怪人选择一名玩家：如果他是镇民，他醉酒。"
+  },
+  {
+    "id": "112222222222435325645742222222222222333_meta",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/alchemist.png",
+    "name": "炼金术士&科学怪人",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "如果炼金术士拥有科学怪人的能力，炼金术士不会得知恶魔因此获得了哪个角色的能力。"
+  },
+  {
+    "id": "1122000000222222222222233_meta",
+    "image": "https://clocktower-wiki.gstonegames.com/images/f/f1/Boffin.png",
+    "name": "科学怪人&囚犯",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "如果恶魔被释放，改为恶魔在当晚获得那个角色的能力并且不会转变阵营。"
+  },
+  
+   {
+    "id": "112200000022222222222222233_meta",
+    "image": "https://clocktower-wiki.gstonegames.com/images/f/f1/Boffin.png",
+    "name": "科学怪人&牧驴者",
+    "team": "a jinxed",
+    "setup": 0,
+    "ability": "如果在游戏开始前，说书人决定让恶魔获得牧驴者的能力，那么在盲抽袋中移除恶魔的角色标记，加入牧驴者的角色标记，抽到牧驴者的玩家是恶魔。"
+  },
+
+{
+    "firstNightReminder": "",
+    "otherNightReminder": "",
+    "name": "地狱藏书员",
+    "setup": false,
+    "ismeet": true,
+    "reminders": [
+      "不好的事"
+    ],
+    "team": "fabled",
+    "name_eng": "Hells Librarian",
+    "id": "hells_librarian_meet",
+    "ability": "当说书人宣布安静时，仍在说话的玩家可能会遭遇一些不好的事情。",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/web/icons/hells_librarian.png"
+  },
+
+   {
+        "ability": "本剧本存在相克规则",
+        "image": "https://oss.gstonegames.com/data_file/clocktower/role_icon/djinn.png",
+        "edition": "custom",
+        "flavor": "",
+        "id": "djinn_GStone",
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "name": "灯神",
+        "official_id": "djinn",
+        "otherNight": 0,
+        "firstNight": 0,
+        "setup": 0,
+        "reminders": [],
+        "remindersGlobal": [],
+        "team": "fabled"
+    },
+	
+ {
+    "id": "btl",
+    "image": "https://oss.gstonegames.com/data_file/clocktower/upload/202304/c_1310810162861_4da173fa.jpg",
+    "name": "私货商人",
+    "ability": "本剧本存在自制规则",
+    "team": "fabled",
+    "firstNight": 0,
+    "otherNight": 0,
+    "isOfficial": false
+  }
+
+]

@@ -1,0 +1,287 @@
+[
+  {
+    "id": "_meta",
+    "name": "哈寂蜜",
+    "author": "蓝铃兰",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b6/rwg04ywkuqh5zm0vwt0dkrmqfvth1lu.png",
+    "almanac": "有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b1/f5bpgic2ja7fbuvxh1vigjkxdsu78j7.png",
+    "otherNightReminder": "如果白天的声明为真，会有一名玩家死亡，并由说书人来选择一名玩家，标记该玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。如果该声明正确，在当晚会有一名玩家死亡。",
+    "otherNight": 9
+  },
+  {
+    "id": "1_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4b/5mg50ay9mxf5gvtsuroj8sf39mgk5jg.png",
+    "otherNightReminder": "让半兽人选择一名玩家。如果该玩家是善良玩家，该玩家死亡，且当晚恶魔不会造成死亡。",
+    "reminders": [
+      "失足",
+      "死亡"
+    ],
+    "name": "半兽人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名存活玩家：如果他是善良的，他死亡，并且当晚恶魔不会造成死亡。会有一名善良玩家始终被当作邪恶阵营。 ",
+    "otherNight": 7
+  },
+  {
+    "id": "2_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9c/5u4qpg1fv4x7nfx0b632914v9hoq6vf.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "艺术家",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，在白天时，你可以私下询问说书人一个是非问题，你会得知该问题的答案。"
+  },
+  {
+    "id": "3_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/72/gyk4euf2w6acfyevvmeke03zvv8r1ln.png",
+    "firstNightReminder": "唤醒任意一名村夫。让村夫指向一名玩家，对他给出拇指向上或向下的手势代表那名玩家的阵营。重复这个操作，直到所有村夫玩家都进行了夜晚行动。",
+    "otherNightReminder": "唤醒任意一名村夫。让村夫指向一名玩家，对他给出拇指向上或向下的手势代表那名玩家的阵营。重复这个操作，直到所有村夫玩家都进行了夜晚行动。",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": true,
+    "name": "村夫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的阵营。[+0~2村夫，复数村夫中有一人醉酒]",
+    "firstNight": 3400,
+    "otherNight": 11
+  },
+  {
+    "id": "4_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/0d9uthaidhlal5rz0zjx2tvzzrviqdo.png",
+    "firstNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
+    "otherNightReminder": "让侍女选择除自己外的两名存活玩家。给她展示数字手势来告诉她这些玩家中有几人因自身能力被唤醒。",
+    "name": "侍女",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你以外的两名存活的玩家：你会得知他们中有几人在当晚因其自身能力而被唤醒。",
+    "firstNight": 3600,
+    "otherNight": 13
+  },
+  {
+    "id": "5_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e8/qjwy9igjkubwnqrk2p4sd2fs4vj59mo.png",
+    "firstNightReminder": "让筑梦师指向一名玩家。对他展示善良和邪恶的角色标记各一个，其中一个是属于该玩家的角色。",
+    "otherNightReminder": "让筑梦师指向一名玩家。对他展示善良和邪恶的角色标记各一个，其中一个是属于该玩家的角色。",
+    "name": "筑梦师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 3300,
+    "otherNight": 10
+  },
+  {
+    "id": "6_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/48/0gv4l35ovskh83z84qce8mikbmnpkfw.png",
+    "firstNightReminder": "告诉将军你认为的答案。",
+    "otherNightReminder": "告诉将军你认为的答案。",
+    "name": "将军",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知说书人认为哪个阵营当前更有优势（善良/邪恶/均势）。",
+    "firstNight": 3500,
+    "otherNight": 12
+  },
+  {
+    "id": "7_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a4/t8h7diw8bpav612k1e3t62b10hlbizz.png",
+    "reminders": [
+      "不会死亡",
+      "不会死亡"
+    ],
+    "name": "茶艺师",
+    "team": "townsfolk",
+    "ability": "如果与你邻近的两名存活的玩家是善良的，他们不会死亡。"
+  },
+  {
+    "id": "8_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/ac/k0janaxds3dvtnf5hdskzarlbyp79oe.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "弄臣",
+    "team": "townsfolk",
+    "ability": "当你首次将要死亡时，你不会死亡。"
+  },
+  {
+    "id": "9_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6e/f49ozgdcvrsmvd6x7cuz7xui4yafy8n.png",
+    "firstNightReminder": "不要让恶魔和爪牙相认。",
+    "otherNightReminder": "如果罂粟种植者死亡，安排恶魔和爪牙相认环节。",
+    "reminders": [
+      "唤醒邪恶"
+    ],
+    "name": "罂粟种植者",
+    "team": "townsfolk",
+    "ability": "爪牙和恶魔互相不认识。如果你死亡，当晚他们会互相认识。",
+    "firstNight": 3,
+    "otherNight": 2
+  },
+  {
+    "id": "10_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/6f/oi460mqpnxwd7zgyboe78patdo8amc5.png",
+    "firstNightReminder": "传教士选择一名玩家。如果选中了爪牙，则唤醒并告知他被传教士选中。",
+    "otherNightReminder": "传教士选择一名玩家。如果选中了爪牙，则唤醒并告知他被传教士选中。",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "传教士",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：如果你选中了爪牙，他会得知被传教士选中。所有被你选中的爪牙失去能力。",
+    "firstNight": 3100,
+    "otherNight": 3
+  },
+  {
+    "id": "11_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/00/aw2v4g3sluzne7vz7flvlbkqon1cgmk.png",
+    "firstNightReminder": "唤醒炼金术士，对他展示他获得的能力所对应的爪牙角色标记。 ",
+    "remindersGlobal": [
+      "是炼金术士"
+    ],
+    "name": "炼金术士",
+    "team": "townsfolk",
+    "ability": "你拥有一个爪牙角色的能力。当你使用能力时，说书人可能会要求你更换选择。",
+    "firstNight": 2
+  },
+  {
+    "id": "12_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/79/8rd5mfvpkzq4i73sctbzjyrvthr082g.png",
+    "name": "镇长",
+    "team": "townsfolk",
+    "ability": "如果只有三名玩家存活且白天没有人被处决，你的阵营获胜。如果你在夜晚即将死亡，可能会有一名其他玩家代替你死亡。"
+  },
+  {
+    "id": "13_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/1cqow962ds6jp9x5rz84qwgpstkyurs.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "14_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/02/o4e97rz6r25ufvvzh8x27pqd81qq4q7.png",
+    "firstNightReminder": "如果有七名或更多玩家，唤醒疯子：展示“他们是你的爪牙”信息标记。指向任意对应数量的玩家。展示“这些角色不在场”信息标记。展示三个善良角色。让疯子重新入睡。唤醒恶魔。展示“你是”信息标记和恶魔角色标记。展示“这名玩家是”信息标记和疯子角色标记，然后指向疯子玩家。",
+    "otherNightReminder": "做任何需要做的事情来模拟一位恶魔的行动。让疯子重新入睡。唤醒恶魔。对恶魔展示疯子角色标记，并指向疯子玩家，随后是疯子的攻击目标。",
+    "reminders": [
+      "被选择"
+    ],
+    "remindersGlobal": [
+      "被选择",
+      "是疯子"
+    ],
+    "name": "疯子",
+    "team": "outsider",
+    "ability": "你以为你是一个恶魔，但其实你不是。恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。",
+    "firstNight": 2100,
+    "otherNight": 6
+  },
+  {
+    "id": "15_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/1a/m6s8wbkeie9d2pyx1qb5agosonjypaq.png",
+    "name": "政客",
+    "team": "outsider",
+    "ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。"
+  },
+  {
+    "id": "16_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/ac/mrlvexpiy2a8gedva2hapgce6zk57if.png",
+    "name": "圣徒",
+    "team": "outsider",
+    "ability": "如果你死于处决，你的阵营落败。"
+  },
+  {
+    "id": "17_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fb/6gxq9bqb4qpk2okxqku8eyl364elcdp.png",
+    "reminders": [
+      "活尸",
+      "活尸"
+    ],
+    "setup": true,
+    "name": "赶尸人",
+    "team": "minion",
+    "ability": "与你邻近的两名镇民玩家会在其首次死亡时被当作仍然存活。[-1外来者]"
+  },
+  {
+    "id": "18_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d2/2kbfec13srq1pgz8ap8knkyqf9d4u6a.png",
+    "otherNightReminder": "让麻脸巫婆选择一名玩家和一个角色。如果她选择的角色不在场：让麻脸巫婆重新入睡。唤醒她的目标玩家。对该玩家展示“你是”信息标记和他的新角色标记。",
+    "name": "麻脸巫婆",
+    "team": "minion",
+    "ability": "每个夜晚*，你要选择一名玩家和一个角色，如果该角色不在场，他变成该角色。如果因此创造了一个恶魔，当晚的死亡由说书人决定。",
+    "otherNight": 4
+  },
+  {
+    "id": "19_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4c/cbp9yi8vzy26hp8lyzpw8tgyb4981cx.png",
+    "firstNightReminder": "（分别或同时）唤醒科学怪人和恶魔，通知他们恶魔因为科学怪人而获得的善良角色的能力。 ",
+    "name": "科学怪人",
+    "team": "minion",
+    "ability": "恶魔拥有一个不在场的善良角色的能力，即使他醉酒或中毒。你和他都知道他获得了什么能力。",
+    "firstNight": 1
+  },
+  {
+    "id": "20_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2f/fbxp1pzgxjfs4vsrb0l30otb078m84e.png",
+    "firstNightReminder": "让魔鬼代言人选择一名存活玩家。标记那名玩家处决不死。",
+    "otherNightReminder": "让魔鬼代言人选择一名存活玩家，不能是上一夜他选择过的玩家。标记那名玩家处决不死。",
+    "reminders": [
+      "处决不死"
+    ],
+    "name": "魔鬼代言人",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名存活的玩家（与上个夜晚不同）：如果明天白天他被处决，他不会死亡。",
+    "firstNight": 3200,
+    "otherNight": 5
+  },
+  {
+    "id": "21_hajimi",
+    "image":"https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/5d/m3w3qvs4dvwru0g8klp2qo0oqisysxc.png",
+    "otherNightReminder": "哈迪寂亚选择三名玩家。对所有人宣告第一位玩家，然后唤醒他并让他秘密选择活着还是死去。依次对第二第三位玩家如此做。如果三名玩家都选择活着，他们都死去。",
+    "reminders": [
+      "1",
+      "2",
+      "3",
+      "选择生",
+      "选择死"
+    ],
+    "name": "哈迪寂亚",
+    "team": "demon",
+    "ability": "每个夜晚*，你可以选择三名玩家（所有玩家都会得知你选了谁）：他们分别秘密决定自己的生死，然后如果他们都存活则都死亡。",
+    "otherNight": 8
+  },
+  {
+    "id": "22_hajimi",
+    "name": "科学怪人&酒鬼/政客",
+    "team": "a jinxed",
+    "ability": "恶魔无法拥有酒鬼/政客的能力。"
+  },
+  {
+    "id": "23_hajimi",
+    "name": "科学怪人&村夫",
+    "team": "a jinxed",
+    "ability": "如果村夫在场数量不足3人，科学怪人可以让恶魔拥有村夫的能力。"
+  },
+  {
+    "id": "24_hajimi",
+    "name": "麻脸巫婆&政客",
+    "team": "a jinxed",
+    "ability": "被麻脸巫婆创造的邪恶政客无法因为自身能力转变为善良阵营。"
+  },
+  {
+    "id": "25_hajimi",
+    "name": "麻脸巫婆&村夫",
+    "team": "a jinxed",
+    "ability": "如果村夫在场数量不足3人，麻脸巫婆可以创造新的村夫。如果她这么做，村妇的醉酒效果可能会更换目标。"
+  }
+]

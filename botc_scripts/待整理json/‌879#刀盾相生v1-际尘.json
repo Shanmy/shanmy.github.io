@@ -1,0 +1,157 @@
+[{
+		"id": "_meta",
+		"name": "‌刀盾相生",
+		"author": "际尘",
+		"logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d6/4o21b0cng25i7c0m820z8tpoj4z53eo.png",
+		"townsfolkName": "镇民",
+		"outsidersName": "外来者",
+		"minionsName": "爪牙",
+		"demonsName": "恶魔",
+		"townsfolk": "镇民",
+		"outsider": "外来者",
+		"minion": "爪牙",
+		"demon": "恶魔",
+		"a jinxedName": "相克",
+		"a jinxed": "相克",
+		"status": []
+	}, {
+		"id": "daokeeeeeeekekekekekekeke",
+		"image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f5/k5r1bemzq95zuitd1y5m9ooav7rirwm.png",
+		"edition": "custom",
+		"name": "刀客",
+		"ability": "在你的首个夜晚，你会得知一个在场的爪牙角色。每局游戏限一次，你可以在白天公开选择一名玩家：如果他是你得知的角色，他死亡。",
+		"team": "townsfolk",
+		"firstNight": 53.5,
+		"otherNight": 0,
+		"firstNightReminder": "在首个夜晚，唤醒刀客，对他展示标记了“得知”的爪牙角色标记。",
+		"otherNightReminder": "",
+		"reminders": [
+			"得知",
+			"失去能力"
+		],
+		"remindersGlobal": [],
+		"setup": false
+	}, {
+		"id": "yongjiangsaohdawjroij4u901qhwrfi13048",
+		"image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0f/k5pqnoj1evidrbbrysrn2rnyk7ge04q.png",
+		"edition": "custom",
+		"name": "老兵",
+		"ability": "如果已死亡玩家中没有邪恶玩家，你不会死亡。",
+		"team": "townsfolk",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [
+			"不会死亡"
+		],
+		"remindersGlobal": [],
+		"setup": false
+	}, {
+		"id": "woheduolema111",
+		"image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f2/1cqow962ds6jp9x5rz84qwgpstkyurs.png",
+		"edition": "custom",
+		"name": "酒鬼",
+		"ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。",
+		"team": "outsider",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [],
+		"remindersGlobal": [
+			"是酒鬼"
+		],
+		"setup": true
+	}, {
+		"id": "zabusini111",
+		"image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/89/ge09m69i6ymwudxtr1plmt68pek8sgh.png",
+		"edition": "custom",
+		"name": "魔像",
+		"ability": "每局游戏你只能发起提名一次。当你发起提名时，如果被你提名的玩家不是恶魔，他死亡。",
+		"team": "outsider",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": [
+			"无法提名"
+		],
+		"setup": false
+	}, {
+		"ability": "与你邻近的玩家（旅行者除外）会被善良玩家的能力当作错误的阵营和角色。",
+		"image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/2/2b/kkjskbri64h66xa50tz9nu76l8ke516.png/240px-%E7%88%AA%E7%89%99_%E8%87%B4%E5%B9%BB%E5%B8%88_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+		"edition": "custom",
+		"flavor": "",
+		"id": "Amaniti",
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"name": "致幻师",
+		"otherNight": 0,
+		"setup": 0,
+		"reminders": [
+			"致幻"
+		],
+		"remindersGlobal": [],
+		"team": "minion",
+		"firstNight": 0
+	},
+	{
+		"id": "huasapidpaiwopippippipp123i123p12ip3p1i23p1",
+		"image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2c/dmvdbv8nahd75uppfk430y642h75hcu.png",
+		"edition": "custom",
+		"name": "画皮",
+		"ability": "在你的首个夜晚，你要选择一名存活玩家：他死亡但会被当作存活。当他下一次死亡时，他重生，随后你重获能力。",
+		"team": "minion",
+		"firstNight": 29.5,
+		"otherNight": 54.5,
+		"firstNightReminder": "唤醒画皮，让画皮选择一名存活玩家，那名存活玩家变成活尸。",
+		"otherNightReminder": "如果首夜被画皮变成活尸的玩家死亡，他重生，然后画皮重获能力。唤醒画皮，让画皮选择一名存活玩家，那名存活玩家变成活尸。",
+		"reminders": [
+			"以为存活",
+			"重获能力"
+		],
+		"setup": false
+	}, {
+		"id": "taowuuuuuuuuuuuu11111111",
+		"image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e7/mittdbt0hah21yo07wia0acr050lie4.png",
+		"edition": "custom",
+		"name": "梼杌",
+		"ability": "每个夜晚*，你要选择一名玩家：他死亡。当你将要死亡时，改为一名存活且具有能力的爪牙失去能力。你不会得知恶魔信息。",
+		"team": "demon",
+		"firstNight": 5.5,
+		"otherNight": 50,
+		"firstNightReminder": "如果梼杌在场，跳过他的恶魔信息环节。",
+		"otherNightReminder": "唤醒梼杌，让他攻击一名玩家。",
+		"reminders": [
+			"死亡",
+			"失去能力"
+		],
+		"setup": false
+	}, {
+		"id": "qxxl",
+		"name": "教皇",
+		"team": "fabled",
+		"ability": "可以有多个重复角色在场。邪恶玩家互相知道彼此的角色。",
+		"image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/bc/irnsk5kjolajz8gldu0kbdgmf95z9zp.png",
+		"firstNight": 0.0,
+		"otherNight": 0,
+		"reminders": [],
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"remindersGlobal": []
+	}, {
+		"id": "1124",
+		"image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png",
+		"edition": "custom",
+		"name": "其利断金",
+		"ability": "提名前有等同玩家人数一半的分钟数（向下取整）发言和使用刀客能力。在第二个黎明时，游戏回到为首个夜晚做准备前，已死亡的玩家会在对应的时刻死亡。",
+		"team": "fabled",
+		"firstNight": 0,
+		"otherNight": 0,
+		"firstNightReminder": "",
+		"otherNightReminder": "",
+		"reminders": ["提名","黄昏","夜晚"],
+		"setup": false
+	}
+]

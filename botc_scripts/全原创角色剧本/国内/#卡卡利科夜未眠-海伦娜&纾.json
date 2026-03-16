@@ -1,0 +1,373 @@
+[
+  {
+    "id": "_meta",
+    "name": "卡卡利科夜未眠",
+    "author": "海伦娜 & 纾",
+    "logo": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/_meta.png",
+    "almanac": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/almanac.html"
+  },
+  {
+    "id": "_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/_kakalikeyeweimian.png",
+    "name": "三选一",
+    "team": "fabled",
+    "ability": "游戏开始时，说书人通过抽签的方式决定本局游戏的传奇角色为三者之一。"
+  },
+  {
+    "id": "1_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/1_kakalikeyeweimian.png",
+    "name": "百密一纾",
+    "team": "fabled",
+    "ability": "每个白天，首个拜访说书人的玩家会获得一条有利于自己阵营获胜的建议。"
+  },
+  {
+    "id": "2_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/2_kakalikeyeweimian.png",
+    "reminders": [
+      "获胜"
+    ],
+    "name": "哥德巴赫",
+    "team": "fabled",
+    "ability": "首个在白天公开猜中全部邪恶玩家的善良玩家获胜，即使他的阵营落败。"
+  },
+  {
+    "id": "3_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/3_kakalikeyeweimian.png",
+    "reminders": [
+      "限一次"
+    ],
+    "name": "慧眼识珠",
+    "team": "fabled",
+    "ability": "每局游戏限一次，在某个夜晚，所有玩家选择的目标可能会作用于预料之外的玩家。"
+  },
+  {
+    "id": "4_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/4_kakalikeyeweimian.png",
+    "firstNightReminder": "在你的首个夜晚，你要选择一个方向（左/右），该方向上离你最近的爪牙会得知自己是“熊猫”，你得知“熊猫”的角色。“熊猫”存活时，首个作用于你的能力会作用于“熊猫”。",
+    "remindersGlobal": [
+      "熊猫"
+    ],
+    "name": "熊猫饲养员",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你要选择一个方向（左/右），该方向上离你最近的爪牙会得知自己是“熊猫”，你得知“熊猫”的角色。“熊猫”存活时，首个作用于你的能力会作用于“熊猫”。",
+    "firstNight": 12
+  },
+  {
+    "id": "5_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/5_kakalikeyeweimian.png",
+    "otherNightReminder": "之后的三个夜晚，你会依次得知：他们是否均属于同一阵营；他们中的角色类型数量；他们中与恶魔的最近距离。",
+    "reminders": [
+      "选择",
+      "选择",
+      "选择"
+    ],
+    "name": "战略专家",
+    "team": "townsfolk",
+    "ability": "在你的首个白天，你要公开选择三名玩家。之后的三个夜晚，你会依次得知：他们是否均属于同一阵营；他们中的角色类型数量；他们中与恶魔的最近距离。",
+    "otherNight": 17
+  },
+  {
+    "id": "6_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/6_kakalikeyeweimian.png",
+    "firstNightReminder": "每个夜晚，你要选择除自己外的两名存活玩家：你会得知他们的角色名字数相加之和。外来者会被你的能力视为数字4。[ +1外来者]",
+    "otherNightReminder": "每个夜晚，你要选择除自己外的两名存活玩家：你会得知他们的角色名字数相加之和。外来者会被你的能力视为数字4。[ +1外来者]",
+    "reminders": [
+      "4",
+      "选择"
+    ],
+    "setup": true,
+    "name": "树先生",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除自己外的两名存活玩家：你会得知他们的角色名字数相加之和。外来者会被你的能力视为数字4。[ +1外来者]",
+    "firstNight": 5700,
+    "otherNight": 16
+  },
+  {
+    "id": "7_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/7_kakalikeyeweimian.png",
+    "firstNightReminder": "每个夜晚，你要选择一名存活玩家，你会得知他今晚选择了哪些目标。恶魔得知私家侦探在场。每局游戏限一次，如果恶魔在白天拜访说书人并猜中你是私家侦探，你死亡。",
+    "otherNightReminder": "每个夜晚，你要选择一名存活玩家，你会得知他今晚选择了哪些目标。恶魔得知私家侦探在场。每局游戏限一次，如果恶魔在白天拜访说书人并猜中你是私家侦探，你死亡。",
+    "reminders": [
+      "限一次",
+      "死亡",
+      "选择"
+    ],
+    "name": "私家侦探",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名存活玩家，你会得知他今晚选择了哪些目标。恶魔得知私家侦探在场。每局游戏限一次，如果恶魔在白天拜访说书人并猜中你是私家侦探，你死亡。",
+    "firstNight": 5800,
+    "otherNight": 19
+  },
+  {
+    "id": "8_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/8_kakalikeyeweimian.png",
+    "otherNightReminder": "每个夜晚*，你要猜测恶魔首次选择的玩家。如果猜对，恶魔醉酒直到下个黄昏。否则，会额外有一名玩家死亡。",
+    "reminders": [
+      "醉酒",
+      "死亡",
+      "选择"
+    ],
+    "name": "桑尼",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要猜测恶魔首次选择的玩家。如果猜对，恶魔醉酒直到下个黄昏。否则，会额外有一名玩家死亡。",
+    "otherNight": 3
+  },
+  {
+    "id": "9_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/9_kakalikeyeweimian.png",
+    "otherNightReminder": "你持有“火药”。每个夜晚*，你要选择除自己外的一名存活玩家（需与之前均不同）并放置“火药”。每局游戏限一次，在夜晚时*，你可以选择引燃“火药”，先前被你放置“火药”的非镇民玩家均会在当晚死亡。[+1外来者]",
+    "reminders": [
+      "火药",
+      "限一次",
+      "死亡"
+    ],
+    "setup": true,
+    "name": "军火商",
+    "team": "townsfolk",
+    "ability": "你持有“火药”。每个夜晚*，你要选择除自己外的一名存活玩家（需与之前均不同）并放置“火药”。每局游戏限一次，在夜晚时*，你可以选择引燃“火药”，先前被你放置“火药”的非镇民玩家均会在当晚死亡。[+1外来者]",
+    "otherNight": 11
+  },
+  {
+    "id": "10_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/10_kakalikeyeweimian.png",
+    "firstNightReminder": "每局游戏限一次 ，在夜晚 ，你要选择一个角色 ，如果该角色在场 ，在下次使用自身能力前，他立刻变成一个不在场的同类型角色。",
+    "otherNightReminder": "每局游戏限一次 ，在夜晚 ，你要选择一个角色 ，如果该角色在场 ，在下次使用自身能力前，他立刻变成一个不在场的同类型角色。",
+    "reminders": [
+      "被选择",
+      "失去能力"
+    ],
+    "name": "莫奈",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次 ，在夜晚 ，你要选择一个角色 ，如果该角色在场 ，在下次使用自身能力前，他立刻变成一个不在场的同类型角色。",
+    "firstNight": 11,
+    "otherNight": 2
+  },
+  {
+    "id": "11_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/11_kakalikeyeweimian.png",
+    "otherNightReminder": "每局游戏限一次，如果有玩家死于处决，在夜晚时*，你可以向他送出“鲜花”：如果他是善良的，他得知葬花童在场。",
+    "reminders": [
+      "鲜花",
+      "失去能力"
+    ],
+    "name": "葬花童",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，如果有玩家死于处决，在夜晚时*，你可以向他送出“鲜花”：如果他是善良的，他得知葬花童在场。",
+    "otherNight": 18
+  },
+  {
+    "id": "12_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/12_kakalikeyeweimian.png",
+    "reminders": [
+      "第一天",
+      "第二天",
+      "第三天",
+      "失去能力"
+    ],
+    "name": "伊文",
+    "team": "townsfolk",
+    "ability": "每局游戏限一次，你可以在白天拜访说书人以得知1-3个（随天数增加）不在场角色，其中可能包括恶魔的伪装。"
+  },
+  {
+    "id": "13_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/13_kakalikeyeweimian.png",
+    "otherNightReminder": "如果说书人欺骗了你，下个夜晚你可能会死亡。",
+    "reminders": [
+      "欺骗",
+      "死亡"
+    ],
+    "name": "执笔人",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以拜访说书人并描述一件你认为场上已发生的事，你会得知“艺术源于生活”或“本故事纯属虚构”。如果说书人欺骗了你，下个夜晚你可能会死亡。",
+    "otherNight": 12
+  },
+  {
+    "id": "14_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/14_kakalikeyeweimian.png",
+    "otherNightReminder": "恶魔会以为自己是其他不在场的恶魔。当你死亡时，恶魔会得知自己的真实角色。",
+    "reminders": [
+      "易容结束"
+    ],
+    "remindersGlobal": [
+      "易容",
+      "是小恶魔",
+      "是冢冢枯骨",
+      "是方古",
+      "是裁决使"
+    ],
+    "name": "易容师",
+    "team": "townsfolk",
+    "ability": "恶魔会以为自己是其他不在场的恶魔。当你死亡时，恶魔会得知自己的真实角色。",
+    "otherNight": 14
+  },
+  {
+    "id": "15_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/15_kakalikeyeweimian.png",
+    "otherNightReminder": "如果你在夜晚死亡，你会被唤醒并选择一名玩家：他死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "狩猎天狼",
+    "team": "townsfolk",
+    "ability": "如果你在夜晚死亡，你会被唤醒并选择一名玩家：他死亡。",
+    "otherNight": 13
+  },
+  {
+    "id": "16_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/16_kakalikeyeweimian.png",
+    "name": "涅槃之羽",
+    "team": "townsfolk",
+    "ability": "如果你是场上唯一存活的镇民，你提名的玩家将立刻被处决。"
+  },
+  {
+    "id": "17_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/17_kakalikeyeweimian.png",
+    "remindersGlobal": [
+      "是酒鬼"
+    ],
+    "setup": true,
+    "name": "酒鬼",
+    "team": "outsider",
+    "ability": "你不知道你是酒鬼。你以为你是一个镇民角色，但其实你不是。"
+  },
+  {
+    "id": "18_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/18_kakalikeyeweimian.png",
+    "name": "狂热者",
+    "team": "outsider",
+    "ability": "如果有大于等于五名玩家存活，你必须在所有提名中投票。"
+  },
+  {
+    "id": "19_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/19_kakalikeyeweimian.png",
+    "reminders": [
+      "最后提名"
+    ],
+    "name": "似卿",
+    "team": "outsider",
+    "ability": "每个夜晚*，你会转变为上个白天最后发起提名玩家的阵营，但你不会得知你具体的阵营。如果上个白天无人发起提名，你会转变为邪恶阵营。"
+  },
+  {
+    "id": "20_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/20_kakalikeyeweimian.png",
+    "otherNightReminder": "外来者被视为独立阵营。每个夜晚*，你选择一名玩家，他死亡。被你杀死的外来者会得知你是亚历克斯 。当且仅当你是场上唯一存活的外来者且无恶魔存活时 ，你的阵营获胜。",
+    "reminders": [
+      "死亡",
+      "得知"
+    ],
+    "name": "亚历克斯",
+    "team": "outsider",
+    "ability": "外来者被视为独立阵营。每个夜晚*，你选择一名玩家，他死亡。被你杀死的外来者会得知你是亚历克斯 。当且仅当你是场上唯一存活的外来者且无恶魔存活时 ，你的阵营获胜。",
+    "otherNight": 10
+  },
+  {
+    "id": "21_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/21_kakalikeyeweimian.png",
+    "firstNightReminder": "每个夜晚，你选择一名存活玩家：下个白天他必须提名并处决一名玩家。否则他可能会被处决。",
+    "otherNightReminder": "每个夜晚，你选择一名存活玩家：下个白天他必须提名并处决一名玩家。否则他可能会被处决。",
+    "reminders": [
+      "感染"
+    ],
+    "name": "狂犬病患者",
+    "team": "minion",
+    "ability": "每个夜晚，你选择一名存活玩家：下个白天他必须提名并处决一名玩家。否则他可能会被处决。",
+    "firstNight": 5600,
+    "otherNight": 5
+  },
+  {
+    "id": "22_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/22_kakalikeyeweimian.png",
+    "firstNightReminder": "所有玩家都知道你是师郎。你不会死于处决。每个夜晚，你要选择一名玩家：他要对你谄媚直到下个黄昏，否则他可能会死亡。当场上存活的邪恶玩家多于善良玩家时，你失去能力。",
+    "otherNightReminder": "所有玩家都知道你是师郎。你不会死于处决。每个夜晚，你要选择一名玩家：他要对你谄媚直到下个黄昏，否则他可能会死亡。当场上存活的邪恶玩家多于善良玩家时，你失去能力。",
+    "reminders": [
+      "谄媚",
+      "死亡",
+      "失去能力"
+    ],
+    "name": "师郎",
+    "team": "minion",
+    "ability": "所有玩家都知道你是师郎。你不会死于处决。每个夜晚，你要选择一名玩家：他要对你谄媚直到下个黄昏，否则他可能会死亡。当场上存活的邪恶玩家多于善良玩家时，你失去能力。",
+    "firstNight": 5500,
+    "otherNight": 4
+  },
+  {
+    "id": "23_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/23_kakalikeyeweimian.png",
+    "firstNightReminder": "在你的首个夜晚，你要选择一名非恶魔玩家：你会获得他的能力，随后他中毒。你会得知自己获得了什么能力且会被视为他的角色。",
+    "remindersGlobal": [
+      "中毒",
+      "是机械姬"
+    ],
+    "setup": true,
+    "name": "机械姬",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择一名非恶魔玩家：你会获得他的能力，随后他中毒。你会得知自己获得了什么能力且会被视为他的角色。[-1外来者]",
+    "firstNight": 5400
+  },
+  {
+    "id": "24_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/24_kakalikeyeweimian.png",
+    "otherNightReminder": "每个夜晚*，你会提前得知白天有哪些玩家将要死亡。你可以选择隐藏任意数量夜间已死亡玩家的死亡讯息。被你隐藏的已死亡玩家将会被视为存活。当你死亡时，说书人将立刻公布所有已死亡玩家的讯息。",
+    "reminders": [
+      "隐藏"
+    ],
+    "name": "丧钟",
+    "team": "minion",
+    "ability": "每个夜晚*，你会提前得知白天有哪些玩家将要死亡。你可以选择隐藏任意数量夜间已死亡玩家的死亡讯息。被你隐藏的已死亡玩家将会被视为存活。当你死亡时，说书人将立刻公布所有已死亡玩家的讯息。",
+    "otherNight": 15
+  },
+  {
+    "id": "25_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/25_kakalikeyeweimian.png",
+    "otherNightReminder": "让小恶魔选择一名玩家。标记那名玩家死亡。如果小恶魔选择了自己：用一个备用的小恶魔标记替换一个存活的爪牙角色标记。让原来的小恶魔重新入睡。唤醒新的小恶魔。对他展示“你是”信息标记，和小恶魔角色标记。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 6
+  },
+  {
+    "id": "26_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/26_kakalikeyeweimian.png",
+    "otherNightReminder": "让方古选择一名玩家。标记那名玩家死亡。如果他选择了外来者，且“限一次”标记未放置在魔典中：用备用的方古角色标记替换那名外来者的角色标记。让方古重新入睡。唤醒方古的目标玩家。对该玩家展示“你是”信息标记和方古角色标记，并用拇指向下代表他阵营变为邪恶。将“首次”标记放置在魔典中。标记原本的方古玩家死亡，且他选择的玩家不会被标记为死亡。",
+    "reminders": [
+      "死亡",
+      "限一次"
+    ],
+    "remindersGlobal": [
+      "限一次"
+    ],
+    "setup": true,
+    "name": "方古",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被该能力杀死的外来者改为变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者]",
+    "otherNight": 7
+  },
+  {
+    "id": "27_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/27_kakalikeyeweimian.png",
+    "otherNightReminder": "让冢中枯骨选择一名玩家。标记那名玩家死亡。",
+    "reminders": [
+      "死亡",
+      "复活"
+    ],
+    "name": "冢中枯骨",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果场上有存活的爪牙，你死亡之后会复活。",
+    "otherNight": 8
+  },
+  {
+    "id": "28_kakalikeyeweimian",
+    "image": "https://www.bloodstar.xyz/p/SerraEvelyn/kakalikeyeweimian/28_kakalikeyeweimian.png",
+    "otherNightReminder": "让裁决使选择一名玩家。标记那名玩家死亡。如果裁决使选择了一名爪牙：让裁决使额外行动一次。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "裁决使",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你用这种方式杀死一名爪牙，你可以额外行动一次。",
+    "otherNight": 9
+  }
+]

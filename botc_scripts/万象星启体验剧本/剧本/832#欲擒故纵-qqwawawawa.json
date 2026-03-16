@@ -1,0 +1,295 @@
+[
+  {
+    "id": "_meta",
+    "name": "欲擒故纵",
+    "author": "提线政客",
+    "logo":"https://free.picui.cn/free/2025/12/14/693e7130ab1c7.png",
+    "almanac": "https://free.picui.cn/free/2025/12/14/693e7130ab1c7.png"
+  },
+  {
+    "id": "_fishingcat",
+    "firstNightReminder": "在你的首个夜晚，你会得知哪些邪恶角色在场。",
+    "name": "学者",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/_catfishing.png",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知哪些邪恶角色在场。",
+    "firstNight": 3500
+  },
+  {
+    "id": "9_fishingcat",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/2/29/Dreamer.png/300px-Dreamer.png",
+    "firstNightReminder": "选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "otherNightReminder": "选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "name": "筑梦师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 3800,
+    "otherNight": 18
+  },
+{
+    "id": "1_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/1_catfishing.png",
+    "firstNightReminder": "你会得知当晚被邪恶玩家的能力影响的存活玩家与你的最近距离是多少。",
+    "otherNightReminder": "你会得知当晚被邪恶玩家的能力影响的存活玩家与你的最近距离是多少。",
+    "name": "猎犬饲养员",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你会得知当晚被邪恶玩家的能力选择或影响的存活玩家与你的最近距离是多少。",
+    "firstNight": 3900,
+    "otherNight": 18
+  },
+  {
+    "id": "2_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/2_catfishing.png",
+    "firstNightReminder": "你要选择一名玩家：当晚他使用自身能力首个选择的目标会改为选中你或你的角色。",
+    "otherNightReminder": "你要选择一名玩家：当晚他使用自身能力首个选择的目标会改为选中你或你的角色。",
+    "reminders": [
+      "选择"
+    ],
+    "name": "吞火艺人",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：当晚他使用自身能力首个选择的目标会改为选中你或你的角色。",
+    "firstNight": 3200,
+    "otherNight": 2
+  },
+  {
+    "id": "3_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/3_catfishing.png",
+    "firstNightReminder": "你要选择一名玩家",
+    "otherNightReminder": "你要选择一名玩家",
+    "reminders": [
+      "挑战",
+      "保护"
+    ],
+    "name": "拳手",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：下个白天，在你存活时如果他死于处决，与他邻近的两名存活善良玩家在当晚不会受邪恶角色的能力影响直到下个黄昏，即使你已死亡。",
+    "firstNight": 3600,
+    "otherNight": 14
+  },
+  {
+    "id": "4_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/4_catfishing.png",
+    "firstNightReminder": "你要选择两名玩家：你会得知他们均不为哪种角色类型。",
+    "otherNightReminder": "你要选择两名玩家：你会得知他们均不为哪种角色类型。",
+    "name": "牧师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们均不为哪种角色类型。",
+    "firstNight": 3700,
+    "otherNight": 16
+  },
+  {
+    "id": "5_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/5_catfishing.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名不与你邻座的存活玩家：你会得知你与他顺时针方向上之间有多少名邪恶玩家。如果你选择了邪恶玩家，你会获得错误的信息。",
+    "name": "提夫林",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名不与你邻座的存活玩家：你会得知你与他顺时针方向上之间有多少名邪恶玩家。如果你选择了邪恶玩家，你会获得错误的信息。",
+    "otherNight": 13
+  },
+  {
+    "id": "6_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/6_catfishing.png",
+    "otherNightReminder": "首个被你选中的爪牙死亡并保留能力，即使你已死亡。",
+    "reminders": [
+      "死亡",
+      "保留能力"
+    ],
+    "name": "击剑手",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：首个被你选中的爪牙死亡并保留能力，即使你已死亡。",
+    "otherNight": 11
+  },
+  {
+    "id": "7_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/7_catfishing.png",
+    "otherNightReminder": "你会得知一名邪恶玩家。",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "盖棺人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你会得知一名邪恶玩家。你醉酒，除非有邪恶玩家死亡。",
+    "otherNight": 15
+  },
+  {
+    "id": "8_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/8_catfishing.png",
+    "otherNightReminder": "得知说书人是否采纳了你的建议。",
+    "reminders": [
+      "采纳",
+      "拒绝"
+    ],
+    "name": "举荐官",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以私下拜访说书人并给出一条建议。当晚你会得知说书人是否采纳了你的建议。",
+    "otherNight": 17
+  },
+  {
+    "id": "9_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/9_catfishing.png",
+    "reminders": [
+      "错误"
+    ],
+    "name": "车夫",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以拜访说书人并选择一个话题以得知一个与其有关的事实。如果与你邻近的两名玩家阵营不同，你会得知错误信息。"
+  },
+  {
+    "id": "11_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/11_catfishing.png",
+    "reminders": [
+      "健美冠军",
+      "死亡"
+    ],
+    "name": "大力士",
+    "team": "townsfolk",
+    "ability": "如果你在今天白天是唯一“疯狂”地证明自己是大力士的玩家，当晚选择了你的玩家之一死亡。"
+  },
+  {
+    "id": "12_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/12_catfishing.png",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": true,
+    "name": "精神病学家",
+    "team": "townsfolk",
+    "ability": "外来者总体对善良阵营带来帮助，且一名外来者会醉酒。[+1外来者]"
+  },
+  {
+    "id": "13_fishingcat",
+    "firstNightReminder": "恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。",
+    "otherNightReminder": "恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。",
+    "remindersGlobal": [
+      "是疯子"
+    ],
+    "name": "疯子",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/8/89/Lunatic.png/300px-Lunatic.png",
+    "team": "outsider",
+    "ability": "你以为你是一个恶魔，但其实你不是。恶魔知道你是疯子以及你在每个夜晚选择了哪些玩家。",
+    "firstNight": 2100,
+    "otherNight": 4
+  },
+  {
+    "id": "14_fishingcat",
+    "name": "陌客",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/0/02/Recluse.png/300px-Recluse.png",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。"
+  },
+  {
+    "id": "15_fishingcat",
+    "name": "畸形秀演员",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/5/58/Mutant.png/300px-Mutant.png",
+    "team": "outsider",
+    "ability": "如果你“疯狂”地证明自己是外来者，你可能被处决。"
+  },
+  {
+    "id": "16_fishingcat",
+    "reminders": [
+      "醉酒"
+    ],
+    "name": "心上人",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/c/c2/Sweetheart.png/300px-Sweetheart.png",
+    "team": "outsider",
+    "ability": "当你死亡时，会有一名玩家开始醉酒。"
+  },
+  {
+    "id": "17_fishingcat",
+    "otherNightReminder": "当晚与你邻近的存活玩家之一可能会死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "煞星",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/b/b9/Shaxing.png/300px-Shaxing.png",
+    "team": "outsider",
+    "ability": "如果你死亡，当晚与你邻近的存活玩家之一可能会死亡。",
+    "otherNight": 10
+  },
+  {
+    "id": "18_fishingcat",
+    "otherNightReminder": "你是传奇",
+    "name": "麻脸巫婆",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/d/de/Pithag.png/300px-Pithag.png",
+    "team": "minion",
+    "ability": "每个夜晚*，你要选择一名玩家和一个角色，如果该角色不在场，他变成该角色。如果因此创造了一个恶魔，当晚的死亡由说书人决定。",
+    "otherNight": 2
+  },
+  {
+    "id": "19_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/19_catfishing.png",
+    "reminders": [
+      "致幻"
+    ],
+    "name": "致幻师",
+    "team": "minion",
+    "ability": "与你邻近的玩家会被善良玩家的能力当作错误的阵营和角色。"
+  },
+  {
+    "id": "20_catfishing",
+    "image": "https://www.bloodstar.xyz/p/fake/CatFishing/20_catfishing.png",
+    "firstNightReminder": "你知道那名外来者是谁。",
+    "setup": true,
+    "name": "项圈",
+    "team": "minion",
+    "ability": "一名外来者以为他是与他本来身份不同的外来者。你知道他是谁，即使你已经死亡。[+0-1外来者]",
+    "firstNight": 3400
+  },
+  {
+    "id": "21_fishingcat",
+    "firstNightReminder": "你要选择一名玩家和一个善良角色。他明天白天和夜晚需要“疯狂”地证明自己是这个角色，不然他可能被处决。",
+    "otherNightReminder": "你要选择一名玩家和一个善良角色。他明天白天和夜晚需要“疯狂”地证明自己是这个角色，不然他可能被处决。",
+    "reminders": [
+      "疯狂"
+    ],
+    "name": "洗脑师",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/4/4d/Cerenovus.png/300px-Cerenovus.png",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家和一个善良角色。他明天白天和夜晚需要“疯狂”地证明自己是这个角色，不然他可能被处决。",
+    "firstNight": 3300,
+    "otherNight": 3
+  },
+  {
+    "id": "22_fishingcat",
+    "otherNightReminder": "你要选择一名玩家：他死亡。被该能力杀死的外来者改为变成邪恶的方古且你代替他死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "remindersGlobal": [
+      "限一次"
+    ],
+    "setup": true,
+    "name": "方古",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/9/97/Fanggu.png/300px-Fanggu.png",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被该能力杀死的外来者改为变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者]",
+    "otherNight": 6.5
+  },
+  {
+    "id": "23_fishingcat",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/b/b3/Imp.png/300px-Imp.png",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 6
+  },
+  {
+    "id": "24_fishingcat",
+    "image": "https://clocktower-wiki.gstonegames.com/images/thumb/f/fc/Vigormortis.png/300px-Vigormortis.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。",
+    "reminders": [
+      "死亡",
+      "中毒",
+      "保留能力"
+    ],
+    "setup": true,
+    "name": "亡骨魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被你杀死的爪牙保留他的能力，且与他邻近的两名镇民之一中毒。[-1外来者]",
+    "otherNight": 7
+  }
+]

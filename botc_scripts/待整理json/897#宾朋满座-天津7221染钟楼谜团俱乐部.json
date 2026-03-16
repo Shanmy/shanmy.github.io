@@ -1,0 +1,377 @@
+[
+  {
+    "id": "_meta",
+    "name": "宾朋满座",
+    "author": "天津7221染钟楼谜团俱乐部",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e6/s064eivvbo48rmlynqvvjgd94q8bb06.png",
+    "almanac": "有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/6/62/6cuqsw6lpnhcsmf5x7j024m44mfpgxw.png/240px-%E9%95%87%E6%B0%91_%E9%93%81%E5%8C%A0_%E4%B8%87%E8%B1%A1%E6%98%9F%E5%90%AF.png",
+    "firstNightReminder": "在你的首个夜晚，你会得知有多少名外来者在场。 所有外来者醉酒，即使你已死亡。[任意数量外来者]",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": true,
+    "name": "铁匠",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知有多少名外来者在场。 所有外来者醉酒，即使你已死亡。[任意数量外来者]",
+    "firstNight": 14000
+  },
+  {
+    "id": "1_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/82/plexooua584j3ldqi0ltwkz9fy6hcyr.png",
+    "otherNightReminder": "每个夜晚*，你要选择一名玩家：他和与他互动的角色不会受到“互动干扰”类型能力的影响，直到下个黄昏。",
+    "reminders": [
+      "庇护"
+    ],
+    "name": "零",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名玩家：他和与他互动的角色不会受到“互动干扰”类型能力的影响，直到下个黄昏。",
+    "otherNight": 4
+  },
+  {
+    "id": "2_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/5/55/hegup32ipc3yibzhq46uzg8zo9xu2le.png/1200px-%E9%95%87%E6%B0%91_%E7%8C%AB%E7%8C%AB%E6%8E%A2%E9%99%A9%E9%98%9F_%E5%A4%AA%E4%B8%80.png",
+    "otherNightReminder": "如果“探险者”存活，告知猫猫探险队一名与“探险者”阵营相同的玩家。",
+    "reminders": [
+      "探险者"
+    ],
+    "name": "猫猫探险队",
+    "team": "townsfolk",
+    "ability": "每个白天限一次，没有“探险”过的存活玩家可以公开“探险”：在当晚，如果他存活，你会得知一名与他阵营不同的玩家。",
+    "otherNight": 17
+  },
+  {
+    "id": "3_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/7d/8ns1pftlkxjbrau1b6v3o7vyq0zpnyt.png",
+    "firstNightReminder": "唤醒厨师，对他用手势比划数字来告知他邻座邪恶玩家有几对。",
+    "name": "厨师",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知场上邻座的邪恶玩家有多少对。",
+    "firstNight": 15000
+  },
+  {
+    "id": "4_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/a3/nxckynoy8mshn7pwnsnnraceso4zx2p.png",
+    "otherNightReminder": "唤醒僧侣，让他选择除自己以外的一名玩家，那名玩家今晚免受恶魔负面效果影响。",
+    "reminders": [
+      "保护"
+    ],
+    "name": "僧侣",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择除你以外的一名玩家：当晚恶魔的负面能力对他无效。",
+    "otherNight": 5
+  },
+  {
+    "id": "5_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/1e/gawluny5yghhgymluiec9y9h38lcwii.png",
+    "reminders": [
+      "全员醉酒"
+    ],
+    "name": "吟游诗人",
+    "team": "townsfolk",
+    "ability": "当一名爪牙死于处决时，除了你和旅行者以外的所有其他玩家醉酒直到明天黄昏。"
+  },
+  {
+    "id": "6_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/hmvgqpz2znghbnat3s2nu5f183zx7sm.png",
+    "name": "和平主义者",
+    "team": "townsfolk",
+    "ability": "被处决的善良玩家可能不会死亡。"
+  },
+  {
+    "id": "7_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/ac/k0janaxds3dvtnf5hdskzarlbyp79oe.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "弄臣",
+    "team": "townsfolk",
+    "ability": "当你首次将要死亡时，你不会死亡。"
+  },
+  {
+    "id": "8_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e8/qjwy9igjkubwnqrk2p4sd2fs4vj59mo.png",
+    "firstNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+    "otherNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+    "name": "筑梦师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 17000,
+    "otherNight": 15
+  },
+  {
+    "id": "9_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/90/ijn6f8qa0qv7sb3g6cd28u5h38mlm3l.png",
+    "otherNightReminder": "如果贤者被恶魔杀死，唤醒贤者，对他指向两名玩家。其中之一是杀死贤者的恶魔。",
+    "name": "贤者",
+    "team": "townsfolk",
+    "ability": "如果恶魔杀死了你，在当晚你会被唤醒并得知两名玩家，其中一名是杀死你的那个恶魔。",
+    "otherNight": 13
+  },
+  {
+    "id": "10_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4b/5mg50ay9mxf5gvtsuroj8sf39mgk5jg.png",
+    "otherNightReminder": "唤醒半兽人，让他选择一名玩家。如果该玩家是善良玩家，该玩家死亡，且当晚恶魔不会造成死亡。",
+    "reminders": [
+      "失足",
+      "死亡"
+    ],
+    "name": "半兽人",
+    "team": "townsfolk",
+    "ability": "每个夜晚*，你要选择一名存活玩家：如果他是善良的，他死亡，并且当晚恶魔不会造成死亡。会有一名善良玩家始终被当作邪恶阵营。",
+    "otherNight": 7
+  },
+  {
+    "id": "11_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/c1/ga80xr3gx817rh5wiqq18d9hv8b6xje.png",
+    "reminders": [
+      "饱餐",
+      "中毒"
+    ],
+    "name": "食人族",
+    "team": "townsfolk",
+    "ability": "你拥有上个死于处决的玩家的能力。如果该玩家属于邪恶阵营，你中毒直到下个善良玩家死于处决。"
+  },
+  {
+    "id": "12_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/72/gyk4euf2w6acfyevvmeke03zvv8r1ln.png",
+    "firstNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "otherNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": true,
+    "name": "村夫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的阵营。[+0~2村夫，复数村夫中有一人醉酒]",
+    "firstNight": 16000,
+    "otherNight": 16
+  },
+  {
+    "id": "13_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ee/n25ksxnaku6ywxqn58ew1ifqnbpavlb.png",
+    "firstNightReminder": "唤醒掮客，让他选择两名存活玩家。如果这两个玩家阵营相同，在他俩的角色标记旁放置“交换目标”提示标记。",
+    "otherNightReminder": "唤醒掮客，让他选择两名存活玩家。如果这两个玩家阵营相同，在他俩的角色标记旁放置“交换目标”提示标记。",
+    "reminders": [
+      "交换目标"
+    ],
+    "name": "掮客",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名存活玩家：如果他们阵营相同，今晚任何玩家使用自身能力选择他们之一作为目标时，改为选中另一名玩家。",
+    "firstNight": 12000,
+    "otherNight": 3
+  },
+  {
+    "id": "14_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/d0/9ufezm807qjycmwwplq8bhxcizb1ll5.png",
+    "otherNightReminder": "你以为你是一个镇民角色。如果他存活，提名你的镇民玩家在当晚会变成渡鸦信使，你变成认知的角色。",
+    "setup": true,
+    "name": "渡鸦信使",
+    "team": "outsider",
+    "ability": "你以为你是一个镇民角色。如果他存活，提名你的镇民玩家在当晚会变成渡鸦信使，你变成认知的角色。",
+    "otherNight": 2
+  },
+  {
+    "id": "15_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/5e/dw5z7fnz58ia54bw160d1numjsjay8f.png",
+    "name": "陌客",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。"
+  },
+  {
+    "id": "16_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/12/ivgcxsn6c4ytbj9q35ekdpqszwiptb6.png",
+    "otherNightReminder": "如果瘟疫医生死亡，说书人获得一项爪牙能力。",
+    "reminders": [
+      "说书人能力"
+    ],
+    "name": "瘟疫医生",
+    "team": "outsider",
+    "ability": "当你死亡时，说书人会获得一个爪牙能力。",
+    "otherNight": 14
+  },
+  {
+    "id": "17_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/31/rkm8eze1twocl47kxggrnladba8v02i.png",
+    "remindersGlobal": [
+      "是隐士"
+    ],
+    "setup": true,
+    "name": "隐士",
+    "team": "outsider",
+    "ability": "你拥有所有外来者能力。[-0~1外来者]"
+  },
+  {
+    "id": "18_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/97/p827tgxtklk2cwk0bw0svsdd09a9pz6.png",
+    "reminders": [
+      "咕咕咕"
+    ],
+    "name": "蛊孤菇",
+    "team": "minion",
+    "ability": "与你临近的玩家会被其他角色的能力当作错误的阵营和角色。"
+  },
+  {
+    "id": "19_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/9a/39mexl68b71eyydru1jkze79qhwlfib.png",
+    "otherNightReminder": "如果红唇女郎的能力曾被触发，唤醒她并告知她变成了哪个恶魔角色。",
+    "reminders": [
+      "是恶魔"
+    ],
+    "name": "红唇女郎",
+    "team": "minion",
+    "ability": "如果大于等于五名玩家存活时（旅行者不计算在内）恶魔死亡，你变成那个恶魔。",
+    "otherNight": 6
+  },
+  {
+    "id": "20_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4c/cbp9yi8vzy26hp8lyzpw8tgyb4981cx.png",
+    "firstNightReminder": "（分别或同时）唤醒科学怪人和恶魔，通知他们恶魔因为科学怪人而获得的善良角色的能力。",
+    "setup": true,
+    "name": "科学怪人",
+    "team": "minion",
+    "ability": "恶魔拥有一个不在场的善良角色的能力，即使他醉酒或中毒。你和他都知道他获得了什么能力。",
+    "firstNight": 11000
+  },
+  {
+    "id": "21_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/fb/6gxq9bqb4qpk2okxqku8eyl364elcdp.png",
+    "reminders": [
+      "活尸"
+    ],
+    "setup": true,
+    "name": "赶尸人",
+    "team": "minion",
+    "ability": "与你邻近的两名镇民玩家会在其首次死亡时被当作仍然存活。[-1外来者]"
+  },
+  {
+    "id": "22_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2c/dmvdbv8nahd75uppfk430y642h75hcu.png",
+    "firstNightReminder": "唤醒画皮，让画皮选择一名存活玩家，那名存活玩家变成活尸。",
+    "otherNightReminder": "如果首夜被画皮变成活尸的玩家死亡，他重生，然后画皮重获能力。唤醒画皮，让画皮选择一名存活玩家，那名存活玩家变成活尸。",
+    "reminders": [
+      "以为存活",
+      "重获能力"
+    ],
+    "name": "画皮",
+    "team": "minion",
+    "ability": "在你的首个夜晚，你要选择一名存活玩家：他死亡但会被当作存活。当他下一次死亡时，他重生，随后你重获能力。",
+    "firstNight": 13000,
+    "otherNight": 12
+  },
+  {
+    "id": "23_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/6/68/9ek3stue3i0dz2le3uhsz5uqztk7hwk.png",
+    "otherNightReminder": "唤醒他，他要选择一个除奇美拉以外的恶魔（与前两次选择均不同），他获得该恶魔能力。然后当晚像对待他选择的恶魔一样让他使用能力。",
+    "reminders": [
+      "死亡"
+    ],
+    "setup": true,
+    "name": "奇美拉",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一个除奇美拉以外的恶魔角色（与前两次的选择均不同）：你获得该角色的能力直到下个黄昏。[-1外来者]",
+    "otherNight": 8
+  },
+  {
+    "id": "24_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/5jaw5tcw1cctwr699faa2irvpeh0tqi.png",
+    "otherNightReminder": "唤醒方古，让他攻击一名玩家。如果该玩家是外来者并成功转化，则方古死亡，在他入睡后通知那名外来者角色变化。",
+    "reminders": [
+      "死亡",
+      "限一次"
+    ],
+    "setup": true,
+    "name": "方古",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被该能力杀死的外来者变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者]",
+    "otherNight": 10
+  },
+  {
+    "id": "25_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e7/5weznbb3b9dr7j9bep7syuyfqyl5t6h.png",
+    "otherNightReminder": "唤醒涡流，让他攻击一名玩家。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "涡流",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。镇民玩家的能力都会产生错误信息。如果白天没人被处决，邪恶阵营获胜。",
+    "otherNight": 9
+  },
+  {
+    "id": "26_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/11/b1u31qugklggyhonmcf1f2klhzw88f8.png",
+    "otherNightReminder": "唤醒穷奇，让他攻击一名玩家。如果今天白天有外来者死亡，他攻击并杀死的玩家成为活尸，随后决定今晚谁会因为穷奇能力死亡。",
+    "reminders": [
+      "死于今日",
+      "死亡",
+      "活尸"
+    ],
+    "setup": true,
+    "name": "穷奇",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果今天白天有外来者死亡，当晚改为你要选择一名玩家：他死亡，但被当作仍然存活，随后会有一名其他玩家死亡。[+1外来者]",
+    "otherNight": 11
+  },
+  {
+    "id": "27_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/0a/fg29ii2cnt8n6oofcqxy26wg68dja4l.png",
+    "name": "雨人",
+    "team": "fabled",
+    "ability": "每个白天限一次，所有玩家可以进行表决由一名与之前不同的存活玩家拜访说书人，他会得到两条信息，一条是正确的，一条是错误的。"
+  },
+  {
+    "id": "28_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/c/cf/rfp1u1ephu3ikl6lpymfbsj1hi85t5a.png",
+    "firstNightReminder": "每个夜晚，会有一名玩家得知由多少名玩家的能力因为其他角色的能力而未正常生效（从上个黎明到你被唤醒时）。",
+    "otherNightReminder": "每个夜晚，会有一名玩家得知由多少名玩家的能力因为其他角色的能力而未正常生效（从上个黎明到你被唤醒时）。",
+    "reminders": [
+      "未正常生效"
+    ],
+    "name": "哥德尔",
+    "team": "fabled",
+    "ability": "每个夜晚，会有一名玩家得知由多少名玩家的能力因为其他角色的能力而未正常生效（从上个黎明到你被唤醒时）。",
+    "firstNight": 18000,
+    "otherNight": 18
+  },
+  {
+    "id": "29_binpengmanzuo",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png",
+    "name": "欢迎回家",
+    "team": "fabled",
+    "ability": "如果有村夫在场，隐士和渡鸦信使可以认为自己是村夫。奇遇角色会因为涡流的能力产生错误信息。"
+  },
+  {
+    "id": "30_binpengmanzuo",
+    "name": "贤者&陌客",
+    "team": "a jinxed",
+    "ability": "陌客可能会被贤者当作杀死他的恶魔。"
+  },
+  {
+    "id": "31_binpengmanzuo",
+    "name": "瘟疫医生&红唇女郎&赶尸人&蛊孤菇",
+    "team": "a jinxed",
+    "ability": "如果瘟疫医生死亡且说书人会因此获得红唇女郎/赶尸人/蛊孤菇的能力，改为一名存活的爪牙玩家获得此能力，且他会得知此事。"
+  },
+  {
+    "id": "32_binpengmanzuo",
+    "name": "渡鸦信使&隐士",
+    "team": "a jinxed",
+    "ability": "如果他存活，提名隐士的镇民玩家会在当晚变成隐士。"
+  },
+  {
+    "id": "33_binpengmanzuo",
+    "name": "红唇女郎&方古",
+    "team": "a jinxed",
+    "ability": "如果方古成功转化了外来者并因此死去，红唇女郎不会变成方古。"
+  },
+  {
+    "id": "34_binpengmanzuo",
+    "name": "科学怪人&隐士&渡鸦信使",
+    "team": "a jinxed",
+    "ability": "如果恶魔拥有隐士/渡鸦信使的能力，改为提名恶魔的镇民变成隐士/渡鸦信使。"
+  }
+]

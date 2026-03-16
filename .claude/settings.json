@@ -9,7 +9,9 @@
       "Bash(chmod +x /Users/shanmy/Desktop/shanmy.github.io/fetch_today.sh)",
       "Bash(git -C /Users/shanmy/Desktop/shanmy.github.io log --oneline)",
       "WebSearch",
-      "Bash(wc -c /Users/shanmy/Desktop/shanmy.github.io/gm.html)"
+      "Bash(wc -c /Users/shanmy/Desktop/shanmy.github.io/gm.html)",
+      "Bash(python scripts/build_manifest.py)",
+      "Bash(python -c \"import json; m=json.load\\(open\\(''botc_scripts/manifest.json''\\)\\); print\\(json.dumps\\(m[0], ensure_ascii=False, indent=2\\)\\)\")"
     ],
     "additionalDirectories": [
       "/Users/shanmy/Desktop/shanmy.github.io",

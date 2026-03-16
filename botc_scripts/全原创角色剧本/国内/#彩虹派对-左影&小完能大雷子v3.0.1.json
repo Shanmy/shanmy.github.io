@@ -1,0 +1,414 @@
+[
+    {
+      "id": "_meta",
+      "name": "彩虹派对V3.0.1",
+      "author": "左影 & 小完能大雷子",
+      "logo": "https://www.helloimg.com/i/2025/02/27/67bfefa1cbd54.png",
+      "almanac": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/almanac.html",
+      "description": "彩虹派对V3.0.1",
+      "townsfolkName": "镇民",
+      "outsidersName": "外来者",
+      "minionsName": "爪牙",
+      "demonsName": "恶魔",
+      "townsfolk": "镇民",
+      "outsider": "外来者",
+      "minion": "爪牙",
+      "demon": "恶魔",
+      "a jinxedName": "相克",
+      "a jinxed": "相克",
+      "state": [
+        {
+          "stateName": "[特别鸣谢]",
+          "stateDescription": "[小付]"
+        },
+        {
+          "stateName": "[属性]",
+          "stateDescription": "[游戏开始时，每个玩家随机获知自己的属性(1、0)，不同属性的玩家人数相差不会超过1人 (即1、0各一半)，属性如果发生变化会秘密得知。]"
+        },
+        {
+          "stateName": "[约会]",
+          "stateDescription": "[每个白天每名存活玩家可以参与一次约会，每次约会最少需要两名存活玩家。如果本次约会中，同时存在1、0属性，且参与者均清醒且健康，会公开得知约会成功，否则得知失败。]"
+        },
+        {
+          "stateName": "[满地飘零]",
+          "stateDescription": "[除了常规获胜条件以外，当场上存活玩家属性只剩下1或者0时，邪恶阵营获胜。]"
+        }
+      ]
+    },
+    {
+      "id": "_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/_rainbow_party.png",
+      "firstNightReminder": "在你的首个夜晚，告知模范情侣他的伴侣。",
+      "otherNightReminder": "情侣死了，请杀人",
+      "reminders": [
+        "情侣"
+      ],
+      "setup": true,
+      "name": "模范情侣",
+      "team": "townsfolk",
+      "ability": "在你的首个夜晚，你会得知一名与你属性相反的善良玩家或另一名模范情侣。如果他在夜晚死亡，你会被唤醒并要选择一名玩家：他死亡。[ +0,或+1模范情侣]",
+      "firstNight": 19,
+      "otherNight": 10
+    },
+    {
+      "id": "2_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/2_rainbow_party.png",
+      "firstNightReminder": "在你的首个夜晚，你会得知有关邪恶阵营玩家的词组。",
+      "name": "内裤模特",
+      "team": "townsfolk",
+      "ability": "在你的首个夜晚，你会得知有关邪恶阵营玩家的词组。",
+      "firstNight": 18
+    },
+    {
+      "id": "3_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/3_rainbow_party.png",
+      "firstNightReminder": "在你的首个夜晚，你要选择一名玩家。如果之后的游戏中他给你分配了任务且你完成了该任务，你可以拜访说书人获得一条对你的阵营获胜有利的建议。",
+      "reminders": [
+        "主人"
+      ],
+      "name": "任务M",
+      "team": "townsfolk",
+      "ability": "在你的首个夜晚，你要选择一名玩家。如果之后的游戏中他给你分配了任务且你完成了该任务，你可以拜访说书人获得一条对你的阵营获胜有利的建议。",
+      "firstNight": 16
+    },
+    {
+      "id": "4_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/4_rainbow_party.png",
+      "otherNightReminder": "每个夜晚，你得知一名玩家。其属性与阵营必只有一个与前一晚的不同。",
+      "reminders": [
+        "男科诊断1",
+        "男科诊断2",
+        "男科诊断3",
+        "男科诊断4"
+      ],
+      "name": "男科医生",
+      "team": "townsfolk",
+      "ability": "每个夜晚*，你得知一名玩家，其属性与阵营必只有一个与前一晚得不同。",
+      "otherNight": 14
+    },
+    {
+      "id": "5_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/5_rainbow_party.png",
+      "otherNightReminder": "在你的首个白天，你可以公开选择不超过半数玩家。当晚，你会得知其中的角色类型数量。",
+      "reminders": [
+        "安全套"
+      ],
+      "name": "安全套销售",
+      "team": "townsfolk",
+      "ability": "在你的首个白天，你可以公开选择不超过半数玩家。当晚，你会得知其中的角色类型数量。",
+      "otherNight": 18
+    },
+    {
+      "id": "6_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/6_rainbow_party.png",
+      "firstNightReminder": "每个夜晚，你选择一名玩家，如果他和你同一阵营，他死亡时改为你死亡，直到你下一次选择。如果他参加了没有你的约会，你醉酒，直到他再次参加有你的约会。",
+      "otherNightReminder": "每个夜晚，你选择一名玩家，如果他和你同一阵营，他死亡时改为你死亡，直到你下一次选择。如果他参加了没有你的约会，你醉酒，直到他再次参加有你的约会。",
+      "reminders": [
+        "钟情",
+        "被伤害"
+      ],
+      "name": "纯情派",
+      "team": "townsfolk",
+      "ability": "每个夜晚，你选择一名玩家，如果他和你同一阵营，他死亡时改为你死亡，直到你下一次选择。如果他参加了没有你的约会，你醉酒，直到他再次参加有你的约会。",
+      "firstNight": 15,
+      "otherNight": 17
+    },
+    {
+      "id": "7_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/7_rainbow_party.png",
+      "otherNightReminder": "每个夜晚*,白天和你约会过的玩家属性变为和你相反。每次约会前，你可以拜访说书人改变自己的属性。",
+      "reminders": [
+        "黑皮约会"
+      ],
+      "name": "黑皮体育生",
+      "team": "townsfolk",
+      "ability": "每个夜晚*,白天和你约会过的玩家属性变为和你相反。每次约会前，你可以拜访说书人改变自己的属性。你参与的约会会成功，即使因为任何原因让约会失败。",
+      "otherNight": 11
+    },
+    {
+      "id": "8_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/8_rainbow_party.png",
+      "otherNightReminder": "每个夜晚*,和你约会成功的玩家之一会得知你的角色，如果属性变为1,你失去能力。[初始属性为0]",
+      "reminders": [
+        "醉菊"
+      ],
+      "name": "帅受",
+      "team": "townsfolk",
+      "ability": "每个夜晚*,和你约会成功的玩家之一会得知你的角色，如果属性变为1,你失去能力。[初始属性为0]",
+      "otherNight": 15
+    },
+    {
+      "id": "9_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/9_rainbow_party.png",
+      "reminders": [
+        "内射"
+      ],
+      "name": "纯攻",
+      "team": "townsfolk",
+      "ability": "和你约会成功的玩家会免疫恶魔的负面能力直到下个黎明。如果属性变为0,你失去能力。[初始属性为1]"
+    },
+    {
+      "id": "10_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/10_rainbow_party.png",
+      "firstNightReminder": "在你的首个夜晚，你会得知一名在场的爪牙角色。",
+      "reminders": [
+        "得知感染者",
+        "被隔离"
+      ],
+      "name": "疾控志愿者",
+      "team": "townsfolk",
+      "ability": "在你的首个夜晚，你会得知一名在场的爪牙角色。如果你与他约会成功，他会被你隔离。你免疫爪牙的负面能力。 被隔离玩家需坐到你身边，未经你同意不可以发言，约会与提名。",
+      "firstNight": 20
+    },
+    {
+      "id": "11_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/11_rainbow_party.png",
+      "firstNightReminder": "每局游戏限一次，在夜晚*时，你可以选择让恶魔变成你选择的恶魔角色，或让所有爪牙变成你选择的爪牙角色。",
+      "otherNightReminder": "每局游戏限一次，在夜晚*时，你可以选择让恶魔变成你选择的恶魔角色，或让所有爪牙变成你选择的爪牙角色。",
+      "reminders": [
+        "下次换一下"
+      ],
+      "name": "恋爱高手",
+      "team": "townsfolk",
+      "ability": "每局游戏限一次，在夜晚时，你可以选择让恶魔变成你选择的恶魔角色，或让所有爪牙变成你选择的爪牙角色。",
+      "firstNight": 12,
+      "otherNight": 2
+    },
+    {
+      "id": "12_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/12_rainbow_party.png",
+      "otherNightReminder": "每局游戏限一次，如果你约会成功，在夜晚时，你可以得知你参与的历次约会中是否有恶魔。",
+      "reminders": [
+        "约到恶魔"
+      ],
+      "name": "熬夜冠军",
+      "team": "townsfolk",
+      "ability": "每局游戏限一次，如果你约会成功，在夜晚时，你可以得知你参与的历次约会中是否有恶魔。",
+      "otherNight": 16
+    },
+    {
+      "id": "13_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/13_rainbow_party.png",
+      "reminders": [
+        "调教恶魔",
+        "失去能力"
+      ],
+      "name": "训狗S",
+      "team": "townsfolk",
+      "ability": "每局游戏限一次，如果你与恶魔单独约会，当晚恶魔第一次选择的目标，改为一名邪恶玩家替代。"
+    },
+    {
+      "id": "side_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/side_rainbow_party.png",
+      "firstNightReminder": "告知恶魔，side在场",
+      "reminders": [
+        "已经猜测side"
+      ],
+      "name": "Side",
+      "team": "outsider",
+      "ability": "恶魔得知Side在场。每局游戏限一次，恶魔可以拜访说书人猜测你是Side.如果恶魔猜测正确，即使你已死亡，当晚恶魔可以选择一名玩家：他死亡。[初始没有属性]。",
+      "firstNight": 11
+    },
+    {
+      "id": "14_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/14_rainbow_party.png",
+      "firstNightReminder": "每个夜晚，你要选择两名存活玩家，他们第二天的约会可能失败。如果你们三人约会，立即取消这个效果。",
+      "otherNightReminder": "每个夜晚，你要选择两名存活玩家，他们第二天的约会可能失败。如果你们三人约会，立即取消这个效果。",
+      "reminders": [
+        "加入你们",
+        "醉恋小三"
+      ],
+      "name": "小三",
+      "team": "outsider",
+      "ability": "每个夜晚，你要选择两名存活玩家，他们第二天的约会可能失败。如果你们三人约会，立即取消这个效果。",
+      "firstNight": 17,
+      "otherNight": 13
+    },
+    {
+      "id": "15_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/15_rainbow_party.png",
+      "otherNightReminder": "如果你没有参与约会，当天你可能死亡。",
+      "reminders": [
+        "约过了"
+      ],
+      "name": "花痴",
+      "team": "outsider",
+      "ability": "如果你白天没有参与约会，当晚你可能死亡。",
+      "otherNight": 9
+    },
+    {
+      "id": "16_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/16_rainbow_party.png",
+      "remindersGlobal": [
+        "伪酒鬼"
+      ],
+      "setup": true,
+      "name": "钻石男大",
+      "team": "outsider",
+      "ability": "你以为你是镇民，其实你不是。你的约会可能会失败。"
+    },
+    {
+      "id": "17_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/17_rainbow_party.png",
+      "firstNightReminder": "在你的首个夜晚，你得知与你属性相同的玩家。",
+      "otherNightReminder": "每个夜晚*,你选择一名玩家和属性，该玩家变为该属性。",
+      "reminders": [
+        "天菜垂青"
+      ],
+      "name": "天菜",
+      "team": "minion",
+      "ability": "在你的首个夜晚，你得知与你属性相同的玩家。每个夜晚*,你选择一名玩家和属性，该玩家变为该属性。",
+      "firstNight": 14,
+      "otherNight": 12
+    },
+    {
+      "id": "inpa_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/inpa_rainbow_party.png",
+      "reminders": [
+        "窗口期"
+      ],
+      "name": "Inpa爱好者",
+      "team": "minion",
+      "ability": "和你约会的善良玩家约会结束后会中毒，直至他下一次约会之前。"
+    },
+    {
+      "id": "18_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/18_rainbow_party.png",
+      "otherNightReminder": "恶魔变身",
+      "name": "会所头牌",
+      "team": "minion",
+      "ability": "如果大于等于五名玩家存活时(旅行者不计算在内)恶魔死亡，你变成那个恶魔。[初始属性与恶魔相同]",
+      "otherNight": 4
+    },
+    {
+      "id": "05_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/05_rainbow_party.png",
+      "firstNightReminder": "每个夜晚，你可以选择一名玩家，如果他第二天提名阶段前没有约会过：他死亡。[你被视为既是1也是0]",
+      "otherNightReminder": "每个夜晚，你可以选择一名玩家，如果他第二天提名阶段前没有约会过：他死亡。[你被视为既是1也是0]",
+      "reminders": [
+        "没人约就死"
+      ],
+      "name": "邪恶的0.5",
+      "team": "minion",
+      "ability": "每个夜晚，你可以选择一名玩家，如果他第二天提名阶段前没有约会过：他死亡。[你被视为既是1也是0]",
+      "firstNight": 13,
+      "otherNight": 3
+    },
+    {
+      "id": "19_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/19_rainbow_party.png",
+      "otherNightReminder": "每个夜晚*，你要选择一名玩家：他死亡。",
+      "reminders": [
+        "死亡"
+      ],
+      "name": "恐同份子",
+      "team": "demon",
+      "ability": "每个夜晚*,你要选择一名玩家：他死亡。每天的第一场约会可能失败。如果白天没有成功的约会，邪恶阵营获胜。[初始没有属性]",
+      "otherNight": 5
+    },
+    {
+      "id": "0_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/0_rainbow_party.png",
+      "otherNightReminder": "你要选择一名玩家：他死亡。与你临近的两名相反属性的镇民中毒。",
+      "reminders": [
+        "中毒",
+        "死亡"
+      ],
+      "setup": true,
+      "name": "肌肉公0",
+      "team": "demon",
+      "ability": "每个夜晚*,你要选择一名玩家：他死亡。与你临近的两名善良镇民1,在夜晚中毒。[初始属性为0,+1外来者]",
+      "otherNight": 6
+    },
+    {
+      "id": "110_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/110_rainbow_party.png",
+      "otherNightReminder": "你要选择一名玩家：他死亡。与你成功约会的第一个善良0，当晚转变成邪恶阵营，每局游戏限一次。",
+      "reminders": [
+        "死亡",
+        "操开了"
+      ],
+      "setup": true,
+      "name": "持久大1",
+      "team": "demon",
+      "ability": "每个夜晚*,你要选择一名玩家：他死亡。每局游戏限一次，与你单独约会成功的第一个善良0,当晚转变成邪恶阵营。[初始属性为1,-1外来者]",
+      "otherNight": 7
+    },
+    {
+      "id": "20_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/20_rainbow_party.png",
+      "otherNightReminder": "每个夜晚*，你要选择一名玩家：他死亡。",
+      "reminders": [
+        "炮王睡过",
+        "死亡"
+      ],
+      "name": "炮王",
+      "team": "demon",
+      "ability": "每个夜晚*,你要选择一名玩家：他死亡。如果在场存活玩家都和你约会过，邪恶阵营获胜。你可以拜访说书人改变自己的属性。",
+      "otherNight": 8
+    },
+    {
+      "id": "21_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/21_rainbow_party.png",
+      "name": "酒店前台",
+      "team": "traveler",
+      "ability": "白天，你参与约会的次数不受限制。你参与的约会结果不会公开公布。"
+    },
+    {
+      "id": "22_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/22_rainbow_party.png",
+      "name": "文武黄",
+      "team": "traveler",
+      "ability": "如果你表现的非常色情，当天你不能被流放。"
+    },
+    {
+      "id": "23_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/23_rainbow_party.png",
+      "reminders": [
+        "双票了！"
+      ],
+      "name": "恋脚福利",
+      "team": "traveler",
+      "ability": "每个白天，如果你闻别人的脚，你当天不能被流放。如果别人闻你的脚，他的投票算作两票。"
+    },
+    {
+      "id": "24_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/24_rainbow_party.png",
+      "name": "剧情教主",
+      "team": "traveler",
+      "ability": "每个白天，你可以选择两个玩家：他们进行一段互动。之后，他们可能发生一些好的事情，或遭遇一些不好的事情。"
+    },
+    {
+      "id": "25_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/25_rainbow_party.png",
+      "firstNightReminder": "炮王选择属性，告知所有玩家属性。所有人初始属性，1与0的数量相差不超过1",
+      "reminders": [
+        "成",
+        "败"
+      ],
+      "name": "目的地酒吧",
+      "team": "fabled",
+      "ability": "1、属性：游戏开始时，每个玩家随机获知自己的属性(1、0),不同属性的玩家人数相差不会超过1人 (即1、0各一半),属性如果发生变化会秘密得知。 2、约会：每个白天每名存活玩家可以参与一次约会，每次约会最少需要两名存活玩家。如果本次约会中，同时存在1、0属性，且参与者均清醒且健康，会公开得知约会成功，否则得知失败。 3、满地飘零：除了常规获胜条件以外，当场上存活玩家属性只剩下1或者0时，邪恶阵营获胜。",
+      "firstNight": 1.1
+    },
+    {
+      "id": "26_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/26_rainbow_party.png",
+      "reminders": [
+        "1"
+      ],
+      "name": "攻",
+      "team": "fabled",
+      "ability": "如果所有的1都死了，恶魔获胜。"
+    },
+    {
+      "id": "27_rainbow_party",
+      "image": "https://www.bloodstar.xyz/p/xiaofu/Rainbow_Party/27_rainbow_party.png",
+      "reminders": [
+        "0"
+      ],
+      "name": "受",
+      "team": "fabled",
+      "ability": "如果所有的0都死了，恶魔获胜。"
+    }
+  ]

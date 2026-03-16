@@ -1,0 +1,336 @@
+[
+  {
+    "id": "_meta",
+    "name": "避雷驱邪",
+    "author": "斯派德米",
+    "logo": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/8/80/d13kg0280fq56jf8dc9uxai8g2gyp79.png",
+    "almanac": "有问题联系SE谢谢喵~"
+  },
+  {
+    "id": "_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/9/91/04je4dg5ituw4nymx4f0x0b80p6gntg.png",
+    "firstNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "otherNightReminder": "唤醒占卜师，让他选择两名玩家。以点头或摇头告知他是否选中了恶魔。",
+    "reminders": [
+      "干扰项"
+    ],
+    "name": "占卜师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择两名玩家：你会得知他们之中是否有恶魔。会有一名善良玩家始终被你的能力当作恶魔。",
+    "firstNight": 3500,
+    "otherNight": 13
+  },
+  {
+    "id": "1_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/d/dc/49ardir6f1osygmvs27t9kbgcmyfgsa.png",
+    "otherNightReminder": "如果守鸦人死于夜晚，唤醒守鸦人，让他选择一名玩家。对他展示这名玩家的角色标记。",
+    "name": "守鸦人",
+    "team": "townsfolk",
+    "ability": "如果你在夜晚死亡，你会被唤醒，然后你要选择一名玩家：你会得知他的角色。",
+    "otherNight": 11
+  },
+  {
+    "id": "2_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b1/f5bpgic2ja7fbuvxh1vigjkxdsu78j7.png",
+    "otherNightReminder": "如果造谣者今天白天的声明正确，一名玩家死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "造谣者",
+    "team": "townsfolk",
+    "ability": "每个白天，你可以公开发表一个声明。在当晚，如果该声明是正确的，会有一名玩家死亡。",
+    "otherNight": 9
+  },
+  {
+    "id": "3_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/ac/k0janaxds3dvtnf5hdskzarlbyp79oe.png",
+    "reminders": [
+      "失去能力"
+    ],
+    "name": "弄臣",
+    "team": "townsfolk",
+    "ability": "当你首次将要死亡时，你不会死亡。"
+  },
+  {
+    "id": "4_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e8/qjwy9igjkubwnqrk2p4sd2fs4vj59mo.png",
+    "firstNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+    "otherNightReminder": "唤醒筑梦师，让他选择一名除自己以外的非旅行者玩家。对他展示一善一恶两个角色标记。",
+    "name": "筑梦师",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择除你及旅行者以外的一名玩家：你会得知一个善良角色和一个邪恶角色，该玩家是其中一个角色。",
+    "firstNight": 3600,
+    "otherNight": 14
+  },
+  {
+    "id": "5_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/4cvv6gx6js190zpjqm110ps4j6bl587.png",
+    "firstNightReminder": "唤醒贵族，对他指向三名玩家。这三名玩家中有且仅有一名是邪恶玩家。",
+    "reminders": [
+      "被得知"
+    ],
+    "name": "贵族",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知三名玩家：其中有且只有一名玩家是邪恶的。",
+    "firstNight": 3800
+  },
+  {
+    "id": "6_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4c/od92nbuwjhdt7hzbpvy5vy42lbvq55o.png",
+    "firstNightReminder": "如果国王在场，对恶魔展示国王角色标记并指向国王玩家。",
+    "otherNightReminder": "如果满足国王的唤醒条件，唤醒国王，对他展示一个存活的角色标记。",
+    "name": "国王",
+    "team": "townsfolk",
+    "ability": "每个夜晚，如果死亡的玩家数量大于或等于存活的玩家数量，你会得知一个存活的角色。恶魔知道你是国王。",
+    "firstNight": 3200,
+    "otherNight": 16
+  },
+  {
+    "id": "7_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b2/e0oadzvdk2r0a53f51o4z6zfygv6488.png",
+    "otherNightReminder": "如果恶魔杀死了国王，唤醒唱诗男孩，对他指向恶魔。",
+    "setup": true,
+    "name": "唱诗男孩",
+    "team": "townsfolk",
+    "ability": "如果恶魔杀死了国王，你会得知哪名玩家是恶魔。[+国王]",
+    "otherNight": 12
+  },
+  {
+    "id": "8_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2b/ama9h6ak2lkejho57jirtrquvktlmsu.png",
+    "firstNightReminder": "唤醒骑士，对他指向两名非恶魔玩家。",
+    "reminders": [
+      "得知"
+    ],
+    "name": "骑士",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知两名非恶魔玩家。",
+    "firstNight": 3700
+  },
+  {
+    "id": "9_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/72/gyk4euf2w6acfyevvmeke03zvv8r1ln.png",
+    "firstNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "otherNightReminder": "唤醒村夫，让他指向一名玩家，用手势告诉他那名玩家的阵营。",
+    "reminders": [
+      "醉酒"
+    ],
+    "setup": true,
+    "name": "村夫",
+    "team": "townsfolk",
+    "ability": "每个夜晚，你要选择一名玩家：你会得知他的阵营。[+0~2村夫，复数村夫中有一人醉酒]",
+    "firstNight": 4000,
+    "otherNight": 15
+  },
+  {
+    "id": "10_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/b5/rdpsq1wjpsq66ah5y3f4p2wyuzl8wuk.png",
+    "reminders": [
+      "不会死亡"
+    ],
+    "name": "公主",
+    "team": "townsfolk",
+    "ability": "在你的首个白天，如果你提名并处决了一名玩家，当晚恶魔不会造成死亡。"
+  },
+  {
+    "id": "11_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/f/f5/k5r1bemzq95zuitd1y5m9ooav7rirwm.png",
+    "firstNightReminder": "在首个夜晚，唤醒刀客，对他展示标记了“得知”的爪牙角色标记。",
+    "otherNightReminder": "夜晚，如果刀客清醒且他公开选择的玩家是他认知的爪牙，那爪牙玩家死亡。",
+    "reminders": [
+      "得知",
+      "失去能力",
+      "夜晚死亡"
+    ],
+    "name": "刀客",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你会得知一个在场的爪牙角色。每局游戏限一次，你可以在白天公开选择一名玩家：如果他是你得知的角色，在当晚他会死亡。",
+    "firstNight": 3900,
+    "otherNight": 8
+  },
+  {
+    "id": "12_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/b/bb/6pzrvkb3y83olab1dfyzcm1ql0jtg59.png",
+    "firstNightReminder": "在俑匠的首个夜晚，唤醒俑匠，让其指向任意一名非旅行者的玩家。让俑匠重新入睡。",
+    "reminders": [
+      "泥塑"
+    ],
+    "name": "俑匠",
+    "team": "townsfolk",
+    "ability": "在你的首个夜晚，你要选择一名非旅行者玩家：如果他是善良的且已死亡的玩家中没有邪恶玩家，你和他只会死于处决。",
+    "firstNight": 3400
+  },
+  {
+    "id": "13_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/5e/dw5z7fnz58ia54bw160d1numjsjay8f.png",
+    "name": "陌客",
+    "team": "outsider",
+    "ability": "你可能会被当作邪恶阵营、爪牙角色或恶魔角色，即使你已死亡。"
+  },
+  {
+    "id": "14_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/a/ac/mrlvexpiy2a8gedva2hapgce6zk57if.png",
+    "name": "圣徒",
+    "team": "outsider",
+    "ability": "如果你死于处决，你的阵营落败。"
+  },
+  {
+    "id": "15_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/22/0inqbergvawmpfzmeno0mj3ieuk74gm.png",
+    "otherNightReminder": "如果理发师死于白天，唤醒恶魔让他决定是否使用理发师的能力。如果理发师死于夜晚，（如果让除攻击理发师以外的恶魔进行选择则需要等当前恶魔入睡后）让一名恶魔决定是否使用理发师的能力。",
+    "reminders": [
+      "今晚理发"
+    ],
+    "name": "理发师",
+    "team": "outsider",
+    "ability": "如果你死亡，在当晚恶魔可以选择两名玩家（不能选择其他恶魔）交换角色。",
+    "otherNight": 10
+  },
+  {
+    "id": "16_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/1/1a/m6s8wbkeie9d2pyx1qb5agosonjypaq.png",
+    "name": "政客",
+    "team": "outsider",
+    "ability": "如果你是对你的阵营落败负最大责任的人，你转变阵营并获胜，即使你已死亡。"
+  },
+  {
+    "id": "17_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/33/6wspdicyxe9hh221v9aodnk8umbdtsq.png",
+    "firstNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "otherNightReminder": "唤醒投毒者，让他选择一名玩家，那名玩家中毒。",
+    "reminders": [
+      "中毒"
+    ],
+    "name": "投毒者",
+    "team": "minion",
+    "ability": "每个夜晚，你要选择一名玩家：他在当晚和明天白天中毒。",
+    "firstNight": 3300,
+    "otherNight": 2
+  },
+  {
+    "id": "18_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e5/ismmyqbij3uprn5w0vhf5vtfec6o027.png",
+    "name": "炸弹人",
+    "team": "minion",
+    "ability": "如果你被处决，除三名玩家以外的其他所有玩家均会死亡。倒数十声后，被最多玩家手指指着的玩家死亡。"
+  },
+  {
+    "id": "19_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/4/4c/cbp9yi8vzy26hp8lyzpw8tgyb4981cx.png",
+    "firstNightReminder": "（分别或同时）唤醒科学怪人和恶魔，通知他们恶魔因为科学怪人而获得的善良角色的能力。",
+    "setup": true,
+    "name": "科学怪人",
+    "team": "minion",
+    "ability": "恶魔拥有一个不在场的善良角色的能力，即使他醉酒或中毒。你和他都知道他获得了什么能力。",
+    "firstNight": 11
+  },
+  {
+    "id": "20_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/e1/o9cn5nyqljzb1cch3ldd74f8l1834fv.png",
+    "otherNightReminder": "今天白天提名了存活的养蛊人的玩家死亡。",
+    "reminders": [
+      "蛊"
+    ],
+    "name": "养蛊人",
+    "team": "minion",
+    "ability": "在你存活时提名你的玩家会在当晚死亡，即使你已死亡。",
+    "otherNight": 7
+  },
+  {
+    "id": "21_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/0/03/1trck24gi8o05kklsg93al4co09nakb.png",
+    "otherNightReminder": "唤醒小恶魔，让他攻击一名玩家。如果他成功自杀，则在他入睡后通知一名爪牙角色变化。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "小恶魔",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你以这种方式自杀，一名爪牙会变成小恶魔。",
+    "otherNight": 3
+  },
+  {
+    "id": "22_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/5/56/5jaw5tcw1cctwr699faa2irvpeh0tqi.png",
+    "otherNightReminder": "唤醒方古，让他攻击一名玩家。如果该玩家是外来者并成功转化，则方古死亡，在他入睡后通知那名外来者角色变化。",
+    "reminders": [
+      "死亡",
+      "限一次"
+    ],
+    "setup": true,
+    "name": "方古",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。被该能力杀死的外来者变成邪恶的方古且你代替他死亡，但每局游戏仅能成功转化一次。[+1外来者]",
+    "otherNight": 4
+  },
+  {
+    "id": "23_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/2f/fifuf6ffk1g5oq59jupegk662fainf6.png",
+    "otherNightReminder": "唤醒奥赫，让他选择角色列表上的一个角色。该角色对应的玩家死亡，如果该角色不在场，替奥赫决定今晚谁会因为奥赫能力死亡。",
+    "reminders": [
+      "死亡"
+    ],
+    "name": "奥赫",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一个角色：他死亡。如果该角色不在场，则由说书人来决定谁会被你杀死。",
+    "otherNight": 5
+  },
+  {
+    "id": "24_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/thumb/d/dd/ca6bs25d7orssy61bjpqldojgztck78.png/240px-%E5%A5%B8%E4%BD%9E.png",
+    "otherNightReminder": "唤醒奸佞，让他攻击一名玩家。如果他白天没投票，可以攻击两次。",
+    "reminders": [
+      "死亡",
+      "行动两次"
+    ],
+    "name": "奸佞",
+    "team": "demon",
+    "ability": "每个夜晚*，你要选择一名玩家：他死亡。如果你今天白天没有投票，今晚你可以行动两次。",
+    "otherNight": 6
+  },
+  {
+    "id": "25_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/e/ef/kqlms0w8wp372gvh76lov0c08e6z8m3.png",
+    "reminders": [
+      "转世重生"
+    ],
+    "name": "印度教教徒",
+    "team": "fabled",
+    "ability": "最先死亡的四名玩家会立即以相同阵营的旅行者转世重生。"
+  },
+  {
+    "id": "26_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/3/36/kmrowr4h491q6i775hrp57mscbuvya6.png",
+    "reminders": [
+      "禁止邪恶"
+    ],
+    "name": "圣洁之魂",
+    "team": "fabled",
+    "ability": "游戏过程中邪恶玩家的总数最多能比初始设置多一名。"
+  },
+  {
+    "id": "27_bileiquxie",
+    "name": "科学怪人&政客",
+    "team": "a jinxed",
+    "ability": "恶魔无法拥有政客的能力。"
+  },
+  {
+    "id": "28_bileiquxie",
+    "name": "科学怪人&村夫",
+    "team": "a jinxed",
+    "ability": "如果村夫在场数量不足3人，科学怪人可以让恶魔拥有村夫的能力。"
+  },
+  {
+    "id": "29_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/7/77/nwq7s8n137aa2rtd9b8x08o2yp50kkj.png",
+    "name": "怪咖",
+    "team": "traveller",
+    "ability": "如果你表现得很有趣，当天你不能被流放。"
+  },
+  {
+    "id": "30_bileiquxie",
+    "image": "https://patchwiki.biligame.com/images/jbzlbwgwjcygf/2/23/9fmohn9ldebl3ntosy95ho1wt1vmrng.png",
+    "name": "国王长了个驴耳朵",
+    "team": "fabled",
+    "ability": "被“印度教教徒”复活的玩家只能重生为“怪咖”，允许复数“怪咖”在场。如果死亡触发嗯哪里与“印度教教徒”同时生效，会先结算死亡触发能力，再变换角色。旅行者玩家被国王当作死亡。"
+  }
+]

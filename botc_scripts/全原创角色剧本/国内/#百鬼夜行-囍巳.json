@@ -1,0 +1,599 @@
+[
+    {
+        "id": "_meta",
+        "name": "百鬼夜行",
+        "author": "囍巳",
+        "logo": "https://s2.loli.net/2025/07/29/TvuHsJbVCq95lU3.png",
+        "description": "",
+        "townsfolkName": "镇民",
+        "outsidersName": "外来者",
+        "minionsName": "爪牙",
+        "demonsName": "恶魔",
+        "townsfolk": "镇民",
+        "outsider": "外来者",
+        "minion": "爪牙",
+        "demon": "恶魔",
+        "a jinxedName": "相克",
+        "a jinxed": "相克",
+        "status": [
+            {
+                "name": "昌隆",
+                "skill": "无法获得疾恶。无法中毒/醉酒。解除并免受醉酒和中毒影响，且会得知正确信息，即使已经死亡。"
+            },
+            {
+                "name": "疾恶",
+                "skill": "当你获得三层疾恶后：你死亡。当半数及以上玩家死亡，所有死亡的玩家会得知自己是否因疾恶死亡。疾恶死亡会在夜晚立刻发生。"
+            }
+        ]
+    },
+    {
+        "ability": "每个夜晚*，你要选择一名玩家：你会得知他是否中毒或醉酒。",
+        "name": "伥鬼",
+        "id": "changgui",
+        "image": "https://s2.loli.net/2025/07/30/HzBoNtqm51YMpLZ.png",
+        "firstNight": 0,
+        "otherNight": 706,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "当你存活，所有其他镇民首次将要死亡时，他们不会死亡。",
+        "name": "天照",
+        "id": "tianzhao",
+        "image": "https://s2.loli.net/2025/07/30/l93mxiUnFIDSyRc.png",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": true,
+        "reminders": [
+            "武运"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "每个夜晚*，你右侧邻近的一名存活镇民获得昌隆。当你得知你死亡时，你会在当晚被唤醒且你要选择三名玩家：他们获得一层疾恶。",
+        "name": "山君",
+        "id": "shanjun",
+        "image": "https://s2.loli.net/2025/07/30/CLZU5h6OYDWQ4HK.png",
+        "firstNight": 0,
+        "otherNight": 303,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "昌隆",
+            "嫉恶"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "每个夜晚*，你要选择两名除你以外的玩家：其中一人获得昌隆，另一人会醉酒到下个黄昏。恶魔会得知哪名玩家获得了该昌隆。",
+        "name": "尼庵",
+        "id": "nian",
+        "image": "https://s2.loli.net/2025/07/30/pgb9FJGn8Uj1uKM.png",
+        "firstNight": 0,
+        "otherNight": 304,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "昌隆",
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "每个夜晚*，你要选择三名玩家：如果你选中了恶魔，你死亡；如果他们都是镇民，你获得一层疾恶；如果你选中了外来者，你会醉酒到下个黄昏。",
+        "name": "悲喜般若",
+        "id": "beixibore",
+        "image": "https://s2.loli.net/2025/07/30/Jaf325huEXjIvWc.png",
+        "firstNight": 0,
+        "otherNight": 306,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "死亡",
+            "嫉恶",
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "一名镇民持续醉酒。当你死亡时，当晚你会得知所有获得昌隆玩家的获得顺序。",
+        "name": "手目人",
+        "id": "shoumuren",
+        "image": "https://s2.loli.net/2025/07/30/hJi7pVX5TfFRI2C.png",
+        "firstNight": 0,
+        "otherNight": 701,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "醉酒",
+            "今晚观目"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "在你的首个夜晚，你会得知一个不在场的角色，当你首次获得疾恶时，你会额外得知一个不在场的角色。",
+        "name": "不落",
+        "id": "buluo",
+        "image": "https://s2.loli.net/2025/07/30/TSPq6fgNehk8WyJ.png",
+        "firstNight": 3101,
+        "otherNight": 705,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "首次获得"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "每局游戏限一次，在夜晚时*，你要选择三名玩家：其中两个善良玩家交换角色，其中一名被交换的玩家获得一层疾恶，另一名醉酒直到下个黄昏。",
+        "name": "飞吕魔",
+        "id": "feilvmo",
+        "image": "https://s2.loli.net/2025/07/30/3ImTBcJvAigtSo1.png",
+        "firstNight": 0,
+        "otherNight": 702,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "限一次",
+            "嫉恶",
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "与你邻近的镇民疾恶上限+1。与你邻近的外来者疾恶上限-1。",
+        "name": "晴天娃娃",
+        "id": "qingtianwawa",
+        "image": "https://s2.loli.net/2025/07/30/TmaFLoH6hYgzDA8.png",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "晴天",
+            "阴天"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "每个夜晚*，你可以选择一名玩家：他与他邻近的两名玩家中，他们其中一人获得两层疾恶，另一人获得昌隆，你将得知剩下那名玩家的角色。",
+        "name": "火婆婆",
+        "id": "huopopo",
+        "image": "https://s2.loli.net/2025/07/30/zl9ydJt5mRDOKYH.png",
+        "firstNight": 0,
+        "otherNight": 305,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "嫉恶",
+            "昌隆"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "当你因为恶魔的能力死亡：你会在当晚得知存活邪恶阵营的角色。",
+        "name": "百目",
+        "id": "baimu",
+        "image": "https://s2.loli.net/2025/07/30/QNYwctPniefESCA.png",
+        "firstNight": 0,
+        "otherNight": 703,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "今晚得知"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "在你的首个夜晚，你会得知四名玩家：其中有且只有一名玩家是邪恶的。当你得知的邪恶玩家死亡，当晚所有玩家会得知自己的疾恶层数。",
+        "name": "四口蛇",
+        "id": "sikoushe",
+        "image": "https://s2.loli.net/2025/07/30/5rMKkOhXB6oPGdZ.png",
+        "firstNight": 3102,
+        "otherNight": 704,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "蛇口",
+            "今晚得知"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "每个夜晚*，你要选择一名其他玩家：他在当晚无法被邪恶阵营选择。恶魔知道威天王在场。",
+        "name": "威天王",
+        "id": "weitianwang",
+        "image": "https://s2.loli.net/2025/07/30/bDlInVecmi6E5Ko.png",
+        "firstNight": 0,
+        "otherNight": 301,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "townsfolk",
+        "setup": false,
+        "reminders": [
+            "震慑"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "当你首次被提名时，你可能会转变为邪恶阵营。当你死亡后，首个提名的善良玩家可能转变为邪恶阵营。",
+        "name": "死士",
+        "id": "sishi",
+        "image": "https://s2.loli.net/2025/07/30/7gtxziB1cHWd5FN.png",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "outsider",
+        "setup": false,
+        "reminders": [
+            "反叛"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "恶魔会在其首个夜晚得知四个不在场角色。当你死亡，恶魔可以在当晚查看魔典。每个夜晚*，某个善良的异性玩家可能会醉酒直到下个黄昏。",
+        "name": "花魁",
+        "id": "huakui",
+        "image": "https://s2.loli.net/2025/07/30/yEVwL7KcmqZ5uYP.png",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "outsider",
+        "setup": false,
+        "reminders": [
+            "查看魔典",
+            "醉酒"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "前两名在夜间死亡的玩家会被当作仍然存活。当你死亡时，所有镇民获得一层疾恶。",
+        "name": "武天王",
+        "id": "wutianwang",
+        "image": "https://s2.loli.net/2025/07/30/DXlfIKMz1YWp3md.png",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "outsider",
+        "setup": false,
+        "reminders": [
+            "存活？",
+            "嫉恶"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "每个白天，首个提名者和被提名者获得一层疾恶，即使你已经死亡。",
+        "name": "黑蟾",
+        "id": "heichan",
+        "image": "https://s2.loli.net/2025/07/30/DYPnu2Z8vkBL4rO.png",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "outsider",
+        "setup": false,
+        "reminders": [
+            "嫉恶"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "每个夜晚*，你可以选择两名玩家（与上个夜晚不同，不能选择恶魔）交换角色，被交换的玩家获得一层疾恶。",
+        "name": "迷雾",
+        "id": "miwu",
+        "image": "https://s2.loli.net/2025/07/30/kvP5pcYTuUj7wnW.png",
+        "firstNight": 0,
+        "otherNight": 302,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "minion",
+        "setup": false,
+        "reminders": [
+            "疾恶"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "首夜，你要选择一名存活的玩家：他永久中毒，当他死亡时你才会死亡；如果他存活，当你首次死亡后，你仍存活，但会被当作死亡。如果暗影存活，善良阵营无法获胜。",
+        "name": "暗影",
+        "id": "anying",
+        "image": "https://s2.loli.net/2025/07/30/ePQ1fvmHdErqTkG.png",
+        "firstNight": 3001,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "minion",
+        "setup": false,
+        "reminders": [
+            "中毒",
+            "死亡？"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "首夜，你会得知三个伪装。在第二个夜晚，所有爪牙要秘密决定由哪名玩家变成由你们选择的邪恶恶魔。如果毒沼死于处决，当晚的死亡将由说书人决定。[无恶魔在场]",
+        "name": "毒沼",
+        "id": "duzhao",
+        "image": "https://s2.loli.net/2025/07/30/wI5tlH6frTu1DaY.png",
+        "firstNight": 3002,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "minion",
+        "setup": false,
+        "reminders": [
+            "第一个夜晚",
+            "第二个夜晚",
+            "生死无常"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "每局游戏限一次*，你可以选择任意名玩家：他们中毒直到下一个黄昏。每个夜晚，你可以选择一名玩家：他中毒。",
+        "name": "骸浪",
+        "id": "hailang",
+        "image": "https://s2.loli.net/2025/07/30/MQEVLB8lwgASte2.png",
+        "firstNight": 3003,
+        "otherNight": 502,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "minion",
+        "setup": false,
+        "reminders": [
+            "浪涌",
+            "中毒"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "每个夜晚*，你要选择四名玩家：你决定其中一人的死亡。其余三人分别获得一层疾恶，昌隆，中毒直到下一个黄昏。",
+        "name": "八咫乌",
+        "id": "bachiwu",
+        "image": "https://s2.loli.net/2025/07/30/cjhDVwzBmY6X8dL.png",
+        "firstNight": 0,
+        "otherNight": 501,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "demon",
+        "setup": false,
+        "reminders": [
+            "疾恶",
+            "昌隆",
+            "中毒",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "每个夜晚*，你要选择三名玩家：他们死亡。某位镇民获得昌隆直至游戏结束。[+天照]",
+        "name": "夜阎魔",
+        "id": "yelanmo",
+        "image": "https://s2.loli.net/2025/07/30/WhtfFGBgbyYLde6.png",
+        "firstNight": 0,
+        "otherNight": 601,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "demon",
+        "setup": false,
+        "reminders": [
+            "昌隆",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "每个夜晚*，你要选择两名玩家：一名玩家死亡，另一名玩家获得一层疾恶。在夜间死亡的玩家会被当作仍然存活。[+1外来者]",
+        "name": "九尾狐",
+        "id": "jiuweihu",
+        "image": "https://s2.loli.net/2025/07/30/f5Nzex9qjFUw8vZ.png",
+        "firstNight": 0,
+        "otherNight": 602,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "demon",
+        "setup": false,
+        "reminders": [
+            "疾恶",
+            "存活？",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "每个夜晚*，你可以分配四层疾恶在任意玩家身上。你和某个爪牙不会获得疾恶。昌隆可能无效。[+1外来者]",
+        "name": "三毒鹳",
+        "id": "sanduhuan",
+        "image": "https://s2.loli.net/2025/07/30/FJr8fmaCKLeoQvS.png",
+        "firstNight": 0,
+        "otherNight": 603,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "demon",
+        "setup": false,
+        "reminders": [
+            "疾恶",
+            "毒护",
+            "死亡"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "在首个白天，说书人将报告神龛。神龛中有两个爪牙角色，有且只有一个在场。",
+        "name": "神龛",
+        "id": "shenkan",
+        "image": "https://s2.loli.net/2025/07/30/GYASvWZUpfje5M4.png",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "fabled",
+        "setup": false,
+        "reminders": [
+            "在场"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "说书人可能在某个白天宣布两个可能发生的事件，所有人将在暗中决定哪个事件将在当晚发生。",
+        "name": "夜叉",
+        "id": "yecha",
+        "image": "https://s2.loli.net/2025/07/30/qsavZ4COdb1DQwe.png",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "fabled",
+        "setup": false,
+        "reminders": [
+            "黑",
+            "白"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "每个夜晚，说书人选择一名玩家，你们共同睁眼，你替他选择其当晚技能的目标。",
+        "name": "阿修罗",
+        "id": "axiuluo",
+        "image": "https://s2.loli.net/2025/07/30/xatRP2SgQv3bGcZ.png",
+        "firstNight": 0,
+        "otherNight": 102,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "traveler",
+        "setup": false,
+        "reminders": [
+            "共进退"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "当你被流放，当晚你要选择一名玩家：他获得两层疾恶。当玩家由于疾恶死亡，死亡玩家邻近的两名玩家立刻获得一层疾恶。",
+        "name": "蛆疫虫",
+        "id": "quyichong",
+        "image": "https://s2.loli.net/2025/07/30/3uqE2gPcSxDfLsj.png",
+        "firstNight": 0,
+        "otherNight": 101,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "traveler",
+        "setup": false,
+        "reminders": [
+            "嫉恶",
+            "今晚嫉恶"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "每个夜晚*，你可以选择一名玩家：他获得两层疾恶，如果他在明天白天被处决，他不会死亡。",
+        "name": "裂口女",
+        "id": "liekounv",
+        "image": "https://s2.loli.net/2025/07/30/qaojTPuIGMCzBYF.png",
+        "firstNight": 0,
+        "otherNight": 401,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "traveler",
+        "setup": false,
+        "reminders": [
+            "嫉恶不死"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },
+    {
+        "ability": "当你失去了你的投票标记，当晚所有与你阵营对立的某些异性玩家获得一层疾恶。",
+        "name": "苦僧",
+        "id": "kuseng",
+        "image": "https://s2.loli.net/2025/07/30/yOXGQS9VT5l16be.png",
+        "firstNight": 0,
+        "otherNight": 402,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "traveler",
+        "setup": false,
+        "reminders": [
+            "嫉恶"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "当你被流放，当晚你要选择三名死亡的玩家，他们失去自己的投票标记。",
+        "name": "大喰",
+        "id": "dacan",
+        "image": "https://s2.loli.net/2025/07/30/NThzZyI7rnkb6BL.png",
+        "firstNight": 0,
+        "otherNight": 103,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "traveler",
+        "setup": false,
+        "reminders": [
+            "喰食"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    },{
+        "ability": "当你被流放，你与一名随机存活爪牙成为第三方阵营。当恶魔死亡且所有爪牙存活，第三方阵营获胜。",
+        "name": "滑头鬼",
+        "id": "huatougui",
+        "image": "https://s2.loli.net/2025/07/30/s6PY8CbmNVwAOxQ.png",
+        "firstNight": 0,
+        "otherNight": 0,
+        "firstNightReminder": "",
+        "otherNightReminder": "",
+        "team": "traveler",
+        "setup": false,
+        "reminders": [
+            "与共"
+        ],
+        "remindersGlobal": [],
+        "flavor": ""
+    }
+]
