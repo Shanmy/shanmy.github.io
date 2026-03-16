@@ -8,7 +8,8 @@
       "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); chars=[c for c in data if isinstance\\(c,dict\\) and c.get\\(''name''\\) in [''博学者'',''渔夫'',''呆瓜'',''猎手'',''艺术家'',''解谜大师'',''魔像'',''月之子'']]; [print\\(c.get\\(''id'',''?''\\), c.get\\(''name'',''?''\\), c.get\\(''team'',''?''\\)\\) for c in chars]\")",
       "Bash(chmod +x /Users/shanmy/Desktop/shanmy.github.io/fetch_today.sh)",
       "Bash(git -C /Users/shanmy/Desktop/shanmy.github.io log --oneline)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(wc -c /Users/shanmy/Desktop/shanmy.github.io/gm.html)"
     ],
     "additionalDirectories": [
       "/Users/shanmy/Desktop/shanmy.github.io",
