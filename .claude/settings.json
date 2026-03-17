@@ -13,7 +13,19 @@
       "Bash(python scripts/build_manifest.py)",
       "Bash(python -c \"import json; m=json.load\\(open\\(''botc_scripts/manifest.json''\\)\\); print\\(json.dumps\\(m[0], ensure_ascii=False, indent=2\\)\\)\")",
       "Bash(find /Users/shanmy/Desktop/shanmy.github.io/botc_scripts -name \"*.pdf\" -delete)",
-      "Bash(python3 scripts/build_manifest.py)"
+      "Bash(python3 scripts/build_manifest.py)",
+      "Bash(git -C /Users/shanmy/Desktop/shanmy.github.io status --short)",
+      "Bash(git -C /Users/shanmy/Desktop/shanmy.github.io ls-files botc_scripts/)",
+      "Bash(git -C /Users/shanmy/Desktop/shanmy.github.io ls-files botc_scripts/manifest.json)",
+      "Bash(git -C /Users/shanmy/Desktop/shanmy.github.io diff --name-only HEAD)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://shanmy.github.io/botc_scripts/%E5%AE%98%E6%96%B9%E5%B7%B2%E5%8F%91%E8%A1%8C%E5%89%A7%E6%9C%AC/%23%E6%9A%97%E6%B5%81%E6%B6%8C%E5%8A%A8.json\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://shanmy.github.io/botc_scripts/%E5%AE%98%E6%96%B9%E5%B7%B2%E5%8F%91%E8%A1%8C%E5%89%A7%E6%9C%AC/%E6%9A%97%E6%B5%81%E6%B6%8C%E5%8A%A8.json\")",
+      "Bash(git -C /Users/shanmy/Desktop/shanmy.github.io ls-files \"botc_scripts/官方已发行剧本/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://shanmy.github.io/botc_scripts/manifest.json\")",
+      "Bash(curl -s \"https://shanmy.github.io/botc_scripts/manifest.json\")",
+      "Bash(python3 -c \"import json,sys; m=json.load\\(sys.stdin\\); item=next\\(x for x in m if x[''''name'''']==''''暗流涌动''''\\); print\\(item[''''file'''']\\)\")",
+      "Bash(curl -v \"https://shanmy.github.io/botc_scripts/%E5%AE%98%E6%96%B9%E5%B7%B2%E5%8F%91%E8%A1%8C%E5%89%A7%E6%9C%AC/%23%E6%9A%97%E6%B5%81%E6%B6%8C%E5%8A%A8.json\")",
+      "Bash(python3 -:*)"
     ],
     "additionalDirectories": [
       "/Users/shanmy/Desktop/shanmy.github.io",
