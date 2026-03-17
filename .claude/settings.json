@@ -11,7 +11,8 @@
       "WebSearch",
       "Bash(wc -c /Users/shanmy/Desktop/shanmy.github.io/gm.html)",
       "Bash(python scripts/build_manifest.py)",
-      "Bash(python -c \"import json; m=json.load\\(open\\(''botc_scripts/manifest.json''\\)\\); print\\(json.dumps\\(m[0], ensure_ascii=False, indent=2\\)\\)\")"
+      "Bash(python -c \"import json; m=json.load\\(open\\(''botc_scripts/manifest.json''\\)\\); print\\(json.dumps\\(m[0], ensure_ascii=False, indent=2\\)\\)\")",
+      "Bash(find /Users/shanmy/Desktop/shanmy.github.io/botc_scripts -name \"*.pdf\" -delete)"
     ],
     "additionalDirectories": [
       "/Users/shanmy/Desktop/shanmy.github.io",

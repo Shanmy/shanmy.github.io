@@ -108,6 +108,14 @@ input[type=file]{display:none}
   text-overflow:ellipsis;max-width:60px}
 .pick-btn-name.ph{color:var(--txt2)}
 
+/* perceived identity */
+.pslot{flex-wrap:wrap}
+.perceived-row{width:100%;display:flex;align-items:center;gap:6px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+.perceived-lbl{font-size:11px;color:var(--txt2);white-space:nowrap;flex-shrink:0}
+.perceived-sel{flex:1;background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--txt);font-size:12px;padding:4px 8px;cursor:pointer;outline:none;min-width:0}
+.perceived-sel:focus{border-color:rgba(124,77,255,.6)}
+.perceived-badge{display:inline-block;font-size:11px;background:rgba(124,77,255,.18);color:#b39ddb;border-radius:6px;padding:2px 8px;margin-top:4px}
+
 /* ══════════════════════════════════════
    SCREEN: NIGHT
 ══════════════════════════════════════ */
@@ -535,6 +543,28 @@ const TEAMS = {
   traveler:  { label: '旅行者', cls: 'tt-traveler' },
 };
 
+// 认知覆盖角色：真实身份与玩家认知的身份不符
+// 键可以是 char.id 或 char.name（兼容英文官方ID和中文自制ID）
+const COGNITIVE_OVERRIDES = {
+  'drunk':      { teams: ['townsfolk'],           label: '认知镇民' },  // 酒鬼
+  'lunatic':    { teams: ['demon'],               label: '认知恶魔' },  // 疯子
+  'marionette': { teams: ['townsfolk','outsider'],label: '认知好人' },  // 提线木偶
+  '酒鬼':       { teams: ['townsfolk'],           label: '认知镇民' },
+  '疯子':       { teams: ['demon'],               label: '认知恶魔' },
+  '提线木偶':   { teams: ['townsfolk','outsider'],label: '认知好人' },
+  '悟道者':     { teams: ['outsider'],            label: '认知外来者' },
+};
+
+function getCognitiveOverride(char) {
+  if (!char) return null;
+  return COGNITIVE_OVERRIDES[char.id] || COGNITIVE_OVERRIDES[char.name] || null;
+}
+
+function setPerceivedChar(pid, charId) {
+  const p = G.players.find(pl => pl.id === pid);
+  if (p) p.perceivedCharId = charId || null;
+}
+
 // ══════════════════════════════════════════════
 // JSON PARSING
 // ══════════════════════════════════════════════
@@ -583,6 +613,8 @@ function renderLibrary(manifest) {
 
   wrap.classList.remove('hidden');
 
+  const PINNED = ['暗流涌动', '梦殒春宵', '黯月初生'];
+
   function doFilter(q) {
     const query = q.trim().toLowerCase();
     const filtered = query
@@ -591,11 +623,11 @@ function renderLibrary(manifest) {
           (item.author||'').toLowerCase().includes(query) ||
           (item.charNames||[]).some(n => n.toLowerCase().includes(query))
         )
-      : manifest;
+      : manifest.filter(item => PINNED.includes(item.name));
 
     countEl.textContent = query
       ? `找到 ${filtered.length} / ${manifest.length} 个剧本`
-      : `共 ${manifest.length} 个剧本`;
+      : `推荐剧本（共 ${manifest.length} 个，搜索可查看全部）`;
 
     if (!filtered.length) {
       lib.innerHTML = '<div style="font-size:13px;color:var(--txt2);text-align:center;padding:16px 0">没有匹配的剧本</div>';
@@ -645,7 +677,12 @@ function computeNightOrder() {
   const key = G.nightNum === 1 ? 'firstNight' : 'otherNight';
   return G.players
     .filter(p => p.alive && p.charId)
-    .map(p => ({ player: p, char: G.charMap[p.charId] }))
+    .map(p => {
+      const realChar = G.charMap[p.charId];
+      const perceivedChar = p.perceivedCharId ? G.charMap[p.perceivedCharId] : null;
+      const char = perceivedChar || realChar; // 行动以认知身份为准
+      return { player: p, char, realChar, perceivedChar };
+    })
     .filter(({ char }) => char && (char[key] || 0) > 0)
     .sort((a, b) => a.char[key] - b.char[key])
     .map(s => ({ ...s, noteFrom: '', noteTo: '', noChoice: false, noteLie: false }));
@@ -736,7 +773,7 @@ function renderCount() {
 
 document.getElementById('cnt-confirm').onclick = () => {
   G.players = Array.from({ length: G.playerCount }, (_, i) => ({
-    id: `p${i+1}`, seat: i+1, name: '', charId: null, alive: true,
+    id: `p${i+1}`, seat: i+1, name: '', charId: null, alive: true, perceivedCharId: null,
   }));
   showScreen('roles');
   renderRoles();
@@ -766,7 +803,7 @@ function adjustPlayers(delta) {
   const next = G.playerCount + delta;
   if (next < 5 || next > 15) return;
   if (delta > 0) {
-    G.players.push({ id: `p${next}`, seat: next, name: '', charId: null, alive: true });
+    G.players.push({ id: `p${next}`, seat: next, name: '', charId: null, alive: true, perceivedCharId: null });
   } else {
     G.players.pop();
   }
@@ -791,6 +828,13 @@ function renderRoles() {
 
     const div = document.createElement('div');
     div.className = 'pslot';
+    const cogOverride = getCognitiveOverride(char);
+    const perceivedOptions = cogOverride
+      ? G.characters
+          .filter(c => cogOverride.teams.includes(c.team))
+          .map(c => `<option value="${esc(c.id)}" ${player.perceivedCharId === c.id ? 'selected' : ''}>${esc(c.name)}</option>`)
+          .join('')
+      : '';
     div.innerHTML = `
       <div class="seat-dot">${player.seat}</div>
       <input class="pname-in" placeholder="玩家名（可选）" value="${esc(player.name)}" data-seat="${player.seat}">
@@ -802,6 +846,14 @@ function renderRoles() {
         <span class="pick-btn-name ${char?'':'ph'}">${char ? esc(char.name) : '选择角色'}</span>
         ${team ? `<span class="tt ${team.cls}">${team.label}</span>` : ''}
       </button>
+      ${cogOverride ? `
+        <div class="perceived-row">
+          <span class="perceived-lbl">${cogOverride.label}：</span>
+          <select class="perceived-sel" onchange="setPerceivedChar('${player.id}', this.value)">
+            <option value="">— 未设定 —</option>
+            ${perceivedOptions}
+          </select>
+        </div>` : ''}
     `;
     list.appendChild(div);
 
@@ -919,7 +971,10 @@ function renderPickerList(query) {
       `;
       item.onclick = () => {
         const player = G.players.find(p => p.id === G.pickerFor);
-        if (player) player.charId = isSel ? null : char.id;
+        if (player) {
+          player.charId = isSel ? null : char.id;
+          player.perceivedCharId = null; // 切换角色时重置认知身份
+        }
         closePicker();
         renderRoles();
       };
@@ -1038,7 +1093,7 @@ function renderNight() {
           <div class="nop-row">
             <span class="nop-num">${i+1}</span>
             <img class="nop-img" src="${esc(s.char.image||'')}" onerror="this.style.visibility='hidden'" alt="">
-            <span class="nop-name">${esc(s.char.name)}</span>
+            <span class="nop-name">${esc(s.char.name)}${s.perceivedChar ? ` <span style="font-size:10px;opacity:.6">（${esc(s.realChar.name)}）</span>` : ''}</span>
             <span class="nop-player">${playerDisplay(s.player)}</span>
           </div>
         `).join('')}
@@ -1069,6 +1124,7 @@ function renderNight() {
           <div class="char-hero-right">
             <div class="char-hero-name">${esc(char.name)}</div>
             <span class="tt ${team.cls||''}">${team.label||char.team}</span>
+            ${s.perceivedChar ? `<div class="perceived-badge">认知身份 · 实际为 ${esc(s.realChar.name)}</div>` : ''}
             <div class="char-hero-player">👤 ${esc(playerDisplay(player))}</div>
           </div>
         </div>
