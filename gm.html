@@ -656,7 +656,8 @@ async function loadScriptByIndex(i) {
   const item = window._scriptManifest[i];
   if (!item) return;
   try {
-    const res = await fetch(SCRIPTS_BASE + item.file);
+    const url = SCRIPTS_BASE + item.file.split('/').map(encodeURIComponent).join('/');
+    const res = await fetch(url);
     if (!res.ok) throw new Error('文件加载失败');
     const data = await res.json();
     parseScriptData(data);
