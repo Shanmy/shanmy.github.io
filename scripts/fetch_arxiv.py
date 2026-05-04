@@ -37,12 +37,13 @@ TITLE_BLACKLIST: list[str] = [
     "mesh generation", "surface reconstruction",
     # Medical / biology
     "medical", "clinical", "pathology", "radiology",
-    "ct scan", "mri", "ultrasound", "histology", "surgical"
+    "ct scan", "mri", "ultrasound", "histology", "surgical", "biometric"
     # Autonomous systems / remote sensing
     "autonomous driving", "self-driving", "lidar",
-    "satellite", "remote sensing",
+    "satellite", "remote sensing", "traffic"
     # Other downstream
-    "weather", "document", "scene text",
+    "weather", "document", "scene text", "deepfake", "watermark", "attack", "uav", "safety",
+    "ocr", "pedestrian", "biometrics", "anomaly"
 ]
 
 # ── Classification rules ──────────────────────────────────────────────────────
@@ -310,13 +311,19 @@ _ATOM_NS   = {"atom": "http://www.w3.org/2005/Atom"}
 _ARXIV_AFF = "{http://arxiv.org/schemas/atom}affiliation"
 
 
-def _fetch_abstracts(raw_ids: list[str]) -> tuple[dict[str, str], dict[str, list[str]]]:
+def _fetch_abstracts(
+    raw_ids: list[str],
+    cache_path: str | None = None,
+) -> tuple[dict[str, str], dict[str, list[str]]]:
     """
     Batch-fetch abstracts and per-author affiliations from the arxiv API.
     raw_ids: list of IDs as they appear on the listing page,
              e.g. "arXiv:2503.01234" or "arXiv:2503.01234 [cs.CV]"
     Returns ({clean_id: abstract_text}, {clean_id: [affiliation_per_author]}).
     Affiliations are empty strings where the author didn't submit one.
+
+    If cache_path is given, partial results are saved there after each batch
+    so a crashed run can resume without re-fetching completed batches.
     """
     # Strip prefix and version suffix: "arXiv:2503.01234v2 [cs.CV]" → "2503.01234"
     clean = [re.sub(r"v\d+$", "", re.sub(r"^arXiv:", "", i.split()[0]))
@@ -324,20 +331,57 @@ def _fetch_abstracts(raw_ids: list[str]) -> tuple[dict[str, str], dict[str, list
 
     abstracts:    dict[str, str]       = {}
     affiliations: dict[str, list[str]] = {}
+
+    # Load any previously saved partial results
+    if cache_path and os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as _f:
+            _cache = json.load(_f)
+        abstracts    = _cache.get("abstracts", {})
+        affiliations = _cache.get("affiliations", {})
+        already = sum(1 for c in clean if c in abstracts)
+        if already:
+            print(f"  Resuming from cache: {already}/{len(clean)} abstracts already fetched …",
+                  file=sys.stderr)
     BATCH = 80          # arxiv API is comfortable with ~100 IDs at once
     API   = "http://export.arxiv.org/api/query"
 
     for start in range(0, len(clean), BATCH):
-        batch = clean[start:start + BATCH]
+        batch = [c for c in clean[start:start + BATCH] if c not in abstracts]
+        if not batch:
+            print(f"  API: abstracts {start+1}–{start+BATCH} already cached, skipping …",
+                  file=sys.stderr)
+            continue
         print(f"  API: fetching abstracts {start+1}–{start+len(batch)} …",
               file=sys.stderr)
-        resp = requests.get(
-            API,
-            params={"id_list": ",".join(batch), "max_results": len(batch)},
-            headers=HEADERS,
-            timeout=60,
-        )
-        resp.raise_for_status()
+
+        delay = 15
+        resp = None
+        for _ in range(6):
+            time.sleep(delay)
+            try:
+                resp = requests.get(
+                    API,
+                    params={"id_list": ",".join(batch), "max_results": len(batch)},
+                    headers=HEADERS,
+                    timeout=90,
+                )
+            except (requests.exceptions.Timeout,
+                    requests.exceptions.ConnectionError) as exc:
+                print(f"  Network error ({exc.__class__.__name__}); waiting {delay}s before retry …",
+                      file=sys.stderr)
+                delay = min(delay * 2, 120)
+                continue
+            if resp.status_code in (429, 503):
+                print(f"  HTTP {resp.status_code}; waiting {delay}s before retry …",
+                      file=sys.stderr)
+                delay = min(delay * 2, 120)
+                continue
+            resp.raise_for_status()
+            break
+        else:
+            if resp is not None:
+                resp.raise_for_status()
+            raise RuntimeError("All retries exhausted for abstract batch")
 
         root = ET.fromstring(resp.content)
         for entry in root.findall("atom:entry", _ATOM_NS):
@@ -359,8 +403,9 @@ def _fetch_abstracts(raw_ids: list[str]) -> tuple[dict[str, str], dict[str, list
                 entry_affs.append(aff_el.text.strip() if aff_el is not None else "")
             affiliations[cid] = entry_affs
 
-        if start + BATCH < len(clean):
-            time.sleep(3)   # polite delay between API batches
+        if cache_path:
+            with open(cache_path, "w", encoding="utf-8") as _f:
+                json.dump({"abstracts": abstracts, "affiliations": affiliations}, _f)
 
     return abstracts, affiliations
 
@@ -485,7 +530,11 @@ def fetch_papers(base_url: str = ARXIV_URL, date_str: str | None = None) -> tupl
         return [], arxiv_date
 
     # ── Fetch abstracts + affiliations from arxiv API ────────────────────────
-    abstracts, affiliations = _fetch_abstracts([p["id"] for p in papers])
+    cache_file = f"personal/arxiv/.abstract_cache_{date_str or 'latest'}.json"
+    abstracts, affiliations = _fetch_abstracts([p["id"] for p in papers],
+                                               cache_path=cache_file)
+    if os.path.exists(cache_file):
+        os.remove(cache_file)
     for p in papers:
         clean_id = re.sub(r"v\d+$", "", re.sub(r"^arXiv:", "", p["id"].split()[0]))
         p["abstract"] = abstracts.get(clean_id, "")

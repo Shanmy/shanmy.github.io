@@ -394,6 +394,14 @@ input[type=file]{display:none}
 </head>
 <body>
 
+<!-- ══════════ LANG TOGGLE ══════════ -->
+<button id="lang-toggle" onclick="toggleLang()"
+  style="position:fixed;top:12px;right:12px;z-index:999;padding:5px 11px;border-radius:8px;
+         border:1px solid rgba(255,255,255,.15);background:rgba(13,13,26,.85);color:var(--txt2);
+         font-size:12px;font-weight:700;cursor:pointer;backdrop-filter:blur(8px);letter-spacing:.5px">
+  EN
+</button>
+
 <!-- ══════════ SCREEN: UPLOAD ══════════ -->
 <div id="screen-upload">
   <div class="up-moon">🌙</div>
@@ -409,14 +417,14 @@ input[type=file]{display:none}
   </div>
   <div id="script-library" style="width:100%;max-width:320px"></div>
 
-  <div class="up-or">— 或上传自定义剧本 —</div>
+  <div class="up-or" id="up-or-1">— 或上传自定义剧本 —</div>
   <label for="file-in" class="up-drop" id="up-drop">
     <div class="up-drop-icon">📜</div>
     <div class="up-drop-lbl">点击上传 JSON 文件</div>
   </label>
   <input type="file" id="file-in" accept=".json">
 
-  <div class="up-or">— 或 —</div>
+  <div class="up-or" id="up-or-2">— 或 —</div>
   <label for="save-file-in" class="up-load-btn">💾 加载存档，继续游戏</label>
   <input type="file" id="save-file-in" accept=".json">
   <div class="up-hint">支持《血染钟楼》自定义剧本格式</div>
@@ -430,7 +438,7 @@ input[type=file]{display:none}
 <div id="screen-count" class="hidden">
   <div class="scr-top">
     <div class="scr-game" id="cnt-game-name"></div>
-    <div class="scr-sub">今天有多少玩家参与？</div>
+    <div class="scr-sub" id="cnt-sub">今天有多少玩家参与？</div>
   </div>
   <div class="cnt-grid" id="cnt-grid"></div>
   <button class="btn btn-primary" id="cnt-confirm" style="max-width:400px">确认人数，分配角色 →</button>
@@ -441,7 +449,7 @@ input[type=file]{display:none}
   <div class="roles-top">
     <div class="roles-top-left">
       <div class="scr-game" id="roles-game-name"></div>
-      <div class="scr-sub">为每位玩家选择角色</div>
+      <div class="scr-sub" id="roles-sub">为每位玩家选择角色</div>
     </div>
     <button class="roles-back" onclick="showScreen('count')">← 返回</button>
   </div>
@@ -452,7 +460,7 @@ input[type=file]{display:none}
     <span id="roles-count-lbl" style="font-size:15px;color:var(--txt2);min-width:60px;text-align:center"></span>
     <button class="roles-adj-btn" id="roles-inc" onclick="adjustPlayers(1)">＋</button>
   </div>
-  <button class="btn btn-ghost" onclick="randomizeRoles()" style="max-width:480px;display:block;margin:0 auto 10px">
+  <button class="btn btn-ghost" id="roles-randomize-btn" onclick="randomizeRoles()" style="max-width:480px;display:block;margin:0 auto 10px">
     🎲 随机分配角色
   </button>
   <button class="btn btn-primary" id="roles-confirm" style="max-width:480px;display:block;margin:0 auto">
@@ -480,10 +488,10 @@ input[type=file]{display:none}
   </div>
   <div id="sum-body"></div>
   <div style="height:14px"></div>
-  <button class="btn btn-ghost" onclick="saveGame()" style="max-width:480px;display:block;margin:0 auto 10px">
+  <button class="btn btn-ghost" id="sum-save-btn" onclick="saveGame()" style="max-width:480px;display:block;margin:0 auto 10px">
     💾 保存本夜记录
   </button>
-  <button class="btn btn-day" onclick="proceedToDay()" style="max-width:480px;display:block;margin:0 auto">
+  <button class="btn btn-day" id="sum-day-btn" onclick="proceedToDay()" style="max-width:480px;display:block;margin:0 auto">
     确认完毕，进入白天 ☀️
   </button>
   <div style="height:40px"></div>
@@ -504,8 +512,8 @@ input[type=file]{display:none}
   <div class="go-icon" id="go-icon">🎭</div>
   <div class="go-title" id="go-title">游戏结束</div>
   <div class="go-msg" id="go-msg"></div>
-  <button class="btn btn-primary" onclick="showReview()" style="max-width:280px;margin-bottom:12px">📋 查看复盘</button>
-  <button class="btn btn-ghost" onclick="restartGame()" style="max-width:280px">重新开始</button>
+  <button class="btn btn-primary" id="go-review-btn" onclick="showReview()" style="max-width:280px;margin-bottom:12px">📋 查看复盘</button>
+  <button class="btn btn-ghost" id="go-restart-btn" onclick="restartGame()" style="max-width:280px">重新开始</button>
 </div>
 
 <!-- ══════════ SCREEN: REVIEW ══════════ -->
@@ -551,6 +559,385 @@ input[type=file]{display:none}
 
 <script>
 
+// ══════════════════════════════════════════════
+// I18N
+// ══════════════════════════════════════════════
+const STRINGS = {
+  zh: {
+    langToggle: 'EN',
+    appTitle: '说书人助手',
+    appSubtitle: '选择剧本，开始主持游戏',
+    searchPlaceholder: '搜索剧本名或角色名…',
+    uploadOr1: '— 或上传自定义剧本 —',
+    uploadDropLbl: '点击上传 JSON 文件',
+    uploadOr2: '— 或 —',
+    uploadLoadSave: '💾 加载存档，继续游戏',
+    uploadHint: '支持《血染钟楼》自定义剧本格式',
+    libLoading: '加载剧本库中…',
+    libLoadFailed: '剧本库加载失败（需通过 HTTP 访问）',
+    libSearchFound: (n, total) => `找到 ${n} / ${total} 个剧本`,
+    libSearchDefault: total => `推荐剧本（共 ${total} 个，搜索可查看全部）`,
+    libNoMatch: '没有匹配的剧本',
+    libAuthor: (author, n) => `作者：${author} · ${n} 个角色`,
+    libLoadError: '剧本加载失败：',
+    countSub: '今天有多少玩家参与？',
+    countConfirm: '确认人数，分配角色 →',
+    unknownScript: '未知剧本',
+    rolesSub: '为每位玩家选择角色',
+    rolesBack: '← 返回',
+    rolesRandomize: '🎲 随机分配角色',
+    rolesConfirm: '开始第一夜 🌙',
+    rolesPlayerCount: n => `${n} 名玩家`,
+    rolesPlayerPlaceholder: '玩家名（可选）',
+    rolesPickRole: '选择角色',
+    rolesNotSet: '— 未设定 —',
+    roleNoDemon: '请至少分配一名恶魔角色！',
+    randomizeError: (team, need, have) => `${team}不足：需要 ${need} 个，剧本中只有 ${have} 个`,
+    randomizeErrorPrefix: '角色数量不足，无法随机分配：\n',
+    nightBadge: n => `第 ${n} 夜`,
+    nightPrep: '准备阶段',
+    nightIntroTitle: n => `第 ${n} 夜开始`,
+    nightIntroText: '请告知所有玩家闭上眼睛，夜幕降临。',
+    nightActCount: n => `本夜共 ${n} 位角色行动`,
+    nightNoAct: '本夜无角色行动',
+    evilRevealHdr: '首夜 · 邪恶阵营互认',
+    evilDemonLbl: '恶魔',
+    evilMinionLbl: '爪牙',
+    evilRevealBoth: '向恶魔展示爪牙身份及号码，再向每位爪牙展示恶魔身份及号码。',
+    evilRevealNoMinion: '本局无爪牙，无需互认。',
+    evilRevealNoDemon: '本局无恶魔，无需互认。',
+    bluffHdr: '首夜 · 恶魔不在场身份',
+    bluffDesc: '选择3个未分配角色，展示给恶魔作为可声称的身份',
+    bluffSelected: n => `已选 ${n} / 3`,
+    bluffClear: '清空',
+    nightOrderHdr: '行动顺序预览',
+    nightBegin: '开始行动 →',
+    nightSkipDay: '跳过，进入白天 →',
+    perceivedBadge: name => `认知身份 · 实际为 ${name}`,
+    reminderLbl: '主持人提示',
+    noReminder: '（本步骤无特定提示）',
+    noteFromLbl: '← 玩家选择 / 告知我',
+    noChoiceLbl: '不选择',
+    noteFromPlaceholder: '记录玩家的选择或给出的信息…',
+    noChoicePh: '玩家本轮不选择',
+    noteToLbl: '→ 我告知玩家',
+    noteLieLbl: '错误信息',
+    noteToPlaceholder: '记录我给玩家的信息…',
+    nightPrev: '← 上一步',
+    nightEnd: '结束夜晚 ✓',
+    nightNext: '下一步 →',
+    sumTitle: '行动记录回顾',
+    sumSaveBtn: '💾 保存本夜记录',
+    sumDayBtn: '确认完毕，进入白天 ☀️',
+    sumNoAct: '本夜无角色行动。',
+    sumSub: (total, withNotes) => `共 ${total} 位角色行动，其中 ${withNotes} 条有记录。请核查后进入白天。`,
+    sumBodyNoAct: '本夜无行动记录。',
+    sumNoRecord: '无记录',
+    sumPlayerChose: '玩家选择',
+    sumPassed: '不选择',
+    sumPlayerTold: '玩家告知',
+    sumITold: '我给出的信息',
+    dayTitle: '白天行动',
+    dayBadge: n => `第 ${n} 天`,
+    dayDiscussion: '讨论阶段',
+    dayNomination: '提名阶段',
+    dayActionHdr: '白天行动角色',
+    dayDeadTag: '已死亡',
+    dayNoteFromLbl: '← 玩家告知',
+    dayNoteToLbl: '→ 我告知玩家',
+    enterNomination: '进入提名阶段 →',
+    saveGame: '💾 保存游戏进度',
+    nomTitle: '提名记录',
+    nomNone: '尚无提名',
+    nomOf: (a, b) => `${a} 提名 ${b}`,
+    nomVotesCount: (v, t) => `${v} 票 / ${t} 人`,
+    nomExecBtn: '处决',
+    nomVotesList: '投票：',
+    nomNoVotes: '无人投票',
+    nomFormTitle: '发起提名',
+    nomSelectNominator: '选择提名人（存活玩家）…',
+    nomSelectNominee: '选择被提名人…',
+    nomDead: '（死）',
+    nomDeadSmall: ' 死',
+    nomVoterLbl: '投票情况（勾选投了赞成票的玩家）',
+    nomConfirm: '确认提名',
+    nomCancel: '取消',
+    nomNew: '＋ 发起新提名',
+    nominatorRequired: '请先选择提名人和被提名人',
+    enterNight: n => `进入第 ${n} 夜 🌙`,
+    playerStatus: '玩家状态',
+    killDeath: '死亡',
+    killExec: '处决',
+    confirmExec: label => `处决 ${label}？`,
+    confirmExecDead: label => `${label} 已死亡，仍要记录此次处决？`,
+    confirmDeath: label => `确认让 ${label} 死亡？`,
+    playerDisplay: (seat, name) => name ? `${seat}号 ${name}` : `座位 ${seat}`,
+    seatLabel: seat => `座位 ${seat}`,
+    goodWins: '善良阵营获胜！',
+    evilWins: '邪恶阵营获胜！',
+    goodWinMsg: '恶魔已死亡。\n善良阵营获胜！',
+    evilWinMsg: '场上仅剩两名玩家。\n邪恶阵营获胜！',
+    viewReview: '📋 查看复盘',
+    restart: '重新开始',
+    reviewTitle: '游戏复盘',
+    reviewBack: '← 返回',
+    reviewExport: '导出 PDF',
+    reviewSub: (name, n) => `${name} · ${n} 名玩家`,
+    reviewInitialRoles: '初始角色分配',
+    reviewNoInitial: '（从存档恢复的游戏可能缺少此信息）',
+    reviewTimeline: '游戏流程',
+    reviewNightHdr: n => `第 ${n} 夜`,
+    reviewDayHdr: n => `第 ${n} 天`,
+    reviewNightEmpty: '本夜无行动记录',
+    reviewDayEmpty: '本天无记录',
+    reviewNightTag: '夜间',
+    reviewDayDeathTag: '白天死亡',
+    reviewExecTag: '处决',
+    reviewNomOf: (a, b) => `${a} 提名 ${b}`,
+    reviewVotesLabel: '投票：',
+    pdfGenerating: '生成中…',
+    pdfExport: '导出 PDF',
+    pdfFailed: '导出失败：',
+    pdfFilename: 'botc-复盘.pdf',
+    recastFabTitle: '更换身份',
+    recastSelectPlayer: '更换身份 · 选择玩家',
+    recastSelectRole: '更换身份 · 选择新角色',
+    recastBack: '← 返回',
+    recastSearchPlaceholder: '搜索角色名或能力…',
+    recastUnassigned: '未分配',
+    recastNoMatch: '没有匹配的角色',
+    recastCurrent: '当前',
+    pickerSearchPlaceholder: '搜索角色名或能力…',
+    pickerNoMatch: '没有匹配的角色',
+    savePhaseDay: n => `第${n}天`,
+    savePhaseNight: n => `第${n}夜`,
+    saveInvalidFile: '不是有效的存档文件',
+    saveLoadError: '存档加载失败：',
+    jsonParseError: 'JSON 解析失败：',
+    fileLoadError: '文件加载失败',
+    team_townsfolk: '镇民',
+    team_outsider: '外来者',
+    team_minion: '爪牙',
+    team_demon: '恶魔',
+    team_traveler: '旅行者',
+    cog_townsfolk: '认知镇民',
+    cog_demon: '认知恶魔',
+    cog_good: '认知好人',
+    cog_outsider: '认知外来者',
+  },
+  en: {
+    langToggle: '中',
+    appTitle: 'Storyteller Helper',
+    appSubtitle: 'Choose a script to start hosting',
+    searchPlaceholder: 'Search by script or character name…',
+    uploadOr1: '— or upload a custom script —',
+    uploadDropLbl: 'Tap to upload JSON',
+    uploadOr2: '— or —',
+    uploadLoadSave: '💾 Load save & continue',
+    uploadHint: 'Supports Blood on the Clocktower custom script format',
+    libLoading: 'Loading script library…',
+    libLoadFailed: 'Script library failed to load (requires HTTP access)',
+    libSearchFound: (n, total) => `Found ${n} / ${total} scripts`,
+    libSearchDefault: total => `Featured scripts (${total} total — search to see all)`,
+    libNoMatch: 'No matching scripts',
+    libAuthor: (author, n) => `By ${author} · ${n} characters`,
+    libLoadError: 'Failed to load script: ',
+    countSub: 'How many players today?',
+    countConfirm: 'Confirm & Assign Roles →',
+    unknownScript: 'Unknown Script',
+    rolesSub: 'Assign a role to each player',
+    rolesBack: '← Back',
+    rolesRandomize: '🎲 Randomize Roles',
+    rolesConfirm: 'Start Night 1 🌙',
+    rolesPlayerCount: n => `${n} Players`,
+    rolesPlayerPlaceholder: 'Player name (optional)',
+    rolesPickRole: 'Pick role',
+    rolesNotSet: '— Not set —',
+    roleNoDemon: 'Please assign at least one Demon!',
+    randomizeError: (team, need, have) => `Not enough ${team}: need ${need}, script has ${have}`,
+    randomizeErrorPrefix: 'Not enough roles to randomize:\n',
+    nightBadge: n => `Night ${n}`,
+    nightPrep: 'Preparation',
+    nightIntroTitle: n => `Night ${n} Begins`,
+    nightIntroText: 'Ask all players to close their eyes. Night falls.',
+    nightActCount: n => `${n} characters act tonight`,
+    nightNoAct: 'No characters act tonight',
+    evilRevealHdr: 'Night 1 · Evil Team Reveal',
+    evilDemonLbl: 'Demon',
+    evilMinionLbl: 'Minion',
+    evilRevealBoth: 'Show the minions to the demon, then show the demon to each minion.',
+    evilRevealNoMinion: 'No minions this game — no reveal needed.',
+    evilRevealNoDemon: 'No demon this game — no reveal needed.',
+    bluffHdr: 'Night 1 · Demon Bluffs',
+    bluffDesc: 'Pick 3 unassigned characters to show the Demon as possible bluffs',
+    bluffSelected: n => `${n} / 3 selected`,
+    bluffClear: 'Clear',
+    nightOrderHdr: 'Action Order Preview',
+    nightBegin: 'Begin →',
+    nightSkipDay: 'Skip, enter Day →',
+    perceivedBadge: name => `Perceived · Actually ${name}`,
+    reminderLbl: 'Storyteller Reminder',
+    noReminder: '(No specific reminder for this step)',
+    noteFromLbl: "← Player's choice / tells me",
+    noChoiceLbl: 'No choice',
+    noteFromPlaceholder: "Record player's choice or info given…",
+    noChoicePh: 'Player passes this round',
+    noteToLbl: '→ I tell the player',
+    noteLieLbl: 'Misinformation',
+    noteToPlaceholder: 'Record info I gave to the player…',
+    nightPrev: '← Prev',
+    nightEnd: 'End Night ✓',
+    nightNext: 'Next →',
+    sumTitle: 'Night Action Review',
+    sumSaveBtn: '💾 Save Night Log',
+    sumDayBtn: 'Confirm & Enter Day ☀️',
+    sumNoAct: 'No character actions this night.',
+    sumSub: (total, withNotes) => `${total} characters acted, ${withNotes} with notes. Review and enter Day.`,
+    sumBodyNoAct: 'No actions recorded this night.',
+    sumNoRecord: 'No record',
+    sumPlayerChose: 'Player chose',
+    sumPassed: 'passed',
+    sumPlayerTold: 'Player told me',
+    sumITold: 'I told the player',
+    dayTitle: 'Day Phase',
+    dayBadge: n => `Day ${n}`,
+    dayDiscussion: 'Discussion',
+    dayNomination: 'Nomination',
+    dayActionHdr: 'Day Action Characters',
+    dayDeadTag: 'dead',
+    dayNoteFromLbl: '← Player tells me',
+    dayNoteToLbl: '→ I tell the player',
+    enterNomination: 'Enter Nomination Phase →',
+    saveGame: '💾 Save Game',
+    nomTitle: 'Nominations',
+    nomNone: 'No nominations yet',
+    nomOf: (a, b) => `${a} nominated ${b}`,
+    nomVotesCount: (v, t) => `${v} votes / ${t}`,
+    nomExecBtn: 'Execute',
+    nomVotesList: 'Votes: ',
+    nomNoVotes: 'No votes',
+    nomFormTitle: 'New Nomination',
+    nomSelectNominator: 'Select nominator (alive players)…',
+    nomSelectNominee: 'Select nominee…',
+    nomDead: ' (dead)',
+    nomDeadSmall: ' dead',
+    nomVoterLbl: 'Votes (check players who voted yes)',
+    nomConfirm: 'Confirm Nomination',
+    nomCancel: 'Cancel',
+    nomNew: '＋ New Nomination',
+    nominatorRequired: 'Please select a nominator and nominee first',
+    enterNight: n => `Enter Night ${n} 🌙`,
+    playerStatus: 'Player Status',
+    killDeath: 'Kill',
+    killExec: 'Execute',
+    confirmExec: label => `Execute ${label}?`,
+    confirmExecDead: label => `${label} is already dead. Record execution anyway?`,
+    confirmDeath: label => `Mark ${label} as dead?`,
+    playerDisplay: (seat, name) => name ? `#${seat} ${name}` : `Seat ${seat}`,
+    seatLabel: seat => `Seat ${seat}`,
+    goodWins: 'Good wins!',
+    evilWins: 'Evil wins!',
+    goodWinMsg: 'The Demon is dead.\nGood wins!',
+    evilWinMsg: 'Only 2 players remain.\nEvil wins!',
+    viewReview: '📋 View Review',
+    restart: 'Restart',
+    reviewTitle: 'Game Review',
+    reviewBack: '← Back',
+    reviewExport: 'Export PDF',
+    reviewSub: (name, n) => `${name} · ${n} players`,
+    reviewInitialRoles: 'Initial Role Assignments',
+    reviewNoInitial: '(Games restored from save may lack this info)',
+    reviewTimeline: 'Game Timeline',
+    reviewNightHdr: n => `Night ${n}`,
+    reviewDayHdr: n => `Day ${n}`,
+    reviewNightEmpty: 'No actions this night',
+    reviewDayEmpty: 'No records this day',
+    reviewNightTag: 'Night',
+    reviewDayDeathTag: 'Day Death',
+    reviewExecTag: 'Executed',
+    reviewNomOf: (a, b) => `${a} nominated ${b}`,
+    reviewVotesLabel: 'Votes: ',
+    pdfGenerating: 'Generating…',
+    pdfExport: 'Export PDF',
+    pdfFailed: 'Export failed: ',
+    pdfFilename: 'botc-review.pdf',
+    recastFabTitle: 'Recast',
+    recastSelectPlayer: 'Recast · Select Player',
+    recastSelectRole: 'Recast · Select New Role',
+    recastBack: '← Back',
+    recastSearchPlaceholder: 'Search character name or ability…',
+    recastUnassigned: 'Unassigned',
+    recastNoMatch: 'No matching characters',
+    recastCurrent: 'current',
+    pickerSearchPlaceholder: 'Search by character name or ability…',
+    pickerNoMatch: 'No matching characters',
+    savePhaseDay: n => `Day${n}`,
+    savePhaseNight: n => `Night${n}`,
+    saveInvalidFile: 'Not a valid save file',
+    saveLoadError: 'Failed to load save: ',
+    jsonParseError: 'JSON parse failed: ',
+    fileLoadError: 'File load failed',
+    team_townsfolk: 'Townsfolk',
+    team_outsider: 'Outsider',
+    team_minion: 'Minion',
+    team_demon: 'Demon',
+    team_traveler: 'Traveler',
+    cog_townsfolk: "Thinks they're Townsfolk",
+    cog_demon: "Thinks they're the Demon",
+    cog_good: "Thinks they're Good",
+    cog_outsider: "Thinks they're an Outsider",
+  },
+};
+
+let LANG = 'zh';
+let S = STRINGS.zh;
+
+function toggleLang() {
+  LANG = LANG === 'zh' ? 'en' : 'zh';
+  S = STRINGS[LANG];
+  applyLang();
+  const phase = G.phase;
+  if (phase === 'count') renderCount();
+  else if (phase === 'roles') renderRoles();
+  else if (phase === 'night') renderNight();
+  else if (phase === 'night-summary') renderNightSummary();
+  else if (phase === 'day') renderDay();
+  else if (phase === 'gameover' && G.gameResult) showGameOver(G.gameResult);
+  else if (phase === 'review') showReview();
+}
+
+function applyLang() {
+  document.title = S.appTitle;
+  document.getElementById('lang-toggle').textContent = S.langToggle;
+  document.querySelector('.up-title').textContent = S.appTitle;
+  document.querySelector('.up-sub').textContent = S.appSubtitle;
+  document.getElementById('lib-search').placeholder = S.searchPlaceholder;
+  document.getElementById('up-or-1').textContent = S.uploadOr1;
+  document.querySelector('.up-drop-lbl').textContent = S.uploadDropLbl;
+  document.getElementById('up-or-2').textContent = S.uploadOr2;
+  document.querySelector('.up-load-btn').textContent = S.uploadLoadSave;
+  document.querySelector('.up-hint').textContent = S.uploadHint;
+  document.getElementById('cnt-sub').textContent = S.countSub;
+  document.getElementById('cnt-confirm').textContent = S.countConfirm;
+  document.getElementById('roles-sub').textContent = S.rolesSub;
+  document.querySelector('.roles-back').textContent = S.rolesBack;
+  document.getElementById('roles-randomize-btn').textContent = S.rolesRandomize;
+  document.getElementById('roles-confirm').textContent = S.rolesConfirm;
+  document.querySelector('.sum-title').textContent = S.sumTitle;
+  document.getElementById('sum-save-btn').textContent = S.sumSaveBtn;
+  document.getElementById('sum-day-btn').textContent = S.sumDayBtn;
+  document.querySelector('.day-title').textContent = S.dayTitle;
+  document.getElementById('go-review-btn').textContent = S.viewReview;
+  document.getElementById('go-restart-btn').textContent = S.restart;
+  document.querySelector('.rv-title').textContent = S.reviewTitle;
+  document.querySelector('.rv-back').textContent = S.reviewBack;
+  document.getElementById('rv-export-btn').textContent = S.reviewExport;
+  document.getElementById('recast-fab').title = S.recastFabTitle;
+  document.getElementById('recast-back-btn').textContent = S.recastBack;
+  document.getElementById('picker-search').placeholder = S.pickerSearchPlaceholder;
+  // Re-render library if loaded
+  if (window._scriptManifest) renderLibrary(window._scriptManifest);
+}
 
 // ══════════════════════════════════════════════
 // STATE
@@ -581,24 +968,26 @@ const DAY_ACTION_NAMES = new Set(['博学者','渔夫','呆瓜','猎手','艺术
 const DAY_ACTION_DEAD_OK = new Set(['呆瓜','月之子']);
 
 const TEAMS = {
-  townsfolk: { label: '镇民',   cls: 'tt-townsfolk' },
-  outsider:  { label: '外来者', cls: 'tt-outsider' },
-  minion:    { label: '爪牙',   cls: 'tt-minion' },
-  demon:     { label: '恶魔',   cls: 'tt-demon' },
-  traveler:  { label: '旅行者', cls: 'tt-traveler' },
+  townsfolk: { labelKey: 'team_townsfolk', cls: 'tt-townsfolk' },
+  outsider:  { labelKey: 'team_outsider',  cls: 'tt-outsider' },
+  minion:    { labelKey: 'team_minion',    cls: 'tt-minion' },
+  demon:     { labelKey: 'team_demon',     cls: 'tt-demon' },
+  traveler:  { labelKey: 'team_traveler',  cls: 'tt-traveler' },
 };
+function teamLabel(teamId) { return S['team_' + teamId] || teamId; }
 
 // 认知覆盖角色：真实身份与玩家认知的身份不符
 // 键可以是 char.id 或 char.name（兼容英文官方ID和中文自制ID）
 const COGNITIVE_OVERRIDES = {
-  'drunk':      { teams: ['townsfolk'],           label: '认知镇民' },  // 酒鬼
-  'lunatic':    { teams: ['demon'],               label: '认知恶魔' },  // 疯子
-  'marionette': { teams: ['townsfolk','outsider'],label: '认知好人' },  // 提线木偶
-  '酒鬼':       { teams: ['townsfolk'],           label: '认知镇民' },
-  '疯子':       { teams: ['demon'],               label: '认知恶魔' },
-  '提线木偶':   { teams: ['townsfolk','outsider'],label: '认知好人' },
-  '悟道者':     { teams: ['outsider'],            label: '认知外来者' },
+  'drunk':      { teams: ['townsfolk'],           labelKey: 'cog_townsfolk' },  // 酒鬼
+  'lunatic':    { teams: ['demon'],               labelKey: 'cog_demon' },      // 疯子
+  'marionette': { teams: ['townsfolk','outsider'],labelKey: 'cog_good' },       // 提线木偶
+  '酒鬼':       { teams: ['townsfolk'],           labelKey: 'cog_townsfolk' },
+  '疯子':       { teams: ['demon'],               labelKey: 'cog_demon' },
+  '提线木偶':   { teams: ['townsfolk','outsider'],labelKey: 'cog_good' },
+  '悟道者':     { teams: ['outsider'],            labelKey: 'cog_outsider' },
 };
+function cogLabel(co) { return S[co.labelKey] || co.labelKey; }
 
 function getCognitiveOverride(char) {
   if (!char) return null;
@@ -636,14 +1025,14 @@ const SCRIPTS_BASE = 'botc_scripts/';
 
 async function loadScriptLibrary() {
   const lib = document.getElementById('script-library');
-  lib.innerHTML = '<div style="font-size:13px;color:var(--txt2);text-align:center;padding:12px 0">加载剧本库中…</div>';
+  lib.innerHTML = `<div style="font-size:13px;color:var(--txt2);text-align:center;padding:12px 0">${S.libLoading}</div>`;
   try {
     const res = await fetch(SCRIPTS_BASE + 'manifest.json');
-    if (!res.ok) throw new Error('manifest 加载失败');
+    if (!res.ok) throw new Error('manifest load failed');
     const manifest = await res.json();
     renderLibrary(manifest);
   } catch (e) {
-    lib.innerHTML = '<div style="font-size:12px;color:var(--txt2);text-align:center;padding:8px 0">剧本库加载失败（需通过 HTTP 访问）</div>';
+    lib.innerHTML = `<div style="font-size:12px;color:var(--txt2);text-align:center;padding:8px 0">${S.libLoadFailed}</div>`;
   }
 }
 
@@ -671,11 +1060,11 @@ function renderLibrary(manifest) {
       : manifest.filter(item => PINNED.includes(item.name));
 
     countEl.textContent = query
-      ? `找到 ${filtered.length} / ${manifest.length} 个剧本`
-      : `推荐剧本（共 ${manifest.length} 个，搜索可查看全部）`;
+      ? S.libSearchFound(filtered.length, manifest.length)
+      : S.libSearchDefault(manifest.length);
 
     if (!filtered.length) {
-      lib.innerHTML = '<div style="font-size:13px;color:var(--txt2);text-align:center;padding:16px 0">没有匹配的剧本</div>';
+      lib.innerHTML = `<div style="font-size:13px;color:var(--txt2);text-align:center;padding:16px 0">${S.libNoMatch}</div>`;
       return;
     }
 
@@ -686,7 +1075,7 @@ function renderLibrary(manifest) {
           <img class="up-default-logo" src="${esc(item.logo||'')}" onerror="this.style.visibility='hidden'" alt="">
           <div class="up-default-info">
             <div class="up-default-name">${esc(item.name)}</div>
-            <div class="up-default-by">作者：${esc(item.author||'未知')} · ${(item.charNames||[]).length} 个角色</div>
+            <div class="up-default-by">${S.libAuthor(esc(item.author || S.unknownScript), (item.charNames||[]).length)}</div>
           </div>
           <span class="up-default-arr">▶</span>
         </button>`;
@@ -703,18 +1092,18 @@ async function loadScriptByIndex(i) {
   try {
     const url = SCRIPTS_BASE + item.file.split('/').map(encodeURIComponent).join('/');
     const res = await fetch(url);
-    if (!res.ok) throw new Error('文件加载失败');
+    if (!res.ok) throw new Error(S.fileLoadError);
     const data = await res.json();
     parseScriptData(data);
     G.playerCount = 5;
     showScreen('count');
     renderCount();
   } catch (e) {
-    alert('剧本加载失败：' + e.message);
+    alert(S.libLoadError + e.message);
   }
 }
 
-document.addEventListener('DOMContentLoaded', loadScriptLibrary);
+document.addEventListener('DOMContentLoaded', () => { applyLang(); loadScriptLibrary(); });
 
 // ══════════════════════════════════════════════
 // NIGHT ORDER
@@ -743,10 +1132,10 @@ function checkWin() {
   const aliveDemons = alive.filter(p => p.charId && G.charMap[p.charId]?.team === 'demon');
 
   if (hasDemonEver && aliveDemons.length === 0)
-    return { over: true, winner: 'good', msg: '恶魔已死亡。\n善良阵营获胜！' };
+    return { over: true, winner: 'good', msgKey: 'goodWinMsg' };
 
   if (alive.length <= 2)
-    return { over: true, winner: 'evil', msg: '场上仅剩两名玩家。\n邪恶阵营获胜！' };
+    return { over: true, winner: 'evil', msgKey: 'evilWinMsg' };
 
   return { over: false };
 }
@@ -777,7 +1166,7 @@ document.getElementById('file-in').addEventListener('change', e => {
       showScreen('count');
       renderCount();
     } catch(err) {
-      alert('JSON 解析失败：' + err.message);
+      alert(S.jsonParseError + err.message);
     }
   };
   reader.readAsText(file);
@@ -794,7 +1183,7 @@ upDrop.addEventListener('drop', e => {
   const reader = new FileReader();
   reader.onload = ev => {
     try { parseScript(ev.target.result); G.playerCount = 5; showScreen('count'); renderCount(); }
-    catch(err) { alert('JSON 解析失败：' + err.message); }
+    catch(err) { alert(S.jsonParseError + err.message); }
   };
   reader.readAsText(file);
 });
@@ -803,7 +1192,7 @@ upDrop.addEventListener('drop', e => {
 // COUNT SCREEN
 // ══════════════════════════════════════════════
 function renderCount() {
-  document.getElementById('cnt-game-name').textContent = G.meta.name || '未知剧本';
+  document.getElementById('cnt-game-name').textContent = G.meta.name || S.unknownScript;
   const grid = document.getElementById('cnt-grid');
   grid.innerHTML = '';
   for (let n = 5; n <= 15; n++) {
@@ -860,9 +1249,9 @@ function adjustPlayers(delta) {
 }
 
 function renderRoles() {
-  document.getElementById('roles-game-name').textContent = G.meta.name || '未知剧本';
+  document.getElementById('roles-game-name').textContent = G.meta.name || S.unknownScript;
   const lbl = document.getElementById('roles-count-lbl');
-  if (lbl) lbl.textContent = `${G.playerCount} 名玩家`;
+  if (lbl) lbl.textContent = S.rolesPlayerCount(G.playerCount);
   const dec = document.getElementById('roles-dec');
   const inc = document.getElementById('roles-inc');
   if (dec) dec.disabled = G.playerCount <= 5;
@@ -885,20 +1274,20 @@ function renderRoles() {
       : '';
     div.innerHTML = `
       <div class="seat-dot">${player.seat}</div>
-      <input class="pname-in" placeholder="玩家名（可选）" value="${esc(player.name)}" data-seat="${player.seat}">
+      <input class="pname-in" placeholder="${S.rolesPlayerPlaceholder}" value="${esc(player.name)}" data-seat="${player.seat}">
       <button class="pick-btn" data-pid="${player.id}">
         ${char
           ? `<img class="pick-btn-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">`
           : `<span class="pick-btn-img" style="display:flex;align-items:center;justify-content:center;font-size:14px">＋</span>`
         }
-        <span class="pick-btn-name ${char?'':'ph'}">${char ? esc(char.name) : '选择角色'}</span>
-        ${team ? `<span class="tt ${team.cls}">${team.label}</span>` : ''}
+        <span class="pick-btn-name ${char?'':'ph'}">${char ? esc(char.name) : S.rolesPickRole}</span>
+        ${team ? `<span class="tt ${team.cls}">${teamLabel(char.team)}</span>` : ''}
       </button>
       ${cogOverride ? `
         <div class="perceived-row">
-          <span class="perceived-lbl">${cogOverride.label}：</span>
+          <span class="perceived-lbl">${cogLabel(cogOverride)}：</span>
           <select class="perceived-sel" onchange="setPerceivedChar('${player.id}', this.value)">
-            <option value="">— 未设定 —</option>
+            <option value="">${S.rolesNotSet}</option>
             ${perceivedOptions}
           </select>
         </div>` : ''}
@@ -927,7 +1316,7 @@ function randomizeRoles() {
     return arr;
   }
 
-  const TEAM_LABELS = {townsfolk:'村民', outsider:'外来者', minion:'爪牙', demon:'恶魔'};
+  const TEAM_LABELS = {townsfolk:S.team_townsfolk, outsider:S.team_outsider, minion:S.team_minion, demon:S.team_demon};
   const byTeam = {};
   ['townsfolk','outsider','minion','demon'].forEach(team => {
     byTeam[team] = G.characters.filter(c => c.team === team);
@@ -937,9 +1326,9 @@ function randomizeRoles() {
   ['townsfolk','outsider','minion','demon'].forEach(team => {
     const need = dist[team];
     if (byTeam[team].length < need)
-      errors.push(`${TEAM_LABELS[team]}不足：需要 ${need} 个，剧本中只有 ${byTeam[team].length} 个`);
+      errors.push(S.randomizeError(TEAM_LABELS[team], need, byTeam[team].length));
   });
-  if (errors.length) { alert('角色数量不足，无法随机分配：\n' + errors.join('\n')); return; }
+  if (errors.length) { alert(S.randomizeErrorPrefix + errors.join('\n')); return; }
 
   const selected = shuffle([
     ...shuffle([...byTeam.townsfolk]).slice(0, dist.townsfolk),
@@ -954,7 +1343,7 @@ function randomizeRoles() {
 
 document.getElementById('roles-confirm').onclick = () => {
   const hasDemon = G.players.some(p => p.charId && G.charMap[p.charId]?.team === 'demon');
-  if (!hasDemon) { alert('请至少分配一名恶魔角色！'); return; }
+  if (!hasDemon) { alert(S.roleNoDemon); return; }
   startNight(1);
 };
 
@@ -1003,12 +1392,11 @@ function recastGoBack() {
 }
 
 function recastRenderPlayerList() {
-  document.getElementById('recast-title').textContent = '更换身份 · 选择玩家';
+  document.getElementById('recast-title').textContent = S.recastSelectPlayer;
   document.getElementById('recast-back-btn').classList.add('hidden');
   const scroll = document.getElementById('recast-scroll');
   scroll.innerHTML = G.players.map(p => {
     const char = p.charId ? G.charMap[p.charId] : null;
-    const team = char ? TEAMS[char.team] : null;
     return `
       <div class="recast-player-row" onclick="recastSelectPlayer('${p.id}')">
         <div class="recast-seat">${p.seat}</div>
@@ -1016,7 +1404,7 @@ function recastRenderPlayerList() {
              src="${esc(char?.image||'')}" onerror="this.style.visibility='hidden'" alt="">
         <div class="recast-info">
           <div class="recast-name">${esc(playerDisplay(p))}</div>
-          <div class="recast-char">${char ? esc(char.name) + (team ? ` · ${team.label}` : '') : '未分配'}</div>
+          <div class="recast-char">${char ? esc(char.name) + (char.team ? ` · ${teamLabel(char.team)}` : '') : S.recastUnassigned}</div>
         </div>
       </div>`;
   }).join('');
@@ -1024,10 +1412,10 @@ function recastRenderPlayerList() {
 
 function recastSelectPlayer(pid) {
   G_recastPid = pid;
-  document.getElementById('recast-title').textContent = '更换身份 · 选择新角色';
+  document.getElementById('recast-title').textContent = S.recastSelectRole;
   document.getElementById('recast-back-btn').classList.remove('hidden');
   const scroll = document.getElementById('recast-scroll');
-  scroll.innerHTML = `<input class="recast-search" id="recast-search-in" placeholder="搜索角色名或能力…" oninput="recastFilter(this.value)" autocomplete="off">
+  scroll.innerHTML = `<input class="recast-search" id="recast-search-in" placeholder="${S.recastSearchPlaceholder}" oninput="recastFilter(this.value)" autocomplete="off">
     <div id="recast-char-list"></div>`;
   recastRenderCharList('');
   setTimeout(() => document.getElementById('recast-search-in')?.focus(), 80);
@@ -1050,7 +1438,7 @@ function recastRenderCharList(q) {
   teamOrder.forEach(teamId => {
     const chars = all.filter(c => c.team === teamId);
     if (!chars.length) return;
-    if (!query) html += `<div style="font-size:11px;color:var(--txt2);font-weight:700;padding:8px 4px 4px;letter-spacing:.05em">${TEAMS[teamId]?.label||teamId}</div>`;
+    if (!query) html += `<div style="font-size:11px;color:var(--txt2);font-weight:700;padding:8px 4px 4px;letter-spacing:.05em">${teamLabel(teamId)}</div>`;
     chars.forEach(char => {
       const isCurrent = player?.charId === char.id;
       html += `
@@ -1059,14 +1447,14 @@ function recastRenderCharList(q) {
           <img style="width:28px;height:28px;border-radius:7px;object-fit:cover;background:#333;flex-shrink:0"
                src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">
           <div class="recast-info">
-            <div class="recast-name">${esc(char.name)}${isCurrent ? ' <span style="font-size:10px;opacity:.5">当前</span>' : ''}</div>
+            <div class="recast-name">${esc(char.name)}${isCurrent ? ` <span style="font-size:10px;opacity:.5">${S.recastCurrent}</span>` : ''}</div>
             <div class="recast-char" style="opacity:.65;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(char.ability||'')}</div>
           </div>
           ${isCurrent ? '<span style="color:rgba(124,77,255,.8);font-size:14px;flex-shrink:0">✓</span>' : ''}
         </div>`;
     });
   });
-  listDiv.innerHTML = html || '<div style="text-align:center;color:var(--txt2);padding:20px">没有匹配的角色</div>';
+  listDiv.innerHTML = html || `<div style="text-align:center;color:var(--txt2);padding:20px">${S.recastNoMatch}</div>`;
 }
 
 function recastConfirm(charId) {
@@ -1108,7 +1496,7 @@ function renderPickerList(query) {
 
     const lbl = document.createElement('div');
     lbl.className = 'picker-team-lbl';
-    lbl.textContent = TEAMS[teamId]?.label || teamId;
+    lbl.textContent = teamLabel(teamId);
     scroll.appendChild(lbl);
 
     chars.forEach(char => {
@@ -1139,7 +1527,7 @@ function renderPickerList(query) {
   });
 
   if (!anyShown) {
-    scroll.innerHTML = '<div class="picker-empty">没有匹配的角色</div>';
+    scroll.innerHTML = `<div class="picker-empty">${S.pickerNoMatch}</div>`;
   }
 }
 
@@ -1163,12 +1551,12 @@ function startNight(num) {
 }
 
 function renderNight() {
-  document.getElementById('night-num-badge').textContent = `第 ${G.nightNum} 夜`;
+  document.getElementById('night-num-badge').textContent = S.nightBadge(G.nightNum);
   const total = G.nightSteps.length;
 
   // Step counter
   const ct = document.getElementById('night-step-ct');
-  ct.textContent = G.step < 0 ? '准备阶段' : `${G.step + 1} / ${total}`;
+  ct.textContent = G.step < 0 ? S.nightPrep : `${G.step + 1} / ${total}`;
 
   const body = document.getElementById('night-body');
   let html = '';
@@ -1178,11 +1566,11 @@ function renderNight() {
     html += `
       <div class="intro-card">
         <div class="intro-icon">🌙</div>
-        <div class="intro-title">第 ${G.nightNum} 夜开始</div>
-        <div class="intro-text">请告知所有玩家闭上眼睛，夜幕降临。</div>
+        <div class="intro-title">${S.nightIntroTitle(G.nightNum)}</div>
+        <div class="intro-text">${S.nightIntroText}</div>
         ${total > 0
-          ? `<div class="intro-count">本夜共 ${total} 位角色行动</div>`
-          : `<div class="intro-count" style="color:var(--txt2)">本夜无角色行动</div>`
+          ? `<div class="intro-count">${S.nightActCount(total)}</div>`
+          : `<div class="intro-count" style="color:var(--txt2)">${S.nightNoAct}</div>`
         }
       </div>
     `;
@@ -1196,19 +1584,19 @@ function renderNight() {
           return `<span class="evil-tag">${esc(playerDisplay(p))}<span class="evil-char">·${esc(ch?.name||'')}</span></span>`;
         };
         html += `<div class="nop-card">
-          <div class="nop-hdr" style="color:#ff6b8a;letter-spacing:.6px">首夜 · 邪恶阵营互认</div>
+          <div class="nop-hdr" style="color:#ff6b8a;letter-spacing:.6px">${S.evilRevealHdr}</div>
           ${demons.length ? `<div class="evil-row">
-            <div class="evil-lbl" style="color:var(--demon)">恶魔</div>
+            <div class="evil-lbl" style="color:var(--demon)">${S.evilDemonLbl}</div>
             <div class="evil-val">${demons.map(pTag).join('')}</div>
           </div>` : ''}
           ${minions.length ? `<div class="evil-row">
-            <div class="evil-lbl" style="color:var(--minion)">爪牙</div>
+            <div class="evil-lbl" style="color:var(--minion)">${S.evilMinionLbl}</div>
             <div class="evil-val">${minions.map(pTag).join('')}</div>
           </div>` : ''}
           <div style="padding:8px 14px 10px;font-size:11px;color:var(--txt2);line-height:1.6">
             ${demons.length && minions.length
-              ? '向恶魔展示爪牙身份及号码，再向每位爪牙展示恶魔身份及号码。'
-              : demons.length ? '本局无爪牙，无需互认。' : '本局无恶魔，无需互认。'}
+              ? S.evilRevealBoth
+              : demons.length ? S.evilRevealNoMinion : S.evilRevealNoDemon}
           </div>
         </div>`;
       }
@@ -1219,13 +1607,13 @@ function renderNight() {
       if (unused.length > 0) {
         const bCount = G.demonBluffs.length;
         html += `<div class="nop-card">
-          <div class="nop-hdr" style="color:var(--demon);letter-spacing:.6px">首夜 · 恶魔不在场身份</div>
+          <div class="nop-hdr" style="color:var(--demon);letter-spacing:.6px">${S.bluffHdr}</div>
           <div style="padding:6px 14px 2px;font-size:12px;color:var(--txt2);line-height:1.6">
-            选择3个未分配角色，展示给恶魔作为可声称的身份
+            ${S.bluffDesc}
           </div>
           <div class="bluff-count-row">
-            <span class="bluff-count" id="bluff-count">已选 ${bCount} / 3</span>
-            ${bCount > 0 ? `<button style="font-size:11px;color:var(--txt2);background:none;border:none;cursor:pointer;padding:0" onclick="clearBluffs()">清空</button>` : ''}
+            <span class="bluff-count" id="bluff-count">${S.bluffSelected(bCount)}</span>
+            ${bCount > 0 ? `<button style="font-size:11px;color:var(--txt2);background:none;border:none;cursor:pointer;padding:0" onclick="clearBluffs()">${S.bluffClear}</button>` : ''}
           </div>
           <div class="bluff-grid">
             ${unused.map(c => {
@@ -1244,7 +1632,7 @@ function renderNight() {
 
     if (total > 0) {
       html += `<div class="nop-card">
-        <div class="nop-hdr">行动顺序预览</div>
+        <div class="nop-hdr">${S.nightOrderHdr}</div>
         ${G.nightSteps.map((s, i) => `
           <div class="nop-row">
             <span class="nop-num">${i+1}</span>
@@ -1258,7 +1646,7 @@ function renderNight() {
 
     html += `<div class="night-nav">
       <button class="btn ${total>0?'btn-night':'btn-day'}" onclick="nightAction()">
-        ${total > 0 ? '开始行动 →' : '跳过，进入白天 →'}
+        ${total > 0 ? S.nightBegin : S.nightSkipDay}
       </button>
     </div>`;
 
@@ -1279,49 +1667,49 @@ function renderNight() {
           <img class="char-hero-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">
           <div class="char-hero-right">
             <div class="char-hero-name">${esc(char.name)}</div>
-            <span class="tt ${team.cls||''}">${team.label||char.team}</span>
-            ${s.perceivedChar ? `<div class="perceived-badge">认知身份 · 实际为 ${esc(s.realChar.name)}</div>` : ''}
+            <span class="tt ${team.cls||''}">${teamLabel(char.team)}</span>
+            ${s.perceivedChar ? `<div class="perceived-badge">${S.perceivedBadge(esc(s.realChar.name))}</div>` : ''}
             <div class="char-hero-player">👤 ${esc(playerDisplay(player))}</div>
           </div>
         </div>
         ${reminder
           ? `<div class="char-reminder">
-               <div class="rem-lbl">主持人提示</div>
+               <div class="rem-lbl">${S.reminderLbl}</div>
                <div class="rem-txt">${esc(reminder)}</div>
              </div>`
           : `<div class="char-reminder" style="color:var(--txt2);font-size:13px;text-align:center">
-               （本步骤无特定提示）
+               ${S.noReminder}
              </div>`
         }
         <div class="note-section">
           <div class="note-item">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">
-              <span class="note-lbl from" style="margin-bottom:0">← 玩家选择 / 告知我</span>
+              <span class="note-lbl from" style="margin-bottom:0">${S.noteFromLbl}</span>
               <label class="no-choice-lbl">
                 <input type="checkbox" id="no-choice-cb" ${s.noChoice ? 'checked' : ''} onchange="toggleNoChoice(this.checked)">
-                不选择
+                ${S.noChoiceLbl}
               </label>
             </div>
-            <textarea id="note-from" class="note-ta" placeholder="记录玩家的选择或给出的信息…"
+            <textarea id="note-from" class="note-ta" placeholder="${S.noteFromPlaceholder}"
               style="${s.noChoice ? 'display:none' : ''}">${esc(s.noteFrom)}</textarea>
-            ${s.noChoice ? '<div class="no-choice-ph">玩家本轮不选择</div>' : ''}
+            ${s.noChoice ? `<div class="no-choice-ph">${S.noChoicePh}</div>` : ''}
           </div>
           <div class="note-item">
             <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px">
-              <label class="note-lbl to">→ 我告知玩家</label>
+              <label class="note-lbl to">${S.noteToLbl}</label>
               <label class="lie-lbl">
                 <input type="checkbox" id="lie-cb" ${s.noteLie ? 'checked' : ''}>
-                错误信息
+                ${S.noteLieLbl}
               </label>
             </div>
-            <textarea id="note-to" class="note-ta" placeholder="记录我给玩家的信息…">${esc(s.noteTo)}</textarea>
+            <textarea id="note-to" class="note-ta" placeholder="${S.noteToPlaceholder}">${esc(s.noteTo)}</textarea>
           </div>
         </div>
       </div>
       <div class="night-nav">
-        <button class="btn btn-ghost" onclick="nightPrev()">← 上一步</button>
+        <button class="btn btn-ghost" onclick="nightPrev()">${S.nightPrev}</button>
         <button class="btn ${isLast?'btn-day':'btn-night'}" onclick="nightAction()">
-          ${isLast ? '结束夜晚 ✓' : '下一步 →'}
+          ${isLast ? S.nightEnd : S.nightNext}
         </button>
       </div>
     `;
@@ -1370,7 +1758,7 @@ function clearBluffs() {
 function updateBluffUI() {
   const count = G.demonBluffs.length;
   const countEl = document.getElementById('bluff-count');
-  if (countEl) countEl.textContent = `已选 ${count} / 3`;
+  if (countEl) countEl.textContent = S.bluffSelected(count);
   document.querySelectorAll('.bluff-item').forEach(el => {
     const charId = el.dataset.charId;
     const isSel = G.demonBluffs.includes(charId);
@@ -1398,7 +1786,7 @@ function toggleNoChoice(checked) {
   G.nightSteps[G.step].noChoice = checked;
   const ta = document.getElementById('note-from');
   const ph = document.getElementById('no-choice-ph') ||
-    (() => { const d = document.createElement('div'); d.id = 'no-choice-ph'; d.className = 'no-choice-ph'; d.textContent = '玩家本轮不选择'; ta.parentNode.insertBefore(d, ta.nextSibling); return d; })();
+    (() => { const d = document.createElement('div'); d.id = 'no-choice-ph'; d.className = 'no-choice-ph'; d.textContent = S.noChoicePh; ta.parentNode.insertBefore(d, ta.nextSibling); return d; })();
   if (ta) ta.style.display = checked ? 'none' : 'block';
   if (ph) ph.style.display = checked ? 'block' : 'none';
 }
@@ -1443,19 +1831,19 @@ function endNight() {
 // ══════════════════════════════════════════════
 function renderNightSummary() {
   showScreen('night-summary');
-  document.getElementById('sum-badge').textContent = `第 ${G.nightNum} 夜`;
+  document.getElementById('sum-badge').textContent = S.sumBadge(G.nightNum);
 
   const total = G.nightSteps.length;
   const withNotes = G.nightSteps.filter(s => s.noteFrom.trim() || s.noteTo.trim()).length;
   document.getElementById('sum-sub').textContent =
     total === 0
-      ? '本夜无角色行动。'
-      : `共 ${total} 位角色行动，其中 ${withNotes} 条有记录。请核查后进入白天。`;
+      ? S.sumNoAct
+      : S.sumSub(total, withNotes);
 
   const body = document.getElementById('sum-body');
 
   if (total === 0) {
-    body.innerHTML = `<div style="text-align:center;padding:40px 0;color:var(--txt2)">本夜无行动记录。</div>`;
+    body.innerHTML = `<div style="text-align:center;padding:40px 0;color:var(--txt2)">${S.sumBodyNoAct}</div>`;
     return;
   }
 
@@ -1473,29 +1861,29 @@ function renderNightSummary() {
             <div class="sum-card-name">${esc(s.char.name)}</div>
             <div class="sum-card-player">
               ${esc(playerDisplay(s.player))}
-              <span class="tt ${team.cls||''}" style="margin-left:4px">${team.label||s.char.team}</span>
+              <span class="tt ${team.cls||''}" style="margin-left:4px">${teamLabel(s.char.team)}</span>
             </div>
           </div>
-          ${!hasAny ? '<span style="font-size:12px;color:var(--txt2);flex-shrink:0">无记录</span>' : ''}
+          ${!hasAny ? `<span style="font-size:12px;color:var(--txt2);flex-shrink:0">${S.sumNoRecord}</span>` : ''}
         </div>
         ${hasAny ? `<div class="sum-notes">
           ${s.noChoice ? `<div class="sum-row">
             <span class="sum-arrow" style="color:#a78bfa">←</span>
             <div class="sum-row-body">
-              <div class="sum-row-lbl from">玩家选择</div>
-              <div class="sum-row-val" style="color:var(--txt2);font-style:italic">不选择</div>
+              <div class="sum-row-lbl from">${S.sumPlayerChose}</div>
+              <div class="sum-row-val" style="color:var(--txt2);font-style:italic">${S.sumPassed}</div>
             </div>
           </div>` : (hasFrom ? `<div class="sum-row">
             <span class="sum-arrow" style="color:#a78bfa">←</span>
             <div class="sum-row-body">
-              <div class="sum-row-lbl from">玩家告知</div>
+              <div class="sum-row-lbl from">${S.sumPlayerTold}</div>
               <div class="sum-row-val">${esc(s.noteFrom)}</div>
             </div>
           </div>` : '')}
           ${hasTo ? `<div class="sum-row">
             <span class="sum-arrow" style="color:var(--cyan)">→</span>
             <div class="sum-row-body">
-              <div class="sum-row-lbl to">我给出的信息${s.noteLie ? '<span class="lie-tag">错误信息</span>' : ''}</div>
+              <div class="sum-row-lbl to">${S.sumITold}${s.noteLie ? `<span class="lie-tag">${S.noteLieLbl}</span>` : ''}</div>
               <div class="sum-row-val">${esc(s.noteTo)}</div>
             </div>
           </div>` : ''}
@@ -1560,26 +1948,26 @@ function renderDayActions() {
             <div class="sum-card-name">${esc(char.name)}</div>
             <div class="sum-card-player">
               ${esc(playerDisplay(p))}
-              <span class="tt ${team.cls||''}" style="margin-left:4px">${team.label||char.team}</span>
-              ${!p.alive ? '<span class="rv-tag nk" style="margin-left:4px">已死亡</span>' : ''}
+              <span class="tt ${team.cls||''}" style="margin-left:4px">${teamLabel(char.team)}</span>
+              ${!p.alive ? `<span class="rv-tag nk" style="margin-left:4px">${S.dayDeadTag}</span>` : ''}
             </div>
           </div>
         </div>
         <div style="padding:0 12px 12px;display:flex;flex-direction:column;gap:8px">
           <div class="note-item">
-            <label class="note-lbl from">← 玩家告知</label>
-            <textarea class="note-ta" placeholder="记录玩家的选择或给出的信息…"
+            <label class="note-lbl from">${S.dayNoteFromLbl}</label>
+            <textarea class="note-ta" placeholder="${S.noteFromPlaceholder}"
               oninput="saveDayNote('${p.id}','noteFrom',this.value)">${esc(noteFrom)}</textarea>
           </div>
           <div class="note-item">
             <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px">
-              <label class="note-lbl to">→ 我告知玩家</label>
+              <label class="note-lbl to">${S.dayNoteToLbl}</label>
               <label class="lie-lbl">
                 <input type="checkbox" onchange="saveDayNote('${p.id}','noteLie',this.checked)" ${noteLie ? 'checked' : ''}>
-                错误信息
+                ${S.noteLieLbl}
               </label>
             </div>
-            <textarea class="note-ta" placeholder="记录我给玩家的信息…"
+            <textarea class="note-ta" placeholder="${S.noteToPlaceholder}"
               oninput="saveDayNote('${p.id}','noteTo',this.value)">${esc(noteTo)}</textarea>
           </div>
         </div>
@@ -1589,16 +1977,16 @@ function renderDayActions() {
 
   return `
     <div class="nop-card" style="margin-bottom:16px">
-      <div class="nop-hdr" style="color:var(--cyan);letter-spacing:.6px">白天行动角色</div>
+      <div class="nop-hdr" style="color:var(--cyan);letter-spacing:.6px">${S.dayActionHdr}</div>
     </div>
     ${cards}
   `;
 }
 
 function renderDay() {
-  document.getElementById('day-badge').textContent = `第 ${G.nightNum} 天`;
+  document.getElementById('day-badge').textContent = S.dayBadge(G.nightNum);
   document.getElementById('day-sub').textContent =
-    G.daySubPhase === 'nomination' ? '提名阶段' : '讨论阶段';
+    G.daySubPhase === 'nomination' ? S.dayNomination : S.dayDiscussion;
 
   const body = document.getElementById('day-body');
   body.innerHTML = G.daySubPhase === 'nomination'
@@ -1621,8 +2009,8 @@ function renderDiscussionPhase() {
     <div style="height:12px"></div>
     ${renderDayActions()}
     <button class="btn" style="background:rgba(255,167,38,.12);color:var(--amber);width:100%;margin-bottom:10px"
-      onclick="enterNominationPhase()">进入提名阶段 →</button>
-    <button class="btn btn-ghost" onclick="saveGame()" style="margin-bottom:10px">💾 保存游戏进度</button>
+      onclick="enterNominationPhase()">${S.enterNomination}</button>
+    <button class="btn btn-ghost" onclick="saveGame()" style="margin-bottom:10px">${S.saveGame}</button>
     <div style="height:32px"></div>
   `;
 }
@@ -1634,23 +2022,23 @@ function renderNominationPhase() {
 
   let html = renderPlayerList('day');
   html += `<div style="height:12px"></div>`;
-  html += `<div class="nom-sect-ttl">提名记录</div>`;
+  html += `<div class="nom-sect-ttl">${S.nomTitle}</div>`;
 
   if (noms.length === 0 && !G.currentNom) {
-    html += `<div style="font-size:13px;color:var(--txt2);font-style:italic;padding:4px 0 12px">尚无提名</div>`;
+    html += `<div style="font-size:13px;color:var(--txt2);font-style:italic;padding:4px 0 12px">${S.nomNone}</div>`;
   }
 
   noms.forEach(nom => {
     const nominee = G.players.find(p => p.id === nom.nomineeId);
     html += `<div class="nom-hist-item">
       <div class="nom-hist-hdr">
-        <span>${esc(nom.nominatorName)} 提名 ${esc(nom.nomineeName)}</span>
-        <span style="color:var(--amber);font-size:12px;font-weight:700">${nom.voters.length} 票 / ${nom.totalAlive} 人</span>
-        <button class="kill-btn exec" onclick="killPlayer('${nom.nomineeId}','execution')" style="font-size:11px;padding:3px 8px">处决</button>
+        <span>${S.nomOf(esc(nom.nominatorName), esc(nom.nomineeName))}</span>
+        <span style="color:var(--amber);font-size:12px;font-weight:700">${S.nomVotesCount(nom.voters.length, nom.totalAlive)}</span>
+        <button class="kill-btn exec" onclick="killPlayer('${nom.nomineeId}','execution')" style="font-size:11px;padding:3px 8px">${S.nomExecBtn}</button>
       </div>
       ${nom.voters.length > 0
-        ? `<div class="nom-hist-votes">投票：${nom.voters.map(v => esc(v.name)).join('、')}</div>`
-        : `<div class="nom-hist-votes" style="font-style:italic">无人投票</div>`}
+        ? `<div class="nom-hist-votes">${S.nomVotesList}${nom.voters.map(v => esc(v.name)).join('、')}</div>`
+        : `<div class="nom-hist-votes" style="font-style:italic">${S.nomNoVotes}</div>`}
     </div>`;
   });
 
@@ -1658,41 +2046,41 @@ function renderNominationPhase() {
     const nomId  = G.currentNom.nominatorId;
     const nomeeId = G.currentNom.nomineeId;
     html += `<div class="nom-form">
-      <div class="nom-form-ttl">发起提名</div>
+      <div class="nom-form-ttl">${S.nomFormTitle}</div>
       <select class="nom-sel" id="nom-nominator">
-        <option value="">选择提名人（存活玩家）…</option>
+        <option value="">${S.nomSelectNominator}</option>
         ${G.players.filter(p => p.alive).map(p =>
           `<option value="${p.id}" ${p.id === nomId ? 'selected' : ''}>${esc(playerDisplay(p))}</option>`
         ).join('')}
       </select>
       <select class="nom-sel" id="nom-nominee">
-        <option value="">选择被提名人…</option>
+        <option value="">${S.nomSelectNominee}</option>
         ${G.players.map(p =>
-          `<option value="${p.id}" ${p.id === nomeeId ? 'selected' : ''}>${esc(playerDisplay(p))}${!p.alive ? '（死）' : ''}</option>`
+          `<option value="${p.id}" ${p.id === nomeeId ? 'selected' : ''}>${esc(playerDisplay(p))}${!p.alive ? S.nomDead : ''}</option>`
         ).join('')}
       </select>
-      <div class="nom-voter-lbl">投票情况（勾选投了赞成票的玩家）</div>
+      <div class="nom-voter-lbl">${S.nomVoterLbl}</div>
       <div class="nom-voter-grid">
         ${G.players.map(p => `
           <label class="nom-voter-item">
             <input type="checkbox" class="voter-cb" data-pid="${p.id}"
               ${G.currentNom.voterIds.includes(p.id) ? 'checked' : ''}>
             <span>${esc(playerDisplay(p))}${!p.alive
-              ? `<span style="color:var(--txt2);font-size:11px"> 死</span>` : ''}</span>
+              ? `<span style="color:var(--txt2);font-size:11px">${S.nomDeadSmall}</span>` : ''}</span>
           </label>
         `).join('')}
       </div>
-      <button class="btn btn-primary" onclick="confirmNomination()" style="width:100%;margin-bottom:8px">确认提名</button>
-      <button class="btn btn-ghost" onclick="G.currentNom=null;renderDay()" style="width:100%;font-size:13px">取消</button>
+      <button class="btn btn-primary" onclick="confirmNomination()" style="width:100%;margin-bottom:8px">${S.nomConfirm}</button>
+      <button class="btn btn-ghost" onclick="G.currentNom=null;renderDay()" style="width:100%;font-size:13px">${S.nomCancel}</button>
     </div>`;
   } else {
     html += `<button class="btn" style="background:rgba(124,77,255,.1);color:var(--accent);width:100%;margin-bottom:16px"
-      onclick="startNewNomination()">＋ 发起新提名</button>`;
+      onclick="startNewNomination()">${S.nomNew}</button>`;
   }
 
   html += `
-    <button class="btn btn-ghost" onclick="saveGame()" style="margin-bottom:10px">💾 保存游戏进度</button>
-    <button class="btn btn-night" onclick="startNight(${nextNight})">进入第 ${nextNight} 夜 🌙</button>
+    <button class="btn btn-ghost" onclick="saveGame()" style="margin-bottom:10px">${S.saveGame}</button>
+    <button class="btn btn-night" onclick="startNight(${nextNight})">${S.enterNight(nextNight)}</button>
     <div style="height:32px"></div>
   `;
   return html;
@@ -1716,9 +2104,9 @@ function nomSetNominator(id) {
   // Update nominee options in-place without full re-render
   const sel = document.getElementById('nom-nominee');
   if (sel) {
-    sel.innerHTML = `<option value="">选择被提名人…</option>` +
+    sel.innerHTML = `<option value="">${S.nomSelectNominee}</option>` +
       G.players.map(p =>
-        `<option value="${p.id}">${esc(playerDisplay(p))}${!p.alive ? '（死）' : ''}</option>`
+        `<option value="${p.id}">${esc(playerDisplay(p))}${!p.alive ? S.nomDead : ''}</option>`
       ).join('');
     sel.value = '';
   }
@@ -1736,7 +2124,7 @@ function nomToggleVoter(id, checked) {
 function confirmNomination() {
   if (!G.currentNom) return;
   const { nominatorId, nomineeId, voterIds } = G.currentNom;
-  if (!nominatorId || !nomineeId) { alert('请先选择提名人和被提名人'); return; }
+  if (!nominatorId || !nomineeId) { alert(S.nominatorRequired); return; }
 
   const dayEntry = G.dayLog[G.dayLog.length - 1];
   if (!dayEntry) return;
@@ -1763,7 +2151,6 @@ function confirmNomination() {
 // SHARED: PLAYER LIST RENDER
 // ══════════════════════════════════════════════
 function renderPlayerList(context) {
-  const killLabel = context === 'day' ? '处决' : '死亡';
   const rows = G.players.map(p => {
     const char = p.charId ? G.charMap[p.charId] : null;
     const name = playerDisplay(p);
@@ -1779,19 +2166,19 @@ function renderPlayerList(context) {
         ${context === 'day'
           ? `<div style="display:flex;align-items:center;gap:4px;flex-shrink:0">
                ${p.alive
-                 ? `<button class="kill-btn" onclick="killPlayer('${p.id}','death')">死亡</button>`
+                 ? `<button class="kill-btn" onclick="killPlayer('${p.id}','death')">${S.killDeath}</button>`
                  : `<span class="dead-mark" style="margin-right:2px">☠</span>`}
-               <button class="kill-btn exec" onclick="killPlayer('${p.id}','execution')">处决</button>
+               <button class="kill-btn exec" onclick="killPlayer('${p.id}','execution')">${S.killExec}</button>
              </div>`
           : (p.alive
-              ? `<button class="kill-btn" onclick="killPlayer('${p.id}','death')">死亡</button>`
+              ? `<button class="kill-btn" onclick="killPlayer('${p.id}','death')">${S.killDeath}</button>`
               : `<span class="dead-mark">☠</span>`)}
       </div>
     `;
   }).join('');
 
   return `<div class="plist">
-    <div class="plist-hdr">玩家状态</div>
+    <div class="plist-hdr">${S.playerStatus}</div>
     ${rows}
   </div>`;
 }
@@ -1810,8 +2197,8 @@ function killPlayer(playerId, type = 'death') {
   const charName = p.charId ? (G.charMap[p.charId]?.name || '') : '';
   const label = charName ? `${name}（${charName}）` : name;
   const confirmMsg = type === 'execution'
-    ? (p.alive ? `处决 ${label}？` : `${label} 已死亡，仍要记录此次处决？`)
-    : `确认让 ${label} 死亡？`;
+    ? (p.alive ? S.confirmExec(label) : S.confirmExecDead(label))
+    : S.confirmDeath(label);
 
   if (!confirm(confirmMsg)) return;
 
@@ -1873,19 +2260,19 @@ function showGameOver(result) {
   G.gameResult = result;
   showScreen('gameover');
   document.getElementById('go-icon').textContent  = result.winner === 'good' ? '✨' : '💀';
-  document.getElementById('go-title').textContent = result.winner === 'good' ? '善良阵营获胜！' : '邪恶阵营获胜！';
-  document.getElementById('go-msg').textContent   = result.msg;
+  document.getElementById('go-title').textContent = result.winner === 'good' ? S.goodWins : S.evilWins;
+  document.getElementById('go-msg').textContent   = S[result.msgKey] || result.msg || '';
 }
 
 // ══════════════════════════════════════════════
 // SAVE / LOAD
 // ══════════════════════════════════════════════
 function saveGame() {
-  const phaseLabel = G.phase === 'day' ? `第${G.nightNum}天` : `第${G.nightNum}夜`;
+  const phaseLabel = G.phase === 'day' ? S.savePhaseDay(G.nightNum) : S.savePhaseNight(G.nightNum);
   const saveData = {
     saveVersion: 1,
     savedAt: new Date().toISOString(),
-    scriptName: G.meta.name || '未知剧本',
+    scriptName: G.meta.name || S.unknownScript,
     script: {
       meta: G.meta,
       characters: G.characters,
@@ -1918,7 +2305,7 @@ function saveGame() {
 function loadSaveFile(text) {
   const data = JSON.parse(text);
   if (!data.saveVersion || !data.script || !data.game)
-    throw new Error('不是有效的存档文件');
+    throw new Error(S.saveInvalidFile);
 
   G.meta       = data.script.meta || {};
   G.characters = data.script.characters || [];
@@ -1955,7 +2342,7 @@ document.getElementById('save-file-in').addEventListener('change', e => {
   const reader = new FileReader();
   reader.onload = ev => {
     try { loadSaveFile(ev.target.result); }
-    catch(err) { alert('存档加载失败：' + err.message); }
+    catch(err) { alert(S.saveLoadError + err.message); }
   };
   reader.readAsText(file);
   e.target.value = '';
@@ -1984,7 +2371,7 @@ function loadScript(src) {
 
 async function exportPDF() {
   const btn = document.getElementById('rv-export-btn');
-  btn.textContent = '生成中…'; btn.disabled = true;
+  btn.textContent = S.pdfGenerating; btn.disabled = true;
   try {
     await loadScript('https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js');
     await loadScript('https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js');
@@ -2014,11 +2401,11 @@ async function exportPDF() {
     const h = (canvas.height / 2) * ptPerPx;
     const pdf = new jsPDF({ unit: 'pt', format: [w, h] });
     pdf.addImage(imgData, 'JPEG', 0, 0, w, h);
-    pdf.save('botc-复盘.pdf');
+    pdf.save(S.pdfFilename);
   } catch(e) {
-    alert('导出失败：' + e.message);
+    alert(S.pdfFailed + e.message);
   } finally {
-    btn.textContent = '导出 PDF'; btn.disabled = false;
+    btn.textContent = S.pdfExport; btn.disabled = false;
     btn.style.visibility = '';
   }
 }
@@ -2029,15 +2416,15 @@ async function exportPDF() {
 function showReview() {
   showScreen('review');
   document.getElementById('rv-sub').textContent =
-    (G.meta.name || '未知剧本') + ' · ' + G.players.length + ' 名玩家';
+    S.reviewSub(G.meta.name || S.unknownScript, G.players.length);
 
   let html = '';
 
   // ── Initial role assignments ──
-  html += `<div class="rv-sec-lbl">初始角色分配</div>`;
+  html += `<div class="rv-sec-lbl">${S.reviewInitialRoles}</div>`;
   if (G.initialRoles.length === 0) {
     html += `<div style="font-size:13px;color:var(--txt2);padding:8px 0 12px">
-      （从存档恢复的游戏可能缺少此信息）</div>`;
+      ${S.reviewNoInitial}</div>`;
   } else {
     G.initialRoles.forEach(r => {
       const char = r.charId ? G.charMap[r.charId] : null;
@@ -2049,16 +2436,16 @@ function showReview() {
           ? `<img class="rv-role-img" src="${esc(char.image||'')}" onerror="this.style.visibility='hidden'" alt="">`
           : `<div class="rv-role-img"></div>`}
         <div class="rv-role-info">
-          <div class="rv-role-name">${esc(r.name || `座位 ${r.seat}`)}${isDead ? ' ☠' : ''}</div>
+          <div class="rv-role-name">${esc(r.name || S.seatLabel(r.seat))}${isDead ? ' ☠' : ''}</div>
           <div class="rv-role-meta">${esc(r.charName || '—')}${team
-            ? ` &nbsp;<span class="tt ${team.cls}">${team.label}</span>` : ''}</div>
+            ? ` &nbsp;<span class="tt ${team.cls}">${teamLabel(r.charId ? G.charMap[r.charId]?.team : '')}</span>` : ''}</div>
         </div>
       </div>`;
     });
   }
 
   // ── Timeline ──
-  html += `<div class="rv-sec-lbl" style="margin-top:16px">游戏流程</div>`;
+  html += `<div class="rv-sec-lbl" style="margin-top:16px">${S.reviewTimeline}</div>`;
 
   const allNs = [
     ...G.nightLog.map(e => e.nightNum),
@@ -2077,12 +2464,12 @@ function showReview() {
     html += `<div class="rv-block">
       <div class="rv-block-hdr night">
         <span>🌙</span>
-        <span class="rv-block-hdr-title">第 ${n} 夜</span>
+        <span class="rv-block-hdr-title">${S.reviewNightHdr(n)}</span>
       </div>`;
 
     if (!nightEntry || nightEntry.steps.length === 0) {
       if (nightKills.length === 0) {
-        html += `<div class="rv-empty">本夜无行动记录</div>`;
+        html += `<div class="rv-empty">${S.reviewNightEmpty}</div>`;
       }
     } else {
       nightEntry.steps.forEach(s => {
@@ -2097,7 +2484,7 @@ function showReview() {
             <div class="rv-action-head">${esc(s.charName)}</div>
             <div class="rv-action-player">👤 ${esc(s.playerName)}</div>
             ${hasFrom ? `<div class="rv-note from">← ${esc(s.noteFrom)}</div>` : ''}
-            ${hasTo   ? `<div class="rv-note to">→ ${esc(s.noteTo)}${s.noteLie ? '<span class="lie-tag">错误信息</span>' : ''}</div>` : ''}
+            ${hasTo   ? `<div class="rv-note to">→ ${esc(s.noteTo)}${s.noteLie ? `<span class="lie-tag">${S.noteLieLbl}</span>` : ''}</div>` : ''}
           </div>
         </div>`;
       });
@@ -2107,7 +2494,7 @@ function showReview() {
       html += `<div class="rv-kill-row">
         <span>💀</span>
         <span class="rv-kill-body">${esc(k.playerName)}${k.charName
-          ? `（${esc(k.charName)}）` : ''}<span class="rv-tag nk">夜间</span></span>
+          ? `（${esc(k.charName)}）` : ''}<span class="rv-tag nk">${S.reviewNightTag}</span></span>
       </div>`;
     });
 
@@ -2118,7 +2505,7 @@ function showReview() {
       html += `<div class="rv-block">
         <div class="rv-block-hdr day">
           <span>☀️</span>
-          <span class="rv-block-hdr-title">第 ${n} 天</span>
+          <span class="rv-block-hdr-title">${S.reviewDayHdr(n)}</span>
         </div>`;
       // Day actions
       const dayActs = (dayEntry.dayActions || []).filter(a => a.noteFrom?.trim() || a.noteTo?.trim());
@@ -2134,7 +2521,7 @@ function showReview() {
             <div class="rv-action-head">${esc(s.charName)}</div>
             <div class="rv-action-player">👤 ${esc(s.playerName)}</div>
             ${hasFrom ? `<div class="rv-note from">← ${esc(s.noteFrom)}</div>` : ''}
-            ${hasTo   ? `<div class="rv-note to">→ ${esc(s.noteTo)}${s.noteLie ? '<span class="lie-tag">错误信息</span>' : ''}</div>` : ''}
+            ${hasTo   ? `<div class="rv-note to">→ ${esc(s.noteTo)}${s.noteLie ? `<span class="lie-tag">${S.noteLieLbl}</span>` : ''}</div>` : ''}
           </div>
         </div>`;
       });
@@ -2144,10 +2531,10 @@ function showReview() {
         html += `<div class="rv-kill-row" style="align-items:flex-start;padding:9px 13px">
           <span>🗳️</span>
           <span class="rv-kill-body" style="line-height:1.6">
-            ${esc(nom.nominatorName)} 提名 ${esc(nom.nomineeName)}
+            ${S.reviewNomOf(esc(nom.nominatorName), esc(nom.nomineeName))}
             <span class="rv-tag" style="background:rgba(255,167,38,.12);color:var(--amber)">${nom.voters.length}票</span>
             ${nom.voters.length > 0
-              ? `<br><span style="font-size:11px;color:var(--txt2)">投票：${nom.voters.map(v => esc(v.name)).join('、')}</span>`
+              ? `<br><span style="font-size:11px;color:var(--txt2)">${S.reviewVotesLabel}${nom.voters.map(v => esc(v.name)).join('、')}</span>`
               : ''}
           </span>
         </div>`;
@@ -2155,20 +2542,20 @@ function showReview() {
 
       const dayDeaths = dayEntry.dayDeaths || [];
       if (dayEntry.executions.length === 0 && dayActs.length === 0 && noms.length === 0 && dayDeaths.length === 0) {
-        html += `<div class="rv-empty">本天无记录</div>`;
+        html += `<div class="rv-empty">${S.reviewDayEmpty}</div>`;
       } else {
         dayDeaths.forEach(k => {
           html += `<div class="rv-kill-row">
             <span>💀</span>
             <span class="rv-kill-body">${esc(k.playerName)}${k.charName
-              ? `（${esc(k.charName)}）` : ''}<span class="rv-tag nk">白天死亡</span></span>
+              ? `（${esc(k.charName)}）` : ''}<span class="rv-tag nk">${S.reviewDayDeathTag}</span></span>
           </div>`;
         });
         dayEntry.executions.forEach(k => {
           html += `<div class="rv-kill-row">
             <span>⚖️</span>
             <span class="rv-kill-body">${esc(k.playerName)}${k.charName
-              ? `（${esc(k.charName)}）` : ''}<span class="rv-tag exec">处决</span></span>
+              ? `（${esc(k.charName)}）` : ''}<span class="rv-tag exec">${S.reviewExecTag}</span></span>
           </div>`;
         });
       }
@@ -2181,8 +2568,8 @@ function showReview() {
     const r = G.gameResult;
     html += `<div class="rv-result">
       <div class="rv-result-icon">${r.winner === 'good' ? '✨' : '💀'}</div>
-      <div class="rv-result-title">${r.winner === 'good' ? '善良阵营获胜！' : '邪恶阵营获胜！'}</div>
-      <div class="rv-result-msg">${esc(r.msg)}</div>
+      <div class="rv-result-title">${r.winner === 'good' ? S.goodWins : S.evilWins}</div>
+      <div class="rv-result-msg">${esc(S[r.msgKey] || r.msg || '')}</div>
     </div>`;
   }
 
@@ -2194,7 +2581,7 @@ function showReview() {
 // UTILS
 // ══════════════════════════════════════════════
 function playerDisplay(p) {
-  return p.name ? `${p.seat}号 ${p.name}` : `座位 ${p.seat}`;
+  return S.playerDisplay(p.seat, p.name);
 }
 
 function esc(str) {
