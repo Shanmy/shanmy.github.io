@@ -20,6 +20,7 @@ Each screening gets a language plus caption info:
 Output:
   personal/movies/latest.json
   personal/movies/wikidata_cache.json    (Wikidata lookups, reused across runs)
+  personal/movies/douban_cache.json      (Chinese titles read from Douban pages)
   personal/movies/douban_overrides.json (hand-written Chinese titles / Douban IDs, optional)
 """
 
@@ -260,6 +261,41 @@ def label_of(qid):
         e = wd_api(action="wbgetentities", ids=qid, props="labels", languages="en")["entities"][qid]
         _lang_label[qid] = e.get("labels", {}).get("en", {}).get("value")
     return _lang_label[qid]
+
+
+# ── Douban: official Chinese title, read from the film's own page ─────────────
+# One request per film ever (results cached), a few seconds apart, capped per run.
+# If Douban answers with its bot check we stop for this run and try again tomorrow.
+DOUBAN_DELAY = 5
+DOUBAN_MAX_PER_RUN = 40
+_douban_cache: dict = {}
+_douban_state = {"blocked": False, "fetched": 0}
+
+
+def douban_title(subject_id: str) -> str | None:
+    if subject_id in _douban_cache:
+        return _douban_cache[subject_id]
+    if _douban_state["blocked"] or _douban_state["fetched"] >= DOUBAN_MAX_PER_RUN:
+        return None
+    _douban_state["fetched"] += 1
+    time.sleep(DOUBAN_DELAY)
+    try:
+        r = session.get(f"https://movie.douban.com/subject/{subject_id}/", timeout=30,
+                        allow_redirects=False)
+    except requests.RequestException as e:
+        print(f"  douban {subject_id}: {e}", file=sys.stderr)
+        return None
+    if r.status_code == 404:
+        _douban_cache[subject_id] = None
+        return None
+    m = re.search(r"<title>\s*(.+?)\s*\(豆瓣\)\s*</title>", r.text, re.S) if r.status_code == 200 else None
+    if not m:
+        print(f"  douban blocked or unexpected response ({r.status_code}); "
+              f"skipping Douban for the rest of this run", file=sys.stderr)
+        _douban_state["blocked"] = True
+        return None
+    _douban_cache[subject_id] = BeautifulSoup(m.group(1), "html.parser").get_text().strip()
+    return _douban_cache[subject_id]
 
 
 # ── Collected data ─────────────────────────────────────────────────────────────
@@ -584,8 +620,8 @@ def resolve_languages():
         # unqualified title search would match some older namesake.
         wd = wikidata_film(f["title"], f["year"]) if f["year"] or indie_only else {}
         ov = _overrides.get(norm_title(f["title"]), {})
-        f["zh"] = ov.get("zh") or wd.get("zh")
         douban = ov.get("douban") or wd.get("douban")
+        f["zh"] = ov.get("zh") or (douban and douban_title(douban))
         f["douban"] = f"https://movie.douban.com/subject/{douban}/" if douban else None
         if not f["lang"] and (indie_only or any(s["subs"] for s in f["screenings"])) and wd.get("lang"):
             f["lang"], f["lang_src"] = wd["lang"], "wikidata"
@@ -599,11 +635,14 @@ def resolve_languages():
 
 
 def main():
-    global _wd_cache, _overrides
+    global _wd_cache, _overrides, _douban_cache
     os.makedirs(OUT_DIR, exist_ok=True)
     cache_path = os.path.join(OUT_DIR, "wikidata_cache.json")
     if os.path.exists(cache_path):
         _wd_cache = json.load(open(cache_path))
+    douban_path = os.path.join(OUT_DIR, "douban_cache.json")
+    if os.path.exists(douban_path):
+        _douban_cache = json.load(open(douban_path))
     ov_path = os.path.join(OUT_DIR, "douban_overrides.json")
     if os.path.exists(ov_path):
         _overrides = {norm_title(k): v for k, v in json.load(open(ov_path)).items()
@@ -655,6 +694,8 @@ def main():
         json.dump(out, fp, ensure_ascii=False, separators=(",", ":"))
     with open(cache_path, "w") as fp:
         json.dump(_wd_cache, fp, ensure_ascii=False, indent=0, sort_keys=True)
+    with open(douban_path, "w") as fp:
+        json.dump(_douban_cache, fp, ensure_ascii=False, indent=0, sort_keys=True)
     total = sum(len(f["screenings"]) for f in out_films)
     print(f"Wrote {len(out_films)} films, {total} screenings, {len(used)} theaters")
     if not any(s["ok"] for s in status.values()):
