@@ -19,7 +19,8 @@ Each screening gets a language plus caption info:
 
 Output:
   personal/movies/latest.json
-  personal/movies/lang_cache.json   (Wikidata language lookups, reused across runs)
+  personal/movies/wikidata_cache.json    (Wikidata lookups, reused across runs)
+  personal/movies/douban_overrides.json (hand-written Chinese titles / Douban IDs, optional)
 """
 
 import json
@@ -158,11 +159,16 @@ def cap_flag(lang, subs, oc, presume_subs=False):
     return None
 
 
-# ── Wikidata language fallback ─────────────────────────────────────────────────
+# ── Wikidata: original language, Chinese title, Douban ID ─────────────────────
+# Chinese titles are Wikidata's Simplified-Chinese labels; Douban links come from
+# Wikidata property P4529 (Douban film ID). douban_overrides.json fills the gaps.
 FILM_CLASSES = {"Q11424", "Q24862", "Q506240", "Q202866", "Q93204", "Q226730",
                 "Q24869", "Q17123180", "Q20650540", "Q229390", "Q29168811"}
-_lang_cache: dict = {}
+# Simplified / mainland labels only — the generic "zh" label is often a Taiwan or HK title.
+ZH_LANGS = ["zh-cn", "zh-hans", "zh-sg", "zh-my"]
+_wd_cache: dict = {}
 _lang_label: dict = {}
+_overrides: dict = {}
 
 
 WIKIDATA_UA = "shanmy.github.io-movie-calendar/1.0 (https://shanmy.github.io)"
@@ -179,44 +185,74 @@ def wd_api(**params):
     return r.json()
 
 
-def wikidata_lang(title: str, year: int | None) -> str | None:
+def search_titles(title: str) -> list[str]:
+    """Title variants to try: program prefixes and print notes stripped."""
+    t = clean_title(title)
+    t = re.sub(r"\s*\((?:16|35|70)mm|4K[^)]*|Re-?release\)", "", t, flags=re.I)
+    t = re.sub(r"\s*[–-]\s*New 4K Restoration$|\s+Re-?Release$|\s+\d+(st|nd|rd|th) Anniversary$"
+               r"|\s+plus shorts.*$|,?\s+on (16|35|70)mm$", "", t, flags=re.I)
+    out = [t]
+    for sep in (": ", " - ", " presents: ", " Presents "):
+        if sep in t:
+            out.append(t.split(sep)[-1])
+    return list(dict.fromkeys(x.strip() for x in out if x.strip()))
+
+
+def _claim_ids(c, prop):
+    return [s["mainsnak"].get("datavalue", {}).get("value", {}).get("id") for s in c.get(prop, [])]
+
+
+def wikidata_film(title: str, year: int | None) -> dict:
+    """{lang, zh, douban} for the best-matching film item, {} if none."""
     key = f"{norm_title(title)}|{year or ''}"
-    if key in _lang_cache:
-        return _lang_cache[key]
-    result = None
+    if key in _wd_cache:
+        return _wd_cache[key]
+    result = {}
     try:
-        r = wd_api(action="wbsearchentities", search=clean_title(title), language="en",
-                   type="item", limit=8)
-        ids = [x["id"] for x in r.get("search", [])]
-        if ids:
+        for q in search_titles(title):
+            r = wd_api(action="wbsearchentities", search=q, language="en", type="item", limit=8)
+            # Only exact label/alias matches, so "Wicker" doesn't land on "The Wicker Man".
+            ids = [x["id"] for x in r.get("search", [])
+                   if norm_title(x.get("match", {}).get("text", "")) == norm_title(q)]
+            if not ids:
+                continue
             ents = wd_api(action="wbgetentities", ids="|".join(ids), props="claims|labels",
-                          languages="en")["entities"]
+                          languages="|".join(["en"] + ZH_LANGS))["entities"]
             for qid in ids:
                 c = ents[qid].get("claims", {})
-                p31 = {s["mainsnak"].get("datavalue", {}).get("value", {}).get("id") for s in c.get("P31", [])}
-                if not p31 & FILM_CLASSES:
+                if not set(_claim_ids(c, "P31")) & FILM_CLASSES:
                     continue
                 years = set()
-                for s in c.get("P577", []):
-                    v = s["mainsnak"].get("datavalue", {}).get("value", {}).get("time", "")
+                for st in c.get("P577", []):
+                    v = st["mainsnak"].get("datavalue", {}).get("value", {}).get("time", "")
                     if v[1:5].isdigit():
                         years.add(int(v[1:5]))
                 if year and years and not any(abs(y - year) <= 1 for y in years):
                     continue
-                langs = [s["mainsnak"].get("datavalue", {}).get("value", {}).get("id")
-                         for s in c.get("P364", [])]
-                langs = [l for l in langs if l]
-                if langs:
-                    result = label_of(langs[0])
+                langs = [l for l in _claim_ids(c, "P364") if l]
+                labels = ents[qid].get("labels", {})
+                zh = next((labels[l]["value"] for l in ZH_LANGS if l in labels), None)
+                if zh:  # "泥面人 (电影)" → "泥面人"
+                    zh = re.sub(r"\s*[（(][^)）]*[)）]$", "", zh) or None
+                douban = next((st["mainsnak"]["datavalue"]["value"] for st in c.get("P4529", [])
+                               if "datavalue" in st["mainsnak"]), None)
+                result = {"lang": normalize_lang(label_of(langs[0])) if langs else None,
+                          "zh": zh, "douban": douban}
+                break
+            if result:
                 break
     except Exception as e:  # network trouble shouldn't kill the run
         print(f"  wikidata lookup failed for {title!r}: {e}", file=sys.stderr)
-        return None
-    if result:
-        result = {"Standard Mandarin": "Mandarin", "Modern Greek": "Greek",
-                  "Yue Chinese": "Cantonese"}.get(result, result).replace(" language", "").title()
-    _lang_cache[key] = result
+        return {}
+    _wd_cache[key] = result
     return result
+
+
+def normalize_lang(l):
+    if not l:
+        return None
+    return {"Standard Mandarin": "Mandarin", "Modern Greek": "Greek",
+            "Yue Chinese": "Cantonese"}.get(l, l).replace(" language", "").title()
 
 
 def label_of(qid):
@@ -535,7 +571,7 @@ SOURCES = [
 
 
 def resolve_languages():
-    """Give every film a language; fill each screening's caption flag."""
+    """Give every film a language, Chinese title and Douban link; fill caption flags."""
     for f in films.values():
         explicit = [s["lang"] for s in f["screenings"] if s["lang"]]
         if explicit:
@@ -544,10 +580,15 @@ def resolve_languages():
                          for s in f["screenings"])
         # Chains tag foreign-language prints explicitly; an untagged chain film is
         # English (often a dub), so only ask Wikidata for indie films or subbed ones.
-        if not f["lang"] and (indie_only or any(s["subs"] for s in f["screenings"])):
-            wd = wikidata_lang(f["title"], f["year"])
-            if wd:
-                f["lang"], f["lang_src"] = wd, "wikidata"
+        # A chain film without a year is a current release we can't pin down; an
+        # unqualified title search would match some older namesake.
+        wd = wikidata_film(f["title"], f["year"]) if f["year"] or indie_only else {}
+        ov = _overrides.get(norm_title(f["title"]), {})
+        f["zh"] = ov.get("zh") or wd.get("zh")
+        douban = ov.get("douban") or wd.get("douban")
+        f["douban"] = f"https://movie.douban.com/subject/{douban}/" if douban else None
+        if not f["lang"] and (indie_only or any(s["subs"] for s in f["screenings"])) and wd.get("lang"):
+            f["lang"], f["lang_src"] = wd["lang"], "wikidata"
         if not f["lang"] and (not indie_only or (f["year"] and f["year"] >= date.today().year - 1)):
             f["lang"], f["lang_src"] = "English", "assumed"
         for s in f["screenings"]:
@@ -558,11 +599,15 @@ def resolve_languages():
 
 
 def main():
-    global _lang_cache
+    global _wd_cache, _overrides
     os.makedirs(OUT_DIR, exist_ok=True)
-    cache_path = os.path.join(OUT_DIR, "lang_cache.json")
+    cache_path = os.path.join(OUT_DIR, "wikidata_cache.json")
     if os.path.exists(cache_path):
-        _lang_cache = json.load(open(cache_path))
+        _wd_cache = json.load(open(cache_path))
+    ov_path = os.path.join(OUT_DIR, "douban_overrides.json")
+    if os.path.exists(ov_path):
+        _overrides = {norm_title(k): v for k, v in json.load(open(ov_path)).items()
+                      if not k.startswith("_")}
 
     today = datetime.now(TZ).date()
     days = [today + timedelta(days=i) for i in range(DAYS)]
@@ -594,6 +639,9 @@ def main():
                 if s.get(k) is None:
                     s.pop(k, None)
             s.pop("oc")
+        for k in ("zh", "douban"):
+            if not f.get(k):
+                f.pop(k, None)
         out_films.append(f)
 
     out = {
@@ -606,7 +654,7 @@ def main():
     with open(os.path.join(OUT_DIR, "latest.json"), "w") as fp:
         json.dump(out, fp, ensure_ascii=False, separators=(",", ":"))
     with open(cache_path, "w") as fp:
-        json.dump(_lang_cache, fp, ensure_ascii=False, indent=0, sort_keys=True)
+        json.dump(_wd_cache, fp, ensure_ascii=False, indent=0, sort_keys=True)
     total = sum(len(f["screenings"]) for f in out_films)
     print(f"Wrote {len(out_films)} films, {total} screenings, {len(used)} theaters")
     if not any(s["ok"] for s in status.values()):

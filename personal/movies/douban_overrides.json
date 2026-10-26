@@ -1,0 +1,3 @@
+{
+  "_comment": "Manual Chinese titles / Douban subject IDs for films Wikidata misses. Key = English title as shown on the page; douban = the number in movie.douban.com/subject/<number>/. Example: \"Some Film\": {\"zh\": \"中文片名\", \"douban\": \"1234567\"}"
+}

@@ -103,6 +103,14 @@
     .title { font-size: 15px; font-weight: 600; }
     .title a { text-decoration: none; }
     .title a:hover { text-decoration: underline; }
+    .alt-title { font-weight: 400; color: var(--muted); margin-left: 6px; font-size: 13px; }
+    .db-link {
+      display: inline-block; margin-left: 6px; padding: 0 5px; border-radius: 3px;
+      background: #2e963d; color: #fff !important; font-size: 10.5px; font-weight: 600;
+      text-decoration: none !important; vertical-align: 2px;
+    }
+    .row-name .alt-title { display: block; margin-left: 0; font-size: 11.5px; }
+    .row-name .db-link { margin-left: 4px; }
     .meta { font-size: 12px; color: var(--muted); margin-top: 1px; }
     .lang { font-weight: 500; color: var(--text); }
     .lang .q, .q { color: var(--faint); font-weight: 400; }
@@ -178,7 +186,7 @@
     </div>
     <div class="seg" id="kind-seg">
       <button data-v="all" data-i18n="all"></button>
-      <button data-v="independent" data-i18n="indie"></button>
+      <button data-v="independent" data-i18n="indie" data-i18n-title="indie_tip"></button>
       <button data-v="chain" data-i18n="chains"></button>
     </div>
   </div>
@@ -209,6 +217,7 @@ const I18N = {
     sources: "Sources", failed: "failed",
     all: "All", cap_any: "Captioned", cap_oc: "OC", cap_sub: "EN subs",
     by_film: "By film", by_theater: "By theater", indie: "Indie", chains: "Chains",
+    indie_tip: "Independent cinemas, excluding films that are also playing at chain theaters this week",
     all_langs: "All languages", all_theaters: "All theaters", search: "Search film…",
     loading: "Loading…", none: "No showtimes match these filters.",
     load_err: e => `Could not load showtimes (${e}).`,
@@ -216,7 +225,7 @@ const I18N = {
     lang_na: "language n/a", subs: l => `${l} subs`, unknown: "Unknown",
     guess: src => `Language from ${src === "wikidata" ? "Wikidata" : "default"}, not from the cinema`,
     summary: (d, n, unit, s) => `${d} · ${n} ${unit} · ${s} showtimes`,
-    films: "films", theaters: "theaters",
+    films: "films", theaters: "theaters", douban_tip: "Douban page (Chinese)",
     areas: { Seattle: "Seattle", Eastside: "Eastside", North: "North", South: "South", Kitsap: "Kitsap", Other: "Other" },
     langs: {},
   },
@@ -230,7 +239,8 @@ const I18N = {
     legend_subq: "非英语影片，影院未注明字幕（多半有英文字幕）",
     sources: "数据来源", failed: "抓取失败",
     all: "全部", cap_any: "有字幕", cap_oc: "开放字幕", cap_sub: "英文字幕",
-    by_film: "按电影", by_theater: "按影院", indie: "独立影院", chains: "院线",
+    by_film: "按电影", by_theater: "按影院", indie: "独立放映", chains: "院线",
+    indie_tip: "独立影院的排片，不含本周同时在院线上映的电影",
     all_langs: "全部语言", all_theaters: "全部影院", search: "搜索电影…",
     loading: "加载中…", none: "没有符合筛选条件的场次。",
     load_err: e => `排片加载失败（${e}）。`,
@@ -238,7 +248,7 @@ const I18N = {
     lang_na: "语言未知", subs: l => `${l}字幕`, unknown: "未知",
     guess: src => `语言来自${src === "wikidata" ? " Wikidata" : "默认推断"}，非影院标注`,
     summary: (d, n, unit, s) => `${d} · ${n} ${unit} · ${s} 个场次`,
-    films: "部电影", theaters: "家影院",
+    films: "部电影", theaters: "家影院", douban_tip: "豆瓣电影页面",
     areas: { Seattle: "西雅图", Eastside: "东区", North: "北区", South: "南区", Kitsap: "基察普", Other: "其他" },
     langs: {
       English: "英语", Spanish: "西班牙语", French: "法语", German: "德语", Italian: "意大利语",
@@ -299,11 +309,13 @@ function capBadge(s) {
     : s.cap === "en_subs?" ? `<span class="badge subq">${L().badge_subq}</span>` : "";
 }
 
-function matches(s) {
+function matches(s, f) {
   const th = DATA.theaters[s.th];
   if (!s.start.startsWith(state.day)) return false;
   if (!state.areas.includes(th.area)) return false;
   if (state.kind !== "all" && th.kind !== state.kind) return false;
+  // "Indie" means indie programming: skip wide releases even when an indie house plays them.
+  if (state.kind === "independent" && f.atChain) return false;
   if (state.th && s.th !== state.th) return false;
   if (state.lang && (s.lang || "Unknown") !== state.lang) return false;
   if (state.cap === "oc" && s.cap !== "oc") return false;
@@ -334,6 +346,17 @@ function filmMeta(f, shown) {
   return [`<span class="lang">${lang}${guess}</span>`, f.year, f.runtime ? L().min(f.runtime) : ""].filter(Boolean).join(" · ");
 }
 
+// Main title in the UI language, the other one muted, then a Douban link.
+function filmTitle(f) {
+  const zhFirst = state.ui === "zh" && f.zh;
+  const main = zhFirst ? f.zh : f.title;
+  const alt = zhFirst ? f.title : f.zh;
+  const link = f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(main)}</a>` : esc(main);
+  const db = f.douban ? `<a class="db-link" href="${esc(f.douban)}" target="_blank" rel="noopener" title="${esc(L().douban_tip)}">豆瓣</a>` : "";
+  return `${link}${db}${alt ? `<span class="alt-title">${esc(alt)}</span>` : ""}`;
+}
+const titleMatches = (f, q) => !q || f.title.toLowerCase().includes(q) || (f.zh || "").includes(q);
+
 function byTheaterOrder(a, b) {
   const ta = DATA.theaters[a], tb = DATA.theaters[b];
   return AREAS.indexOf(ta.area) - AREAS.indexOf(tb.area) || ta.name.localeCompare(tb.name);
@@ -347,8 +370,8 @@ function render() {
 
   if (state.view === "film") {
     for (const f of DATA.films) {
-      if (q && !f.title.toLowerCase().includes(q)) continue;
-      const shown = f.screenings.filter(matches);
+      if (!titleMatches(f, q)) continue;
+      const shown = f.screenings.filter(s => matches(s, f));
       if (!shown.length) continue;
       nCards++; nShows += shown.length;
       const byTh = new Map();
@@ -357,16 +380,15 @@ function render() {
         .map(([th, ss]) => `<div class="row"><div class="row-name">${theaterName(th)}</div>
           <div class="times">${ss.map(s => chip(s, now, fmtTime(s.start))).join("")}</div></div>`).join("");
       const poster = f.poster ? `<img class="poster" src="${esc(f.poster)}" alt="" loading="lazy">` : "";
-      const title = f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.title)}</a>` : esc(f.title);
       html += `<div class="card">${poster}<div class="card-body">
-        <div class="title">${title}</div><div class="meta">${filmMeta(f, shown)}</div>${rows}</div></div>`;
+        <div class="title">${filmTitle(f)}</div><div class="meta">${filmMeta(f, shown)}</div>${rows}</div></div>`;
     }
   } else {
     const byTh = new Map();
     for (const f of DATA.films) {
-      if (q && !f.title.toLowerCase().includes(q)) continue;
+      if (!titleMatches(f, q)) continue;
       for (const s of f.screenings) {
-        if (!matches(s)) continue;
+        if (!matches(s, f)) continue;
         nShows++;
         const m = byTh.get(s.th) || byTh.set(s.th, new Map()).get(s.th);
         (m.get(f) || m.set(f, []).get(f)).push(s);
@@ -377,8 +399,7 @@ function render() {
       nCards++;
       const rows = [...byTh.get(id).entries()].sort((a, b) => a[1][0].start.localeCompare(b[1][0].start))
         .map(([f, ss]) => {
-          const title = f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.title)}</a>` : esc(f.title);
-          return `<div class="row"><div class="row-name">${title}<small>${filmMeta(f, ss)}</small></div>
+          return `<div class="row"><div class="row-name">${filmTitle(f)}<small>${filmMeta(f, ss)}</small></div>
             <div class="times">${ss.map(s => chip(s, now, fmtTime(s.start))).join("")}</div></div>`;
         }).join("");
       html += `<div class="card"><div class="card-body">
@@ -412,6 +433,7 @@ function applyLang() {
   document.title = L().title;
   document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = L()[el.dataset.i18n]; });
   document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = L()[el.dataset.i18nPh]; });
+  document.querySelectorAll("[data-i18n-title]").forEach(el => { el.title = L()[el.dataset.i18nTitle]; });
   if (!DATA) return;
 
   const gen = new Date(DATA.generated_at).toLocaleString(locale(),
@@ -473,6 +495,7 @@ function applyLang() {
 
 function init(data) {
   DATA = data;
+  DATA.films.forEach(f => { f.atChain = f.screenings.some(s => DATA.theaters[s.th].kind === "chain"); });
   const search = document.getElementById("search");
   search.oninput = () => { state.q = search.value; render(); };
   setupSeg("cap-seg", "cap");
