@@ -41,7 +41,7 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
       background: var(--bg); color: var(--text);
       font-size: 14px; line-height: 1.5;
     }
@@ -50,6 +50,7 @@
 
     /* ── Header ── */
     .header { border-bottom: 2px solid var(--border); padding-bottom: 14px; margin-bottom: 16px; }
+    .header-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
     .header h1 { font-size: 22px; font-weight: 650; }
     .subtitle { color: var(--muted); font-size: 13px; margin-top: 2px; }
     .sources { margin-top: 8px; font-size: 12px; color: var(--faint); }
@@ -69,7 +70,7 @@
     .day.active small { color: var(--bg); opacity: .8; }
 
     .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
-    .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+    .seg { display: inline-flex; flex: 0 0 auto; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
     .seg button {
       border: 0; background: var(--card); color: var(--text); padding: 5px 12px;
       font-size: 13px; cursor: pointer; white-space: nowrap;
@@ -78,6 +79,7 @@
     .seg button.active { background: var(--accent); color: var(--bg); }
     .seg button.active.oc  { background: var(--oc); color: #fff; }
     .seg button.active.sub { background: var(--sub); color: #fff; }
+    #ui-lang button { padding: 3px 10px; font-size: 12px; }
 
     select, input[type=search] {
       border: 1px solid var(--border); background: var(--card); color: var(--text);
@@ -103,7 +105,7 @@
     .title a:hover { text-decoration: underline; }
     .meta { font-size: 12px; color: var(--muted); margin-top: 1px; }
     .lang { font-weight: 500; color: var(--text); }
-    .lang .q { color: var(--faint); font-weight: 400; }
+    .lang .q, .q { color: var(--faint); font-weight: 400; }
 
     .row { display: flex; gap: 10px; margin-top: 8px; align-items: baseline; }
     .row-name { flex: 0 0 190px; font-size: 13px; }
@@ -145,15 +147,18 @@
 <div class="wrap">
 
   <div class="header">
-    <h1>Seattle Movie Calendar</h1>
-    <div class="subtitle">
-      Showtimes for the next 7 days at commercial and independent cinemas in Seattle and nearby cities.
-      Refreshed every morning. <span id="updated"></span>
+    <div class="header-top">
+      <h1 data-i18n="title"></h1>
+      <div class="seg" id="ui-lang">
+        <button data-v="en">EN</button>
+        <button data-v="zh">中文</button>
+      </div>
     </div>
+    <div class="subtitle"><span data-i18n="subtitle"></span> <span id="updated"></span></div>
     <div class="legend">
-      <span><span class="badge oc">OC</span> English open caption</span>
-      <span><span class="badge sub">EN SUB</span> Non-English, English subtitles</span>
-      <span><span class="badge subq">EN SUB?</span> Non-English, subtitles likely but not stated</span>
+      <span><span class="badge oc" data-i18n="badge_oc"></span> <span data-i18n="legend_oc"></span></span>
+      <span><span class="badge sub" data-i18n="badge_sub"></span> <span data-i18n="legend_sub"></span></span>
+      <span><span class="badge subq" data-i18n="badge_subq"></span> <span data-i18n="legend_subq"></span></span>
     </div>
     <div class="sources" id="sources"></div>
   </div>
@@ -162,47 +167,117 @@
 
   <div class="controls">
     <div class="seg" id="cap-seg">
-      <button data-v="all" class="active">All</button>
-      <button data-v="any" class="oc">Captioned</button>
-      <button data-v="oc" class="oc">OC</button>
-      <button data-v="sub" class="sub">EN subs</button>
+      <button data-v="all" data-i18n="all"></button>
+      <button data-v="any" class="oc" data-i18n="cap_any"></button>
+      <button data-v="oc" class="oc" data-i18n="cap_oc"></button>
+      <button data-v="sub" class="sub" data-i18n="cap_sub"></button>
     </div>
     <div class="seg" id="view-seg">
-      <button data-v="film" class="active">By film</button>
-      <button data-v="theater">By theater</button>
+      <button data-v="film" data-i18n="by_film"></button>
+      <button data-v="theater" data-i18n="by_theater"></button>
     </div>
     <div class="seg" id="kind-seg">
-      <button data-v="all" class="active">All</button>
-      <button data-v="independent">Indie</button>
-      <button data-v="chain">Chains</button>
+      <button data-v="all" data-i18n="all"></button>
+      <button data-v="independent" data-i18n="indie"></button>
+      <button data-v="chain" data-i18n="chains"></button>
     </div>
   </div>
   <div class="controls">
-    <select id="lang-sel"><option value="">All languages</option></select>
-    <select id="th-sel"><option value="">All theaters</option></select>
-    <input type="search" id="search" placeholder="Search film…">
+    <select id="lang-sel"></select>
+    <select id="th-sel"></select>
+    <input type="search" id="search" data-i18n-ph="search">
   </div>
   <div class="controls areas" id="areas"></div>
 
   <div class="summary" id="summary"></div>
-  <div class="list" id="list"><div class="empty">Loading…</div></div>
+  <div class="list" id="list"><div class="empty" data-i18n="loading"></div></div>
 </div>
 
 <script>
 const AREAS = ["Seattle", "Eastside", "North", "South", "Kitsap", "Other"];
 const STORE = "movie-cal-prefs";
+
+const I18N = {
+  en: {
+    title: "Seattle Movie Calendar",
+    subtitle: "Showtimes for the next 7 days at commercial and independent cinemas in Seattle and nearby cities. Refreshed every morning.",
+    updated: d => `Last updated ${d} (Seattle time).`,
+    badge_oc: "OC", badge_sub: "EN SUB", badge_subq: "EN SUB?",
+    legend_oc: "English open caption",
+    legend_sub: "Non-English, English subtitles",
+    legend_subq: "Non-English, subtitles likely but not stated",
+    sources: "Sources", failed: "failed",
+    all: "All", cap_any: "Captioned", cap_oc: "OC", cap_sub: "EN subs",
+    by_film: "By film", by_theater: "By theater", indie: "Indie", chains: "Chains",
+    all_langs: "All languages", all_theaters: "All theaters", search: "Search film…",
+    loading: "Loading…", none: "No showtimes match these filters.",
+    load_err: e => `Could not load showtimes (${e}).`,
+    today: "Today", min: m => `${m} min`, indie_short: "indie", independent: "independent",
+    lang_na: "language n/a", subs: l => `${l} subs`, unknown: "Unknown",
+    guess: src => `Language from ${src === "wikidata" ? "Wikidata" : "default"}, not from the cinema`,
+    summary: (d, n, unit, s) => `${d} · ${n} ${unit} · ${s} showtimes`,
+    films: "films", theaters: "theaters",
+    areas: { Seattle: "Seattle", Eastside: "Eastside", North: "North", South: "South", Kitsap: "Kitsap", Other: "Other" },
+    langs: {},
+  },
+  zh: {
+    title: "西雅图电影日历",
+    subtitle: "西雅图及周边城市商业影院与独立影院未来 7 天的排片，每天早上自动更新。",
+    updated: d => `最近更新：${d}（西雅图时间）。`,
+    badge_oc: "OC", badge_sub: "英字", badge_subq: "英字?",
+    legend_oc: "英语开放字幕（open caption）",
+    legend_sub: "非英语影片，带英文字幕",
+    legend_subq: "非英语影片，影院未注明字幕（多半有英文字幕）",
+    sources: "数据来源", failed: "抓取失败",
+    all: "全部", cap_any: "有字幕", cap_oc: "开放字幕", cap_sub: "英文字幕",
+    by_film: "按电影", by_theater: "按影院", indie: "独立影院", chains: "院线",
+    all_langs: "全部语言", all_theaters: "全部影院", search: "搜索电影…",
+    loading: "加载中…", none: "没有符合筛选条件的场次。",
+    load_err: e => `排片加载失败（${e}）。`,
+    today: "今天", min: m => `${m} 分钟`, indie_short: "独立", independent: "独立影院",
+    lang_na: "语言未知", subs: l => `${l}字幕`, unknown: "未知",
+    guess: src => `语言来自${src === "wikidata" ? " Wikidata" : "默认推断"}，非影院标注`,
+    summary: (d, n, unit, s) => `${d} · ${n} ${unit} · ${s} 个场次`,
+    films: "部电影", theaters: "家影院",
+    areas: { Seattle: "西雅图", Eastside: "东区", North: "北区", South: "南区", Kitsap: "基察普", Other: "其他" },
+    langs: {
+      English: "英语", Spanish: "西班牙语", French: "法语", German: "德语", Italian: "意大利语",
+      Portuguese: "葡萄牙语", Russian: "俄语", Polish: "波兰语", Czech: "捷克语", Hungarian: "匈牙利语",
+      Romanian: "罗马尼亚语", Greek: "希腊语", Turkish: "土耳其语", Dutch: "荷兰语", Swedish: "瑞典语",
+      Danish: "丹麦语", Norwegian: "挪威语", Finnish: "芬兰语", Icelandic: "冰岛语", Ukrainian: "乌克兰语",
+      Serbian: "塞尔维亚语", Croatian: "克罗地亚语", Georgian: "格鲁吉亚语", Armenian: "亚美尼亚语",
+      Persian: "波斯语", Farsi: "波斯语", Arabic: "阿拉伯语", Hebrew: "希伯来语", Hindi: "印地语",
+      Tamil: "泰米尔语", Telugu: "泰卢固语", Malayalam: "马拉雅拉姆语", Kannada: "卡纳达语",
+      Punjabi: "旁遮普语", Bengali: "孟加拉语", Marathi: "马拉地语", Gujarati: "古吉拉特语", Urdu: "乌尔都语",
+      Nepali: "尼泊尔语", Mandarin: "普通话", Cantonese: "粤语", Chinese: "中文", Japanese: "日语",
+      Korean: "韩语", Thai: "泰语", Vietnamese: "越南语", Tagalog: "他加禄语", Filipino: "菲律宾语",
+      Indonesian: "印尼语", Malay: "马来语", Khmer: "高棉语", Mongolian: "蒙古语", Tibetan: "藏语",
+      Silent: "默片", Unknown: "未知",
+    },
+  },
+};
+
 let DATA = null;
-let state = { day: null, cap: "all", view: "film", kind: "all", lang: "", th: "", q: "", areas: ["Seattle", "Eastside", "North", "South"] };
+let state = { ui: "en", day: null, cap: "all", view: "film", kind: "all", lang: "", th: "", q: "", areas: ["Seattle", "Eastside", "North", "South"] };
 
 try { Object.assign(state, JSON.parse(localStorage.getItem(STORE) || "{}"), { day: null, q: "" }); } catch (e) {}
+const urlLang = new URLSearchParams(location.search).get("lang");
+if (urlLang === "zh" || urlLang === "en") state.ui = urlLang;
+if (!I18N[state.ui]) state.ui = "en";
+
 function save() {
-  try { localStorage.setItem(STORE, JSON.stringify({ cap: state.cap, view: state.view, kind: state.kind, areas: state.areas, lang: state.lang })); } catch (e) {}
+  try { localStorage.setItem(STORE, JSON.stringify({ ui: state.ui, cap: state.cap, view: state.view, kind: state.kind, areas: state.areas, lang: state.lang })); } catch (e) {}
 }
 
+const L = () => I18N[state.ui];
+const locale = () => state.ui === "zh" ? "zh-CN" : "en-US";
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+// "Tamil / Telugu" → "泰米尔语 / 泰卢固语"
+const langName = l => String(l).split(" / ").map(x => L().langs[x] || x).join(" / ");
 
 function fmtTime(iso) {
   let [h, m] = iso.slice(11, 16).split(":").map(Number);
+  if (state.ui === "zh") return iso.slice(11, 16);
   const ap = h >= 12 ? "p" : "a";
   h = h % 12 || 12;
   return `${h}:${String(m).padStart(2, "0")}${ap}`;
@@ -219,19 +294,12 @@ function capClass(s) {
   return s.cap === "oc" ? "oc" : s.cap === "en_subs" ? "sub" : s.cap === "en_subs?" ? "subq" : "";
 }
 function capBadge(s) {
-  return s.cap === "oc" ? '<span class="badge oc">OC</span>'
-    : s.cap === "en_subs" ? '<span class="badge sub">EN SUB</span>'
-    : s.cap === "en_subs?" ? '<span class="badge subq">EN SUB?</span>' : "";
-}
-function langLabel(lang, subs) {
-  if (!lang) return '<span class="q">language n/a</span>';
-  let out = esc(lang);
-  const other = (subs || []).filter(x => x !== "English");
-  if (other.length) out += ` <span class="q">(${esc(other.join(", "))} subs)</span>`;
-  return out;
+  return s.cap === "oc" ? `<span class="badge oc">${L().badge_oc}</span>`
+    : s.cap === "en_subs" ? `<span class="badge sub">${L().badge_sub}</span>`
+    : s.cap === "en_subs?" ? `<span class="badge subq">${L().badge_subq}</span>` : "";
 }
 
-function matches(s, f) {
+function matches(s) {
   const th = DATA.theaters[s.th];
   if (!s.start.startsWith(state.day)) return false;
   if (!state.areas.includes(th.area)) return false;
@@ -248,7 +316,7 @@ function chip(s, now, label) {
   const past = s.start < now ? " past" : "";
   const tags = (s.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("");
   const inner = `${label}${capBadge(s)}${tags}${s.note ? `<span class="chip-note">${esc(s.note)}</span>` : ""}`;
-  const title = [s.lang, (s.subs || []).length ? s.subs.join("/") + " subs" : ""].filter(Boolean).join(" · ");
+  const title = [s.lang && langName(s.lang), (s.subs || []).length ? L().subs(s.subs.map(langName).join("/")) : ""].filter(Boolean).join(" · ");
   return s.url
     ? `<a class="chip ${capClass(s)}${past}" href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(title)}">${inner}</a>`
     : `<span class="chip ${capClass(s)}${past}" title="${esc(title)}">${inner}</span>`;
@@ -256,33 +324,36 @@ function chip(s, now, label) {
 
 function theaterName(id) {
   const t = DATA.theaters[id];
-  return `<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)}</a><small>${esc(t.city)}${t.kind === "independent" ? " · indie" : ""}</small>`;
+  return `<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)}</a><small>${esc(t.city)}${t.kind === "independent" ? " · " + L().indie_short : ""}</small>`;
 }
 
 function filmMeta(f, shown) {
   const langs = [...new Set(shown.map(s => s.lang).filter(Boolean))];
-  const lang = langs.length ? langs.map(l => esc(l)).join(" / ") : '<span class="q">language n/a</span>';
-  const guess = f.lang_src === "assumed" || f.lang_src === "wikidata" ? ` <span class="q" title="Language from ${f.lang_src === "wikidata" ? "Wikidata" : "default"}, not from the cinema">*</span>` : "";
-  return [`<span class="lang">${lang}${guess}</span>`, f.year, f.runtime ? f.runtime + " min" : ""].filter(Boolean).join(" · ");
+  const lang = langs.length ? langs.map(l => esc(langName(l))).join(" / ") : `<span class="q">${L().lang_na}</span>`;
+  const guess = f.lang_src === "assumed" || f.lang_src === "wikidata" ? ` <span class="q" title="${esc(L().guess(f.lang_src))}">*</span>` : "";
+  return [`<span class="lang">${lang}${guess}</span>`, f.year, f.runtime ? L().min(f.runtime) : ""].filter(Boolean).join(" · ");
+}
+
+function byTheaterOrder(a, b) {
+  const ta = DATA.theaters[a], tb = DATA.theaters[b];
+  return AREAS.indexOf(ta.area) - AREAS.indexOf(tb.area) || ta.name.localeCompare(tb.name);
 }
 
 function render() {
   const now = nowLocal();
   const q = state.q.trim().toLowerCase();
   const list = document.getElementById("list");
-  let html = "", nShows = 0, nFilms = 0;
+  let html = "", nShows = 0, nCards = 0;
 
   if (state.view === "film") {
     for (const f of DATA.films) {
       if (q && !f.title.toLowerCase().includes(q)) continue;
-      const shown = f.screenings.filter(s => matches(s, f));
+      const shown = f.screenings.filter(matches);
       if (!shown.length) continue;
-      nFilms++; nShows += shown.length;
+      nCards++; nShows += shown.length;
       const byTh = new Map();
       for (const s of shown) (byTh.get(s.th) || byTh.set(s.th, []).get(s.th)).push(s);
-      const rows = [...byTh.entries()]
-        .sort((a, b) => AREAS.indexOf(DATA.theaters[a[0]].area) - AREAS.indexOf(DATA.theaters[b[0]].area)
-          || DATA.theaters[a[0]].name.localeCompare(DATA.theaters[b[0]].name))
+      const rows = [...byTh.entries()].sort((a, b) => byTheaterOrder(a[0], b[0]))
         .map(([th, ss]) => `<div class="row"><div class="row-name">${theaterName(th)}</div>
           <div class="times">${ss.map(s => chip(s, now, fmtTime(s.start))).join("")}</div></div>`).join("");
       const poster = f.poster ? `<img class="poster" src="${esc(f.poster)}" alt="" loading="lazy">` : "";
@@ -295,69 +366,70 @@ function render() {
     for (const f of DATA.films) {
       if (q && !f.title.toLowerCase().includes(q)) continue;
       for (const s of f.screenings) {
-        if (!matches(s, f)) continue;
+        if (!matches(s)) continue;
         nShows++;
         const m = byTh.get(s.th) || byTh.set(s.th, new Map()).get(s.th);
         (m.get(f) || m.set(f, []).get(f)).push(s);
       }
     }
-    const ids = [...byTh.keys()].sort((a, b) =>
-      AREAS.indexOf(DATA.theaters[a].area) - AREAS.indexOf(DATA.theaters[b].area)
-      || DATA.theaters[a].name.localeCompare(DATA.theaters[b].name));
-    for (const id of ids) {
+    for (const id of [...byTh.keys()].sort(byTheaterOrder)) {
       const t = DATA.theaters[id];
+      nCards++;
       const rows = [...byTh.get(id).entries()].sort((a, b) => a[1][0].start.localeCompare(b[1][0].start))
         .map(([f, ss]) => {
-          nFilms++;
           const title = f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.title)}</a>` : esc(f.title);
           return `<div class="row"><div class="row-name">${title}<small>${filmMeta(f, ss)}</small></div>
             <div class="times">${ss.map(s => chip(s, now, fmtTime(s.start))).join("")}</div></div>`;
         }).join("");
       html += `<div class="card"><div class="card-body">
         <div class="title"><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)}</a></div>
-        <div class="meta">${esc([t.address, t.city].filter(Boolean).join(", "))}${t.kind === "independent" ? " · independent" : ""}</div>
+        <div class="meta">${esc([t.address, t.city].filter(Boolean).join(", "))}${t.kind === "independent" ? " · " + L().independent : ""}</div>
         ${rows}</div></div>`;
     }
   }
 
-  list.innerHTML = html || '<div class="empty">No showtimes match these filters.</div>';
-  const d = new Date(state.day + "T12:00");
+  list.innerHTML = html || `<div class="empty">${L().none}</div>`;
+  const d = new Date(state.day + "T12:00").toLocaleDateString(locale(), { weekday: "long", month: "short", day: "numeric" });
   document.getElementById("summary").textContent =
-    `${d.toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })} · ` +
-    (state.view === "film" ? `${nFilms} films` : `${byThCount()} theaters`) + ` · ${nShows} showtimes`;
-  function byThCount() { return list.querySelectorAll(".card").length; }
+    L().summary(d, nCards, state.view === "film" ? L().films : L().theaters, nShows);
 }
 
-function setupSeg(id, key) {
+function setupSeg(id, key, onChange) {
   const el = document.getElementById(id);
   el.querySelectorAll("button").forEach(b => {
     b.classList.toggle("active", b.dataset.v === state[key]);
     b.onclick = () => {
       state[key] = b.dataset.v;
       el.querySelectorAll("button").forEach(x => x.classList.toggle("active", x === b));
-      save(); render();
+      save(); (onChange || render)();
     };
   });
 }
 
-function init(data) {
-  DATA = data;
-  const gen = new Date(data.generated_at);
-  document.getElementById("updated").textContent =
-    `Last updated ${gen.toLocaleString("en-US", { timeZone: "America/Los_Angeles", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })} (Seattle time).`;
-  document.getElementById("sources").innerHTML = "Sources: " + Object.entries(data.sources)
-    .map(([k, v]) => v.ok ? `${esc(k)} (${v.count})` : `<span class="bad" title="${esc(v.error)}">${esc(k)}: failed</span>`).join(" · ");
+// Static text, dropdowns, day tabs, area checkboxes — everything that depends on UI language.
+function applyLang() {
+  document.documentElement.lang = state.ui === "zh" ? "zh-CN" : "en";
+  document.title = L().title;
+  document.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = L()[el.dataset.i18n]; });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = L()[el.dataset.i18nPh]; });
+  if (!DATA) return;
+
+  const gen = new Date(DATA.generated_at).toLocaleString(locale(),
+    { timeZone: "America/Los_Angeles", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+  document.getElementById("updated").textContent = L().updated(gen);
+  document.getElementById("sources").innerHTML = L().sources + ": " + Object.entries(DATA.sources)
+    .map(([k, v]) => v.ok ? `${esc(k)} (${v.count})` : `<span class="bad" title="${esc(v.error)}">${esc(k)}: ${L().failed}</span>`).join(" · ");
 
   // Day tabs
   const today = nowLocal().slice(0, 10);
-  const days = data.days.filter(d => d >= today);
-  if (!days.length) days.push(...data.days);
-  state.day = days[0];
+  const days = DATA.days.filter(d => d >= today);
+  if (!days.length) days.push(...DATA.days);
+  if (!days.includes(state.day)) state.day = days[0];
   const dayEl = document.getElementById("days");
   dayEl.innerHTML = days.map(d => {
     const dt = new Date(d + "T12:00");
-    const top = d === today ? "Today" : dt.toLocaleDateString("en-US", { weekday: "short" });
-    return `<button class="day" data-d="${d}">${top}<small>${dt.toLocaleDateString("en-US", { month: "short", day: "numeric" })}</small></button>`;
+    const top = d === today ? L().today : dt.toLocaleDateString(locale(), { weekday: "short" });
+    return `<button class="day" data-d="${d}">${top}<small>${dt.toLocaleDateString(locale(), { month: "short", day: "numeric" })}</small></button>`;
   }).join("");
   dayEl.querySelectorAll(".day").forEach(b => {
     b.classList.toggle("active", b.dataset.d === state.day);
@@ -370,41 +442,52 @@ function init(data) {
 
   // Languages, most screenings first
   const counts = {};
-  data.films.forEach(f => f.screenings.forEach(s => { const l = s.lang || "Unknown"; counts[l] = (counts[l] || 0) + 1; }));
+  DATA.films.forEach(f => f.screenings.forEach(s => { const l = s.lang || "Unknown"; counts[l] = (counts[l] || 0) + 1; }));
   const langSel = document.getElementById("lang-sel");
-  Object.entries(counts).sort((a, b) => b[1] - a[1]).forEach(([l]) => langSel.add(new Option(l, l)));
+  langSel.innerHTML = "";
+  langSel.add(new Option(L().all_langs, ""));
+  Object.entries(counts).sort((a, b) => b[1] - a[1]).forEach(([l]) => langSel.add(new Option(langName(l), l)));
   if (!counts[state.lang]) state.lang = "";
   langSel.value = state.lang;
   langSel.onchange = () => { state.lang = langSel.value; save(); render(); };
 
   const thSel = document.getElementById("th-sel");
-  Object.entries(data.theaters)
-    .sort((a, b) => AREAS.indexOf(a[1].area) - AREAS.indexOf(b[1].area) || a[1].name.localeCompare(b[1].name))
-    .forEach(([id, t]) => thSel.add(new Option(`${t.name} (${t.city})`, id)));
+  thSel.innerHTML = "";
+  thSel.add(new Option(L().all_theaters, ""));
+  Object.keys(DATA.theaters).sort(byTheaterOrder)
+    .forEach(id => thSel.add(new Option(`${DATA.theaters[id].name} (${DATA.theaters[id].city})`, id)));
+  thSel.value = state.th;
   thSel.onchange = () => { state.th = thSel.value; render(); };
 
-  const present = new Set(Object.values(data.theaters).map(t => t.area));
+  const present = new Set(Object.values(DATA.theaters).map(t => t.area));
   const areaEl = document.getElementById("areas");
   areaEl.innerHTML = AREAS.filter(a => present.has(a)).map(a =>
-    `<label><input type="checkbox" value="${a}" ${state.areas.includes(a) ? "checked" : ""}> ${a}</label>`).join("");
+    `<label><input type="checkbox" value="${a}" ${state.areas.includes(a) ? "checked" : ""}> ${L().areas[a]}</label>`).join("");
   areaEl.querySelectorAll("input").forEach(cb => cb.onchange = () => {
     state.areas = [...areaEl.querySelectorAll("input:checked")].map(x => x.value);
     save(); render();
   });
 
+  render();
+}
+
+function init(data) {
+  DATA = data;
   const search = document.getElementById("search");
   search.oninput = () => { state.q = search.value; render(); };
-
   setupSeg("cap-seg", "cap");
   setupSeg("view-seg", "view");
   setupSeg("kind-seg", "kind");
-  render();
+  applyLang();
 }
+
+setupSeg("ui-lang", "ui", applyLang);
+applyLang();
 
 fetch("movies/latest.json", { cache: "no-cache" })
   .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(init)
-  .catch(e => { document.getElementById("list").innerHTML = `<div class="empty">Could not load showtimes (${esc(e.message)}).</div>`; });
+  .catch(e => { document.getElementById("list").innerHTML = `<div class="empty">${esc(L().load_err(e.message))}</div>`; });
 </script>
 </body>
 </html>
