@@ -1,0 +1,39 @@
+name: Seattle movie calendar
+
+on:
+  schedule:
+    # 13:30 UTC = 6:30am PDT / 5:30am PST
+    - cron: "30 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: movies
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -q requests beautifulsoup4
+
+      - run: python scripts/fetch_movies.py
+
+      - name: Commit updated showtimes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add personal/movies/
+          git diff --staged --quiet && exit 0
+          git commit -m "Movie calendar $(TZ=America/Los_Angeles date +%Y-%m-%d)"
+          git pull --rebase
+          git push

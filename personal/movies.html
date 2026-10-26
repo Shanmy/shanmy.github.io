@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seattle Movie Calendar</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #f5f5f3;
+      --card:   #ffffff;
+      --text:   #1a1a1a;
+      --muted:  #6b6b6b;
+      --faint:  #9a9a9a;
+      --border: #e2e2e0;
+      --chip:   #f2f2f0;
+      --accent: #2c2c2c;
+      --oc:     #b45309;
+      --oc-bg:  #fdf1e1;
+      --sub:    #1d5fb8;
+      --sub-bg: #e5eefb;
+      --warn:   #b83232;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:     #161616;
+        --card:   #202020;
+        --text:   #ececec;
+        --muted:  #a3a3a3;
+        --faint:  #777;
+        --border: #333;
+        --chip:   #2a2a2a;
+        --accent: #ececec;
+        --oc:     #f0a54a;
+        --oc-bg:  #3a2a14;
+        --sub:    #7fb0f0;
+        --sub-bg: #1b2a40;
+        --warn:   #f08080;
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif;
+      background: var(--bg); color: var(--text);
+      font-size: 14px; line-height: 1.5;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 60px; }
+
+    /* ── Header ── */
+    .header { border-bottom: 2px solid var(--border); padding-bottom: 14px; margin-bottom: 16px; }
+    .header h1 { font-size: 22px; font-weight: 650; }
+    .subtitle { color: var(--muted); font-size: 13px; margin-top: 2px; }
+    .sources { margin-top: 8px; font-size: 12px; color: var(--faint); }
+    .sources .bad { color: var(--warn); }
+
+    .legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; font-size: 12px; color: var(--muted); }
+    .legend span { display: inline-flex; align-items: center; gap: 5px; }
+
+    /* ── Controls ── */
+    .days { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 12px; }
+    .day {
+      flex: 0 0 auto; border: 1px solid var(--border); background: var(--card); color: var(--text);
+      border-radius: 10px; padding: 6px 12px; cursor: pointer; text-align: center; font-size: 13px;
+    }
+    .day small { display: block; font-size: 11px; color: var(--muted); }
+    .day.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .day.active small { color: var(--bg); opacity: .8; }
+
+    .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+    .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; }
+    .seg button {
+      border: 0; background: var(--card); color: var(--text); padding: 5px 12px;
+      font-size: 13px; cursor: pointer; white-space: nowrap;
+    }
+    .seg button + button { border-left: 1px solid var(--border); }
+    .seg button.active { background: var(--accent); color: var(--bg); }
+    .seg button.active.oc  { background: var(--oc); color: #fff; }
+    .seg button.active.sub { background: var(--sub); color: #fff; }
+
+    select, input[type=search] {
+      border: 1px solid var(--border); background: var(--card); color: var(--text);
+      border-radius: 20px; padding: 5px 12px; font-size: 13px; outline: none;
+    }
+    select { max-width: 100%; }
+    input[type=search] { flex: 1 1 180px; min-width: 0; }
+    .areas { display: flex; gap: 10px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+    .areas label { display: inline-flex; gap: 4px; align-items: center; cursor: pointer; }
+
+    .summary { font-size: 12px; color: var(--faint); margin: 6px 0 12px; }
+
+    /* ── Cards ── */
+    .list { display: flex; flex-direction: column; gap: 10px; }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 12px 14px; display: flex; gap: 12px;
+    }
+    .poster { width: 54px; flex: 0 0 54px; border-radius: 4px; object-fit: cover; align-self: flex-start; background: var(--chip); }
+    .card-body { flex: 1; min-width: 0; }
+    .title { font-size: 15px; font-weight: 600; }
+    .title a { text-decoration: none; }
+    .title a:hover { text-decoration: underline; }
+    .meta { font-size: 12px; color: var(--muted); margin-top: 1px; }
+    .lang { font-weight: 500; color: var(--text); }
+    .lang .q { color: var(--faint); font-weight: 400; }
+
+    .row { display: flex; gap: 10px; margin-top: 8px; align-items: baseline; }
+    .row-name { flex: 0 0 190px; font-size: 13px; }
+    .row-name a { text-decoration: none; }
+    .row-name a:hover { text-decoration: underline; }
+    .row-name small { display: block; color: var(--faint); font-size: 11px; }
+    .times { display: flex; flex-wrap: wrap; gap: 5px; }
+
+    .chip {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: var(--chip); border: 1px solid transparent; border-radius: 6px;
+      padding: 2px 7px; font-size: 12.5px; font-variant-numeric: tabular-nums;
+      text-decoration: none; white-space: nowrap;
+    }
+    a.chip:hover { border-color: var(--faint); }
+    .chip.past { opacity: .4; }
+    .chip.oc  { background: var(--oc-bg);  border-color: var(--oc); }
+    .chip.sub { background: var(--sub-bg); border-color: var(--sub); }
+    .chip.subq { background: var(--sub-bg); border-style: dashed; border-color: var(--sub); }
+    .chip .tag { font-size: 10px; color: var(--muted); }
+    .badge {
+      font-size: 10px; font-weight: 700; letter-spacing: .03em; border-radius: 3px; padding: 0 4px; color: #fff;
+    }
+    .badge.oc  { background: var(--oc); }
+    .badge.sub { background: var(--sub); }
+    .badge.subq { background: transparent; color: var(--sub); border: 1px dashed var(--sub); }
+    .chip-note { font-size: 11px; color: var(--muted); }
+
+    .empty { text-align: center; color: var(--muted); padding: 50px 0; }
+
+    @media (max-width: 640px) {
+      .row { flex-direction: column; gap: 4px; }
+      .row-name { flex: none; }
+      .poster { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <h1>Seattle Movie Calendar</h1>
+    <div class="subtitle">
+      Showtimes for the next 7 days at commercial and independent cinemas in Seattle and nearby cities.
+      Refreshed every morning. <span id="updated"></span>
+    </div>
+    <div class="legend">
+      <span><span class="badge oc">OC</span> English open caption</span>
+      <span><span class="badge sub">EN SUB</span> Non-English, English subtitles</span>
+      <span><span class="badge subq">EN SUB?</span> Non-English, subtitles likely but not stated</span>
+    </div>
+    <div class="sources" id="sources"></div>
+  </div>
+
+  <div class="days" id="days"></div>
+
+  <div class="controls">
+    <div class="seg" id="cap-seg">
+      <button data-v="all" class="active">All</button>
+      <button data-v="any" class="oc">Captioned</button>
+      <button data-v="oc" class="oc">OC</button>
+      <button data-v="sub" class="sub">EN subs</button>
+    </div>
+    <div class="seg" id="view-seg">
+      <button data-v="film" class="active">By film</button>
+      <button data-v="theater">By theater</button>
+    </div>
+    <div class="seg" id="kind-seg">
+      <button data-v="all" class="active">All</button>
+      <button data-v="independent">Indie</button>
+      <button data-v="chain">Chains</button>
+    </div>
+  </div>
+  <div class="controls">
+    <select id="lang-sel"><option value="">All languages</option></select>
+    <select id="th-sel"><option value="">All theaters</option></select>
+    <input type="search" id="search" placeholder="Search film…">
+  </div>
+  <div class="controls areas" id="areas"></div>
+
+  <div class="summary" id="summary"></div>
+  <div class="list" id="list"><div class="empty">Loading…</div></div>
+</div>
+
+<script>
+const AREAS = ["Seattle", "Eastside", "North", "South", "Kitsap", "Other"];
+const STORE = "movie-cal-prefs";
+let DATA = null;
+let state = { day: null, cap: "all", view: "film", kind: "all", lang: "", th: "", q: "", areas: ["Seattle", "Eastside", "North", "South"] };
+
+try { Object.assign(state, JSON.parse(localStorage.getItem(STORE) || "{}"), { day: null, q: "" }); } catch (e) {}
+function save() {
+  try { localStorage.setItem(STORE, JSON.stringify({ cap: state.cap, view: state.view, kind: state.kind, areas: state.areas, lang: state.lang })); } catch (e) {}
+}
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function fmtTime(iso) {
+  let [h, m] = iso.slice(11, 16).split(":").map(Number);
+  const ap = h >= 12 ? "p" : "a";
+  h = h % 12 || 12;
+  return `${h}:${String(m).padStart(2, "0")}${ap}`;
+}
+function nowLocal() {
+  // current Seattle wall-clock time as "YYYY-MM-DDTHH:MM"
+  const p = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit",
+    day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date());
+  const g = t => p.find(x => x.type === t).value;
+  return `${g("year")}-${g("month")}-${g("day")}T${g("hour")}:${g("minute")}`;
+}
+
+function capClass(s) {
+  return s.cap === "oc" ? "oc" : s.cap === "en_subs" ? "sub" : s.cap === "en_subs?" ? "subq" : "";
+}
+function capBadge(s) {
+  return s.cap === "oc" ? '<span class="badge oc">OC</span>'
+    : s.cap === "en_subs" ? '<span class="badge sub">EN SUB</span>'
+    : s.cap === "en_subs?" ? '<span class="badge subq">EN SUB?</span>' : "";
+}
+function langLabel(lang, subs) {
+  if (!lang) return '<span class="q">language n/a</span>';
+  let out = esc(lang);
+  const other = (subs || []).filter(x => x !== "English");
+  if (other.length) out += ` <span class="q">(${esc(other.join(", "))} subs)</span>`;
+  return out;
+}
+
+function matches(s, f) {
+  const th = DATA.theaters[s.th];
+  if (!s.start.startsWith(state.day)) return false;
+  if (!state.areas.includes(th.area)) return false;
+  if (state.kind !== "all" && th.kind !== state.kind) return false;
+  if (state.th && s.th !== state.th) return false;
+  if (state.lang && (s.lang || "Unknown") !== state.lang) return false;
+  if (state.cap === "oc" && s.cap !== "oc") return false;
+  if (state.cap === "sub" && !(s.cap === "en_subs" || s.cap === "en_subs?")) return false;
+  if (state.cap === "any" && !s.cap) return false;
+  return true;
+}
+
+function chip(s, now, label) {
+  const past = s.start < now ? " past" : "";
+  const tags = (s.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("");
+  const inner = `${label}${capBadge(s)}${tags}${s.note ? `<span class="chip-note">${esc(s.note)}</span>` : ""}`;
+  const title = [s.lang, (s.subs || []).length ? s.subs.join("/") + " subs" : ""].filter(Boolean).join(" · ");
+  return s.url
+    ? `<a class="chip ${capClass(s)}${past}" href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(title)}">${inner}</a>`
+    : `<span class="chip ${capClass(s)}${past}" title="${esc(title)}">${inner}</span>`;
+}
+
+function theaterName(id) {
+  const t = DATA.theaters[id];
+  return `<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)}</a><small>${esc(t.city)}${t.kind === "independent" ? " · indie" : ""}</small>`;
+}
+
+function filmMeta(f, shown) {
+  const langs = [...new Set(shown.map(s => s.lang).filter(Boolean))];
+  const lang = langs.length ? langs.map(l => esc(l)).join(" / ") : '<span class="q">language n/a</span>';
+  const guess = f.lang_src === "assumed" || f.lang_src === "wikidata" ? ` <span class="q" title="Language from ${f.lang_src === "wikidata" ? "Wikidata" : "default"}, not from the cinema">*</span>` : "";
+  return [`<span class="lang">${lang}${guess}</span>`, f.year, f.runtime ? f.runtime + " min" : ""].filter(Boolean).join(" · ");
+}
+
+function render() {
+  const now = nowLocal();
+  const q = state.q.trim().toLowerCase();
+  const list = document.getElementById("list");
+  let html = "", nShows = 0, nFilms = 0;
+
+  if (state.view === "film") {
+    for (const f of DATA.films) {
+      if (q && !f.title.toLowerCase().includes(q)) continue;
+      const shown = f.screenings.filter(s => matches(s, f));
+      if (!shown.length) continue;
+      nFilms++; nShows += shown.length;
+      const byTh = new Map();
+      for (const s of shown) (byTh.get(s.th) || byTh.set(s.th, []).get(s.th)).push(s);
+      const rows = [...byTh.entries()]
+        .sort((a, b) => AREAS.indexOf(DATA.theaters[a[0]].area) - AREAS.indexOf(DATA.theaters[b[0]].area)
+          || DATA.theaters[a[0]].name.localeCompare(DATA.theaters[b[0]].name))
+        .map(([th, ss]) => `<div class="row"><div class="row-name">${theaterName(th)}</div>
+          <div class="times">${ss.map(s => chip(s, now, fmtTime(s.start))).join("")}</div></div>`).join("");
+      const poster = f.poster ? `<img class="poster" src="${esc(f.poster)}" alt="" loading="lazy">` : "";
+      const title = f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.title)}</a>` : esc(f.title);
+      html += `<div class="card">${poster}<div class="card-body">
+        <div class="title">${title}</div><div class="meta">${filmMeta(f, shown)}</div>${rows}</div></div>`;
+    }
+  } else {
+    const byTh = new Map();
+    for (const f of DATA.films) {
+      if (q && !f.title.toLowerCase().includes(q)) continue;
+      for (const s of f.screenings) {
+        if (!matches(s, f)) continue;
+        nShows++;
+        const m = byTh.get(s.th) || byTh.set(s.th, new Map()).get(s.th);
+        (m.get(f) || m.set(f, []).get(f)).push(s);
+      }
+    }
+    const ids = [...byTh.keys()].sort((a, b) =>
+      AREAS.indexOf(DATA.theaters[a].area) - AREAS.indexOf(DATA.theaters[b].area)
+      || DATA.theaters[a].name.localeCompare(DATA.theaters[b].name));
+    for (const id of ids) {
+      const t = DATA.theaters[id];
+      const rows = [...byTh.get(id).entries()].sort((a, b) => a[1][0].start.localeCompare(b[1][0].start))
+        .map(([f, ss]) => {
+          nFilms++;
+          const title = f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.title)}</a>` : esc(f.title);
+          return `<div class="row"><div class="row-name">${title}<small>${filmMeta(f, ss)}</small></div>
+            <div class="times">${ss.map(s => chip(s, now, fmtTime(s.start))).join("")}</div></div>`;
+        }).join("");
+      html += `<div class="card"><div class="card-body">
+        <div class="title"><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.name)}</a></div>
+        <div class="meta">${esc([t.address, t.city].filter(Boolean).join(", "))}${t.kind === "independent" ? " · independent" : ""}</div>
+        ${rows}</div></div>`;
+    }
+  }
+
+  list.innerHTML = html || '<div class="empty">No showtimes match these filters.</div>';
+  const d = new Date(state.day + "T12:00");
+  document.getElementById("summary").textContent =
+    `${d.toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" })} · ` +
+    (state.view === "film" ? `${nFilms} films` : `${byThCount()} theaters`) + ` · ${nShows} showtimes`;
+  function byThCount() { return list.querySelectorAll(".card").length; }
+}
+
+function setupSeg(id, key) {
+  const el = document.getElementById(id);
+  el.querySelectorAll("button").forEach(b => {
+    b.classList.toggle("active", b.dataset.v === state[key]);
+    b.onclick = () => {
+      state[key] = b.dataset.v;
+      el.querySelectorAll("button").forEach(x => x.classList.toggle("active", x === b));
+      save(); render();
+    };
+  });
+}
+
+function init(data) {
+  DATA = data;
+  const gen = new Date(data.generated_at);
+  document.getElementById("updated").textContent =
+    `Last updated ${gen.toLocaleString("en-US", { timeZone: "America/Los_Angeles", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" })} (Seattle time).`;
+  document.getElementById("sources").innerHTML = "Sources: " + Object.entries(data.sources)
+    .map(([k, v]) => v.ok ? `${esc(k)} (${v.count})` : `<span class="bad" title="${esc(v.error)}">${esc(k)}: failed</span>`).join(" · ");
+
+  // Day tabs
+  const today = nowLocal().slice(0, 10);
+  const days = data.days.filter(d => d >= today);
+  if (!days.length) days.push(...data.days);
+  state.day = days[0];
+  const dayEl = document.getElementById("days");
+  dayEl.innerHTML = days.map(d => {
+    const dt = new Date(d + "T12:00");
+    const top = d === today ? "Today" : dt.toLocaleDateString("en-US", { weekday: "short" });
+    return `<button class="day" data-d="${d}">${top}<small>${dt.toLocaleDateString("en-US", { month: "short", day: "numeric" })}</small></button>`;
+  }).join("");
+  dayEl.querySelectorAll(".day").forEach(b => {
+    b.classList.toggle("active", b.dataset.d === state.day);
+    b.onclick = () => {
+      state.day = b.dataset.d;
+      dayEl.querySelectorAll(".day").forEach(x => x.classList.toggle("active", x === b));
+      render();
+    };
+  });
+
+  // Languages, most screenings first
+  const counts = {};
+  data.films.forEach(f => f.screenings.forEach(s => { const l = s.lang || "Unknown"; counts[l] = (counts[l] || 0) + 1; }));
+  const langSel = document.getElementById("lang-sel");
+  Object.entries(counts).sort((a, b) => b[1] - a[1]).forEach(([l]) => langSel.add(new Option(l, l)));
+  if (!counts[state.lang]) state.lang = "";
+  langSel.value = state.lang;
+  langSel.onchange = () => { state.lang = langSel.value; save(); render(); };
+
+  const thSel = document.getElementById("th-sel");
+  Object.entries(data.theaters)
+    .sort((a, b) => AREAS.indexOf(a[1].area) - AREAS.indexOf(b[1].area) || a[1].name.localeCompare(b[1].name))
+    .forEach(([id, t]) => thSel.add(new Option(`${t.name} (${t.city})`, id)));
+  thSel.onchange = () => { state.th = thSel.value; render(); };
+
+  const present = new Set(Object.values(data.theaters).map(t => t.area));
+  const areaEl = document.getElementById("areas");
+  areaEl.innerHTML = AREAS.filter(a => present.has(a)).map(a =>
+    `<label><input type="checkbox" value="${a}" ${state.areas.includes(a) ? "checked" : ""}> ${a}</label>`).join("");
+  areaEl.querySelectorAll("input").forEach(cb => cb.onchange = () => {
+    state.areas = [...areaEl.querySelectorAll("input:checked")].map(x => x.value);
+    save(); render();
+  });
+
+  const search = document.getElementById("search");
+  search.oninput = () => { state.q = search.value; render(); };
+
+  setupSeg("cap-seg", "cap");
+  setupSeg("view-seg", "view");
+  setupSeg("kind-seg", "kind");
+  render();
+}
+
+fetch("movies/latest.json", { cache: "no-cache" })
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(init)
+  .catch(e => { document.getElementById("list").innerHTML = `<div class="empty">Could not load showtimes (${esc(e.message)}).</div>`; });
+</script>
+</body>
+</html>
