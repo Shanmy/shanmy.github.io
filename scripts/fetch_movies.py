@@ -621,7 +621,7 @@ def resolve_languages():
         wd = wikidata_film(f["title"], f["year"]) if f["year"] or indie_only else {}
         ov = _overrides.get(norm_title(f["title"]), {})
         douban = ov.get("douban") or wd.get("douban")
-        f["zh"] = ov.get("zh") or (douban and douban_title(douban))
+        f["zh"] = ov.get("zh") or (douban and douban_title(douban)) or wd.get("zh")
         f["douban"] = f"https://movie.douban.com/subject/{douban}/" if douban else None
         if not f["lang"] and (indie_only or any(s["subs"] for s in f["screenings"])) and wd.get("lang"):
             f["lang"], f["lang_src"] = wd["lang"], "wikidata"
