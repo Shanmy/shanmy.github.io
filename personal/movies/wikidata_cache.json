@@ -53,6 +53,7 @@
 },
 "cartoon happy hour|": {},
 "castration movie chapter iii junior ghostspremorphic drift a fragmentary passage|2026": {},
+"cat in the hat|2026": {},
 "catvideofest 2026|2025": {},
 "chatni|2026": {
 "douban": null,
@@ -66,6 +67,7 @@
 "lang": "Korean",
 "zh": "釜山行"
 },
+"cinema|": {},
 "clayface|2026": {
 "douban": null,
 "lang": "English",
@@ -84,6 +86,7 @@
 "zh": null
 },
 "drishyam the conclusion|2026": {},
+"drummer boy|2026": {},
 "engauge 2026 beyond borders|": {},
 "engauge 2026 expanded cinema performance and film|": {},
 "engauge 2026 pattern and place|2023": {},
@@ -225,6 +228,11 @@
 "lang": "Japanese",
 "zh": null
 },
+"la bola negra|2026": {
+"douban": "37215318",
+"lang": "Spanish",
+"zh": null
+},
 "land of the dead its for the gays|2026": {},
 "last temptation of becky|2026": {},
 "leopard man|1943": {
@@ -248,6 +256,7 @@
 "lang": "English",
 "zh": "绝代艳后"
 },
+"members only mystery movie november 2026|": {},
 "mosquito bowl|2026": {},
 "most dangerous game plus shorts|1932": {},
 "mourning sickness vol 5 elvira mistress of the dark|1988": {},
@@ -340,11 +349,17 @@
 "lang": "English",
 "zh": null
 },
+"room|": {
+"douban": "4819988",
+"lang": "English",
+"zh": null
+},
 "scarecrowber invasion of the body snatchers|1978": {
 "douban": "1296012",
 "lang": "English",
 "zh": "魔茵"
 },
+"scene|2026": {},
 "scream 30th anniversary|2026": {},
 "seattle 48 hour horror film project|2026": {},
 "seattle film society presents locals only october 2026|": {},
@@ -408,6 +423,11 @@
 "douban": "36221991",
 "lang": "English",
 "zh": null
+},
+"this is england|2007": {
+"douban": "1806543",
+"lang": "English",
+"zh": "这就是英格兰"
 },
 "tomorrow x together world tour act tomorrow|2026": {},
 "trick r treat|2007": {
