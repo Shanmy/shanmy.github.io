@@ -307,6 +307,11 @@
 },
 "paging hezbollah|2026": {},
 "palestine cinema days 2026 foragers|2022": {},
+"parallax view|1974": {
+"douban": "1293261",
+"lang": "English",
+"zh": "暗杀十三招"
+},
 "patakka guddiyan|2026": {},
 "pehla pyaar doosri baar|2026": {},
 "pet sematary|1989": {
@@ -336,6 +341,11 @@
 "ranabaali|2026": {
 "douban": null,
 "lang": null,
+"zh": null
+},
+"reel injun|2010": {
+"douban": "4739712",
+"lang": "English",
 "zh": null
 },
 "resident evil|2026": {},
@@ -369,6 +379,7 @@
 "lang": null,
 "zh": null
 },
+"secs fest 2026|2026": {},
 "sense and sensibility|2026": {},
 "seventeen world tour new|2025": {},
 "shaolin soccer|2001": {
@@ -413,6 +424,11 @@
 "zh": null
 },
 "take me home|2012": {},
+"tampopo|": {
+"douban": "1294009",
+"lang": "Japanese",
+"zh": null
+},
 "tenzing|2026": {},
 "terrifier 2|2022": {
 "douban": "34816877",
@@ -429,9 +445,15 @@
 "lang": "English",
 "zh": "这就是英格兰"
 },
+"three dollar bill cinema presents two eyes|2020": {},
 "tomorrow x together world tour act tomorrow|2026": {},
 "trick r treat|2007": {
 "douban": "1940086",
+"lang": "English",
+"zh": null
+},
+"true stories|": {
+"douban": "1307564",
 "lang": "English",
 "zh": null
 },
@@ -445,6 +467,11 @@
 "douban": null,
 "lang": "Hindi",
 "zh": null
+},
+"under the skin|2014": {
+"douban": "3749974",
+"lang": "English",
+"zh": "皮内异种"
 },
 "v for vendetta 20th anniversary|2026": {},
 "vagabond|1985": {
@@ -481,5 +508,6 @@
 "douban": "37242626",
 "lang": "English",
 "zh": null
-}
+},
+"zi|2026": {}
 }
