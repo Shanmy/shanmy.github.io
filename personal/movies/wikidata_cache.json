@@ -105,8 +105,11 @@
 "zh": null
 },
 "drishyam the conclusion|2026": {},
+"drive|2011": {},
 "drummer boy|2026": {},
 "dune part one dune part two double feature|2026": {},
+"dune part one reissue|2026": {},
+"dune part two reissue|2026": {},
 "ebenezer|2026": {},
 "engauge 2026 beyond borders|": {},
 "engauge 2026 expanded cinema performance and film|": {},
@@ -119,6 +122,7 @@
 "everest the other side|2026": {},
 "fallen angels by noel coward|2026": {},
 "fatherland|2026": {},
+"festive fun with peppa cinema experience|2026": {},
 "films of andrzej wajda man of marble|1976": {
 "douban": "1301124",
 "lang": "Polish",
@@ -283,6 +287,7 @@
 "lakadbaggha 2 the monkey business|": {},
 "land of the dead its for the gays|2026": {},
 "last temptation of becky|2026": {},
+"league of legends worlds 26 finals in theater|2026": {},
 "leopard man|1943": {
 "douban": null,
 "lang": "English",
@@ -305,6 +310,7 @@
 "zh": "绝代艳后"
 },
 "members only mystery movie november 2026|": {},
+"metropolitan opera carmen encore|2026": {},
 "mookuthi amman 2|2026": {
 "douban": null,
 "lang": null,
@@ -315,6 +321,7 @@
 "mourning sickness vol 5 elvira mistress of the dark|1988": {},
 "mouse|2026": {},
 "musk|2026": {},
+"my brothers wedding|1983": {},
 "my neighbor totoro|": {
 "douban": "1291560",
 "lang": "Japanese",
@@ -387,6 +394,13 @@
 "zh": "宠物坟场"
 },
 "pnw awards a simple machine|2025": {},
+"pnw awards again again|2026": {
+"douban": "38195964",
+"lang": "English",
+"zh": null
+},
+"pnw awards powwow people|2025": {},
+"pnw awards short film nominee showcase|2026": {},
 "portrait of a lady on fire|2019": {
 "douban": "30257175",
 "lang": "French",
@@ -430,6 +444,11 @@
 "lang": "English",
 "zh": "美版午夜凶铃"
 },
+"rise of the guardians|2012": {
+"douban": "3769423",
+"lang": "English",
+"zh": "守护者联盟"
+},
 "rocky 50th anniversary|2026": {},
 "rocky horror picture show|1975": {
 "douban": "1292050",
@@ -437,6 +456,18 @@
 "zh": null
 },
 "romanian film festival seattle 3 days in september|2026": {},
+"romanian film festival seattle kontinental 25|2025": {
+"douban": null,
+"lang": "Romanian",
+"zh": null
+},
+"romanian film festival seattle r m n|2022": {
+"douban": "35699754",
+"lang": "Romanian",
+"zh": "核磁共振"
+},
+"romanian film festival seattle the last transhumance|2026": {},
+"romanian film festival seattle traffic|2024": {},
 "room|": {
 "douban": "4819988",
 "lang": "English",
@@ -609,10 +640,16 @@
 "lang": "Hindi",
 "zh": null
 },
+"ufc 334 gane vs hokit|2026": {},
 "under the skin|2014": {
 "douban": "3749974",
 "lang": "English",
 "zh": "皮内异种"
+},
+"unstreamable love streams|1984": {
+"douban": "1303532",
+"lang": "English",
+"zh": null
 },
 "v for vendetta 20th anniversary|2026": {},
 "vagabond|1985": {
