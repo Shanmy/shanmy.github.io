@@ -48,6 +48,7 @@
 "zh": null
 },
 "best pancakes in the county|2026": {},
+"breathless|1983": {},
 "bts world tour arirang in buenos aires live viewing|2026": {},
 "bts world tour arirang in sao paulo live viewing|2026": {},
 "cabin fever|2003": {
@@ -76,6 +77,7 @@
 },
 "christine|1984": {},
 "christmas at the kringles|2026": {},
+"cinema italian style sweetheart opening night film party|2025": {},
 "cinemancy train to busan|": {
 "douban": "25986180",
 "lang": "Korean",
@@ -120,6 +122,12 @@
 "dune part one reissue|2026": {},
 "dune part two reissue|2026": {},
 "ebenezer|2026": {},
+"ek onkar|2026": {},
+"ene repeat|2026": {
+"douban": null,
+"lang": null,
+"zh": null
+},
 "engauge 2026 beyond borders|": {},
 "engauge 2026 expanded cinema performance and film|": {},
 "engauge 2026 pattern and place|2023": {},
@@ -214,11 +222,13 @@
 "zh": null
 },
 "heart of the game 20th anniversary|2005": {},
+"heated rivalry season one marathon|2026": {},
 "hell house llc 10th anniversary|2026": {
 "douban": null,
 "lang": null,
 "zh": null
 },
+"her song|2026": {},
 "history of concrete|2026": {
 "douban": "37923994",
 "lang": "English",
@@ -234,6 +244,11 @@
 "lang": "English",
 "zh": null
 },
+"house of the devil|2009": {
+"douban": "3054967",
+"lang": "English",
+"zh": null
+},
 "house with a clock in its walls|2018": {
 "douban": "10759740",
 "lang": "English",
@@ -245,6 +260,7 @@
 "lang": "English",
 "zh": null
 },
+"hunger games sunrise on the reaping early access|2026": {},
 "hybe cheering party|2026": {},
 "i walked with a zombie|1943": {
 "douban": "1307177",
@@ -267,6 +283,7 @@
 "lang": "English",
 "zh": null
 },
+"itllu arjuna|2026": {},
 "jailer 2|2026": {
 "douban": null,
 "lang": "Tamil",
@@ -279,6 +296,8 @@
 },
 "jimmy|2026": {},
 "john doe|2026": {},
+"josephine|2026": {},
+"kabaddi 5 after the final match|2026": {},
 "karaoke murder|2026": {},
 "ken russells the devils|2026": {},
 "klara and the sun|2026": {
@@ -326,8 +345,10 @@
 "lang": "English",
 "zh": "绝代艳后"
 },
+"maya lady|2026": {},
 "members only mystery movie november 2026|": {},
 "metropolitan opera carmen encore|2026": {},
+"miami vice the directors final cut new|2006": {},
 "mookuthi amman 2|2026": {
 "douban": null,
 "lang": null,
@@ -337,6 +358,7 @@
 "most dangerous game plus shorts|1932": {},
 "mourning sickness vol 5 elvira mistress of the dark|1988": {},
 "mouse|2026": {},
+"moviecat trivia|": {},
 "musk|2026": {},
 "my brothers wedding|1983": {},
 "my neighbor totoro|": {
@@ -344,6 +366,7 @@
 "lang": "Japanese",
 "zh": null
 },
+"nationtime|1972": {},
 "naza|2026": {
 "douban": null,
 "lang": "English",
@@ -353,7 +376,15 @@
 "next of kin|1982": {},
 "night of the vamp friars|2026": {},
 "nightmare before christmas re release|2026": {},
+"nirvanna the band the show season 1|2017": {},
+"nirvanna the band the show season 2|2017": {},
+"nirvanna the band the show the movie the print|2026": {},
 "nouvelles femmes a man and a woman 60th anniversary|1966": {},
+"nouvelles femmes my night at mauds|1969": {
+"douban": "1296283",
+"lang": "French",
+"zh": null
+},
 "nouvelles femmes pierrot le fou|1965": {},
 "nouvelles femmes stolen kisses|1968": {},
 "oldboy|2013": {
@@ -417,6 +448,11 @@
 "lang": "English",
 "zh": "宠物坟场"
 },
+"planes trains and automobiles|1987": {
+"douban": "1301775",
+"lang": "English",
+"zh": "搭错飞机上错车"
+},
 "pnw awards a simple machine|2025": {},
 "pnw awards again again|2026": {
 "douban": "38195964",
@@ -445,6 +481,11 @@
 "primetime|2026": {},
 "private rental event|": {},
 "puerto rican short film night|2026": {},
+"queen at sea|2026": {
+"douban": "35765242",
+"lang": "English",
+"zh": null
+},
 "ramayana rise of a legend english 2026|2026": {},
 "ramayana|2026": {},
 "rammstein live in mexico city|2026": {
@@ -469,6 +510,11 @@
 },
 "remember|2026": {},
 "rent the beacon|": {},
+"repo man|1984": {
+"douban": "1304697",
+"lang": "English",
+"zh": null
+},
 "resident evil|2026": {},
 "rex a dinosaurs story new restoration|1993": {},
 "ring|": {
@@ -616,6 +662,11 @@
 "lang": "English",
 "zh": "星际旅行II：可汗怒吼"
 },
+"star trek iii the search for spock|": {
+"douban": "1294015",
+"lang": "English",
+"zh": "星空歼霸战"
+},
 "star trek the motion picture|": {
 "douban": "1300089",
 "lang": "English",
@@ -688,6 +739,11 @@
 "lang": "English",
 "zh": null
 },
+"trust me im a doctor|2026": {
+"douban": null,
+"lang": null,
+"zh": null
+},
 "truth to fiction cameraperson|2016": {
 "douban": null,
 "lang": "English",
@@ -710,6 +766,7 @@
 "lang": "English",
 "zh": null
 },
+"ut lan 2 the river demon|2026": {},
 "v for vendetta 20th anniversary|2026": {},
 "vagabond|1985": {
 "douban": "1292445",
