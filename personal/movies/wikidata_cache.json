@@ -51,6 +51,7 @@
 "best pancakes in the county|2026": {},
 "breathless|1983": {},
 "bts world tour arirang in buenos aires live viewing|2026": {},
+"bts world tour arirang in kaohsiung live viewing|2026": {},
 "bts world tour arirang in sao paulo live viewing|2026": {},
 "cabin fever|2003": {
 "douban": "1308069",
@@ -85,13 +86,20 @@
 },
 "cinema italian style 2026 brunello the gracious visionary|2026": {},
 "cinema italian style 2026 gioia|2025": {},
+"cinema italian style 2026 love fits everything|2026": {},
 "cinema italian style 2026 the last one for the road|2025": {
 "douban": null,
 "lang": "Italian",
 "zh": null
 },
+"cinema italian style 2026 where is the fiesta|2026": {},
 "cinema italian style elisa|2025": {},
 "cinema italian style sweetheart opening night film party|2025": {},
+"cinema italian style the kidnapping of arabella|2025": {
+"douban": null,
+"lang": "Italian",
+"zh": null
+},
 "cinemancy train to busan|": {
 "douban": "25986180",
 "lang": "Korean",
@@ -115,6 +123,11 @@
 "zh": null
 },
 "dark chocolate|2026": {},
+"dark crystal|1982": {
+"douban": null,
+"lang": "English",
+"zh": "魔水晶"
+},
 "delicatessen|": {
 "douban": "1306666",
 "lang": "French",
@@ -128,6 +141,7 @@
 },
 "digger|2026": {},
 "disco|2026": {},
+"disorder|2009": {},
 "donga naa koduku|2026": {},
 "dracula of exarcheia|1983": {
 "douban": null,
@@ -270,6 +284,7 @@
 "zh": "女巫也疯狂"
 },
 "host new|2006": {},
+"host|2026": {},
 "hotel transylvania|2012": {
 "douban": "3269068",
 "lang": "English",
@@ -519,6 +534,11 @@
 "douban": "36919251",
 "lang": "English",
 "zh": "巫法闯情关2"
+},
+"pretty poison|1968": {
+"douban": "1302118",
+"lang": "English",
+"zh": null
 },
 "primetime|2026": {},
 "private rental event|": {},
