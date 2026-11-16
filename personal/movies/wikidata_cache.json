@@ -1,5 +1,6 @@
 {
 "418|2026": {},
+"a beautiful mind 25th anniversary|2026": {},
 "a nightmare on elm street|": {
 "douban": "1298389",
 "lang": "English",
@@ -84,8 +85,15 @@
 "lang": "Italian",
 "zh": null
 },
+"cinema italian style 2026 beloved|2025": {},
 "cinema italian style 2026 brunello the gracious visionary|2026": {},
 "cinema italian style 2026 gioia|2025": {},
+"cinema italian style 2026 god forgives everyone|2026": {},
+"cinema italian style 2026 journey to italy|1954": {
+"douban": "1303576",
+"lang": "Italian",
+"zh": null
+},
 "cinema italian style 2026 love fits everything|2026": {},
 "cinema italian style 2026 the last one for the road|2025": {
 "douban": null,
@@ -106,8 +114,18 @@
 "zh": "釜山行"
 },
 "cinema|": {},
+"clash by night|1952": {
+"douban": "1295357",
+"lang": "English",
+"zh": "夜间冲突"
+},
 "clayface|2026": {
 "douban": null,
+"lang": "English",
+"zh": null
+},
+"club kid|2026": {
+"douban": "37496381",
 "lang": "English",
 "zh": null
 },
@@ -351,6 +369,7 @@
 "lang": "English",
 "zh": "詹妮弗的肉体"
 },
+"jeonghan x joshua journey into dreaming|2026": {},
 "jimmy|2026": {},
 "john doe|2026": {},
 "josephine|2026": {},
@@ -380,6 +399,11 @@
 "lakadbaggha 2 the monkey business|": {},
 "land of the dead its for the gays|2026": {},
 "last temptation of becky|2026": {},
+"late autumn|1960": {
+"douban": "1401843",
+"lang": "Japanese",
+"zh": null
+},
 "league of legends worlds 26 finals in theater|2026": {},
 "leopard man|1943": {
 "douban": null,
@@ -471,6 +495,11 @@
 "zh": null
 },
 "open road candy mountain|1987": {},
+"open road route one usa|1989": {
+"douban": null,
+"lang": "English",
+"zh": null
+},
 "open road the passenger|1975": {},
 "open road two lane blacktop|1971": {},
 "open road wild boys of the road|1933": {},
@@ -795,6 +824,11 @@
 "zh": "这就是英格兰"
 },
 "three dollar bill cinema presents two eyes|2020": {},
+"tokyo story|1953": {
+"douban": "1291568",
+"lang": "Japanese",
+"zh": "东京物语"
+},
 "tomorrow x together world tour act tomorrow|2026": {},
 "totally 80s sing along|": {},
 "traces of justice|2026": {
