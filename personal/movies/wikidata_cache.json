@@ -51,6 +51,11 @@
 },
 "best pancakes in the county|2026": {},
 "beware the devils wrath special screening q a|2026": {},
+"big trouble in little china|": {
+"douban": "1298146",
+"lang": "English",
+"zh": "妖魔大闹小神州"
+},
 "bitter christmas|2026": {
 "douban": "36690639",
 "lang": "Spanish",
@@ -86,6 +91,11 @@
 "zh": "本能"
 },
 "cartoon happy hour|": {},
+"casablanca|": {
+"douban": "1296753",
+"lang": "English",
+"zh": "卡萨布兰卡"
+},
 "castration movie chapter iii junior ghostspremorphic drift a fragmentary passage|2026": {},
 "cat in the hat|2026": {},
 "catvideofest 2026|2025": {},
@@ -244,6 +254,7 @@
 "zh": null
 },
 "five minutes to die|": {},
+"five minutes to live|": {},
 "fjord|2026": {},
 "focker in law|2026": {},
 "forgotten island|2026": {
@@ -319,6 +330,7 @@
 "lang": null,
 "zh": null
 },
+"hen|2025": {},
 "her song|2026": {},
 "hershey|2026": {},
 "history of concrete|2026": {
@@ -429,6 +441,11 @@
 },
 "lakadbaggha 2 the monkey business|": {},
 "land of the dead its for the gays|2026": {},
+"last dive|": {
+"douban": "2209111",
+"lang": null,
+"zh": null
+},
 "last temptation of becky|2026": {},
 "late autumn|1960": {
 "douban": "1401843",
@@ -566,6 +583,11 @@
 "zh": "暗杀十三招"
 },
 "patakka guddiyan|2026": {},
+"paw patrol the dino movie|2026": {
+"douban": null,
+"lang": "American English",
+"zh": null
+},
 "pehla pyaar doosri baar|2026": {},
 "pet sematary|1989": {
 "douban": "1303897",
@@ -592,6 +614,11 @@
 "pnw awards short film nominee showcase|2026": {},
 "pnw awards the joyless economy|2026": {},
 "pnw awards the life we leave|2026": {},
+"polar express|2004": {
+"douban": "1306785",
+"lang": "English",
+"zh": "极地特快"
+},
 "portrait of a lady on fire|2019": {
 "douban": "30257175",
 "lang": "French",
@@ -918,6 +945,11 @@
 "truth to fiction cameraperson|2016": {
 "douban": null,
 "lang": "English",
+"zh": null
+},
+"truth to fiction the store|1983": {
+"douban": null,
+"lang": null,
 "zh": null
 },
 "tv party doomed occult detectives|": {},
