@@ -43,6 +43,7 @@
 "zh": null
 },
 "angry birds movie 10th anniversary|2026": {},
+"apple|1980": {},
 "artists and models|1955": {
 "douban": "3130050",
 "lang": "English",
@@ -219,6 +220,11 @@
 "lang": "English",
 "zh": "圣诞怪杰"
 },
+"dr seuss the grinch|2018": {
+"douban": "23774869",
+"lang": "English",
+"zh": "綠毛怪格林奇"
+},
 "dracula of exarcheia|1983": {
 "douban": null,
 "lang": "Greek",
@@ -334,6 +340,16 @@
 "douban": "1293828",
 "lang": "English",
 "zh": "铁金刚大战金手指"
+},
+"gremlins|1984": {
+"douban": "1296186",
+"lang": "English",
+"zh": null
+},
+"gunmaaster g9|2026": {
+"douban": null,
+"lang": null,
+"zh": null
 },
 "gymnasts of fisherman colony|2026": {},
 "hadoota|2026": {},
@@ -568,6 +584,11 @@
 "lang": "English",
 "zh": null
 },
+"oldest person in the world|2026": {
+"douban": null,
+"lang": null,
+"zh": null
+},
 "on her majestys secret service|1969": {
 "douban": "1293345",
 "lang": "English",
@@ -792,6 +813,11 @@
 },
 "salvation|2026": {},
 "sanjog|2026": {},
+"sansho the bailiff|1954": {
+"douban": "1303573",
+"lang": "Japanese",
+"zh": null
+},
 "sathyavan savithri|2026": {
 "douban": null,
 "lang": null,
