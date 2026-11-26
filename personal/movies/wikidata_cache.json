@@ -73,6 +73,7 @@
 "lang": "English",
 "zh": null
 },
+"brazil|1985": {},
 "breathless|1983": {},
 "bts world tour arirang in buenos aires live viewing|2026": {},
 "bts world tour arirang in kaohsiung live viewing|2026": {},
@@ -545,6 +546,7 @@
 "mourning sickness vol 5 elvira mistress of the dark|1988": {},
 "mouse|2026": {},
 "moviecat trivia|": {},
+"musical w director q a|2026": {},
 "musk|2026": {},
 "my brothers wedding|1983": {},
 "my neighbor totoro|": {
@@ -559,6 +561,11 @@
 "zh": null
 },
 "nationtime|1972": {},
+"natural born killers|1994": {
+"douban": "1292229",
+"lang": "English",
+"zh": "闪灵杀手"
+},
 "naza|2026": {
 "douban": null,
 "lang": "English",
@@ -571,6 +578,7 @@
 "nirvanna the band the show season 1|2017": {},
 "nirvanna the band the show season 2|2017": {},
 "nirvanna the band the show the movie the print|2026": {},
+"nmixx episode 1 zero frontier finale live viewing|2026": {},
 "nouvelles femmes a man and a woman 60th anniversary|1966": {},
 "nouvelles femmes my night at mauds|1969": {
 "douban": "1296283",
@@ -811,6 +819,7 @@
 "lang": "English",
 "zh": null
 },
+"royal ballet the nutcracker|2026": {},
 "salvation|2026": {},
 "sanjog|2026": {},
 "sansho the bailiff|1954": {
@@ -920,6 +929,11 @@
 "douban": "1298027",
 "lang": "English",
 "zh": null
+},
+"star trek first contact|": {
+"douban": "1299888",
+"lang": "English",
+"zh": "战斗巡航"
 },
 "star trek ii the wrath of khan|1982": {
 "douban": "1293316",
@@ -1104,6 +1118,11 @@
 "douban": null,
 "lang": null,
 "zh": null
+},
+"xanadu|1980": {
+"douban": "1305446",
+"lang": "English",
+"zh": "仙纳杜的狂热"
 },
 "yeh prem mol liya|2026": {
 "douban": null,
