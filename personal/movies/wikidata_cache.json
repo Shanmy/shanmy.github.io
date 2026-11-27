@@ -17,6 +17,7 @@
 "zh": null
 },
 "aakasamlo oka tara|2026": {},
+"above the below|2026": {},
 "ali g who iz i|2026": {
 "douban": null,
 "lang": "English",
@@ -51,6 +52,11 @@
 },
 "baxter vera baxter|1977": {},
 "begotten|1989": {},
+"behemoth|2026": {
+"douban": "37287386",
+"lang": "English",
+"zh": null
+},
 "being heumann|2026": {
 "douban": null,
 "lang": "English",
@@ -98,6 +104,11 @@
 "douban": "1291869",
 "lang": "English",
 "zh": "本能"
+},
+"cant stop the music|1980": {
+"douban": "1302910",
+"lang": "English",
+"zh": "停不下的音乐"
 },
 "carol|2015": {
 "douban": "10757577",
@@ -210,6 +221,7 @@
 "lang": null,
 "zh": null
 },
+"die hard re release|2026": {},
 "digger|2026": {},
 "disco|2026": {},
 "disneys hexed|2026": {},
@@ -287,6 +299,7 @@
 "five minutes to die|": {},
 "five minutes to live|": {},
 "fjord|2026": {},
+"flavia girl detective|2026": {},
 "focker in law|2026": {},
 "forgotten island|2026": {
 "douban": "37317906",
@@ -305,6 +318,11 @@
 "zh": "惊魂夜"
 },
 "further mis adventures of cliff booth|2026": {},
+"gallerist|2026": {
+"douban": "37097143",
+"lang": "English",
+"zh": null
+},
 "garfield jazz jam session|": {},
 "general|1927": {
 "douban": "1292778",
@@ -342,6 +360,7 @@
 "lang": "English",
 "zh": "铁金刚大战金手指"
 },
+"good boy gone best|2026": {},
 "gremlins|1984": {
 "douban": "1296186",
 "lang": "English",
@@ -383,6 +402,11 @@
 "douban": "1300448",
 "lang": "English",
 "zh": "女巫也疯狂"
+},
+"holdovers|2023": {
+"douban": null,
+"lang": "English",
+"zh": "滞留生"
 },
 "honeymoon killers|1970": {
 "douban": "1298247",
@@ -470,6 +494,11 @@
 "kabaddi 5 after the final match|2026": {},
 "karaoke murder|2026": {},
 "ken russells the devils|2026": {},
+"kikuyu land|2026": {
+"douban": null,
+"lang": null,
+"zh": null
+},
 "klara and the sun|2026": {
 "douban": null,
 "lang": "English",
@@ -573,6 +602,11 @@
 },
 "necropolis|1970": {},
 "next of kin|1982": {},
+"nice guys|2016": {
+"douban": "25917787",
+"lang": "English",
+"zh": "耐撕侦探"
+},
 "night of the vamp friars|2026": {},
 "nightmare before christmas re release|2026": {},
 "nirvanna the band the show season 1|2017": {},
@@ -587,6 +621,7 @@
 },
 "nouvelles femmes pierrot le fou|1965": {},
 "nouvelles femmes stolen kisses|1968": {},
+"november 1963|2026": {},
 "oldboy|2013": {
 "douban": "3279054",
 "lang": "English",
@@ -618,6 +653,7 @@
 "lang": "English",
 "zh": null
 },
+"open road beavis and butt head do america|1996": {},
 "open road candy mountain|1987": {},
 "open road route one usa|1989": {
 "douban": null,
@@ -719,6 +755,7 @@
 "zh": null
 },
 "primetime|2026": {},
+"prince 3121 las vegas live|2026": {},
 "private rental event|": {},
 "puerto rican short film night|2026": {},
 "queen at sea|2026": {
@@ -874,6 +911,11 @@
 "secs fest 2026|2026": {},
 "sense and sensibility|2026": {},
 "seventeen world tour new|2025": {},
+"sfcs at 10 moonlight|2016": {
+"douban": "26648249",
+"lang": "English",
+"zh": "月光下的蓝色男孩"
+},
 "sfcs at 10 the witch|2016": {
 "douban": "26276364",
 "lang": "Early Modern English",
@@ -1049,6 +1091,7 @@
 "zh": null
 },
 "tv party doomed occult detectives|": {},
+"two chairs|2026": {},
 "udta teer|2026": {
 "douban": null,
 "lang": "Hindi",
@@ -1081,11 +1124,13 @@
 "lang": "English",
 "zh": null
 },
+"violent night 2|2026": {},
 "whalefall|2026": {
 "douban": "36806762",
 "lang": "English",
 "zh": null
 },
+"white christmas|1954": {},
 "wicker|2026": {
 "douban": null,
 "lang": "English",
